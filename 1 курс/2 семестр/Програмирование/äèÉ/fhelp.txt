@@ -1,0 +1,10 @@
+Fifteen Puzzle - a puzzle, which is 15 square tiles with marked numbers from 1 
+to 15. 
+All the knuckles are enclosed in a square box size 4x4 (side of the square box
+  is four times longer than that of the knuckles). 
+Thus when placing the tiles in the box is one empty space the size of a domino 
+  that can be used to move the tiles inside the box. 
+The goal - to streamline the placement of the numbers in the box, placing them 
+  in ascending from top to bottom and left to right, 
+  starting with the knuckles with the number 1 in the upper left corner and 
+  ending with an empty space in the lower right corner of the box.

@@ -1,0 +1,11 @@
+Along the boards are 7 holes,
+which are separately 
+3 black and 3 red 
+balls between which 
+one empty hole. Swap black 
+with red balls. 
+Ball can be moved or 
+neighboring empty hole,
+or an empty hole, 
+which is located directly 
+in the next bullet.

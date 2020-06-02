@@ -1,0 +1,284 @@
+unit algos;
+interface
+	procedure SetDimensions(newP, newM, newN, newLen:word);
+	function SortLinear:longint;
+	function Algo_1:longint;
+	function Algo_2:longint;
+	function Algo_3:longint;
+	procedure FormStraightSorted;
+	procedure FormBackSorted;
+	procedure FormRandom;
+  procedure Show;
+  procedure LShow;
+
+	const MAXM=40; MAXN=40; MAXP=20; MAXLEN=20000;
+	
+implementation
+    uses dos;
+	
+	type TTime=record
+		hours:word;
+		mins:word;
+		secs:word;
+		hsecs:word;
+	end;
+	type TArrType=integer;
+		PArrType=^TArrType;
+		TLArray=array [1..MAXLEN] of TArrType;
+		PLArray=^TLArray;
+	var M, N, P, Len:word;
+		A:array [1..MAXP, 1..MAXM, 1..MAXN] of TArrType;
+		C:PLArray;
+
+  procedure Show;
+  var i, j, k:word;
+  begin
+       for k:=1 to P do begin
+           writeln('  è•‡•‡iß ', k, ':');
+           for i:=1 to M do begin
+               for j:=1 to N do write(A[k, i, j]:5, ' ');
+               writeln;
+           end;
+           writeln;
+       end;
+       writeln;
+       writeln;
+       writeln;
+  end;
+
+  procedure LShow;
+  var i:word;
+  begin
+       for i:=1 to Len do write(C^[i]:5);
+       writeln;
+       writeln;
+  end;
+		
+	procedure FormSorted(straight:boolean);
+	var i, j, k:word;
+		dv: integer;
+		value:TArrType;
+	begin
+		if straight = true then begin
+			value:=1;
+			dv:=1;
+		end else begin
+			value:=M*N;
+			dv:=-1;
+		end;
+		for j:=1 to N do
+			for i:= 1 to M do begin
+				for k:= 1 to P do
+					A[k, i, j]:=value;
+				value:=value+dv;
+			end;
+		if straight = true then value:=1
+		else value:=Len;
+		for i:=1 to Len do begin
+			C^[i]:=value;
+			value:=value+dv;
+		end;
+	end;
+	
+	procedure SetDimensions(newP, newM, newN, newLen:word);
+	begin
+		M:=newM;
+		N:=newN;
+		P:=newP;
+		Len:=newLen;
+	end;
+	
+	procedure FormStraightSorted;
+	begin
+		FormSorted(true);
+	end;
+	
+	procedure FormBackSorted;
+	begin
+		FormSorted(false);
+	end;
+	
+	procedure FormRandom;
+	var i, j, k:word;
+	begin
+		randomize;
+		for k:=1 to P do
+			for i:=1 to M do
+				for j:=1 to N do
+					A[k, i, j]:=random(8112);
+		for i:=1 to Len do C^[i]:=random(8112);
+	end;
+	
+	function Algo_1:longint;
+	var startTime, finTime:TTime;
+		B:array [1..MAXN*MAXM] of longint;
+		i, j, k, R, L, x, pos:word;
+		tmp:TArrType;
+	begin
+		with startTime do GetTime(hours, mins, secs, hsecs);
+		
+		for k:=1 to P do begin
+			pos:=1;
+			for j:=1 to N do
+				for i:=1 to M do begin
+					B[pos]:=A[k, i, j];
+					pos:=pos+1;
+				end;
+			L:=1; R:=M*N; x:=1;
+			while L < R do begin
+				for i:=L to R-1 do
+					if B[i] > B[i+1] then begin
+						tmp:=B[i];
+						B[i]:=B[i+1];
+						B[i+1]:=tmp;
+						x:=i;
+					end;
+				R:=x;
+				for i:=R-1 downto L do
+					if B[i] > B[i+1] then begin
+						tmp:=B[i];
+						B[i]:=B[i+1];
+						B[i+1]:=tmp;
+						x:=i+1;
+					end;
+				L:=x;
+			end;
+			pos:=1;
+			for j:=1 to N do
+				for i:=1 to M do begin
+					A[k, i, j]:=B[pos];
+					pos:=pos+1;
+				end;
+		end;
+		with finTime do GetTime(hours, mins, secs, hsecs);
+		Algo_1:=((finTime.hours*3600+finTime.mins*60+finTime.secs)*100+finTime.hsecs) -
+			((startTime.hours*3600+startTime.mins*60+startTime.secs)*100+startTime.hsecs);
+	end;
+	
+	function Algo_2:longint;
+	var startTime, finTime:TTime;
+		i, k, R, L, x:word;
+		tmp:TArrType;
+	begin
+		with startTime do GetTime(hours, mins, secs, hsecs);
+		for k:=1 to P do begin
+			L:=1; R:=M*N; x:=1;
+			while L < R do begin
+				for i:=L to R-1 do
+					if A[k, (i-1)mod(M)+1, (i-1)div(M)+1] > A[k,(i)mod(M)+1, (i)div(M)+1] then begin
+						tmp:=A[k, (i-1)mod(M)+1, (i-1)div(M)+1];
+						A[k, (i-1)mod(M)+1, (i-1)div(M)+1]:=A[k,(i)mod(M)+1, (i)div(M)+1];
+						A[k,(i)mod(M)+1, (i)div(M)+1]:=tmp;
+						x:=i;
+					end;
+				R:=x;
+				for i:=R-1 downto L do
+					if A[k, (i-1)mod(M)+1, (i-1)div(M)+1] > A[k,(i)mod(M)+1, (i)div(M)+1] then begin
+						tmp:=A[k, (i-1)mod(M)+1, (i-1)div(M)+1];
+						A[k, (i-1)mod(M)+1, (i-1)div(M)+1]:=A[k,(i)mod(M)+1, (i)div(M)+1];
+						A[k,(i)mod(M)+1, (i)div(M)+1]:=tmp;
+						x:=i;
+					end;
+				L:=x+1;
+			end;
+		end;
+		with finTime do GetTime(hours, mins, secs, hsecs);
+		Algo_2:=((finTime.hours*3600+finTime.mins*60+finTime.secs)*100+finTime.hsecs) -
+			((startTime.hours*3600+startTime.mins*60+startTime.secs)*100+startTime.hsecs);
+	end;
+	
+	function Algo_3:longint;
+	var startTime, finTime:TTime;
+		i, j, k, rI, rJ, lI, lJ, xI, xJ, start, fin:word;
+		tmp:TArrType;
+		next:PArrType;
+	begin
+		with startTime do GetTime(hours, mins, secs, hsecs);
+		for k:=1 to P do begin
+			lI:=1; lJ:=1; rI:=M; rJ:=N; xI:=1; xJ:=1;
+			while lJ <= rJ do begin
+				if (lJ = rJ) and (lI >= rI) then break;
+				for j:=lJ to rJ do begin
+					start:=1; fin:=M;
+					if j = lJ then start:=lI;
+					if j = rJ then fin:=rI-1;
+					for i:=start to fin do begin
+						if i < M then next:=@ A[k, i+1, j]
+						else next:=@ A[k, 1, j+1];
+						if A[k, i, j] > next^ then begin
+							tmp:=A[k, i, j];
+							A[k, i, j]:=next^;
+							next^:=tmp;
+							xI:=i;
+							xJ:=j;
+						end;
+					end;
+				end;
+				rI:=xI;
+				rJ:=xJ;
+				for j:=rJ downto lJ do begin
+					start:=1; fin:=M;
+					if j = lJ then start:=lI;
+					if j = rJ then fin:=rI-1;
+					for i:=fin downto start do begin
+						if i < M then next:=@ A[k, i+1, j]
+						else next:=@ A[k, 1, j+1];
+						if A[k, i, j] > next^ then begin
+							tmp:=A[k, i, j];
+							A[k, i, j]:=next^;
+							next^:=tmp;
+							xI:=i;
+							xJ:=j;
+						end;
+					end;
+				end;
+				if xI < M then begin
+					lI:=xI+1;
+					lJ:=xJ;
+				end else begin
+					lI:=1;
+					lJ:=xJ+1;
+				end;
+			end;
+		end;
+		with finTime do GetTime(hours, mins, secs, hsecs);
+		Algo_3:=((finTime.hours*3600+finTime.mins*60+finTime.secs)*100+finTime.hsecs) -
+			((startTime.hours*3600+startTime.mins*60+startTime.secs)*100+startTime.hsecs);
+
+	end;
+	
+	function SortLinear:longint;
+	var startTime, finTime:TTime;
+		L, R, x, i:word;
+		tmp:TArrType;
+	begin
+		with startTime do GetTime(hours, mins, secs, hsecs);
+		L:=1; R:=Len; x:=1;
+		while L < R do begin
+			for i:=L to R-1 do
+				if C^[i] > C^[i+1] then begin
+					tmp:=C^[i];
+					C^[i]:=C^[i+1];
+					C^[i+1]:=tmp;
+					x:=i;
+				end;
+			R:=x;
+			for i:=R-1 downto L do
+				if C^[i] > C^[i+1] then begin
+					tmp:=C^[i];
+					C^[i]:=C^[i+1];
+					C^[i+1]:=tmp;
+					x:=i;
+				end;
+			L:=x+1;
+		end;
+		with finTime do GetTime(hours, mins, secs, hsecs);
+		SortLinear:=((finTime.hours*3600+finTime.mins*60+finTime.secs)*100+finTime.hsecs) -
+			((startTime.hours*3600+startTime.mins*60+startTime.secs)*100+startTime.hsecs);
+	end;
+
+    begin
+		    new(C);
+        SetDimensions(2, 4, 5, 10);
+        FormRandom;
+    end.

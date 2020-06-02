@@ -1,0 +1,20 @@
+4       
+0 Tampax
+0 Signal
+0 Duru  
+0 PEPSI 
+0 Tampax
+0 PEPSI 
+0 Tampax
+0 TWIX  
+0 Tampax
+0 Duru  
+0 Lipton
+0 TWIX  
+0 Tampax
+0 Signal
+0 Lipton
+0 Duru  
+0 Mars  
+0 TWIX  
+0 Tide  
