@@ -1,0 +1,9 @@
+﻿  References.cpp
+  ConcreteReference.cpp
+c:\users\александр сергеевич\desktop\проекты\ооп (4 семестр)\лабораторная работа №4\lab4\lab4\concretereference.cpp(68): warning C4800: int: принудительно задано логическое значение "true" или "false" (предупреждение о производительности)
+  Создание кода...
+  Компиляция...
+  Test.cpp
+  Создание кода...
+  lab4.vcxproj -> C:\Users\Александр Сергеевич\Desktop\Проекты\ООП (4 семестр)\Лабораторная работа №4\lab4\Debug\lab4.exe
+  lab4.vcxproj -> C:\Users\Александр Сергеевич\Desktop\Проекты\ООП (4 семестр)\Лабораторная работа №4\lab4\Debug\lab4.pdb (Partial PDB)

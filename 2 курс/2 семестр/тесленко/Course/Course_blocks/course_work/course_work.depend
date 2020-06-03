@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1461452085 source:d:\documents\2 курс\2 семестр\СП\course\course_blocks\course_work\file_ manager.cpp
+	"Lexical_Analys.h"
+
+1461447582 d:\documents\2 курс\2 семестр\СП\course\course_blocks\course_work\lexical_analys.h
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	<iomanip>
+	<iostream>
+	<fstream>
+	<string>
+	<cstdlib>
+
+1461452769 source:d:\documents\2 курс\2 семестр\СП\course\course_blocks\course_work\lexical_analys.cpp
+	"Lexical_Analys.h"
+
+1461410197 source:d:\documents\2 курс\2 семестр\СП\course\course_blocks\course_work\main.cpp
+	"Lexical_Analys.h"
+

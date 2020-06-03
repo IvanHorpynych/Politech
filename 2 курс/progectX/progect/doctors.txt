@@ -1,0 +1,6 @@
+Shelton;John;Surgeon;-;-;-;
+Edwards;Andrew;Onkologist;Stevenson;-;-;
+Rogers;Job;Pulmonologist;West;-;-;
+Taylor;Donald;Rheumatologist;Karina;-;-;
+Lisbon;Teresa;Dermatologist;-;-;-;
+Smith;John;dentist;Stevenson;-;-;

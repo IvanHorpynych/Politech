@@ -1,0 +1,3 @@
+﻿  File_ manager.cpp
+d:\documents\2 курс\2 семестр\сп\course\coursework_jonh\coursework_jonh\file_ manager.cpp(21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  CourseWork_Jonh.vcxproj -> D:\Documents\2 курс\2 семестр\СП\Course\CourseWork_Jonh\x64\Debug\CourseWork_Jonh.exe

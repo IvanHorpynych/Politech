@@ -1,0 +1,64 @@
+	Ідентифікатори містять великі й малі букви латинського алфавіту та цифри. Починаються з букви. Великі та малі букви не відрізняються. Довжина ідентифікаторів не більше 4 символів.
+	Константи: шістнадцяткові та текстові.
+	Директиви: END, SEGMENT (без операндів), ENDS (програма може мати тільки один сегмент кодів і тільки один сегмент даних), EQU, =, DB, DW, DD з одним операндом-константою (рядкові константи - тільки для DB).
+	Розрядність даних та адрес: 32-розрядні дані та зміщення в сегменті; 16-розрядні дані та зміщення не використовуються.
+	Адресація операндів пам'яті: базова індексна адресація з множником і з константним зміщенням ([edx+esi*4+6],[ebx+ecx*2+12] і т.п.) з оператором визначення типу (ptr) при необхідності.
+	Заміна сегментів: префікси заміни сегментів можуть задаватись тільки явно.
+	Машинні команди:
+		CWD
+		INT imm
+		IDIV mem
+		CMP reg, reg
+		XOR mem, imm +
+		AND reg, reg +
+		MOV reg, imm-
+		ADD mem, reg
+		JECXZ
+	reg – 8-  або 32-розрядні РЗП
+	mem – адреса операнда в пам’яті,
+	imm – 8- або 32-розрядні безпосередні дані (константи)
+
+==========================================
+
+data1 segment
+   VAL1   db    9h
+   VAL2   dw    0b2h
+   VAL3   dd    0abcdh
+   STR    db    'Тут рядок'
+   SMTH   equ   STR
+   NINE   =     VAL1
+data1 ends
+
+data2 segment
+   VAL4   db    4h
+   VAL5   dw    0b9h
+data2 ends
+
+code1 segment
+
+assume cs:code1, ds:data1
+start:
+   sti
+   puch  ecx
+   div   dword ptr [esi+edi]
+   xor   dword ptr es:[esp+ebp], 0ah
+   adc   eax, ecx
+   mov   ecx, ds:[ebp+esi]
+   sub   eax, ds:[ebp+esi]
+   xor   ds:val1, byte ptr [esi+ebp]
+   jz    start
+   jmp   start2
+code1 ends
+
+
+code2 segment
+
+assume cs:code2, ds:data1, es:data2
+start2:
+   puch  ecx
+   adc   eax, ecx
+   xor   ds:val1, byte ptr [esi+ebp]
+   xor   ds:val1, byte ptr [esi+ebp]
+jmp start
+
+end start

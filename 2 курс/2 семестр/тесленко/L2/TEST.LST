@@ -1,0 +1,102 @@
+Open segments:Microsoft (R) Macro Assembler Version 5.00                  4/27/16 03:20:30
+                                                             Page     1-1
+
+
+
+CODE2  . . . . . . . . . . . . .  	
+Microsoft (R) Macro Assembler Version 5.00                  4/27/16 03:20:30
+                                                             Page     1-1
+
+
+				.386 
+ 0000				data1 segment 
+ 0000  1A			   VAL1   db    11010b 
+ 0001  000F			   VAL2   dw    15 
+ 0003  CDAB0000			   VAL3   dd    0abcdh 
+ 0007  F0 FF E4 EE EA		   STR    db    'рядок' 
+test.ASM(6): warning A4016: Reserved word used as symbol: STR
+ =				   SMTH   equ   [ebx 
+ = 00B2				   NINE   =     178 
+ 000C				data1 ends 
+				 
+ 0000				data2 segment 
+ 0000  04			   VAL4   db    4h 
+ 0001  00B9			   VAL5   dw    0b9h 
+ 0003				data2 ends 
+				 
+ 0000				code1 segment 
+				assume cs:code1, ds:data1, es:code2 
+ 0000				start: 
+ 0000  FB			   sti 
+ 0001  0F 84 00000027 R		   jz    M1 
+ 0007  EB 1E 90 90 90		   jmp M1 
+ 000C  51			   push  ecx 
+ 000D  F7 343B			   div   dword ptr SMTH+edi] 
+ 0010  26: 83 342C 0A		   xor   dword ptr es:[esp+ebp], 0ah 
+ 0015  13 C1			   adc   eax, ecx 
+ 0017  67| 8B 09		   mov   ecx, ds:[bx+di] 
+ 001A  3E: 67| 2B 03		   sub   eax, ds:[bp+ di] 
+ 001E  80 35 00000000 R B2	   xor   ds:val1, NINE 
+ 0025  74 D9			   jz    start 
+ 0027				   M1: 
+ 0027  EB D7			   jmp   start 
+ 0029  E9 00000000 R		   jmp   start2 
+test.ASM(32): error A2064: Near JMP/CALL to different CS
+ 002E				code1 ends 
+				 
+ 0000				code2 segment 
+				assume cs:code2, ds:data1, es:code1 
+ 0000				start2: 
+ 0000  51			   push  ecx 
+ 0001  13 C1			   adc   eax, ecx 
+ = 0032				   NINE = 50 
+ 0003  80 35 00000000 R 32	   xor   ds:val1, NINE 
+ 000A  E9 00000000 R		jmp start 
+test.ASM(42): error A2064: Near JMP/CALL to different CS
+				 
+				end start 
+Open segments:
+CODE2  . . . . . . . . . . . . .  	
+Microsoft (R) Macro Assembler Version 5.00                  4/27/16 03:20:30
+                                                             Symbols-1
+
+
+
+
+                N a m e         	Size	Length	 Align	Combine Class
+
+CODE1  . . . . . . . . . . . . .  	32 Bit	002E	PARA	NONE	
+CODE2  . . . . . . . . . . . . .  	32 Bit	0000	PARA	NONE	
+DATA1  . . . . . . . . . . . . .  	32 Bit	000C	PARA	NONE	
+DATA2  . . . . . . . . . . . . .  	32 Bit	0003	PARA	NONE	
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+M1 . . . . . . . . . . . . . . .  	L NEAR	0027	CODE1
+
+NINE . . . . . . . . . . . . . .  	NUMBER	0032	
+
+SMTH . . . . . . . . . . . . . .  	TEXT  [ebx		
+START  . . . . . . . . . . . . .  	L NEAR	0000	CODE1
+START2 . . . . . . . . . . . . .  	L NEAR	0000	CODE2
+STR  . . . . . . . . . . . . . .  	L BYTE	0007	DATA1
+
+VAL1 . . . . . . . . . . . . . .  	L BYTE	0000	DATA1
+VAL2 . . . . . . . . . . . . . .  	L WORD	0001	DATA1
+VAL3 . . . . . . . . . . . . . .  	L DWORD	0003	DATA1
+VAL4 . . . . . . . . . . . . . .  	L BYTE	0000	DATA2
+VAL5 . . . . . . . . . . . . . .  	L WORD	0001	DATA2
+
+@FILENAME  . . . . . . . . . . .  	TEXT  test		
+
+
+     44 Source  Lines
+     44 Total   Lines
+     17 Symbols
+
+  50936 + 465608 Bytes symbol space free
+
+      1 Warning Errors
+      3 Severe  Errors

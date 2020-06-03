@@ -1,0 +1,5 @@
+Stevenson;Christopher;22;11;1972;Cancer;Smith;
+Jefferson;Alberta;10;10;1993;Asthma;-;
+West;Edward;24;4;1954;Arthriris;Rogers;
+Norton;Daniela;18;8;1984;Smallpox;-;
+Karina;Chumak;3;12;1987;flue;Taylor;

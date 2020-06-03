@@ -1,0 +1,71 @@
+﻿Build started 24.12.2015 20:49:54.
+     1>Project "D:\Projects\progect\progect\progect.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\VS\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:prompt lab_x.c
+         lab_x.c
+     1>d:\projects\progect\progect\lab_x.c(80): warning C4133: 'return': incompatible types - from 'patient *' to 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(90): warning C4133: '=': incompatible types - from 'patient *' to 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(98): warning C4133: '=': incompatible types - from 'patient *' to 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(104): warning C4133: '=': incompatible types - from 'patient *' to 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(166): warning C4133: 'return': incompatible types - from 'Doctor *' to 'Doctor *'
+     1>d:\projects\progect\progect\lab_x.c(176): warning C4133: '=': incompatible types - from 'Doctor *' to 'Doctor *'
+     1>d:\projects\progect\progect\lab_x.c(183): warning C4133: '=': incompatible types - from 'Doctor *' to 'Doctor *'
+     1>d:\projects\progect\progect\lab_x.c(189): warning C4133: '=': incompatible types - from 'Doctor *' to 'Doctor *'
+     1>d:\projects\progect\progect\lab_x.c(231): warning C4047: '=': 'char' differs in levels of indirection from 'char [2]'
+     1>d:\projects\progect\progect\lab_x.c(235): warning C4133: '!=': incompatible types - from 'Doctor *' to 'Doctor *'
+     1>d:\projects\progect\progect\lab_x.c(237): warning C4133: '=': incompatible types - from 'patient *' to 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(238): warning C4133: '=': incompatible types - from 'Doctor *' to 'Doctor *'
+     1>d:\projects\progect\progect\lab_x.c(242): warning C4133: '=': incompatible types - from 'patient *' to 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(243): warning C4133: '=': incompatible types - from 'Doctor *' to 'Doctor *'
+     1>d:\projects\progect\progect\lab_x.c(248): warning C4133: '=': incompatible types - from 'patient *' to 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(249): warning C4133: '=': incompatible types - from 'Doctor *' to 'Doctor *'
+     1>d:\projects\progect\progect\lab_x.c(266): warning C4133: '=': incompatible types - from 'Doctor *' to 'Doctor *'
+     1>d:\projects\progect\progect\lab_x.c(289): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[120]'
+     1>d:\projects\progect\progect\lab_x.c(289): warning C4024: 'fgets': different types for formal and actual parameter 1
+     1>d:\projects\progect\progect\lab_x.c(290): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[120]'
+     1>d:\projects\progect\progect\lab_x.c(290): warning C4024: 'fgets': different types for formal and actual parameter 1
+     1>d:\projects\progect\progect\lab_x.c(291): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[120]'
+     1>d:\projects\progect\progect\lab_x.c(291): warning C4024: 'dec': different types for formal and actual parameter 1
+     1>d:\projects\progect\progect\lab_x.c(291): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[120]'
+     1>d:\projects\progect\progect\lab_x.c(291): warning C4024: 'strcpy': different types for formal and actual parameter 2
+     1>d:\projects\progect\progect\lab_x.c(293): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[120]'
+     1>d:\projects\progect\progect\lab_x.c(293): warning C4024: 'fgets': different types for formal and actual parameter 1
+     1>d:\projects\progect\progect\lab_x.c(294): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[120]'
+     1>d:\projects\progect\progect\lab_x.c(294): warning C4024: 'dec': different types for formal and actual parameter 1
+     1>d:\projects\progect\progect\lab_x.c(294): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[120]'
+     1>d:\projects\progect\progect\lab_x.c(294): warning C4024: 'strcpy': different types for formal and actual parameter 2
+     1>d:\projects\progect\progect\lab_x.c(296): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[120]'
+     1>d:\projects\progect\progect\lab_x.c(296): warning C4024: 'fgets': different types for formal and actual parameter 1
+     1>d:\projects\progect\progect\lab_x.c(297): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[120]'
+     1>d:\projects\progect\progect\lab_x.c(297): warning C4024: 'dec': different types for formal and actual parameter 1
+     1>d:\projects\progect\progect\lab_x.c(297): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[120]'
+     1>d:\projects\progect\progect\lab_x.c(297): warning C4024: 'strcpy': different types for formal and actual parameter 2
+     1>d:\projects\progect\progect\lab_x.c(299): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[120]'
+     1>d:\projects\progect\progect\lab_x.c(299): warning C4024: 'fgets': different types for formal and actual parameter 1
+     1>d:\projects\progect\progect\lab_x.c(300): warning C4047: 'function': 'char *' differs in levels of indirection from 'char *[120]'
+     1>d:\projects\progect\progect\lab_x.c(300): warning C4024: 'dec': different types for formal and actual parameter 1
+     1>d:\projects\progect\progect\lab_x.c(300): warning C4047: 'function': 'const char *' differs in levels of indirection from 'char *[120]'
+     1>d:\projects\progect\progect\lab_x.c(300): warning C4024: 'strcpy': different types for formal and actual parameter 2
+     1>d:\projects\progect\progect\lab_x.c(320): warning C4133: '!=': incompatible types - from 'patient *' to 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(323): warning C4133: '=': incompatible types - from 'patient *' to 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(324): warning C4133: '=': incompatible types - from 'Doctor *' to 'Doctor *'
+     1>d:\projects\progect\progect\lab_x.c(328): warning C4133: '!=': incompatible types - from 'patient *' to 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(330): warning C4133: '=': incompatible types - from 'patient *' to 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(331): warning C4133: '=': incompatible types - from 'Doctor *' to 'Doctor *'
+     1>d:\projects\progect\progect\lab_x.c(336): warning C4133: '!=': incompatible types - from 'patient *' to 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(338): warning C4133: '=': incompatible types - from 'patient *' to 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(339): warning C4133: '=': incompatible types - from 'Doctor *' to 'Doctor *'
+     1>d:\projects\progect\progect\lab_x.c(357): warning C4133: '=': incompatible types - from 'patient *' to 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(364): warning C4133: '=': incompatible types - from 'patient *' to 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(369): warning C4133: '=': incompatible types - from 'patient *' to 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(431): warning C4477: 'fprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(433): warning C4477: 'fprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'patient *'
+     1>d:\projects\progect\progect\lab_x.c(435): warning C4477: 'fprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'patient *'
+       Link:
+         D:\Program Files (x86)\VS\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Projects\progect\Debug\progect.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\Projects\progect\Debug\progect.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Projects\progect\Debug\progect.lib" /MACHINE:X86 Debug\lab_x.obj
+         progect.vcxproj -> D:\Projects\progect\Debug\progect.exe
+     1>Done Building Project "D:\Projects\progect\progect\progect.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:14.28

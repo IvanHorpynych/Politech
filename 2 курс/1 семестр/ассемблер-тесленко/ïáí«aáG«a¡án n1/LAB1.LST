@@ -1,0 +1,84 @@
+Microsoft (R) Macro Assembler Version 5.00                  10/7/15 12:18:47
+                                                             Page     1-1
+
+
+				.286  
+ 0000								data segment  
+ 0000  38							 base   db  38h
+				  
+ 0001  00						     result db  0  
+ 0002								data ends  
+ 0000								code segment  
+								     assume cs:
+				code, ds:data  
+ 0000								begin:  
+ 0000  BA ---- R				 mov dx,data  
+ 0003  8E DA					 mov ds,dx  
+								   
+ 0005  8A 36 0001 R				 mov dh, result  
+ 0009  8A 16 0000 R				 mov dl, base  
+								    
+ 000D  80 E2 02				 and dl,00000010b  
+ 0010  D0 E2					 shl dl,1  
+ 0012  0A F2					 or dh,dl  
+ 0014  C0 EA 02					 shr dl,2  
+ 0017  0A F2					 or dh,dl 
+						  
+ 0019  8A 16 0000 R				 mov dl, base 
+						  
+ 001D  80 E2 04				 and dl,00000100b 
+ 0020  C0 EA 02					 shr dl,2  
+ 0023  0A F2					 or dh,dl		   
+ 0025  C0 E2 05				     shl dl,5 
+ 0028  0A F2					 or dh,dl 
+ 002A  C0 E2 02				     shl dl,2 
+ 002D  0A F2					 or dh,dl 
+						 
+ 002F  8A 16 0000 R				 mov dl, base 
+						  
+ 0033  80 E2 10			     and dl,00010000b    
+ 0036  0A F2					 or dh,dl  
+ 0038  D0 EA					 shr dl,1  
+ 003A  0A F2				     or dh,dl 
+								   
+ 003C  8A 16 0000 R				 mov dl, base 
+ 0040  80 E2 40				 and dl,01000000b 
+ 0043  0A F2					 or dh,dl 
+				 
+ 0045  88 36 0001 R				 mov result,dh  
+								  
+ 0049  BA 4C00						 mov dx, 4c00h  
+ 004C  CD 21						 int 21h  
+ 004E								code ends  
+								 end begin  
+Microsoft (R) Macro Assembler Version 5.00                  10/7/15 12:18:47
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+CODE . . . . . . . . . . . . . .  	004E	PARA	NONE	
+DATA . . . . . . . . . . . . . .  	0002	PARA	NONE	
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+BASE . . . . . . . . . . . . . .  	L BYTE	0000	DATA
+BEGIN  . . . . . . . . . . . . .  	L NEAR	0000	CODE
+
+RESULT . . . . . . . . . . . . .  	L BYTE	0001	DATA
+
+@FILENAME  . . . . . . . . . . .  	TEXT  lab1		
+
+
+     47 Source  Lines
+     47 Total   Lines
+      7 Symbols
+
+  51214 + 465330 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

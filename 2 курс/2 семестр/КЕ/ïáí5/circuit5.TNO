@@ -1,0 +1,210 @@
+********************************************************************************
+***              Micro-Cap 11.0.1.5 (32 bit) Evaluation Version              ***
+***                                   Иван                                   ***
+***                                 ntuukpi                                  ***
+***                      Transient Analysis of circuit5                      ***
+***                           9/24/2016 3:52:10 PM                           ***
+********************************************************************************
+Limits
+======
+Time Range               1u
+Maximum Time Step        0
+Number of Points         51
+Temperature              Linear 27
+Retrace Runs             1
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Operating Point Only     Off
+Auto Scale Ranges        On
+Accumulate Plots         Off
+Fixed Time Step          Off
+Periodic Steady State    Off
+Ignore Expression Errors Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            32.982m  2           544.115m  3            15.000m 
+4            15.000m  5             5.000   6             4.695  
+7            32.982m  8           544.115m  9            15.000m 
+10           15.000m  11            5.000   12          590.497m 
+13            1.117   14            5.000   15           51.357m 
+
+
+Operating Point for Devices of Type Bipolar Junction Transistors NPN
+====================================================================
+Instance:                Q1             Q2             Q3             Q4
+Using model:         KT315A         KT315A         KT315A         KT315A
+
+Beta Terms:
+BETADC              -8.633m        -8.633m        -2.870         -8.633m
+BETAAC              27.124         27.124         57.483         27.124 
+
+Capacitance Terms:
+CPI                  8.879p         8.879p         1.015p         8.879p
+CMU                 49.683p        49.683p         8.779p        49.683p
+CBX                  0.000          0.000          0.000          0.000 
+CJS                  0.979f         0.979f         0.371f         0.979f
+
+Conductance Terms:
+GM                  27.237m        27.237m       270.913p        27.237m
+
+Current Terms:
+IB                 738.708u       738.708u        -6.438p       738.708u
+IC                  -6.377u        -6.377u        18.476p        -6.377u
+
+Resistance Terms:
+RPI                995.850        995.850        212.183G       995.850 
+RX                   0.000          0.000          0.000          0.000 
+RO                  36.733         36.733        849.073G        36.733 
+
+Voltage Terms:
+VBE                529.115m       529.115m        32.982m       529.115m
+VBC                511.134m       511.134m        -4.662        511.134m
+VCE                 17.982m        17.982m         4.695         17.982m
+
+Frequency Terms:
+FT                74.022MEG      74.022MEG         4.402       74.022MEG
+
+Power DC Terms:
+PD                 390.747u       390.747u        86.541p       390.747u
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ib                 738.708u       738.708u        -6.438p       738.708u
+Ic                  -6.377u        -6.377u        18.476p        -6.377u
+Ie                -732.331u      -732.331u       -12.038p      -732.331u
+Is                   0.000          0.000          0.000          0.000 
+
+Condition:
+State                   SAT            SAT            OFF            SAT
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+vbe                  0.000          0.000          0.000          0.000 
+vce                  0.000          0.000          0.000          0.000 
+
+
+Instance:                Q5             Q6             Q7             Q8
+Using model:         KT315A         KT315A         KT315A         KT315A
+
+Beta Terms:
+BETADC              -8.633m        -2.870         -2.029          4.507 
+BETAAC              27.124         57.483         -2.811T        45.305 
+
+Capacitance Terms:
+CPI                  8.879p         1.015p       560.763f        79.177p
+CMU                 49.683p         8.779p        70.903p       100.907p
+CBX                  0.000          0.000          0.000          0.000 
+CJS                  0.979f         0.371f         0.748f         0.967f
+
+Conductance Terms:
+GM                  27.237m       270.913p       -51.110m       488.235m
+
+Current Terms:
+IB                 738.708u        -6.438p         1.287m         2.383m
+IC                  -6.377u        18.476p        -2.612m        10.743m
+
+Resistance Terms:
+RPI                995.850        212.183G        55.000T        92.793 
+RX                   0.000          0.000          0.000          0.000 
+RO                  36.733        849.073G        19.561         12.470 
+
+Voltage Terms:
+VBE                529.115m        32.982m        -3.578        590.497m
+VBC                511.134m        -4.662        526.428m       539.140m
+VCE                 17.982m         4.695         -4.105         51.357m
+
+Frequency Terms:
+FT                74.022MEG         4.402     -113.827MEG     431.493MEG
+
+Power DC Terms:
+PD                 390.747u        86.541p         6.114m         1.959m
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ib                 738.708u        -6.438p         1.287m         2.383m
+Ic                  -6.377u        18.476p        -2.612m        10.743m
+Ie                -732.331u       -12.038p         1.324m       -13.127m
+Is                   0.000          0.000          0.000          0.000 
+
+Condition:
+State                   SAT            OFF            OFF            SAT
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+vbe                  0.000          0.000          0.000          0.000 
+vce                  0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                 R1             R2             R3             R4
+V                     4.456         32.982m       304.596m         4.456 
+Power DC Terms:
+PD                    6.583m       420.649n       201.693u         6.583m
+
+DC Pin Currents:
+Ir                    1.477m        12.754u       662.165u         1.477m
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                 R5             R6             R7             R8
+V                    32.982m       304.596m         3.883        590.497m
+Power DC Terms:
+PD                  420.649n       201.693u         4.999m       134.836u
+
+DC Pin Currents:
+Ir                   12.754u       662.165u         1.287m       228.344u
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                 R9            R10
+V                    51.357m         4.949 
+Power DC Terms:
+PD                  762.722n        53.237m
+
+DC Pin Currents:
+Ir                   14.852u        10.758m
+
+Device Variables:
+tc1                   0.000          0.000 
+tc2                   0.000          0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                V3             V6             V7             V8
+V                    5.000          5.000          5.000         15.000m
+Power DC Terms:
+PG                  10.698m        10.698m        60.227m       -10.985u
+
+DC Pin Currents:
+ISource             -2.140m        -2.140m       -12.045m       732.331u
+
+
+Instance:                V9            V10            V11
+V                   15.000m        15.000m        15.000m
+Power DC Terms:
+PG                 -10.985u       -10.985u       -10.985u
+
+DC Pin Currents:
+ISource            732.331u       732.331u       732.331u
+
+

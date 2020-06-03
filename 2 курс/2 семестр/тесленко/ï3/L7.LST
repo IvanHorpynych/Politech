@@ -1,0 +1,3354 @@
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-1
+
+
+				.586p 
+L7.ASM(1): error A2105: Expected: instruction or directive
+				descr	struct 
+L7.ASM(2): error A2105: Expected: instruction or directive
+ 0000  0000			 limit_1  dw	0 
+L7.ASM(3): error A2086: Data emitted with no segment
+ 0002  0000			 base_1 dw	0 
+L7.ASM(4): error A2086: Data emitted with no segment
+ 0004  00			 base_2 db	0 
+L7.ASM(5): error A2086: Data emitted with no segment
+ 0005  00			 attrib db	0 
+L7.ASM(6): error A2086: Data emitted with no segment
+ 0006  00			 bt6  db	0 
+L7.ASM(7): error A2086: Data emitted with no segment
+ 0007  00			 base_3 db	0 
+L7.ASM(8): error A2086: Data emitted with no segment
+				descr	ends 
+L7.ASM(9): error A2000: Block nesting error
+				;----------------------------------------------
+				----------- 
+				dt_p	struc 
+ 0000  0000			 lim  dw	0 
+ 0002  00000000			 adr  dd	0 
+ 0006				dt_p	ends 
+				;----------------------------------------------
+				----------- 
+ = 009A				S_cr0	equ	10011010b ;   Readable 0 level 
+				code segment 
+ = 00BA				S_cr1	equ	10111010b ;   Readable 1 level 
+				code segment 
+ = 0098				S_c_0	equ	10011000b ; UnReadable 0 level 
+				code segment 
+ = 0092				S_dw0	equ	10010010b ;   Writable 0 level 
+				data segment 
+ = 00B2				S_dw1	equ	10110010b ;   Writable 1 level 
+				data segment 
+ = 0090				S_d_0	equ	10010000b ; UnWritable 0 level 
+				data segment 
+ = 00B0				S_d_1	equ	10110000b ; UnWritable 1 level 
+				data segment 
+ = 0096				S_sw0	equ	10010110b ;   Writable stack se
+				gment 
+				;----------------------------------------------
+				----------- 
+ 0000				_GDT	segment	para public 'data' use16 
+L7.ASM(25): error A2025: Improper align/combine type
+				 descr_0	descr	<> 
+L7.ASM(26): error A2105: Expected: instruction or directive
+				 descr_gdt  descr	<> 
+L7.ASM(27): error A2105: Expected: instruction or directive
+				 descr_ds	descr	<> 
+L7.ASM(28): error A2105: Expected: instruction or directive
+				 descr_es	descr	<> 
+L7.ASM(29): error A2105: Expected: instruction or directive
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-2
+
+
+				 descr_ss	descr	<> 
+L7.ASM(30): error A2105: Expected: instruction or directive
+				 descr_cs	descr	<> 
+L7.ASM(31): error A2105: Expected: instruction or directive
+				 descr_i_code	descr	<> 
+L7.ASM(32): error A2105: Expected: instruction or directive
+				 descr_t2 descr <> 
+L7.ASM(33): error A2105: Expected: instruction or directive
+				 descr_t10  descr <> 
+L7.ASM(34): error A2105: Expected: instruction or directive
+ =-0001				 _gdt_size	equ	$-1 
+ 0000				_GDT	ends 
+				;----------------------------------------------
+				----------- 
+ 0000				_IDT	segment para public 'data' 
+ = 0000					vector = 0 
+					rept	256 
+					dw	Vector * proc_i_size 
+					dw	offset descr_i_code 
+					db	0 
+					db	10001111b 
+					dw	0 
+					vector = vector+1 
+					endm 
+ 0000  0000                  1		dw	Vector * proc_i_size 
+ 0002  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0004  00                    1		db	0 
+ 0005  8F                    1		db	10001111b 
+ 0006  0000                  1		dw	0 
+ 0008  0007                  1		dw	Vector * proc_i_size 
+ 000A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 000C  00                    1		db	0 
+ 000D  8F                    1		db	10001111b 
+ 000E  0000                  1		dw	0 
+ 0010  000E                  1		dw	Vector * proc_i_size 
+ 0012  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0014  00                    1		db	0 
+ 0015  8F                    1		db	10001111b 
+ 0016  0000                  1		dw	0 
+ 0018  0015                  1		dw	Vector * proc_i_size 
+ 001A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 001C  00                    1		db	0 
+ 001D  8F                    1		db	10001111b 
+ 001E  0000                  1		dw	0 
+ 0020  001C                  1		dw	Vector * proc_i_size 
+ 0022  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0024  00                    1		db	0 
+ 0025  8F                    1		db	10001111b 
+ 0026  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-3
+
+
+ 0028  0023                  1		dw	Vector * proc_i_size 
+ 002A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 002C  00                    1		db	0 
+ 002D  8F                    1		db	10001111b 
+ 002E  0000                  1		dw	0 
+ 0030  002A                  1		dw	Vector * proc_i_size 
+ 0032  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0034  00                    1		db	0 
+ 0035  8F                    1		db	10001111b 
+ 0036  0000                  1		dw	0 
+ 0038  0031                  1		dw	Vector * proc_i_size 
+ 003A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 003C  00                    1		db	0 
+ 003D  8F                    1		db	10001111b 
+ 003E  0000                  1		dw	0 
+ 0040  0038                  1		dw	Vector * proc_i_size 
+ 0042  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0044  00                    1		db	0 
+ 0045  8F                    1		db	10001111b 
+ 0046  0000                  1		dw	0 
+ 0048  003F                  1		dw	Vector * proc_i_size 
+ 004A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 004C  00                    1		db	0 
+ 004D  8F                    1		db	10001111b 
+ 004E  0000                  1		dw	0 
+ 0050  0046                  1		dw	Vector * proc_i_size 
+ 0052  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0054  00                    1		db	0 
+ 0055  8F                    1		db	10001111b 
+ 0056  0000                  1		dw	0 
+ 0058  004D                  1		dw	Vector * proc_i_size 
+ 005A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 005C  00                    1		db	0 
+ 005D  8F                    1		db	10001111b 
+ 005E  0000                  1		dw	0 
+ 0060  0054                  1		dw	Vector * proc_i_size 
+ 0062  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0064  00                    1		db	0 
+ 0065  8F                    1		db	10001111b 
+ 0066  0000                  1		dw	0 
+ 0068  005B                  1		dw	Vector * proc_i_size 
+ 006A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 006C  00                    1		db	0 
+ 006D  8F                    1		db	10001111b 
+ 006E  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-4
+
+
+ 0070  0062                  1		dw	Vector * proc_i_size 
+ 0072  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0074  00                    1		db	0 
+ 0075  8F                    1		db	10001111b 
+ 0076  0000                  1		dw	0 
+ 0078  0069                  1		dw	Vector * proc_i_size 
+ 007A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 007C  00                    1		db	0 
+ 007D  8F                    1		db	10001111b 
+ 007E  0000                  1		dw	0 
+ 0080  0070                  1		dw	Vector * proc_i_size 
+ 0082  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0084  00                    1		db	0 
+ 0085  8F                    1		db	10001111b 
+ 0086  0000                  1		dw	0 
+ 0088  0077                  1		dw	Vector * proc_i_size 
+ 008A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 008C  00                    1		db	0 
+ 008D  8F                    1		db	10001111b 
+ 008E  0000                  1		dw	0 
+ 0090  007E                  1		dw	Vector * proc_i_size 
+ 0092  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0094  00                    1		db	0 
+ 0095  8F                    1		db	10001111b 
+ 0096  0000                  1		dw	0 
+ 0098  0085                  1		dw	Vector * proc_i_size 
+ 009A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 009C  00                    1		db	0 
+ 009D  8F                    1		db	10001111b 
+ 009E  0000                  1		dw	0 
+ 00A0  008C                  1		dw	Vector * proc_i_size 
+ 00A2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 00A4  00                    1		db	0 
+ 00A5  8F                    1		db	10001111b 
+ 00A6  0000                  1		dw	0 
+ 00A8  0093                  1		dw	Vector * proc_i_size 
+ 00AA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 00AC  00                    1		db	0 
+ 00AD  8F                    1		db	10001111b 
+ 00AE  0000                  1		dw	0 
+ 00B0  009A                  1		dw	Vector * proc_i_size 
+ 00B2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 00B4  00                    1		db	0 
+ 00B5  8F                    1		db	10001111b 
+ 00B6  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-5
+
+
+ 00B8  00A1                  1		dw	Vector * proc_i_size 
+ 00BA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 00BC  00                    1		db	0 
+ 00BD  8F                    1		db	10001111b 
+ 00BE  0000                  1		dw	0 
+ 00C0  00A8                  1		dw	Vector * proc_i_size 
+ 00C2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 00C4  00                    1		db	0 
+ 00C5  8F                    1		db	10001111b 
+ 00C6  0000                  1		dw	0 
+ 00C8  00AF                  1		dw	Vector * proc_i_size 
+ 00CA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 00CC  00                    1		db	0 
+ 00CD  8F                    1		db	10001111b 
+ 00CE  0000                  1		dw	0 
+ 00D0  00B6                  1		dw	Vector * proc_i_size 
+ 00D2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 00D4  00                    1		db	0 
+ 00D5  8F                    1		db	10001111b 
+ 00D6  0000                  1		dw	0 
+ 00D8  00BD                  1		dw	Vector * proc_i_size 
+ 00DA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 00DC  00                    1		db	0 
+ 00DD  8F                    1		db	10001111b 
+ 00DE  0000                  1		dw	0 
+ 00E0  00C4                  1		dw	Vector * proc_i_size 
+ 00E2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 00E4  00                    1		db	0 
+ 00E5  8F                    1		db	10001111b 
+ 00E6  0000                  1		dw	0 
+ 00E8  00CB                  1		dw	Vector * proc_i_size 
+ 00EA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 00EC  00                    1		db	0 
+ 00ED  8F                    1		db	10001111b 
+ 00EE  0000                  1		dw	0 
+ 00F0  00D2                  1		dw	Vector * proc_i_size 
+ 00F2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 00F4  00                    1		db	0 
+ 00F5  8F                    1		db	10001111b 
+ 00F6  0000                  1		dw	0 
+ 00F8  00D9                  1		dw	Vector * proc_i_size 
+ 00FA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 00FC  00                    1		db	0 
+ 00FD  8F                    1		db	10001111b 
+ 00FE  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-6
+
+
+ 0100  00E0                  1		dw	Vector * proc_i_size 
+ 0102  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0104  00                    1		db	0 
+ 0105  8F                    1		db	10001111b 
+ 0106  0000                  1		dw	0 
+ 0108  00E7                  1		dw	Vector * proc_i_size 
+ 010A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 010C  00                    1		db	0 
+ 010D  8F                    1		db	10001111b 
+ 010E  0000                  1		dw	0 
+ 0110  00EE                  1		dw	Vector * proc_i_size 
+ 0112  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0114  00                    1		db	0 
+ 0115  8F                    1		db	10001111b 
+ 0116  0000                  1		dw	0 
+ 0118  00F5                  1		dw	Vector * proc_i_size 
+ 011A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 011C  00                    1		db	0 
+ 011D  8F                    1		db	10001111b 
+ 011E  0000                  1		dw	0 
+ 0120  00FC                  1		dw	Vector * proc_i_size 
+ 0122  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0124  00                    1		db	0 
+ 0125  8F                    1		db	10001111b 
+ 0126  0000                  1		dw	0 
+ 0128  0103                  1		dw	Vector * proc_i_size 
+ 012A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 012C  00                    1		db	0 
+ 012D  8F                    1		db	10001111b 
+ 012E  0000                  1		dw	0 
+ 0130  010A                  1		dw	Vector * proc_i_size 
+ 0132  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0134  00                    1		db	0 
+ 0135  8F                    1		db	10001111b 
+ 0136  0000                  1		dw	0 
+ 0138  0111                  1		dw	Vector * proc_i_size 
+ 013A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 013C  00                    1		db	0 
+ 013D  8F                    1		db	10001111b 
+ 013E  0000                  1		dw	0 
+ 0140  0118                  1		dw	Vector * proc_i_size 
+ 0142  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0144  00                    1		db	0 
+ 0145  8F                    1		db	10001111b 
+ 0146  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-7
+
+
+ 0148  011F                  1		dw	Vector * proc_i_size 
+ 014A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 014C  00                    1		db	0 
+ 014D  8F                    1		db	10001111b 
+ 014E  0000                  1		dw	0 
+ 0150  0126                  1		dw	Vector * proc_i_size 
+ 0152  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0154  00                    1		db	0 
+ 0155  8F                    1		db	10001111b 
+ 0156  0000                  1		dw	0 
+ 0158  012D                  1		dw	Vector * proc_i_size 
+ 015A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 015C  00                    1		db	0 
+ 015D  8F                    1		db	10001111b 
+ 015E  0000                  1		dw	0 
+ 0160  0134                  1		dw	Vector * proc_i_size 
+ 0162  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0164  00                    1		db	0 
+ 0165  8F                    1		db	10001111b 
+ 0166  0000                  1		dw	0 
+ 0168  013B                  1		dw	Vector * proc_i_size 
+ 016A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 016C  00                    1		db	0 
+ 016D  8F                    1		db	10001111b 
+ 016E  0000                  1		dw	0 
+ 0170  0142                  1		dw	Vector * proc_i_size 
+ 0172  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0174  00                    1		db	0 
+ 0175  8F                    1		db	10001111b 
+ 0176  0000                  1		dw	0 
+ 0178  0149                  1		dw	Vector * proc_i_size 
+ 017A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 017C  00                    1		db	0 
+ 017D  8F                    1		db	10001111b 
+ 017E  0000                  1		dw	0 
+ 0180  0150                  1		dw	Vector * proc_i_size 
+ 0182  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0184  00                    1		db	0 
+ 0185  8F                    1		db	10001111b 
+ 0186  0000                  1		dw	0 
+ 0188  0157                  1		dw	Vector * proc_i_size 
+ 018A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 018C  00                    1		db	0 
+ 018D  8F                    1		db	10001111b 
+ 018E  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-8
+
+
+ 0190  015E                  1		dw	Vector * proc_i_size 
+ 0192  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0194  00                    1		db	0 
+ 0195  8F                    1		db	10001111b 
+ 0196  0000                  1		dw	0 
+ 0198  0165                  1		dw	Vector * proc_i_size 
+ 019A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 019C  00                    1		db	0 
+ 019D  8F                    1		db	10001111b 
+ 019E  0000                  1		dw	0 
+ 01A0  016C                  1		dw	Vector * proc_i_size 
+ 01A2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 01A4  00                    1		db	0 
+ 01A5  8F                    1		db	10001111b 
+ 01A6  0000                  1		dw	0 
+ 01A8  0173                  1		dw	Vector * proc_i_size 
+ 01AA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 01AC  00                    1		db	0 
+ 01AD  8F                    1		db	10001111b 
+ 01AE  0000                  1		dw	0 
+ 01B0  017A                  1		dw	Vector * proc_i_size 
+ 01B2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 01B4  00                    1		db	0 
+ 01B5  8F                    1		db	10001111b 
+ 01B6  0000                  1		dw	0 
+ 01B8  0181                  1		dw	Vector * proc_i_size 
+ 01BA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 01BC  00                    1		db	0 
+ 01BD  8F                    1		db	10001111b 
+ 01BE  0000                  1		dw	0 
+ 01C0  0188                  1		dw	Vector * proc_i_size 
+ 01C2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 01C4  00                    1		db	0 
+ 01C5  8F                    1		db	10001111b 
+ 01C6  0000                  1		dw	0 
+ 01C8  018F                  1		dw	Vector * proc_i_size 
+ 01CA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 01CC  00                    1		db	0 
+ 01CD  8F                    1		db	10001111b 
+ 01CE  0000                  1		dw	0 
+ 01D0  0196                  1		dw	Vector * proc_i_size 
+ 01D2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 01D4  00                    1		db	0 
+ 01D5  8F                    1		db	10001111b 
+ 01D6  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-9
+
+
+ 01D8  019D                  1		dw	Vector * proc_i_size 
+ 01DA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 01DC  00                    1		db	0 
+ 01DD  8F                    1		db	10001111b 
+ 01DE  0000                  1		dw	0 
+ 01E0  01A4                  1		dw	Vector * proc_i_size 
+ 01E2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 01E4  00                    1		db	0 
+ 01E5  8F                    1		db	10001111b 
+ 01E6  0000                  1		dw	0 
+ 01E8  01AB                  1		dw	Vector * proc_i_size 
+ 01EA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 01EC  00                    1		db	0 
+ 01ED  8F                    1		db	10001111b 
+ 01EE  0000                  1		dw	0 
+ 01F0  01B2                  1		dw	Vector * proc_i_size 
+ 01F2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 01F4  00                    1		db	0 
+ 01F5  8F                    1		db	10001111b 
+ 01F6  0000                  1		dw	0 
+ 01F8  01B9                  1		dw	Vector * proc_i_size 
+ 01FA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 01FC  00                    1		db	0 
+ 01FD  8F                    1		db	10001111b 
+ 01FE  0000                  1		dw	0 
+ 0200  01C0                  1		dw	Vector * proc_i_size 
+ 0202  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0204  00                    1		db	0 
+ 0205  8F                    1		db	10001111b 
+ 0206  0000                  1		dw	0 
+ 0208  01C7                  1		dw	Vector * proc_i_size 
+ 020A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 020C  00                    1		db	0 
+ 020D  8F                    1		db	10001111b 
+ 020E  0000                  1		dw	0 
+ 0210  01CE                  1		dw	Vector * proc_i_size 
+ 0212  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0214  00                    1		db	0 
+ 0215  8F                    1		db	10001111b 
+ 0216  0000                  1		dw	0 
+ 0218  01D5                  1		dw	Vector * proc_i_size 
+ 021A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 021C  00                    1		db	0 
+ 021D  8F                    1		db	10001111b 
+ 021E  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-10
+
+
+ 0220  01DC                  1		dw	Vector * proc_i_size 
+ 0222  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0224  00                    1		db	0 
+ 0225  8F                    1		db	10001111b 
+ 0226  0000                  1		dw	0 
+ 0228  01E3                  1		dw	Vector * proc_i_size 
+ 022A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 022C  00                    1		db	0 
+ 022D  8F                    1		db	10001111b 
+ 022E  0000                  1		dw	0 
+ 0230  01EA                  1		dw	Vector * proc_i_size 
+ 0232  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0234  00                    1		db	0 
+ 0235  8F                    1		db	10001111b 
+ 0236  0000                  1		dw	0 
+ 0238  01F1                  1		dw	Vector * proc_i_size 
+ 023A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 023C  00                    1		db	0 
+ 023D  8F                    1		db	10001111b 
+ 023E  0000                  1		dw	0 
+ 0240  01F8                  1		dw	Vector * proc_i_size 
+ 0242  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0244  00                    1		db	0 
+ 0245  8F                    1		db	10001111b 
+ 0246  0000                  1		dw	0 
+ 0248  01FF                  1		dw	Vector * proc_i_size 
+ 024A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 024C  00                    1		db	0 
+ 024D  8F                    1		db	10001111b 
+ 024E  0000                  1		dw	0 
+ 0250  0206                  1		dw	Vector * proc_i_size 
+ 0252  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0254  00                    1		db	0 
+ 0255  8F                    1		db	10001111b 
+ 0256  0000                  1		dw	0 
+ 0258  020D                  1		dw	Vector * proc_i_size 
+ 025A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 025C  00                    1		db	0 
+ 025D  8F                    1		db	10001111b 
+ 025E  0000                  1		dw	0 
+ 0260  0214                  1		dw	Vector * proc_i_size 
+ 0262  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0264  00                    1		db	0 
+ 0265  8F                    1		db	10001111b 
+ 0266  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-11
+
+
+ 0268  021B                  1		dw	Vector * proc_i_size 
+ 026A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 026C  00                    1		db	0 
+ 026D  8F                    1		db	10001111b 
+ 026E  0000                  1		dw	0 
+ 0270  0222                  1		dw	Vector * proc_i_size 
+ 0272  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0274  00                    1		db	0 
+ 0275  8F                    1		db	10001111b 
+ 0276  0000                  1		dw	0 
+ 0278  0229                  1		dw	Vector * proc_i_size 
+ 027A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 027C  00                    1		db	0 
+ 027D  8F                    1		db	10001111b 
+ 027E  0000                  1		dw	0 
+ 0280  0230                  1		dw	Vector * proc_i_size 
+ 0282  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0284  00                    1		db	0 
+ 0285  8F                    1		db	10001111b 
+ 0286  0000                  1		dw	0 
+ 0288  0237                  1		dw	Vector * proc_i_size 
+ 028A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 028C  00                    1		db	0 
+ 028D  8F                    1		db	10001111b 
+ 028E  0000                  1		dw	0 
+ 0290  023E                  1		dw	Vector * proc_i_size 
+ 0292  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0294  00                    1		db	0 
+ 0295  8F                    1		db	10001111b 
+ 0296  0000                  1		dw	0 
+ 0298  0245                  1		dw	Vector * proc_i_size 
+ 029A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 029C  00                    1		db	0 
+ 029D  8F                    1		db	10001111b 
+ 029E  0000                  1		dw	0 
+ 02A0  024C                  1		dw	Vector * proc_i_size 
+ 02A2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 02A4  00                    1		db	0 
+ 02A5  8F                    1		db	10001111b 
+ 02A6  0000                  1		dw	0 
+ 02A8  0253                  1		dw	Vector * proc_i_size 
+ 02AA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 02AC  00                    1		db	0 
+ 02AD  8F                    1		db	10001111b 
+ 02AE  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-12
+
+
+ 02B0  025A                  1		dw	Vector * proc_i_size 
+ 02B2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 02B4  00                    1		db	0 
+ 02B5  8F                    1		db	10001111b 
+ 02B6  0000                  1		dw	0 
+ 02B8  0261                  1		dw	Vector * proc_i_size 
+ 02BA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 02BC  00                    1		db	0 
+ 02BD  8F                    1		db	10001111b 
+ 02BE  0000                  1		dw	0 
+ 02C0  0268                  1		dw	Vector * proc_i_size 
+ 02C2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 02C4  00                    1		db	0 
+ 02C5  8F                    1		db	10001111b 
+ 02C6  0000                  1		dw	0 
+ 02C8  026F                  1		dw	Vector * proc_i_size 
+ 02CA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 02CC  00                    1		db	0 
+ 02CD  8F                    1		db	10001111b 
+ 02CE  0000                  1		dw	0 
+ 02D0  0276                  1		dw	Vector * proc_i_size 
+ 02D2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 02D4  00                    1		db	0 
+ 02D5  8F                    1		db	10001111b 
+ 02D6  0000                  1		dw	0 
+ 02D8  027D                  1		dw	Vector * proc_i_size 
+ 02DA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 02DC  00                    1		db	0 
+ 02DD  8F                    1		db	10001111b 
+ 02DE  0000                  1		dw	0 
+ 02E0  0284                  1		dw	Vector * proc_i_size 
+ 02E2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 02E4  00                    1		db	0 
+ 02E5  8F                    1		db	10001111b 
+ 02E6  0000                  1		dw	0 
+ 02E8  028B                  1		dw	Vector * proc_i_size 
+ 02EA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 02EC  00                    1		db	0 
+ 02ED  8F                    1		db	10001111b 
+ 02EE  0000                  1		dw	0 
+ 02F0  0292                  1		dw	Vector * proc_i_size 
+ 02F2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 02F4  00                    1		db	0 
+ 02F5  8F                    1		db	10001111b 
+ 02F6  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-13
+
+
+ 02F8  0299                  1		dw	Vector * proc_i_size 
+ 02FA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 02FC  00                    1		db	0 
+ 02FD  8F                    1		db	10001111b 
+ 02FE  0000                  1		dw	0 
+ 0300  02A0                  1		dw	Vector * proc_i_size 
+ 0302  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0304  00                    1		db	0 
+ 0305  8F                    1		db	10001111b 
+ 0306  0000                  1		dw	0 
+ 0308  02A7                  1		dw	Vector * proc_i_size 
+ 030A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 030C  00                    1		db	0 
+ 030D  8F                    1		db	10001111b 
+ 030E  0000                  1		dw	0 
+ 0310  02AE                  1		dw	Vector * proc_i_size 
+ 0312  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0314  00                    1		db	0 
+ 0315  8F                    1		db	10001111b 
+ 0316  0000                  1		dw	0 
+ 0318  02B5                  1		dw	Vector * proc_i_size 
+ 031A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 031C  00                    1		db	0 
+ 031D  8F                    1		db	10001111b 
+ 031E  0000                  1		dw	0 
+ 0320  02BC                  1		dw	Vector * proc_i_size 
+ 0322  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0324  00                    1		db	0 
+ 0325  8F                    1		db	10001111b 
+ 0326  0000                  1		dw	0 
+ 0328  02C3                  1		dw	Vector * proc_i_size 
+ 032A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 032C  00                    1		db	0 
+ 032D  8F                    1		db	10001111b 
+ 032E  0000                  1		dw	0 
+ 0330  02CA                  1		dw	Vector * proc_i_size 
+ 0332  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0334  00                    1		db	0 
+ 0335  8F                    1		db	10001111b 
+ 0336  0000                  1		dw	0 
+ 0338  02D1                  1		dw	Vector * proc_i_size 
+ 033A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 033C  00                    1		db	0 
+ 033D  8F                    1		db	10001111b 
+ 033E  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-14
+
+
+ 0340  02D8                  1		dw	Vector * proc_i_size 
+ 0342  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0344  00                    1		db	0 
+ 0345  8F                    1		db	10001111b 
+ 0346  0000                  1		dw	0 
+ 0348  02DF                  1		dw	Vector * proc_i_size 
+ 034A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 034C  00                    1		db	0 
+ 034D  8F                    1		db	10001111b 
+ 034E  0000                  1		dw	0 
+ 0350  02E6                  1		dw	Vector * proc_i_size 
+ 0352  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0354  00                    1		db	0 
+ 0355  8F                    1		db	10001111b 
+ 0356  0000                  1		dw	0 
+ 0358  02ED                  1		dw	Vector * proc_i_size 
+ 035A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 035C  00                    1		db	0 
+ 035D  8F                    1		db	10001111b 
+ 035E  0000                  1		dw	0 
+ 0360  02F4                  1		dw	Vector * proc_i_size 
+ 0362  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0364  00                    1		db	0 
+ 0365  8F                    1		db	10001111b 
+ 0366  0000                  1		dw	0 
+ 0368  02FB                  1		dw	Vector * proc_i_size 
+ 036A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 036C  00                    1		db	0 
+ 036D  8F                    1		db	10001111b 
+ 036E  0000                  1		dw	0 
+ 0370  0302                  1		dw	Vector * proc_i_size 
+ 0372  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0374  00                    1		db	0 
+ 0375  8F                    1		db	10001111b 
+ 0376  0000                  1		dw	0 
+ 0378  0309                  1		dw	Vector * proc_i_size 
+ 037A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 037C  00                    1		db	0 
+ 037D  8F                    1		db	10001111b 
+ 037E  0000                  1		dw	0 
+ 0380  0310                  1		dw	Vector * proc_i_size 
+ 0382  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0384  00                    1		db	0 
+ 0385  8F                    1		db	10001111b 
+ 0386  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-15
+
+
+ 0388  0317                  1		dw	Vector * proc_i_size 
+ 038A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 038C  00                    1		db	0 
+ 038D  8F                    1		db	10001111b 
+ 038E  0000                  1		dw	0 
+ 0390  031E                  1		dw	Vector * proc_i_size 
+ 0392  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0394  00                    1		db	0 
+ 0395  8F                    1		db	10001111b 
+ 0396  0000                  1		dw	0 
+ 0398  0325                  1		dw	Vector * proc_i_size 
+ 039A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 039C  00                    1		db	0 
+ 039D  8F                    1		db	10001111b 
+ 039E  0000                  1		dw	0 
+ 03A0  032C                  1		dw	Vector * proc_i_size 
+ 03A2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 03A4  00                    1		db	0 
+ 03A5  8F                    1		db	10001111b 
+ 03A6  0000                  1		dw	0 
+ 03A8  0333                  1		dw	Vector * proc_i_size 
+ 03AA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 03AC  00                    1		db	0 
+ 03AD  8F                    1		db	10001111b 
+ 03AE  0000                  1		dw	0 
+ 03B0  033A                  1		dw	Vector * proc_i_size 
+ 03B2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 03B4  00                    1		db	0 
+ 03B5  8F                    1		db	10001111b 
+ 03B6  0000                  1		dw	0 
+ 03B8  0341                  1		dw	Vector * proc_i_size 
+ 03BA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 03BC  00                    1		db	0 
+ 03BD  8F                    1		db	10001111b 
+ 03BE  0000                  1		dw	0 
+ 03C0  0348                  1		dw	Vector * proc_i_size 
+ 03C2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 03C4  00                    1		db	0 
+ 03C5  8F                    1		db	10001111b 
+ 03C6  0000                  1		dw	0 
+ 03C8  034F                  1		dw	Vector * proc_i_size 
+ 03CA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 03CC  00                    1		db	0 
+ 03CD  8F                    1		db	10001111b 
+ 03CE  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-16
+
+
+ 03D0  0356                  1		dw	Vector * proc_i_size 
+ 03D2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 03D4  00                    1		db	0 
+ 03D5  8F                    1		db	10001111b 
+ 03D6  0000                  1		dw	0 
+ 03D8  035D                  1		dw	Vector * proc_i_size 
+ 03DA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 03DC  00                    1		db	0 
+ 03DD  8F                    1		db	10001111b 
+ 03DE  0000                  1		dw	0 
+ 03E0  0364                  1		dw	Vector * proc_i_size 
+ 03E2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 03E4  00                    1		db	0 
+ 03E5  8F                    1		db	10001111b 
+ 03E6  0000                  1		dw	0 
+ 03E8  036B                  1		dw	Vector * proc_i_size 
+ 03EA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 03EC  00                    1		db	0 
+ 03ED  8F                    1		db	10001111b 
+ 03EE  0000                  1		dw	0 
+ 03F0  0372                  1		dw	Vector * proc_i_size 
+ 03F2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 03F4  00                    1		db	0 
+ 03F5  8F                    1		db	10001111b 
+ 03F6  0000                  1		dw	0 
+ 03F8  0379                  1		dw	Vector * proc_i_size 
+ 03FA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 03FC  00                    1		db	0 
+ 03FD  8F                    1		db	10001111b 
+ 03FE  0000                  1		dw	0 
+ 0400  0380                  1		dw	Vector * proc_i_size 
+ 0402  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0404  00                    1		db	0 
+ 0405  8F                    1		db	10001111b 
+ 0406  0000                  1		dw	0 
+ 0408  0387                  1		dw	Vector * proc_i_size 
+ 040A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 040C  00                    1		db	0 
+ 040D  8F                    1		db	10001111b 
+ 040E  0000                  1		dw	0 
+ 0410  038E                  1		dw	Vector * proc_i_size 
+ 0412  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0414  00                    1		db	0 
+ 0415  8F                    1		db	10001111b 
+ 0416  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-17
+
+
+ 0418  0395                  1		dw	Vector * proc_i_size 
+ 041A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 041C  00                    1		db	0 
+ 041D  8F                    1		db	10001111b 
+ 041E  0000                  1		dw	0 
+ 0420  039C                  1		dw	Vector * proc_i_size 
+ 0422  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0424  00                    1		db	0 
+ 0425  8F                    1		db	10001111b 
+ 0426  0000                  1		dw	0 
+ 0428  03A3                  1		dw	Vector * proc_i_size 
+ 042A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 042C  00                    1		db	0 
+ 042D  8F                    1		db	10001111b 
+ 042E  0000                  1		dw	0 
+ 0430  03AA                  1		dw	Vector * proc_i_size 
+ 0432  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0434  00                    1		db	0 
+ 0435  8F                    1		db	10001111b 
+ 0436  0000                  1		dw	0 
+ 0438  03B1                  1		dw	Vector * proc_i_size 
+ 043A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 043C  00                    1		db	0 
+ 043D  8F                    1		db	10001111b 
+ 043E  0000                  1		dw	0 
+ 0440  03B8                  1		dw	Vector * proc_i_size 
+ 0442  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0444  00                    1		db	0 
+ 0445  8F                    1		db	10001111b 
+ 0446  0000                  1		dw	0 
+ 0448  03BF                  1		dw	Vector * proc_i_size 
+ 044A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 044C  00                    1		db	0 
+ 044D  8F                    1		db	10001111b 
+ 044E  0000                  1		dw	0 
+ 0450  03C6                  1		dw	Vector * proc_i_size 
+ 0452  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0454  00                    1		db	0 
+ 0455  8F                    1		db	10001111b 
+ 0456  0000                  1		dw	0 
+ 0458  03CD                  1		dw	Vector * proc_i_size 
+ 045A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 045C  00                    1		db	0 
+ 045D  8F                    1		db	10001111b 
+ 045E  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-18
+
+
+ 0460  03D4                  1		dw	Vector * proc_i_size 
+ 0462  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0464  00                    1		db	0 
+ 0465  8F                    1		db	10001111b 
+ 0466  0000                  1		dw	0 
+ 0468  03DB                  1		dw	Vector * proc_i_size 
+ 046A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 046C  00                    1		db	0 
+ 046D  8F                    1		db	10001111b 
+ 046E  0000                  1		dw	0 
+ 0470  03E2                  1		dw	Vector * proc_i_size 
+ 0472  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0474  00                    1		db	0 
+ 0475  8F                    1		db	10001111b 
+ 0476  0000                  1		dw	0 
+ 0478  03E9                  1		dw	Vector * proc_i_size 
+ 047A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 047C  00                    1		db	0 
+ 047D  8F                    1		db	10001111b 
+ 047E  0000                  1		dw	0 
+ 0480  03F0                  1		dw	Vector * proc_i_size 
+ 0482  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0484  00                    1		db	0 
+ 0485  8F                    1		db	10001111b 
+ 0486  0000                  1		dw	0 
+ 0488  03F7                  1		dw	Vector * proc_i_size 
+ 048A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 048C  00                    1		db	0 
+ 048D  8F                    1		db	10001111b 
+ 048E  0000                  1		dw	0 
+ 0490  03FE                  1		dw	Vector * proc_i_size 
+ 0492  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0494  00                    1		db	0 
+ 0495  8F                    1		db	10001111b 
+ 0496  0000                  1		dw	0 
+ 0498  0405                  1		dw	Vector * proc_i_size 
+ 049A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 049C  00                    1		db	0 
+ 049D  8F                    1		db	10001111b 
+ 049E  0000                  1		dw	0 
+ 04A0  040C                  1		dw	Vector * proc_i_size 
+ 04A2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 04A4  00                    1		db	0 
+ 04A5  8F                    1		db	10001111b 
+ 04A6  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-19
+
+
+ 04A8  0413                  1		dw	Vector * proc_i_size 
+ 04AA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 04AC  00                    1		db	0 
+ 04AD  8F                    1		db	10001111b 
+ 04AE  0000                  1		dw	0 
+ 04B0  041A                  1		dw	Vector * proc_i_size 
+ 04B2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 04B4  00                    1		db	0 
+ 04B5  8F                    1		db	10001111b 
+ 04B6  0000                  1		dw	0 
+ 04B8  0421                  1		dw	Vector * proc_i_size 
+ 04BA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 04BC  00                    1		db	0 
+ 04BD  8F                    1		db	10001111b 
+ 04BE  0000                  1		dw	0 
+ 04C0  0428                  1		dw	Vector * proc_i_size 
+ 04C2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 04C4  00                    1		db	0 
+ 04C5  8F                    1		db	10001111b 
+ 04C6  0000                  1		dw	0 
+ 04C8  042F                  1		dw	Vector * proc_i_size 
+ 04CA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 04CC  00                    1		db	0 
+ 04CD  8F                    1		db	10001111b 
+ 04CE  0000                  1		dw	0 
+ 04D0  0436                  1		dw	Vector * proc_i_size 
+ 04D2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 04D4  00                    1		db	0 
+ 04D5  8F                    1		db	10001111b 
+ 04D6  0000                  1		dw	0 
+ 04D8  043D                  1		dw	Vector * proc_i_size 
+ 04DA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 04DC  00                    1		db	0 
+ 04DD  8F                    1		db	10001111b 
+ 04DE  0000                  1		dw	0 
+ 04E0  0444                  1		dw	Vector * proc_i_size 
+ 04E2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 04E4  00                    1		db	0 
+ 04E5  8F                    1		db	10001111b 
+ 04E6  0000                  1		dw	0 
+ 04E8  044B                  1		dw	Vector * proc_i_size 
+ 04EA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 04EC  00                    1		db	0 
+ 04ED  8F                    1		db	10001111b 
+ 04EE  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-20
+
+
+ 04F0  0452                  1		dw	Vector * proc_i_size 
+ 04F2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 04F4  00                    1		db	0 
+ 04F5  8F                    1		db	10001111b 
+ 04F6  0000                  1		dw	0 
+ 04F8  0459                  1		dw	Vector * proc_i_size 
+ 04FA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 04FC  00                    1		db	0 
+ 04FD  8F                    1		db	10001111b 
+ 04FE  0000                  1		dw	0 
+ 0500  0460                  1		dw	Vector * proc_i_size 
+ 0502  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0504  00                    1		db	0 
+ 0505  8F                    1		db	10001111b 
+ 0506  0000                  1		dw	0 
+ 0508  0467                  1		dw	Vector * proc_i_size 
+ 050A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 050C  00                    1		db	0 
+ 050D  8F                    1		db	10001111b 
+ 050E  0000                  1		dw	0 
+ 0510  046E                  1		dw	Vector * proc_i_size 
+ 0512  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0514  00                    1		db	0 
+ 0515  8F                    1		db	10001111b 
+ 0516  0000                  1		dw	0 
+ 0518  0475                  1		dw	Vector * proc_i_size 
+ 051A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 051C  00                    1		db	0 
+ 051D  8F                    1		db	10001111b 
+ 051E  0000                  1		dw	0 
+ 0520  047C                  1		dw	Vector * proc_i_size 
+ 0522  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0524  00                    1		db	0 
+ 0525  8F                    1		db	10001111b 
+ 0526  0000                  1		dw	0 
+ 0528  0483                  1		dw	Vector * proc_i_size 
+ 052A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 052C  00                    1		db	0 
+ 052D  8F                    1		db	10001111b 
+ 052E  0000                  1		dw	0 
+ 0530  048A                  1		dw	Vector * proc_i_size 
+ 0532  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0534  00                    1		db	0 
+ 0535  8F                    1		db	10001111b 
+ 0536  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-21
+
+
+ 0538  0491                  1		dw	Vector * proc_i_size 
+ 053A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 053C  00                    1		db	0 
+ 053D  8F                    1		db	10001111b 
+ 053E  0000                  1		dw	0 
+ 0540  0498                  1		dw	Vector * proc_i_size 
+ 0542  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0544  00                    1		db	0 
+ 0545  8F                    1		db	10001111b 
+ 0546  0000                  1		dw	0 
+ 0548  049F                  1		dw	Vector * proc_i_size 
+ 054A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 054C  00                    1		db	0 
+ 054D  8F                    1		db	10001111b 
+ 054E  0000                  1		dw	0 
+ 0550  04A6                  1		dw	Vector * proc_i_size 
+ 0552  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0554  00                    1		db	0 
+ 0555  8F                    1		db	10001111b 
+ 0556  0000                  1		dw	0 
+ 0558  04AD                  1		dw	Vector * proc_i_size 
+ 055A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 055C  00                    1		db	0 
+ 055D  8F                    1		db	10001111b 
+ 055E  0000                  1		dw	0 
+ 0560  04B4                  1		dw	Vector * proc_i_size 
+ 0562  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0564  00                    1		db	0 
+ 0565  8F                    1		db	10001111b 
+ 0566  0000                  1		dw	0 
+ 0568  04BB                  1		dw	Vector * proc_i_size 
+ 056A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 056C  00                    1		db	0 
+ 056D  8F                    1		db	10001111b 
+ 056E  0000                  1		dw	0 
+ 0570  04C2                  1		dw	Vector * proc_i_size 
+ 0572  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0574  00                    1		db	0 
+ 0575  8F                    1		db	10001111b 
+ 0576  0000                  1		dw	0 
+ 0578  04C9                  1		dw	Vector * proc_i_size 
+ 057A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 057C  00                    1		db	0 
+ 057D  8F                    1		db	10001111b 
+ 057E  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-22
+
+
+ 0580  04D0                  1		dw	Vector * proc_i_size 
+ 0582  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0584  00                    1		db	0 
+ 0585  8F                    1		db	10001111b 
+ 0586  0000                  1		dw	0 
+ 0588  04D7                  1		dw	Vector * proc_i_size 
+ 058A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 058C  00                    1		db	0 
+ 058D  8F                    1		db	10001111b 
+ 058E  0000                  1		dw	0 
+ 0590  04DE                  1		dw	Vector * proc_i_size 
+ 0592  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0594  00                    1		db	0 
+ 0595  8F                    1		db	10001111b 
+ 0596  0000                  1		dw	0 
+ 0598  04E5                  1		dw	Vector * proc_i_size 
+ 059A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 059C  00                    1		db	0 
+ 059D  8F                    1		db	10001111b 
+ 059E  0000                  1		dw	0 
+ 05A0  04EC                  1		dw	Vector * proc_i_size 
+ 05A2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 05A4  00                    1		db	0 
+ 05A5  8F                    1		db	10001111b 
+ 05A6  0000                  1		dw	0 
+ 05A8  04F3                  1		dw	Vector * proc_i_size 
+ 05AA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 05AC  00                    1		db	0 
+ 05AD  8F                    1		db	10001111b 
+ 05AE  0000                  1		dw	0 
+ 05B0  04FA                  1		dw	Vector * proc_i_size 
+ 05B2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 05B4  00                    1		db	0 
+ 05B5  8F                    1		db	10001111b 
+ 05B6  0000                  1		dw	0 
+ 05B8  0501                  1		dw	Vector * proc_i_size 
+ 05BA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 05BC  00                    1		db	0 
+ 05BD  8F                    1		db	10001111b 
+ 05BE  0000                  1		dw	0 
+ 05C0  0508                  1		dw	Vector * proc_i_size 
+ 05C2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 05C4  00                    1		db	0 
+ 05C5  8F                    1		db	10001111b 
+ 05C6  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-23
+
+
+ 05C8  050F                  1		dw	Vector * proc_i_size 
+ 05CA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 05CC  00                    1		db	0 
+ 05CD  8F                    1		db	10001111b 
+ 05CE  0000                  1		dw	0 
+ 05D0  0516                  1		dw	Vector * proc_i_size 
+ 05D2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 05D4  00                    1		db	0 
+ 05D5  8F                    1		db	10001111b 
+ 05D6  0000                  1		dw	0 
+ 05D8  051D                  1		dw	Vector * proc_i_size 
+ 05DA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 05DC  00                    1		db	0 
+ 05DD  8F                    1		db	10001111b 
+ 05DE  0000                  1		dw	0 
+ 05E0  0524                  1		dw	Vector * proc_i_size 
+ 05E2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 05E4  00                    1		db	0 
+ 05E5  8F                    1		db	10001111b 
+ 05E6  0000                  1		dw	0 
+ 05E8  052B                  1		dw	Vector * proc_i_size 
+ 05EA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 05EC  00                    1		db	0 
+ 05ED  8F                    1		db	10001111b 
+ 05EE  0000                  1		dw	0 
+ 05F0  0532                  1		dw	Vector * proc_i_size 
+ 05F2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 05F4  00                    1		db	0 
+ 05F5  8F                    1		db	10001111b 
+ 05F6  0000                  1		dw	0 
+ 05F8  0539                  1		dw	Vector * proc_i_size 
+ 05FA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 05FC  00                    1		db	0 
+ 05FD  8F                    1		db	10001111b 
+ 05FE  0000                  1		dw	0 
+ 0600  0540                  1		dw	Vector * proc_i_size 
+ 0602  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0604  00                    1		db	0 
+ 0605  8F                    1		db	10001111b 
+ 0606  0000                  1		dw	0 
+ 0608  0547                  1		dw	Vector * proc_i_size 
+ 060A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 060C  00                    1		db	0 
+ 060D  8F                    1		db	10001111b 
+ 060E  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-24
+
+
+ 0610  054E                  1		dw	Vector * proc_i_size 
+ 0612  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0614  00                    1		db	0 
+ 0615  8F                    1		db	10001111b 
+ 0616  0000                  1		dw	0 
+ 0618  0555                  1		dw	Vector * proc_i_size 
+ 061A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 061C  00                    1		db	0 
+ 061D  8F                    1		db	10001111b 
+ 061E  0000                  1		dw	0 
+ 0620  055C                  1		dw	Vector * proc_i_size 
+ 0622  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0624  00                    1		db	0 
+ 0625  8F                    1		db	10001111b 
+ 0626  0000                  1		dw	0 
+ 0628  0563                  1		dw	Vector * proc_i_size 
+ 062A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 062C  00                    1		db	0 
+ 062D  8F                    1		db	10001111b 
+ 062E  0000                  1		dw	0 
+ 0630  056A                  1		dw	Vector * proc_i_size 
+ 0632  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0634  00                    1		db	0 
+ 0635  8F                    1		db	10001111b 
+ 0636  0000                  1		dw	0 
+ 0638  0571                  1		dw	Vector * proc_i_size 
+ 063A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 063C  00                    1		db	0 
+ 063D  8F                    1		db	10001111b 
+ 063E  0000                  1		dw	0 
+ 0640  0578                  1		dw	Vector * proc_i_size 
+ 0642  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0644  00                    1		db	0 
+ 0645  8F                    1		db	10001111b 
+ 0646  0000                  1		dw	0 
+ 0648  057F                  1		dw	Vector * proc_i_size 
+ 064A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 064C  00                    1		db	0 
+ 064D  8F                    1		db	10001111b 
+ 064E  0000                  1		dw	0 
+ 0650  0586                  1		dw	Vector * proc_i_size 
+ 0652  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0654  00                    1		db	0 
+ 0655  8F                    1		db	10001111b 
+ 0656  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-25
+
+
+ 0658  058D                  1		dw	Vector * proc_i_size 
+ 065A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 065C  00                    1		db	0 
+ 065D  8F                    1		db	10001111b 
+ 065E  0000                  1		dw	0 
+ 0660  0594                  1		dw	Vector * proc_i_size 
+ 0662  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0664  00                    1		db	0 
+ 0665  8F                    1		db	10001111b 
+ 0666  0000                  1		dw	0 
+ 0668  059B                  1		dw	Vector * proc_i_size 
+ 066A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 066C  00                    1		db	0 
+ 066D  8F                    1		db	10001111b 
+ 066E  0000                  1		dw	0 
+ 0670  05A2                  1		dw	Vector * proc_i_size 
+ 0672  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0674  00                    1		db	0 
+ 0675  8F                    1		db	10001111b 
+ 0676  0000                  1		dw	0 
+ 0678  05A9                  1		dw	Vector * proc_i_size 
+ 067A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 067C  00                    1		db	0 
+ 067D  8F                    1		db	10001111b 
+ 067E  0000                  1		dw	0 
+ 0680  05B0                  1		dw	Vector * proc_i_size 
+ 0682  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0684  00                    1		db	0 
+ 0685  8F                    1		db	10001111b 
+ 0686  0000                  1		dw	0 
+ 0688  05B7                  1		dw	Vector * proc_i_size 
+ 068A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 068C  00                    1		db	0 
+ 068D  8F                    1		db	10001111b 
+ 068E  0000                  1		dw	0 
+ 0690  05BE                  1		dw	Vector * proc_i_size 
+ 0692  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0694  00                    1		db	0 
+ 0695  8F                    1		db	10001111b 
+ 0696  0000                  1		dw	0 
+ 0698  05C5                  1		dw	Vector * proc_i_size 
+ 069A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 069C  00                    1		db	0 
+ 069D  8F                    1		db	10001111b 
+ 069E  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-26
+
+
+ 06A0  05CC                  1		dw	Vector * proc_i_size 
+ 06A2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 06A4  00                    1		db	0 
+ 06A5  8F                    1		db	10001111b 
+ 06A6  0000                  1		dw	0 
+ 06A8  05D3                  1		dw	Vector * proc_i_size 
+ 06AA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 06AC  00                    1		db	0 
+ 06AD  8F                    1		db	10001111b 
+ 06AE  0000                  1		dw	0 
+ 06B0  05DA                  1		dw	Vector * proc_i_size 
+ 06B2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 06B4  00                    1		db	0 
+ 06B5  8F                    1		db	10001111b 
+ 06B6  0000                  1		dw	0 
+ 06B8  05E1                  1		dw	Vector * proc_i_size 
+ 06BA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 06BC  00                    1		db	0 
+ 06BD  8F                    1		db	10001111b 
+ 06BE  0000                  1		dw	0 
+ 06C0  05E8                  1		dw	Vector * proc_i_size 
+ 06C2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 06C4  00                    1		db	0 
+ 06C5  8F                    1		db	10001111b 
+ 06C6  0000                  1		dw	0 
+ 06C8  05EF                  1		dw	Vector * proc_i_size 
+ 06CA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 06CC  00                    1		db	0 
+ 06CD  8F                    1		db	10001111b 
+ 06CE  0000                  1		dw	0 
+ 06D0  05F6                  1		dw	Vector * proc_i_size 
+ 06D2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 06D4  00                    1		db	0 
+ 06D5  8F                    1		db	10001111b 
+ 06D6  0000                  1		dw	0 
+ 06D8  05FD                  1		dw	Vector * proc_i_size 
+ 06DA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 06DC  00                    1		db	0 
+ 06DD  8F                    1		db	10001111b 
+ 06DE  0000                  1		dw	0 
+ 06E0  0604                  1		dw	Vector * proc_i_size 
+ 06E2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 06E4  00                    1		db	0 
+ 06E5  8F                    1		db	10001111b 
+ 06E6  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-27
+
+
+ 06E8  060B                  1		dw	Vector * proc_i_size 
+ 06EA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 06EC  00                    1		db	0 
+ 06ED  8F                    1		db	10001111b 
+ 06EE  0000                  1		dw	0 
+ 06F0  0612                  1		dw	Vector * proc_i_size 
+ 06F2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 06F4  00                    1		db	0 
+ 06F5  8F                    1		db	10001111b 
+ 06F6  0000                  1		dw	0 
+ 06F8  0619                  1		dw	Vector * proc_i_size 
+ 06FA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 06FC  00                    1		db	0 
+ 06FD  8F                    1		db	10001111b 
+ 06FE  0000                  1		dw	0 
+ 0700  0620                  1		dw	Vector * proc_i_size 
+ 0702  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0704  00                    1		db	0 
+ 0705  8F                    1		db	10001111b 
+ 0706  0000                  1		dw	0 
+ 0708  0627                  1		dw	Vector * proc_i_size 
+ 070A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 070C  00                    1		db	0 
+ 070D  8F                    1		db	10001111b 
+ 070E  0000                  1		dw	0 
+ 0710  062E                  1		dw	Vector * proc_i_size 
+ 0712  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0714  00                    1		db	0 
+ 0715  8F                    1		db	10001111b 
+ 0716  0000                  1		dw	0 
+ 0718  0635                  1		dw	Vector * proc_i_size 
+ 071A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 071C  00                    1		db	0 
+ 071D  8F                    1		db	10001111b 
+ 071E  0000                  1		dw	0 
+ 0720  063C                  1		dw	Vector * proc_i_size 
+ 0722  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0724  00                    1		db	0 
+ 0725  8F                    1		db	10001111b 
+ 0726  0000                  1		dw	0 
+ 0728  0643                  1		dw	Vector * proc_i_size 
+ 072A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 072C  00                    1		db	0 
+ 072D  8F                    1		db	10001111b 
+ 072E  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-28
+
+
+ 0730  064A                  1		dw	Vector * proc_i_size 
+ 0732  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0734  00                    1		db	0 
+ 0735  8F                    1		db	10001111b 
+ 0736  0000                  1		dw	0 
+ 0738  0651                  1		dw	Vector * proc_i_size 
+ 073A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 073C  00                    1		db	0 
+ 073D  8F                    1		db	10001111b 
+ 073E  0000                  1		dw	0 
+ 0740  0658                  1		dw	Vector * proc_i_size 
+ 0742  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0744  00                    1		db	0 
+ 0745  8F                    1		db	10001111b 
+ 0746  0000                  1		dw	0 
+ 0748  065F                  1		dw	Vector * proc_i_size 
+ 074A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 074C  00                    1		db	0 
+ 074D  8F                    1		db	10001111b 
+ 074E  0000                  1		dw	0 
+ 0750  0666                  1		dw	Vector * proc_i_size 
+ 0752  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0754  00                    1		db	0 
+ 0755  8F                    1		db	10001111b 
+ 0756  0000                  1		dw	0 
+ 0758  066D                  1		dw	Vector * proc_i_size 
+ 075A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 075C  00                    1		db	0 
+ 075D  8F                    1		db	10001111b 
+ 075E  0000                  1		dw	0 
+ 0760  0674                  1		dw	Vector * proc_i_size 
+ 0762  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0764  00                    1		db	0 
+ 0765  8F                    1		db	10001111b 
+ 0766  0000                  1		dw	0 
+ 0768  067B                  1		dw	Vector * proc_i_size 
+ 076A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 076C  00                    1		db	0 
+ 076D  8F                    1		db	10001111b 
+ 076E  0000                  1		dw	0 
+ 0770  0682                  1		dw	Vector * proc_i_size 
+ 0772  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0774  00                    1		db	0 
+ 0775  8F                    1		db	10001111b 
+ 0776  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-29
+
+
+ 0778  0689                  1		dw	Vector * proc_i_size 
+ 077A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 077C  00                    1		db	0 
+ 077D  8F                    1		db	10001111b 
+ 077E  0000                  1		dw	0 
+ 0780  0690                  1		dw	Vector * proc_i_size 
+ 0782  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0784  00                    1		db	0 
+ 0785  8F                    1		db	10001111b 
+ 0786  0000                  1		dw	0 
+ 0788  0697                  1		dw	Vector * proc_i_size 
+ 078A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 078C  00                    1		db	0 
+ 078D  8F                    1		db	10001111b 
+ 078E  0000                  1		dw	0 
+ 0790  069E                  1		dw	Vector * proc_i_size 
+ 0792  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 0794  00                    1		db	0 
+ 0795  8F                    1		db	10001111b 
+ 0796  0000                  1		dw	0 
+ 0798  06A5                  1		dw	Vector * proc_i_size 
+ 079A  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 079C  00                    1		db	0 
+ 079D  8F                    1		db	10001111b 
+ 079E  0000                  1		dw	0 
+ 07A0  06AC                  1		dw	Vector * proc_i_size 
+ 07A2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 07A4  00                    1		db	0 
+ 07A5  8F                    1		db	10001111b 
+ 07A6  0000                  1		dw	0 
+ 07A8  06B3                  1		dw	Vector * proc_i_size 
+ 07AA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 07AC  00                    1		db	0 
+ 07AD  8F                    1		db	10001111b 
+ 07AE  0000                  1		dw	0 
+ 07B0  06BA                  1		dw	Vector * proc_i_size 
+ 07B2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 07B4  00                    1		db	0 
+ 07B5  8F                    1		db	10001111b 
+ 07B6  0000                  1		dw	0 
+ 07B8  06C1                  1		dw	Vector * proc_i_size 
+ 07BA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 07BC  00                    1		db	0 
+ 07BD  8F                    1		db	10001111b 
+ 07BE  0000                  1		dw	0 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-30
+
+
+ 07C0  06C8                  1		dw	Vector * proc_i_size 
+ 07C2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 07C4  00                    1		db	0 
+ 07C5  8F                    1		db	10001111b 
+ 07C6  0000                  1		dw	0 
+ 07C8  06CF                  1		dw	Vector * proc_i_size 
+ 07CA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 07CC  00                    1		db	0 
+ 07CD  8F                    1		db	10001111b 
+ 07CE  0000                  1		dw	0 
+ 07D0  06D6                  1		dw	Vector * proc_i_size 
+ 07D2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 07D4  00                    1		db	0 
+ 07D5  8F                    1		db	10001111b 
+ 07D6  0000                  1		dw	0 
+ 07D8  06DD                  1		dw	Vector * proc_i_size 
+ 07DA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 07DC  00                    1		db	0 
+ 07DD  8F                    1		db	10001111b 
+ 07DE  0000                  1		dw	0 
+ 07E0  06E4                  1		dw	Vector * proc_i_size 
+ 07E2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 07E4  00                    1		db	0 
+ 07E5  8F                    1		db	10001111b 
+ 07E6  0000                  1		dw	0 
+ 07E8  06EB                  1		dw	Vector * proc_i_size 
+ 07EA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 07EC  00                    1		db	0 
+ 07ED  8F                    1		db	10001111b 
+ 07EE  0000                  1		dw	0 
+ 07F0  06F2                  1		dw	Vector * proc_i_size 
+ 07F2  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 07F4  00                    1		db	0 
+ 07F5  8F                    1		db	10001111b 
+ 07F6  0000                  1		dw	0 
+ 07F8  06F9                  1		dw	Vector * proc_i_size 
+ 07FA  0000 U                1		dw	offset descr_i_code 
+L7.ASM(47): error A2009: Symbol not defined: DESCR_I_CODE
+ 07FC  00                    1		db	0 
+ 07FD  8F                    1		db	10001111b 
+ 07FE  0000                  1		dw	0 
+ 0800				_IDT	ends 
+				;----------------------------------------------
+				----------- 
+ 0000				_ST	segment	use16 
+L7.ASM(50): error A2025: Improper align/combine type
+ 0000  03E8[			  db	1000 dup (0) 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-31
+
+
+	   00			
+			 ]	
+				
+ = 03E8				 Top_stp  equ $ 
+ 03E8				_ST	ends 
+				;----------------------------------------------
+				----------- 
+ 0000				_data	segment para public 'data' use16 
+L7.ASM(55): error A2025: Improper align/combine type
+ 0000  0000			 pgdt	dt_p	<> 
+ 0002  00000000			
+				
+ 0006  0000			 pidt	dt_p	<> 
+ 0008  00000000			
+				
+ 000C  ????????			 old_st	dd	? 
+ 0010  57 65 20 61 72 65 20	 mess	db	"We are in protected mode!" 
+       69 6E 20 70 72 6F 74	
+       65 63 74 65 64 20 6D	
+       6F 64 65 21		
+ = 0019				 messl	equ	$-mess 
+ 0029  ??			 t1	db	? 
+ = 0029				 _data_size	equ	$-1 
+ 002A				_data	ends 
+				;----------------------------------------------
+				----------- 
+ 0000				_t2    segment para public 'data' use16 
+L7.ASM(65): error A2025: Improper align/combine type
+ 0000				t2_p: 
+L7.ASM(66): error A2062: Missing or unreachable CS
+ 0000  0000			v1      dw      0 
+ = 0002				_t2_size       equ     $-t2_p 
+ 0002				_t2    ends 
+				;----------------------------------------------
+				----------- 
+ 0000				_code	segment para public 'code' use16 
+L7.ASM(71): error A2025: Improper align/combine type
+					assume	cs:_code 
+ 0000				_begin: 
+					mov	eax, cr0 
+L7.ASM(74): error A2009: Symbol not defined: EAX
+ 0000  A8 01				test	al, 1 
+ 0002  74 0B				jz	cont 
+				 
+ 0004  B8 4C00				mov	ax, 4C00h 
+ 0007  CD 21				int	21h 
+				 
+				cont: 
+L7.ASM(81): error A2006: Phase error between passes
+ 000F  B8 0003				mov	ax, 3 
+ 0012  CD 10				int	10h 
+				 
+ 0014  E4 92				in	al, 92h 
+ 0016  0C 02				or	al, 2 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-32
+
+
+ 0018  E6 92				out	92h, al 
+				 
+					assume	ds:_GDT 
+ 001A  B8 ---- R			mov	ax, _GDT 
+ 001D  8E D8				mov	ds, ax 
+				 
+					; _GDT segment descr 
+					mov	descr_gdt.limit_1, _gdt_size 
+L7.ASM(94): error A2009: Symbol not defined: DESCR_GDT
+					xor	eax, eax 
+L7.ASM(95): error A2009: Symbol not defined: EAX
+ 001F  B8 ---- R			mov	ax, _GDT 
+ 0022  26 0000 U			shl	eax, 4 
+L7.ASM(97): error A2009: Symbol not defined: EAX
+					mov	dword ptr descr_gdt.base_1, eax
+				 
+L7.ASM(98): error A2009: Symbol not defined: DESCR_GDT
+ 0025  C6 06 0005 U 92 90		mov	descr_gdt.attrib, S_dw0 
+L7.ASM(99): error A2009: Symbol not defined: DESCR_GDT
+				 
+					;_data segment descr 
+					mov	descr_ds.limit_1, _data_size 
+L7.ASM(102): error A2009: Symbol not defined: DESCR_DS
+					xor	eax, eax 
+L7.ASM(103): error A2009: Symbol not defined: EAX
+ 002B  B8 ---- R			mov	ax, _data 
+ 002E  26 0000 U			shl	eax, 4 
+L7.ASM(105): error A2009: Symbol not defined: EAX
+					mov	dword ptr descr_ds.base_1, eax 
+L7.ASM(106): error A2009: Symbol not defined: DESCR_DS
+ 0031  C6 06 0005 U 92 90		mov	descr_ds.attrib, S_dw0 
+L7.ASM(107): error A2009: Symbol not defined: DESCR_DS
+				 
+					; _ST segment descr 
+ 0037  C7 06 0000 U 000A		mov	descr_ss.limit_1, 10 
+L7.ASM(110): error A2009: Symbol not defined: DESCR_SS
+					xor	eax, eax 
+L7.ASM(111): error A2009: Symbol not defined: EAX
+ 003D  B8 ---- R			mov	ax, _ST 
+ 0040  26 0000 U			shl	eax, 4 
+L7.ASM(113): error A2009: Symbol not defined: EAX
+					mov	dword ptr descr_ss.base_1, eax 
+L7.ASM(114): error A2009: Symbol not defined: DESCR_SS
+ 0043  C6 06 0005 U 96 90		mov	descr_ss.attrib, S_sw0 
+L7.ASM(115): error A2009: Symbol not defined: DESCR_SS
+				 
+					; Video segment descr (es) 
+ 0049  C7 06 0000 U FFFF		mov	descr_es.limit_1, 0FFFFh 
+L7.ASM(118): error A2009: Symbol not defined: DESCR_ES
+ 004F  C7 06 0002 U 000B8000		mov	dword ptr descr_es.base_1, 0B80
+				00h 
+L7.ASM(119): error A2009: Symbol not defined: DESCR_ES
+ 0057  C6 06 0005 U 92 90		mov	descr_es.attrib, S_dw0 
+L7.ASM(120): error A2009: Symbol not defined: DESCR_ES
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-33
+
+
+				 
+					; _code segment descr 
+					mov	descr_cs.limit_1, _code_size 
+L7.ASM(123): error A2009: Symbol not defined: DESCR_CS
+					xor	eax, eax 
+L7.ASM(124): error A2009: Symbol not defined: EAX
+ 005D  B8 ---- R			mov	ax, _code 
+ 0060  26 0000 U			shl	eax, 4 
+L7.ASM(126): error A2009: Symbol not defined: EAX
+					mov	dword ptr descr_cs.base_1, eax 
+L7.ASM(127): error A2009: Symbol not defined: DESCR_CS
+ 0063  C6 06 0005 U 98 90		mov	descr_cs.attrib, S_c_0 
+L7.ASM(128): error A2009: Symbol not defined: DESCR_CS
+				 
+					; _i_code segment descr 
+					mov	descr_i_code.limit_1, _i_code_s
+				ize 
+L7.ASM(131): error A2009: Symbol not defined: DESCR_I_CODE
+					xor	eax, eax 
+L7.ASM(132): error A2009: Symbol not defined: EAX
+ 0069  B8 ---- R			mov	ax, _i_code 
+ 006C  26 0000 U			shl	eax, 4 
+L7.ASM(134): error A2009: Symbol not defined: EAX
+					mov	dword ptr descr_i_code.base_1, 
+				eax 
+L7.ASM(135): error A2009: Symbol not defined: DESCR_I_CODE
+ 006F  C6 06 0005 U 9A 90		mov	descr_i_code.attrib, S_cr0 
+L7.ASM(136): error A2009: Symbol not defined: DESCR_I_CODE
+				 
+				; _t2 segment descr 
+ 0075  C7 06 0000 U 0002	  mov descr_t2.limit_1, _t2_size 
+L7.ASM(139): error A2009: Symbol not defined: DESCR_T2
+				  xor eax, eax 
+L7.ASM(140): error A2009: Symbol not defined: EAX
+ 007B  B8 ---- R		  mov ax, _t2 
+ 007E  26 0000 U		  shl eax, 4 
+L7.ASM(142): error A2009: Symbol not defined: EAX
+				  mov dword ptr descr_t2.base_1, eax 
+L7.ASM(143): error A2009: Symbol not defined: DESCR_T2
+ 0081  C6 06 0005 U 90 90	  mov descr_t2.attrib, S_d_0 
+L7.ASM(144): error A2009: Symbol not defined: DESCR_T2
+				 
+				; _t10 segment descr 
+				  mov descr_t10.limit_1, _code_size 
+L7.ASM(147): error A2009: Symbol not defined: DESCR_T10
+				  xor eax, eax 
+L7.ASM(148): error A2009: Symbol not defined: EAX
+ 0087  B8 ---- R		  mov ax, _code 
+ 008A  26 0000 U		  shl eax, 4 
+L7.ASM(150): error A2009: Symbol not defined: EAX
+				  mov dword ptr descr_t10.base_1, eax 
+L7.ASM(151): error A2009: Symbol not defined: DESCR_T10
+ 008D  C6 06 0005 U BA 90	  mov descr_t10.attrib, S_cr1 
+L7.ASM(152): error A2009: Symbol not defined: DESCR_T10
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-34
+
+
+				 
+					assume	ds:_data 
+ 0093  B8 ---- R			mov	ax, _data 
+ 0096  8E D8				mov	ds, ax 
+					xor	eax, eax 
+L7.ASM(157): error A2009: Symbol not defined: EAX
+ 0098  B8 ---- R			mov	ax, _GDT 
+ 009B  26 0000 U			shl	eax, 4 
+L7.ASM(159): error A2009: Symbol not defined: EAX
+					mov	pgdt.adr, eax 
+L7.ASM(160): warning A4057: Illegal size for operand
+ 009E  A1 0001 R			mov	ax, _gdt_size 
+L7.ASM(161): warning A4057: Illegal size for operand
+ 00A1  A3 0000 R			mov	pgdt.lim, ax 
+					lgdt	pgdt 
+L7.ASM(163): error A2105: Expected: instruction or directive
+				 
+ 00A4  FA				cli 
+ 00A5  89 26 000C R			mov	word ptr old_st, sp 
+ 00A9  8C 16 000E R			mov	word ptr old_st+2, ss 
+					mov	eax, cr0 
+L7.ASM(168): error A2009: Symbol not defined: EAX
+ 00AD  0C 01				or	al, 1 
+					mov	cr0, eax 
+L7.ASM(170): error A2009: Symbol not defined: CR0
+				 
+ 00AF  EA				db	0eah 
+ 00B0  014E R				dw	offset protect 
+ 00B2  0000 U				dw	offset descr_cs 
+L7.ASM(174): error A2009: Symbol not defined: DESCR_CS
+				protect: 
+L7.ASM(175): error A2006: Phase error between passes
+ 014E  B8 0000 U			mov	ax, offset descr_ss 
+L7.ASM(176): error A2009: Symbol not defined: DESCR_SS
+ 0151  8E D0				mov	ss, ax 
+ 0153  8B 26 03E8 R			mov	sp, Top_stp 
+L7.ASM(178): warning A4057: Illegal size for operand
+ 0157  B8 0000 U			mov	ax, offset descr_ds 
+L7.ASM(179): error A2009: Symbol not defined: DESCR_DS
+ 015A  8E D8				mov	ds, ax 
+ 015C  B8 0000 U			mov	ax, offset descr_es 
+L7.ASM(181): error A2009: Symbol not defined: DESCR_ES
+ 015F  8E C0				mov	es, ax 
+				 
+					xor	eax, eax 
+L7.ASM(184): error A2009: Symbol not defined: EAX
+ 0161  B8 ---- R			mov	ax, _IDT 
+ 0164  26 0000 U			shl	eax, 4 
+L7.ASM(186): error A2009: Symbol not defined: EAX
+					mov	pidt.adr, eax 
+L7.ASM(187): warning A4057: Illegal size for operand
+ 0167  C7 06 0006 R 0800		mov	pidt.lim, 8*256 
+					lidt	pidt 
+L7.ASM(189): error A2105: Expected: instruction or directive
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-35
+
+
+				 
+ 016D  B9 0019				mov	cx, messl 
+ 0170  BE 0010 R			mov	si, offset mess 
+ 0173  BF 03E8				mov	di, 1000 
+ 0176  B4 07				mov	ah, 07h 
+				outmes: 
+L7.ASM(195): error A2006: Phase error between passes
+ 0186  8A 04				mov	al, [si] 
+ 0188  26: 89 05			mov	es:[di], ax 
+ 018B  46				inc	si 
+ 018C  83 C7 02				add	di, 2 
+ 018F  E2 F5				loop	outmes 
+				 
+				;--- Tests --- 
+				 
+				; Test 2 
+				;	mov ax, offset descr_t2 
+				;	mov ds, ax 
+				;	mov bx, 0 
+				;	mov byte ptr [bx], al 
+				 
+				; Test 4 
+				;	mov cs:[0], al 
+				 
+				; Test 10 
+				;	db  0eah 
+				;	dw  offset _begin 
+				;	dw  offset descr_t10 
+				 
+				; Test 15 
+				;	assume  ds:_GDT 
+				;	mov	ax, offset descr_t2 
+				;	mov	gs, ax 
+				;	mov	ax, offset descr_GDT 
+				;	mov	ds, ax 
+				;	mov	descr_t2.attrib, S_dw0 
+				;	mov	byte ptr gs:v1, 0 
+				 
+				;--- End of Tests --- 
+				 
+ 0191				return_dos: 
+					assume	ds:_GDT 
+ 0191  FA				cli	 
+ 0192  B8 0000 U			mov	ax, offset descr_gdt 
+L7.ASM(232): error A2009: Symbol not defined: DESCR_GDT
+ 0195  8E D8				mov	ds, ax 
+ 0197  C7 06 0000 U FFFF		mov	descr_cs.limit_1, 0FFFFh 
+L7.ASM(234): error A2009: Symbol not defined: DESCR_CS
+ 019D  C7 06 0000 U FFFF		mov	descr_ds.limit_1, 0FFFFh 
+L7.ASM(235): error A2009: Symbol not defined: DESCR_DS
+ 01A3  C7 06 0000 U FFFF		mov	descr_ss.limit_1, 0FFFFh 
+L7.ASM(236): error A2009: Symbol not defined: DESCR_SS
+ 01A9  C6 06 0005 U 92 90		mov	descr_ss.attrib, S_dw0 
+L7.ASM(237): error A2009: Symbol not defined: DESCR_SS
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-36
+
+
+				 
+					assume	ds:_data 
+ 01AF  B8 0000 U			mov	ax, offset descr_ds 
+L7.ASM(240): error A2009: Symbol not defined: DESCR_DS
+ 01B2  8E D8				mov	ds, ax 
+ 01B4  A3 0000 U			mov	gs, ax 
+L7.ASM(242): error A2009: Symbol not defined: GS
+ 01B7  A3 0000 U		  mov fs, ax 
+L7.ASM(243): error A2009: Symbol not defined: FS
+ 01BA  B8 0000 U			mov	ax, offset descr_es 
+L7.ASM(244): error A2009: Symbol not defined: DESCR_ES
+ 01BD  8E C0				mov	es, ax 
+ 01BF  B8 0000 U			mov	ax, offset descr_ss 
+L7.ASM(246): error A2009: Symbol not defined: DESCR_SS
+ 01C2  8E D0				mov	ss, ax 
+ 01C4  EA				db	0EAh 
+ 01C5  01C9 R				dw	offset jumpt 
+ 01C7  0000 U				dw	offset descr_cs 
+L7.ASM(250): error A2009: Symbol not defined: DESCR_CS
+ 01C9				jumpt: 
+					xor	eax, eax 
+L7.ASM(252): error A2009: Symbol not defined: EAX
+					mov	pidt.adr, eax 
+L7.ASM(253): warning A4057: Illegal size for operand
+ 01C9  C7 06 0006 R 03FF		mov	pidt.lim, 3FFh 
+					lidt	pidt 
+L7.ASM(255): error A2105: Expected: instruction or directive
+				 
+					mov	eax, cr0 
+L7.ASM(257): error A2009: Symbol not defined: EAX
+ 01CF  24 FE				and	al, 0FEh 
+					mov	cr0, eax 
+L7.ASM(259): error A2009: Symbol not defined: CR0
+ 01D1  EA				db	0EAh 
+ 01D2  01F0 R				dw	offset r_mode 
+ 01D4  ---- R				dw	_code 
+				 
+				r_mode: 
+L7.ASM(264): error A2006: Phase error between passes
+					assume	ds:_data 
+ 01F0  B8 ---- R			mov	ax, _data 
+ 01F3  8E D8				mov	ds, ax 
+					lss	sp, old_st 
+L7.ASM(268): error A2105: Expected: instruction or directive
+ 01F5  FB				sti 
+ 01F6  B4 01				mov	ah, 01h 
+ 01F8  CD 21				int	21h 
+ 01FA  B8 0003				mov	ax, 3 
+ 01FD  CD 10				int	10h 
+ 01FF  B8 4C00				mov	ax, 4C00h 
+ 0202  CD 21				int	21h 
+				 
+ = 0203					_code_size	equ	$-1 
+ 0204				_code	ends 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-37
+
+
+				;----------------------------------------------
+				----------- 
+ 0000				_i_code	segment	para public 'code' use16 
+L7.ASM(280): error A2025: Improper align/combine type
+					assume	cs:_i_code 
+ = 0000					vector = 0 
+ 0000				i_beg: 
+				  rept  255 
+				 
+					pusha 
+					mov	ax, vector 
+					jmp	common_int 
+				  vector = vector + 1 
+				 
+				  endm 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0000  B8 0000               1		mov	ax, vector 
+ 0003  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0006  B8 0001               1		mov	ax, vector 
+ 0009  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 000C  B8 0002               1		mov	ax, vector 
+ 000F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0012  B8 0003               1		mov	ax, vector 
+ 0015  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0018  B8 0004               1		mov	ax, vector 
+ 001B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 001E  B8 0005               1		mov	ax, vector 
+ 0021  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0024  B8 0006               1		mov	ax, vector 
+ 0027  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 002A  B8 0007               1		mov	ax, vector 
+ 002D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0030  B8 0008               1		mov	ax, vector 
+ 0033  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0036  B8 0009               1		mov	ax, vector 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-38
+
+
+ 0039  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 003C  B8 000A               1		mov	ax, vector 
+ 003F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0042  B8 000B               1		mov	ax, vector 
+ 0045  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0048  B8 000C               1		mov	ax, vector 
+ 004B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 004E  B8 000D               1		mov	ax, vector 
+ 0051  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0054  B8 000E               1		mov	ax, vector 
+ 0057  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 005A  B8 000F               1		mov	ax, vector 
+ 005D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0060  B8 0010               1		mov	ax, vector 
+ 0063  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0066  B8 0011               1		mov	ax, vector 
+ 0069  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 006C  B8 0012               1		mov	ax, vector 
+ 006F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0072  B8 0013               1		mov	ax, vector 
+ 0075  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0078  B8 0014               1		mov	ax, vector 
+ 007B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 007E  B8 0015               1		mov	ax, vector 
+ 0081  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0084  B8 0016               1		mov	ax, vector 
+ 0087  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-39
+
+
+ 008A  B8 0017               1		mov	ax, vector 
+ 008D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0090  B8 0018               1		mov	ax, vector 
+ 0093  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0096  B8 0019               1		mov	ax, vector 
+ 0099  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 009C  B8 001A               1		mov	ax, vector 
+ 009F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 00A2  B8 001B               1		mov	ax, vector 
+ 00A5  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 00A8  B8 001C               1		mov	ax, vector 
+ 00AB  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 00AE  B8 001D               1		mov	ax, vector 
+ 00B1  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 00B4  B8 001E               1		mov	ax, vector 
+ 00B7  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 00BA  B8 001F               1		mov	ax, vector 
+ 00BD  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 00C0  B8 0020               1		mov	ax, vector 
+ 00C3  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 00C6  B8 0021               1		mov	ax, vector 
+ 00C9  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 00CC  B8 0022               1		mov	ax, vector 
+ 00CF  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 00D2  B8 0023               1		mov	ax, vector 
+ 00D5  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 00D8  B8 0024               1		mov	ax, vector 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-40
+
+
+ 00DB  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 00DE  B8 0025               1		mov	ax, vector 
+ 00E1  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 00E4  B8 0026               1		mov	ax, vector 
+ 00E7  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 00EA  B8 0027               1		mov	ax, vector 
+ 00ED  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 00F0  B8 0028               1		mov	ax, vector 
+ 00F3  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 00F6  B8 0029               1		mov	ax, vector 
+ 00F9  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 00FC  B8 002A               1		mov	ax, vector 
+ 00FF  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0102  B8 002B               1		mov	ax, vector 
+ 0105  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0108  B8 002C               1		mov	ax, vector 
+ 010B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 010E  B8 002D               1		mov	ax, vector 
+ 0111  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0114  B8 002E               1		mov	ax, vector 
+ 0117  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 011A  B8 002F               1		mov	ax, vector 
+ 011D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0120  B8 0030               1		mov	ax, vector 
+ 0123  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0126  B8 0031               1		mov	ax, vector 
+ 0129  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-41
+
+
+ 012C  B8 0032               1		mov	ax, vector 
+ 012F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0132  B8 0033               1		mov	ax, vector 
+ 0135  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0138  B8 0034               1		mov	ax, vector 
+ 013B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 013E  B8 0035               1		mov	ax, vector 
+ 0141  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0144  B8 0036               1		mov	ax, vector 
+ 0147  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 014A  B8 0037               1		mov	ax, vector 
+ 014D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0150  B8 0038               1		mov	ax, vector 
+ 0153  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0156  B8 0039               1		mov	ax, vector 
+ 0159  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 015C  B8 003A               1		mov	ax, vector 
+ 015F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0162  B8 003B               1		mov	ax, vector 
+ 0165  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0168  B8 003C               1		mov	ax, vector 
+ 016B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 016E  B8 003D               1		mov	ax, vector 
+ 0171  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0174  B8 003E               1		mov	ax, vector 
+ 0177  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 017A  B8 003F               1		mov	ax, vector 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-42
+
+
+ 017D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0180  B8 0040               1		mov	ax, vector 
+ 0183  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0186  B8 0041               1		mov	ax, vector 
+ 0189  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 018C  B8 0042               1		mov	ax, vector 
+ 018F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0192  B8 0043               1		mov	ax, vector 
+ 0195  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0198  B8 0044               1		mov	ax, vector 
+ 019B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 019E  B8 0045               1		mov	ax, vector 
+ 01A1  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 01A4  B8 0046               1		mov	ax, vector 
+ 01A7  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 01AA  B8 0047               1		mov	ax, vector 
+ 01AD  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 01B0  B8 0048               1		mov	ax, vector 
+ 01B3  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 01B6  B8 0049               1		mov	ax, vector 
+ 01B9  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 01BC  B8 004A               1		mov	ax, vector 
+ 01BF  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 01C2  B8 004B               1		mov	ax, vector 
+ 01C5  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 01C8  B8 004C               1		mov	ax, vector 
+ 01CB  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-43
+
+
+ 01CE  B8 004D               1		mov	ax, vector 
+ 01D1  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 01D4  B8 004E               1		mov	ax, vector 
+ 01D7  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 01DA  B8 004F               1		mov	ax, vector 
+ 01DD  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 01E0  B8 0050               1		mov	ax, vector 
+ 01E3  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 01E6  B8 0051               1		mov	ax, vector 
+ 01E9  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 01EC  B8 0052               1		mov	ax, vector 
+ 01EF  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 01F2  B8 0053               1		mov	ax, vector 
+ 01F5  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 01F8  B8 0054               1		mov	ax, vector 
+ 01FB  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 01FE  B8 0055               1		mov	ax, vector 
+ 0201  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0204  B8 0056               1		mov	ax, vector 
+ 0207  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 020A  B8 0057               1		mov	ax, vector 
+ 020D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0210  B8 0058               1		mov	ax, vector 
+ 0213  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0216  B8 0059               1		mov	ax, vector 
+ 0219  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 021C  B8 005A               1		mov	ax, vector 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-44
+
+
+ 021F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0222  B8 005B               1		mov	ax, vector 
+ 0225  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0228  B8 005C               1		mov	ax, vector 
+ 022B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 022E  B8 005D               1		mov	ax, vector 
+ 0231  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0234  B8 005E               1		mov	ax, vector 
+ 0237  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 023A  B8 005F               1		mov	ax, vector 
+ 023D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0240  B8 0060               1		mov	ax, vector 
+ 0243  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0246  B8 0061               1		mov	ax, vector 
+ 0249  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 024C  B8 0062               1		mov	ax, vector 
+ 024F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0252  B8 0063               1		mov	ax, vector 
+ 0255  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0258  B8 0064               1		mov	ax, vector 
+ 025B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 025E  B8 0065               1		mov	ax, vector 
+ 0261  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0264  B8 0066               1		mov	ax, vector 
+ 0267  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 026A  B8 0067               1		mov	ax, vector 
+ 026D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-45
+
+
+ 0270  B8 0068               1		mov	ax, vector 
+ 0273  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0276  B8 0069               1		mov	ax, vector 
+ 0279  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 027C  B8 006A               1		mov	ax, vector 
+ 027F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0282  B8 006B               1		mov	ax, vector 
+ 0285  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0288  B8 006C               1		mov	ax, vector 
+ 028B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 028E  B8 006D               1		mov	ax, vector 
+ 0291  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0294  B8 006E               1		mov	ax, vector 
+ 0297  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 029A  B8 006F               1		mov	ax, vector 
+ 029D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 02A0  B8 0070               1		mov	ax, vector 
+ 02A3  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 02A6  B8 0071               1		mov	ax, vector 
+ 02A9  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 02AC  B8 0072               1		mov	ax, vector 
+ 02AF  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 02B2  B8 0073               1		mov	ax, vector 
+ 02B5  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 02B8  B8 0074               1		mov	ax, vector 
+ 02BB  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 02BE  B8 0075               1		mov	ax, vector 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-46
+
+
+ 02C1  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 02C4  B8 0076               1		mov	ax, vector 
+ 02C7  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 02CA  B8 0077               1		mov	ax, vector 
+ 02CD  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 02D0  B8 0078               1		mov	ax, vector 
+ 02D3  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 02D6  B8 0079               1		mov	ax, vector 
+ 02D9  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 02DC  B8 007A               1		mov	ax, vector 
+ 02DF  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 02E2  B8 007B               1		mov	ax, vector 
+ 02E5  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 02E8  B8 007C               1		mov	ax, vector 
+ 02EB  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 02EE  B8 007D               1		mov	ax, vector 
+ 02F1  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 02F4  B8 007E               1		mov	ax, vector 
+ 02F7  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 02FA  B8 007F               1		mov	ax, vector 
+ 02FD  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0300  B8 0080               1		mov	ax, vector 
+ 0303  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0306  B8 0081               1		mov	ax, vector 
+ 0309  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 030C  B8 0082               1		mov	ax, vector 
+ 030F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-47
+
+
+ 0312  B8 0083               1		mov	ax, vector 
+ 0315  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0318  B8 0084               1		mov	ax, vector 
+ 031B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 031E  B8 0085               1		mov	ax, vector 
+ 0321  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0324  B8 0086               1		mov	ax, vector 
+ 0327  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 032A  B8 0087               1		mov	ax, vector 
+ 032D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0330  B8 0088               1		mov	ax, vector 
+ 0333  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0336  B8 0089               1		mov	ax, vector 
+ 0339  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 033C  B8 008A               1		mov	ax, vector 
+ 033F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0342  B8 008B               1		mov	ax, vector 
+ 0345  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0348  B8 008C               1		mov	ax, vector 
+ 034B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 034E  B8 008D               1		mov	ax, vector 
+ 0351  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0354  B8 008E               1		mov	ax, vector 
+ 0357  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 035A  B8 008F               1		mov	ax, vector 
+ 035D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0360  B8 0090               1		mov	ax, vector 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-48
+
+
+ 0363  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0366  B8 0091               1		mov	ax, vector 
+ 0369  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 036C  B8 0092               1		mov	ax, vector 
+ 036F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0372  B8 0093               1		mov	ax, vector 
+ 0375  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0378  B8 0094               1		mov	ax, vector 
+ 037B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 037E  B8 0095               1		mov	ax, vector 
+ 0381  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0384  B8 0096               1		mov	ax, vector 
+ 0387  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 038A  B8 0097               1		mov	ax, vector 
+ 038D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0390  B8 0098               1		mov	ax, vector 
+ 0393  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0396  B8 0099               1		mov	ax, vector 
+ 0399  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 039C  B8 009A               1		mov	ax, vector 
+ 039F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 03A2  B8 009B               1		mov	ax, vector 
+ 03A5  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 03A8  B8 009C               1		mov	ax, vector 
+ 03AB  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 03AE  B8 009D               1		mov	ax, vector 
+ 03B1  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-49
+
+
+ 03B4  B8 009E               1		mov	ax, vector 
+ 03B7  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 03BA  B8 009F               1		mov	ax, vector 
+ 03BD  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 03C0  B8 00A0               1		mov	ax, vector 
+ 03C3  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 03C6  B8 00A1               1		mov	ax, vector 
+ 03C9  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 03CC  B8 00A2               1		mov	ax, vector 
+ 03CF  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 03D2  B8 00A3               1		mov	ax, vector 
+ 03D5  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 03D8  B8 00A4               1		mov	ax, vector 
+ 03DB  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 03DE  B8 00A5               1		mov	ax, vector 
+ 03E1  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 03E4  B8 00A6               1		mov	ax, vector 
+ 03E7  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 03EA  B8 00A7               1		mov	ax, vector 
+ 03ED  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 03F0  B8 00A8               1		mov	ax, vector 
+ 03F3  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 03F6  B8 00A9               1		mov	ax, vector 
+ 03F9  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 03FC  B8 00AA               1		mov	ax, vector 
+ 03FF  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0402  B8 00AB               1		mov	ax, vector 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-50
+
+
+ 0405  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0408  B8 00AC               1		mov	ax, vector 
+ 040B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 040E  B8 00AD               1		mov	ax, vector 
+ 0411  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0414  B8 00AE               1		mov	ax, vector 
+ 0417  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 041A  B8 00AF               1		mov	ax, vector 
+ 041D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0420  B8 00B0               1		mov	ax, vector 
+ 0423  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0426  B8 00B1               1		mov	ax, vector 
+ 0429  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 042C  B8 00B2               1		mov	ax, vector 
+ 042F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0432  B8 00B3               1		mov	ax, vector 
+ 0435  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0438  B8 00B4               1		mov	ax, vector 
+ 043B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 043E  B8 00B5               1		mov	ax, vector 
+ 0441  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0444  B8 00B6               1		mov	ax, vector 
+ 0447  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 044A  B8 00B7               1		mov	ax, vector 
+ 044D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0450  B8 00B8               1		mov	ax, vector 
+ 0453  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-51
+
+
+ 0456  B8 00B9               1		mov	ax, vector 
+ 0459  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 045C  B8 00BA               1		mov	ax, vector 
+ 045F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0462  B8 00BB               1		mov	ax, vector 
+ 0465  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0468  B8 00BC               1		mov	ax, vector 
+ 046B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 046E  B8 00BD               1		mov	ax, vector 
+ 0471  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0474  B8 00BE               1		mov	ax, vector 
+ 0477  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 047A  B8 00BF               1		mov	ax, vector 
+ 047D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0480  B8 00C0               1		mov	ax, vector 
+ 0483  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0486  B8 00C1               1		mov	ax, vector 
+ 0489  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 048C  B8 00C2               1		mov	ax, vector 
+ 048F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0492  B8 00C3               1		mov	ax, vector 
+ 0495  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0498  B8 00C4               1		mov	ax, vector 
+ 049B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 049E  B8 00C5               1		mov	ax, vector 
+ 04A1  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 04A4  B8 00C6               1		mov	ax, vector 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-52
+
+
+ 04A7  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 04AA  B8 00C7               1		mov	ax, vector 
+ 04AD  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 04B0  B8 00C8               1		mov	ax, vector 
+ 04B3  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 04B6  B8 00C9               1		mov	ax, vector 
+ 04B9  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 04BC  B8 00CA               1		mov	ax, vector 
+ 04BF  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 04C2  B8 00CB               1		mov	ax, vector 
+ 04C5  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 04C8  B8 00CC               1		mov	ax, vector 
+ 04CB  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 04CE  B8 00CD               1		mov	ax, vector 
+ 04D1  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 04D4  B8 00CE               1		mov	ax, vector 
+ 04D7  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 04DA  B8 00CF               1		mov	ax, vector 
+ 04DD  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 04E0  B8 00D0               1		mov	ax, vector 
+ 04E3  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 04E6  B8 00D1               1		mov	ax, vector 
+ 04E9  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 04EC  B8 00D2               1		mov	ax, vector 
+ 04EF  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 04F2  B8 00D3               1		mov	ax, vector 
+ 04F5  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-53
+
+
+ 04F8  B8 00D4               1		mov	ax, vector 
+ 04FB  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 04FE  B8 00D5               1		mov	ax, vector 
+ 0501  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0504  B8 00D6               1		mov	ax, vector 
+ 0507  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 050A  B8 00D7               1		mov	ax, vector 
+ 050D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0510  B8 00D8               1		mov	ax, vector 
+ 0513  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0516  B8 00D9               1		mov	ax, vector 
+ 0519  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 051C  B8 00DA               1		mov	ax, vector 
+ 051F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0522  B8 00DB               1		mov	ax, vector 
+ 0525  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0528  B8 00DC               1		mov	ax, vector 
+ 052B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 052E  B8 00DD               1		mov	ax, vector 
+ 0531  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0534  B8 00DE               1		mov	ax, vector 
+ 0537  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 053A  B8 00DF               1		mov	ax, vector 
+ 053D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0540  B8 00E0               1		mov	ax, vector 
+ 0543  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0546  B8 00E1               1		mov	ax, vector 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-54
+
+
+ 0549  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 054C  B8 00E2               1		mov	ax, vector 
+ 054F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0552  B8 00E3               1		mov	ax, vector 
+ 0555  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0558  B8 00E4               1		mov	ax, vector 
+ 055B  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 055E  B8 00E5               1		mov	ax, vector 
+ 0561  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0564  B8 00E6               1		mov	ax, vector 
+ 0567  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 056A  B8 00E7               1		mov	ax, vector 
+ 056D  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0570  B8 00E8               1		mov	ax, vector 
+ 0573  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0576  B8 00E9               1		mov	ax, vector 
+ 0579  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 057C  B8 00EA               1		mov	ax, vector 
+ 057F  E9 0604 R             1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0582  B8 00EB               1		mov	ax, vector 
+ 0585  EB 7D 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0588  B8 00EC               1		mov	ax, vector 
+ 058B  EB 77 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 058E  B8 00ED               1		mov	ax, vector 
+ 0591  EB 71 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 0594  B8 00EE               1		mov	ax, vector 
+ 0597  EB 6B 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-55
+
+
+ 059A  B8 00EF               1		mov	ax, vector 
+ 059D  EB 65 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 05A0  B8 00F0               1		mov	ax, vector 
+ 05A3  EB 5F 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 05A6  B8 00F1               1		mov	ax, vector 
+ 05A9  EB 59 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 05AC  B8 00F2               1		mov	ax, vector 
+ 05AF  EB 53 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 05B2  B8 00F3               1		mov	ax, vector 
+ 05B5  EB 4D 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 05B8  B8 00F4               1		mov	ax, vector 
+ 05BB  EB 47 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 05BE  B8 00F5               1		mov	ax, vector 
+ 05C1  EB 41 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 05C4  B8 00F6               1		mov	ax, vector 
+ 05C7  EB 3B 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 05CA  B8 00F7               1		mov	ax, vector 
+ 05CD  EB 35 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 05D0  B8 00F8               1		mov	ax, vector 
+ 05D3  EB 2F 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 05D6  B8 00F9               1		mov	ax, vector 
+ 05D9  EB 29 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 05DC  B8 00FA               1		mov	ax, vector 
+ 05DF  EB 23 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 05E2  B8 00FB               1		mov	ax, vector 
+ 05E5  EB 1D 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 05E8  B8 00FC               1		mov	ax, vector 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-56
+
+
+ 05EB  EB 17 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 05EE  B8 00FD               1		mov	ax, vector 
+ 05F1  EB 11 90              1		jmp	common_int 
+			     1		pusha 
+L7.ASM(291): error A2105: Expected: instruction or directive
+ 05F4  B8 00FE               1		mov	ax, vector 
+ 05F7  EB 0B 90              1		jmp	common_int 
+ 05FA				i_end: 
+ = 0007					proc_i_size = 7 
+				 
+ 05FA  49 4E 54 45 52 55 50	mes_int	db		'INTERUPT N' 
+       54 20 4E			
+				 
+ 0604				common_int: 
+ 0604  B1 0A			  mov cl, 10 
+ 0606  F6 F1				div cl 
+ 0608  80 CC 30				or  ah, 30h 
+ 060B  8A FC				mov bh, ah 
+ 060D  32 E4				xor ah, ah 
+ 060F  F6 F1				div cl 
+ 0611  0D 3030				or  ax, 3030h 
+ 0614  8B D0				mov dx, ax 
+				 
+ 0616  68 0000 U			push  offset descr_es 
+L7.ASM(307): error A2009: Symbol not defined: DESCR_ES
+ 0619  07				pop es 
+ 061A  BE 05FA R			mov si, offset Mes_int 
+ 061D  B9 000A				mov cx, 10 
+ 0620  BF 0A3C				mov di, 2620 
+ 0623  B4 07				mov ah, 07h 
+ 0625				outstr: 
+ 0625  2E: 8A 04			mov al,CS:[si] 
+ 0628  AB				stosw 
+ 0629  46				inc si 
+ 062A  E2 F9				loop  outstr 
+ 062C  B0 20				mov al, ' ' 
+ 062E  AB				stosw 
+ 062F  8A C2				mov al, dl 
+ 0631  AB				stosw 
+ 0632  8A C6				mov al, dh 
+ 0634  AB				stosw 
+ 0635  8A C7				mov al, bh 
+ 0637  AB				stosw 
+				 
+ 0638  9C				pushf 
+ 0639  68 0000 U			push  offset descr_cs 
+L7.ASM(328): error A2009: Symbol not defined: DESCR_CS
+ 063C  68 0191 R			push  offset return_dos 
+L7.ASM(329): error A2056: Immediate mode illegal
+ 063F  CF				iret 
+ 0640				common_end: 
+ = 063F					_i_code_size = $-1 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Page     1-57
+
+
+ 0640				_i_code	ends 
+				 	end _begin 
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Symbols-1
+
+
+Structures and Records:
+
+                N a m e                 Width   # fields
+                                        Shift   Width   Mask    Initial
+
+DT_P . . . . . . . . . . . . . .  	0006	0002
+  LIM  . . . . . . . . . . . . .  	0000
+  ADR  . . . . . . . . . . . . .  	0002
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+_CODE  . . . . . . . . . . . . .  	0204	PARA	PUBLIC	'CODE'
+_DATA  . . . . . . . . . . . . .  	002A	PARA	PUBLIC	'DATA'
+_GDT . . . . . . . . . . . . . .  	0000	PARA	PUBLIC	'DATA'
+_IDT . . . . . . . . . . . . . .  	0800	PARA	PUBLIC	'DATA'
+_I_CODE  . . . . . . . . . . . .  	0640	PARA	PUBLIC	'CODE'
+_ST  . . . . . . . . . . . . . .  	03E8	PARA	NONE	
+_T2  . . . . . . . . . . . . . .  	0002	PARA	PUBLIC	'DATA'
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+ATTRIB . . . . . . . . . . . . .  	L BYTE	0005	
+
+BASE_1 . . . . . . . . . . . . .  	L WORD	0002	
+BASE_2 . . . . . . . . . . . . .  	L BYTE	0004	
+BASE_3 . . . . . . . . . . . . .  	L BYTE	0007	
+BT6  . . . . . . . . . . . . . .  	L BYTE	0006	
+
+COMMON_END . . . . . . . . . . .  	L NEAR	0640	_I_CODE
+COMMON_INT . . . . . . . . . . .  	L NEAR	0604	_I_CODE
+CONT . . . . . . . . . . . . . .  	L NEAR	000F	_CODE
+
+I_BEG  . . . . . . . . . . . . .  	L NEAR	0000	_I_CODE
+I_END  . . . . . . . . . . . . .  	L NEAR	05FA	_I_CODE
+
+JUMPT  . . . . . . . . . . . . .  	L NEAR	01C9	_CODE
+
+LIMIT_1  . . . . . . . . . . . .  	L WORD	0000	
+
+MESS . . . . . . . . . . . . . .  	L BYTE	0010	_DATA
+MESSL  . . . . . . . . . . . . .  	NUMBER	0019	
+MES_INT  . . . . . . . . . . . .  	L BYTE	05FA	_I_CODE
+
+OLD_ST . . . . . . . . . . . . .  	L DWORD	000C	_DATA
+OUTMES . . . . . . . . . . . . .  	L NEAR	0186	_CODE
+OUTSTR . . . . . . . . . . . . .  	L NEAR	0625	_I_CODE
+
+PGDT . . . . . . . . . . . . . .  	L FWORD	0000	_DATA
+PIDT . . . . . . . . . . . . . .  	L FWORD	0006	_DATA
+PROC_I_SIZE  . . . . . . . . . .  	NUMBER	0007	
+Microsoft (R) Macro Assembler Version 5.00                  5/23/16 23:23:57
+                                                             Symbols-2
+
+
+PROTECT  . . . . . . . . . . . .  	L NEAR	014E	_CODE
+
+RETURN_DOS . . . . . . . . . . .  	L NEAR	0191	_CODE
+R_MODE . . . . . . . . . . . . .  	L NEAR	01F0	_CODE
+
+S_CR0  . . . . . . . . . . . . .  	NUMBER	009A	
+S_CR1  . . . . . . . . . . . . .  	NUMBER	00BA	
+S_C_0  . . . . . . . . . . . . .  	NUMBER	0098	
+S_DW0  . . . . . . . . . . . . .  	NUMBER	0092	
+S_DW1  . . . . . . . . . . . . .  	NUMBER	00B2	
+S_D_0  . . . . . . . . . . . . .  	NUMBER	0090	
+S_D_1  . . . . . . . . . . . . .  	NUMBER	00B0	
+S_SW0  . . . . . . . . . . . . .  	NUMBER	0096	
+
+T1 . . . . . . . . . . . . . . .  	L BYTE	0029	_DATA
+T2_P . . . . . . . . . . . . . .  	L NEAR	0000	_T2
+TOP_STP  . . . . . . . . . . . .  	NEAR	03E8	_ST
+
+V1 . . . . . . . . . . . . . . .  	L WORD	0000	_T2
+VECTOR . . . . . . . . . . . . .  	NUMBER	00FF	
+
+@FILENAME  . . . . . . . . . . .  	TEXT  L7		
+_BEGIN . . . . . . . . . . . . .  	L NEAR	0000	_CODE
+_CODE_SIZE . . . . . . . . . . .  	NEAR	0203	_CODE
+_DATA_SIZE . . . . . . . . . . .  	NEAR	0029	_DATA
+_GDT_SIZE  . . . . . . . . . . .  	NEAR	-0001	_GDT
+_I_CODE_SIZE . . . . . . . . . .  	NEAR	063F	_I_CODE
+_T2_SIZE . . . . . . . . . . . .  	NUMBER	0002	
+
+
+    334 Source  Lines
+   2890 Total   Lines
+     57 Symbols
+
+  50936 + 449224 Bytes symbol space free
+
+      5 Warning Errors
+    610 Severe  Errors

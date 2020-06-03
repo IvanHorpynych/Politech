@@ -1,0 +1,162 @@
+********************************************************************************
+***                  Micro-Cap 10.0.9.1 Evaluation Version                   ***
+***                                  Kampov                                  ***
+***                                  Kampov                                  ***
+***                       Transient Analysis of lab3_1                       ***
+***                           14.04.2015 12:57:05                            ***
+********************************************************************************
+Limits
+======
+Time Range           1u
+Maximum Time Step    0
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            70.000m  2            70.000m  3           712.088m 
+4           356.225m  5           362.033u  6             4.480  
+7             5.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:               D1            D2            D4            D5
+Using model:            VD            VD            VD            VD
+
+Capacitance Terms:
+CAP                27.389p       27.389p        1.380p        1.380p
+
+Current Terms:
+ID                658.845u      658.845u       45.885n       45.885n
+
+Resistance Terms:
+REQ                39.261        39.261       2.007MEG      2.007MEG
+
+Voltage Terms:
+VD                642.088m      642.088m      355.863m      355.863m
+
+Power DC Terms:
+PD                423.037u      423.037u       16.329n       16.329n
+PS                  0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Id                658.845u      658.845u       45.885n       45.885n
+
+Condition:
+State                   ON            ON           OFF           OFF
+
+Device Variables:
+area                1.000         1.000         1.000         1.000 
+ic                  0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Bipolar Junction Transistors NPN
+====================================================================
+Instance:               Q1
+Using model:        KT315A
+
+Beta Terms:
+BETADC             -2.054 
+BETAAC             56.748 
+
+Capacitance Terms:
+CPI                 1.000p
+CMU                 8.879p
+CBX                 0.000 
+CJS                 0.379f
+
+Conductance Terms:
+GM                 76.563p
+
+Current Terms:
+IB                 -6.343p
+IC                 13.030p
+
+Resistance Terms:
+RPI               741.198G
+RX                  0.000 
+RO                892.423G
+
+Voltage Terms:
+VBE               362.033u
+VBC                -4.480 
+VCE                 4.480 
+
+Frequency Terms:
+FT                  1.233 
+
+Power DC Terms:
+PD                 58.372p
+PS                  0.000 
+
+DC Pin Currents:
+Ib                 -6.343p
+Ic                 13.030p
+Ie                 -6.687p
+Is                  0.000 
+
+Condition:
+State                  OFF
+
+Device Variables:
+area                1.000 
+vbe                 0.000 
+vce                 0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                RC            RL            R1           RSH
+V                  519.953m        4.480         4.288       362.033u
+Power DC Terms:
+PD                 337.939u        2.912m        5.650m       16.614p
+
+DC Pin Currents:
+Ir                 649.942u      649.942u        1.318m       45.891n
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Pulse
+=========================================
+Instance:                V1            V2
+Using model:          PULSE        PULSE2
+V                   70.000m       70.000m
+Power DC Terms:
+PG                 -46.119u      -46.119u
+
+DC Pin Currents:
+ISource            658.845u      658.845u
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V3
+V                   5.000 
+Power DC Terms:
+PG                  9.838m
+
+DC Pin Currents:
+ISource            -1.968m
+
+

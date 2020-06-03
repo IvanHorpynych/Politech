@@ -1,0 +1,63 @@
+Microsoft (R) Macro Assembler Version 5.00                  9/9/15 13:38:32
+                                                             Page     1-1
+
+
+				; x:=a+b-c 
+				 
+ 0000				data segment 
+ 0000  05			a	db	5 
+ 0001  04			b	db	4 
+ 0002  02			c	db	2 
+ 0003  ??			x	db	? 
+ 0004				data	ends 
+				 
+ 0000				code	segment 
+					assume  cs:code,ds:data 
+				 
+ 0000				     begin: 
+ 0000  B8 ---- R			     mov ax, data 
+ 0003  8E D8			             mov ds, ax 
+ 0005  A0 0000 R		             mov al, a    ;(al):=a 
+ 0008  02 06 0001 R		             add al, b    ;(al)+b-->al 
+ 000C  2A 06 0002 R		             sub al, c    ;(al)-c-->al 
+ 0010  A2 0003 R		             mov x,  al   ;x:=(al) 
+				 
+ 0013  B8 4C00			             mov ax, 4c00h 
+ 0016  CD 21			             int 21h 
+ 0018				     code ends 
+				          end  begin 
+Microsoft (R) Macro Assembler Version 5.00                  9/9/15 13:38:32
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+CODE . . . . . . . . . . . . . .  	0018	PARA	NONE	
+DATA . . . . . . . . . . . . . .  	0004	PARA	NONE	
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+A  . . . . . . . . . . . . . . .  	L BYTE	0000	DATA
+
+B  . . . . . . . . . . . . . . .  	L BYTE	0001	DATA
+BEGIN  . . . . . . . . . . . . .  	L NEAR	0000	CODE
+
+C  . . . . . . . . . . . . . . .  	L BYTE	0002	DATA
+
+X  . . . . . . . . . . . . . . .  	L BYTE	0003	DATA
+
+@FILENAME  . . . . . . . . . . .  	TEXT  test		
+
+
+     24 Source  Lines
+     24 Total   Lines
+      9 Symbols
+
+  49756 + 450436 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors

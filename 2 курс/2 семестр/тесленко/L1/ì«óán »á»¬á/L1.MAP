@@ -1,0 +1,8 @@
+
+Warning: no stack segment
+
+ Start  Stop   Length Name                   Class
+ 00000H 00003H 00004H DATA                   
+ 00010H 0012DH 0011EH CODE                   
+
+Program entry point at 0001:00C2

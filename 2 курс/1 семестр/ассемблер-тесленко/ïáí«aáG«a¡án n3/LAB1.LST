@@ -1,0 +1,183 @@
+Microsoft (R) Macro Assembler Version 5.00                  11/25/15 24:07:31
+                                                             Page     1-1
+
+
+				.286 
+				 
+				Tabl1		struc 
+ 0000  0004[			namex		db		4 dup(?) 
+	    ??			
+			 ]	
+				
+ 0004  0004[			field1		dw		4 dup(?) 
+	   ????			
+			 ]	
+				
+ 000C				Tabl1		ENDS 
+				 
+ 0000				Data1 segment 
+ 0000  ??			I_struc			db	? 
+ 0001  ??			I_namex			db	? 
+ 0002  0006[			A1		Tabl1 6 dup(<>) 
+	0004[			
+	     ??			
+			]	
+	0004[			
+	    ????		
+			]	
+			 ]	
+				
+ 004A				Data1 ends 
+				 
+ 0000				Data2 segment 
+ 0000  000D[			A2		Tabl1 13 dup(<>) 
+	0004[			
+	     ??			
+			]	
+	0004[			
+	    ????		
+			]	
+			 ]	
+				
+ 009C				Data2 ENDs 
+				 
+				 
+ 0000				code1 segment 
+				Assume cs:code1, ds:data1 
+				 
+ 0000  0000 ---- R		code2ptr	dd	begin2 
+				 
+ 0004				begin: 
+ 0004  B8 ---- R		mov		ax, data1 
+ 0007  8E D8			mov		ds, ax 
+				 
+ 0009  33 C0			xor 	ax, ax 
+				 
+ 000B  C6 06 0000 R 00		mov I_struc,0 
+ 0010  80 3E 0000 R 06		cmp		I_struc, 6 
+ 0015  7D 42			jnl	@end_1 
+Microsoft (R) Macro Assembler Version 5.00                  11/25/15 24:07:31
+                                                             Page     1-2
+
+
+ 0017				@rep_1: 
+ 0017  C6 06 0001 R 00			mov		I_namex,0 
+ 001C  80 3E 0001 R 04			cmp		I_namex,4 
+ 0021  7D 2B				jnl @end_2 
+ 0023					@rep_2: 
+ 0023  B8 000C					mov		ax, type A1 
+ 0026  F6 26 0000 R				mul		I_struc 
+ 002A  BD 0002 R				mov 	bp, offset A1 
+ 002D  03 E8					add 	bp, ax 
+						 
+ 002F  8B 36 0001 R				mov		si, word ptr I_
+				namex 
+ 0033  D1 E6					shl		si, 1 
+ 0035  BF 0002					mov		di, 2 
+ 0038  03 FE					add		di,si 
+ 003A  D1 EE					shr 	si, 1 
+						 
+ 003C  8D 02					lea		ax, word ptr [b
+				p+si] 
+ 003E  3E: 89 83 0002 R				mov		word ptr A1[bp+
+				di], ax 
+						 
+						 
+ 0043  FE 06 0001 R				inc		I_namex 
+ 0047  80 3E 0001 R 04			cmp I_namex,4 
+ 004C  7C D5				jl @rep_2 
+ 004E					@end_2: 
+					 
+ 004E  FE 06 0000 R		inc I_struc 
+				 
+ 0052  80 3E 0000 R 06		cmp I_struc,6 
+ 0057  7C BE			jl @rep_1 
+				 
+ 0059				@end_1: 
+				 
+				 
+ 0059  2E: FF 2E 0000 R		jmp dword ptr code2ptr 
+				 
+ 005E				code1 ends 
+				 
+				 
+ 0000				code2 	segment 
+				ASSUME 	cs:code2, ds:data1, es:data2 
+ 0000				begin2: 
+ 0000  B8 ---- R			mov		ax, data1 
+ 0003  8E D8				mov		ds, ax 
+ 0005  B8 ---- R			mov		ax, data2 
+ 0008  8E C0				mov		es, ax 
+					 
+ 000A  B8 000C				mov		ax, type A1 
+ 000D  BA 0005				mov 	dx, 5 
+ 0010  F7 E2				mul		dx 
+ 0012  8B E8				mov		bp, ax 
+					 
+Microsoft (R) Macro Assembler Version 5.00                  11/25/15 24:07:31
+                                                             Page     1-3
+
+
+ 0014  B9 0024				mov 	cx, 36 
+ 0017  8D 36 0002 R			lea		si, A1 
+ 001B  8D BE 0000 R			lea		di, A2[bp] 
+ 001F  FC				cld 
+ 0020  F3/ A5				rep movsw 
+				 
+ 0022  B8 4C00			mov 	ax, 4c00h 
+ 0025  CD 21			int 	21h 
+ 0027				code2 ENDS 
+				 
+				end  begin 
+Microsoft (R) Macro Assembler Version 5.00                  11/25/15 24:07:31
+                                                             Symbols-1
+
+
+Structures and Records:
+
+                N a m e                 Width   # fields
+                                        Shift   Width   Mask    Initial
+
+TABL1  . . . . . . . . . . . . .  	000C	0002
+  NAMEX  . . . . . . . . . . . .  	0000
+  FIELD1 . . . . . . . . . . . .  	0004
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+CODE1  . . . . . . . . . . . . .  	005E	PARA	NONE	
+CODE2  . . . . . . . . . . . . .  	0027	PARA	NONE	
+DATA1  . . . . . . . . . . . . .  	004A	PARA	NONE	
+DATA2  . . . . . . . . . . . . .  	009C	PARA	NONE	
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+A1 . . . . . . . . . . . . . . .  	L 000C	0002	DATA1	Length = 0006
+A2 . . . . . . . . . . . . . . .  	L 000C	0000	DATA2	Length = 000D
+
+BEGIN  . . . . . . . . . . . . .  	L NEAR	0004	CODE1
+BEGIN2 . . . . . . . . . . . . .  	L NEAR	0000	CODE2
+
+CODE2PTR . . . . . . . . . . . .  	L DWORD	0000	CODE1
+
+I_NAMEX  . . . . . . . . . . . .  	L BYTE	0001	DATA1
+I_STRUC  . . . . . . . . . . . .  	L BYTE	0000	DATA1
+
+@END_1 . . . . . . . . . . . . .  	L NEAR	0059	CODE1
+@END_2 . . . . . . . . . . . . .  	L NEAR	004E	CODE1
+@FILENAME  . . . . . . . . . . .  	TEXT  lab1		
+@REP_1 . . . . . . . . . . . . .  	L NEAR	0017	CODE1
+@REP_2 . . . . . . . . . . . . .  	L NEAR	0023	CODE1
+
+
+     94 Source  Lines
+     94 Total   Lines
+     20 Symbols
+
+  50660 + 465884 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors
