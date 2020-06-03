@@ -1,0 +1,10 @@
+D:\СПЗ\mail_pars\mail_pars\bin\Debug\mail_pars.exe
+D:\СПЗ\mail_pars\mail_pars\bin\Debug\mail_pars.pdb
+D:\СПЗ\mail_pars\mail_pars\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\СПЗ\mail_pars\mail_pars\obj\x86\Debug\mail_pars.exe
+D:\СПЗ\mail_pars\mail_pars\obj\x86\Debug\mail_pars.pdb
+C:\Users\Мишко\Desktop\mail_pars\mail_pars\mail_pars\obj\x86\Debug\mail_pars.exe
+C:\Users\Мишко\Desktop\mail_pars\mail_pars\mail_pars\obj\x86\Debug\mail_pars.pdb
+C:\Users\Мишко\Desktop\mail_pars\mail_pars\mail_pars\bin\Debug\mail_pars.exe
+C:\Users\Мишко\Desktop\mail_pars\mail_pars\mail_pars\bin\Debug\mail_pars.pdb
+C:\Users\Мишко\Desktop\mail_pars\mail_pars\mail_pars\obj\x86\Debug\ResolveAssemblyReference.cache

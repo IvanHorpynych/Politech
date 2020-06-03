@@ -1,0 +1,108 @@
+<style>
+dd { margin-left:20px}
+#prev, #next { background-image:url(images/buttons.png);  width:81px; height:23px; display:inline-block; }
+#prev{ background-position:0 0;}
+#next{ background-position: 81px 0px;}
+a#next:hover { background-position: 81px 46px;}
+a#prev:hover { background-position: 0px 46px;}
+
+
+.scroll-to-top-button{
+    background: transparent url('../../../resources/Upload.png') no-repeat center center;
+	width: 32px;
+    height: 32px;
+    color: #fff;
+    font-family: verdana;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+    padding: 15px;
+    margin: 20px;
+}
+
+	.toggler { width:auto; height:auto; position: relative; }
+	#effect { width:auto; height:autox; padding: 0.4em; position: relative; }
+	#effect h1 { margin: 0; padding: 0.4em; text-align: center; }
+
+	.codeKeyWordStyle{color:blue}
+	.codeValueStyle{color:#996600}
+	.codeTypeStyle{color:#2b91af}
+	.codeStyle{font-family:"Courier New", Courier, monospace; font-size:10pt}
+	.headerStyle {font-family: "Times New Roman", Times, serif}
+	.resizable { padding: 0.5em;}
+	frameset
+{
+border-width: 0px; 
+border-style: none; 
+border-style: hidden; 
+border-collapse: collapse; 
+}
+	.describe,#accordion h3 
+	{
+		 font-family:"Times New Roman", Times, serif;
+		 font-size:12pt; 
+		 text-align:left; 
+		 margin-top:2pt;
+		 margin-bottom:2pt;
+	}
+	/*td { padding:10 0 10 5 !important; border:1px solid;}
+	table 
+	{ 
+	border:1px solid !important;
+	background-color:#FFFFFF;
+		font-family: 'Segoe UI',Verdana,Arial;
+    font-size: 0.813em;
+    font-style: normal;
+    word-wrap: break-word;
+	border-collapse:collapse;
+	}
+	*/
+
+	.parent-element
+	{
+		margin-left:35px;
+		color:#0033FF;
+		border:1px white;
+		white-space:nowrap;
+	}
+	.leaf-element
+	{
+		color:#006600;
+		margin-left:35px;
+		border:1px white;
+		white-space:nowrap;
+		
+	}
+	.ui-plus, .ui-root, .ui-minus, .ui-leaf, .ui-parent ,.ui-class,.ui-interface,.ui-enum,.ui-delegate,.ui-method,.ui-field,
+	.ui-property,.ui-event,.ui-expanded,.ui-collapsed,.ui-namespace,.ui-library,.ui-empty
+	{
+		width: 24px; 
+		height: 24px; 
+		position:relative;
+		display:inline-block;
+		background-position:center;
+		 
+	}
+	.ui-icon-contenttree{ background-image: url(images/contenttree.png); width: 24px; height: 24px; float:left; margin-right: 0.3em; }
+	.ui-namespace{ background-image: url(images/namespace.png);}
+	.ui-library{ background-image: url(images/library.png);}
+	.ui-plus{ background-image: url(images/plus.png);}
+	.ui-root{ background-image: url(images/root.png);}
+	.ui-expanded{ background-image: url(images/expanded.png);}
+	.ui-collapsed{ background-image: url(images/collapsed.png);}
+	.ui-minus{ background-image: url(images/minus.png);}
+	.ui-leaf{ background-image: url(images/leaf.png);}
+	.ui-class{background-image: url(images/class.png);}
+	.ui-interface{background-image: url(images/interface.png);}
+	.ui-enum{background-image: url(images/enum.png);}
+	.ui-delegate{background-image: url(images/delegate.png);}
+	.ui-method{background-image: url(images/public_method.png);}
+	.ui-field{background-image: url(images/public_field.png);}
+	.ui-property{background-image: url(images/public_property.png);}
+	.ui-event{background-image: url(images/public_event.png);}
+	.ui-parent{ background-image: url(images/parent.png);}
+	.ui-textblock{display:inline-block; vertical-align:top; cursor:pointer; cursor:hand;}
+	.menu{ }
+</style>

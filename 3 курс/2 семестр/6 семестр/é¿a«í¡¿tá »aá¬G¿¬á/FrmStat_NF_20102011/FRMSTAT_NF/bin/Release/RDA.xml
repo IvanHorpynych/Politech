@@ -1,0 +1,4019 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RDA</name>
+    </assembly>
+    <members>
+        <member name="M:RoduzReplicator.ReplicationTableRecord.#ctor(RoduzReplicator.ReplicationOperationType,System.String[],System.Object[])">
+            <summary>
+            Initializes a new instance of the ReplicationTableRecord class.
+            </summary>
+            <param name="_tables"></param>
+            <param name="_keys"></param>
+            <param name="_operation"></param>
+        </member>
+        <member name="P:Network.ReplicatorUpdateFile.FileLength">
+            <summary>
+            Размер файла
+            </summary>
+        </member>
+        <member name="P:Network.ReplicatorUpdateFile.FileName">
+            <summary>
+            Имя файла
+            </summary>
+        </member>
+        <member name="P:Network.ReplicatorUpdateFile.FileContent">
+            <summary>
+            Содержимое файла
+            </summary>
+        </member>
+        <member name="F:Chart.ChartPlotter.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Chart.ChartPlotter.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Chart.ChartPlotter.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Office.ExcelController.lstOpenXLSFiles">
+            <summary>
+            Коллекция имен открытых Excel документов.
+            </summary>
+        </member>
+        <member name="F:Office.ExcelController.sFileXLSResources">
+            <summary>
+            Путь к файлу реестра захватываемых ресурсов Excel документов
+            </summary>
+        </member>
+        <member name="F:Office.ExcelController.instance">
+            <summary>
+            Экземпляр-одиночка этого класса 
+            </summary>
+        </member>
+        <member name="M:Office.ExcelController.#ctor">
+            <summary>
+            Приватный конструктор
+            </summary>
+        </member>
+        <member name="M:Office.ExcelController.GetController">
+            <summary>
+            Метод выполняющий обращение к единственному экземпляру этого класса
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Office.ExcelController.RegisterXLSDoc(System.String)">
+            <summary>
+            Регистрация имени создаваемого документа
+            </summary>
+            <param name="sDocName"></param>
+        </member>
+        <member name="M:Office.ExcelController.RemoveXLSDoc(System.String)">
+            <summary>
+            Удаление открытого ранее документа из реестра
+            </summary>
+            <param name="sDocName"></param>
+        </member>
+        <member name="M:Office.ExcelController.KillXLSDoc(System.String)">
+            <summary>
+            Уничтожение процесса по имени документа
+            </summary>
+            <param name="sDocName"></param>
+        </member>
+        <member name="M:Office.ExcelController.CloseXLS(System.String)">
+            <summary>
+            Закрытие документа
+            </summary>
+            <param name="sDocName"></param>
+        </member>
+        <member name="M:Office.ExcelController.SaveXLSList">
+            <summary>
+            Сохранение списка захваченных Excel ресурсов в файл
+            </summary>
+        </member>
+        <member name="M:Office.ExcelController.LoadXLSList">
+            <summary>
+            Загрузка списка создаваемых документов из файла 
+            </summary>
+        </member>
+        <member name="M:Office.ExcelController.ReleaseXLSResources">
+            <summary>
+            Освобождение захваченных ресурсов под каждый создаваемый документ
+            </summary>
+        </member>
+        <member name="F:RDA.CellValueControl.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RDA.CellValueControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RDA.CellValueControl.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:RDA.CellValueControl.ConnectEvents">
+            <summary>
+            Присоеденить ивенты на полученые View
+            </summary>
+        </member>
+        <member name="F:RDA.DBUpdater.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RDA.DBUpdater.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RDA.DBUpdater.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:RDA.DBUpdater.GenerateSqlCommands(RDA.UpdateDBType,System.Data.DataTable[])">
+            <summary>
+            Генерировать команды на обновление
+            </summary>
+            <param name="type">Тип обновления</param>
+            <param name="tables">Список таблиц</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.DBUpdater.GenerateSqlCommands(RDA.UpdateDBType,System.String[])">
+            <summary>
+            Генерировать команды на обновление
+            </summary>
+            <param name="type">Тип обновления</param>
+            <param name="tables">Список имен таблиц</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.DBUpdater.UpdateTables(RDA.UpdateDBType,System.String@,System.Data.DataTable[])">
+            <summary>
+            Обновить таблицу
+            </summary>
+            <param name="type">Тип обновления</param>
+            <param name="errInfo">Сообщение об ошибке</param>
+            <param name="tables">Список таблиц для обновления</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.DBUpdater.UpdateTables(RDA.UpdateDBType,System.String@,System.String[])">
+            <summary>
+            Обновить таблицу
+            </summary>
+            <param name="type">Тип обновления</param>
+            <param name="errInfo">Сообщение об ошибке</param>
+            <param name="tables">Список имен таблиц для обновления</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.DBUpdater.UpdateTables(RDA.UpdateDBType,System.Data.DataTable[])">
+            <summary>
+            Обновить таблицу
+            </summary>
+            <param name="type">Тип обновления</param>
+            <param name="tables">Список таблиц для обновления</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.DBUpdater.UpdateTables(RDA.UpdateDBType,System.String[])">
+            <summary>
+            Обновить таблицу
+            </summary>
+            <param name="type">Тип обновления</param>
+            <param name="tables">Список имен таблиц для обновления</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.DBUpdater.ExecuteSqlCommands(System.Collections.Generic.List{System.String},System.String@)">
+            <summary>
+            Выполнить команды на обновление
+            </summary>
+            <param name="sqlCmd">Команды на обновление</param>
+            <param name="errInfo">Текст ошибки при выполнении</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.DBUpdater.ExecuteSqlCommands(System.String[])">
+            <summary>
+            Выполнить команды на обновление
+            </summary>
+            <param name="_sqlCmd">Команды на обновление</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.DBUpdater.ExecuteSqlCommands(System.String@,System.String[])">
+            <summary>
+            Выполнить команды на обновление
+            </summary>
+            <param name="_sqlCmd">Команды на обновление</param>
+            <param name="errInfo">Текст ошибки при выполнении</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.frmZmist.#ctor(CoreLab.Oracle.OracleConnection@,System.Int32,System.String,System.String[])">
+            <summary>
+            Конструктор класа frmZmist для создания формы содержаний
+            </summary>
+            <param name="_OraCon">Экземпляр класа для соединения с БД</param>
+            <param name="_Road">Текущая дорога</param>
+            <param name="_Doc">Код документа</param>
+            <param name="cols">FieldName колонок для отображения</param>
+        </member>
+        <member name="M:RDA.frmZmist.p_SaveZmist(System.Data.DataTable,System.String,System.String,System.String)">
+             <summary>
+            Сохранение "Змісту" в таблицу NF_ZMIST
+             </summary>
+             <param name="dtShabl">Шаблон формы, обязательно с колонокой флагом ISNSI</param>
+             <param name="uID">Идентификатор пользователя</param>
+        </member>
+        <member name="F:RDA.frmZmist.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RDA.frmZmist.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RDA.frmZmist.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:RDA.BaseRespondent.items">
+            <summary>
+            Список дополнительных полей для ключа KD
+            </summary>
+        </member>
+        <member name="F:RDA.BaseRespondent.isUpdated">
+            <summary>
+            Показывает, изменялось ли значение хотябы одного поля подписей 
+            </summary>
+        </member>
+        <member name="F:RDA.BaseRespondent.isNeedFullReload">
+            <summary>
+            Показывает необходимость перезагружать список ответственных лиц
+            </summary>
+        </member>
+        <member name="M:RDA.BaseRespondent.InitializeRespondents">
+            <summary>
+            Инициализация(перечитка) подписей при изменении дороги
+            </summary>
+        </member>
+        <member name="M:RDA.BaseRespondent.GetRespValueByID(System.Object,RDA.RespondentColumn)">
+            <summary>
+            Получить значение колонки по ID записи
+            </summary>
+            <param name="_ID">ID записи</param>
+            <param name="_col">Индекс колонки</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.BaseRespondent.RaiseRespChanged">
+            <summary>
+            Вызов события изменения подписей
+            </summary>
+        </member>
+        <member name="M:RDA.BaseRespondent.GetRespondentValue(RDA.RespondentType,RDA.RespondentColumn)">
+            <summary>
+            Выбрать значение из таблицы подписей
+            </summary>
+            <param name="_type">Тип респондента</param>
+            <param name="_col">Колонка</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.BaseRespondent.SaveRespondents(System.Boolean,System.Boolean)">
+            <summary>
+            Сохранение подписей в БД
+            </summary>
+            <param name="isAutoSave">Тип режима сохранения(сохранение без вопросов = true)</param>
+            <param name="isSaveIntoInfo">Нужно ли сохранять подписи в таблицу репликации(InfoUpdSrv)</param>
+        </member>
+        <member name="M:RDA.BaseRespondent.SaveRespondents(System.Boolean)">
+            <summary>
+            Сохранение подписей в БД флаг bool isSaveIntoInfo=true
+            </summary>
+            <param name="isAutoSave">Тип режима сохранения(сохранение без вопросов = true)</param>
+        </member>
+        <member name="M:RDA.BaseRespondent.SaveRespondents">
+            <summary>
+            Сохранение подписей в БД флаги bool isAutoSave=true, bool isSaveIntoInfo=true
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:RDA.BaseRespondent.ExecuteCmd(System.Collections.Generic.List{System.String},System.Boolean)" -->
+        <member name="M:RDA.BaseRespondent.GenerateDeleteStatement(System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Создание запроов на удаление
+            </summary>
+            <param name="lst">Список в который помещаются запросы</param>
+        </member>
+        <member name="M:RDA.BaseRespondent.GenerateInsertStatement(System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Создание запроов на добавление
+            </summary>
+            <param name="lst">Список в который помещаются запросы</param>
+        </member>
+        <member name="M:RDA.BaseRespondent.ReplicateResp">
+            <summary>
+            Записываем данные в таблицу реплиации
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.BaseRespondent.DeleteRespondents(System.Boolean)">
+            <summary>
+            Удаление подписей в БД
+            </summary>
+            <param name="isSaveIntoInfo">Нужно ли сохранять подписи в таблицу репликации(InfoUpdSrv)</param>
+        </member>
+        <member name="M:RDA.BaseRespondent.DeleteRespondentsByKD(System.String)">
+            <summary>
+            Удалить подписи по ключу
+            </summary>
+            <param name="KD">Ключ для удаления</param>
+        </member>
+        <member name="M:RDA.BaseRespondent.DeleteRespondents">
+            <summary>
+            Удаление подписей в БД
+            </summary>>
+        </member>
+        <member name="M:RDA.BaseRespondent.SetChanged">
+            <summary>
+            Устанавливает статус что подписи были изменены
+            </summary>
+        </member>
+        <member name="M:RDA.BaseRespondent.GetKD">
+            <summary>
+            Составляет ключ KD
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.BaseRespondent.IsKDFieldsNotNull">
+            <summary>
+            Определяет все ли поля нужные для ключа KD заполнены
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.BaseRespondent.UpdateInterface">
+            <summary>
+            Обновление видимости елементов панели
+            </summary>
+        </member>
+        <member name="M:RDA.BaseRespondent.CurrentRoad_EditValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Опработка события при изменении дороги
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:RDA.BaseRespondent.DataEditRegim">
+            <summary>
+            Тип режима роботы с формой (Редактирование/Просмотр)
+            </summary>
+        </member>
+        <member name="P:RDA.BaseRespondent.KD">
+            <summary>
+            Составной ключ подписи
+            </summary>
+        </member>
+        <member name="F:RDA.Respondents.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RDA.Respondents.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RDA.Respondents.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:RDA.Respondents.isUsePerformer">
+            <summary>
+            Отображает или скрывает поле "Виконавець"
+            </summary>
+        </member>
+        <member name="F:RDA.Respondents.isUseResponsible1">
+            <summary>
+            Отображает или скрывает поле "Відповідальний 1"
+            </summary>
+        </member>
+        <member name="F:RDA.Respondents.isUseResponsible2">
+            <summary>
+            Отображает или скрывает поле "Відповідальний 2"
+            </summary>
+        </member>
+        <member name="M:RDA.Respondents.InitializeRespondents">
+            <summary>
+            Инициализация(перечитка) подписей при изменении дороги
+            </summary>
+        </member>
+        <member name="M:RDA.Respondents.LoadFromArhives">
+            <summary>
+            Загрузка подписей из архива(NF_DOC_RESP)
+            </summary>
+        </member>
+        <member name="M:RDA.Respondents.ClearRepository">
+            <summary>
+            Очистка репозиториев формы
+            </summary>
+        </member>
+        <member name="M:RDA.Respondents.UpdateInterface">
+            <summary>
+            Обновление видимости елементов панели
+            </summary>
+        </member>
+        <member name="M:RDA.Respondents.CalculateElementsLocation">
+            <summary>
+            Расчет положения єлементов компонента
+            </summary>
+        </member>
+        <member name="M:RDA.Respondents.GetRespondentValue(RDA.RespondentType,RDA.RespondentColumn)">
+            <summary>
+            Выбрать значение из таблицы подписей
+            </summary>
+            <param name="_type">Тип респондента</param>
+            <param name="_col">Колонка</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.Respondents.DeleteRespondents(System.Boolean)">
+            <summary>
+            Удаление подписей в БД
+            </summary>
+            <param name="isSaveIntoInfo">Нужно ли сохранять подписи в таблицу репликации(InfoUpdSrv)</param>
+        </member>
+        <member name="M:RDA.Respondents.GenerateInsertStatement(System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Создание запроов на добавление
+            </summary>
+            <param name="lst">Список в который помещаются запросы</param>
+        </member>
+        <member name="M:RDA.Respondents.GetPerformerPostString">
+            <summary>
+            Возвращает строку исполнителя в правельной форме [Виконавець:    [посада]     [телефон]]
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:RDA.Respondents.UseResponsible2">
+            <summary>
+            Указывает необходимо ли использовать "Responsible2"
+            </summary>
+        </member>
+        <member name="P:RDA.Respondents.UsePerformer">
+            <summary>
+            Указывает необходимо ли использовать "Виконавця"
+            </summary>
+        </member>
+        <member name="P:RDA.Respondents.Caption">
+            <summary>
+            Заголовок панели подписей
+            </summary>
+        </member>
+        <member name="P:RDA.Respondents.AppearanceCaption">
+            <summary>
+            Стилизация заголовка
+            </summary>
+        </member>
+        <member name="P:RDA.Respondents.Responsible1Font">
+            <summary>
+            Шрифт поля Отвтственный 1
+            </summary>
+        </member>
+        <member name="P:RDA.Respondents.Responsible2Font">
+            <summary>
+            Шрифт поля Отвтственный 2
+            </summary>
+        </member>
+        <member name="P:RDA.Respondents.PerformerFont">
+            <summary>
+            Шрифт поля Исполнитель
+            </summary>
+        </member>
+        <member name="P:RDA.Respondents.CaptionVisiblity">
+            <summary>
+            Указывает, отображается ли заголовок панели подписей
+            </summary>
+        </member>
+        <member name="M:RoduzReplicator.DocumentReplicationExecutor.SendMessageToServer(Network.NetworkMessage,System.String)">
+            <summary>
+            Отправка сообщения на сервер
+            </summary>
+        </member>
+        <member name="M:RoduzReplicator.DocumentReplicationExecutor.ExecuteManualReplication(System.String,System.String[])">
+            <summary>
+            Выполняет репликацию "Силой" с указаного сервера
+            </summary>
+        </member>
+        <member name="F:RoduzReplicator.DocumentReplicationExecutor.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RoduzReplicator.DocumentReplicationExecutor.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RoduzReplicator.DocumentReplicationExecutor.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:RoduzReplicator.ReplicationPeriodArgs.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Summary for ReplicationPeriodArgs
+            </summary>
+        </member>
+        <member name="P:Network.TextMessage.Road">
+            <summary>
+            Код дороги еоторой направлено сообщение
+            </summary>
+        </member>
+        <member name="P:Network.TextMessage.Otdel">
+            <summary>
+            Код одтела которому направлено сообщение
+            </summary>
+        </member>
+        <member name="P:Network.TextMessage.User">
+            <summary>
+            Идентификатор пользователя которому отправлені изменения
+            </summary>
+        </member>
+        <member name="P:Network.TextMessage.MsgHeader">
+            <summary>
+            Заголовок сообщения
+            </summary>
+        </member>
+        <member name="P:Network.TextMessage.MsgContent">
+            <summary>
+            Содержимое сообщения
+            </summary>
+        </member>
+        <member name="P:Network.TextMessage.UserID">
+            <summary>
+            Идентификатор пользователя которій отправил сообщение
+            </summary>
+        </member>
+        <member name="F:RDA.DBConnect.OraCon">
+            <summary>
+            Экземпляр класа для соединения с БД
+            </summary>
+        </member>
+        <member name="F:RDA.DBConnect.Server">
+            <summary>
+            Хранит адрес сервера
+            </summary>
+        </member>
+        <member name="F:RDA.DBConnect.UserID">
+            <summary>
+            Идинтификатор пользователя
+            </summary>
+        </member>
+        <member name="F:RDA.DBConnect.Password">
+            <summary>
+            Пароль пользователя БД
+            </summary>
+        </member>
+        <member name="F:RDA.DBConnect.Direct">
+            <summary>
+            Признак прямого подключения
+            </summary>
+        </member>
+        <member name="F:RDA.DBConnect.Port">
+            <summary>
+            Порт
+            </summary>
+        </member>
+        <member name="F:RDA.DBConnect.SID">
+            <summary>
+            Глобальный идинтификатор БД
+            </summary>                        
+        </member>
+        <member name="M:RDA.DBConnect.#ctor">
+            <summary>
+            Конструктор класа. Выполняет загрузку конфигурации и соеденяется с БД
+            </summary>
+        </member>
+        <member name="M:RDA.DBConnect.f_ConnectDB(System.Boolean)">
+            <summary>
+            Метод установки соединения с базой.
+            </summary>
+            <returns>Возвращает результат попытки соединения</returns>
+        </member>
+        <member name="M:RDA.DBConnect.f_ConnectDB(System.Boolean,System.String@)">
+            <summary>
+            Метод установки соединения с базой.
+            </summary>
+            <param name="errMes">Выходной параметр. Возвращает текст ошибки, возникшей при попытке установить соединение.</param>
+            <returns>Возвращает результат попытки соединения</returns>
+        </member>
+        <member name="M:RDA.DBConnect.p_SaveCon">
+            <summary>
+            Сохранить настройки соединения в файл конфигурации
+            </summary>
+        </member>
+        <member name="F:RDA.DBConnect.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RDA.DBConnect.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RDA.DBConnect.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:RDA.resfinder">
+            <summary>
+            Индусы форевер)))))
+            </summary>
+        </member>
+        <member name="T:RDA.Encryption">
+            <summary>
+            Дегроидный (классический) класс для кодирования паролей
+            </summary>
+        </member>
+        <member name="M:RDA.Encryption.p_Decrypt(System.String)">
+            <summary>
+            Метод используется для ДЕшифрации пароля (ДЕгроид МИша!!!!!)
+            </summary>
+            <param name="pr">Значение, которое нужно дешифровать</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.Encryption.p_Encrypt(System.String)">
+            <summary>
+            Метод используется для шифрации парол
+            </summary>
+            <param name="pr">Значение, которое нужно зашифровать</param>
+            <returns></returns>
+        </member>
+        <member name="P:RDA.Encryption.key">
+            <summary>
+            Значение ключа из поля Confirm таблицы AcUser
+            </summary>
+        </member>
+        <member name="P:RoduzReplicator.ReplSettings.MessageTable">
+            <summary>
+            Таблица пользовательских сообщений
+            </summary>
+        </member>
+        <member name="P:RoduzReplicator.ReplSettings.InfoTabl">
+            <summary>
+            Таблица хранения данных
+            </summary>
+        </member>
+        <member name="P:RoduzReplicator.ReplSettings.Port">
+            <summary>
+            Порт для подключения
+            </summary>
+        </member>
+        <member name="M:RoduzReplicator.InfoTableScaner.ScanInfoTable">
+            <summary>
+            Сканирование таблицы InfoUpdSrv
+            </summary>
+        </member>
+        <member name="M:RoduzReplicator.InfoTableScaner.GetAndProcessRecordFromInfo">
+            <summary>
+            Выбрать данные из таблицы Info и передать на обработку
+            </summary>
+        </member>
+        <member name="M:RoduzReplicator.InfoTableScaner.ProcessInfoData(System.Data.DataTable)">
+            <summary>
+            Обработка строк из таблицы Info
+            </summary>
+            <param name="dtInfo"></param>
+        </member>
+        <member name="M:RoduzReplicator.InfoTableScaner.SendMessageToServer(System.Data.DataTableReader,System.Collections.Generic.List{System.String})">
+            <summary>
+            Отправка сообщения на сервер
+            </summary>
+            <param name="dtRead"></param>
+            <param name="queries"></param>
+        </member>
+        <member name="M:RoduzReplicator.InfoTableScaner.GetSqlQuery(System.Data.DataTableReader)">
+            <summary>
+            Получить запрос на выборку данных из таблицы БД основываясь на информации из таблицы Info
+            </summary>
+            <param name="oraReadInfo">Курсор на текущую строку в таблице Info</param>
+            <returns></returns>
+        </member>
+        <member name="M:RoduzReplicator.InfoTableScaner.GetTableFilter(System.Data.DataTableReader)">
+            <summary>
+            Получить фильтр для финальной таблицы
+            </summary>
+            <param name="dtReadInfo">Курсор на текущую строку в таблице Info</param>
+            <returns></returns>
+        </member>
+        <member name="M:RoduzReplicator.InfoTableScaner.LoadDataFromFinalTableAndGenerateQueries(System.String,System.String,System.String,System.Data.DataTableReader)">
+            <summary>
+            Загрузка данных из финальной таблицы и генерация запросов для репликации  
+            </summary>
+            <param name="SqlQuery">Запрос на выборку</param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:RoduzReplicator.InfoTableScaner.GenerateQuery(System.Data.DataTable,System.String,System.Data.DataTableReader)">
+            <summary>
+            Генерация запросов для финальной таблицы в 
+            </summary>
+            <param name="dt">Финальная таблица со данными которые необходимо обновить</param>
+            <param name="filter">Фильтр данных</param>
+            <returns></returns>
+        </member>
+        <member name="M:RoduzReplicator.InfoTableScaner.DeleteProcessedRow(System.Object)">
+            <summary>
+            Удаление обработаной строки
+            </summary>
+        </member>
+        <member name="T:RDA.DocumentLock">
+            <summary>
+            Управление статусом блокировки документа
+            </summary>
+        </member>
+        <member name="M:RDA.DocumentLock.LoadData">
+            <summary>
+            Загрузка данных из CloseDoc списка закрытых(LockDoc=1) периодов для документа
+            </summary>
+        </member>
+        <member name="M:RDA.DocumentLock.SetupCommandBuilder">
+            <summary>
+            Настраевает экземпляр класса OracleCommandBuilder, для генерации команд сохранения
+            </summary>
+        </member>
+        <member name="M:RDA.DocumentLock.isDocLock">
+            <summary>
+            Возвращает значение признака закрытого(true) или открытого(false) периода для документа.        
+            </summary>
+            <param name="_tDoc">Код документа</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.DocumentLock.f_LockDocInfo">
+            <summary>
+            Возвращает информацию о закрытом периода для документа:
+            <para>когда(дата), кто(имя пользователя), на каком ПК(IP-адрес ПК)</para>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.DocumentLock.SetDocumentStatus(RDA.DocumentStatus,System.Boolean)">
+            <summary>
+            Устанавливает статус документа и сохраняет изменения в БД
+            </summary>
+            <param name="status">Статус документа</param>
+            <param name="isNeedReplicate">Выполнить репликацию (true), не выполнять(false)</param>
+        </member>
+        <member name="M:RDA.DocumentLock.SetDocumentStatus(RDA.DocumentStatus)">
+            <summary>
+            Устанавливает статус документа и сохраняет изменения в БД
+            </summary>
+            <param name="status">Статус документа</param>
+        </member>
+        <member name="M:RDA.DocumentLock.UpdateArhiveInfo(System.Boolean)">
+            <summary>
+            Обновляет информацию о изменениях архива документа
+            <param name="isNeedReplicate">Указівает на необходимость репликации (true - реплицировать, false - не реплицировать)</param>
+            </summary>
+        </member>
+        <member name="M:RDA.DocumentLock.UpdateArhiveInfo">
+            <summary>
+            Обновляет информацию о изменениях архива документа
+            </summary>
+        </member>
+        <member name="M:RDA.DocumentLock.ShowLockMessage">
+            <summary>
+            Выдает сообщение о блокеровке, если документ заблокирован
+            </summary>
+        </member>
+        <member name="M:RDA.DocumentLock.SaveChanges(System.Boolean)">
+            <summary>
+            Сохранение данных в таблицу БД
+            </summary>
+        </member>
+        <member name="M:RDA.DocumentLock.ReplicateDocumentLock">
+            <summary>
+            Реплицировать документ на УЗ
+            </summary>
+        </member>
+        <member name="M:RDA.DocumentLock.isDocumentUsedForDate(System.String,System.DateTime)">
+            <summary>
+            Определяет используется ли документ за конкретную дату
+            <para>true  - используется</para>
+            <para>false - не используется</para>
+            </summary>
+            <param name="doc">Код документа</param>
+            <param name="date">Дата</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.DocumentLock.isDocumentUsedForDate(System.String,System.Int32,System.Int32)">
+            <summary>
+            Определяет используется ли документ за конкретную дату
+            <para>true  - используется</para>
+            <para>false - не используется</para>
+            </summary>
+            <param name="doc">Код документа</param>
+            <param name="year">Год</param>
+            <param name="month">Месяц</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.DocumentLock.isMenuItemUsedForDate(System.String,System.DateTime)">
+            <summary>
+            Определяет используется ли документ за конкретную дату
+            <para>true  - используется</para>
+            <para>false - не используется</para>
+            </summary>
+            <param name="objName">Имя об'єкта</param>
+            <param name="date">Дата</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.DocumentLock.isMenuItemUsedForDate(System.String,System.Int32,System.Int32)">
+            <summary>
+            Определяет используется ли документ за конкретную дату
+            <para>true  - используется</para>
+            <para>false - не используется</para>
+            </summary>
+            <param name="objName">Имя об'єкта</param>
+            <param name="year">Год</param>
+            <param name="month">Месяц</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.DocumentLock.GetDocumentUsePeriod(System.String)">
+            <summary>
+            Возвращает текст сообщение о периоде использования документа
+            </summary>
+            <param name="doc">Код документа</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.DocumentLock.ShowDocumentPeriodUseMessage(System.String,System.Windows.Forms.IWin32Window)">
+            <summary>
+            Выдает сообщение с информацией о периоде использования документа
+            </summary>
+            <param name="doc">Код документа</param>
+            <param name="owner">Форма владелец</param>
+        </member>
+        <member name="M:RDA.DocumentLock.ShowDocumentPeriodUseMessage(System.String)">
+            <summary>
+            Выдает сообщение с информацией о периоде использования документа
+            </summary>
+            <param name="doc">Код документа</param>
+        </member>
+        <member name="P:RDA.DocumentLock.LockTable">
+            <summary>
+            Таблица заблокированых(закрытых) документов за выбраный период
+            </summary>
+        </member>
+        <member name="T:RDA.DocumentStatus">
+            <summary>
+            Статус документа
+            </summary>
+        </member>
+        <member name="F:RDA.DocumentStatus.Unlock">
+            <summary>
+            Разблокирован
+            </summary>
+        </member>
+        <member name="F:RDA.DocumentStatus.Lock">
+            <summary>
+            Заблокирован
+            </summary>
+        </member>
+        <member name="F:RDA.Test.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RDA.Test.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RDA.Test.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DataSave.DBQueryExecutor.ExecuteSqlCommands(System.Collections.Generic.List{System.String},System.String@,System.Boolean)">
+            <summary>
+            Выполнить команды на обновление
+            </summary>
+            <param name="sqlCmd">Команды на обновление</param>
+            <param name="errInfo">Текст ошибки при выполнении</param>
+            <returns></returns>
+        </member>
+        <member name="T:PRT.printset">
+            <summary>
+            Summary description for printset.
+            </summary>
+        </member>
+        <member name="F:PRT.printset.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:PRT.printset.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:PRT.printset.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:RDA.LinksProcessor.#ctor(CoreLab.Oracle.OracleConnection,System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+             Конструктор на основе таблиц базы данных
+            </summary>
+            <param name="oraCon"></param>
+            <param name="sDocName"></param>
+            <param name="iYear"></param>
+            <param name="iMonth"></param>
+        </member>
+        <member name="M:RDA.LinksProcessor.#ctor(CoreLab.Oracle.OracleConnection,System.String,System.Int32,System.Int32,System.Int32,System.Data.DataSet,System.Int32)">
+            <summary>
+            Конструктор на основе локального источника данных
+            </summary>
+            <param name="oraCon"></param>
+            <param name="sDocName"></param>
+            <param name="iYear"></param>
+            <param name="iMonth"></param>
+            <param name="dsData"></param>
+        </member>
+        <member name="M:RDA.LinksProcessor.FetchLinks">
+            <summary>
+            Извлекает данные необходимых таблиц для расчета увязок конкретного документа 
+            </summary>
+        </member>
+        <member name="M:RDA.LinksProcessor.GetBranchesID(System.Data.DataTable,System.String)">
+            <summary>
+            Формирует список идентификаторов сьрок указанной таблицы
+            </summary>
+            <param name="dtTree">Таблица</param>
+            <param name="sKeyColumn">Ключевое поле - идентификатор</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.LinksProcessor.GetQueryFilter(System.Data.DataRow,System.Boolean)">
+            <summary>
+            Формирует фильтр для SQL-запроса из элементов передаваемого параметра-строки
+            </summary>
+            <param name="dr">Строка содержащая "координаты" текущего операнда</param>
+            <param name="bUseDate">Признак того, включать ли дату в фильтр</param>
+            <returns>Таблица с расчитанными увязками</returns>
+            
+        </member>
+        <member name="M:RDA.LinksProcessor.CalcTablesRowsCount">
+            <summary>
+            Расчет кол-ва строк источника и заполнение коллекции
+            </summary>
+        </member>
+        <member name="M:RDA.LinksProcessor.GetLinksOperandCount(System.Data.DataRow)">
+            <summary>
+            Расчет кол-ва строк в документе для дублирующих внутриформенных увязок
+            </summary>
+            <param name="drOper">Строка-операнд</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.LinksProcessor.DublicateLinksBranches">
+            <summary>
+            Метод инициирует дублирование увязок, отслеживая родительские записи со справочника увязок
+            </summary>
+        </member>
+        <member name="M:RDA.LinksProcessor.DublicateLinkBranch(System.Int32,System.Int32)">
+            <summary>
+            Метод дублирует строки увязки в заданном количестве
+            </summary>
+            <param name="iIDLink">ИД увязки</param>
+            <param name="iDublicateCount">Количество порожденных дублей</param>
+        </member>
+        <member name="M:RDA.LinksProcessor.DeleteOriginalRows(System.Data.DataRow[])">
+            <summary>
+            Метод удаляет порождающие строки для увязки, операций и операндов
+            </summary>
+            <param name="drLinkBranch">Порождающие строки для увязки</param>
+        </member>
+        <member name="M:RDA.LinksProcessor.DublicateOperations(System.Data.DataRow[],System.Collections.Generic.Dictionary{System.String,System.Int32})">
+            <summary>
+            Метод порождает дубликаты операций для текущей увязки
+            </summary>
+            <param name="drOperations">Строки текущей увязки</param>
+            <param name="lstReplaceOperation">Отображение, позволяющее соспоставить ключи порождающих операций и строк увязки</param>
+        </member>
+        <member name="M:RDA.LinksProcessor.GetOperandID(System.Int32,System.Boolean)">
+            <summary>
+            Метод создает дубликат операнда по порождающему ИД и возвращает его ИД 
+            </summary>
+            <param name="iOrigIDOP">ИД порождающего операнда</param>
+            <param name="bNewOperand">Признак необходимости порождать дубликат операнда</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.LinksProcessor.GetDublicatedOperand(System.Int32,System.Int32)">
+            <summary>
+            Метод порождает строку дубликата операнда и возвращает ее индекс
+            </summary>
+            <param name="iIDOP">ИД порождающего операнда</param>
+            <param name="index">Текущей индекс для создаваемого дубликата строки операнда</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.LinksProcessor.GetChildKeysID(System.Data.DataRow[],System.String)">
+            <summary>
+            Метод возвращает список ИД, извлеченных из массива дочерних строк
+            </summary>
+            <param name="drParentKeysID">массив дочерних строк</param>
+            <param name="sChildKeyField">поле, хранящее дочерние ИД</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.LinksProcessor.PrepareFetchValues">
+            <summary>
+            Метод осуществляет проверку операндов на наличие автосоздаваемых строк и инициирует их дублирование
+            </summary>
+        </member>
+        <member name="M:RDA.LinksProcessor.FetchValues">
+            <summary>
+            Извлекает значения ячеек всех операндов для увязок 
+            </summary>
+        </member>
+        <member name="M:RDA.LinksProcessor.FetchDBGroupCellValues(System.String)">
+            <summary>
+            Извлекает значения из ячеек таблицы для всех операндов присутствующих в ней
+            </summary>
+            <param name="sTable">Таблица для операндов</param>
+        </member>
+        <member name="M:RDA.LinksProcessor.GetDSCellValue(System.Data.DataSet,System.Data.DataRow)">
+            <summary>
+            Извлекает значение ячейки операнда из таблицы источника данных
+            </summary>
+            <param name="dsSource"></param>
+            <param name="drOper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.LinksProcessor.GetProcessedLinks(System.Boolean)">
+            <summary>
+            Метод выполняет расчет увязок и возвращает результат 
+            </summary>
+            <param name="bShowAllBranches">Признак сокрытия сошедшихся увязок</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.LinksProcessor.DeleteLink(System.Int32)">
+            <summary>
+            Рекурсивное удаление подветвей родительской ветви
+            </summary>
+            <param name="iIDBRANCH">ИД родительской ветви</param>
+        </member>
+        <member name="M:RDA.LinksProcessor.PrepareLinksOperationBuffer(System.String)">
+            <summary>
+            Метод извлекает порции записей одинаковых операндов и помещает в буффер
+            </summary>
+            <param name="sOperandID"></param>
+        </member>
+        <member name="M:RDA.LinksProcessor.DublicateLinksOperation(System.String)">
+            <summary>
+            Cоздание дубликатов операций, содержащих указанный операнд sFKOperandID
+            </summary>
+            <param name="sFKOperandID"></param>
+        </member>
+        <member name="M:RDA.LinksProcessor.DublicateLinks(System.Data.DataRow)">
+            <summary>
+            Метод дублирует строки только для тех операндов, которые помечены флагом DUBLICATE = 1
+            </summary>
+            <param name="drOper"></param>
+        </member>
+        <member name="M:RDA.LinksProcessor.DeleteLinkOperationBuffer">
+            <summary>
+            Удаление буфера, содержащего порцию порождающих строк dtLinksOperation
+            </summary>
+        </member>
+        <member name="M:RDA.LinksProcessor.DublicateLinksBranchess">
+            <summary>
+            Дублирование шаблона увязок
+            </summary>
+        </member>
+        <member name="M:Office.Excel.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Конструктор класса Excel, выполняющий также копирование шаблона и открытие документа
+            </summary>
+            <param name="sDoc">Код документа</param>
+            <param name="sRoad">Код дороги</param>
+            <param name="sGod">Месяц</param>
+            <param name="sMes">Год</param>
+        </member>
+        <member name="M:Office.Excel.#ctor(System.String,System.String)">
+            <summary>
+            Конструктор класса Excel, выполняющий также копирование шаблона и открытие документа
+            </summary>
+            <param name="sDoc">Код документа</param>
+            <param name="sName">Все шо душе угодно</param>
+        </member>
+        <member name="M:Office.Excel.#ctor(System.String)">
+            <summary>
+            Конструктор класса Excel, выполняющий также копирование шаблона и открытие документа
+            </summary>
+            <param name="fullPath">Полный путь к документу</param>
+            <param name="sName">Все шо душе угодно</param>
+        </member>
+        <member name="M:Office.Excel.PrintOut(System.Object,System.Object,System.Object,System.Object)">
+            <summary>
+            Печать документа
+            </summary>
+            <param name="iFromPage">Начальная страница</param>
+            <param name="iToPage">Конечная страница</param>
+            <param name="iNumCopies">Количество копий</param>
+            <param name="ActivePrinter">Используемый принтер</param>
+        </member>
+        <member name="M:Office.Excel.SetDefaultFont(System.String)">
+            <summary>
+            Установка шрифта по умолчанию - Times New Roman, 12
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+        </member>
+        <member name="M:Office.Excel.OpenDocument(System.String)">
+            <summary>
+            Открытие документа
+            </summary>
+            <param name="name">Полное название документа</param>
+        </member>
+        <member name="M:Office.Excel.NewDocument">
+            <summary>
+            Создание нового документа
+            </summary>
+        </member>
+        <member name="M:Office.Excel.CloseDocument">
+            <summary>
+            Закрытие документа
+            </summary>
+        </member>
+        <member name="M:Office.Excel.QuitApplication">
+            <summary>
+            Завершение Excel приложения
+            </summary>
+        </member>
+        <member name="M:Office.Excel.SaveDocument(System.String)">
+            <summary>
+            Сохранение документа
+            </summary>
+            <param name="name">Имя открытого документа</param>
+        </member>
+        <member name="M:Office.Excel.SetColor(System.String,System.Int32)">
+            <summary>
+            Установка цвета фона ячейки
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="color">Устанавливаемый цвет</param>
+        </member>
+        <member name="M:Office.Excel.SetOrientation(Office.Excel.XlPageOrientation)">
+            <summary>
+            Установка ориентации страницы
+            </summary>
+            <param name="Orientation">Ориентация страницы</param>
+        </member>
+        <member name="M:Office.Excel.SetMargin(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Установка размеров полей листа
+            </summary>
+            <param name="Left">Размер левого поля</param>
+            <param name="Right">Размер правого поля</param>
+            <param name="Top">Размер верхнего поля</param>
+            <param name="Bottom">Размер нижнего поля</param>
+        </member>
+        <member name="M:Office.Excel.SetPaperSize(Office.Excel.xlPaperSize)">
+            <summary>
+            Установка размеров листа
+            </summary>
+            <param name="Size">Задаваемый размер листа</param>
+        </member>
+        <member name="M:Office.Excel.SetZoom(System.Int32)">
+            <summary>
+            Установка масштаба печати
+            </summary>
+            <param name="Percent">Масштаб печати (в процентах)</param>
+        </member>
+        <member name="M:Office.Excel.SelectPage(System.String)">
+            <summary>
+            Активация указанной страницы
+            </summary>
+            <param name="Name">Имя страницы</param>
+        </member>
+        <member name="M:Office.Excel.SelectPage(System.Int32)">
+            <summary>
+            Активация указанной страницы
+            </summary>
+            <param name="idx">Индекс страницы (начинается с 1)</param>
+        </member>
+        <member name="M:Office.Excel.RenamePage(System.Int32,System.String)">
+            <summary>
+            Смена имени указанного листа
+            </summary>
+            <param name="n">Позиция листа в книге</param>
+            <param name="Name">Новое имя листа</param>
+        </member>
+        <member name="M:Office.Excel.AddNewPage(System.String)">
+            <summary>
+            Добавление листа
+            </summary>
+            <param name="Name">Имя листа</param>
+        </member>
+        <member name="M:Office.Excel.SetFontBold(System.String,System.Boolean)">
+            <summary>
+            Установка жирности текста
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="bold">Признак жирности</param>
+        </member>
+        <member name="M:Office.Excel.SetFont(System.String,System.Drawing.Font)">
+            <summary>
+            Установка стиля текста в диапазоне ячеек
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="font">Стиль текста</param>
+        </member>
+        <member name="M:Office.Excel.SetFont(System.Int32,System.Int32,System.Int32,System.Int32,System.Drawing.Font)">
+            <summary>
+            Установка стиля текста выделеной подстроки внутри ячейки
+            </summary>
+            <param name="rowNum">Номер рядка</param>
+            <param name="colNum">Номер колонки</param>
+            <param name="SelStart">Индекс в подстроке откуда начать выделение</param>
+            <param name="SelCount">Количество выделеных символов</param>
+            <param name="font">Стиль</param>
+        </member>
+        <member name="M:Office.Excel.SetFont(System.String,System.Int32,System.Int32,System.Drawing.Font)">
+            <summary>
+            Установка стиля текста выделеной подстроки внутри ячейки
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="SelStart">Индекс в подстроке откуда начать выделение</param>
+            <param name="SelCount">Количество выделеных символов</param>
+            <param name="font">Стиль</param>
+        </member>
+        <member name="M:Office.Excel.SetValue(System.String,System.Object)">
+            <summary>
+            Установка значения в указанный диапазон ячеек
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="value">Помещаемое значение</param>
+        </member>
+        <member name="M:Office.Excel.SetValue(System.Int32,System.Int32,System.Object)">
+            <summary>
+            Установка значения в указанную ячейку по индексу
+            </summary>
+            <param name="row">Индекс строки</param>
+            <param name="column">Индекс колонки</param>
+            <param name="value">Помещаемое значение</param>
+        </member>
+        <member name="M:Office.Excel.CopyRangeTo(System.String,System.String)">
+            <summary>
+            Копирование содержимого указанного диапазона ячеек
+            </summary>
+            <param name="rangeSRC">диапазон-источник</param>
+            <param name="rangeDST">диапазон приемник</param>
+        </member>
+        <member name="M:Office.Excel.CopyRangeWithBordersAndHeight(System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Копирование содержимого указанного диапазона ячеек с сохранением рамок и высоты строки
+            </summary>
+            <param name="rangeSRC">диапазон-источник</param>
+            <param name="rangeDST">диапазон приемник</param>
+        </member>
+        <member name="M:Office.Excel.SetMerge(System.String,System.Boolean)">
+            <summary>
+            Объединение/Разъединение ячеек
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="MergeCells">Признак объединения/разъединения</param>
+        </member>
+        <member name="M:Office.Excel.MergeCells(System.String)">
+            <summary>
+            Объединение ячеек
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+        </member>
+        <member name="M:Office.Excel.SetColumnWidth(System.String,System.Double)">
+            <summary>
+            Установка ширины столбцов
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="Width">Ширина</param>
+        </member>
+        <member name="M:Office.Excel.SetTextOrientation(System.String,System.Int32)">
+            <summary>
+            Установка направления текста
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="Orientation">Направление текста</param>
+        </member>
+        <member name="M:Office.Excel.SetVerticalAlignment(System.String,Office.Excel.XLVerticalAlignment)">
+            <summary>
+            Выравнивание текста по вертикали
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="Alignment">Выравнивание</param>
+        </member>
+        <member name="M:Office.Excel.SetHorisontalAlignment(System.String,Office.Excel.XLHorizontalAlignment)">
+            <summary>
+            Выравнивание текста по горизонтали
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="Alignment">Выравнивание</param>
+        </member>
+        <member name="M:Office.Excel.SelectText(System.String,System.Int32,System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            Форматирование указанного текста в ячейке
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="Start">Начало форматирования</param>
+            <param name="Length">Конец форматирования</param>
+            <param name="Color">Цвет текста</param>
+            <param name="FontStyle">Стиль шрифта</param>
+            <param name="FontSize">Размер шрифта</param>
+        </member>
+        <member name="M:Office.Excel.SetWrapText(System.String,System.Boolean)">
+            <summary>
+            Установка переноса текста
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="Value">Перенос</param>
+        </member>
+        <member name="M:Office.Excel.CreateComment(System.String,System.Boolean,System.String)">
+            <summary>
+            Создание примечания
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="CommentVisible"></param>
+            <param name="Text">Текст примечания</param>
+        </member>
+        <member name="M:Office.Excel.DeleteComment(System.String)">
+            <summary>
+            Удаление примечания
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+        </member>
+        <member name="M:Office.Excel.DisplayCommentIndicator(Office.Excel.XlCommentDisplayMode)">
+            <summary>
+            Отображение или скрытие всех примечаний
+            </summary>
+            <param name="Mode">Режим отображения примечаний</param>
+        </member>
+        <member name="M:Office.Excel.SetRowsGroup(System.String,System.Boolean)">
+            <summary>
+            Группировка столбцов
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="Value">Признак группировки</param>
+        </member>
+        <member name="M:Office.Excel.SetColumnsGroup(System.String,System.Boolean)">
+            <summary>
+            Группировка столбцов
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="Value">Признак группировки</param>
+        </member>
+        <member name="M:Office.Excel.SetRowHeight(System.String,System.Double)">
+            <summary>
+            Установка высоты строки
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="Height">Высота строки</param>
+        </member>
+        <member name="M:Office.Excel.GetRowHeight(System.String)">
+            <summary>
+            Установка высоты строки
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+        </member>
+        <member name="M:Office.Excel.GetValue(System.String)">
+            <summary>
+            Чтение значения из диапзона ячеек
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <returns>Значение из ячейки</returns>
+        </member>
+        <member name="M:Office.Excel.Dispose">
+            <summary>
+            Уничтожение объекта Excel
+            </summary>
+        </member>
+        <member name="M:Office.Excel.SetBorderStyle(System.String,Office.Excel.XlLineStyle,Office.Excel.XlBorderWeight)">
+            <summary>
+            Установка границы диапазона ячеек
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="style">Стиль линии</param>
+            <param name="weight">Толщина линии</param>
+        </member>
+        <member name="M:Office.Excel.ClearBorder(System.String,Office.Excel.XlBordersIndex)">
+            <summary>
+            Стирание границы диапазона ячеек
+            </summary>
+            <param name="range">Диапазон ячеек</param>
+            <param name="border">Индекс границы</param>
+        </member>
+        <member name="M:Office.Excel.DeleteRow(System.String)">
+            <summary>
+            Удалить всю строку
+            </summary>
+            <param name="range">Координаты любой ячеки входящей в эту строку</param>
+        </member>
+        <member name="M:Office.Excel.DeleteColumn(System.String)">
+            <summary>
+            Удалить всю колонку
+            </summary>
+            <param name="range">Координаты любой ячеки входящей в эту колонку</param>
+        </member>
+        <member name="M:Office.Excel.SetTitle(Office.Excel.ETitlePlacement,System.String)">
+            <summary>
+            Вставка колонтитула
+            </summary>
+            <param name="ePlacement">Место размещения колонтитула</param>
+            <param name="sText">Текст для колонтитула</param>
+        </member>
+        <member name="M:Office.Excel.GetPageNameAndSelectIt(System.String,System.Int32)">
+            <summary>
+            Возвращает имя страницу Excel документа и выбирает ее
+            </summary>
+            <param name="fileName">Путь к Excel-файлу</param>
+            <param name="index">Номер страницы (от 1..n)</param>
+            <returns></returns>
+        </member>
+        <member name="P:Office.Excel.Visible">
+            <summary>
+            Видимость Excel
+            </summary>
+        </member>
+        <member name="P:Office.Excel.DisplayScrollBarsVisible">
+            <summary>
+            Видимость полос прокрутки
+            </summary>
+        </member>
+        <member name="P:Office.Excel.DisplayStatusBarVisible">
+            <summary>
+            Видимость строки состояния
+            </summary>
+        </member>
+        <member name="P:Office.Excel.Caption">
+            <summary>
+            Заголовок окна
+            </summary>
+        </member>
+        <member name="P:Office.Excel.WindowState">
+            <summary>
+            Установка вида окна
+            </summary>
+        </member>
+        <member name="T:Office.Excel.ETitlePlacement">
+            <summary>
+            Перечисление мест расположения колонтитула
+            </summary>
+        </member>
+        <member name="T:Office.Excel.XLHorizontalAlignment">
+            <summary>
+            Положение текста в ячейке
+            </summary>
+        </member>
+        <member name="T:Office.Excel.XLVerticalAlignment">
+            <summary>
+            Положение текста в ячейке
+            </summary>
+        </member>
+        <member name="T:Office.Excel.XlBorderWeight">
+            <summary>
+            Перечисление толщин границ ячеек
+            </summary>
+        </member>
+        <member name="T:Office.Excel.XlBordersIndex">
+            <summary>
+            Перечисление индекса краев ячейки
+            </summary>
+        </member>
+        <member name="T:Office.Excel.XlLineStyle">
+            <summary>
+            Перечисление стилей линий для краев ячейки
+            </summary>
+        </member>
+        <member name="T:Office.Excel.XlCommentDisplayMode">
+            <summary>
+            Перечисление режимов отображения примечаний
+            </summary>
+        </member>
+        <member name="T:Office.Excel.xlPaperSize">
+            <summary>
+            Перечисление размеров листа
+            </summary>
+        </member>
+        <member name="T:Office.Excel.XlPageOrientation">
+            <summary>
+            Перечисление ориентации страницы
+            </summary>
+        </member>
+        <member name="T:Office.Excel.XlWindowState">
+            <summary>
+             Перечисление видов окна 
+            </summary>
+        </member>
+        <member name="T:RDA.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:RDA.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:RDA.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:CoreLab.Oracle.SmartOracleCommand">
+            <summary>
+            Усовершенствованная версия OracleCommand, которая сама открывает соединение при выполнении операций и закрывает если оно до открытия было закрыто.
+            </summary>
+        </member>
+        <member name="M:CoreLab.Oracle.SmartOracleCommand.ExecuteNonQuery">
+            <summary>
+            Выполнить инструкции не содержащие возвращаемых значений
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CoreLab.Oracle.SmartOracleCommand.ExecuteScalar">
+            <summary>
+            Выполнить инструкцию возвращающую одно значение
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.SumCalculator.DoCalculation(System.Data.DataSet,System.Collections.Generic.List{RDA.GridDataSource})">
+            <summary>
+             Метод выполняет расчет итоговых сумм в строках-сумматорах шаблона 
+            </summary>
+            <param name="Ds">Источник данных</param>
+            <param name="lstEditableDSColumnsList">Коллекция редактируемых полей источника данных</param>
+            <returns></returns>
+        </member>
+        <member name="F:RDA.AccTransactionManager.DocName">
+            <summary>
+            Код документа
+            </summary>
+        </member>
+        <member name="F:RDA.AccTransactionManager.DocCaption">
+            <summary>
+            Заголовок документа
+            </summary>
+        </member>
+        <member name="F:RDA.AccTransactionManager.dtArchiveView">
+            <summary>
+            Таблица-представление для хранения и обработки архива проводок
+            </summary>
+        </member>
+        <member name="F:RDA.AccTransactionManager.dicAccTranMapper">
+            <summary>
+            Коллекция, определяющая отображение для сопоставления имен полей таблиц шаблона и архива проводок
+            (ключ - имя колонки архива, значение - имя колонки шаблона)
+            </summary>
+        </member>
+        <member name="F:RDA.AccTransactionManager.dopFilter">
+            <summary>
+            Дополнительный фильтр переданый из формы
+            </summary>
+        </member>
+        <member name="F:RDA.AccTransactionManager.docShifr">
+            <summary>
+            Шифр документа
+            </summary>
+        </member>
+        <member name="M:RDA.AccTransactionManager.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Конструктор класса AccTransactionManager
+            </summary>
+        </member>
+        <member name="M:RDA.AccTransactionManager.#ctor(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Конструктор класса AccTransactionManager
+            </summary>
+        </member>
+        <member name="M:RDA.AccTransactionManager.#ctor(System.Int32,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Конструктор класса AccTransactionManager
+            </summary>
+        </member>
+        <member name="M:RDA.AccTransactionManager.DeleteProvodka">
+            <summary>
+            Удаляет все проводки в соответствии с заданым фильтром
+            <para>*Фильтр задается в конструкторе</para>>
+            </summary>
+        </member>
+        <member name="M:RDA.AccTransactionManager.LoadAccTransactionsFromArchive">
+            <summary>
+            Загрузка данных из архива проводок
+            </summary>
+            <param name="road">Код дороги</param>
+            <param name="god">Отчетный год</param>
+            <param name="mes">Отчетный месяц</param>
+            <param name="IDStat">Номер бухгалтерской справки</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.AccTransactionManager.SaveProvodka(System.Data.DataTable,System.String@)">
+            <summary>
+            Сохраняет проводки
+            </summary>
+            <param name="dtAccTranTemplate">Таблица шаблона проводок</param>
+            <param name="_DocShifr">Шифр документа</param>
+        </member>
+        <member name="M:RDA.AccTransactionManager.Save(System.Boolean,System.String@)">
+            <summary>
+            Сохранение данных в БД
+            </summary>
+            <param name="isDrop"></param>
+        </member>
+        <member name="M:RDA.AccTransactionManager.SetMapping(System.String,System.String)">
+            <summary>
+            Метод задает соответствие между указанным полем в таблицах архива и шаблона проводок
+            </summary>
+            <param name="sKey">Название поля в таблице архива проводок</param>
+            <param name="sValue">Название поля в таблице шаблона проводок</param>
+        </member>
+        <member name="M:RDA.AccTransactionManager.Print(System.Data.DataTable,System.String,System.Boolean)">
+            <summary>
+            Печать документа проводок
+            <param name="dtAccTranTemplate">Таблица проводок</param>
+            <param name="periodCaption">Заголовок периода</param>
+            <param name="ShowAllRows">Показывать все строки</param>
+            </summary>
+        </member>
+        <member name="M:RDA.AccTransactionManager.Print(System.Data.DataTable,System.String)">
+            <summary>
+            Печать документа проводок
+            <param name="dtAccTranTemplate">Таблица проводок</param>
+            <param name="periodCaption">Заголовок периода</param>
+            </summary>
+        </member>
+        <member name="M:RDA.AccTransactionManager.ExportToExcel(System.Data.DataTable,System.String,System.Boolean)">
+            <summary>
+            Экспорт документа проводок
+            <param name="dtAccTranTemplate">Таблица проводок</param>
+            <param name="periodCaption">Заголовок периода</param>
+            <param name="ShowAllRows">Показывать все строки</param>
+            </summary>
+        </member>
+        <member name="M:RDA.AccTransactionManager.ExportToExcel(System.Data.DataTable,System.String)">
+            <summary>
+            Экспорт документа проводок
+            <param name="dtAccTranTemplate">Таблица проводок</param>
+            <param name="periodCaption">Заголовок периода</param>
+            </summary>
+        </member>
+        <member name="M:RDA.AccTransactionManager.XlsOut(RDA.XlsOperationType,System.String,System.Boolean)">
+            <summary>
+            Печать или Экспорт проводок
+            </summary>
+            <param name="operType">Тип операции</param>
+            <param name="periodCaption">Текст периода</param>
+            <param name="ShowAllRows">Показывать все строки</param>
+        </member>
+        <member name="M:RDA.AccTransactionManager.isNeedSaveRow(System.Data.DataRow)">
+            <summary>
+            Определяет, нужно ли сохранять строку в БД
+            </summary>
+            <param name="dr">Строка для сохранения</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.AccTransactionManager.GetDocShifr">
+            <summary>
+            Возвращает шифр документа по номеру бух. справки
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.AccTransactionManager.ResetAccTranMapper">
+            <summary>
+            Сброс состояния коллекции dicAccTranMapper в первичное
+            </summary>
+        </member>
+        <member name="M:RDA.AccTransactionManager.InitAccTranMapper">
+            <summary>
+            Инициализация коллекции dicAccTranMapper
+            </summary>
+        </member>
+        <member name="M:RDA.AccTransactionManager.FillAccTransactionsArhive(System.Data.DataTable)">
+            <summary>
+            Сохранение проводок в таблицу БД на основании данных из таблицы dtAccTranTemplate
+            </summary>
+            <param name="dtAccTranTemplate">Таблица шаблона проводок</param>
+        </member>
+        <member name="P:RDA.AccTransactionManager.IsAddNumToContent">
+            <summary>
+            Указывает вставлять ли номер записи перед содержимым при экспорте
+            </summary>
+        </member>
+        <member name="P:RDA.AccTransactionManager.DocShifr">
+            <summary>
+            Шифр документа
+            </summary>
+        </member>
+        <member name="P:RDA.AccTransactionManager.DopFilter">
+            <summary>
+            Дополнительный фильтр переданый из формы
+            </summary>
+        </member>
+        <member name="T:RDA.XlsOperationType">
+            <summary>
+            Тип операции с Excel файлом
+            </summary>
+        </member>
+        <member name="F:RDA.XlsOperationType.Export">
+            <summary>
+            Экспорт в Ексель
+            </summary>
+        </member>
+        <member name="F:RDA.XlsOperationType.Print">
+            <summary>
+            Печать документа
+            </summary>
+        </member>
+        <member name="F:RDA.RespondentDetail.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RDA.RespondentDetail.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RDA.RespondentDetail.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:RDA.RespondentDetail.LoadFromArhives">
+            <summary>
+            Загрузка подписей из архива(NF_DOC_RESP)
+            </summary>
+        </member>
+        <member name="M:RDA.RespondentDetail.GenerateInsertStatement(System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Создание запроов на добавление
+            </summary>
+            <param name="lst">Список в который помещаются запросы</param>
+        </member>
+        <member name="M:RDA.RespondentDetail.DeleteRespondents(System.Boolean)">
+            <summary>
+            Удаление подписей в БД
+            </summary>
+            <param name="isSaveIntoInfo">Нужно ли сохранять подписи в таблицу репликации(InfoUpdSrv)</param>
+        </member>
+        <member name="M:RDA.RespondentDetail.GetCFInfo(System.Int32,System.Boolean)">
+            <summary>
+            Возвращает строки ЦФ № для печати
+            </summary>
+            <param name="idx">индекс возвращаемого значения:
+            <para>           = 0 - для одной строки в виде: ЦФ № {номер} від  {день} {месяц} {год}  року.</para>  
+            <para>           = 1 - для 1-ой  строки в виде: ЦФ № {номер}, </para>
+            <para>           = 2 - для 2-ой  строки в виде: від  {день} {месяц} {год}  року.</para>  </param>
+            <param name="NullDetail">=true - формировать, заменяя отсутствующие даннные подчеркиванием </param>
+            <returns></returns>
+        </member>
+        <member name="P:RDA.RespondentDetail.Caption">
+            <summary>
+            Заголовок панели подписей
+            </summary>
+        </member>
+        <member name="P:RDA.RespondentDetail.AppearanceCaption">
+            <summary>
+            Стилизация заголовка
+            </summary>
+        </member>
+        <member name="P:RDA.RespondentSavePoint.RestoreQuery">
+            <summary>
+            Список запросов для востановления
+            </summary>
+        </member>
+        <member name="F:RDA.LinksController.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RDA.LinksController.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RDA.LinksController.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:RDA.LinksController.InitializeLinks(System.Data.DataSet)">
+            <summary>
+            Инициализация системы проверки увязок
+            </summary>
+            <param name="_Ds">Источник данных</param>
+        </member>
+        <member name="T:DataSave.Context">
+            <summary>
+            Контекст стратегии
+            </summary>
+        </member>
+        <member name="M:DataSave.Context.#ctor(RDA.UpdateDBType,System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Collections.Generic.Dictionary{System.String,System.String},DataSave.GenerateType,RDA.AccTransactionManager)">
+            <summary>
+            Контекст алгоритма для генерации запросов
+            </summary>
+            <param name="type">Тип алгоритма</param>
+            <param name="_dataFilter">Фильтр данных</param>
+            <param name="_mapping">Колекция с мапингом таблиц</param>
+        </member>
+        <member name="M:DataSave.Context.ExecuteStrategy(System.Data.DataTable[])">
+            <summary>
+            Выполнить генерацию запросов
+            </summary>
+            <param name="tables">Список таблиц для обновления</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataSave.Context.ExecuteStrategy(System.String[])">
+            <summary>
+            Выполнить генерацию запросов
+            </summary>
+            <param name="tables">Список имен таблиц для обновления</param>
+            <returns></returns>
+        </member>
+        <member name="M:Network.NetworkClient.SendFile(System.Net.IPEndPoint,Network.NetworkMessage)">
+            <summary>
+            Отправка файла 
+            </summary>
+            <param name="ipEnd">Адресс получателя</param>
+            <param name="msg">Файл</param>
+            <returns></returns>
+        </member>
+        <member name="M:Network.NetworkClient.SendFile(System.String,System.Int32,Network.NetworkMessage)">
+            <summary>
+            Отправка файла 
+            </summary>
+            <param name="ipServ">IP-адресс сервера</param>
+            <param name="port">Порт для приёма данных на сервере</param>
+            <param name="msg">Файл</param>
+            <returns></returns>
+        </member>
+        <member name="M:Network.NetworkClient.SendFile(System.String,Network.NetworkMessage)">
+            <summary>
+            Отправка файла 
+            </summary>
+            <param name="ipServ">IP-адресс сервера</param>
+            <param name="msg">Файл</param>
+            <returns></returns>
+        </member>
+        <member name="T:RDA.FilterControl">
+            <summary>
+            Контроль панели фильтра на форме
+            </summary>
+        </member>
+        <member name="M:RDA.FilterControl.#ctor(DevExpress.XtraBars.BarEditItem,DevExpress.XtraBars.BarEditItem,RDA.FilterControl.FuncDelegate,RDA.FilterControl.SaveFuncDelegate)">
+            <summary>
+            Конструктор класса
+            </summary>
+            <param name="_eMes">Элемент панели месяца</param>
+            <param name="_eGod">Элемент панели года</param>
+            <param name="_SetOkStatus">Функция для установки статуса кнопки ОК</param>
+            <param name="_SaveFunc">Функция сохранения данных</param>
+        </member>
+        <member name="M:RDA.FilterControl.f_ControlFilterChanging(System.Boolean,System.Object,DevExpress.XtraBars.BarEditItem,DevExpress.XtraBars.BarEditItem,System.Boolean,System.Boolean,System.Boolean@)">
+            <summary>
+            Контроль на возможность сохранения данных при изменении фильтра
+            </summary>
+            <param name="bClose">Текст действия при закрытие формы,иначе при смене фильтра</param>
+            <param name="tNewValue">Новое значение поля</param>
+            <param name="bS_Value">Компонент в котором произошло изменение</param>
+            <param name="bE_Value">Второй компонент в котором должно произойти изменение</param>
+            <param name="bView">Флаг указывающий доступность редактирования данных</param>
+            <param name="bUpdate">Флаг указывающий были ли изменения</param>
+            <param name="bTag">Блокировка повторного вызова события EditValueChanging</param>
+            <returns></returns>
+        </member>
+        <member name="F:RDA.DataManager.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RDA.DataManager.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RDA.DataManager.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:RDA.DataManager.CallManager">
+            <summary>
+            Вызов на экран формы менеджера
+            </summary>
+        </member>
+        <member name="T:RDA.RespondentType">
+            <summary>
+            Тип респондента
+            </summary>
+        </member>
+        <member name="F:RDA.RespondentType.Responsible1">
+            <summary>
+            Первый ответственный
+            </summary>
+        </member>
+        <member name="F:RDA.RespondentType.Responsible2">
+            <summary>
+            Второй ответственный
+            </summary>
+        </member>
+        <member name="F:RDA.RespondentType.Performer">
+            <summary>
+            Исполнитель
+            </summary>
+        </member>
+        <member name="F:RDA.RespondentType.Recipient">
+            <summary>
+            Кому направлен документ
+            </summary>
+        </member>
+        <member name="T:RDA.RespondentColumn">
+            <summary>
+            Список колонок подписей
+            </summary>
+        </member>
+        <member name="F:RDA.RespondentColumn.Post">
+            <summary>
+            Должность (POSADA)
+            </summary>
+        </member>
+        <member name="F:RDA.RespondentColumn.FIO">
+            <summary>
+            Инициалы
+            </summary>
+        </member>
+        <member name="F:RDA.RespondentColumn.Department">
+            <summary>
+            Код отдела
+            </summary>
+        </member>
+        <member name="F:RDA.RespondentColumn.Phone">
+            <summary>
+            Телефон
+            </summary>
+        </member>
+        <member name="F:RDA.RespondentColumn.Position">
+            <summary>
+            Порядковый номер(внутри отдела)
+            </summary>
+        </member>
+        <member name="F:RDA.RespondentColumn.PZ">
+            <summary>
+            Тип подписчика
+            </summary>
+        </member>
+        <member name="F:RDA.RespondentColumn.DepartmentName">
+            <summary>
+            Название отдела
+            </summary>
+        </member>
+        <member name="T:RDA.PadType">
+            <summary>
+            Тип заполнения значения
+            </summary>
+        </member>
+        <member name="F:RDA.PadType.Left">
+            <summary>
+            С левой стороны(PadLeft)
+            </summary>
+        </member>
+        <member name="F:RDA.PadType.Right">
+            <summary>
+            С правой стороны(PadRight)
+            </summary>
+        </member>
+        <member name="F:RDA.PadType.None">
+            <summary>
+            Не выполнять заполнение
+            </summary>
+        </member>
+        <member name="T:RDA.SignatureType">
+            <summary>
+            Перечисление доступных компонентов
+            </summary>
+        </member>
+        <member name="F:RDA.SignatureType.Respondents">
+            <summary>
+            Подписи под документом
+            </summary>
+        </member>
+        <member name="F:RDA.SignatureType.Recipient">
+            <summary>
+            Подпись "Кому направлен" документ
+            </summary>
+        </member>
+        <member name="F:RDA.SignatureType.Doc_Detail">
+            <summary>
+            Детали документа, № ЦФ и дата
+            </summary>
+        </member>
+        <member name="T:RDA.DetailColumn">
+            <summary>
+            Список колонок для деталей документа
+            </summary>
+        </member>
+        <member name="F:RDA.DetailColumn.DocNum">
+            <summary>
+            Номер документа
+            </summary>
+        </member>
+        <member name="F:RDA.DetailColumn.Day">
+            <summary>
+            Выбранный день
+            </summary>
+        </member>
+        <member name="F:RDA.DetailColumn.Month">
+            <summary>
+            Выбранный месяц
+            </summary>
+        </member>
+        <member name="F:RDA.DetailColumn.Year">
+            <summary>
+            Выбранный год
+            </summary>
+        </member>
+        <member name="F:RDA.DetailColumn.FullDate">
+            <summary>
+            Выбранная дата
+            </summary>
+        </member>
+        <member name="T:RDA.EventAction">
+            <summary>
+            Тип действия над обработчиком собітия
+            </summary>
+        </member>
+        <member name="F:RDA.EventAction.Add">
+            <summary>
+            Добавить обработчик
+            </summary>
+        </member>
+        <member name="F:RDA.EventAction.Remove">
+            <summary>
+            Удалить обработчик
+            </summary>
+        </member>
+        <member name="T:RDA.ManagerElementsDesignation">
+            <summary>
+            Список доступных типов Элементов в менеджере
+            </summary>
+        </member>
+        <member name="F:RDA.ManagerElementsDesignation.ExcelExport">
+            <summary>
+            Экспорт документа в Excel файл
+            </summary>
+        </member>
+        <member name="F:RDA.ManagerElementsDesignation.ExcelImport">
+            <summary>
+            Импорт документа из Excel файла
+            </summary>
+        </member>
+        <member name="F:RDA.ManagerElementsDesignation.DBImport">
+            <summary>
+            Формирование документа из БД
+            </summary>
+        </member>
+        <member name="F:RDA.ManagerElementsDesignation.FileImport">
+            <summary>
+            Импорт из файла
+            </summary>
+        </member>
+        <member name="F:RDA.ManagerElementsDesignation.Print">
+            <summary>
+            Печать документа
+            </summary>
+        </member>
+        <member name="T:RDA.UpdateDBType">
+            <summary>
+            Тип обновления
+            </summary>
+        </member>
+        <member name="F:RDA.UpdateDBType.Recreate">
+            <summary>
+            Пересоздать записи
+            </summary>
+        </member>
+        <member name="F:RDA.UpdateDBType.Update">
+            <summary>
+            Обновить записи опираясь на ROWID
+            </summary>
+        </member>
+        <member name="F:RDA.UpdateDBType.UserTypeUpdate">
+            <summary>
+            Обновление по пользовательскому ключу и выставленому типу запросов
+            </summary>
+        </member>
+        <member name="F:RDA.UpdateDBType.AccTransactionUpdate">
+            <summary>
+            Сохранение проводок
+            </summary>
+        </member>
+        <member name="F:RDA.UpdateDBType.DBStructureModification">
+            <summary>
+            Изменение структуры
+            </summary>
+        </member>
+        <member name="F:Wait.frmWait.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Wait.frmWait.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Wait.frmWait.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Wait.WaitCursor">
+            <summary>
+            Класс для вывода окна ожидания. Вызывается в блоках где происходит длительная обработка. 
+            <para>Например сохранение, удаление, загрузка, расчет даных, експорт, импорт, печать</para>
+            <para>Пример вызова:</para>>
+            <para>В начале блока обработки вызвать метод Wait.WaitCursor.ShowWait(); для отображения формы на экране</para>>
+            <para>В конце блока обработки вызвать метод Wait.WaitCursor.HideWait(); для скрытия формы ожидания</para>
+            </summary>
+        </member>
+        <member name="M:Wait.WaitCursor.ShowWait(System.String)">
+            <summary>
+            Отобразить окно на экране.
+            </summary>
+            <param name="lCation">Надпись на форме.</param>
+            <param name="frmPos">Положение формы на экране</param>>
+        </member>
+        <member name="T:DataSave.Strategy">
+            <summary>
+            Стратегия сохранения данных
+            </summary>
+        </member>
+        <member name="M:DataSave.Strategy.Execute(System.Data.DataTable[])">
+            <summary>
+            Выполнить генерацию команд
+            </summary>
+            <param name="tables">Список таблиц для генерации</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataSave.Strategy.Execute(System.String[])">
+            <summary>
+            Выполнить генерацию команд
+            </summary>
+            <param name="tables">Список имен таблиц для генерации</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataSave.Strategy.GetUpdateSequence(System.Data.DataColumnCollection,System.Data.DataRow)">
+            <summary>
+            Получить последовательность на обновления записей по формату: колонка=значение
+            </summary>
+            <param name="columns">Список колонок</param>
+            <param name="dr">Список значений</param>
+            <returns></returns>s
+        </member>
+        <member name="M:DataSave.DBStructureModificationStrategy.#ctor(DataSave.Context)">
+            <summary>
+            Инициализация параметров
+            </summary>
+        </member>
+        <member name="M:DataSave.DBStructureModificationStrategy.GenerateTableCreatingCommands(System.String[])">
+            <summary>
+            Создает запросы для на создание таблиц
+            </summary>
+            <param name="_tables">Список таблиц</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataSave.DBStructureModificationStrategy.GenerateCreateTableCommand(System.String,CoreLab.Oracle.SmartOracleCommand)">
+            <summary>
+            Генерация комманды на создание таблицы
+            </summary>
+            <param name="_table">Имя таблицы</param>
+            <param name="oraCmd">Екземпля класа для чтения записей с БД</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataSave.DBStructureModificationStrategy.CreateColumnsDefinitionCommands(CoreLab.Oracle.SmartOracleCommand,System.String,System.Text.StringBuilder)">
+            <summary>
+            формирует структуру параметров колонок для запроса к базе
+            </summary>
+            <param name="stb"></param>
+            <param name="_table">Имя таблицы</param>
+            <param name="oraRead">Экземпля класа для чтения записей с БД</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataSave.DBStructureModificationStrategy.GenerateCreateTableCommentCommand(System.String,CoreLab.Oracle.SmartOracleCommand)">
+            <summary>
+            Создает комманды для добавления коментария к таблице
+            </summary>
+            <param name="_table">Имя таблицы</param>
+            <param name="oraCom">Экземпля класа для чтения записей с БД</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataSave.DBStructureModificationStrategy.GenerateCreateColumnsCommentCommand(System.String,System.Collections.Generic.List{System.String},CoreLab.Oracle.SmartOracleCommand)">
+            <summary>
+            Добавляет команды для создания коментариев к колонкам
+            </summary>
+            <param name="_table">Имя таблицы</param>
+            <param name="SqlCmd">Список содержащий команды для создания таблицы</param>
+            <param name="oraCom">Экземпля класа для чтения записей с БД</param>
+        </member>
+        <member name="F:RDA.ManagerMainWindow.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RDA.ManagerMainWindow.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RDA.ManagerMainWindow.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Respondent.Resp">
+            <summary>
+            Набор методов для работы с подписями документа
+            </summary>
+        </member>
+        <member name="F:Respondent.Resp.isSignExist">
+            <summary>
+            Указывает есть ли хотя бы одна подпись по выбраному фильтру
+            </summary>
+        </member>
+        <member name="T:System.UserAction">
+            <summary>
+            Список возможных действий пользователя
+            </summary>
+        </member>
+        <member name="T:System.RDLog">
+            <summary>
+            Журнал событий системы АС РОДУЗ
+            </summary>
+        </member>
+        <member name="M:System.RDLog.WriteLog(System.Int32,System.String,System.UserAction,System.ActionSatus,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Создать запись в журнале событий
+            </summary>
+            <param name="RoadServ">Код дороги на которой работает система</param>
+            <param name="frmName">Имя формы которая мониторится</param>
+            <param name="uAction">Действие пользователя на форме</param>
+            <param name="stat">Результат выполнения действия</param>
+            <param name="uID">Идентификатор пользователя</param>
+            <param name="Road">Выбраная в форме дорога</param>
+            <param name="sGod">Отчетный год</param>
+            <param name="sMes">Отчетный месяц</param>
+            <param name="sqlText">Текст запроса к БД</param>
+            <param name="Additional">МногА полезного</param>
+        </member>
+        <member name="M:System.RDLog.WriteLog(System.Int32,System.String,System.UserAction,System.ActionSatus,System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Создать запись в журнале событий
+            </summary>
+            <param name="RoadServ">Код дороги на которой работает система</param>
+            <param name="frmName">Имя формы которая мониторится</param>
+            <param name="uAction">Действие пользователя на форме</param>
+            <param name="stat">Результат выполнения действия</param>
+            <param name="uID">Идентификатор пользователя</param>
+            <param name="Road">Выбраная в форме дорога</param>
+            <param name="sGod">Отчетный год</param>
+            <param name="sMes">Отчетный месяц</param>
+            <param name="Additional">МногА полезного</param>
+        </member>
+        <member name="M:RDA.Recipient.InitializeRespondents">
+            <summary>
+            Инициализация(перечитка) подписей при изменении дороги
+            </summary>
+        </member>
+        <member name="M:RDA.Recipient.LoadFromArhives">
+            <summary>
+            Загрузка подписей из архива(NF_DOC_RESP)
+            </summary>
+        </member>
+        <member name="M:RDA.Recipient.GenerateInsertStatement(System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Создание запроов на добавление
+            </summary>
+            <param name="lst">Список в который помещаются запросы</param>
+        </member>
+        <member name="M:RDA.Recipient.DeleteRespondents(System.Boolean)">
+            <summary>
+            Удаление подписей в БД
+            </summary>
+            <param name="isSaveIntoInfo">Нужно ли сохранять подписи в таблицу репликации(InfoUpdSrv)</param>
+        </member>
+        <member name="M:RDA.Recipient.GetRespondentValue(RDA.RespondentType,RDA.RespondentColumn)">
+            <summary>
+            Выбрать значение из таблицы подписей
+            </summary>
+            <param name="_type">Тип респондента</param>
+            <param name="_col">Колонка</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.Recipient.ClearRepository">
+            <summary>
+            Очистка репозиториев формы
+            </summary>
+        </member>
+        <member name="F:RDA.Recipient.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RDA.Recipient.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RDA.Recipient.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:RDA.Recipient.Caption">
+            <summary>
+            Заголовок панели подписей
+            </summary>
+        </member>
+        <member name="P:RDA.Recipient.AppearanceCaption">
+            <summary>
+            Стилизация заголовка
+            </summary>
+        </member>
+        <member name="P:RDA.Recipient.CaptionVisiblity">
+            <summary>
+            Указывает, отображается ли заголовок панели подписей
+            </summary>
+        </member>
+        <member name="M:Network.NetworkMessage.#ctor(Network.ActionType,System.Object)">
+            <summary>
+            Сообщение отправляемое серверу
+            </summary>
+            <param name="_size">Размер файла</param>
+            <param name="_name">Имя файла</param>
+            <param name="_data">Данные файла</param>
+        </member>
+        <member name="P:Network.NetworkMessage.MessageData">
+            <summary>
+            Данные
+            </summary>
+        </member>
+        <member name="P:Network.NetworkMessage.ServerResponce">
+            <summary>
+            Ответ сервера
+            </summary>
+        </member>
+        <member name="P:Network.NetworkMessage.ActType">
+            <summary>
+            Тип действия
+            </summary>
+        </member>
+        <member name="P:Network.NetworkMessage.IdInfo">
+            <summary>
+            Информация о сообщении для идентификации (ROWID для ответа)
+            </summary>
+        </member>
+        <member name="T:Network.ActionType">
+            <summary>
+            Тип действия при передачи
+            </summary>
+        </member>
+        <member name="M:System.frmDocSumLink.GetInstance">
+            <summary>
+            Реализация сингельтона, для создания одного и только одного экземпляра класа
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:System.frmDocSumLink.p_SetValues(System.String,System.String,System.String,System.LinksProperty)">
+            <summary>
+            Установка основных значений
+            </summary>
+            <param name="caption">Заголовок формы</param>
+            <param name="period">Текст на вывод периода</param>
+            <param name="txt">Основной текст</param>
+            <param name="_dt">Таблица дерева увязок</param>
+        </member>
+        <member name="F:System.frmDocSumLink.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:System.frmDocSumLink.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:System.frmDocSumLink.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:System.FormLinks">
+            <summary>
+            Расчет и вывод увязок
+            </summary>
+        </member>
+        <member name="M:System.FormLinks.Show(System.String,System.Int32,System.Int32,System.Int32,System.Data.DataSet,System.String)">
+            <summary>
+            Показать дерево увязок входных документов
+            </summary>
+            <param name="oraCon">Соединение с БД</param>
+            <param name="doc">Код документа для которого расчитываются увязки или "*" для всех документов</param>
+            <param name="year">Отчетный год</param>
+            <param name="mes">Отчетный месяц</param>
+        </member>
+        <member name="M:System.FormLinks.Show(System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.Data.DataSet,System.String)">
+            <summary>
+            Показать дерево увязок входных документов
+            </summary>
+            <param name="oraCon">Соединение с БД</param>
+            <param name="doc">Код документа для которого расчитываются увязки или "*" для всех документов</param>
+            <param name="year">Отчетный год</param>
+            <param name="mes">Отчетный месяц</param>
+        </member>
+        <member name="M:System.FormLinks.Show(System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.Int32,System.Data.DataSet,System.String)">
+            <summary>
+            Показать дерево увязок входных документов
+            </summary>
+            <param name="oraCon">Соединение с БД</param>
+            <param name="doc">Код документа для которого расчитываются увязки или "*" для всех документов</param>
+            <param name="year">Отчетный год</param>
+            <param name="mes">Отчетный месяц</param>
+            <param name="isActiveFilter">Нужно ли активировать панель фильтра</param>
+        </member>
+        <member name="M:System.FormLinks.Show(System.String,System.Int32,System.Int32,System.Int32,System.String,System.String,System.String,System.Boolean,System.Int32,System.Data.DataSet,System.String)">
+            <summary>
+            Показать дерево увязок документов
+            </summary>
+            <param name="oraCon">Соединение с БД</param>
+            <param name="doc">Код документа для которого расчитываются увязки или * для всех документов</param>
+            <param name="year">Отчетный год</param>
+            <param name="mes">Отчетный месяц</param>
+            <param name="caption">Заголовок формы</param>
+            <param name="period">Текст на вывод периода</param>
+            <param name="txt">Основной текст</param>
+            <param name="isActiveFilter">Нужно ли активировать панель фильтра</param>
+        </member>
+        <member name="M:System.FormLinks.ComputeLinks(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Расчет увязок
+            </summary>
+            <param name="oraCon">Соединение с БД</param>
+            <param name="Doc">Код документа для которого расчитываются увязки или "*" для всех документов</param>
+            <param name="year">Отчетный год</param>
+            <param name="mes">Отчетный месяц</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.FormLinks.ComputeLinks(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Расчет увязок
+            </summary>
+            <param name="oraCon">Соединение с БД</param>
+            <param name="Doc">Код документа для которого расчитываются увязки или "*" для всех документов</param>
+            <param name="year">Отчетный год</param>
+            <param name="mes">Отчетный месяц</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.FormLinks.ComputeLinks(System.LinksProperty)">
+            <summary>
+            Расчет увязок
+            </summary>
+            <param name="oraCon">Соединение с БД</param>
+            <param name="Doc">Код документа для которого расчитываются увязки или "*" для всех документов</param>
+            <param name="year">Отчетный год</param>
+            <param name="mes">Отчетный месяц</param>
+            <returns></returns>
+        </member>
+        <member name="T:System.LinksProperty">
+            <summary>
+            Структура содержащая параметры расчета увязок
+            </summary>
+        </member>
+        <member name="T:RDA.RDSecurity">
+            <summary>
+            Шифрование и Хеширование в АС РОДУЗ НФ
+            </summary>
+        </member>
+        <member name="M:RDA.RDSecurity.f_ComputeHash(System.String)">
+            <summary>
+            Расчет Хеш-суммы для файла
+            </summary>
+            <param name="fileName">Имя файла</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDSecurity.f_ComputeHash(System.Byte[])">
+            <summary>
+            Расчет Хеш-суммы
+            </summary>
+            <param name="buffer">Значение для которого считать сумму</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDSecurity.GetNewID">
+            <summary>
+            Возвращает ID для новой записи, используя последовательность (Id_Rd_Ac) в БД
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.LinksResult.ClearColumnList">
+            <summary>
+            Очищает список колонок
+            </summary>
+        </member>
+        <member name="M:RDA.LinksResult.AddColumn(System.String,System.String,System.String)">
+            <summary>
+            Добавляет колонку в список
+            </summary>
+            <param name="colName">Имя колонки</param>
+        </member>
+        <member name="P:RDA.LinksResult.CellColor">
+            <summary>
+            Цвет ячейки
+            </summary>
+        </member>
+        <member name="P:RDA.LinksResult.isLinkOK">
+            <summary>
+            Статус расчета (сошлась/несошлась) увязки
+            </summary>
+        </member>
+        <member name="P:RDA.LinksResult.ColumnsAndFilters">
+            <summary>
+            Колонки увязки
+            </summary>
+        </member>
+        <member name="T:DataSave.TableSeparatorMapper">
+            <summary>
+            Разделитель таблицы на несколько таблиц в БД
+            </summary>
+        </member>
+        <member name="P:DataSave.TableSeparatorMapper.SourceTableName">
+            <summary>
+            Имя исходной таблицы
+            </summary>
+        </member>
+        <member name="P:DataSave.TableSeparatorMapper.TableSeparator">
+            <summary>
+            Пара Ключ/Значение в котором указывается имя выходной таблицы и колонки относящиеся к ней
+            </summary>
+        </member>
+        <member name="T:DataSave.RecreateDataStrategy">
+            <summary>
+            Стратегия сохранение при которой все записи пересоздаются
+            </summary>
+        </member>
+        <member name="M:DataSave.RecreateDataStrategy.Execute(System.Data.DataTable[])">
+            <summary>
+            Выполнить генерацию команд
+            </summary>
+            <param name="tables">Список таблиц для генерации</param>
+            <returns></returns>
+        </member>
+        <member name="F:RDA.ImportForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RDA.ImportForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RDA.ImportForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:RDA.BaseForEdit">
+            <summary>
+            Базовый класс бля контролов
+            </summary>
+        </member>
+        <member name="T:RDA.EditItem">
+            <summary>
+            Контрол вне панелей
+            </summary>
+        </member>
+        <member name="T:RDA.BarItem">
+            <summary>
+            Контрол на панели
+            </summary>
+        </member>
+        <member name="M:Network.NetworkServer.BeginWaitForConnections">
+            <summary>
+            Установка сервера в режим ожидания соединений
+            </summary>
+        </member>
+        <member name="M:Network.NetworkServer.ConnectionAccepted(System.IAsyncResult)">
+            <summary>
+            Принятие входящего соединения
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:Network.NetworkServer.ReceiveProcessDataAndSendReplay(System.Net.Sockets.Socket)">
+            <summary>
+            Получение, обработка и отправка ответа клинту
+            </summary>
+            <param name="Serv">Сокет для передачи данных</param>
+        </member>
+        <member name="M:Network.NetworkServer.ReceiveAndProcessData(System.Net.Sockets.Socket)">
+            <summary>
+            Получение и обработка данных
+            </summary>
+            <param name="Serv"></param>
+        </member>
+        <member name="M:Network.NetworkServer.ProcessData(Network.NetworkMessage)">
+            <summary>
+            Обработка данных
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:Network.NetworkServer.StartServer(System.Int32)">
+            <summary>
+            Запуск сервера
+            </summary>
+            <param name="_port">Порт для соединений</param>
+        </member>
+        <member name="M:Network.NetworkServer.StartServer">
+            <summary>
+            Запуск сервера (Port= 9000)
+            </summary>
+        </member>
+        <member name="M:Network.NetworkServer.StopServer">
+            <summary>
+            Остановка сервера
+            </summary>
+        </member>
+        <member name="P:Network.NetworkServer.Port">
+            <summary>
+            Порт прослушки
+            </summary>
+        </member>
+        <member name="T:RDA.IDGenerator">
+            <summary>
+            Класс управления идентификаторами проводок
+            </summary>
+        </member>
+        <member name="M:RDA.IDGenerator.GetKeyPrefix(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Возвращает часть ключа без ID
+            </summary>
+            <param name="_road">Код дороги</param>
+            <param name="_god">Отчетный год</param>
+            <param name="_mes">Отчетный месяц</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.IDGenerator.LoadIDList">
+            <summary>
+            Загружаем список доступных идентификаторов
+            </summary>
+        </member>
+        <member name="M:RDA.IDGenerator.GenerateProvID">
+            <summary>
+            Возвращает следующий свободный идентификатор
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.IDGenerator.GetNextID">
+            <summary>
+            Определяет следующий свободный ID и заносит его в список как используемый
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:RDA.IDGenerator.CurrentID">
+            <summary>
+            Текущий порядковый номер
+            </summary>
+        </member>
+        <member name="T:Office.ExtraExcelTools">
+            <summary>
+            Дополнительные методы связаные с Ексель документами
+            </summary>
+        </member>
+        <member name="M:Office.ExtraExcelTools.ViewToXls(DevExpress.XtraGrid.Views.BandedGrid.BandedGridView,Office.Excel,System.Int32,System.Int32,System.String[],System.String[])">
+            <summary>
+            p_ViewToXls - запись данных из  advBandedGridView*(ExlView) в  Excel_документ 
+            </summary> 
+            <param name="ExlView">экземпляр класса ...BandedGridView*</param>
+            <param name="sJ">стартовый номер строки в Excel</param>
+            <param name="vJ">номер строки ВСЕГО в Excel, при vJ = -1  -нет строки ВСЕГО</param>
+            <param name="nGrN">массив имен граф в гриде</param>
+            <param name="nExl">массив имен колонок в Excel для соответствующих граф грида</param>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.GenerateDeleteStatement(System.Collections.Generic.List{System.String},System.Boolean)">
+            <summary>
+            Генерация комманд на удаление проводок
+            </summary>
+            <param name="Query">Список комманд</param>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.GetProvIDList(System.Boolean)">
+            <summary>
+            Возвращает список идентификаторов проводок разделенных запятой.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.GetProvIDListExtractedFromDB(System.Boolean,System.Text.StringBuilder)">
+            <summary>
+            Возвращает список идентификаторов проводок из БД
+            </summary>
+            <param name="isDropProv">Указывает удаляются ли проводки</param>
+            <param name="stb">Строитель строки для построения списка</param>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.GetProvIDListFromLocalSource(System.Text.StringBuilder)">
+            <summary>
+            Возвращает список идентификаторов проводок из локального источника
+            </summary>
+            <param name="stb">Строитель строки для построения списка</param>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.GenerateInsertStatement(System.Collections.Generic.List{System.String})">
+            <summary>
+            Генерация комманд на добавление проводок
+            </summary>
+            <param name="Query">Список комманд</param>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.GetColumnsFilter(System.String[])">
+            <summary>
+            Устанавливает фильтр по колонкам
+            </summary>
+            <param name="columns">Список колонок</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.GetNFProvodkiInsertStatement(System.Data.DataRow,System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            Создает запрос на вставку строку в таблицу NF_PROVODKI 
+            </summary>
+            <param name="dr">Строка с данными</param>
+            <param name="Query">Список запросов</param>
+            <param name="columnList">Список используемых колонок</param>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.GetAvisoInsertStatement(System.Data.DataRow,System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            Создает запрос на вставку строку в таблицу R_PROVAVISO
+            </summary>
+            <param name="dr">Строка с данными</param>
+            <param name="Query">Список запросов</param>
+            <param name="columnList">Список используемых колонок</param>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.GetContentInsertStatement(System.Data.DataRow,System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            Создает запрос на вставку строку в таблицу R_PROVCONTENT
+            </summary>
+            <param name="dr">Строка с данными</param>
+            <param name="Query">Список запросов</param>
+            <param name="columnList">Список используемых колонок</param>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.GetSpecialInfoInsertStatement(System.Data.DataRow,System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            Создает запрос на вставку строку в таблицу R_PROVSPECIALINFO
+            </summary>
+            <param name="dr">Строка с данными</param>
+            <param name="Query">Список запросов</param>
+            <param name="columnList">Список используемых колонок</param>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.GetAvisoDirectedInsertStatement(System.Data.DataRow,System.Collections.Generic.List{System.String})">
+            <summary>
+            Создает запрос на вставку строку в таблицу R_PROVAVISOPDKLIST
+            </summary>
+            <param name="dr">Строка с данными</param>
+            <param name="Query">Список запросов</param>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.GetAvisoCopyInsertStatement(System.Data.DataRow,System.Collections.Generic.List{System.String})">
+            <summary>
+            Создает запрос на вставку строку в таблицу R_PROVAVISOPDKLIST
+            </summary>
+            <param name="dr">Строка с данными</param>
+            <param name="Query">Список запросов</param>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.isNeedSaveRow(System.Data.DataRow)">
+            <summary>
+            Определяет, нужно ли сохранять строку в БД
+            </summary>
+            <param name="dr">Строка для сохранения</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.isNeedSaveInto(System.String,System.Data.DataRow)">
+            <summary>
+            Определяет, нужно ли сохранять данные в определенную таблицу
+            </summary>
+            <param name="table">Имя таблицы</param>
+            <param name="dr">Строка архива</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.CreateProperAccTable(System.Data.DataTable)">
+            <summary>
+            Создает таблицу проводок на основе исходной таблицы
+            </summary>
+            <param name="dtAccTemplate">Исходная таблица</param>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.BindDataFromSourceRow(System.Data.DataRow,System.Data.DataRow)">
+            <summary>
+            Переливыет данные из одной строки в другую, проверяя наличие колонки
+            </summary>
+            <param name="dataRow">Исходная строка</param>
+            <param name="drNew">Новая строка</param>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.GetDataRowFieldValue(System.Data.DataRow,System.String)">
+            <summary>
+            Возвращает значение ячейки, проверяя статус строки
+            </summary>
+            <param name="dr">Строка</param>
+            <param name="field">Имя поля</param>
+            <returns></returns>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.AddNecessaryData(RDA.IDGenerator,System.String,System.Data.DataRow,System.Data.DataRow)">
+            <summary>
+            Добавляет необходимые данные в новую строку
+            </summary>
+            <param name="idgen">Генератор идентификаторов</param>
+            <param name="IPUser">IP пользователя</param>
+            <param name="dataRow">Исходная строка</param>
+            <param name="drNew">Новая строка</param>
+        </member>
+        <member name="M:DataSave.AccTransactionSaveStrategy.SetRowState(System.Data.DataRow,System.Data.DataRow)">
+            <summary>
+            Устанавливает статус новой строки в соответствии с исходным
+            </summary>
+            <param name="dataRow">Исходная строка</param>
+            <param name="drNew">Новая строка</param>
+        </member>
+        <member name="M:RoduzForms.Data.FilterData.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the Period structure.
+            </summary>
+            <param name="_road"></param>
+            <param name="_year"></param>
+            <param name="_month"></param>
+        </member>
+        <member name="M:RoduzForms.Data.FilterData.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the Period structure.
+            </summary>
+            <param name="_road"></param>
+            <param name="_sYear"></param>
+            <param name="_sMonth"></param>
+            <param name="_eYear"></param>
+            <param name="_eMonth"></param>
+        </member>
+        <member name="M:Network.ManualReplicationMessage.#ctor(Network.ManualReplicationType,System.Int32,System.Int32,System.Int32,System.String[])">
+            <summary>
+            Создание экземпляра
+            </summary>
+            <param name="manualReplicationType">Тип обновления</param>
+            <param name="_road">Дорога</param>
+            <param name="_year">Отчетный год</param>
+            <param name="_month">Отчетный месяц</param>
+            <param name="_docs">Список документов для репликации</param>
+        </member>
+        <member name="M:Network.ManualReplicationMessage.#ctor(Network.ManualReplicationType)">
+            <summary>
+            Создание экземпляра
+            </summary>
+            <param name="manualReplicationType">Тип обновления</param>
+        </member>
+        <member name="P:Network.ManualReplicationMessage.Road">
+            <summary>
+            Дорога
+            </summary>
+        </member>
+        <member name="P:Network.ManualReplicationMessage.Year">
+            <summary>
+            Отчетный год
+            </summary>
+        </member>
+        <member name="P:Network.ManualReplicationMessage.Month">
+            <summary>
+            Отчетный месяц
+            </summary>
+        </member>
+        <member name="P:Network.ManualReplicationMessage.Docs">
+            <summary>
+            Список документов для репликации
+            </summary>
+        </member>
+        <member name="P:Network.ManualReplicationMessage.Type">
+            <summary>
+            Тип обновления
+            </summary>
+        </member>
+        <member name="T:ERR.ErrorImages">
+            <summary>
+            Перечисление достуных изображений для формы ошибок
+            </summary>
+        </member>
+        <member name="F:ERR.ErrorImages.CryticalError">
+            <summary>
+            Критическая ошибка
+            </summary>
+        </member>
+        <member name="F:ERR.ErrorImages.AccError">
+            <summary>
+            Ошибка доступа (кирпичь)
+            </summary>
+        </member>
+        <member name="F:ERR.ErrorImages.Question">
+            <summary>
+            Вопрос
+            </summary>
+        </member>
+        <member name="F:ERR.ErrorImages.Information">
+            <summary>
+            Информациооное окно(значок "i")
+            </summary>
+        </member>
+        <member name="F:ERR.ErrorImages.Examplemation">
+            <summary>
+            Внимание (Восклицательный знак)
+            </summary>
+        </member>
+        <member name="F:ERR.ErrorImages.Stop">
+            <summary>
+            Стоп (рука в ромбе)
+            </summary>
+        </member>
+        <member name="F:ERR.ErrorImages.Apply_OK">
+            <summary>
+            Успешно/Применить (значок галочка)
+            </summary>
+        </member>
+        <member name="F:ERR.ErrorImages.Find">
+            <summary>
+            Поиск
+            </summary>
+        </member>
+        <member name="F:ERR.ErrorImages.Engineering">
+            <summary>
+            Системные действия (инструменты)
+            </summary>
+        </member>
+        <member name="F:ERR.ErrorImages.Lock">
+            <summary>
+            Блокирование (замок)
+            </summary>
+        </member>
+        <member name="T:ERR.Error">
+            <summary>
+            Информационное окно для вывода сообщений пользователю
+            </summary>
+        </member>
+        <member name="F:ERR.Error.sImgPath">
+            <summary>
+            Путь к директории в которой находятся изображения
+            </summary>
+        </member>
+        <member name="F:ERR.Error.frmMinHeight">
+            <summary>
+            Минимальная высота окна
+            </summary>
+        </member>
+        <member name="F:ERR.Error.frmHeight">
+            <summary>
+            Расчитаная в зависимости от размера текста высота окна
+            </summary>
+        </member>
+        <member name="F:ERR.Error.frmExpShift">
+            <summary>
+            Смещение высоты окна для отображения подробностей
+            </summary>
+        </member>
+        <member name="F:ERR.Error.bisExpand">
+            <summary>
+            Флаг, указывающий состояние отображения подробностей
+            </summary>
+        </member>
+        <member name="M:ERR.Error.f_GetImage(System.Int32)">
+            <summary>
+            Возвращает картинку с диска
+            </summary>
+            <param name="img">Код картинки</param>
+            <returns></returns>
+        </member>
+        <member name="M:ERR.Error.#ctor(System.String,ERR.ErrorImages,System.String,System.String,System.Int32)">
+            <summary>
+            Конструктор формы
+            </summary>
+            <param name="errCap">Заголовок формы</param>
+            <param name="img">Изображение</param>
+            <param name="sErrText">Текст сообщения</param>
+            <param name="sErrMore">дополнительная информация</param>
+            <param name="btnCnt">Количество кнопок</param>
+        </member>
+        <member name="M:ERR.Error.sB_More_Click(System.Object,System.EventArgs)">
+            <summary>
+            Реакция по нажатию кнопки Подробности
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:ERR.Error.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ERR.Error.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ERR.Error.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:DataSave.UpdateDataStrategy">
+            <summary>
+            Стратегия нормального сохранения записей, требующая наличия поля ROWID
+            </summary>
+        </member>
+        <member name="M:DataSave.UpdateDataStrategy.Execute(System.Data.DataTable[])">
+            <summary>
+            Выполнить генерацию команд
+            </summary>
+            <param name="tables">Список таблиц для генерации</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.ACProperty.GetMenuTableName">
+            <summary>
+            Возвращает имя таблицы меню в зависимости от системы с которой вошол пользователь
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.ExcelImportEventArgs.GetExcelData(System.String)">
+            <summary>
+            Возвращает результат віборки из Excel файла (операция Импорт)
+            </summary>
+            <param name="SqlQuery">Запрос на выборку данных</param>
+            <returns></returns>
+        </member>
+        <member name="P:RDA.ExcelImportEventArgs.SourceFieldName">
+            <summary>
+            Имя исходного Excel-документа
+            </summary>
+        </member>
+        <member name="M:RDA.FileImportEventArgs.GetData(System.String[])">
+            <summary>
+            Возвращает данные из файла
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:CoolDraw.CoolRowStatusDraw.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CoolDraw.CoolRowStatusDraw.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CoolDraw.CoolRowStatusDraw.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Helpers.CommonFunctions.GetIDTable(System.String)">
+            <summary>
+            Возвращаєт код таблицы из LIST_TABLE_AC
+            </summary>
+            <param name="tableName">Имя таблицы</param>
+        </member>
+        <member name="T:Helpers.PeriodDataLoadHelper">
+            <summary>
+            Загрузка списка месяцев и списка дорог
+            </summary>
+        </member>
+        <member name="M:Notifications.NotificationBox.#ctor(System.String,Notifications.NotificationBoxImages,System.String,System.String,Notifications.NotificationBoxButtons)">
+            <summary>
+            Конструктор формы
+            </summary>
+            <param name="caption">Заголовок формы</param>
+            <param name="image">Изображение</param>
+            <param name="content">Текст сообщения</param>
+            <param name="advancedInfo">дополнительная информация</param>
+            <param name="btnCnt">Количество кнопок</param>
+        </member>
+        <member name="T:Notifications.NotificationBoxImages">
+            <summary>
+            Перечисление достуных изображений для формы ошибок
+            </summary>
+        </member>
+        <member name="F:Notifications.NotificationBoxImages.CryticalError">
+            <summary>
+            Критическая ошибка
+            </summary>
+        </member>
+        <member name="F:Notifications.NotificationBoxImages.AccessError">
+            <summary>
+            Ошибка доступа (кирпичь)
+            </summary>
+        </member>
+        <member name="F:Notifications.NotificationBoxImages.Question">
+            <summary>
+            Вопрос
+            </summary>
+        </member>
+        <member name="F:Notifications.NotificationBoxImages.Information">
+            <summary>
+            Информациооное окно(значок "i")
+            </summary>
+        </member>
+        <member name="F:Notifications.NotificationBoxImages.Warning">
+            <summary>
+            Внимание (Восклицательный знак)
+            </summary>
+        </member>
+        <member name="F:Notifications.NotificationBoxImages.Stop">
+            <summary>
+            Стоп (рука в ромбе)
+            </summary>
+        </member>
+        <member name="F:Notifications.NotificationBoxImages.Apply">
+            <summary>
+            Успешно/Применить (значок галочка)
+            </summary>
+        </member>
+        <member name="F:Notifications.NotificationBoxImages.Find">
+            <summary>
+            Поиск
+            </summary>
+        </member>
+        <member name="F:Notifications.NotificationBoxImages.Engineering">
+            <summary>
+            Системные действия (инструменты)
+            </summary>
+        </member>
+        <member name="F:Notifications.NotificationBoxImages.Lock">
+            <summary>
+            Блокирование (замок)
+            </summary>
+        </member>
+        <member name="T:RDA.RoadsList">
+            <summary>
+            Список дорог
+            </summary>
+        </member>
+        <member name="T:RDA.ACSystemList">
+            <summary>
+            Список систем АС
+            </summary>
+        </member>
+        <member name="F:RDA.ACSystemList.AC_RODUZ">
+            <summary>
+            Система АС РОДУЗ
+            </summary> 
+        </member>
+        <member name="F:RDA.ACSystemList.AC_RODUZ_NF">
+            <summary>
+            Система АС РОДУЗ НФ
+            </summary>
+        </member>
+        <member name="T:RDA.RDF">
+            <summary>
+            Набор общих переменных и методов
+            </summary>
+        </member>
+        <member name="F:RDA.RDF.GIOCReplServIP">
+            <summary>
+            IP-адресс сервере УЗ для репликации 
+            </summary>
+        </member>
+        <member name="F:RDA.RDF.GM_LANGCHANGE">
+            <summary>
+            Сообщение из ГМ о том что произошла смена языка
+            </summary>
+        </member>
+        <member name="F:RDA.RDF.RoadOut">
+            <summary>
+            Код дороги куда направлять изменения(если RoadOut = -2 и RoadServ==5 то отправка идет на все дороги).
+            </summary>
+        </member>
+        <member name="F:RDA.RDF.Ds">
+            <summary>
+            Набор таблиц для различных вычислений
+            </summary>
+        </member>
+        <member name="F:RDA.RDF.isInfoWhasRead">
+            <summary>
+            Флаг, указывающий была ли считана таблица InfoUpdSrv
+            </summary>
+        </member>
+        <member name="F:RDA.RDF.OraDAInfo">
+            <summary>
+            DataAdapter для таблицы InfoUpdSrv
+            </summary>
+        </member>
+        <member name="F:RDA.RDF.OraCBInfo">
+            <summary>
+            CommandBuilder для таблицы InfoUpdSrv
+            </summary>
+        </member>
+        <member name="F:RDA.RDF.dtAnalitList">
+            <summary>
+            Хранит все коды аналитики из таблиц привязаных к счетам в R_AccKodA
+            </summary>
+        </member>
+        <member name="F:RDA.RDF.dtRAccKodA">
+            <summary>
+            Хранит список таблиц аналитики привязаных к счетам
+            </summary>
+        </member>
+        <member name="F:RDA.RDF.sLang">
+            <summary>
+            Язык подсказок
+            </summary>
+        </member>
+        <member name="F:RDA.RDF.servIP">
+            <summary>
+            IP - сервера БД
+            </summary>
+        </member>
+        <member name="F:RDA.RDF.BDOraCon">
+            <summary>
+            Экземпляр класса для соединения с БД, инициализируется в ГМ
+            </summary>
+        </member>
+        <member name="F:RDA.RDF.tbMonths">
+            <summary>
+            Таблица хранит справочник месяцев (ВЫНЕСТИ В ГЛАВНЫЙ МОДУЛЬ)
+            </summary>
+        </member>
+        <member name="F:RDA.RDF.UserParam">
+            <summary>
+            Список параметров пользователя
+            </summary>
+        </member>
+        <member name="F:RDA.RDF.sysType">
+            <summary>
+            Выбраная система
+            </summary>
+        </member>
+        <member name="M:RDA.RDF.p_CreateMonthCollection">
+            <summary>
+            Процедура формирует справочник месяцев tbMonths (процедура будет вызываться один раз в приложении)
+            Справочник этот будет содержать названия месяцев на 2-х языках в именительном и дательном падежах
+            </summary>
+        </member>
+        <member name="M:RDA.RDF.p_FillMonthList(DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit,System.Boolean)">
+            <summary>
+            Процедура заполнения списка list_repository месяцами (monthD -- дательный падеж месяца)
+            </summary>
+            <param name="list_repository">Репозиторий елемента управления</param>
+            <param name="monthD">Падеж</param>
+        </member>
+        <member name="M:RDA.RDF.IsTransactionExist">
+            <summary>
+            Метод провереят присутствие незавершонной транзакции для текущего экземпляра соединения
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.p_EditTabl(System.String)">
+            <summary>
+            метод используется для определения возможности редактирования данных 
+                         в таблице(InTabl) БД РОДУЗ НФ на серверах УЗ и дороги 
+            </summary>
+            <param name="uID"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:RDA.RDF.p_Access(System.String)" -->
+        <member name="M:RDA.RDF.f_ValidValue(System.Int32,System.Int32,System.String)">
+            <summary>
+            Ф-ция контроля вводимого значения в ячейку
+            <para>Если значение недопустимо возвращает false иначе true</para>
+            <para>Пример вызова в методе ИМЯ_РЕПОЗИТОРИЯ_EditValueChanging: e.Cancel = !f_ValidValue(13,2,e.NewValue.ToString());</para>
+            </summary>
+            <param name="incN">Количество знаков перед запятой</param>
+            <param name="fracN">Количество знаков после запятой</param>
+            <param name="nVal"> Новое значение в ячейке</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_ValidValue(System.String)">
+            <summary>
+            Ф-ция контроля вводимого значения в ячейку
+            <para>Если значение недопустимо возвращает false иначе true</para>
+            <para>Пример вызова в методе ИМЯ_РЕПОЗИТОРИЯ_EditValueChanging: e.Cancel = !f_ValidValue(e.NewValue.ToString());</para>
+            <para>Количество символов до запятой 13, после запятой 2</para>
+            </summary>
+            <param name="nVal"> Новое значение в ячейке</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.p_SaveIntoInfo(System.String[],System.String,System.Object[],System.String,System.String,RDA.InfoOperationType)">
+            <summary>
+            Метод используется для записи данных в таблицу InfoUpdSrv
+            </summary>
+            <param name="Tabls">Масив(на сегодня из 2 елем.) хранящий имена обрабатываемых таблиц</param>
+            <param name="EditRow">Флаг, указывающий на тип выполняемой операции</param>
+            <param name="tKeys">Масив(на сегодня из 6 елем.) хранящий значения ключей, для выборки данных</param>
+            <param name="Id_Key">Поле служащее дополнением к первичному ключу записи. Строится как (key1+key2+...+key6)</param>
+            <param name="Trans_Road">Флаг, указывающий следует ли внести подобные изменения на все дороги.</param>
+            <param name="OpFlagType">Тип операции с таблицей InfoUpdSrv</param>
+        </member>
+        <member name="M:RDA.RDF.p_SaveIntoInfo(System.String[],System.String,System.Object[],System.String,System.String,System.Int32)">
+            <summary>
+            Метод используется для записи данных в таблицу InfoUpdSrv
+            </summary>
+            <param name="Tabls">Масив(на сегодня из 2 елем.) хранящий имена обрабатываемых таблиц</param>
+            <param name="EditRow">Флаг, указывающий на тип выполняемой операции</param>
+            <param name="tKeys">Масив(на сегодня из 6 елем.) хранящий значения ключей, для выборки данных</param>
+            <param name="Id_Key">Поле служащее дополнением к первичному ключу записи. Строится как (key1+key2+...+key6)</param>
+            <param name="Trans_Road">Флаг, указывающий следует ли внести подобные изменения на все дороги.</param>
+            <param name="OpFlag">тип операции с таблицей InfoUpdSrv :
+                             = 0 - накопление строк в Ds_Info,
+                             = 1 - сохранение в InfoUpdSrv всех накопленных строк из Ds_Info и текущей строки,
+                             = 2 - сохранение в InfoUpdSrv всех накопленных строк из Ds_Info.</param>
+        </member>
+        <member name="M:RDA.RDF.p_mIPSet">
+            <summary>
+            метод используется для формирования массива tIP, содержашего IP_адреса 
+              дорог из таблицы NsiRoad.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_ReadXml(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            ф-ция предназначеная для выборки необходимых значений из Xml-файла
+            </summary>
+            <param name="FileXml">полный путь к файлу Xml.</param>
+            <param name="IdXml">имя(тег) елемента для чтения.</param>
+            <param name="IdxId">номер елемента для чтения.</param>
+            <param name="ObjType">Значений для типа возвращаемого значения 0 -полностью строка, 1 -IP адрес из строки</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_ReadAllXml(System.String,System.String,System.Int32[])">
+            <summary>
+            ф-ция предназначеная для выборки всех значений(по определенному инени елемента) из Xml-файла
+            </summary>
+            <param name="FileXml"> полный путь к файлу Xml.</param>
+            <param name="IdXml">имя(название ветви) елемента для чтения.</param>
+            <param name="ObjType">Значений для типа возвращаемого значения 0 -полностью строка, 1 -IP адрес из строки</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.p_EditXml(System.String,System.String,System.Int32,System.String,System.Boolean,System.Object[])">
+            <summary>
+            Метод предназначеный для внесения изменений в Xml файл.
+            </summary>
+            <param name="FileXml">полный путь к файлу Xml.</param>
+            <param name="IdXml">имя(название ветви) елемента для внесения изменений.</param>
+            <param name="IdxId">номер елемента для изменений, если их больше одного(-1 изменять все)</param>
+            <param name="ElName">название "ветви" которой принадлежит данный елемент/елементы</param>
+            <param name="AddNonExist">Флаг, указывающий будет ли добавлен новый елемент если таковой не существует</param>
+            <param name="NewVal">Масив соержащий список значений для изменения/добавления елементов</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_Analit(System.String,System.Int32,System.String,System.Object@)">
+            <summary>
+            Возвращает код аналитики из общей таблицы аналитики.
+             <para>А также позволяет получить дополнительное значение(например "название") через выходную переменную param</para>
+            </summary>
+            <param name="ID">Идентификатор записи(аналитики) в таблице</param>
+            <param name="IdTabl">Код таблицы откуда брать аналитику(привязан к счету в R_AccKodA)</param>
+            <param name="fieldName">Имя поля которое следует возвращать.
+            <para>Road   - код дороги(если из NSIROAD)</para>
+            <para>Dept   - код отделения</para>
+            <para>ID     - идентификатор записи</para>
+            <para>SHIFR  - Короткое название</para>
+            <para>NAIM   - Полное название</para>
+            </param>
+            <param name="param">Выходящий параметр, возвращает значение из поля указаного в fieldName</param>
+            <returns>Код аналити</returns>
+        </member>
+        <member name="M:RDA.RDF.f_Analit(System.String)">
+            <summary>
+            Возвращает код аналитики из общей таблицы аналитики.
+            </summary>
+            <param name="ID">Идентификатор записи(аналитики) в таблице</param>
+            <returns>Код аналити</returns>
+        </member>
+        <member name="M:RDA.RDF.p_LoadNSIANALIT(CoreLab.Oracle.OracleConnection)">
+            <summary>
+            Метод используется для создание одной таблицы из всех таблиц аналитики(список в NF_TABLANALIT),
+            полученая таблица автономна и хранится в RDA.
+            <para>Также метод заполняет автономную таблицу из таблицы БД R_AccKodA которая доступна из RDA</para>
+            <para>Вызывается в ГМ при запуске.</para>
+            </summary>
+            <param name="OraCon">Экземпляр соединения с БД НЕ ВЫЗЫВАТЬ, ИСПОЛЬЗУЙТЕ МЕТОД БЕЗ ПАРАМЕТРОВ</param>
+        </member>
+        <member name="M:RDA.RDF.p_LoadNSIANALIT">
+            <summary>
+            Метод используется для создание одной таблицы из всех таблиц аналитики(список в NF_TABLANALIT),
+            полученая таблица автономна и хранится в RDA.
+            <para>Также метод заполняет автономную таблицу из таблицы БД R_AccKodA которая доступна из RDA</para>
+            <para>Вызывается в ГМ при запуске.</para>
+            </summary>
+        </member>
+        <member name="M:RDA.RDF.f_GetAnalitList(System.String)">
+            <summary>
+             Возвращает набор строк по указаному фильтру
+            </summary>
+            <param name="filter">Фильтр для выборку строк(и)</param>
+            <returns>DataRow[]</returns>
+        </member>
+        <member name="M:RDA.RDF.f_GetAnalitList(System.String,System.String)">
+            <summary>
+             Возвращает таблицу из набор строк по указаному фильтру
+            </summary>
+            <param name="filter">Фильтр для выборку строк(и)</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_GetAnalitList(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Возвращает таблицу аналитики ко указаному ID
+            </summary>
+            <param name="IDTabl">Id-код аналитической таблицы</param>
+            <param name="Road">Код дороги для которой идет выборка</param>
+            <param name="Dept">Код код подтаблиці для доп. аналитики</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_GetIDTABl(System.String,System.Int32,System.Int32@)">
+            <summary>
+            Возвращает идинтификатор таблицы IDTABL по номеру счета.
+            </summary>
+            <param name="Acc6">Номер счета к которому привязана таблица</param>
+            <param name="_road">Код дороги для которой делать выборку</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_GetAnalitColValue(System.String,System.String)">
+            <summary>
+            Ф-ция возвращает значение из указаной колонки по ключу(ID аналитики)
+            </summary>
+            <param name="ID">Идентификатор аналитики</param>
+            <param name="col">Имя колонки, значение которой нужно вернуть</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_SetPeriod(System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Метод используется  для формирования текстового значения периода
+                        ПОСЛЕ изменения границ периода.
+            </summary>
+            <param name="sMes">номер начальго месяца</param>
+            <param name="sGod">начальный год</param>
+            <param name="eMes">номер конечного месяца</param>
+            <param name="eGod">конечный год</param>
+            <param name="sLang">язык</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.p_XlsClose(Excel.ApplicationClass)">
+            <summary>
+            Метод обеспечивает уничтожение Excel_объекта и очистку памяти - УСТАРЕЛ
+            </summary>
+            <param name="Xls">Экземпляр класа для уничтожения</param>
+        </member>
+        <member name="M:RDA.RDF.f_Repl(System.String,System.Int32)">
+            <summary>
+            Функция возвращает копию строки tC повторенную tJ раз
+            </summary>
+            <param name="tC">строковое значение</param>
+            <param name="tJ">количество повторений</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_ReplForResp(System.String,System.Int32)">
+            <summary>
+            Функция возвращает копию строки tC повторенную tJ раз
+            </summary>
+            <param name="tC">строковое значение</param>
+            <param name="tJ">количество повторений</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_Conv(System.String)">
+            <summary>
+            Функция преобразует переданное tGr-значение в decimal-число. (С обработкой исключений)
+            </summary>
+            <param name="tGr">Строка содержащая число</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_Insert(System.String,System.String,System.Int32)">
+            <summary>
+            функция возвращает копию строки X со вставленной в неё (вместо ПРОБЕЛА 
+                       между словами) подстрокой Y. Поиск ПРОБЕЛА для вставки Y выполняется с 
+                       конца выделенной из X(cлева направо)  части(Z) длиной i символов.
+                      Функция может быть использована, например, для вставки символов-раздели-
+                       телей("\r\n","\n",...) для нормального отображения текста в полях TextBox
+            </summary>
+            <param name="X">заданная строка</param>
+            <param name="Y">подстрока</param>
+            <param name="i">Мах длина до вставляемой подстроки</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.p_InfoShabl(System.String)">
+            <summary>
+            метод используется для выдачи сообщения о наличии в шаблоне данных  
+            		     при попытке выбора режима работы ИМПОРТ или из АРХИВА
+            </summary>
+            <param name="sLang">Язык</param>
+        </member>
+        <member name="M:RDA.RDF.f_ErrArh(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            функция вызывается для принятия решения по СОХРАНЕНИЮ или УДАЛЕНИЮ данных
+                       АРХИВА если выполнены изменения(т.е. bUpdate=true)
+            </summary>
+            <param name="sLang">Язык</param>
+            <param name="userAction">Код действия пользователя</param>
+            <param name="sYear">Год</param>
+            <param name="tMonth">Месяц</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_ErrArh(System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            функция вызывается для принятия решения по СОХРАНЕНИЮ или УДАЛЕНИЮ данных
+                       АРХИВА если выполнены изменения(т.е. bUpdate=true)
+            </summary>
+            <param name="sLang">Язык</param>
+            <param name="par1">Идентификатор действия пользователя(SAVE-Сохранении пустого документа в архиве или DEL-Удаление из АРХИВА)</param>
+            <param name="E_God">Год</param>
+            <param name="E_Mes">Имя месяца в именительном падеже</param>
+            <param name="bSum">Указатель присутсвия данных</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_IsPeriodClose(System.Int32,System.Int32,System.Int32,System.Boolean,RDA.ACSystemList)">
+            <summary>
+            Функция возвращает состояние периода(true - закрыт, false - открыт)
+            </summary>
+            <param name="_Road">Код дороги</param>
+            <param name="_God">Отчетный год</param>
+            <param name="_Mes">Отчетный месяц</param>
+            <param name="dependsAC">Выбор для конкретной системы(true) или игнорировать систему(false)</param>
+            <param name="acID">Идентификатор системы для проверки статуса</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_IsPeriodClose(System.Int32,System.Int32,System.Int32,RDA.ACSystemList)">
+            <summary>
+            Функция возвращает состояние периода(true - закрыт, false - открыт)
+            </summary>
+            <param name="_Road">Код дороги</param>
+            <param name="_God">Отчетный год</param>
+            <param name="_Mes">Отчетный месяц</param>
+            <param name="acID">Идентификатор системы для проверки статуса</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_IsPeriodClose(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Функция возвращает состояние периода(true - закрыт, false - открыт)
+            </summary>
+            <param name="_Road">Код дороги</param>
+            <param name="_God">Отчетный год</param>
+            <param name="_Mes">Отчетный месяц</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_Ip_User">
+            <summary>
+            Функция возвращает IP_адрес текущего компьютера
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_Get_IPUser">
+            <summary>
+            Возвращает IP_адрес текущего компьютера
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_RoadIP(System.Int32)">
+            <summary>
+            функция возвращает IP_адрес по коду дороги или пусто
+            </summary>
+            <param name="cRoad">код дороги из NSIROAD</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.p_ClearDsTable(System.Data.DataSet,System.Boolean,System.String[],System.String)">
+            <summary>
+            Метод используется для очистки таблиц из колекции DataSet.
+            </summary>
+            <param name="Ds">- DataSet в котором хранитца таблица.</param>
+            <param name="dispStr">флаг указывающий следует ли разрушить структуру таблицы вызовом метода Dispose.</param>
+            <param name="tbNames">масив хранящий имена таблиц подлижащих очистки.</param>
+            <param name="OnErrorMes">текст сообщения об ошибке, если пусто сообщение не выводится.</param>
+        </member>
+        <member name="M:RDA.RDF.p_ClearDsTable(System.Data.DataSet,System.Boolean,System.String,System.String)">
+            <summary>
+            Метод используется для очистки таблиц из колекции DataSet.
+            </summary>
+            <param name="Ds">- DataSet в котором хранитца таблица.</param>
+            <param name="dispStr">флаг указывающий следует ли разрушить структуру таблицы вызовом метода Dispose.</param>
+            <param name="tbNames">Имя таблицы для очистки</param>
+            <param name="OnErrorMes">текст сообщения об ошибке, если пусто сообщение не выводится.</param>
+        </member>
+        <member name="M:RDA.RDF.p_ClearDsTable(System.Data.DataSet,System.String)">
+            <summary>
+            Метод используется для очистки таблиц из колекции DataSet.
+            </summary>
+            <param name="Ds">- DataSet в котором хранитца таблица.</param>
+            <param name="tbNames">Имя таблицы для очистки</param>
+        </member>
+        <member name="M:RDA.RDF.f_DocChangeInfo(System.Data.DataTable)">
+             <summary>
+            Ф-ция используется для получания информации о времени изменения документа, имени и IP-адресе пользователя,  внесшего изменения .
+             </summary>
+             <param name="dtArh">таблица архива в DataSet, куда выбраны записи из архива в БД</param>
+             <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_RowChangeInfo(System.Data.DataRow)">
+             <summary>
+            Ф-ция используется для получания информации о времени изменения строки документа, имени и IP-адреса пользователя,  внесшего изменения .
+             </summary>
+             <param name="row">Строка таблицы</param>
+             <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_GetSrvFolerAdr(System.Boolean)">
+            <summary>
+            Возвращает адрес каталога с файлами модуля на сервере
+            </summary>
+            <param name="pHTTP">http адресс</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.p_AdaptControlResizing(System.Object,System.Windows.Forms.Control,System.Windows.Forms.AnchorStyles)">
+            <summary>
+            Метод осуществляет привязку указанных краев 
+            (определяються в параметре anchor) элемента формы
+             к родительскому для всех уровней вложенности начиная с элемента формы owner и заканчивая parent
+            </summary>
+            <param name="owner"></param>
+            <param name="parent"></param>
+            <param name="anchor"></param>
+        </member>
+        <member name="M:RDA.RDF.p_UpdInfo(System.String,System.String,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Метод используется для записи в InfoUpdSrv информации об обнoвлении 
+                        в таблице(InTabl)  в БД РОДУЗ НФ на серверах УЗ и дороги 
+            </summary>
+            <param name="InTabl">имя таблицы где выполнено изменение</param>
+            <param name="tModi">признак корректировки : I,U,D или копирования A, F 
+                            для записи :  =I-добавлена, =U-изменена, =D-удалена 
+                            для таблицы:  =A-замена всех записей таблицы(выполняется только с сервера УЗ)</param>
+            <param name="tDoc">Документ</param>
+            <param name="tGod">Год</param>
+            <param name="tMes">Месяц</param>
+            <param name="myRoad">Дорога</param>
+        </member>
+        <member name="M:RDA.RDF.f_GetIDSTAT(System.String,System.String,System.String)">
+            <summary>
+             Ф-ция возвращающая код бухгалтерской довідки
+            </summary>
+            <param name="Road">Дорога на которой мы находимся</param>
+            <param name="Doc">Код документа( например DNF0FDU1M)</param>
+            <param name="Otdel">Код отдела</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.p_ValidateDateBounds(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Процедура устанавливает корректность границ временного интервала для фильтра
+            </summary>
+            <param name="FMonth">Начальный месяц</param>
+            <param name="FYear">Начальный год</param>
+            <param name="LMonth">Конечный месяц</param>
+            <param name="LYear">Конечный год</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_GetPeriod(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+             Функция возвращает строку, сформированную по конкретному фильтру 
+                          для заголовка документа
+            </summary>
+            <param name="FMonth">Начальный месяц</param>
+            <param name="FYear">Начальный год</param>
+            <param name="LMonth">Конечный месяц</param>
+            <param name="LYear">Конечный год</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.f_GetPeriodWithoutYear(System.Int32,System.Int32)">
+            <summary>
+            Возвращает период без года
+            </summary>
+            <param name="firstMonth">Начальній месяц</param>
+            <param name="lastMonth">Конечній месяц</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.GetMonthName(System.Int32,RDA.MonthCase,System.String)">
+            <summary>
+            Возвращает название месяца по его номеру и в зависимости от падежа
+            </summary>
+            <param name="MonthID">Номер месяца</param>
+            <param name="_pd">Падеж</param>
+            <param name="_sLang">Код языка ("U" - украинский, "R"-русский )</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.RDF.GetMonthName(System.Int32,RDA.MonthCase)">
+            <summary>
+            Возвращает название месяца по его номеру и в зависимости от падежа
+            </summary>
+            <param name="MonthID">Номер месяца</param>
+            <param name="_pd">Падеж</param>
+            <returns></returns>
+        </member>
+        <member name="P:RDA.RDF.UserOtdel">
+            <summary>
+            Отделение пользователя
+            </summary>
+        </member>
+        <member name="P:RDA.RDF.cAcc">
+             <summary>
+            Идентификатор доступа
+             </summary>
+        </member>
+        <member name="P:RDA.RDF.GR">
+            <summary>
+            Группа пользователя
+            </summary>
+        </member>
+        <member name="P:RDA.RDF.MyAccess">
+            <summary>
+            Модификатор доступа
+            </summary>
+        </member>
+        <member name="P:RDA.RDF.MyRoad">
+            <summary>
+            Дорога пользователя исходя из данных ACUSER
+            </summary>
+        </member>
+        <member name="P:RDA.RDF.isEditTable">
+            <summary>
+            Указывает, разрешено ли пользователю редактировать данные
+            </summary>
+        </member>
+        <member name="P:RDA.RDF.AC_List">
+            <summary>
+            Список систем доступных для выбора пользователю
+            </summary>
+        </member>
+        <member name="P:RDA.RDF.IsAllowSave">
+            <summary>
+            Указывает, разрешено ли пользователю сохранять измененные данные
+            </summary>
+        </member>
+        <member name="P:RDA.RDF.CurrentSystem">
+            <summary>
+            Тип текущей систнмы
+            </summary>
+        </member>
+        <member name="T:RDA.MonthCase">
+            <summary>
+            Список падежей
+            </summary>
+        </member>
+        <member name="F:RDA.MonthCase.Nominative">
+            <summary>
+            Именительный
+            </summary>
+        </member>
+        <member name="F:RDA.MonthCase.Dative">
+            <summary>
+            Дательный
+            </summary>
+        </member>
+        <member name="T:RDA.InfoOperationType">
+            <summary>
+            Тип операции с таблицей Ds_Info
+            </summary>
+        </member>
+        <member name="F:RDA.InfoOperationType.AccumulateRows">
+            <summary>
+            Накопление строк в Ds_Info
+            </summary>
+        </member>
+        <member name="F:RDA.InfoOperationType.SaveAllAccumulatedRowsAndCurrent">
+            <summary>
+            Сохранение в InfoUpdSrv всех накопленных строк из Ds_Info и текущей строки 
+            </summary>
+        </member>
+        <member name="F:RDA.InfoOperationType.SaveAllAccumulatedRowsWithOutCurrent">
+            <summary>
+            Сохранение в InfoUpdSrv всех накопленных строк из Ds_Info 
+            </summary>
+        </member>
+        <member name="T:RDA.UserAccParams">
+            <summary>
+            Хранит параметры доступа пользователя
+            </summary>
+        </member>
+        <member name="F:RDA.UserAccParams.RoadServ">
+            <summary>
+            Код дороги согласно реального места запуска ГМ
+            </summary>
+        </member>
+        <member name="F:RDA.UserAccParams.myRoad">
+            <summary>
+            Дорога пользователя согласно данным в ACUSER
+            </summary>
+        </member>
+        <member name="F:RDA.UserAccParams.uID">
+            <summary>
+            Уникальный идентификатор пользователя в системе
+            </summary>
+        </member>
+        <member name="F:RDA.UserAccParams.myAccess">
+            <summary>
+            Модификатор доступа
+            </summary>
+        </member>
+        <member name="F:RDA.UserAccParams.ac_list">
+            <summary>
+            Список систем доступных для выбора пользователю
+            </summary>
+        </member>
+        <member name="F:RDA.UserAccParams.UserName">
+            <summary>
+            Имя пользователя
+            </summary>
+        </member>
+        <member name="F:RDA.UserAccParams.RoadName">
+            <summary>
+            Имя дороги(группы)
+            </summary>
+        </member>
+        <member name="F:RDA.UserAccParams.Password">
+            <summary>
+            Пароль пользователя(расшифрованый)
+            </summary>
+        </member>
+        <member name="F:RDA.UserAccParams.bEditTabl">
+            <summary>
+            Указывает, разрешено ли пользователю редактировать данные
+            </summary>
+        </member>
+        <member name="F:RDA.UserAccParams.bAllowSave">
+            <summary>
+            Указывает, разрешено ли пользователю сохранять измененные данные
+            </summary>
+        </member>
+        <member name="F:RDA.UserAccParams.Otdel">
+            <summary>
+            Код отдела
+            </summary>
+        </member>
+        <member name="F:RDA.UserAccParams.GroupID">
+            <summary>
+            Код гпруппы
+            </summary>
+        </member>
+        <member name="M:RDA.UserAccParams.#ctor(System.Boolean)">
+            <summary>
+            Конструктор
+            </summary>
+            <param name="param">конструктор структуры не может не содержать параметров(((((</param>
+        </member>
+        <member name="M:DataSave.UserTypeQueryStrategy.Execute(System.Data.DataTable[])">
+            <summary>
+            Выполнить генерацию команд
+            </summary>
+            <param name="tables">Список таблиц для генерации</param>
+            <returns></returns>
+        </member>
+        <member name="M:RDA.EntryPoint.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="F:Chart.ChartManager.frmPlotter">
+            <summary>
+            Экземпляр формы отображения диаграммы
+            </summary>
+        </member>
+        <member name="F:Chart.ChartManager.data">
+            <summary>
+            Данные для построения диаграммы - набор аргументов и значений
+            </summary>
+        </member>
+        <member name="F:Chart.ChartManager.currency">
+            <summary>
+            Валюта данных диаграммы
+            </summary>
+        </member>
+        <member name="F:Chart.ChartManager.titleGraph">
+            <summary>
+            Заголовок диаграммы
+            </summary>
+        </member>
+        <member name="F:Chart.ChartManager.titleDoc">
+            <summary>
+            Заголовок документа, для которого строится диаграмма
+            </summary>
+        </member>
+        <member name="F:Chart.ChartManager.shifrDoc">
+            <summary>
+            Шифр документа
+            </summary>
+        </member>
+        <member name="M:Chart.ChartManager.ShowChart">
+            <summary>
+            Отобразить форму - отрисовщик диаграммы
+            </summary>
+        </member>
+        <member name="M:Chart.ChartManager.PrepareData">
+            <summary>
+            Подготовка данных к установке
+            </summary>
+        </member>
+        <member name="M:Chart.ChartManager.SetData(System.String,System.Decimal)">
+            <summary>
+            Установка данных в коллекцию
+            </summary>
+            <param name="Key"></param>
+            <param name="Value"></param>
+        </member>
+        <member name="M:Chart.ChartManager.GetValidatedTitle(System.String)">
+            <summary>
+            Метод возвращает свалидированный заголовок
+            </summary>
+            <param name="title"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Chart.ChartManager.GetValidatedShifr(System.String)">
+            <summary>
+            Метод возвращает свалидированный шифр
+            </summary>
+            <param name="shifr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Chart.ChartManager.GetValidatedCurrency(System.String)">
+            <summary>
+            Метод возвращает свалидированную валюту
+            </summary>
+            <param name="currency"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Chart.ChartManager.GetCurrencyFormat(System.String)">
+            <summary>
+            Метод возвращает валюту в нужном формате
+            </summary>
+            <param name="currency"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Chart.ChartManager.InitializeData">
+            <summary>
+            Инициализация данных 
+            </summary>
+        </member>
+        <member name="P:Chart.ChartManager.Data">
+            <summary>
+            Свойство возвращает коллекцию данных для построения диаграммы
+            </summary>
+        </member>
+        <member name="P:Chart.ChartManager.ShifrDoc">
+            <summary>
+            Свойство устанавливает шифр документа
+            </summary>
+        </member>
+        <member name="P:Chart.ChartManager.TitleGraph">
+            <summary>
+            Свойство устанавливает заголовок диаграммы
+            </summary>
+        </member>
+        <member name="P:Chart.ChartManager.TitleDoc">
+            <summary>
+            Свойство устанавливает заголовок документа
+            </summary>
+        </member>
+        <member name="P:Chart.ChartManager.Currency">
+            <summary>
+            Свойство устанавливает величину и валюту данных диаграммы
+            </summary>
+        </member>
+        <member name="P:Chart.ChartManager.Configurator">
+            <summary>
+            Свойство возвращает конфигуратор диаграммы
+            </summary>
+        </member>
+    </members>
+</doc>

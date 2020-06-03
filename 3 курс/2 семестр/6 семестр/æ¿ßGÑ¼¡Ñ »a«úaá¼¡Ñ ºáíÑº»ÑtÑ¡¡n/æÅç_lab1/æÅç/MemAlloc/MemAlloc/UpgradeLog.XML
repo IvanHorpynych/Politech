@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MemAlloc">
+</Property><Property Name="Solution File" Value="D:\6 семестр\Системне програмне забезпечення\СПЗ_lab1\СПЗ\MemAlloc\MemAlloc\MemAlloc.sln">
+</Property><Property Name="User Options File" Value="D:\6 семестр\Системне програмне забезпечення\СПЗ_lab1\СПЗ\MemAlloc\MemAlloc\MemAlloc.suo">
+</Property><Property Name="Date" Value="9 квітня 2012 р.">
+</Property><Property Name="Time" Value="21:59">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="MemAlloc.sln" Description="File successfully backed up as D:\6 семестр\Системне програмне забезпечення\СПЗ_lab1\СПЗ\MemAlloc\MemAlloc\MemAlloc.sln.old">
+</Event><Event ErrorLevel="0" Project="" Source="MemAlloc.suo" Description="File successfully backed up as D:\6 семестр\Системне програмне забезпечення\СПЗ_lab1\СПЗ\MemAlloc\MemAlloc\MemAlloc.suo.old">
+</Event><Event ErrorLevel="0" Project="MemAlloc" Source="MemAlloc\MemAlloc.vcproj" Description="Converting project file 'D:\6 семестр\Системне програмне забезпечення\СПЗ_lab1\СПЗ\MemAlloc\MemAlloc\MemAlloc\MemAlloc.vcproj'.">
+</Event><Event ErrorLevel="1" Project="MemAlloc" Source="MemAlloc\MemAlloc.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="MemAlloc" Source="MemAlloc\MemAlloc.vcproj" Description="Done converting to new project file 'D:\6 семестр\Системне програмне забезпечення\СПЗ_lab1\СПЗ\MemAlloc\MemAlloc\MemAlloc\MemAlloc.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="MemAlloc" Source="MemAlloc\MemAlloc.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="MemAlloc.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="MemAlloc.sln" Description="Converted">
+</Event></UpgradeLog>

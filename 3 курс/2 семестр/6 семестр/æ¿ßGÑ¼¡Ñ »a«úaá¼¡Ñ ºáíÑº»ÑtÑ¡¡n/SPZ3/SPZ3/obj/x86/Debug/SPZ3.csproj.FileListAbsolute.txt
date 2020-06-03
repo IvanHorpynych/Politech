@@ -1,0 +1,7 @@
+D:\СПЗ\SPZ3\SPZ3\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\СПЗ\SPZ3\SPZ3\bin\Debug\SPZ3.exe
+D:\СПЗ\SPZ3\SPZ3\bin\Debug\SPZ3.pdb
+D:\СПЗ\SPZ3\SPZ3\obj\x86\Debug\SPZ3.exe
+D:\СПЗ\SPZ3\SPZ3\obj\x86\Debug\SPZ3.pdb
+H:\SPZ3\SPZ3\obj\x86\Debug\SPZ3.exe
+H:\SPZ3\SPZ3\obj\x86\Debug\SPZ3.pdb

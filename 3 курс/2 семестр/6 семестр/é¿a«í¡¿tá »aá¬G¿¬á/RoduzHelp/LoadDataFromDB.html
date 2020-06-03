@@ -1,0 +1,179 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Загрузка данных из БД</title>
+		<link type="text/css" href="scripts/css/superstyle/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+        <link type="text/css" href="scripts/css/superstyle/interface.css" rel="stylesheet" />	
+        <link rel="icon" type="image/png" href="logo.png" />
+ <link rel="stylesheet" type="text/css" href="scripts/js/syntax/styles/SyntaxHighlighter.css" />	
+		<script type="text/javascript" src="scripts/js/jquery-1.5.1.min.js"></script>
+		<script type="text/javascript" src="scripts/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script type="text/javascript" src="scripts/js/interface.js"></script>
+        <script language="javascript" src="scripts/js/syntax/scripts/shCore.js"></script>
+		<script language="javascript" src="scripts/js/syntax/scripts/shBrushCSharp.js"></script>
+        <script language="javascript" src="scripts/js/syntax/scripts/shBrushXml.js"></script>
+</head>
+
+<body>
+<h1 align="center">Загрузка данных из БД</h1>
+<h1 align="center"><img src="resources/loadfromdb.png" width="70" ></h1>
+<hr>
+<div align="center"><a id="prev" href="DocumentCreationManual.html"></a>&nbsp;<a id="next" href="CustomizeForm.html"></a></div>
+<hr>
+<h2>Перед настройками контекста данных следует выполнить ряд мелких настроек, которые важны для нормальной работы программы:</h2>
+<ul>
+  <li>Указать параметры конструктора в форме (рис. 1).</li>
+  <li>Указать код документа в свойствах формы (рис. 2).</li>
+  <li>Убедится что инициализировано соединение с БД (в точке входа указать Helpers.ConnectionHelper.InitializeConnection();).</li>
+</ul>
+<p><img src="resources/constructorParams.png" width="660" height="145"></p>
+<p>Рисунок 1. Параметры конструктора формы.</p>
+<p><img src="resources/documentCodeProperty.png" width="354" height="250"></p>
+<p>Рисунок 2. Код документа.</p>
+<h2>
+  1. Создание таблиц и загрузка в них данных из БД
+</h2>
+<p>Для загрузки данных из БД необходимо выполнить всего 3 пункта:</p>
+<ul>
+  <li>Создать таблицы, в которые будут загружатся данные.</li>
+  <li>Установить запросы для загрузки в соответствующие таблицы.</li>
+  <li>Обработать загрузку таблицы (если необходимо передать параметры).</li>
+</ul>
+<p>Все три пункта касаются класса DataContext.<br>
+  Итак пункт первый &quot;Создать таблицы&quot;. Под таблицами подразумевается класс DataTable который будет хранить наши данные.<br>
+  В контексте данных по умолчанию присутствуют два набора таблиц (DataSet), первый это набор таблиц данных, а второй это набор таблиц репозиториев.<br>
+  Разница между ними заключается в том, что таблицы данных по умолчанию сохраняются в БД и позволяют обрабатывать события изменения а таблицы репозиториев нет, они служат лиш для отображения в данных в форме (например в выпадающем списке).<br>
+Для добавления таблицы в каждый из наборов существует специальные функции:</p>
+<table width="50%" border="1">
+  <tr>
+    <th scope="col">Имя</th>
+    <th scope="col">Описание</th>
+  </tr>
+  <tr>
+    <td>AddDataTable(string tableName)</td>
+    <td>Создает новую таблицу данных с указаным именем и помещает ее в набор таблиц данных.</td>
+  </tr>
+  <tr>
+    <td>AddRepositoryTable(string tableName)</td>
+    <td>Создает новую таблицу репозитория с указаным именем и помещает ее в набор таблиц репозиториев.</td>
+  </tr>
+</table>
+<p>Тоже самое и для установки запроса на таблицу, существует два метода привязки запроса к таблице:</p>
+<table width="50%" border="1">
+  <tr>
+    <th width="36%" scope="col">Имя</th>
+    <th width="64%" scope="col">Описание</th>
+  </tr>
+  <tr>
+    <td>AddStandartQueryToDataTable</td>
+    <td>Устанавливает запрос на выборку данных из таблицы данных (архива).</td>
+  </tr>
+  <tr>
+    <td>AddStandartQueryToRepositoryTable</td>
+    <td>Устанавливает запрос на выборку данных из таблицы репозитория (справочника).</td>
+  </tr>
+</table>
+<p>Отлично функции есть, но где их вызывать?? Ответ прост, в методе который отвечает за создание таблиц. Вообще, таких метода два, первый отвечает за создание таблиц данных а второй таблиц репозиториев.</p>
+<table width="50%" border="1">
+  <tr>
+    <th width="31%" scope="col">Имя</th>
+    <th width="69%" scope="col">Описание</th>
+  </tr>
+  <tr>
+    <td>CreateDataTables</td>
+    <td>Метод для создания таблиц данных.</td>
+  </tr>
+  <tr>
+    <td>CreateRepositoryTables</td>
+    <td>Метод для создания таблиц репозиториев.</td>
+  </tr>
+</table>
+<p>Оба метода обявленны в базовом классе DataContexBase, для добавления методов в своем контексте данных их следует переопределить.</p>
+<div class="ui-state-highlight">
+<span class="ui-usericon ui-icon-usernote"></span>
+<strong>Примечание:</strong><br>
+ При переопредилении данных методов всегда следует оставить вызов метода базового класса, иначе часть таблиц которые прописаны в базовых классах не будет загружена.
+</div>
+<p>Допустим мы хотим что бы наш документ загружал данные из таблицы архива FNF0FDU6 (для первой подформы) и FNF0FDU6R14 (для второй подформы) и также содержал как справочную информацию, справочник станций. </p>
+<p> 
+<pre name="code" class ="c-sharp">
+        protected override void CreateDataTables()
+        {
+            base.CreateDataTables();
+
+            AddDataTable("FNF0FDU6");
+            AddDataTable("FNF0FDU6R14");
+            AddStandartQueryToDataTable("FNF0FDU6", "select * from fnf0fdu6 where road={0} and god={1} and mes={2}");
+            AddStandartQueryToDataTable("FNF0FDU6R14", "select * from fnf0fdu6r14 where road={0} and god={1} and mes={2}");
+        }
+        protected override void CreateRepositoryTables()
+        {
+            base.CreateRepositoryTables();
+
+            AddRepositoryTable("NSISTATION");
+            AddStandartQueryToRepositoryTable("NSISTATION", "select * from nsistation");
+        }
+        </pre>
+<p>Теперь у нас есть три таблицы и соответствующие запросы для выборки данных из БД. Остается последний пункт передача параметров. Параметры задаются в запросе в фигурных скобках с обозначением порядкового номера параметра. Установка значений параметров происходит непосредственно перед выполнением запроса а методе LoadTable, который обявлен в базовом классе DataContexBase и должен быть переопределен в контексте данных. Значения параметров указываются по порядку через запятую заменяя стандартный пустой масив _args (рис. 3).</p>
+<p>В данном примере необходимо получить информацию о выбраном в документе (на момент загрузки) периоде, это можна зделать с помощью переменной formProperty, которая доступна в контексте данных.</p>
+<p><img src="resources/emptyParamsArray.png" width="513" height="103"></p>
+<p>Рисунок 3. Стандартный масив пустых значений, который необходимо заменить.</p>
+<pre name="code" class ="c-sharp">
+        protected override void LoadTable(System.Data.DataTable table, 
+            string queryKey, 
+            params object[] _args)
+        {
+            RoduzForms.Data.FilterData currentFilter = formProperty.CurrentFilter;
+            base.LoadTable(table, queryKey, currentFilter.Road, currentFilter.sYear, currentFilter.sMonth);
+        }
+</pre>
+<p>После написания такого не хитрого кода, нам будут доступны 3 таблицы, две таблицы архива и таблица справочник. Причем данные из архивов будут выбиратся в зависимости от выбраного в документе фильтра. </p>
+<h2>
+  2. Настройка шаблона проводок
+</h2>
+<div class="ui-state-highlight">
+<span class="ui-usericon ui-icon-usernote"></span>
+<strong>Примечание:</strong><br>
+ Этот шаг следует выполнять только в случае наличия в документе вкладки &quot;Формирование проводок&quot;.
+</div>
+<p>В свойствах контекста данных на дизайнере формы следует указать имя таблицы шаблона проводок (рис. 4).</p>
+<p><img src="resources/accTemplateTableName.png" width="354" height="348"></p>
+<p>Рисунок 4. Имя таблицы шаблона проводок.</p>
+<p>Теперь запустив приложение можно увидеть загруженный <a href="resources/accTemlateLoadResult.png">шаблон проводок</a>.</p>
+<h2>
+  3. Установка источника данных для подформ
+</h2>
+<div class="ui-state-highlight">
+<span class="ui-usericon ui-icon-usernote"></span>
+<strong>Примечание:</strong><br>
+Перед установкой источников данных, следует создать колонки в Grid, как обычно через дизайнер.
+</div>
+<p>Установка таблиц источников данных в подформах обычно выполняется в обработчике события Load конкретной подформы.<br>
+  Доступ к таблицам в контексте выполняется через переменную экземпляр класса контекста dbDataContex. </p>
+<pre name="code" class ="c-sharp">
+//Файл MainDocumentUI.cs
+private void MainDocumentUI_Load(object sender, EventArgs e)
+{
+    if (DesignMode)
+    	return;
+    gFormData.DataSource = dbDataContex["FNF0FDU6"];
+}
+ //Файл MainDocumentUI2.cs
+private void MainDocumentUI2_Load(object sender, EventArgs e)
+{
+    if (DesignMode)
+    	return;
+    documentTree.DataSource = dbDataContex["FNF0FDU6R14"];
+}
+</pre>
+<p>Теперь запустив приложение можно увидеть результат (рис. 5-6).</p>
+<p><a href="resources/dataLoadResult1.png" target="_blank"><img src="resources/dataLoadResult1.png" width="50%"></a></p>
+<p>Рисунок 5. Данные вкладки 1.</p>
+<p><a href="resources/dataLoadResult2.png" target="_blank"><img src="resources/dataLoadResult2.png" width="50%"></a>д</p>
+<p>Рисунок 6.Данные вкладки 2.</p>
+<p>Вот впринципе и все нехитрые операции которые нужно проделать что бы получить основу для формы. В следующем разделе будет описано как добавить свою функциональность к этой основе.</p>
+<br>
+<hr>
+<div align="center"><a id="prev" href="DocumentCreationManual.html"></a>&nbsp;<a id="next" href="CustomizeForm.html"></a></div>
+</body>
+</html>

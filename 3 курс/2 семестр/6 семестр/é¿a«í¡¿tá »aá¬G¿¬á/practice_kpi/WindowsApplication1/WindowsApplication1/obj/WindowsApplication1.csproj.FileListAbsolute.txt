@@ -1,0 +1,47 @@
+D:\RODUZNF\Arx_Prog_NF\NF_LEMB\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\RODUZNF\Arx_Prog_NF\NF_LEMB\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+D:\RODUZNF\Arx_Prog_NF\NF_LEMB\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+D:\RODUZNF\Arx_Prog_NF\NF_LEMB\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+D:\RODUZNF\Arx_Prog_NF\NF_LEMB\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+D:\RODUZNF\Arx_Prog_NF\NF_LEMB\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+D:\RODUZNF\Arx_Prog_NF\NF_LEMB\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+D:\RODUZNF\Arx_Prog_NF\NF_LEMB\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+D:\RODUZNF\Arx_Prog_NF\NF_LEMB\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe.licenses
+D:\RODUZNF\Arx_Prog_NF\NF_LEMB\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+D:\RODUZNF\Arx_Prog_NF\NF_LEMB\WindowsApplication1\WindowsApplication1\bin\Debug\System.Data.OracleClient.dll
+C:\Documents and Settings\Beilinson\Мои документы\practice_kpi\temp\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Documents and Settings\Beilinson\Мои документы\practice_kpi\temp\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Documents and Settings\Beilinson\Мои документы\practice_kpi\temp\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Documents and Settings\Beilinson\Мои документы\practice_kpi\temp\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Documents and Settings\Beilinson\Мои документы\practice_kpi\temp\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Documents and Settings\Beilinson\Мои документы\practice_kpi\temp\WindowsApplication1\WindowsApplication1\bin\Debug\System.Data.OracleClient.dll
+C:\Documents and Settings\Beilinson\Мои документы\practice_kpi\temp\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Beilinson\Мои документы\practice_kpi\temp\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+C:\Documents and Settings\Beilinson\Мои документы\practice_kpi\temp\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+C:\Documents and Settings\Beilinson\Мои документы\practice_kpi\temp\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+C:\Documents and Settings\Beilinson\Мои документы\practice_kpi\temp\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe.licenses
+D:\practice_kpi\temp\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+D:\practice_kpi\temp\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+D:\practice_kpi\temp\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+D:\practice_kpi\temp\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\practice_kpi\temp\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+D:\practice_kpi\temp\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+D:\practice_kpi\temp\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+D:\practice_kpi\temp\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe.licenses
+D:\practice_kpi\temp\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+D:\practice_kpi\temp\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+D:\practice_kpi\temp\WindowsApplication1\WindowsApplication1\bin\Debug\System.Data.OracleClient.dll
+D:\practice_kpi\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+D:\practice_kpi\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+D:\practice_kpi\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+D:\practice_kpi\WindowsApplication1\WindowsApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\practice_kpi\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+D:\practice_kpi\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.Properties.Resources.resources
+D:\practice_kpi\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+D:\practice_kpi\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe.licenses
+D:\practice_kpi\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+D:\practice_kpi\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+D:\practice_kpi\WindowsApplication1\WindowsApplication1\bin\Debug\System.Data.OracleClient.dll
+F:\practice_kpi\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+F:\practice_kpi\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+F:\practice_kpi\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb

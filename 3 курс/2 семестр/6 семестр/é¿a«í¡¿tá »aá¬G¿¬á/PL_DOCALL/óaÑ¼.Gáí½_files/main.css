@@ -1,0 +1,44 @@
+.menu {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: white;
+	background-color: #006699;
+	/*#F1E978;*/
+}
+a.link:link {
+	border: 1px solid #006699;
+	background-color: #006699;
+	text-decoration: none;
+	color: white;
+	padding: 3px;
+}
+a.link:visited {
+	border: 1px solid #006699;
+	background-color: #006699;
+	text-decoration: none;
+	color: white;
+	padding: 3px;
+}
+a.link:hover {
+	background-color: #C3DFED;
+	border: 1px solid #9FC0E1;
+	text-decoration: none;
+	color: #000000;
+}
+a.link1 {
+	font : bold 11px Verdana;
+	text-decoration: none;
+	color : black;
+}
+a.link1:hover {
+	color : blue;
+}
+P           { 
+              font-family: Arial; 
+              font-size : 10pt 
+            }
+Table      { 
+              font-family: Verdana; 
+              font-size : 10pt 
+            }

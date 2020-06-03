@@ -1,0 +1,12 @@
+D:\СПЗ\SPZ_4\SPZ_4\bin\Debug\SPZ_4.exe
+D:\СПЗ\SPZ_4\SPZ_4\bin\Debug\SPZ_4.pdb
+D:\СПЗ\SPZ_4\SPZ_4\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\СПЗ\SPZ_4\SPZ_4\obj\x86\Debug\SPZ_4.exe
+D:\СПЗ\SPZ_4\SPZ_4\obj\x86\Debug\SPZ_4.pdb
+H:\SPZ_4\SPZ_4\obj\x86\Debug\SPZ_4.exe
+H:\SPZ_4\SPZ_4\obj\x86\Debug\SPZ_4.pdb
+C:\Users\Мишко\Desktop\source1\SPZ_4\SPZ_4\bin\Debug\SPZ_4.exe
+C:\Users\Мишко\Desktop\source1\SPZ_4\SPZ_4\bin\Debug\SPZ_4.pdb
+C:\Users\Мишко\Desktop\source1\SPZ_4\SPZ_4\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Мишко\Desktop\source1\SPZ_4\SPZ_4\obj\x86\Debug\SPZ_4.exe
+C:\Users\Мишко\Desktop\source1\SPZ_4\SPZ_4\obj\x86\Debug\SPZ_4.pdb

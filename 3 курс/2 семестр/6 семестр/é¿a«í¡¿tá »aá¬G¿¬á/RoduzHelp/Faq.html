@@ -1,0 +1,181 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Часто возникающие вопросы</title>
+		<link type="text/css" href="scripts/css/superstyle/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+        <link type="text/css" href="scripts/css/superstyle/interface.css" rel="stylesheet" />	
+        <link rel="icon" type="image/png" href="logo.png" />
+ <link rel="stylesheet" type="text/css" href="scripts/js/syntax/styles/SyntaxHighlighter.css" />	
+		<script type="text/javascript" src="scripts/js/jquery-1.5.1.min.js"></script>
+		<script type="text/javascript" src="scripts/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script type="text/javascript" src="scripts/js/interface.js"></script>
+        <script language="javascript" src="scripts/js/syntax/scripts/shCore.js"></script>
+		<script language="javascript" src="scripts/js/syntax/scripts/shBrushCSharp.js"></script>
+        <script language="javascript" src="scripts/js/syntax/scripts/shBrushXml.js"></script>
+                <script>
+		$(document).ready(function()
+		{
+			$('.ui-icon-expanded').each(function(index)
+			{
+				SetHeaderState($(this));
+			});
+		});
+		</script>
+</head>
+
+<body>
+<h1 align="center">Часто возникающие вопросы</h1>
+<h1 align="center"><img src="resources/1317986272_Help-File.png" width="70" ></h1>
+<hr>
+<div align="center"><a id="prev" href="CustomizeForm.html"></a>&nbsp;<a id="next" href="WhatWhereWhen.html"></a></div>
+<hr>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Как передавать данные между классами (компонентами)
+</h3>
+<span>
+<p>Для передачи данных между разными компонентами (классами) на форме можна использовать:</p>
+<ul>
+  <li>Свойства</li>
+  <li>Методы</li>
+  <li>События</li>
+  </ul>
+<p>Связь через свойства и методы, это прямая связь, тоесть передача осуществляется из класса родителя в дочерний класс. Примером передачи через свойства является класс DataContext, который устанавливается на основную (родительскую) форму и через свойства устанавливается всем дочерним подформам. (рис. 1)</p>
+<p><img src="resources/formDataProperties.png" width="319" height="198"><img src="resources/subform1DataProperties.png" width="319" height="198"><img src="resources/subform2DataProperties.png" width="319" height="198"></p>
+<p>Рисунок 1. Установка контекста данных всем дочерним элементам формы и самой форме.</p>
+<p>Передача через события это вариант обратной связи, тоесть передача идет из дочернего класса в родительский. Например, сообщение о изменении в данных передаются из контекста данных в основную форму. Основная форма подписывается на событие, а дочерняя форма информирует подписчиков. Дополнительная информация о <a href="http://msdn.microsoft.com/ru-ru/library/x9fsa0sw.aspx">свойствах</a>, <a href="http://msdn.microsoft.com/ru-ru/library/8627sbea.aspx">событиях</a>.</p>
+</span>
+</div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Как и где выполнять преднастройки компонентов
+</h3>
+<span>
+<p>
+  Преднастройки компонентов должны выполнятся в 2-х методах:</p>
+<ul>
+  <li>OnBeginInitializeForm - вызывается перед началом инициализации компонентов формы.</li>
+  <li>OnEndInitializeForm - вызывается после  инициализации компонентов формы.</li>
+  </ul>
+Пример:
+<pre name="code" class ="c-sharp">
+        protected virtual void OnEndInitializeForm()
+        {
+            //Выполняем настройку компонентов формы.
+            dbContext.RegisterObserver(this);
+            dbContext.OwnerFormProperty = formProperty;
+            SetSelectedRowChangedHandlers(this.Controls);
+            SetRowAppearanceToControls(this.Controls);
+        }
+</pre>
+</span>
+</div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Как боротся со сбрасыванием свойств в настройках (режим дизайна)
+</h3>
+<span>
+Некоторые свойства настраиваемые через дизайнер не могут нормально сохранится и при перезагрузке дизайнера слетают, такие свойства следует задавать при загрузке компонента.
+<pre name="code" class ="c-sharp">
+private void MainDocument_Load(object sender, EventArgs e)
+{
+    vFormData.OptionsView.ColumnAutoWidth = true;
+    vFormData.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.None;
+    
+    if (DesignMode)
+    	return;
+    ...
+}
+</pre>
+</span>
+</div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Как убрать шаблонную строку (GridBaseSubForm) и выставить автоширину колонок.
+</h3>
+<span>
+Смотри пункт выше=)
+</span>
+</div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Как добавить кнопки на навигатор
+</h3>
+<span>
+<p>
+  Добавление кнопок в навигатор осуществляется из свойства навигатора CustomButtons (рис. 1).
+  <img src="resources/addNavigatorButtons.png" width="1098" height="676"></p>
+<p>Рисунок 1. Добавление кнопок навигатора.<br>
+  <br>
+  Чтобы задать рисунки на добавленные кнопки, нужно переопределить свойство ImageList (рис. 2).</p>
+<p><img src="resources/navigatorImages.png" width="422" height="576"> </p>
+<p>Рисунок 2. Переопределенное свойство ImageList.</p>
+</span></div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Как добавить элементы управления к уже готовым компонентам.
+</h3>
+<span>
+Добавление элементов к подформе которая содержит Grid/TreeList делается очень просто, так как основным элементом там является Layout, все элементы добавляются на него (рис. 1).
+<p><img src="resources/addingControllTOForm.png" width="1047" height="715"></p>
+<p>Рисунок 1. Помещение элементов управления на подформу.</p>
+</span></div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Как боротся с ошибками дизайнера в студии.
+</h3>
+<span>
+Есть два способа борьбы (при условии что нет ошибок компиляции):
+<ul>
+  <li>Закрыть окно дизайнера и открыть заново.</li>
+  <li>Закрыть Visual Studio и открыть заново.</li>
+</ul>
+</span>
+</div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Что делать если на форме всего одна вкладка и ненужно отбражать ее имя.
+</h3>
+<span>
+Скрыть заголовок панели (TabPage) (рис. 1)
+<p><img src="resources/hideTabPage.png" width="422" height="357"></p>
+<p>Рисунок 1. Скрытие панели заголовков.</p>
+</span></div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Как добавить элемент управления на Bar основной формы.
+</h3>
+<span>
+Элемент управления на панель основной формы добавляется стандартно и помещается после кнопки выход. Чтобы переместить его левее нужно записать в обработчик Load основной формы.
+<pre name="code" class ="c-sharp">
+private void FRMSALDO_NF_Load(object sender, EventArgs e)
+{
+    //...
+    this.mainBar.LinksPersistInfo.Remove(this.mainBar.LinksPersistInfo[btnExit.Id]);
+    this.mainBar.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle,
+                                                      this.btnExit,
+                                                      DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph));
+    //...
+}
+</pre>
+Данный код сначала удаляяет кнопку Выход с панели, а потом возвращает ее. Таким образом, все кнопки которые находятся после кнопки Выход будут смещены влево.
+</span>
+</div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Литература которая помогает!
+</h3>
+<span>
+<ol>
+  <li>Разработка компонентов в MS Visual Studio (Павел Агуров)</li>
+  <li>Чистый код. (Роберт Мартин)</li>
+  <li>Рефакторинг. Улучшение существующего кода (Мартин Фаулер)</li>
+  <li>Екстремальное программирование (Кент Бек)</li>
+  <li> Рефакторинг к паттернам (Джошуа Кериевски)</li>
+  </ol>
+</span></div>
+<br>
+<hr>
+<div align="center"><a id="prev" href="CustomizeForm.html"></a>&nbsp;<a id="next" href="WhatWhereWhen.html"></a></div>
+</body>
+</html>

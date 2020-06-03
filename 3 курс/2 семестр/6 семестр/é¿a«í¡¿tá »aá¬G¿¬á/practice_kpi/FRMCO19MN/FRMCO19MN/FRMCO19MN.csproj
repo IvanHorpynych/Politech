@@ -1,0 +1,185 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7B354FE0-88B3-45E9-B16D-36AEF601351F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>FRMCO19MN</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FRMCO19MN</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\ReleaseRoduz\Modulerd\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CoreLab.Data, Version=4.70.24.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Devart\OraDirect.NET2\CoreLab.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="CoreLab.Oracle, Version=4.75.43.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v8.2">
+      <Name>DevExpress.Data.v8.2</Name>
+      <AssemblyFolderKey>hklm\developer express .net v6.3</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v8.2">
+      <Name>DevExpress.Utils.v8.2</Name>
+      <AssemblyFolderKey>hklm\developer express .net v6.3</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v8.2">
+      <Name>DevExpress.XtraBars.v8.2</Name>
+      <AssemblyFolderKey>hklm\developer express .net v6.3</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v8.2">
+      <Name>DevExpress.XtraEditors.v8.2</Name>
+      <AssemblyFolderKey>hklm\developer express .net v6.3</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v8.2">
+      <Name>DevExpress.XtraGrid.v8.2</Name>
+      <AssemblyFolderKey>hklm\developer express .net v6.3</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v8.2">
+      <Name>DevExpress.XtraNavBar.v8.2</Name>
+      <AssemblyFolderKey>hklm\developer express .net v6.3</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v8.2">
+      <Name>DevExpress.XtraScheduler.v8.2</Name>
+      <AssemblyFolderKey>hklm\developer express .net v6.3</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v8.2.Core">
+      <Name>DevExpress.XtraScheduler.v8.2.Core</Name>
+      <AssemblyFolderKey>hklm\developer express .net v6.3</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v8.2">
+      <Name>DevExpress.XtraVerticalGrid.v8.2</Name>
+      <AssemblyFolderKey>hklm\developer express .net v6.3</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Interop.Excel, Version=1.5.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ReleaseRoduz\Modulerd\Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="RDA, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ReleaseRoduz\Modulerd\RDA.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Name>System.EnterpriseServices</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChartDataSourceSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartDataSourceSelector.Designer.cs">
+      <DependentUpon>ChartDataSourceSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMCO19MN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="ChartDataSourceSelector.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChartDataSourceSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMCO19MN.resx">
+      <DependentUpon>FRMCO19MN.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

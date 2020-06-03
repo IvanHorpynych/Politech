@@ -1,0 +1,203 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Пошаговое создание документа</title>
+		<link type="text/css" href="scripts/css/superstyle/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+        <link type="text/css" href="scripts/css/superstyle/interface.css" rel="stylesheet" />	
+        <link rel="icon" type="image/png" href="logo.png" />
+ <link rel="stylesheet" type="text/css" href="scripts/js/syntax/styles/SyntaxHighlighter.css" />	
+		<script type="text/javascript" src="scripts/js/jquery-1.5.1.min.js"></script>
+		<script type="text/javascript" src="scripts/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script type="text/javascript" src="scripts/js/interface.js"></script>
+        <script language="javascript" src="scripts/js/syntax/scripts/shCore.js"></script>
+		<script language="javascript" src="scripts/js/syntax/scripts/shBrushCSharp.js"></script>
+        <script language="javascript" src="scripts/js/syntax/scripts/shBrushXml.js"></script>
+</head>
+
+<body>
+<h1 align="center">Создание проекта и установка базовых классов</h1>
+<h1 align="center"><img src="resources/createDocument.png" width="70" ></h1>
+<hr>
+<div align="center"><a id="prev" href="index.html"></a>&nbsp;<a id="next" href="LoadDataFromDB.html"></a></div>
+<hr>
+<h2>1. Создание нового проекта в Visual Studio и добавление ссылок на библиотеки.</h2>
+<p>Создайте обычный проект C# WinForms.</p>
+<p><img src="resources/newProject.png" width="347" height="268"></p>
+<p>Рисунок 1. Solution Explorer после создания нового проекта.</p>
+<p> После создания нового проекта в Visual Studio следует указать ссылки (References) на все необходимые библиотеки (рис. 2).</p>
+<p><img src="resources/newProjectWithRef.png" width="346" height="466"></p>
+<p>Рисунок 2. Solution Explorer после создания нового проекта.</p>
+<p>Примечание:<br>
+- Библиотека SymMathLib указывается только в случае создания документа с расчетом сумм и увязок, ее не нужно указывать если создается справочник.<br>
+- Библиотека DevExpress.XtraGrid.v8.2 указывается только в случае создания подформы с гридом, класс RoduzGridBaseDocumentSubForm.<br>
+- Библиотека DevExpress.XtraTreeList.v8.2 указывается только в случае создания подформы с деревом, класс RoduzTreeListBaseDocumentSubForm.</p>
+<h2>2. Создание необходимых компонентов и указание базовых классов.</h2>
+<p>Архитектура документов в системе подразумевает разделение на слои ответственности, в нашем случае их 3.</p>
+<ul>
+  <li><a href="#p2_1">Слой данных (DataContext)</a></li>
+  <li><a href="#p2_2">Слой подформ документа (SubForm)</a></li>
+  <li><a href="#p2_3">Слой формы (RoduzForm)</a></li>
+</ul>
+<h3 id="p2_1"><dd>2.1 Создание слоя данных</dd></h3>
+<p>Слой данных представлен компонентом, который наследуется от одного из классов контекстов (рис. 3).
+
+<p><img src="resources/dataContextDiagram.png" width="475" height="537">
+<p>Рисунок 3. Диаграмма контекстов данных.
+<table width="50%" border="1">
+  <tr>
+    <th width="34%" scope="col">Класс контекста</th>
+    <th width="66%" scope="col">Описание</th>
+  </tr>
+  <tr>
+    <td><strong>DataContextBase</strong></td>
+    <td><p>Базовый класс для всех контекстов, реализует основной набор операций с данными. Используется как базовый для тех форм в которых нет необходимости в расчете сумм или для справочников. </p>    </td>
+  </tr>
+  <tr>
+    <td><strong>FormDataContextBase</strong></td>
+    <td>Базовый класс для контекстов документов в которых нет обработки проводок. Дополняет DataContextBase реализуя операции расчета сумм и увязок, генерацию последовательностей.</td>
+  </tr>
+  <tr>
+    <td><strong>AccountDataContext</strong></td>
+    <td>Базовый класс для контекстов документов в которых есть необходимости работать с таблицами счетов. Дополняет FormDataContextBase предоставляя стандартно таблицы счетов 2-го, 4-го и 6-го порядка.</td>
+  </tr>
+  <tr>
+    <td><strong>SaldoDataContext</strong></td>
+    <td>Базовый класс для контекстов документов которые обрабатывают сальдо. Реализует методы расчета и сохранения сальдо.</td>
+  </tr>
+  <tr>
+    <td><strong>AccTransactionFormsDataContext</strong></td>
+    <td>Базовый класс для контекстов документов которые которые включают вкладку с сохранением проводок. Реализует методы построения шаблона проводок, наложение сумм из архива формы на шаблон проводок и сохранение проводок в архив проводок.</td>
+  </tr>
+</table>
+<p>На данном этапа необходимо определить какой именно из класов контекстов необходимо использовать, это зависит от функциональных потребностей создаваемой формы. Так допустим что создаваемая форма реализует подсчет контрольных сумм/увязок и сохранение данных в проводоки, то необходимо выбрать <strong>AccTransactionFormsDataContext</strong>, так как выбор другого класа вынудить нас писать реализацию функций сохранения в проводки самим. С другой стороны допустим что документ реализует расчет сумм но не имеет вкладки проводок то выбор класса <strong>AccTransactionFormsDataContext</strong> поместит лишнюю функциональность в код которая никогда не будет использоватся, для такого случая правельным выбором будет <strong>FormDataContextBase</strong>.</p>
+<p>После выбора класса можно перейти к созданию компонента который собственно и будет представлять слой данных. (рис. 4- рис. 6)</p>
+<p><img src="resources/newComponent.png" width="411" height="533"></p>
+<p>Рисунок 4. Добавление компонента в проект</p>
+<p><img src="resources/newComponentName.png" width="681" height="419"></p>
+<p>Рисунок 5. Указание имени комонент. (необезательно DataContext!)</p>
+<p><a href="resources/newComponentView.png" target="_blank"><img src="resources/newComponentView.png" width="50%"></a></p>
+<p>Рисунок 6. Результат добавления компонента.</p>
+<p>Добавленный компонент все еще не является контекстом так как наследуется от класса Component. Что бы зделать его контекстом необходимо унаследовать его от одно из классов контекста в нашем случае это будет <strong>AccTransactionFormsDataContext</strong>.</p>
+<p>public partial class DataContext : DataManipulation.AccTransactionFormsDataContext</p>
+<p>Все тепрь наш компонент полноценный контекст данных.</p>
+<h3 id="p2_2">
+  <dd>2.2 Создание слоя подформ документа</dd>
+</h3>
+<p>Подформа представляет собой функциональную единицу документа совокупность которых и формирует непосредсвенно документ. Подформы располагаются на вкладка документа и предоставляют пользователю интерфейс для обработки данных.</p>
+<p>Иерархия классов подформ изображена на рис. 7.</p>
+<p><img src="resources/subformsDiagram.png" width="595" height="537"></p>
+<p>Рисунок 7. Классы подформ..<br>
+</p>
+<table width="50%" border="1">
+  <tr>
+    <th width="37%" scope="col">Класс подформы</th>
+    <th width="63%" scope="col">Описание</th>
+  </tr>
+  <tr>
+    <td><strong>BaseRoduzSubForm</strong></td>
+    <td>Базовый класс для всех подформ, реализует основной набор свойств и операций. Почти никогда не используется как базовый для конечных подформ.</td>
+  </tr>
+  <tr>
+    <td><strong>RoduzBaseDocumentSubForm</strong></td>
+    <td>Дополняет BaseRoduzSubForm , реализуя операции Експорта. Почти никогда не используется как базовый для конечных подформ.</td>
+  </tr>
+  <tr>
+    <td><strong>RoduzGridBaseDocumentSubForm</strong></td>
+    <td>Используется как базовый класс для всех подформ в которых основным елементом управления есть грид.</td>
+  </tr>
+  <tr>
+    <td><strong>RoduzTreeListBaseDocumentSubForm</strong></td>
+    <td>Используется как базовый класс для всех подформ в которых основным елементом управления есть дерево.</td>
+  </tr>
+  <tr>
+    <td><strong>RoduzAccTransactionSubForm</strong></td>
+    <td>Используется как базовый класс для подформы проводок.</td>
+  </tr>
+</table>
+<p>Таким образом, если необходимо создать подформу с елементом управления типа Grid то используем <strong>RoduzGridBaseDocumentSubForm</strong>. Если необходимо создать подформу которая не содержит ни Grid ни TreeList то используем либо <strong>RoduzBaseDocumentSubForm</strong> либо<strong>BaseRoduzSubForm</strong> в зависимости от необходимости експорта.</p>
+<p>После того, как определили какой класс будет необходим для подформы, нужно добавить соответствующий компонент (рис. 8-10).</p>
+<p><img src="resources/newUserControl.png" width="402" height="568"></p>
+<p>Рисунок 8. Добавление пользовательского елемента управления в проект.</p>
+<p><img src="resources/newUserControlName.png" width="681" height="419"></p>
+<p>Рисунок 9. Указываем имя елемента.</p>
+<p><a href="resources/newUserControlView.png" target="_blank"><img src="resources/newUserControlView.png" width="50%" ></a>
+<p>Рисунок 10. Результат добавления елемента.
+<p>Так же как и в случае с контекстами данных, созданый елемент управления не является подформой, чтобы он ею стал, его нужно унаследовать от одного из классов подформ.
+<p>public partial class MainDocumentUI : RoduzForms.RoduzGridBaseDocumentSubForm
+<p>Результат видно на рис.11.
+<p><img src="resources/gridbasesubformView.png" width="693" height="565">
+<p>Рисунок 11.  Дизайнер компонента после установки базового класса.
+<p>По такой же схеме создаются все (по количеству вкладок) подформы документа.<br>
+Каждая подформа в документе может наследовать различные классы независимо от других подформ. Тоесть можна создать одновременно две вкладки документа одна с елементом TreeList а одна с елементом Grid.
+<p>Примечание: В данном примере я создам две подформы, одна с Grid (MainDocumentUI) и одна с TreeList (MainDocumentUI2)<br>
+<h3 id="p2_3">
+  <dd>2.3 Создание слоя формы</dd>
+</h3>
+
+<p>Форма представляет собой контейнер который содержит все подформы документа и контекст данных. Форма наследуется от одного из класов форм (рис. 12)</p>
+<p><img src="resources/formsDiagram.png" width="571" height="522"></p>
+<p>Рисунок 12. Классы форм.</p>
+<table width="50%" border="1">
+  <tr>
+    <th width="44%" scope="col">Класс формы</th>
+    <th width="56%" scope="col">Описание</th>
+  </tr>
+  <tr>
+    <td><strong>BaseRoduzForm</strong></td>
+    <td>Базовый класс для всех форм содержит базовую логику управления подформами. Никогда не используется как базовый класс для конечных документов.</td>
+  </tr>
+  <tr>
+    <td><strong>BaseDocumentRoduzForm</strong></td>
+    <td>Дополняет BaseRoduzForm добавляя основные елементы пользовательского интерфейса для документов (кнопки сохранения, изменения режима, импорта/експорт, подписи, и т.д.). Никогда не используется как базовая для конечных документов.</td>
+  </tr>
+  <tr>
+    <td><strong>RoduzStandartDocumentForm</strong></td>
+    <td>Дополняет BaseDocumentRoduzForm добавляя панель вкладок для подформ и методы управления ею. Используется как базовая форма для форм без вкладки проводок.</td>
+  </tr>
+  <tr>
+    <td><strong>RoduzStandartAccTransactionDocumentForm</strong></td>
+    <td>Дополняет RoduzStandartDocumentForm добавляя вкладку проводок и методы управления ею. Используется как базовая форма для форм с вкладкой &quot;Формирование проводок&quot;.</td>
+  </tr>
+  <tr>
+    <td><strong>BaseNSIRoduzForm</strong></td>
+    <td>Дополняет BaseRoduzForm добавляя основные елементы пользовательского интерфейса для справочников (кнопки сохранения, изменения режима, импорта/експорт, и т.д.). Используется как базовая форма для всех справочников системы.</td>
+  </tr>
+</table>
+<p>Определить какой класс формы нужно использовать для вашего приложения довольно просто. Если нужно создать документ который не реализует вкладку &quot;Формирование проводок&quot; то наследуем от <strong>RoduzStandartDocumentForm,</strong> если нужна такая вкладка, то берем <strong>RoduzStandartAccTransactionDocumentForm</strong>. В случае справочника единственный вариант <strong>BaseNSIRoduzForm</strong>.</p>
+<p>Класс формы уже есть он был создан при создании стандартного проекта. все что осталось это унаследовать его выбраного класса формы.<br>
+</p>
+<p>Для стандартной <a href="resources/standartForm.png" target="_blank">формы</a> без вкладки проводок:<br>
+  public partial class Form1 : RoduzForms.RoduzStandartDocumentForm</p>
+<p>Для стандартной <a href="resources/standartFormWithAcc.png" target="_blank">формы</a> с вкладкой проводок:<br>
+public partial class Form1 : RoduzForms.RoduzStandartAccTransactionDocumentForm</p>
+<p>Для стандартной <a href="resources/ndiForm.png" target="_blank">формы</a> справочника:<br>
+public partial class Form1 : RoduzForms.RoduzForms.NDI.BaseNSIRoduzForm</p>
+<p>&nbsp;</p>
+<p>Примечание: Во избежание проблем с именами рекомендуется перенести классы контекста данных и подформы в отдельное пространство имен.</p>
+<h2>3. Установка компонентов на форму</h2>
+<p>Теперь когда все компоненты созданы нужно их связать. Связывание компонентов выполняется в классе формы которая является основным элементом проекта, в ней так же будут выставлятся все настройки.</p>
+<p>Все пользовательские компоненты становятся доступными во вкладке ToolBox (рис. 13) после успешной компиляции проекта (Ctrl+Shift+B).</p>
+<p><img src="resources/createdComponents.png" width="258" height="430"></p>
+<p>Рисунок 13. Созданные компоненты</p>
+<p>Теперь необходимо поместить все эти компоненты на форму (рис. 14).</p>
+<p>Контекст данных является невизуальным компонентом, поетому его можно тащить с ToolBox на любой участок формы, а вот подформы должны быть размещены каждая на своей вкладке.<br>
+  По умолчанию при наследовании от любого из классов <strong>RoduzStandartDocumentForm</strong> или <strong>RoduzStandartAccTransactionDocumentForm</strong> создается стандартная вкладка для подформы, если необходимо использовать больше одной подформы то следует <a href="resources/additionalTab.png" target="_blank">создать</a> необходимое количество вкладок.<br>
+</p>
+<p>Примечание: Первым всегда следует помещать контекст данных (DataContext) так как он устанавливается и для формы и для подформ.</p>
+<p><a href="resources/documentViewAfterPlacingComponents.png" target="_blank"><img src="resources/documentViewAfterPlacingComponents.png" width="50%"></a></p>
+<p>Рисунок 14. Вид документа после помещение компонентов.</p>
+<h2>4. Настройка свойств компонентов</h2>
+<p>Если вы пробывали запускать создаваемый проект на предыдущих этапах то наверное заметили что он не совсем похож на документ который нам нужен, к тому же он еще и выкидывает ошибку при переходе на вкладу проводок или например при попытке нажать на какую нибуть кнопку =(.<br>
+Так происходит по той простой причине что компоненты нужно настроить правильно.</p>
+<p>Первым делом необходимо проверить/установить свойство &quot;Управления данными&quot; в каждой из подформ и также в основной форме. (рис. 15)</p>
+<p><img src="resources/formDataProperties.png" width="319" height="198"><img src="resources/subform1DataProperties.png" width="319" height="198"><img src="resources/subform2DataProperties.png" width="319" height="198"></p>
+<p>Рисунок 15. Установленные свойства данных</p>
+<p>Вы могли заметить что данное свойство для формы было не установленно а для подформ уже установленно, так происходит если подформы добавляются после добавления контекста данных.</p>
+<p>Теперь можно приступить к настройке контекста данных и написанию собственного кода.</p>
+
+<br>
+<hr>
+<div align="center"><a id="prev" href="index.html"></a>&nbsp;<a id="next" href="LoadDataFromDB.html"></a></div>
+
+</body>
+</html>

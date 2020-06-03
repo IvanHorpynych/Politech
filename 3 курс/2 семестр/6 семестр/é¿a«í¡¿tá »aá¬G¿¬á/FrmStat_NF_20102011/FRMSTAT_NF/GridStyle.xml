@@ -1,0 +1,109 @@
+﻿<XtraSerializer version="1.0" application="View">
+  <property name="#LayoutVersion" />
+  <property name="PreviewFieldName" />
+  <property name="VertScrollTipFieldName" />
+  <property name="ChildGridLevelName" />
+  <property name="GroupFooterShowMode">VisibleIfExpanded</property>
+  <property name="NewItemRowText" />
+  <property name="GroupPanelText" />
+  <property name="RowHeight">-1</property>
+  <property name="VertScrollVisibility">Auto</property>
+  <property name="HorzScrollVisibility">Auto</property>
+  <property name="GroupFormat">{0}: [#image]{1} {2}</property>
+  <property name="GroupRowHeight">-1</property>
+  <property name="LevelIndent">-1</property>
+  <property name="ActiveFilterEnabled">true</property>
+  <property name="FocusRectStyle">CellFocus</property>
+  <property name="ScrollStyle">LiveVertScroll, LiveHorzScroll</property>
+  <property name="HorzScrollStep">3</property>
+  <property name="BestFitMaxRowCount">-1</property>
+  <property name="PreviewLineCount">-1</property>
+  <property name="PreviewIndent">-1</property>
+  <property name="CustomizationFormBounds">@1,X=0@1,Y=0@1,Width=0@1,Height=0</property>
+  <property name="ShowButtonMode">ShowForFocusedCell</property>
+  <property name="FooterPanelHeight">-1</property>
+  <property name="DetailTabHeaderLocation">Top</property>
+  <property name="Name">bGV_TabRelat</property>
+  <property name="BandPanelRowHeight">-1</property>
+  <property name="DetailHeight">350</property>
+  <property name="MinBandPanelRowCount">1</property>
+  <property name="Columns" iskey="true" value="3">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Caption">1</property>
+      <property name="Fixed">None</property>
+      <property name="VisibleIndex">0</property>
+      <property name="Name">C1</property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Caption">2</property>
+      <property name="Width">620</property>
+      <property name="Fixed">None</property>
+      <property name="VisibleIndex">1</property>
+      <property name="Name">С2</property>
+    </property>
+    <property name="Item3" isnull="true" iskey="true">
+      <property name="ColumnEditName" />
+      <property name="Visible">true</property>
+      <property name="Caption">3</property>
+      <property name="Width">120</property>
+      <property name="Fixed">None</property>
+      <property name="VisibleIndex">2</property>
+      <property name="Name">С3</property>
+    </property>
+  </property>
+  <property name="SynchronizeClones">true</property>
+  <property name="RowSeparatorHeight">0</property>
+  <property name="ColumnPanelRowHeight">-1</property>
+  <property name="IndicatorWidth">-1</property>
+  <property name="FixedLineWidth">2</property>
+  <property name="BorderStyle">Default</property>
+  <property name="ViewCaption" />
+  <property name="Bands" iskey="true" value="3">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="RowCount">2</property>
+      <property name="MinWidth">20</property>
+      <property name="Columns" iskey="true" value="1">
+        <property name="Item1">C1</property>
+      </property>
+      <property name="Name">gridBand1</property>
+      <property name="Caption">№ п/п</property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Width">75</property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="MinWidth">20</property>
+      <property name="Columns" iskey="true" value="1">
+        <property name="Item1">С2</property>
+      </property>
+      <property name="Name">gridBand3</property>
+      <property name="Caption">Повна назва</property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="Width">620</property>
+    </property>
+    <property name="Item3" isnull="true" iskey="true">
+      <property name="MinWidth">20</property>
+      <property name="Columns" iskey="true" value="1">
+        <property name="Item1">С3</property>
+      </property>
+      <property name="Name">gridBand4</property>
+      <property name="Caption">Скорочена назва</property>
+      <property name="Children" iskey="true" value="0" />
+      <property name="AppearanceHeader" isnull="true" iskey="true">
+        <property name="TextOptions" isnull="true" iskey="true">
+          <property name="VAlignment">Center</property>
+          <property name="HAlignment">Center</property>
+        </property>
+        <property name="Options" isnull="true" iskey="true">
+          <property name="UseTextOptions">true</property>
+        </property>
+      </property>
+      <property name="Width">120</property>
+    </property>
+  </property>
+  <property name="ActiveFilterString" />
+  <property name="GroupSummary" iskey="true" value="0" />
+</XtraSerializer>

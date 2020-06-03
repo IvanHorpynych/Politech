@@ -1,0 +1,580 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Добавление своей функциональности</title>
+		<link type="text/css" href="scripts/css/superstyle/jquery-ui-1.8.14.custom.css" rel="stylesheet" />	
+        <link type="text/css" href="scripts/css/superstyle/interface.css" rel="stylesheet" />	
+        <link rel="icon" type="image/png" href="logo.png" />
+ <link rel="stylesheet" type="text/css" href="scripts/js/syntax/styles/SyntaxHighlighter.css" />	
+		<script type="text/javascript" src="scripts/js/jquery-1.5.1.min.js"></script>
+		<script type="text/javascript" src="scripts/js/jquery-ui-1.8.14.custom.min.js"></script>
+<script type="text/javascript" src="scripts/js/interface.js"></script>
+        <script language="javascript" src="scripts/js/syntax/scripts/shCore.js"></script>
+		<script language="javascript" src="scripts/js/syntax/scripts/shBrushCSharp.js"></script>
+        <script language="javascript" src="scripts/js/syntax/scripts/shBrushXml.js"></script>
+        <script>
+		$(document).ready(function()
+		{
+			$('.ui-icon-expanded').each(function(index)
+			{
+				SetHeaderState($(this));
+			});
+			
+		});
+		</script>
+</head>
+<body>
+<h1 align="center">Добавление своей функциональности</h1>
+<h1 align="center"><img src="resources/6040D-programing.gif" width="70" ></h1>
+<hr>
+<div align="center"><a id="prev" href="LoadDataFromDB.html"></a>&nbsp;<a id="next" href="Faq.html"></a></div>
+<hr>
+<h2><dd>&nbsp;</dd>
+</h2>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Настройки полей данных и таблиц архива.
+</h3>
+<span>
+<p>Для управления данными (расчет сумм, подстановка начальных значений, и т.д.) следует указать параметры документа в свойствах контекста данных (DataContext).<br>
+Свойства данных (рис. 1) описывают одну подформу документа (вкладку), и состоят из следующих параметров:</p>
+<table width="50%" border="1">
+  <tr>
+    <th scope="col">Имя</th>
+    <th scope="col">Описание</th>
+  </tr>
+  <tr>
+    <td>Архитектура документа</td>
+    <td>Архитектура документа показывает как данные хранятся в таблице архива, и принимает одно из следующих значений:
+      <ul>
+        <li>Горизонтальная (horizontal)</li>
+        <li>Вертикальная (vertical)</li>
+        <li>Смешанная (mixed)</li>
+      </ul>
+    <p>От этого свойства зависит как система будет расчитывать суммы и увязки а также накладывать проводки.<br>
+    В одному документе может одновременно присутствовать каждая из типов архитектур.</p></td>
+  </tr>
+  <tr>
+    <td>Имя таблицы архива</td>
+    <td>Имя таблицы в контексте данных которые обрабатываются на текущей вкладке.</td>
+  </tr>
+  <tr>
+    <td>Колонки данных</td>
+    <td>Список колонок (имена полей в архиве) которые предназначены для хранения сумм документа.</td>
+  </tr>
+  <tr>
+    <td>Настройки внутренних увязок</td>
+    <td>Позволяет задать формулы для расчета увязок.</td>
+  </tr>
+  <tr>
+    <td>Настройки сумматора</td>
+    <td>Позволяет задать формулы для расчета сумм.</td>
+  </tr>
+  <tr>
+    <td>Настройки экспорта</td>
+    <td>Настройки колонок которые будут экспортироватся для каждой вкладки эксель документа.</td>
+  </tr>
+  <tr>
+    <td>Поле даты при периоде</td>
+    <td>Имя поля в котором будет хранится дата при выборе документа за период, это позволит автоматически заменить числовую дату на происную форму.</td>
+  </tr>
+</table>
+<p><img src="resources/ContextdataProperty.png" width="354" height="306"></p>
+<p>Рисунок 1. Свойства данных контекста.</p>
+<p>Таким образом количество свойств данных равняется количеству вкладок на документе (не считая вкладку проводок).<br>
+Здесь мы подробей рассмотрим два свойства:</p>
+<ul><li>Имя таблицы архива</li>
+  <li>Колонки данных</li>
+</ul>
+<p>
+<div class="ui-state-highlight">
+<span class="ui-usericon ui-icon-usernote"></span>
+<strong>Примечание:</strong><br>
+  Прежде всего следует задать архитектуру документа.
+</div>
+<p>Итак, имя таблицы архива должно жостко соответствовать тому имени которое было присвоенно таблице при <a href="LoadDataFromDB.html">создании</a> в контексте данных (рис. 2), оно будет использоваться системой для выборки данных из контекста. Если имя таблицы задано неверно или такая таблица не существует в контексте данных, то будут выбрасыватся исключения.</p>
+<p><a href="resources/ArhiveNameProperty.png"><img src="resources/ArhiveNameProperty.png" width="50%" ></a></p>
+<p>Рисунок 2. Связь между таблицами контекста данных и полем &quot;Имя таблицы архива&quot;.</p>
+<p>Теперь что касательно колонок данных, они представляют собой простой масив (рис. 3), который указывает на те колонки документа в которых хрантся суммы (не путать с расчетными суммами.). Система использует данное свойство для установки начальных нулей в полях, для расчета сумм/увязок и для наложения проводок.</p>
+<p><img src="resources/dataColumns.png" width="509" height="485"></p>
+<p>Рисунок 3. Колонки данных.</p>
+<p>Оба описанных свойства нужно задавать для каждой вкладки документа. Задаются они из свойств контекста данных на основной форме.</p>
+<span>
+</div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Заливка сумм из таблиц архива в таблицу проводок.
+</h3>
+<span>
+<p>Для заливки сумм из таблиц архива в таблицу проводок обязательно должны быть заполненны поля данных. (см. раздел &quot;Настройки полей данных и таблиц архива&quot;).<br>
+Настройка заливки данных из архивов в проводки производится в свойстве &quot;Заливка данных&quot; контекста данных формы.<br>
+Вся настройка типично заключается в указании двух параметров:</p>
+<ul>
+  <li>Имя таблицы архива</li>
+  <li>Тип наложения</li>
+</ul>
+<p>С именем таблицы мы уже знакомы из раздела &quot;Настройки полей данных и таблиц архива&quot;. Тип наложения данных показывает как именно следует выполнять заливку.</p>
+<table width="50%" border="1">
+  <tr>
+    <th scope="col">Имя</th>
+    <th scope="col">Описание</th>
+  </tr>
+  <tr>
+    <td>OverlayByRow</td>
+    <td>Указывается для вертикальной архитектуры. Строки ищутся по полю GRARH. </td>
+  </tr>
+  <tr>
+    <td>OverlayByColumn</td>
+    <td>Указывается для горизонтальной архитектуры, заливка данных выполняется построчно, для каждого указанного поля данных.</td>
+  </tr>
+  <tr>
+    <td>MixedOverlay</td>
+    <td>Указывается для смешаного типа, в котором при вертикальной архитектуре присутствует множество полей данных.</td>
+  </tr>
+  <tr>
+    <td>CustomOverlay</td>
+    <td>Позволяет определить собственный способ заливки данных.</td>
+  </tr>
+</table>
+<p>Пример настроек заливки на рис. 4.</p>
+<p><img src="resources/dataoverlay.png" width="524" height="330"></p>
+<p>Рисунок 4. Свойства заливки данных.</p>
+<p>Если не один из стандартных методов наложения не подходит то можно определить свой.<br>
+Для определения своего способа наложенния данных нужно выполнить следующую последовательность действий:</p>
+<ul>
+  <li>Установить свойству &quot;Тип наложения&quot; значение CustomOverlay.</li>
+  <li>Создать класс который будет реализовывать логику наложения данных. Такой класс должен быть унаследован от DataManipulation.OverlayData.</li>
+  <li>Установить обработчик события OnCustomStrategyCreated.</li>
+  <li>В обработчике события установить пользовательскую стратегию наложения.</li>
+</ul>
+<pre name="code" class ="c-sharp">
+	....
+    private void dataContext1_OnCustomDataOverlay(DataManipulation.Properties.DataOverlayProperty arg)<br>
+    {
+         arg.SetCustomOverlayStrategy(new MyOverlay());<br>
+    }
+	.... 
+    public class MyOverlay:DataManipulation.OverlayData<br>
+    {
+        public override void ExecuteDataOverlay(DataManipulation.OverlayContext context)
+        {
+         	//Здесь логика наложения.
+        }
+    }
+  </pre>
+  </span>
+  </div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Расчет сумм и увязок документа
+</h3>
+<span>
+<p>Для заливки сумм из таблиц архива в таблицу проводок обязательно должны быть заполненны поля данных. (см. раздел &quot;Настройки полей данных и таблиц архива&quot;).<br>
+Настройка расчета сум и увязок производится из свойств данных контекста. Суммы и увязки задаются в виде обычных математических формул, переменными в которых выступают либо колонки либо коды GRARH в зависимости от архитектурі документа.</p>
+<p>Настройки сумматора/внутренних увязок состоят из следующих єлементов:</p>
+<table width="50%" border="1">
+  <tr>
+    <th width="20%" scope="col">Имя</th>
+    <th width="80%" scope="col">Описание</th>
+  </tr>
+  <tr>
+    <td>Колонки данных</td>
+    <td>Используется только для вертикальных документов, и указывает на колонки которые должны быть задействованы в расчете. Если значение не указано значит задействуются все колонки.</td>
+  </tr>
+  <tr>
+    <td>Поле назначение</td>
+    <td>Имя колонки или графы (GRARH) в которую будет помещен результат расчета или которая будет отображать состояние внутренней увязки.</td>
+  </tr>
+  <tr>
+    <td>Формула</td>
+    <td>Формула расчета суммы/увязки. Для сумм формула задается используя обычные математические операторы без равенства (рис. 1), а для увязок следует задать выражение равенства (рис. 2).</td>
+  </tr>
+</table>
+<p><img src="resources/sumProperty.png" width="655" height="330"></p>
+<p>Рисунок 1. Установка свойств сумматора.</p>
+<p><img src="resources/linksproperty.png" width="770" height="332"></p>
+<p>Рисунок 2. Установка свойств внутренней увязки.</p>
+<p>
+<div class="ui-state-highlight">
+<span class="ui-usericon ui-icon-usernote"></span>
+<strong>Примечание:</strong><br>
+  Можна использовать любые математические операторы (+,-,*,/) а также скобки.
+</div>
+<p>Для реализации внешних увязок следует использовать компонент LinksController (рис. 3)</p>
+<p><img src="resources/linksController.png" width="252" height="47"></p>
+<p>Рисунок 3. Контроллер увязок на панели невизуальніх компонентов.</p>
+<p>Для контроля внешних увязок следует віполнить такую последовательность щагов:</p>
+<ul>
+  <li>Заполнить свойства контроллера увязок.</li>
+  <li>Привязать контроллер к контексту данных (рис. 4)</li>
+  <li>Зарегистрировать представления (вьюшки) для контроллера.</li>
+  </ul>
+<p><img src="resources/dataContextAndLinksController.png" width="354" height="306"></p>
+<p>Рисунок 4. Привязка контроллера увязок к контексту данных.</p>
+<pre name="code" class ="c-sharp">
+private void FRMFDU6_Load(object sender, EventArgs e)
+{
+    if (DesignMode)
+        return;
+    ...
+    linksController1.SetupViewEvents(RDA.EventAction.Remove);
+    mainDocument1.RegisterViewsToLinkController(linksController1);
+    additionalFormTab2.RegisterViewsToLinkController(linksController1);
+    additionalFormTab31.RegisterViewsToLinkController(linksController1);
+    additionalFormTab41.RegisterViewsToLinkController(linksController1);
+    linksController1.SetupViewEvents(RDA.EventAction.Add);
+    ...
+}
+  </pre>
+  </span>
+</div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Сохранение данных.
+</h3>
+<span>
+  <p>Сохранение данных в обычном документе предполагает выполнения следующих условий:</p>
+  <ul>
+    <li>Наличие RowID в таблице</li>
+    <li>Правельная конфигурация DBUpdater.</li>
+  </ul>
+  <p>DBUpdater это класс который генерирует запроссы на сохранение в БД. В этом классе можно настроить различные фильтры как колонок так и данных. (Описание ожидаетЦЦо в будущем.)<br>
+  Настройка данного класса производится в методе контекста данных:</p>
+  <pre name="code" class ="c-sharp">
+    protected override void ConfigurateDBUpdater()
+    {
+        dbUpdater1.TableColumnFilter.Add(FNF0FDU6,
+        	new List&lt;string&gt;(new string[] { &quot;GDAY&quot;, &quot;SORTFIELD&quot; }));
+        dbUpdater1.TableColumnFilter.Add(FNF0FDU6R2,
+        	new List&lt;string&gt;(new string[] { &quot;GDAY&quot;, &quot;SORTFIELD&quot; }));
+        dbUpdater1.TableColumnFilter.Add(FNF0FDU6R14,
+        	new List&lt;string&gt;(new string[] { &quot;EDIT_FLAG&quot;, &quot;FORMULA&quot;, &quot;IS_DELETED&quot;, &quot;NAIM&quot; }));
+        dbUpdater1.TableColumnFilter.Add(FNF0FDU6R16,
+        	new List&lt;string&gt;(new string[] { &quot;SORTFIELD&quot; }));
+        base.ConfigurateDBUpdater();
+    }
+  </pre>
+  <p>В случае необходимости выполнить какие нибуть дополнительные действия при сохранении данных необходимо переопределить метод контекста данных:</p>
+  <pre name="code" class ="c-sharp">
+    protected override bool AdditionalSave()
+    {
+        //Дополнительная логика при сохранении.
+        return base.AdditionalSave();
+    }
+</pre>
+  <p>Для выполнения сохранения следует использовать экземпляр класса DBUpdater, который доступен через переменную dbUpdater1.</p>
+  <p>При необходимости исключить таблицу из сохраняемых можна переопределить метод контекста данных:</p>
+  <pre name="code" class ="c-sharp">
+    protected override System.Data.DataTable[] GetTables()
+    {
+        //Исключение таблицы из списка.
+        return base.GetTables();
+    }
+</pre>
+  <p>В таком случае сохранение таблицы можна выполнить в методе AdditionalSave.</p>
+  <p>Для отсеивания строк таблицы которые недолжны быть сохранены используется метод :</p>
+  <pre name="code" class ="c-sharp">
+    protected override void FilterRowAreNotToBeStored(System.Data.DataTable table)
+    {
+        //Отсеиваем строки
+        base.FilterRowAreNotToBeStored(table);
+    }
+    </pre>
+  <p>Если необходимо выполнить какие либо действия (не валидацию) перед сохранением используйте метод:</p>
+  <pre name="code" class ="c-sharp">
+    protected override void MakeSomeActionsBeforSaving(params System.Data.DataTable[] tables)
+    {
+    	base.MakeSomeActionsBeforSaving(tables);
+    }
+</pre>
+</span>
+</div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Управление добавлением/изменением данных в таблицах.
+</h3>
+<span>
+  <p>Для заливки сумм из таблиц архива в таблицу проводок обязательно должны быть заполненны поля данных. (см. раздел &quot;Настройки полей данных и таблиц архива&quot;).</p>
+  <p>В документах которіе используют подформу с Grid, добавление записей происходит при помощи встроеного навигатора (EmbeddedNavigator). Если в каком то случае необходимо изменить данное поведение, то это делается в обработчике события gFormData_EmbeddedNavigator_ButtonClick. Например:</p>
+  <pre name="code" class ="c-sharp">
+    private void gFormData_EmbeddedNavigator_ButtonClick(object sender, DevExpress.XtraEditors.NavigatorButtonClickEventArgs e)
+    {
+        if (e.Button == gFormData.EmbeddedNavigator.Buttons.Remove && vFormData.RowCount == 1)
+        {
+            Notifications.NotificationBox.ShowErrorMessage("ПОМИЛКА", 
+            	"Неможливо видалити рядок!\nПовідомлення не може бути без записів.\n(Повністю видалити повідомлення можна лише з реєстру)");
+            e.Handled = true;
+        }
+        else if (e.Button == gFormData.EmbeddedNavigator.Buttons.Append )
+        {
+            ManualValidateMessageAndSetErrors();
+            e.Handled = IsHasErrors;
+        }
+    }
+    </pre>
+    <p><span class="c-sharp">Комманда e.Handled = true;</span> указывает что дальнейшая обработка данного события не требуется, и в таком случае добавление и/или удаление не будет выполнено.<br>
+    Также в этом методе обрабатываются нажатие на пользовательские кнопки которые были добавлены уже на конкретную форму.</p>
+    <p>При добавлении/Модификации записи вся ключевая информация (код документа, идентификатор пользователя, дата изменений, IP-адресс) записывается автоматически. Если необходимо инициализировать/модифицировть какие либо другие поля то нужно перегрузить методы контекста данных:</p>
+    <table width="50%" border="1">
+      <tr>
+        <th scope="col">Имя</th>
+        <th scope="col">Описание</th>
+      </tr>
+      <tr>
+        <td>SetKeyInformation</td>
+        <td>Срабатывает при добавлении записи в источник и позволяет инициализировать необходимые поля данных.</td>
+      </tr>
+      <tr>
+        <td>SetUserInformation</td>
+        <td>Срабатывает при модификации записи в источник и позволяет изменить значениенеобходимых полей данных.</td>
+      </tr>
+    </table>
+    <p>
+<div class="ui-state-highlight">
+<span class="ui-usericon ui-icon-userwarning"></span>
+<strong>Внимание!</strong><br>
+  При ручной (не из интерфейса пользователя) модификации значений в источнике всегда необгодимо заключать модификацию в команды BeginModifyData(); и EndModifyData(); иначе программа может уйти в бесконечный цикл
+</div>
+    <p>Примеры перегрузки методов (в классе DataContext):</p>
+    <pre name="code" class ="c-sharp">
+        protected override void SetKeyInformation(DataRow dr)
+        {
+            base.SetKeyInformation(dr);
+            BeginModifyData();
+            dr["IDSTAT"] = OwnerFormProperty.IDStat;
+            dr["SHIFR"] = "бух.дов.";
+            object num = this[ACCTRANSACTIONSARHIVE].Compute("MAX(NUM)", this[ACCTRANSACTIONSARHIVE].DefaultView.RowFilter);
+            dr["NUM"] = num == DBNull.Value ? 1 : Convert.ToInt32(num) + 1;
+            dr["SUB_NUM"] = 0;
+            dr["GRARH"] = "ZZ";
+            dr["PROVTYPE"] = 1;
+            dr["ERRFLAG"] = 0;
+            dr["ISNSI"] = false;
+            dr["PDK"] = "D";
+            RoduzForms.Data.FilterData currentFilter = OwnerFormProperty.CurrentFilter;
+            int daysInMonth = DateTime.DaysInMonth(currentFilter.sYear, currentFilter.sMonth);
+            dr["DATEPROV"] = new DateTime(currentFilter.sYear, currentFilter.sMonth, daysInMonth);
+            EndModifyData();
+        }
+   </pre>
+   <pre name="code" class ="c-sharp">
+        protected override void SetUserInformation(DataRow dr)
+        {
+            BeginModifyData();
+            dr["SomeField"] = "value";
+            EndModifyData();
+            base.SetUserInformation(dr);
+        }
+   </pre>
+   <p>Также существует метод MakeSomeActionOnSourceChanging который срабатывает на удаление, изменение, добавление записей, найболее часто используется для обработки удаления строк.<br>
+   Что бы использовать данный метод необходимо переопределить его в классе DataContext.</p>
+   <p>Документ (форма) узнает о изменении данных через вызов метода DataStateChanged, который находится в классе формы. Переопределив который можна реализовать собственную логику при изменении данных.</p>
+   <pre name="code" class ="c-sharp">
+        public override void DataStateChanged()
+        {
+            base.DataStateChanged();
+            SetDataChangeState(dbContext.IsDataWasChanged && IsDataEditRegime);
+        }
+   </pre>
+   <p><br>
+     Просмотреть изменялись ли данные можно с помощью свойства IsDataWasChanged которое находится в контексте данных(true - изменялись, false-не изменялись).<br>
+     В ручную установить состояние данных можно из класса контекста данных(DataContext) вызвав метод 
+ChangeDataState с параметром true- установить в измененное состояние, false-установить в не измененное состояние.</p>
+</p></span>
+</div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Импорт/Экспорт данных
+</h3>
+<span>
+  <p>Импорт/Экспорт данных настраивается через компонент DataManager который присутствует в классе главной формы (рис. 1).</p>
+  <p><img src="resources/dataManagerComponent.png" width="116" height="37"></p>
+  <p>Рисунок 1. Компонент управления импортом/экспортом.</p>
+  <p>Обработка событий данного компонента выполняется в методе ExecuteDataExchange подформы документа. Обработка выполняется для каждой подформы отдельно (в каждом классе подформы.) .</p>
+    <p>
+<div class="ui-state-highlight">
+<span class="ui-usericon ui-icon-userwarning"></span>
+<strong>Внимание!</strong><br>
+Данный метод предназначен только для импорта данных, экспорт данных выполняется по другой схеме, описаной ниже.
+</div>
+<pre name="code" class ="c-sharp">
+        public override void ExecuteDataExchange(RDA.ManagerElementsEventArgs exchangeInfo)
+        {
+            base.ExecuteDataExchange(exchangeInfo);
+            //Логика импорта
+        }
+</pre>
+<p></p>
+<p>Для экспорта данных необходимо выполните следующие действия:</p>
+<ul>
+  <li>Создать класс экспорта унаследованый от ExportProvider, который реализует логику экспорта.</li>
+  <li>Указать в каждой подформе ключ документа для экспорта.</li>
+  <li>Зарегистрировать обработчик экспорта в классе формы.</li>
+  </ul>
+<p>Итак начнем по порядку, класс ExportProvider (рис. 2) предоставляет основной метод ExportDocument в котором реализуется логика экспорта. Также в нем есть метод SetDisplaySettings который управляет тем куда выводить экспортированый документ.</p>
+<p><img src="resources/exportProvider.png" width="163" height="129"></p>
+<p>Рисунок 2. Базовый класс для экспорта данных.</p>
+<p>Пример созданого класса:</p>
+<pre name="code" class ="c-sharp">
+    public class MyExportFromSubForm1:DataManipulation.Export.ExportProvider
+    {
+        public override void ExportDocument(DataManipulation.Export.ExportOutputType outputType)
+        {
+            using (Office.Excel xls = new Excel())
+            {
+                //Экспорт документа
+                SetDisplaySettings(DataManipulation.Export.ExportOutputType.OnScreen, xls);
+            }
+        }
+    }
+</pre>
+<p></p>
+<p>Следующий шаг, код документа. Код документа - это простое текстовое уникальное (в пределах) документа имя которое используется системой для идентификации подформы при экспорте.<br>
+  Что бы задать код документа необходимо перегрузить метод в подформе.</p>
+<pre name="code" class ="c-sharp">
+        protected override string GetDocumentKey()
+        {
+            return "MESSAGE";
+        }
+</pre>
+<p>
+<div class="ui-state-highlight">
+<span class="ui-usericon ui-icon-usernote"></span>
+<strong>Примечание:</strong><br>
+ Код задается в каждом из существующих классов подформ.
+</div>
+<p>Теперь дело за малым, зарегистрировать в системе наши классы обработчики. Это делается в классе основной формы в обработчике загрузки данных:</p>
+<pre name="code" class ="c-sharp">
+        private void FRMFDU6_Load(object sender, EventArgs e)
+        {
+            if (DesignMode)
+                return;
+			...
+            RegisterExportHandlers();
+            
+        }
+
+        private void RegisterExportHandlers()
+        {
+            dataContext1.AddExportHandler("MAINDOC", new DocumentExport.ExportMainDocument(
+                                                                                                dataContext1 as DataManipulation.FormDataContextBase, respondents1));
+            dataContext1.AddExportHandler("TRANSCRIPT1", new DocumentExport.ExportTranscript1(
+                                                                                    dataContext1 as DataManipulation.FormDataContextBase, respondents1));
+            dataContext1.AddExportHandler("TRANSCRIPT2", new DocumentExport.ExportTranscript2(
+                                                                            dataContext1 as DataManipulation.FormDataContextBase, respondents1));
+            dataContext1.AddExportHandler("TRANSCRIPT3", new DocumentExport.ExportTranscript3(
+                                                                dataContext1 as DataManipulation.FormDataContextBase, respondents1));
+        }
+</pre>
+<p></p>
+В данном примере регистрируется четыре обработчика экспорта, по одному для каждой подформы.<br>
+Теперь когда пользователь выбирает экспорт документа, то система берет открытую вкладку, и выбирает обработчик в зависимости от кода подформы которая расположена на данной вкладке.
+</p>
+</p>
+</span>
+</div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Раскраска строк
+</h3>
+<span>
+  <p>Во всех документах по умолчанию предусмотренно раскраску строк и вывод статуса записи. Цвет строки зависит от статуса строки (добавленная, измененная, и без изменений).<br>
+  По умолчанию данная опция отключена, что бы включить ее необходимо установить в true свойство раскраски строк в основной форме (рис. 1).</p>
+  <p><img src="resources/defaultDrawStatus.png" width="354" height="348"></p>
+  <p>Рисунок 1. Включение отрисовки статуса строки по умолчанию.</p>
+  <p>Свойство &quot;Рскраска строк&quot; содержит настройки для цветов, шрифтов каждого из доступных статусов строк.<br>
+  Пример раскраски строк изображон на рис.2.</p>
+  <p><a href="resources/rowStatusView.png" target="_blank"><img src="resources/rowStatusView.png" width="50%"></a></p>
+  <p>Рисунок 2. Раскраска строк.</p>
+  <p>В случаях когда необходимо вручную перерисовать строки, следует переопределить метод SetDefaultColors в подформе, который позволит задать свой цвет.</p>
+  <pre name="code" class ="c-sharp">
+        protected override void SetDefaultColors(DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e, DataRowState state)
+        {
+           // base.SetDefaultColors(e, state); Отключить перерисовку по умолчанию (можно и не отключать)
+            //Реализация отрисовки ячеек
+        }
+  </pre>
+  <p>
+<div class="ui-state-highlight">
+<span class="ui-usericon ui-icon-userwarning"></span>
+<strong>Внимание!</strong><br>
+  НЕ используйте стандартный обработчик CustomDrawCell, он будет перебивать работу в базовых классах, и могут возникнуть ошибки в прорисовке!
+</div>
+</p>
+</span>
+</div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Валидация (проверка) данных.
+</h3>
+<span>
+<p>В некоторых случаях есть необходимость проверить корректность введеных данные перед сохранением, и запретить сохранение если данные некорректны. Для таких целей используется метод ValidateData который необходимо переопределить в классе контекста данных.</p>
+<pre name="code" class ="c-sharp">
+		protected override bool ValidateData()
+		{
+            bool baseValidationResult = base.ValidateData();
+			return baseValidationResult && CheckErrRow();
+		}
+</pre>
+Метод должен вернуть false, если данные некоректны и true если данные корректны.<br>
+Метод не выводит на экран каких либо сообщений, поетому нужно самому выводить сообщение на экран.
+<br>
+Если проверка данных при сохранении не подходит, то нужно реализовывать проверку непосредственно на єлементы управления.</span></div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Установка состояния элементов управления в зависимости от состояния формы. (Режим редактирования/просмотра)
+</h3>
+<span> 
+<p>
+Каждый документ в системе имеет два состояния, первое это режим просмотра данных а второе режим редактирования данных.<br>
+  Для настройки элементов управления в каждом из режимов используется метод SetRegimeSettings, который можно преопределить в классе подформы и в классе основного документа.
+
+<div class="ui-state-highlight">
+<span class="ui-usericon ui-icon-usernote"></span>
+<strong>Примечание:</strong><br>
+ В классе основной формы данный метод появляется с класса BaseDocumentRoduzForm и выше.
+</div>
+  <pre name="code" class ="c-sharp">
+public override void SetRegimeSettings(bool isDataEditRegime)
+{
+    base.SetRegimeSettings(isDataEditRegime);
+    lE_BuhDovNumber.Enabled = !isDataEditRegime;
+}
+  </pre>
+  <p>Параметр <span class="c-sharp"> isDataEditRegim</span> указывает на текущий режим (true - режим редактирования, false -режим просмотра).<br>
+  Данный метод также срабатывает при изменении фильтра данных основной формы (нажатие кнопки ОК.)</p>
+  </p>
+</span></div>
+<div class="ui-widget-content resizable">
+<h3 class="ui-widget-header describe">
+<span class="ui-icon-expanded" ></span>Реакция на действие пользователя (Изменение режима, сохранение, выход...)
+</h3>
+<span>
+<p>
+В случаях когда необходимо запретить пользователю выполнять сохранение, изменение режима, выход нужно переопределить метод ReactOnFormAction в классах подформы.<br>
+Метод должен вернуть false, если действие запрещено выполнять и true если разрешино.<br>
+<pre name="code" class ="c-sharp">
+        public override bool ReactOnFormAction(RoduzForms.BaseRoduzForm.Action action)
+        {
+            ManualValidateMessageAndSetErrors();
+            if (IsHasErrors)
+                dbDataContex.OwnerFormProperty.LastErrorText = "Не всі поля заповнені коректно!";
+            return !IsHasErrors && base.ReactOnFormAction(action);
+        }
+</pre>
+  В результате, если не все поля документа заполненны правильно, то получим сообщение об ошибке (рис. 1).
+  <img src="resources/reactOnformActionError.png" width="864" height="602">
+<p>Рисунок 1. Ошибка при некорректных данных.</p>
+<div class="ui-state-highlight">
+<span class="ui-usericon ui-icon-usernote"></span>
+<strong>Примечание:</strong><br>
+ Данный метод только запрещает действие и выдает сообщени об ошибке, все проверки и установки значков ошибок, нужно делать самому. Читай <a href="http://documentation.devexpress.com/#WindowsForms/CustomDocument749" target="_blank">валидация данных.
+ </a></div>
+</p>
+</span>
+</div>
+<br>
+<hr>
+<div align="center"><a id="prev" href="LoadDataFromDB.html"></a>&nbsp;<a id="next" href="Faq.html"></a></div>
+</body>
+</html>

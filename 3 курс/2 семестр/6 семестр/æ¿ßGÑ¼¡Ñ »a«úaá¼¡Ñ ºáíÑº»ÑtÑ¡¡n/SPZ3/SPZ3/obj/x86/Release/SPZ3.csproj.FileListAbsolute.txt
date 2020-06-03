@@ -1,0 +1,5 @@
+H:\SPZ3\SPZ3\bin\Release\SPZ3.exe
+H:\SPZ3\SPZ3\bin\Release\SPZ3.pdb
+H:\SPZ3\SPZ3\obj\x86\Release\ResolveAssemblyReference.cache
+H:\SPZ3\SPZ3\obj\x86\Release\SPZ3.exe
+H:\SPZ3\SPZ3\obj\x86\Release\SPZ3.pdb

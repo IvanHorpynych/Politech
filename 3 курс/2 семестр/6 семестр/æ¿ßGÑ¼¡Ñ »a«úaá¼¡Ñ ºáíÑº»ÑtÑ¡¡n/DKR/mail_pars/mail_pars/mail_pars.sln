@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mail_pars", "mail_pars\mail_pars.csproj", "{B3C7E9E9-2BF9-4ABA-920F-2A614AC5A305}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3C7E9E9-2BF9-4ABA-920F-2A614AC5A305}.Debug|x86.ActiveCfg = Debug|x86
+		{B3C7E9E9-2BF9-4ABA-920F-2A614AC5A305}.Debug|x86.Build.0 = Debug|x86
+		{B3C7E9E9-2BF9-4ABA-920F-2A614AC5A305}.Release|x86.ActiveCfg = Release|x86
+		{B3C7E9E9-2BF9-4ABA-920F-2A614AC5A305}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

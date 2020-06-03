@@ -1,0 +1,5 @@
+hello_world@com.ua
+somenick@net.com.ua
+somenick@net.com&.ua
+@dot.net
+sdhghg.ua
