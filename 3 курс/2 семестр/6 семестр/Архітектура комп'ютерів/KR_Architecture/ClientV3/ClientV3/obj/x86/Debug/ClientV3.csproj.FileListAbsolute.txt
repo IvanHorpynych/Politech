@@ -1,0 +1,5 @@
+c:\users\xaoc1024\documents\visual studio 2010\Projects\ClientV3\ClientV3\bin\Debug\ClientV3.exe
+c:\users\xaoc1024\documents\visual studio 2010\Projects\ClientV3\ClientV3\bin\Debug\ClientV3.pdb
+c:\users\xaoc1024\documents\visual studio 2010\Projects\ClientV3\ClientV3\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\xaoc1024\documents\visual studio 2010\Projects\ClientV3\ClientV3\obj\x86\Debug\ClientV3.exe
+c:\users\xaoc1024\documents\visual studio 2010\Projects\ClientV3\ClientV3\obj\x86\Debug\ClientV3.pdb

@@ -1,0 +1,26 @@
+h1 {
+	color: navy;
+	font-family: "Arial", serif;
+}
+
+h3{
+	text-align: right;
+}
+.hey {
+	color: purple;
+	font-style: italic;
+}
+
+.marg{
+	margin: 40;
+}
+
+p#codeh {
+	color: gray;
+	font-style: monospace;
+}
+
+p#komm {
+	color: gray;
+	font-size:9;
+}

@@ -1,0 +1,73 @@
+D:\study\from_Yura\OS\Lab4\Lab4\bin\Debug\Lab4.exe.config
+D:\study\from_Yura\OS\Lab4\Lab4\obj\Debug\Lab4.exe
+D:\study\from_Yura\OS\Lab4\Lab4\obj\Debug\Lab4.pdb
+D:\study\from_Yura\OS\Lab4\Lab4\bin\Debug\Lab4.exe
+D:\study\from_Yura\OS\Lab4\Lab4\bin\Debug\Lab4.pdb
+D:\study\from_Yura\OS\Lab4\Lab4\obj\Debug\ResolveAssemblyReference.cache
+D:\study\from_Yura\OS\Lab4\Lab4\obj\Debug\OS_Lab4.Form1.resources
+D:\study\from_Yura\OS\Lab4\Lab4\obj\Debug\Lab4.Properties.Resources.resources
+D:\study\from_Yura\OS\Lab4\Lab4\obj\Debug\GenerateResource.read.1.tlog
+D:\study\from_Yura\OS\Lab4\Lab4\obj\Debug\GenerateResource.write.1.tlog
+D:\study\ОС\Lab4\Lab4\Lab4\bin\Debug\Lab4.exe.config
+D:\study\ОС\Lab4\Lab4\Lab4\obj\Debug\Lab4.exe
+D:\study\ОС\Lab4\Lab4\Lab4\obj\Debug\Lab4.pdb
+D:\study\ОС\Lab4\Lab4\Lab4\bin\Debug\Lab4.exe
+D:\study\ОС\Lab4\Lab4\Lab4\bin\Debug\Lab4.pdb
+D:\study\ОС\Lab4\Lab4\Lab4\obj\Debug\ResolveAssemblyReference.cache
+D:\study\ОС\Lab4\Lab4\Lab4\obj\Debug\OS_Lab4.Form1.resources
+D:\study\ОС\Lab4\Lab4\Lab4\obj\Debug\Lab4.Properties.Resources.resources
+D:\study\ОС\Lab4\Lab4\Lab4\obj\Debug\GenerateResource.read.1.tlog
+D:\study\ОС\Lab4\Lab4\Lab4\obj\Debug\GenerateResource.write.1.tlog
+D:\study\!new6\ОС\OS_labs\Lab4\Lab4\Lab4\bin\Debug\Lab4.exe.config
+D:\study\!new6\ОС\OS_labs\Lab4\Lab4\Lab4\obj\Debug\Lab4.exe
+D:\study\!new6\ОС\OS_labs\Lab4\Lab4\Lab4\obj\Debug\Lab4.pdb
+D:\study\!new6\ОС\OS_labs\Lab4\Lab4\Lab4\bin\Debug\Lab4.exe
+D:\study\!new6\ОС\OS_labs\Lab4\Lab4\Lab4\bin\Debug\Lab4.pdb
+D:\study\!new6\ОС\OS_labs\Lab4\Lab4\Lab4\obj\Debug\ResolveAssemblyReference.cache
+D:\study\!new6\ОС\OS_labs\Lab4\Lab4\Lab4\obj\Debug\OS_Lab4.Form1.resources
+D:\study\!new6\ОС\OS_labs\Lab4\Lab4\Lab4\obj\Debug\Lab4.Properties.Resources.resources
+D:\study\!new6\ОС\OS_labs\Lab4\Lab4\Lab4\obj\Debug\GenerateResource.read.1.tlog
+D:\study\!new6\ОС\OS_labs\Lab4\Lab4\Lab4\obj\Debug\GenerateResource.write.1.tlog
+H:\Lab4\Lab4\bin\Debug\Lab4.exe.config
+H:\Lab4\Lab4\obj\Debug\Lab4.exe
+H:\Lab4\Lab4\obj\Debug\Lab4.pdb
+H:\Lab4\Lab4\bin\Debug\Lab4.exe
+H:\Lab4\Lab4\bin\Debug\Lab4.pdb
+H:\Lab4\Lab4\obj\Debug\ResolveAssemblyReference.cache
+H:\Lab4\Lab4\obj\Debug\OS_Lab4.Form1.resources
+H:\Lab4\Lab4\obj\Debug\Lab4.Properties.Resources.resources
+H:\Lab4\Lab4\obj\Debug\GenerateResource.read.1.tlog
+H:\Lab4\Lab4\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\P4rtyZ4n\Desktop\Lab4\Lab4\bin\Debug\Lab4.exe.config
+C:\Users\P4rtyZ4n\Desktop\Lab4\Lab4\obj\Debug\Lab4.exe
+C:\Users\P4rtyZ4n\Desktop\Lab4\Lab4\obj\Debug\Lab4.pdb
+C:\Users\P4rtyZ4n\Desktop\Lab4\Lab4\bin\Debug\Lab4.exe
+C:\Users\P4rtyZ4n\Desktop\Lab4\Lab4\bin\Debug\Lab4.pdb
+C:\Users\P4rtyZ4n\Desktop\Lab4\Lab4\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\P4rtyZ4n\Desktop\Lab4\Lab4\obj\Debug\OS_Lab4.Form1.resources
+C:\Users\P4rtyZ4n\Desktop\Lab4\Lab4\obj\Debug\Lab4.Properties.Resources.resources
+C:\Users\P4rtyZ4n\Desktop\Lab4\Lab4\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\P4rtyZ4n\Desktop\Lab4\Lab4\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Luke\Desktop\Lab_os_4\Lab_os_4\Lab4\bin\Debug\Lab4.exe.config
+C:\Users\Luke\Desktop\Lab_os_4\Lab_os_4\Lab4\obj\Debug\Lab4.exe
+C:\Users\Luke\Desktop\Lab_os_4\Lab_os_4\Lab4\obj\Debug\Lab4.pdb
+C:\Users\Luke\Desktop\Lab_os_4\Lab_os_4\Lab4\bin\Debug\Lab4.exe
+C:\Users\Luke\Desktop\Lab_os_4\Lab_os_4\Lab4\bin\Debug\Lab4.pdb
+C:\Users\Luke\Desktop\Lab_os_4\Lab_os_4\Lab4\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Luke\Desktop\Lab_os_4\Lab_os_4\Lab4\obj\Debug\OS_Lab4.Form1.resources
+C:\Users\Luke\Desktop\Lab_os_4\Lab_os_4\Lab4\obj\Debug\Lab4.Properties.Resources.resources
+C:\Users\Luke\Desktop\Lab_os_4\Lab_os_4\Lab4\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Luke\Desktop\Lab_os_4\Lab_os_4\Lab4\obj\Debug\GenerateResource.write.1.tlog
+D:\Минулі роки\Операційні системи\Lab_os_4\Lab_os_4\Lab4\bin\Debug\Lab4.exe.config
+D:\Минулі роки\Операційні системи\Lab_os_4\Lab_os_4\Lab4\obj\Debug\Lab4.exe
+D:\Минулі роки\Операційні системи\Lab_os_4\Lab_os_4\Lab4\obj\Debug\Lab4.pdb
+D:\Минулі роки\Операційні системи\Lab_os_4\Lab_os_4\Lab4\bin\Debug\Lab4.exe
+D:\Минулі роки\Операційні системи\Lab_os_4\Lab_os_4\Lab4\bin\Debug\Lab4.pdb
+D:\Минулі роки\Операційні системи\Lab_os_4\Lab_os_4\Lab4\obj\Debug\ResolveAssemblyReference.cache
+D:\Минулі роки\Операційні системи\Lab_os_4\Lab_os_4\Lab4\obj\Debug\OS_Lab4.Form1.resources
+D:\Минулі роки\Операційні системи\Lab_os_4\Lab_os_4\Lab4\obj\Debug\Lab4.Properties.Resources.resources
+D:\Минулі роки\Операційні системи\Lab_os_4\Lab_os_4\Lab4\obj\Debug\GenerateResource.read.1.tlog
+D:\Минулі роки\Операційні системи\Lab_os_4\Lab_os_4\Lab4\obj\Debug\GenerateResource.write.1.tlog
+D:\6 семестр\Операційні системи\OS\Lab_os_4\Lab4\bin\Debug\Lab4.exe.config
+D:\6 семестр\Операційні системи\OS\Lab_os_4\Lab4\obj\Debug\Lab4.exe
+D:\6 семестр\Операційні системи\OS\Lab_os_4\Lab4\obj\Debug\Lab4.pdb

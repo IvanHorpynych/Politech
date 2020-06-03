@@ -1,0 +1,27 @@
+D:\Комп архітектура\KA4_client\KA4_client\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Комп архітектура\KA4_client\KA4_client\obj\x86\Debug\KA4_client.Form1.resources
+D:\Комп архітектура\KA4_client\KA4_client\obj\x86\Debug\KA4_client.Properties.Resources.resources
+D:\Комп архітектура\KA4_client\KA4_client\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Комп архітектура\KA4_client\KA4_client\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Комп архітектура\KA4_client\KA4_client\bin\Debug\KA4_client.exe.config
+D:\Комп архітектура\KA4_client\KA4_client\bin\Debug\KA4_client.exe
+D:\Комп архітектура\KA4_client\KA4_client\bin\Debug\KA4_client.pdb
+D:\Комп архітектура\KA4_client\KA4_client\obj\x86\Debug\KA4_client.exe
+D:\Комп архітектура\KA4_client\KA4_client\obj\x86\Debug\KA4_client.pdb
+D:\Комп архітектура\KA4_client\KA4_client\obj\x86\Debug\KA4_client.Form2.resources
+D:\Комп архітектура\KA4_client\KA4_client\obj\x86\Debug\KA4_client.Form3.resources
+D:\Комп архітектура\KA4\KA4_client\KA4_client\bin\Debug\KA4_client.exe.config
+D:\Комп архітектура\KA4\KA4_client\KA4_client\obj\x86\Debug\KA4_client.exe
+D:\Комп архітектура\KA4\KA4_client\KA4_client\obj\x86\Debug\KA4_client.pdb
+D:\Комп архітектура\KA4\KA4_client\KA4_client\bin\Debug\KA4_client.exe
+D:\Комп архітектура\KA4\KA4_client\KA4_client\bin\Debug\KA4_client.pdb
+D:\Комп архітектура\KA4\KA4_client\KA4_client\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Комп архітектура\KA4\KA4_client\KA4_client\obj\x86\Debug\KA4_client.Form1.resources
+D:\Комп архітектура\KA4\KA4_client\KA4_client\obj\x86\Debug\KA4_client.Form2.resources
+D:\Комп архітектура\KA4\KA4_client\KA4_client\obj\x86\Debug\KA4_client.Form3.resources
+D:\Комп архітектура\KA4\KA4_client\KA4_client\obj\x86\Debug\KA4_client.Properties.Resources.resources
+D:\Комп архітектура\KA4\KA4_client\KA4_client\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Комп архітектура\KA4\KA4_client\KA4_client\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Мишко\Desktop\source1\KA4\KA4_client\KA4_client\bin\Debug\KA4_client.exe.config
+C:\Users\Мишко\Desktop\source1\KA4\KA4_client\KA4_client\obj\x86\Debug\KA4_client.exe
+C:\Users\Мишко\Desktop\source1\KA4\KA4_client\KA4_client\obj\x86\Debug\KA4_client.pdb

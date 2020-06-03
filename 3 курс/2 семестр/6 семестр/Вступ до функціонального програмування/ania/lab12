@@ -1,0 +1,77 @@
+(defun coprimep (x y)
+ "Tests that x and y are coprime numbers"
+ (= (gcd x y) 1))
+
+(defun prime-factors-mult (n)
+ "Performs a prime factorization"
+ (let ((sn (sqrt n)))
+ (labels ((prime-factors (x divider local global)
+ (cond ((and (> x 1) (<= divider sn))
+ (if (= (mod x divider) 0)
+ (prime-factors (/ x divider) divider (1+ local) global)
+ (prime-factors x (1+ divider) 0 (if (= local 0)
+ global
+ (cons (list divider local) global)))))
+ ((/= x 1) (cons (list x 1) global))
+ ((/= local 0) (cons (list divider local) global))
+ (T global))))
+ (prime-factors n 2 0 nil))))
+
+(defun phi (m)
+ "Calculates a phi function"
+ (labels ((phi-l (r acc)
+ (if (<= r m)
+ (phi-l (1+ r) (if (coprimep r m) (1+ acc) acc))
+ acc)))
+ (phi-l 1 0)))
+
+(defun sum-mults (lst1 lst2)
+ "Summarizes a multiplication of 2 lists"
+ (reduce #'+ (mapcar #'* lst1 lst2)))
+
+(defun primep (x)
+ "Prime number test"
+ (let ((sx (sqrt x)))
+ (labels ((test-prime (n)
+ (if (> n sx)
+ T
+ (if (= (mod x n) 0)
+ nil
+ (test-prime (1+ n))))))
+ (test-prime 2))))
+
+(defun goldbach (n)
+ "Goldbach decomposition"
+ (labels ((goldbach-l (first)
+ (if (< first n)
+ (if (and (primep first) (primep (- n first)))
+ (list first (- n first))
+ (goldbach-l (1+ first)))
+ (error "parity error"))))
+ (cond ((< n 2) (error "n must be greater or equal to 2"))
+ ((= n 2) (list 1 1))
+ (T (goldbach-l 2)))))
+
+(defun goldbach-list (lower upper)
+ "Goldbach decomposition on range"
+ (do ((i (if (= (mod lower 2) 0) lower (1+ lower)) (+ i 2)))
+ ((> i upper))
+ (let ((result (goldbach i)))
+ (format *standard-output* "~a = ~a + ~a~%" i (car result) (cadr result)))))
+
+(defun goldbach-list-limited (lower upper limit)
+ "Goldbach decomposition on range with lower limit"
+ (do ((i (if (= (mod lower 2) 0) lower (1+ lower)) (+ i 2)))
+ ((> i upper))
+ (let ((result (goldbach i)))
+ (if (> (car result) limit)
+ (format *standard-output* "~a = ~a + ~a~%" i (car result) (cadr result))))))
+
+(defun phi-lightning (m)
+ "Calculates a phi function using a special formula"
+ (reduce
+ (lambda (acc factor)
+ (let ((head (car factor)))
+ (* acc (expt head (1- (cadr factor))) (1- head))))
+ (prime-factors-mult m)
+ :initial-value 1))

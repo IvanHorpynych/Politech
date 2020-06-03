@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="OS_L4a">
+</Property><Property Name="Solution File" Value="D:\ОС\OS_L4_Сева\OS_L4a.sln">
+</Property><Property Name="User Options File" Value="D:\ОС\OS_L4_Сева\OS_L4a.suo">
+</Property><Property Name="Date" Value="15 мая 2012 г.">
+</Property><Property Name="Time" Value="15:50">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="OS_L4a.sln" Description="File successfully backed up as D:\ОС\OS_L4_Сева\OS_L4a.sln.old">
+</Event><Event ErrorLevel="0" Project="" Source="OS_L4a.suo" Description="File successfully backed up as D:\ОС\OS_L4_Сева\OS_L4a.suo.old">
+</Event><Event ErrorLevel="0" Project="OS_L4a" Source="OS_L4a\OS_L4a.vcproj" Description="Converting project file 'D:\ОС\OS_L4_Сева\OS_L4a\OS_L4a.vcproj'.">
+</Event><Event ErrorLevel="1" Project="OS_L4a" Source="OS_L4a\OS_L4a.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="OS_L4a" Source="OS_L4a\OS_L4a.vcproj" Description="Done converting to new project file 'D:\ОС\OS_L4_Сева\OS_L4a\OS_L4a.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="OS_L4a" Source="OS_L4a\OS_L4a.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="OS_L4a.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="OS_L4a.sln" Description="Converted">
+</Event></UpgradeLog>

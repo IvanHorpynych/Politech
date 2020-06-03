@@ -1,0 +1,10 @@
+D:\Комп архітектура\KA4_server\KA4_server\bin\KA4_server.dll
+D:\Комп архітектура\KA4_server\KA4_server\bin\KA4_server.pdb
+D:\Комп архітектура\KA4_server\KA4_server\obj\Debug\ResolveAssemblyReference.cache
+D:\Комп архітектура\KA4_server\KA4_server\obj\Debug\KA4_server.dll
+D:\Комп архітектура\KA4_server\KA4_server\obj\Debug\KA4_server.pdb
+D:\temp\ARH\lab4\KA4_server\KA4_server\bin\KA4_server.dll
+D:\temp\ARH\lab4\KA4_server\KA4_server\bin\KA4_server.pdb
+D:\temp\ARH\lab4\KA4_server\KA4_server\obj\Debug\KA4_server.csprojResolveAssemblyReference.cache
+D:\temp\ARH\lab4\KA4_server\KA4_server\obj\Debug\KA4_server.dll
+D:\temp\ARH\lab4\KA4_server\KA4_server\obj\Debug\KA4_server.pdb

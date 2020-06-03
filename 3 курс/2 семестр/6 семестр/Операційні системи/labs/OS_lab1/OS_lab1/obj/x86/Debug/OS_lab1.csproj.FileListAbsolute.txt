@@ -1,0 +1,38 @@
+D:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.Properties.Resources.resources
+D:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\bin\Debug\OS_lab1.exe
+D:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\bin\Debug\OS_lab1.pdb
+D:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.exe
+D:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.pdb
+D:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.Form1.resources
+C:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.exe
+C:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.pdb
+C:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\bin\Debug\OS_lab1.exe
+C:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\bin\Debug\OS_lab1.pdb
+C:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.Form1.resources
+C:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.Properties.Resources.resources
+C:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\KV-84\VI\OS\labz\1\OS_lab1\OS_lab1\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Users\Isaimiry\Desktop\1\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.exe
+D:\Users\Isaimiry\Desktop\1\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.pdb
+D:\Users\Isaimiry\Desktop\1\OS_lab1\OS_lab1\bin\Debug\OS_lab1.exe
+D:\Users\Isaimiry\Desktop\1\OS_lab1\OS_lab1\bin\Debug\OS_lab1.pdb
+D:\Users\Isaimiry\Desktop\1\OS_lab1\OS_lab1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Users\Isaimiry\Desktop\1\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.Form1.resources
+D:\Users\Isaimiry\Desktop\1\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.Properties.Resources.resources
+D:\Users\Isaimiry\Desktop\1\OS_lab1\OS_lab1\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Users\Isaimiry\Desktop\1\OS_lab1\OS_lab1\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Минулі роки\OS\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.exe
+D:\Минулі роки\OS\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.pdb
+D:\Минулі роки\OS\OS_lab1\OS_lab1\bin\Debug\OS_lab1.exe
+D:\Минулі роки\OS\OS_lab1\OS_lab1\bin\Debug\OS_lab1.pdb
+D:\Минулі роки\OS\OS_lab1\OS_lab1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Минулі роки\OS\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.Form1.resources
+D:\Минулі роки\OS\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.Properties.Resources.resources
+D:\Минулі роки\OS\OS_lab1\OS_lab1\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Минулі роки\OS\OS_lab1\OS_lab1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Мишко\Desktop\OS\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.exe
+C:\Users\Мишко\Desktop\OS\OS_lab1\OS_lab1\obj\x86\Debug\OS_lab1.pdb

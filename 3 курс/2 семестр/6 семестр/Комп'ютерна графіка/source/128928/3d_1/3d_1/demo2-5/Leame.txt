@@ -1,0 +1,61 @@
+Notas sobre el programa:
+
+Si el programa no te compila, debes usar:
+
+1. Delphi 3.0
+2. Las librerías de OpenGL de Silicon Graphics
+3. Las últimas librerías de 3D para delphi (3Dpolys.pas y UrickGL.pas)
+
+Puedes obtener 2. y 3. en la página de mollyware, en
+
+ 	www.geocities.com/SiliconValley/Way/2132
+
+Espero que tengas bastante tiempo libre entre hoy y mañana, pues
+lo que te falta por hacer es mucho.
+
+Primero que todo, esta es la única ayuda que te voy a dar, pues
+a) yo ya no trabajo en 3D desde hace unos meses
+b) mañana me voy en viaje de negocios
+c) ya le he dedicado unas tres horas a este programa
+
+Dudo bastante que puedas lograr todo en sólo un par de días, pero
+espero que te esfuerces y me cuentes luego qué te sucedió.
+
+Lo de ping puedes hacerlo en Windows 95 usando el programa PING que
+viene incluido en cualquier windows95.  usalo así:
+
+      PING 128.128.128.128  > resultado.txt
+
+y el programa responde si pudo o no hacer contacto con el otro equipo,
+aunque si no puede se demora un tiempo relativamente largo en 
+indicarlo.  Abre luego el archivo RESULTADO.TXT y busca la frase
+"timed out", si la encuentras quiere decir que el otro computador
+está apagado.
+
+El ejemplo tambien incluye un componente Timer para que veas cómo se
+hace lo de ejecutar un proceso cada N segundos.
+
+Lo de "Screen Contrast" simplemente me pareció chévere y lo he dejado
+allí como un elemento de diversión.
+
+Muchas partes de este programa se pueden mejorar, por ejemplo podrías
+crear los archivos BMP para cada etiqueta en un módulo aparte y
+tenerlos listos para que no le toque al programa principal andarlos
+creando todo el tiempo.
+
+Es completamente necesario que los archivos BMP midan 256 x 256, porque
+si no es así, los gráficos no podrán ser recuperados por OpenGL para
+usarlos como texturas.
+
+Si quieres usar tus propios modelos 3D de computador en vez del mio,
+te tendrás que preparar para ajustar la textura a la "pantalla" de
+tus modelos.  No te lo recomiendo si tienes que entregar todo el
+jueves.
+
+Para crear muchos computadores iguales y usarlos en la misma escena
+te recomiendo utilizar un Array.
+
+Suerte, pero la proxima vez ten en cuenta que las cosas 
+no son tan fáciles de hacer como al principio parecen.
+
+      Ricardo

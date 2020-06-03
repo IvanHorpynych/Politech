@@ -1,0 +1,22 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title></title>
+</head>
+<body>
+<h1>3.7 Specialization</h1>
+<p>
+The second pillar, specialization, is implemented in C# by declaring that a new class derives from an existing class. When you do so, the specialized class inherits the characteristics of the more general class. The specialized class is called a <i>derived</i> class, while the more general class is known as a <i>base</i> class. 
+</p><p>
+The specialization relationship is referred to as the <i>is</i>-a relationship. A dog is a mammal, a car is a vehicle. (Dog would be derived from the base class Mammal and Car from the base class Vehicle.) 
+</p><p>
+Specialization allows you to create a family of objects. In Windows a button is a control. A list box is a control. Controls have certain characteristics (color, size, location) and certain abilities (can be drawn, can be selected). These characteristics and abilities are inherited by all of their derived types, which allows for a very powerful form of reuse. Rather than cutting and pasting code from one type to another, the derived type inherits the shared fields and methods. If you change how a shared ability is implemented, you do not have to update code in every derived type; they inherit the changes. 
+</p><p>
+For example, a Manager is a special type of Employee. The Manager adds new capabilities (hiring, firing, rewarding, praising) and a new state (annual objectives, management level, etc.). The Manager, however, also inherits the characteristics and capabilities common to all Employees. Thus a Manager has an address, a name, and an employee ID, and Managers can be given raises, can be laid off, and so forth. You'll see specialization at work in <a href="page0.html">Chapter 11.</a> 
+</p><p>
+</p><p>
+</p><p>
+<a href="page8.html"><h4 align="right">Next</h4></a>
+<a href="page6.html"><h4>Previous</h4></a>
+</body>
+</html>

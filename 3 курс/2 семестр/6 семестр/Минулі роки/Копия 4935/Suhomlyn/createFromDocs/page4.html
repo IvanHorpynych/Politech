@@ -1,0 +1,20 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title></title>
+</head>
+<body>
+<h1>3.4 Class Relationships</h1>
+<p>
+The heart of object-oriented design is establishing relationships among the classes. Classes interact and relate to one another in various ways. 
+</p><p>
+The simplest interaction is when a method in one class is used to call a method in a second class. For example, the Manager class might have a method that calls the UpdateSalary method on an object of type Employee. We then say that the Manager class and the Employee class are <i>associated</i>. Association among classes simply means they interact. 
+</p><p>
+Some complicated types are composed of other types. For example, an automobile might be <i>composed</i> of wheels, engine, transmission, and so forth. You might model this by creating a Wheel class, an Engine class, and a Transmission class. You could then create an Automobile class, and each automobile would have four instances of the Wheel class and one instance each of the Engine and Transmission class. Another way to view this relationship is to say that the Automobile class <i>aggregates</i> the Wheel, Engine, and Transmission classes. 
+</p><p>
+This process of aggregation (or composition) allows you to build very complex classes from relatively simple classes. The .NET Framework provides a String class to handle text strings. You might create your own Address class out of five text strings (address line 1, address line 2, city, state, and zip). You might then create a second class, Employee, which has as one of its members an instance of Address. 
+</p>
+<a href="page5.html"><h4 align="right">Next</h4></a>
+<a href="page3.html"><h4>Previous</h4></a>
+</body>
+</html>

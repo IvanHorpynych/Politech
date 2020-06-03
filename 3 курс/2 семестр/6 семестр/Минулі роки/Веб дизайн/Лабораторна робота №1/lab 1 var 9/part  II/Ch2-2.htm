@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<title>Лабораторна №1 Частина 1</title>
+<link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<a href="index.htm"><img src="pics/termlie.jpg" /></a>
+<div class="r">
+    <a href="index.htm"><img src="pics/prev.jpg" /></a>
+    <a href="Ch1-1.htm" ><img src="pics/next.jpg" /></a>
+</div>
+<br />
+<br />
+
+<span class="header">2.2 Your First Program: Hello World</span>
+<p>In this chapter, you will create a very simple application that does nothing more than display the words "Hello World" to your monitor. This console application is the traditional first program for learning any new language; it demonstrates some of the basic elements of a C# program.</p> 
+<p>Once you write your "Hello World" program and compile it, this chapter will provide a line-by-line analysis of the source code. This analysis gives something of a preview of the language; <span class="blue">Chapter 5</span> describes the fundamentals much more fully.</p> 
+<p>As explained earlier, you can create C# programs with any text editor. You can, for example, create each of the three programs shown previously (in Figures 2-1, 2-2, and 2-3) with Notepad. To demonstrate that this is possible, you'll write your very first C# program using Notepad.</p> 
+<p>Begin by opening Notepad and typing in the program exactly as shown in <span class="blue">Example 2-1</span>.</p> 
+<span class="blue_bold">Example 2-1. Hello World in Notepad</span> 
+<pre class="code">namespace NotePad
+{
+   class HelloWorld
+   {
+      // every console app starts with Main
+      static void Main()
+      {
+         System.Console.WriteLine("Hello world!");
+      }
+   }
+}</pre>
+<p>That is the entire program. Save it to your disk as a file called helloworld.cs.</p> 
+<p>We'll examine this program in some detail in just a moment. First, however, it must be compiled.</p> 
+<span class="header">2.2.1 The Compiler</span>
+<p>Once you save your program to disk, you must compile the code to create your application. Compiling your source code means running a compiler and passing in the source code file. You run the compiler by opening a command prompt (DOS box) and entering the program name csc. Then you pass in your source code file by entering the filename on the command line, as in the following:</p> 
+<pre class="code">csc HelloWorld.cs</pre>
+<p>The job of the compiler is to turn your source code into a working program. It turns out to be just slightly more complicated than that because .NET uses an intermediate language called Microsoft Intermediate Language (MSIL, sometimes abbreviated to IL). The compiler reads your source code and produces IL. The .NET Just In Time (JIT) compiler then reads your IL code and produces an executable application in memory.</p> 
+<p>Microsoft provides a command window with the correct environment variables set. Open the command window by selecting the following menu items in this order:</p> 
+<pre class="code">Start -> Programs -> Microsoft Visual Studio .NET 
+-> Visual Studio.NET Tools -> Visual Studio .NET Command Prompt</pre>
+<p>Then navigate to the directory in which you created your code file and enter the following command:</p> 
+<pre class="code">csc helloworld.cs</pre>
+<p>The Microsoft C# compiler compiles your code; when you display the directory you'll find the compiler has produced an executable file called helloworld.exe. Type helloworld at the command prompt, and your program executes, as shown in <span class="blue">Figure 2-4</span>.</p> 
+<div class="screen">
+<span class="blue_bold">Figure 2-4. Compiling and running Hello World</span><br />
+ <img class="screen" src="pics/dos2.jpg"/>
+ </div>
+<p>Presto! You are a C# programmer. That's it, close the book, you've done it. Okay, don't close the book — there are details to examine, but take a moment to congratulate yourself. Have a cookie.</p> 
+<p>Granted, the program you created is one of the simplest C# programs imaginable, but it is a complete C# program, and it can be used to examine many of the elements common to C# programs.</p> 
+
+<br />
+</body>
+
+<html>

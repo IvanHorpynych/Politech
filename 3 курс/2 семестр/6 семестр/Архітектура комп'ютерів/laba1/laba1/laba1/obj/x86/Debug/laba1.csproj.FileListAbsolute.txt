@@ -1,0 +1,9 @@
+D:\6 семестр\Архітектура комп'ютерів\laba1\laba1\laba1\bin\Debug\laba1.exe
+D:\6 семестр\Архітектура комп'ютерів\laba1\laba1\laba1\bin\Debug\laba1.pdb
+D:\6 семестр\Архітектура комп'ютерів\laba1\laba1\laba1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\6 семестр\Архітектура комп'ютерів\laba1\laba1\laba1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+D:\6 семестр\Архітектура комп'ютерів\laba1\laba1\laba1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\6 семестр\Архітектура комп'ютерів\laba1\laba1\laba1\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\6 семестр\Архітектура комп'ютерів\laba1\laba1\laba1\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\6 семестр\Архітектура комп'ютерів\laba1\laba1\laba1\obj\x86\Debug\laba1.exe
+D:\6 семестр\Архітектура комп'ютерів\laba1\laba1\laba1\obj\x86\Debug\laba1.pdb

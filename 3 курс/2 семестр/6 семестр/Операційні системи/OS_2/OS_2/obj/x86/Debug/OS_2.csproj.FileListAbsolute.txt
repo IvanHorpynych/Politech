@@ -1,0 +1,9 @@
+D:\ОС\OS_2\OS_2\bin\Debug\OS_2.exe
+D:\ОС\OS_2\OS_2\bin\Debug\OS_2.pdb
+D:\ОС\OS_2\OS_2\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\ОС\OS_2\OS_2\obj\x86\Debug\OS_2.Form1.resources
+D:\ОС\OS_2\OS_2\obj\x86\Debug\OS_2.Properties.Resources.resources
+D:\ОС\OS_2\OS_2\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\ОС\OS_2\OS_2\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\ОС\OS_2\OS_2\obj\x86\Debug\OS_2.exe
+D:\ОС\OS_2\OS_2\obj\x86\Debug\OS_2.pdb

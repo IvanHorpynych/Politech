@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=windows-1251" />
+	<title> ... </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+	<h1>C<sup>#</sup></h1>
+	<h2>Version 2.0 Specification</h2>
+	<ul id="contents">
+		<li><a href="#p28">28. Other features................................................................................................................2</a></li>
+		<ul>
+			<li><a href="#p28-1">28.1 Property accessor accessibility...........................................................................2</a></li>
+			<li>
+				<ul>
+					<li><a href="#p28-1-1">28.1.1 Accessor declarations...........................................................................2</a></li>
+					<li><a href="#p28-1-2">28.1.2 Accessor usage.....................................................................................2</a></li>
+					<li><a href="#p28-1-3">28.1.3 Overriding and interface implementation.................................................3</a></li>
+				</ul>
+			</li>
+			<li><a href="#p28-2">28.2 Static classes......................................................................................................4</a></li>
+			<li>
+				<ul>
+					<li><a href="#p28-2-1">28.2.1 Static class declarations.........................................................................4</a></li>
+					<li><a href="#p28-2-2">28.2.2 Referencing static class types.................................................................5</a></li>
+				</ul>
+			</li>
+			<li><a href="#p28-3">28.3 Namespace alias qualifiers..................................................................................5</a></li>
+			<li>
+				<ul>
+					<li><a href="#p28-3-1">28.3.1 Qualified alias member...........................................................................6</a></li>
+					<li><a href="#p28-3-2">28.3.2 Uniqueness of aliases.............................................................................7</a></li>
+				</ul>
+			</li>
+			<li><a href="#p28-4">28.4 Extern aliases......................................................................................................8</a></li>
+			<li>
+				<ul>
+					<li><a href="#p28-4-1">28.4.1 Extern alias directives.............................................................................9</a></li>
+				</ul>
+			</li>
+			<li><a href="#p28-5">28.5 Pragma directives...............................................................................................10</a></li>
+		</ul>
+	</ul>
+	<span id="p28"></span>
+	<h3>28. Other features</h3>
+	<span id="p28-1"></span>
+	<h4>28.1 Property accessor accessibility</h4>
+	<p>Occasionally, a component design will indicate that a property should have different accessibility for the set accessor and the get accessor. Most commonly, one wishes to allow any code to call the get accessor, but restrict the set accessor to descendant types (protected access) or to types within the same program (internal access). With language extensions specified in this section, it becomes possible to express such designs in C#.</p>
+	<span id="p28-1-1"></span>
+	<h4>28.1.1 Accessor declarations</h4>
+	<p>The syntax for property accessors and indexer accessors is modified to permit an optional <i>accessor-modifier</i>:</p>
+	<dl>
+		<dt>get-accessor-declaration:</dt>  
+			<dd><i>attributes<sub>opt</sub> accessor-modifier<sub>opt</sub></i> get <i>accessor-body</i></dd>  
+		<dt>set-accessor-declaration:</dt>  
+			<dd><i>attributes<sub>opt</sub> accessor-modifier<sub>opt</sub></i> set <i>accessor-body</i></dd>
+		<dt>accessor-modifier:</dt>  
+			<dd>protected<br />
+				internal<br />
+				private<br />
+				protected   internal<br />
+				internal   protected<br />
+			</dd>  
+	</dl> 
+	<p>The use of <i>accessor-modifiers</i> is governed by the following restrictions:</p>
+	<ul>
+		<li>An <i>accessor-modifier</i> may not be used in an interface or in an explicit interface member implementation.
+		<li>For a property or indexer that has no override modifer, an <i>accessor-modifier</i> is permitted only if the property or indexer has both a get and set accessor, and then is permitted only on one of those accessors.
+		<li>For a property or indexer that includes an override modifer, an accessor must match the <i>accessor-modifier</i>, if any, of the accessor being overridden.
+		<li>The <i>accessor-modifier</i> must declare an accessibility that is strictly more restrictive than the declared accessibility of the property or indexer itself. To be precise:
+			<ul>
+				<li>If the property or indexer has a declared accessibility of public, any <i>accessor-modifier</i> may be used.</li>
+				<li>If the property or indexer has a declared accessibility of protected internal, the <i>accessor-modifier</i> may be either internal, protected, or private.</li>
+				<li>If the property or indexer has a declared accessibility of internal or protected, the <i>accessor-modifier</i> must be private.</li>
+				<li>If the property or indexer has a declared accessibility of private, no <i>accessor-modifier</i> may be used.</li>
+			</ul>
+	</ul>
+	<p>If an accessor has an <i>accessor-modifier</i>, the accessibility domain (§3.5.2) of the accessor is determined using the declared accessibility of the <i>accessor-modifier</i>. If an accessor does not have an <i>accessor-modifier</i>, the accessibility domain of the accessor is determined from the declared accessibility of the property or indexer.</p>
+	<span id="p28-1-2"></span>
+	<h4>28.1.2 Accessor usage</h4>
+	<p>The presence of an <i>accessor-modifier</i> never affects member lookup (§7.3) or overload resolution (§7.4.2). The modifiers on the property or indexer always determine which property or indexer is bound to, regardless of the context of the access.</p>
+	<p>Once a particular property or indexer has been selected, the accessibility domains of the specific accessors involved are used to determine if that usage is valid:</p>
+	<ul>
+		<li>If the usage is as a value (§7.1.1), the get accessor must exist and be accessible.</li>
+		<li>If the usage is as the target of a simple assignment (§7.13.1), the set accessor must exist and be accessible.</li>
+		<li>If the usage is as the target of compound assignment (§7.13.2), or as the target of the ++ or -- operators (§7.5.9, §7.6.5), both the get accessors and the set accessor must exist and be accessible.</li>
+	</ul>
+	<p>In the following example, the property A.Text is hidden by the property B.Text, even in contexts where only the set accessor is called. In contrast, the property B.Count is not accessible to class M, so the accessible property A.Count is used instead.</p>
+	<pre>
+	class A
+	{
+		public string Text {
+			get { return "hello"; }
+			set { }
+		}
+		public int Count {
+			get { return 5; }
+			set { }
+		}
+	}
+	class B: A
+	{
+		private string text = "goodbye"; 
+		private int count = 0;
+		new public string Text {
+			get { return text; }
+			protected set { text = value; }
+		}
+		new protected int Count { 
+			get { return count; }
+			set { count = value; }
+		}
+	}
+	class M
+	{
+		static void Main() {
+			B b = new B();
+			b.Count = 12;				// Calls A.Count set accessor
+		  int i = b.Count;			// Calls A.Count get accessor
+			b.Text = "howdy";			// Error, B.Text set accessor not accessible
+			string s = b.Text;		// Calls B.Text get accessor
+		}
+	}
+	</pre>
+	<span id="p28-1-3"></span>
+	<h4>28.1.3 Overriding and interface implementation</h4>
+	<p>When a property or indexer is declared as an <font face="Lucida Console">override</font>, any overridden accessors must be accessible to the overriding code. In addition, the declared accessibility of both the property or indexer itself, and of the accessors, must match that of the overridden member and accessors. For example:</p>
+	<pre>
+	public class B
+	{
+		public virtual int P {
+			protected set {...}
+			get {...}
+		}
+	}
+	public class D: B
+	{
+		public override int P {
+			protected set {...}			// Must specify protected here
+			get {...}						// Must not have a modifier here
+		}
+	}
+	</pre>
+	<p>An accessor that is used to implement an interface may not have an <i>accessor-modifier</i>. If only one accessor is used to implement an interface, the other accessor may be declared with an <i>accessor-modifier</i>:</p>
+	<pre>
+	public interface I
+	{
+		string Prop { get; }
+	}
+	public class C: I
+	{
+		public Prop {
+			get { return "April"; }		// Must not have a modifier here
+			internal set {...}			// Ok, because I.Prop has no set accessor
+		}
+	}
+	</pre>
+	<span id="p28-2"></span>
+	<h4>28.2 Static classes</h4>
+	<p>Classes that are not intended to be instantiated and which contain only static members are commonly declared as sealed classes with a private constructor. Examples of such classes in the .NET Framework class library include <font face="Lucida Console">System.Console</font> and <font face="Lucida Console">System.Environment</font>. While the “sealed class with private constructor” design pattern prevents instantiation and subclassing of the given class, it doesn’t prevent the class from being used as the type of a variable or parameter and it doesn’t prevent the class from declaring instance members. This is unfortunate, since variables or parameters of the class type are close to meaningless (they can only be null) and instance members in the class are inaccessible (no instances exist through which the members can be accessed).</p>
+	<p>Static classes formalize the “sealed class with private constructor” design pattern and provide stronger checking of the restrictions that are logically associated with the pattern.</p>
+	<span id="p28-2-1"></span>
+	<h4>28.2.1 Static class declarations</h4>
+	<p>When a class declaration includes a <font face="Lucida Console">static</font> modifier, the class being declared is said to be a <strong>static class</strong>.</p>
+	<dl>
+		<dt>class-declaration:</dt>
+			<dd><i>attributes<sub>opt</sub>   class-modifiers<sub>opt</sub></i>   partial<i><sub>opt</sub></i>   class   <i>identifier   type-parameter-list<sub>opt</sub>
+					class-base<sub>opt</sub>   type-parameter-constraints-clauses<sub>opt</sub>   class-body</i>   ;<sub>opt</sub></dd>
+		<dt>class-modifiers:</dt>
+			<dd><i>class-modifier
+			class-modifiers   class-modifier</i></dd>
+		<dt>class-modifier:</dt>
+			<dd>new<br />
+			public<br />
+			protected<br />
+			internal<br />
+			private<br />
+			abstract<br />
+			sealed<br />
+			static</dd>
+	</dl>
+	<p>A static class declaration is subject to the following restrictions:</p>
+	<ul>
+		<li>A static class may not include a <font face="Lucida Console">sealed</font> or <font face="Lucida Console">abstract</font> modifier. Note, however, that since a static class cannot be instantiated or derived from, it behaves as if it was both sealed and abstract.</li>
+		<li>A static class may not include a <i>class-base</i> specification (§10.1.2) and cannot explicitly specify a base class or a list of implemented interfaces. A static class implicitly inherits from type object.</li>
+		<li>A static class can only contain static members (§10.2.5). Note that constants and nested types are classified as static members.</li>
+		<li>A static class cannot have members with <font face="Lucida Console">protected</font> or <font face="Lucida Console">protected internal</font> declared accessibility.</li>
+	</ul>
+	<p>It is a compile-time error to violate any of these restrictions.</p>
+	<p>A static class has no instance constructors. It is not possible to declare an instance constructor in a static class, and no default instance constructor (§10.10.4) is provided for a static class.</p>
+	<p>The members of a static class are not automatically static, and the member declarations must explicitly include a static modifier (except for constants and nested types). When a class is nested within a static outer class, the nested class is not a static class unless it explicitly includes a <font face="Lucida Console">static</font> modifier.</p>
+	<span id="p28-2-2"></span>
+	<h4>28.2.2 Referencing static class types</h4>
+	<p>A <i>namespace-or-type-name</i> (§<strong>Ошибка! Источник ссылки не найден.</strong>) is permitted to reference a static class if</p>
+	<ul>
+		<li>The <i>namespace-or-type-name</i> is the T in a <i>namespace-or-type-name</i> of the form <font face="Lucida Console">T.I</font>, or</li>
+		<li>The <i>namespace-or-type-name</i> is the T in a <i>typeof-expression</i> (§7.5.11) of the form typeof(<font face="Lucida Console">T</font>).</br>
+		A <i>primary-expression</i> (§7.5) is permitted to reference a static class if</li>
+		<li>The <i>primary-expression</i> is the E in a <i>member-access</i> (§7.5.4) of the form E.I.</li>
+	</ul>
+	<p>In any other context it is a compile-time error to reference a static class. For example, it is an error for a static class to be used as a base class, a constituent type (§10.2.4) of a member, a generic type argument, or a type parameter constraint. Likewise, a static class cannot be used in an array type, a pointer type, a new expression, a cast expression, an <font face="Lucida Console">is</font> expression, an as expression, a <font face="Lucida Console">sizeof</font> expression, or a default value expression.</p>
+	<span id="p28-3"></span>
+	<h4>28.3 Namespace alias qualifiers</h4>
+	</p>When types or namespaces are added to an assembly, the names of those types or namespaces may conflict with names that are already in use in dependent programs. For example, consider the following two assemblies:</p>
+	<pre>
+	Assembly a1.dll:
+	namespace System.IO
+	{
+		public class Stream {...}
+		public class FileStream: Stream {...}
+		...
+	}
+	Assembly a2.dll:
+	namespace MyLibrary.IO
+	{
+		public class EmptyStream: Stream {...}
+	}
+	and the following program that references the two assemblies:
+	using System.IO;
+	using MyLibrary.IO;
+	class Program
+	{
+		static void Main() {
+			Stream s = new EmptyStream();
+			...
+		}
+	}
+	</pre>
+	<p>If, at some future point, a type named <font face="Lucida Console">System.IO.EmptyStream</font> is added to <font face="Lucida Console">a1.dll</font>, then the reference to <font face="Lucida Console">EmptyStream</font> in the program above would become ambiguous, and a compile-time error would occur.</p>
+	<p>It is to some extent possible to guard against version related code breakage by defining using aliases and explicitly qualifying type references. For example, if the program above is rewritten to</p>
+	<pre>
+	using SIO = System.IO;
+	using MIO = MyLibrary.IO;
+	class Program
+	{
+		static void Main() {
+			SIO.Stream s = new MIO.EmptyStream();
+			...
+		}
+	}
+	</pre>
+	<p>then the introduction of a type named <font face="Lucida Console">System.IO.EmptyStream</font> would not cause errors. However, even with this explicit qualification approach, there are situations where the introduction of new types or members can cause errors. For example, in the program above, an ambiguity error would occur if a referenced assembly introduced a top-level namespace named <font face="Lucida Console">MIO</font>.</p>
+	<p>The <strong><i>namespace alias qualifier</i></strong> <font face="Lucida Console">::</font> makes it possible to guarantee that type name lookups are unaffected by the introduction of new types and members. The namespace alias qualifier always appears between two identifiers, referred to as the left-hand and right-hand identifiers. Unlike the regular . qualifier, the left-hand identifier of the <font face="Lucida Console">::</font> qualifier is looked up only as an extern or using alias.</p>
+	<p>In the example</p>
+	<pre>
+	using SIO = System.IO;
+	using MIO = MyLibrary.IO;
+	class Program
+	{
+		static void Main() {
+			SIO::Stream s = new MIO::EmptyStream();
+			...
+		}
+	}
+	</pre>
+	<p>when the type names <font face="Lucida Console">SIO::Stream</font> and <font face="Lucida Console">MIO::EmptyStream</font> are resolved, SIO and MIO are looked up only as extern or using aliases (§28.4 and §9.3.1). Since the scope of an extern or using alias does not extend beyond the source file in which the alias is defined, it is not possible for a referenced assembly to introduce any entities that would affect the resolution. Thus, by defining using aliases for all referenced namespaces and referencing members of those namespaces through the <font face="Lucida Console">::</font> qualifier, it is possible to guard against future code breakage due to versioning.</p>
+	<p>The <font face="Lucida Console">::</font> qualifier requires the left-hand identifier to be the identifier <font face="Lucida Console">global</font> (as explained below) or an extern or using alias that references a namespace. A compile-time error occurs if the alias references a type.</p>
+	<p>When the left-hand identifier of the <font face="Lucida Console">::</font> qualifier is the identifier <font face="Lucida Console">global</font>, the global namespace (and only the global namespace) is searched for the right-hand identifier. For example:</p>
+	<pre>
+	class Program
+	{
+		static void Main() {
+			global::System.IO.Stream s = new global::MyLibrary.IO.EmptyStream();
+			...
+		}
+	}
+	</pre>
+	<p>Similar to the use of <font face="Lucida Console">::</font> with extern and using aliases, the use of <font face="Lucida Console">::</font> with the <font face="Lucida Console">global</font> identifier guarantees that the name lookup is unaffected by the introduction of new types and members. Note that the identifier <font face="Lucida Console">global</font> has special meaning only when used as the left-hand identifier of the <font face="Lucida Console">:: qualifier</font>. It is not a keyword and it is not itself an alias.</p>
+	<span id="p28-3-1"></span>
+	<h4>28.3.1 Qualified alias member</h4>
+	<p>A <i>qualified-alias-member</i> is defined as follows:</p>
+	<dl>
+		<dt>qualified-alias-member:</dt>
+			<dd><i>identifier</i>  <font face="Lucida Console">::</font>   <i>identifier   type-argument-list<sub>opt</sub></i></dd>
+	</dl>
+	<p>A new <font face="Lucida Console">::</font> token is added to the C# lexical grammar. The updated form of the <i>operator-or-punctuator</i> lexical grammar production is shown in §<strong>Ошибка! Источник ссылки не найден.</strong>.</p>
+	<p>A <i>qualified-alias-member</i> can be used as a <i>namespace-or-type-name</i> (§<strong>Ошибка! Источник ссылки не найден.</strong>) or as the left operand in a <i>member-access</i> (§<strong>Ошибка! Источник ссылки не найден.</strong>).</p>
+	<p>A <i>qualified-alias-member</i> has one of two forms:</p>
+	<ul>
+		<li><font face="Lucida Console">N::I</font><A1, ..., AK>, where N and I represent identifiers, and <A1, ..., AK> is a type argument list. (K is always at least one.)</li>
+		<li><font face="Lucida Console">N::I</font>, where N and I represent identifiers. (In this case, K is considered to be zero.)</li>
+	</ul>
+	<p>Using this notation, the meaning of a <i>qualified-alias-member</i> is determined as follows:</p>
+	<ul>
+		<li>If N is the identifier global, then the global namespace is searched for I:</li>
+		<ul>
+			<li>If the global namespace contains a namespace named N and K is zero, then the <i>qualified-alias-member</i> refers to that namespace.
+			<li>Otherwise, if the global namespace contains a non-generic type named I and K is zero, then the <i>qualified-alias-member</i> refers to that type.</li>
+			<li>Otherwise, if the global namespace contains a type named I that has K type parameters, then the <i>qualified-alias-member</i> refers to that type constructed with the given type arguments. </li>
+			<li>Otherwise, the <i>qualified-alias-member</i> is undefined and a compile-time error occurs.</li>
+		</ul>
+		<li>Otherwise, starting with the namespace declaration (§9.2) immediately containing the <i>qualified-alias-member</i> (if any), continuing with each enclosing namespace declaration (if any), and ending with the compilation unit containing the <i>qualified-alias-member</i>, the following steps are evaluated until an entity is located:</li>
+		<ul>
+			<li>If the namespace declaration or compilation unit contains a using-alias-directive that associates N with a type, then the qualified-alias-member is undefined and a compile-time error occurs.</li>
+			<li>Otherwise, if the namespace declaration or compilation unit contains an extern-alias-directive or using-alias-directive that associates N with a namespace, then:</li>
+			<ul>
+				<li>If the namespace associated with N contains a namespace named I and K is zero, then the <i>qualified-alias-member</i> refers to that namespace.</li>
+				<li>Otherwise, if the namespace associated with N contains a non-generic type named I and K is zero, then the <i>qualified-alias-member</i> refers to that type.</li>
+				<li>Otherwise, if the namespace associated with N contains a type named I that has K type parameters, then the <i>qualified-alias-member</i> refers to that type constructed with the given type arguments.</li>
+				<li>Otherwise, the <i>qualified-alias-member</i> is undefined and a compile-time error occurs.</li>
+			</ul>
+		</ul>
+		<li>Otherwise, the <i>qualified-alias-member</i> is undefined and a compile-time error occurs.</li>
+	</ul>
+	
+</body>
+</html>

@@ -1,0 +1,846 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><meta http-equiv="pragma" content="no-cache"><TITLE>Примеры таблиц</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type><LINK 
+href="main.html" tppabs="http://nest/doc/web/tables/index_files/main.html" rel=STYLESHEET type=text/css>
+<META content="MSHTML 5.00.2920.0" name=GENERATOR></HEAD>
+<BODY>
+
+<TABLE cellPadding=3 cellSpacing=2 width=720>
+  <TBODY>
+  <TR>
+    <TD id=tod>
+      <TABLE width="100%">
+        <TBODY>
+        <TR>
+          <TH bgColor=#e0e0e0 id=th2>Таблицы в 
+      примерах</TH></TR></TBODY></TABLE><BR>Этот документ содержит примеры 
+      таблиц. Он охватывает большинство новых тэгов в таблицах. Впрочем он не 
+      обязательно показывает некоторые действительно творческие возможности, 
+      доступные в таблицах. 
+      <TABLE width="100%">
+        <TBODY>
+        <TR>
+          <TH bgColor=#f3f3f3 id=th3>ОБЫЧНАЯ ТАБЛИЦА 3X2 
+      </TH></TR></TBODY></TABLE><BR>
+      <TABLE border=1>
+        <TBODY>
+        <TR>
+          <TD>A</TD>
+          <TD>B</TD>
+          <TD>C</TD></TR>
+        <TR>
+          <TD>D</TD>
+          <TD>E</TD>
+          <TD>F</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;A&lt;/TD&gt; &lt;TD&gt;B&lt;/TD&gt; &lt;TD&gt;C&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;D&lt;/TD&gt; &lt;TD&gt;E&lt;/TD&gt; &lt;TD&gt;F&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE><!----------------------------------------------------->
+      <P>
+      <TABLE width="100%">
+        <TBODY>
+        <TR>
+          <TH bgColor=#f3f3f3 id=th3>ДВА ПРИМЕРА С ROWSPAN 
+      </TH></TR></TBODY></TABLE><BR>
+      <TABLE border=1>
+        <TBODY>
+        <TR>
+          <TD>Item 1</TD>
+          <TD rowSpan=2>Item 2</TD>
+          <TD>Item 3</TD></TR>
+        <TR>
+          <TD>Item 4</TD>
+          <TD>Item 5</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;Item 1&lt;/TD&gt;
+                &lt;TD ROWSPAN=2&gt;Item 2&lt;/TD&gt;
+                &lt;TD&gt;Item 3&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;Item 4&lt;/TD&gt; &lt;TD&gt;Item 5&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE>
+      <TABLE border=1>
+        <TBODY>
+        <TR>
+          <TD rowSpan=2>Item 1</TD>
+          <TD>Item 2</TD>
+          <TD>Item 3</TD>
+          <TD>Item 4</TD></TR>
+        <TR>
+          <TD>Item 5</TD>
+          <TD>Item 6</TD>
+          <TD>Item 7</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER&gt;
+        &lt;TR&gt;
+                &lt;TD ROWSPAN=2&gt;Item 1&lt;/TD&gt;
+                &lt;TD&gt;Item 2&lt;/TD&gt; &lt;TD&gt;Item 3&lt;/TD&gt; &lt;TD&gt;Item 4&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;Item 5&lt;/TD&gt; &lt;TD&gt;Item 6&lt;/TD&gt; &lt;TD&gt;Item 7&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE><!----------------------------------------------------->
+      <P>
+      <TABLE width="100%">
+        <TBODY>
+        <TR>
+          <TH bgColor=#f3f3f3 id=th3>ПРИМЕР С COLSPAN </TH></TR></TBODY></TABLE><BR>
+      <TABLE border=1>
+        <TBODY>
+        <TR>
+          <TD>Item 1</TD>
+          <TD colSpan=2>Item 2</TD></TR>
+        <TR>
+          <TD>Item 3</TD>
+          <TD>Item 4</TD>
+          <TD>Item 5</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;Item 1&lt;/TD&gt;
+                &lt;TD COLSPAN=2&gt;Item 2&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;Item 3&lt;/TD&gt; &lt;TD&gt;Item 4&lt;/TD&gt; &lt;TD&gt;Item 5&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE><!----------------------------------------------------->
+      <P>
+      <TABLE width="100%">
+        <TBODY>
+        <TR>
+          <TH bgColor=#f3f3f3 id=th3>ДЕМОНСТРАЦИЯ ЗАГОЛОВКОВ (&lt;TH&gt;) 
+        </TH></TR></TBODY></TABLE><BR>
+      <TABLE border=1>
+        <TBODY>
+        <TR>
+          <TH>Head1</TH>
+          <TH>Head2</TH>
+          <TH>Head3</TH></TR>
+        <TR>
+          <TD>A</TD>
+          <TD>B</TD>
+          <TD>C</TD></TR>
+        <TR>
+          <TD>D</TD>
+          <TD>E</TD>
+          <TD>F</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER&gt;
+        &lt;TR&gt;
+                &lt;TH&gt;Head1&lt;/TH&gt; &lt;TH&gt;Head2&lt;/TH&gt; &lt;TH&gt;Head3&lt;/TH&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;A&lt;/TD&gt; &lt;TD&gt;B&lt;/TD&gt; &lt;TD&gt;C&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;D&lt;/TD&gt; &lt;TD&gt;E&lt;/TD&gt; &lt;TD&gt;F&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;  
+</PRE><!----------------------------------------------------->
+      <P>
+      <TABLE width="100%">
+        <TBODY>
+        <TR>
+          <TH bgColor=#f3f3f3 id=th3>ДЕМОНСТРАЦИЯ COLSPAN И 
+        ЗАГОЛОВКОВ</TH></TR></TBODY></TABLE><BR>
+      <TABLE border=1>
+        <TBODY>
+        <TR>
+          <TH colSpan=2>Head1</TH>
+          <TH colSpan=2>Head2</TH></TR>
+        <TR>
+          <TD>A</TD>
+          <TD>B</TD>
+          <TD>C</TD>
+          <TD>D</TD></TR>
+        <TR>
+          <TD>E</TD>
+          <TD>F</TD>
+          <TD>G</TD>
+          <TD>H</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER&gt;
+        &lt;TR&gt;
+                &lt;TH COLSPAN=2&gt;Head1&lt;/TH&gt;
+                &lt;TH COLSPAN=2&gt;Head2&lt;/TH&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;A&lt;/TD&gt; &lt;TD&gt;B&lt;/TD&gt; &lt;TD&gt;C&lt;/TD&gt; &lt;TD&gt;D&lt;/TD&gt; 
+        &lt;/TR&gt;
+        &lt;TR&gt;      
+                &lt;TD&gt;E&lt;/TD&gt; &lt;TD&gt;F&lt;/TD&gt; &lt;TD&gt;G&lt;/TD&gt; &lt;TD&gt;H&lt;/TD&gt; 
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE><!----------------------------------------------------->
+      <P>
+      <TABLE width="100%">
+        <TBODY>
+        <TR>
+          <TH bgColor=#f3f3f3 id=th3>ДЕМОНСТРАЦИЯ МНОЖЕСТВЕННЫХ ЗАГОЛОВКОВ, 
+            COLSPAN </TH></TR></TBODY></TABLE><BR>
+      <TABLE border=1>
+        <TBODY>
+        <TR>
+          <TH colSpan=2>Head1</TH>
+          <TH colSpan=2>Head2</TH></TR>
+        <TR>
+          <TH>Head 3</TH>
+          <TH>Head 4</TH>
+          <TH>Head 5</TH>
+          <TH>Head 6</TH></TR>
+        <TR>
+          <TD>A</TD>
+          <TD>B</TD>
+          <TD>C</TD>
+          <TD>D</TD></TR>
+        <TR>
+          <TD>E</TD>
+          <TD>F</TD>
+          <TD>G</TD>
+          <TD>H</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER&gt;
+        &lt;TR&gt;
+                &lt;TH COLSPAN=2&gt;Head1&lt;/TH&gt;
+                &lt;TH COLSPAN=2&gt;Head2&lt;/TH&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TH&gt;Head 3&lt;/TH&gt; &lt;TH&gt;Head 4&lt;/TH&gt; 
+                &lt;TH&gt;Head 5&lt;/TH&gt; &lt;TH&gt;Head 6&lt;/TH&gt; 
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;A&lt;/TD&gt; &lt;TD&gt;B&lt;/TD&gt; &lt;TD&gt;C&lt;/TD&gt; &lt;TD&gt;D&lt;/TD&gt; 
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;E&lt;/TD&gt; &lt;TD&gt;F&lt;/TD&gt; &lt;TD&gt;G&lt;/TD&gt; &lt;TD&gt;H&lt;/TD&gt; 
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+
+</PRE><!----------------------------------------------------->
+      <P>
+      <TABLE width="100%">
+        <TBODY>
+        <TR>
+          <TH bgColor=#f3f3f3 id=th3>ДЕМОНСТРАЦИЯ БОКОВЫХ ЗАГОЛОВКОВ 
+        </TH></TR></TBODY></TABLE><BR>
+      <TABLE border=1>
+        <TBODY>
+        <TR>
+          <TH>Head1</TH>
+          <TD>Item 1</TD>
+          <TD>Item 2</TD>
+          <TD>Item 3</TD></TR>
+        <TR>
+          <TH>Head2</TH>
+          <TD>Item 4</TD>
+          <TD>Item 5</TD>
+          <TD>Item 6</TD></TR>
+        <TR>
+          <TH>Head3</TH>
+          <TD>Item 7</TD>
+          <TD>Item 8</TD>
+          <TD>Item 9</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER&gt;
+        &lt;TR&gt;&lt;TH&gt;Head1&lt;/TH&gt;
+                &lt;TD&gt;Item 1&lt;/TD&gt; &lt;TD&gt;Item 2&lt;/TD&gt; &lt;TD&gt;Item 3&lt;/TD&gt;&lt;/TR&gt;
+        &lt;TR&gt;&lt;TH&gt;Head2&lt;/TH&gt;
+                &lt;TD&gt;Item 4&lt;/TD&gt; &lt;TD&gt;Item 5&lt;/TD&gt; &lt;TD&gt;Item 6&lt;/TD&gt;&lt;/TR&gt;
+        &lt;TR&gt;&lt;TH&gt;Head3&lt;/TH&gt;
+                &lt;TD&gt;Item 7&lt;/TD&gt; &lt;TD&gt;Item 8&lt;/TD&gt; &lt;TD&gt;Item 9&lt;/TD&gt;&lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE><!----------------------------------------------------->
+      <P>
+      <TABLE width="100%">
+        <TBODY>
+        <TR>
+          <TH bgColor=#f3f3f3 id=th3>ДЕМОНСТРАЦИЯ БОКОВЫХ ЗАГОЛОВКОВ, ROWSPAN 
+          </TH></TR></TBODY></TABLE><BR>
+      <TABLE border=1>
+        <TBODY>
+        <TR>
+          <TH rowSpan=2>Head1</TH>
+          <TD>Item 1</TD>
+          <TD>Item 2</TD>
+          <TD>Item 3</TD>
+          <TD>Item 4</TD></TR>
+        <TR>
+          <TD>Item 5</TD>
+          <TD>Item 6</TD>
+          <TD>Item 7</TD>
+          <TD>Item 8</TD></TR>
+        <TR>
+          <TH>Head2</TH>
+          <TD>Item 9</TD>
+          <TD>Item 10</TD>
+          <TD>Item 3</TD>
+          <TD>Item 11</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER&gt;
+        &lt;TR&gt;&lt;TH ROWSPAN=2&gt;Head1&lt;/TH&gt;
+            &lt;TD&gt;Item 1&lt;/TD&gt; &lt;TD&gt;Item 2&lt;/TD&gt; &lt;TD&gt;Item 3&lt;/TD&gt; &lt;TD&gt;Item 4&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;&lt;TD&gt;Item 5&lt;/TD&gt; &lt;TD&gt;Item 6&lt;/TD&gt; &lt;TD&gt;Item 7&lt;/TD&gt; &lt;TD&gt;Item 8&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;&lt;TH&gt;Head2&lt;/TH&gt;
+            &lt;TD&gt;Item 9&lt;/TD&gt; &lt;TD&gt;Item 10&lt;/TD&gt; &lt;TD&gt;Item 3&lt;/TD&gt; &lt;TD&gt;Item 11&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE><!----------------------------------------------------->
+      <P>
+      <TABLE width="100%">
+        <TBODY>
+        <TR>
+          <TH bgColor=#f3f3f3 id=th3>ПРИМЕР ТАБЛИЦЫ ИСПОЛЬЗУЮЩЕЙ ВСЕ ЭТИ ТЭГИ 
+          </TH></TR></TBODY></TABLE><BR>
+      <TABLE border=1>
+        <TBODY>
+        <TR>
+          <TD>
+          <TH rowSpan=2></TH>
+          <TH colSpan=2>Average</TH></TD></TR>
+        <TR>
+          <TD>
+          <TH>Height</TH>
+          <TH>Weight</TH></TD></TR>
+        <TR>
+          <TH rowSpan=2>Gender</TH>
+          <TH>Males</TH>
+          <TD>1.9</TD>
+          <TD>0.003</TD></TR>
+        <TR>
+          <TH>Females</TH>
+          <TD>1.7</TD>
+          <TD>0.002</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER&gt;
+        &lt;TR&gt;      &lt;TD&gt;&lt;TH ROWSPAN=2&gt;&lt;/TH&gt;
+                &lt;TH COLSPAN=2&gt;Average&lt;/TH&gt;&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;      &lt;TD&gt;&lt;TH&gt;Height&lt;/TH&gt;&lt;TH&gt;Weight&lt;/TH&gt;&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;      &lt;TH ROWSPAN=2&gt;Gender&lt;/TH&gt;
+                &lt;TH&gt;Males&lt;/TH&gt;&lt;TD&gt;1.9&lt;/TD&gt;&lt;TD&gt;0.003&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;      &lt;TH&gt;Females&lt;/TH&gt;&lt;TD&gt;1.7&lt;/TD&gt;&lt;TD&gt;0.002&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE><!----------------------------------------------------->
+      <P>
+      <TABLE width="100%">
+        <TBODY>
+        <TR>
+          <TH bgColor=#f3f3f3 id=th3>ИСПОЛЬЗОВАНИЕ ROWSPAN/COLSPAN 
+        </TH></TR></TBODY></TABLE><BR>
+      <TABLE border=1>
+        <TBODY>
+        <TR>
+          <TD align=middle colSpan=2 rowSpan=2>A</TD>
+          <TD>1</TD>
+          <TD>2</TD></TR>
+        <TR>
+          <TD>3</TD>
+          <TD>4</TD></TR>
+        <TR>
+          <TD align=middle colSpan=2 rowSpan=2>C</TD>
+          <TD align=middle colSpan=2 rowSpan=2>D</TD></TR>
+        <TR></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER&gt;
+        &lt;TR&gt;
+                &lt;TD ALIGN=center ROWSPAN=2 COLSPAN=2&gt;A&lt;/TD&gt;
+                &lt;TD&gt;1&lt;/TD&gt;
+                &lt;TD&gt;2&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;3&lt;/TD&gt;
+                &lt;TD&gt;4&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD ALIGN=center ROWSPAN=2 COLSPAN=2&gt;C&lt;/TD&gt;
+                &lt;TD ALIGN=center ROWSPAN=2 COLSPAN=2&gt;D&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE><!----------------------------------------------------->
+      <TABLE cellPadding=3 cellSpacing=2 width="100%">
+        <TBODY>
+        <TR>
+          <TD id=tod>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TH bgColor=#e0e0e0 id=th2>ВЫРАВНИВАНИЕ, ОТСТУПЫ, РАМКИ 
+              </TH></TR></TBODY></TABLE><BR>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TH bgColor=#f3f3f3 id=th3>ТАБЛИЦА БЕЗ РАМКИ 
+            </TH></TR></TBODY></TABLE><BR>
+            <TABLE>
+              <TBODY>
+              <TR>
+                <TD>Item 1</TD>
+                <TD rowSpan=2>Item 2</TD>
+                <TD>Item 3</TD></TR>
+              <TR>
+                <TD>Item 4</TD>
+                <TD>Item 5</TD></TR></TBODY></TABLE><PRE>&lt;TABLE&gt;
+        &lt;TR&gt;      &lt;TD&gt;Item 1&lt;/TD&gt; &lt;TD ROWSPAN=2&gt;Item 2&lt;/TD&gt; &lt;TD&gt;Item 3&lt;/TD&gt; 
+        &lt;/TR&gt;
+        &lt;TR&gt;      &lt;TD&gt;Item 4&lt;/TD&gt; &lt;TD&gt;Item 5&lt;/TD&gt; 
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE><!----------------------------------------------------->
+            <P>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TH bgColor=#f3f3f3 id=th3>ТАБЛИЦА С РАМКОЙ ШИРИНОЙ 10 
+              </TH></TR></TBODY></TABLE><BR>
+            <TABLE border=10>
+              <TBODY>
+              <TR>
+                <TD>Item 1</TD>
+                <TD>Item 2</TD></TR>
+              <TR>
+                <TD>Item 3</TD>
+                <TD>Item 4</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER=10&gt;
+        &lt;TR&gt;      &lt;TD&gt;Item 1&lt;/TD&gt; &lt;TD&gt; Item 2&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;      &lt;TD&gt;Item 3&lt;/TD&gt; &lt;TD&gt;Item 4&lt;/TD&gt; 
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE><!----------------------------------------------------->
+            <P>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TH bgColor=#f3f3f3 id=th3>CELLPADDING И CELLSPACING 
+              </TH></TR></TBODY></TABLE><BR>
+            <TABLE border=1 cellPadding=10 cellSpacing=0>
+              <TBODY>
+              <TR>
+                <TD>A</TD>
+                <TD>B</TD>
+                <TD>C</TD></TR>
+              <TR>
+                <TD>D</TD>
+                <TD>E</TD>
+                <TD>F</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER CELLPADDING=10 CELLSPACING=0&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;A&lt;/TD&gt; &lt;TD&gt;B&lt;/TD&gt; &lt;TD&gt;C&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;D&lt;/TD&gt; &lt;TD&gt;E&lt;/TD&gt; &lt;TD&gt;F&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE>
+            <TABLE border=1 cellPadding=0 cellSpacing=10>
+              <TBODY>
+              <TR>
+                <TD>A</TD>
+                <TD>B</TD>
+                <TD>C</TD></TR>
+              <TR>
+                <TD>D</TD>
+                <TD>E</TD>
+                <TD>F</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER CELLPADDING=0 CELLSPACING=10&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;A&lt;/TD&gt; &lt;TD&gt;B&lt;/TD&gt; &lt;TD&gt;C&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;D&lt;/TD&gt; &lt;TD&gt;E&lt;/TD&gt; &lt;TD&gt;F&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE>
+            <TABLE border=1 cellPadding=10 cellSpacing=10>
+              <TBODY>
+              <TR>
+                <TD>A</TD>
+                <TD>B</TD>
+                <TD>C</TD></TR>
+              <TR>
+                <TD>D</TD>
+                <TD>E</TD>
+                <TD>F</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER CELLPADDING=10 CELLSPACING=10&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;A&lt;/TD&gt; &lt;TD&gt;B&lt;/TD&gt; &lt;TD&gt;C&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;D&lt;/TD&gt; &lt;TD&gt;E&lt;/TD&gt; &lt;TD&gt;F&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE>
+            <TABLE border=5 cellPadding=10 cellSpacing=10>
+              <TBODY>
+              <TR>
+                <TD>A</TD>
+                <TD>B</TD>
+                <TD>C</TD></TR>
+              <TR>
+                <TD>D</TD>
+                <TD>E</TD>
+                <TD>F</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER=5 CELLPADDING=10 CELLSPACING=10&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;A&lt;/TD&gt; &lt;TD&gt;B&lt;/TD&gt; &lt;TD&gt;C&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;D&lt;/TD&gt; &lt;TD&gt;E&lt;/TD&gt; &lt;TD&gt;F&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE></TD></TR></TBODY></TABLE>
+      <TABLE cellPadding=3 cellSpacing=2 width="100%">
+        <TBODY>
+        <TR>
+          <TD id=tod>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TH bgColor=#e0e0e0 id=th2>ВЫРАВНИВАНИЕ, ЗАГОЛОВКИ И 
+                  ПОДТАБЛИЦЫ </TH></TR></TBODY></TABLE><BR>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TH bgColor=#f3f3f3 id=th3>Д<FONT size=-1>ЕМОНСТРАЦИЯ M<FONT 
+                  size=-1>НОЖЕСТВЕННЫХ СТРОК В ТАБЛИЦЫ С<FONT size=-1>ТРОК В 
+                  Т<FONT size=-1>АБЛИЦЕ 
+              </FONT></FONT></FONT></FONT></TH></TR></TBODY></TABLE><BR>
+            <TABLE border=1>
+              <TBODY>
+              <TR>
+                <TH>January</TH>
+                <TH>February</TH>
+                <TH>March</TH></TR>
+              <TR>
+                <TD>This is cell 1</TD>
+                <TD>Cell 2</TD>
+                <TD>Another cell,<BR>cell 3</TD></TR>
+              <TR>
+                <TD>Cell 4</TD>
+                <TD>and now this<BR>is cell 5</TD>
+                <TD>Cell 6</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER&gt;
+        &lt;TR&gt;
+                &lt;TH&gt;January&lt;/TH&gt;
+                &lt;TH&gt;February&lt;/TH&gt;
+                &lt;TH&gt;March&lt;/TH&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;This is cell 1&lt;/TD&gt;
+                &lt;TD&gt;Cell 2&lt;/TD&gt;
+                &lt;TD&gt;Another cell,&lt;br&gt; cell 3&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;Cell 4&lt;/TD&gt;
+                &lt;TD&gt;and now this&lt;br&gt;is cell 5&lt;/TD&gt;
+                &lt;TD&gt;Cell 6&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+
+
+</PRE><!----------------------------------------------------->
+            <P>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TH bgColor=#f3f3f3 id=th3>ALIGN=<FONT 
+                  size=-1>LEFT|RIGHT|CENTER </FONT></TH></TR></TBODY></TABLE><BR>
+            <P>может применяться к отдельным ячейкам или всей строке<BR>
+            <TABLE border=1>
+              <TBODY>
+              <TR>
+                <TH>January</TH>
+                <TH>February</TH>
+                <TH>March</TH></TR>
+              <TR align=middle>
+                <TD>all aligned center</TD>
+                <TD>Cell 2</TD>
+                <TD>Another cell,<BR>cell 3</TD></TR>
+              <TR>
+                <TD align=right>aligned right</TD>
+                <TD align=middle>aligned to center</TD>
+                <TD>default,<BR>aligned left</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER&gt;
+        &lt;TR&gt;
+            &lt;TH&gt;January&lt;/TH&gt;
+            &lt;TH&gt;February&lt;/TH&gt;
+            &lt;TH&gt;March&lt;/TH&gt;
+        &lt;/TR&gt;
+        &lt;TR ALIGN=center&gt;
+            &lt;TD&gt;all aligned center&lt;/TD&gt;
+            &lt;TD&gt;Cell 2&lt;/TD&gt;
+            &lt;TD&gt;Another cell,&lt;br&gt; cell 3&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+            &lt;TD ALIGN=right&gt;aligned right&lt;/TD&gt;
+            &lt;TD ALIGN=center&gt;aligned to center&lt;/TD&gt;
+            &lt;TD&gt;default,&lt;br&gt;aligned left&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+
+</PRE><!----------------------------------------------------->
+            <P>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TH bgColor=#f3f3f3 id=th3>VALIGN=<FONT 
+                  size=-1>TOP|BOTTOM|MIDDLE </FONT></TH></TR></TBODY></TABLE><BR>
+            <P>может применяться к отдельным ячейкам или всей строке<BR>
+            <TABLE border=1>
+              <TBODY>
+              <TR>
+                <TH>January</TH>
+                <TH>February</TH>
+                <TH>March</TH></TR>
+              <TR vAlign=top>
+                <TD>all aligned to top</TD>
+                <TD>and now this<BR>is cell 2</TD>
+                <TD>Cell 3</TD></TR>
+              <TR>
+                <TD vAlign=top>aligned to the top</TD>
+                <TD vAlign=bottom>aligned to the bottom</TD>
+                <TD>default alignment,<BR>center</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER&gt;
+        &lt;TR&gt;
+                &lt;TH&gt;January&lt;/TH&gt;
+                &lt;TH&gt;February&lt;/TH&gt;
+                &lt;TH&gt;March&lt;/TH&gt;
+        &lt;/TR&gt;
+        &lt;TR VALIGN=top&gt;
+            &lt;TD&gt;all aligned to top&lt;/TD&gt;
+            &lt;TD&gt;and now this&lt;br&gt;is cell 2&lt;/TD&gt;
+            &lt;TD&gt;Cell 3&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+            &lt;TD VALIGN=top&gt;aligned to the top&lt;/TD&gt;
+            &lt;TD VALIGN=bottom&gt;aligned to the bottom&lt;/TD&gt;
+            &lt;TD&gt;default alignment,&lt;br&gt;center&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE><!----------------------------------------------------->
+            <P>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TH bgColor=#f3f3f3 id=th3>CAPTION=<FONT size=-1>TOP|BOTTOM 
+                  </FONT></TH></TR></TBODY></TABLE><BR>
+            <TABLE border=1>
+              <CAPTION align=top>Верхний заголовок</CAPTION>
+              <TBODY>
+              <TR>
+                <TH>January</TH>
+                <TH>February</TH>
+                <TH>March</TH></TR>
+              <TR>
+                <TD>This is cell 1</TD>
+                <TD>Cell 2</TD>
+                <TD>Another cell,<BR>cell 3</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER&gt;
+&lt;CAPTION ALIGN=top&gt;A top CAPTION&lt;/CAPTION&gt;
+        &lt;TR&gt;
+                &lt;TH&gt;January&lt;/TH&gt;
+                &lt;TH&gt;February&lt;/TH&gt;
+                &lt;TH&gt;March&lt;/TH&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;This is cell 1&lt;/TD&gt;
+                &lt;TD&gt;Cell 2&lt;/TD&gt;
+                &lt;TD&gt;Another cell,&lt;br&gt; cell 3&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE>
+            <TABLE border=1>
+              <CAPTION align=bottom>Нижний заголовок</CAPTION>
+              <TBODY>
+              <TR>
+                <TH>January</TH>
+                <TH>February</TH>
+                <TH>March</TH></TR>
+              <TR>
+                <TD>This is cell 1</TD>
+                <TD>Cell 2</TD>
+                <TD>Another cell,<BR>cell 3</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER&gt;
+&lt;CAPTION ALIGN=bottom&gt;A bottom CAPTION&lt;/CAPTION&gt;
+        &lt;TR&gt;
+                &lt;TH&gt;January&lt;/TH&gt;
+                &lt;TH&gt;February&lt;/TH&gt;
+                &lt;TH&gt;March&lt;/TH&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;This is cell 1&lt;/TD&gt;
+                &lt;TD&gt;Cell 2&lt;/TD&gt;
+                &lt;TD&gt;Another cell,&lt;br&gt; cell 3&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+
+
+</PRE><!----------------------------------------------------->
+            <P>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TH bgColor=#f3f3f3 id=th3>ВЛОЖЕННЫЕ ТАБЛИЦЫ: ТАБЛИЦА ABCD 
+                  ВНУТРИ ТАБЛИЦЫ 123456 </TH></TR></TBODY></TABLE><BR>
+            <TABLE border=1>
+              <TBODY>
+              <TR><!-- ROW 1, TABLE 1 -->
+                <TD>1</TD>
+                <TD>2</TD>
+                <TD>3 
+                  <TABLE border=1>
+                    <TBODY>
+                    <TR><!-- ROW 1, TABLE 2 -->
+                      <TD>A</TD>
+                      <TD>B</TD></TR>
+                    <TR><!-- ROW 2, TABLE 2 -->
+                      <TD>C</TD>
+                      <TD>D</TD></TR></TBODY></TABLE></TD></TR>
+              <TR><!-- ROW 2, TABLE 1 -->
+                <TD>4</TD>
+                <TD>5</TD>
+                <TD>6</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER&gt;
+        &lt;TR&gt; &lt;!-- ROW 1, TABLE 1 --&gt;
+                &lt;TD&gt;1&lt;/TD&gt;
+                &lt;TD&gt;2&lt;/TD&gt;
+                &lt;TD&gt;3
+                &lt;TABLE BORDER&gt;
+                        &lt;TR&gt; &lt;!-- ROW 1, TABLE 2 --&gt;
+                                &lt;TD&gt;A&lt;/TD&gt;
+                                &lt;TD&gt;B&lt;/TD&gt;
+                        &lt;/TR&gt;
+                        &lt;TR&gt; &lt;!-- ROW 2, TABLE 2 --&gt;
+                                &lt;TD&gt;C&lt;/TD&gt;
+                                &lt;TD&gt;D&lt;/TD&gt;
+                        &lt;/TR&gt;
+                &lt;/TABLE&gt;
+                &lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt; &lt;!-- ROW 2, TABLE 1 --&gt;
+                &lt;TD&gt;4&lt;/TD&gt;
+                &lt;TD&gt;5&lt;/TD&gt;
+                &lt;TD&gt;6&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE><!-----------------------------------------------------></TD></TR></TBODY></TABLE>
+      <TABLE cellPadding=3 cellSpacing=2 width="100%">
+        <TBODY>
+        <TR>
+          <TD id=tod>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TH bgColor=#e0e0e0 id=th2>ЗАДАНИЕ ШИРИНЫ ТАБЛИЦЫ 
+              </TH></TR></TBODY></TABLE><BR>
+            <P>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TH bgColor=#f3f3f3 id=th3>ШИРИНА 50% </TH></TR></TBODY></TABLE><BR>
+            <TABLE border=1 width="50%">
+              <TBODY>
+              <TR>
+                <TD>Width=50%</TD>
+                <TD>Width=50%</TD></TR>
+              <TR>
+                <TD>3</TD>
+                <TD>4</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER WIDTH="50%"&gt;
+        &lt;TR&gt;&lt;TD&gt;Width=50%&lt;/TD&gt;&lt;TD&gt;Width=50%&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;&lt;TD&gt;3&lt;/TD&gt;&lt;TD&gt;4&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE>
+            <TABLE border=1 width="50%">
+              <TBODY>
+              <TR>
+                <TD>Item width affects cell size</TD>
+                <TD>2</TD></TR>
+              <TR>
+                <TD>3</TD>
+                <TD>4</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER WIDTH="50%"&gt;
+        &lt;TR&gt;&lt;TD&gt;Item width affects cell size&lt;/TD&gt;&lt;TD&gt;2&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;&lt;TD&gt;3&lt;/TD&gt;&lt;TD&gt;4&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE>
+            <TABLE border=1 width="100%">
+              <TBODY>
+              <TR>
+                <TD>WIDTH=100%</TD>
+                <TD>This is item 2</TD></TR>
+              <TR>
+                <TD>3</TD>
+                <TD>4</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER WIDTH="100%"&gt;
+        &lt;TR&gt;&lt;TD&gt;WIDTH=100%&lt;/TD&gt;&lt;TD&gt;This is item 2&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;&lt;TD&gt;3&lt;/TD&gt;&lt;TD&gt;4&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE>
+            <P>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TH bgColor=#f3f3f3 id=th3>ЦЕНТРИРОВАНИЕ ТАБЛИЦЫ НА СТРАНИЦЕ 
+                </TH></TR></TBODY></TABLE><BR>
+            <P>
+            <CENTER>
+            <TABLE border=1 width="50%">
+              <TBODY>
+              <TR>
+                <TD>A</TD>
+                <TD>B</TD>
+                <TD>C</TD></TR>
+              <TR>
+                <TD>D</TD>
+                <TD>E</TD>
+                <TD>F</TD></TR></TBODY></TABLE></CENTER><PRE>&lt;CENTER&gt;
+&lt;TABLE BORDER WIDTH="50%"&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;A&lt;/TD&gt; &lt;TD&gt;B&lt;/TD&gt; &lt;TD&gt;C&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;
+                &lt;TD&gt;D&lt;/TD&gt; &lt;TD&gt;E&lt;/TD&gt; &lt;TD&gt;F&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+&lt;/CENTER&gt;
+</PRE><!----------------------------------------------------->
+            <P>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TH bgColor=#f3f3f3 id=th3>ШИРИНА ТАБЛИЦЫ И ВЛОЖЕННЫЕ ТАБЛИЦЫ 
+                </TH></TR></TBODY></TABLE><BR>
+            <TABLE border=1 width="50%">
+              <TBODY>
+              <TR>
+                <TD>Item 1</TD>
+                <TD>Item 2</TD></TR>
+              <TR>
+                <TD>
+                  <TABLE border=1 width="100%">
+                    <TBODY>
+                    <TR>
+                      <TD>Item A</TD>
+                      <TD>Item B</TD></TR></TBODY></TABLE></TD>
+                <TD>Item 4</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER WIDTH="50%"&gt;
+        &lt;TR&gt;&lt;TD&gt;Item 1&lt;/TD&gt;&lt;TD&gt;Item 2&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;&lt;TD&gt;
+            &lt;TABLE BORDER WIDTH=100%&gt;
+                &lt;TR&gt;&lt;TD&gt;Item A&lt;/TD&gt;&lt;TD&gt;Item B&lt;/TD&gt;
+                &lt;/TR&gt;
+            &lt;/TABLE&gt;
+            &lt;/TD&gt;
+            &lt;TD&gt;Item 4&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE><!----------------------------------------------------->
+            <P>
+            <TABLE width="100%">
+              <TBODY>
+              <TR>
+                <TH bgColor=#f3f3f3 id=th3>HEIGHT=15% </TH></TR></TBODY></TABLE><BR>
+            <TABLE border=1 height="15%" width="50%">
+              <TBODY>
+              <TR>
+                <TD>HEIGHT=15%</TD>
+                <TD>Item 2</TD></TR>
+              <TR>
+                <TD>3</TD>
+                <TD>4</TD></TR></TBODY></TABLE><PRE>&lt;TABLE BORDER WIDTH="50%" HEIGHT="15%"&gt;
+        &lt;TR&gt;&lt;TD&gt;HEIGHT=15%&lt;/TD&gt; &lt;TD&gt;Item 2&lt;/TD&gt;
+        &lt;/TR&gt;
+        &lt;TR&gt;&lt;TD&gt;3&lt;/TD&gt;&lt;TD&gt;4&lt;/TD&gt;
+        &lt;/TR&gt;
+&lt;/TABLE&gt;
+</PRE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>

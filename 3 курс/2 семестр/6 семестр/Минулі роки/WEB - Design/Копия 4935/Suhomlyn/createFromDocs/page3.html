@@ -1,0 +1,39 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title></title>
+</head>
+<body>
+<h1>3.3 Defining a Class</h1>
+<p>When you define a class you describe the characteristics and behavior of objects of that type. In C#, you describe characteristics with <i>member fields</i>. 
+</p>
+<p id="codeh">class Dog<br/>
+{<br/>
+   private int weight;  // member field<br/>
+   private String name; // member field<br/>
+</p><p>
+Member fields are used to hold each object's state. For example, the state of the Dog is defined by its current weight and name. The state of an Employee might be defined by (among other things) her current salary, management level, and performance rating. <a href="page0.html">Chapter 8</a> includes a full discussion of member fields.<br/>
+You define the behavior of your new type with <i>methods</i>. Methods contain code to perform an action. </p>
+<p id="codeh">class Dog<br/>
+{<br/>
+   private int weight;  <br/>
+   private String name; <br/>
+   <b>public void bark()<br/>
+   {<br/>
+      // code here to bark<br/>
+   }</b>
+</p>
+<p class="marg">
+The keywords <tt>public and private</tt> are known as access <i>modifiers</i>, which are used to specify what classes can access particular members. For instance, public members can be called from methods in any class, while private members are visible only to the methods of the class that defines the member. Thus, objects of any class can call bark on a Dog, but only methods of Dog have access to the weight and name of the Dog. Access modifiers are discussed in <a href="page0.html">Chapter 8</a>. 
+</p>
+<p>
+A class typically defines a number of methods to do the work of that class. A Dog class might contain methods for barking, eating, napping, and so forth. An Employee class might contain methods for adjusting salary, submitting annual reviews, and evaluating performance objectives.<br/> 
+Methods can manipulate the state of the object by changing the values in member fields, or a method could interact with other objects of its own type or with objects of other types. This interaction among objects is crucial to object-oriented programming. <br/>
+For example, a Dog method might change the state of the Dog (e.g., weight), interact with other Dogs (e.g., bark and sniff), or interact with People (e.g., beg for food). A Product object might interact with a Customer object, and a Video object might interact with an EditingWindow object.<br/> 
+Designing a good C# program is not unlike forming a good team; you look for players — or objects, in the case of a program — with different skills to whom you can assign the various tasks you must accomplish. Those players cooperate with one another to get the job done. <br/>
+In a good object-oriented program, you will design objects that represent things in your problem domain. You will then divide the work of the program among your objects, assigning responsibility to objects based on their ability. 
+</p>
+<a href="page4.html"><h4 align="right">Next</h4></a>
+<a href="page2.html"><h4>Previous</h4></a>
+</body>
+</html>

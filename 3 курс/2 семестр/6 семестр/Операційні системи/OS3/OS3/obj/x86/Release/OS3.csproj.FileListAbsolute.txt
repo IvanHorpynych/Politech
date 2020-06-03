@@ -1,0 +1,5 @@
+H:\OS3\OS3\bin\Release\OS3.exe
+H:\OS3\OS3\bin\Release\OS3.pdb
+H:\OS3\OS3\obj\x86\Release\ResolveAssemblyReference.cache
+H:\OS3\OS3\obj\x86\Release\OS3.exe
+H:\OS3\OS3\obj\x86\Release\OS3.pdb

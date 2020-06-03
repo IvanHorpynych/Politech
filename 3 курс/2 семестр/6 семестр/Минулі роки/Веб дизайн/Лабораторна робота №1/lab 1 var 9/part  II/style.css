@@ -1,0 +1,72 @@
+/*for document content*/
+body{
+    padding: 10%;
+}
+/*for header in chapter*/
+.header{
+    font-size: x-large;
+    font-weight: bold;
+    color: #104E8B;
+    font-family: sans-serif;
+}
+/*right for navigate*/
+.r{
+    float: right;
+}
+/*for menu*/
+li{
+    list-style-type: disc;
+}
+/*for links in menu*/
+a:link, a:visited, a:active{ 
+    text-decoration: none;
+    color: gray; 
+}
+/*for onover link in menu*/
+a:hover{
+    color: green;
+}
+/*for menu*/
+#content{
+    color: green;
+}
+/*for border*/
+.bord{
+    margin-left: 50px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+/*for image in border*/
+.pic{
+    padding: 5px;
+    float: left;
+}
+/*for screens and their headers*/
+.screen{
+    text-align: center;
+}
+/*for text in border*/
+.text{
+    margin-left: 60px;
+}
+/*for code content*/
+.code{
+    color: gray;
+}
+/*blue text*/
+.blue{
+    color: blue;
+}/*blue bold text*/
+.blue_bold{
+    color: #104E8B;
+    font-weight: bold;
+}
+/*blue italic text*/
+.blue-italic{
+    color: blue;
+    font-style: italic;
+}
+/*for text in border*/
+.left{
+    margin-left: 50px;
+}

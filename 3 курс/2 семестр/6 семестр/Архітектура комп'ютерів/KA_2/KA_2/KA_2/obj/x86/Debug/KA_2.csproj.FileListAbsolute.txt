@@ -1,0 +1,27 @@
+D:\Комп архітектура\KA_2\KA_2\bin\Debug\KA_2.exe
+D:\Комп архітектура\KA_2\KA_2\bin\Debug\KA_2.pdb
+D:\Комп архітектура\KA_2\KA_2\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Комп архітектура\KA_2\KA_2\obj\x86\Debug\KA_2.Form1.resources
+D:\Комп архітектура\KA_2\KA_2\obj\x86\Debug\KA_2.Properties.Resources.resources
+D:\Комп архітектура\KA_2\KA_2\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Комп архітектура\KA_2\KA_2\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Комп архітектура\KA_2\KA_2\obj\x86\Debug\KA_2.exe
+D:\Комп архітектура\KA_2\KA_2\obj\x86\Debug\KA_2.pdb
+C:\Users\Мишко\Desktop\KA_2\KA_2\KA_2\obj\x86\Debug\KA_2.exe
+C:\Users\Мишко\Desktop\KA_2\KA_2\KA_2\obj\x86\Debug\KA_2.pdb
+C:\Users\Мишко\Desktop\KA_2\KA_2\KA_2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Мишко\Desktop\KA_2\KA_2\KA_2\obj\x86\Debug\KA_2.Form1.resources
+C:\Users\Мишко\Desktop\KA_2\KA_2\KA_2\obj\x86\Debug\KA_2.Properties.Resources.resources
+C:\Users\Мишко\Desktop\KA_2\KA_2\KA_2\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Мишко\Desktop\KA_2\KA_2\KA_2\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Мишко\Desktop\KA_2\KA_2\KA_2\bin\Debug\KA_2.exe
+C:\Users\Мишко\Desktop\KA_2\KA_2\KA_2\bin\Debug\KA_2.pdb
+D:\6 семестр\Архітектура комп'ютерів\KA_2\KA_2\KA_2\obj\x86\Debug\KA_2.exe
+D:\6 семестр\Архітектура комп'ютерів\KA_2\KA_2\KA_2\obj\x86\Debug\KA_2.pdb
+D:\6 семестр\Архітектура комп'ютерів\KA_2\KA_2\KA_2\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\6 семестр\Архітектура комп'ютерів\KA_2\KA_2\KA_2\obj\x86\Debug\KA_2.Form1.resources
+D:\6 семестр\Архітектура комп'ютерів\KA_2\KA_2\KA_2\obj\x86\Debug\KA_2.Properties.Resources.resources
+D:\6 семестр\Архітектура комп'ютерів\KA_2\KA_2\KA_2\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\6 семестр\Архітектура комп'ютерів\KA_2\KA_2\KA_2\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\6 семестр\Архітектура комп'ютерів\KA_2\KA_2\KA_2\bin\Debug\KA_2.exe
+D:\6 семестр\Архітектура комп'ютерів\KA_2\KA_2\KA_2\bin\Debug\KA_2.pdb

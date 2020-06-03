@@ -1,0 +1,12 @@
+D:\Комп графіка\OS_1\OS_1\bin\Debug\OS_1.exe
+D:\Комп графіка\OS_1\OS_1\bin\Debug\OS_1.pdb
+D:\Комп графіка\OS_1\OS_1\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Комп графіка\OS_1\OS_1\obj\x86\Debug\OS_1.exe
+D:\Комп графіка\OS_1\OS_1\obj\x86\Debug\OS_1.pdb
+D:\ОС\OS_1\OS_1\obj\x86\Debug\OS_1.exe
+D:\ОС\OS_1\OS_1\obj\x86\Debug\OS_1.pdb
+D:\ОС\OS_1\OS_1\bin\Debug\OS_1.exe
+D:\ОС\OS_1\OS_1\bin\Debug\OS_1.pdb
+D:\ОС\OS_1\OS_1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Мишко\Desktop\1\OS_1\OS_1\OS_1\obj\x86\Debug\OS_1.exe
+C:\Users\Мишко\Desktop\1\OS_1\OS_1\OS_1\obj\x86\Debug\OS_1.pdb

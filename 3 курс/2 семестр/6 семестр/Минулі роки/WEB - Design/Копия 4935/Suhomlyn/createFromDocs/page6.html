@@ -1,0 +1,22 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title></title>
+</head>
+<body>
+<h1>3.6 Encapsulation</h1>
+<p>
+The first pillar of object-oriented programming is encapsulation. The idea behind encapsulation is that you want to keep each type or class discreet and self-contained, so you can change the implementation of one class without affecting any other class. 
+</p><p>
+A class that provides a method that other classes can use is called a server. A class that uses that method is called a <i>client</i>. Encapsulation allows you to change the details of how a server does its work without breaking anything in the implementation of the client. 
+</p><p>
+This is accomplished by drawing a bright and shining line between the <i>public interface</i> of a class and its <i>private implementation</i>. The public interface is a contract issued by your class that says, "I promise to be able to do this work." Specifically, you'll see that a public interface says, "call this method, with these parameters, and I'll do this work, and return this value." A client can rely on a public interface not to change. If the public interface does change, then the client must be recompiled and perhaps redesigned. 
+</p><p>
+On the other hand, the private implementation is, as its name implies, private to the server. The designer of the server class is free to change <i>how</i> it does the work promised in the public interface, so long as it continues to fulfill the terms of its implicit contract: it must take the given parameters, do the promised work, and return the promised value. 
+</p><p>
+For example, you might have a public method that promises as follows: "Give me a dollar amount and a number of years, and I'll return the net present value." How you compute that amount is your business; if a client supplies a dollar amount and a number of years, you must return the net present value. You might implement that initially by keeping a table of values. You might change that at a later time to compute the value using the appropriate algebra. That is your business, and it does not affect the client. As long as you don't change the public interface (i.e., as long as you don't change the number or type of parameters expected or change the type of the return value) your clients will not break while you change the implementation. 
+</p>
+<a href="page7.html"><h4 align="right">Next</h4></a>
+<a href="page5.html"><h4>Previous</h4></a>
+</body>
+</html>

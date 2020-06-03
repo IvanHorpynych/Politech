@@ -1,0 +1,5 @@
+c:\users\xaoc1024\documents\visual studio 2010\Projects\ServerV1\ServerV1\bin\Debug\ServerV1.exe
+c:\users\xaoc1024\documents\visual studio 2010\Projects\ServerV1\ServerV1\bin\Debug\ServerV1.pdb
+c:\users\xaoc1024\documents\visual studio 2010\Projects\ServerV1\ServerV1\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\xaoc1024\documents\visual studio 2010\Projects\ServerV1\ServerV1\obj\x86\Debug\ServerV1.exe
+c:\users\xaoc1024\documents\visual studio 2010\Projects\ServerV1\ServerV1\obj\x86\Debug\ServerV1.pdb

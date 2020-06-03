@@ -1,0 +1,34 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title></title>
+</head>
+<body>
+<h1>Chapter 3. Object-Oriented Programming</h1>
+<p>Windows and web programs are enormously complex. Programs present information to users in graphically rich ways, offering complicated user interfaces, complete with drop-down and pop-up menus, buttons, listboxes, and so forth. Behind these interfaces, programs model complex business relationships, such as those among customers, products, orders, and inventory. You can interact with such a program in hundreds if not thousands of different ways, and the program must respond appropriately every time.</p>
+
+<p>To manage this enormous complexity, programmers have developed a technique called object-oriented programming. It is based on a very simple premise: you manage complexity by modeling its essential aspects. The closer your program models the problem you are trying to solve, the easier it is to understand (and thus to write and to maintain) that program.</p>
+
+<p>Programmers refer to the problem you are trying to solve and all the information you know that relates to your problem as the <i>problem domain</i>. For example, if you are writing a program to manage the inventory and sales of a company, the problem domain would include everything you know about how the company acquires and manages inventory, makes sales, handles the income from sales, tracks sales figures, and so forth. The sales manager and the stock room manager would be problem domain experts who can help you understand the problem domain.</p>
+
+<p>A well-designed object-oriented program is filled with objects from the problem domain. At the first level of design, you'll think about how these objects interact and what their state, capabilities, and responsibilities are.</p>
+<p class="hey">State</p>
+<p class="marg">A programmer refers to the current conditions and values of an object as that object's state. For example, you might have an object representing a customer. The customer's state includes the customer's address, phone number, email, as well as the customer's credit rating, recent purchase history, and so forth. </p>
+<p class="hey">Capabilities</p>
+<p class="marg">The customer has many capabilities, but a developer cares only about modeling those that are relevant to the problem domain. Thus a customer object might be able to buy an item, return an item, increase his credit rating, and so forth.</p>
+<p class="hey">Responsibilities</p>
+<p class="marg">Along with capabilities come responsibilities. The customer object is responsible for managing its own address. In a well-designed program, no other object needs to know the details of the customer's address. The address might be stored as data within the customer object, or it might be stored in a database, but it is up to the customer object to know how to retrieve and update his own address.</p>
+<p>Of course, all of the objects in your program are just <i>metaphors</i> for the objects in your problem domain.</p>
+<table width="100%" border>
+	<td>
+<h1>Metaphors</h1>
+<p>Many of the concepts used throughout this book, and any book on programming, are actually metaphors. We get so used to the metaphors that we forget they are metaphors. You are used to talking about a window on your program, but of course there is no such thing; there is just a rectangle with text and images in it. It looks like a window into your document so we call it a window. Of course, you don't actually have a document either, just bits in memory. No folders, no buttons - these are all just metaphors.</p>
+<p>There are many levels to these metaphors. When you see a window on the screen, the window itself is just a metaphor enhanced by an image drawn on your screen. That image is created by lighting tiny dots on the screen, called pixels. These pixels are lit in response to instructions written in your C# program. Each instruction is really a metaphor; the actual instructions read by your computer are in <i>Assembly</i> language, low-level instructions that are fed to the underlying computer chip. These Assembly instructions map to a series of 1s and 0s that the chip understands. Of course, the 1s and 0s are just metaphors for electricity in wires. When two wires meet, we measure the amount of electricity, and if there is a threshold amount we call it 1, otherwise 0. You get the idea.</p>
+ 
+<p>Good metaphors can be very powerful. The art of object-oriented programming is really the art of conceiving of good metaphors. </p>
+	</td>
+<table>
+
+<a href="page1.html"><h4 align="right">Next</h4></a></br>
+</body>
+</html>

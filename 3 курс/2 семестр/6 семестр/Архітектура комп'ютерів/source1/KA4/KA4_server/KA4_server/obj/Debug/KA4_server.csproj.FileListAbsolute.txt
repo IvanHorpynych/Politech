@@ -1,0 +1,15 @@
+D:\Комп архітектура\KA4_server\KA4_server\bin\KA4_server.dll
+D:\Комп архітектура\KA4_server\KA4_server\bin\KA4_server.pdb
+D:\Комп архітектура\KA4_server\KA4_server\obj\Debug\ResolveAssemblyReference.cache
+D:\Комп архітектура\KA4_server\KA4_server\obj\Debug\KA4_server.dll
+D:\Комп архітектура\KA4_server\KA4_server\obj\Debug\KA4_server.pdb
+D:\Комп архітектура\KA4\KA4_server\KA4_server\bin\KA4_server.dll
+D:\Комп архітектура\KA4\KA4_server\KA4_server\bin\KA4_server.pdb
+D:\Комп архітектура\KA4\KA4_server\KA4_server\obj\Debug\ResolveAssemblyReference.cache
+D:\Комп архітектура\KA4\KA4_server\KA4_server\obj\Debug\KA4_server.dll
+D:\Комп архітектура\KA4\KA4_server\KA4_server\obj\Debug\KA4_server.pdb
+C:\Users\Мишко\Desktop\source1\KA4\KA4_server\KA4_server\bin\KA4_server.dll
+C:\Users\Мишко\Desktop\source1\KA4\KA4_server\KA4_server\bin\KA4_server.pdb
+C:\Users\Мишко\Desktop\source1\KA4\KA4_server\KA4_server\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Мишко\Desktop\source1\KA4\KA4_server\KA4_server\obj\Debug\KA4_server.dll
+C:\Users\Мишко\Desktop\source1\KA4\KA4_server\KA4_server\obj\Debug\KA4_server.pdb

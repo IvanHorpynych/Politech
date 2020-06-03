@@ -1,0 +1,10 @@
+D:\ОС\OS3\OS3\bin\Debug\OS3.exe
+D:\ОС\OS3\OS3\bin\Debug\OS3.pdb
+D:\ОС\OS3\OS3\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\ОС\OS3\OS3\obj\x86\Debug\OS3.exe
+D:\ОС\OS3\OS3\obj\x86\Debug\OS3.pdb
+H:\OS3\OS3\obj\x86\Debug\OS3.exe
+H:\OS3\OS3\obj\x86\Debug\OS3.pdb
+H:\OS3\OS3\bin\Debug\OS3.exe
+H:\OS3\OS3\bin\Debug\OS3.pdb
+H:\OS3\OS3\obj\x86\Debug\ResolveAssemblyReference.cache

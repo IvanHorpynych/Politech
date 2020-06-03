@@ -1,0 +1,20 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title></title>
+</head>
+<body>
+<h1>3.5 The Three Pillars of Object-Oriented Programming</h1>
+<p>
+Object-oriented programming is built on three sturdy pillars: <i>encapsulation, specialization, and polymorphism.</i> 
+</p><p>
+Each class should be fully encapsulated, that is, it should fully define the state and responsibilities of that type. For example, if you create an Employee object, that Employee object should fully define all there is to know, from the perspective of your program, about each Employee. You do not, typically, want to have one class that defines the Employee's work information and a second, unrelated class that defines the Employee's contact information. Instead, you want to encapsulate all this information inside the Employee class, perhaps by aggregating the contact information as a member of the Employee class. 
+</p><p>
+Specialization allows you to establish hierarchical relationships among your classes. For example, you can define a Manager to be a specialized type of an Employee and an Employee to be a specialized type of Person. This allows you to leverage the state and abilities of an Employee object in the more specialized form of the Manager. 
+</p><p>
+Polymorphism allows you to treat a group of objects in a similar way and have the objects sort out how to implement the programming instructions. For instance, suppose you have a collection of Employee objects, and you want to tell each Employee to give himself a raise. Employees get a straight 5% raise, while raises for Managers are determined by how well they've fulfilled their annual objectives. With polymorphism, you can tell each object in the collection to give itself a raise, and the "right thing happens" regardless of the real type of the object. That is, each employee gets 5%, while each manager gets the appropriate raise based on objectives. 
+</p>
+<a href="page6.html"><h4 align="right">Next</h4></a>
+<a href="page4.html"><h4>Previous</h4></a>
+</body>
+</html>

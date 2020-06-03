@@ -1,0 +1,5 @@
+c:\Users\xaoc1024\Documents\Visual Studio 2010\Projects\ClientV2\ClientV2\bin\Debug\ClientV2.exe
+c:\Users\xaoc1024\Documents\Visual Studio 2010\Projects\ClientV2\ClientV2\bin\Debug\ClientV2.pdb
+c:\Users\xaoc1024\Documents\Visual Studio 2010\Projects\ClientV2\ClientV2\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\Users\xaoc1024\Documents\Visual Studio 2010\Projects\ClientV2\ClientV2\obj\x86\Debug\ClientV2.exe
+c:\Users\xaoc1024\Documents\Visual Studio 2010\Projects\ClientV2\ClientV2\obj\x86\Debug\ClientV2.pdb

@@ -1,0 +1,10 @@
+E:\Freeman\KPI-files\3_course\2_semester\Архитектура компьютера\KontrolTRUE\KontrolTRUE\bin\Debug\KontrolTRUE.exe
+E:\Freeman\KPI-files\3_course\2_semester\Архитектура компьютера\KontrolTRUE\KontrolTRUE\bin\Debug\KontrolTRUE.pdb
+E:\Freeman\KPI-files\3_course\2_semester\Архитектура компьютера\KontrolTRUE\KontrolTRUE\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Freeman\KPI-files\3_course\2_semester\Архитектура компьютера\KontrolTRUE\KontrolTRUE\obj\x86\Debug\KontrolTRUE.exe
+E:\Freeman\KPI-files\3_course\2_semester\Архитектура компьютера\KontrolTRUE\KontrolTRUE\obj\x86\Debug\KontrolTRUE.pdb
+C:\Users\azhuk\Desktop\KontrolTRUE\KontrolTRUE\obj\x86\Debug\KontrolTRUE.exe
+C:\Users\azhuk\Desktop\KontrolTRUE\KontrolTRUE\obj\x86\Debug\KontrolTRUE.pdb
+C:\Users\azhuk\Desktop\KontrolTRUE\KontrolTRUE\bin\Debug\KontrolTRUE.exe
+C:\Users\azhuk\Desktop\KontrolTRUE\KontrolTRUE\bin\Debug\KontrolTRUE.pdb
+C:\Users\azhuk\Desktop\KontrolTRUE\KontrolTRUE\obj\x86\Debug\ResolveAssemblyReference.cache

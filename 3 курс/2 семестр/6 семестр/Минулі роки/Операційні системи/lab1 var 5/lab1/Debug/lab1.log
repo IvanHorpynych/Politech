@@ -1,0 +1,20 @@
+﻿Build started 16.03.2011 20:14:33.
+     1>Project "C:\Users\McDre\Desktop\lab1\lab1\lab1.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\lab1.unsuccessfulbuild".
+       ClCompile:
+         All outputs are up-to-date.
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+       Manifest:
+         All outputs are up-to-date.
+       FinalizeBuildStatus:
+         Deleting file "Debug\lab1.unsuccessfulbuild".
+         Touching "Debug\lab1.lastbuildstate".
+     1>Done Building Project "C:\Users\McDre\Desktop\lab1\lab1\lab1.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.39
