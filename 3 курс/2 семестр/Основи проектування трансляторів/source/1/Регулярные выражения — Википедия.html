@@ -1,0 +1,937 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Регулярные выражения — Википедия</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8;charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta name="generator" content="MediaWiki 1.17wmf1" />
+<link rel="alternate" type="application/x-wiki" title="Править" href="/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit" />
+<link rel="edit" title="Править" href="/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://ru.wikipedia.org/apple-touch-icon.png" />
+<link rel="shortcut icon" href="Регулярные%20выражения%20—%20Википедия_files/favicon0.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Википедия (ru)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://ru.wikipedia.org/w/api.php?action=rsd" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/" />
+<link rel="alternate" type="application/atom+xml" title="Википедия — Atom-лента" href="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:RecentChanges&amp;feed=atom" />
+<link rel="stylesheet" href="http://bits.wikimedia.org/ru.wikipedia.org/load.php?debug=false&amp;lang=ru&amp;modules=mediawiki%21legacy%21commonPrint%7Cmediawiki%21legacy%21shared%7Cskins%21vector&amp;only=styles&amp;skin=vector" type="text/css" media="all" />
+<link rel="stylesheet" href="Регулярные%20выражения%20—%20Википедия_files/flaggedr.css" type="text/css" media="all" /><meta name="ResourceLoaderDynamicStyles" content="" /><link rel="stylesheet" href="http://bits.wikimedia.org/ru.wikipedia.org/load.php?debug=false&amp;lang=ru&amp;modules=site&amp;only=styles&amp;skin=vector" type="text/css" media="all" />
+<style type="text/css" media="all">a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: ruwiki:resourceloader:filter:minify-css:5:f2a9127573a22335c2a9102b208c73e7 */</style>
+<script src="http://bits.wikimedia.org/ru.wikipedia.org/load.php?debug=false&amp;lang=ru&amp;modules=startup&amp;only=scripts&amp;skin=vector" type="text/javascript"></script>
+<script type="text/javascript">if ( window.mediaWiki ) {
+	mediaWiki.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Регулярные_выражения", "wgTitle": "Регулярные выражения", "wgAction": "view", "wgArticleId": 19593, "wgIsArticle": true, "wgUserName": null, "wgUserGroups": ["*"], "wgCurRevisionId": 36693355, "wgCategories": ["Википедия:Нет источников с мая 2009", "Википедия:Статьи с утверждениями без источников более 14 дней", "Статьи со ссылками на Викиучебник", "Программирование", "Формальные языки", "Интерфейс командной строки", "Сопоставление с образцом"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": [], "wgSearchNamespaces": [0], "wgFlaggedRevsParams": {"tags": {"accuracy": {"levels": 3, "quality": 2, "pristine": 4}}}, "wgStableRevisionId": 36693355, "wgRevContents": {"error": "Невозможно получить содержимое.", "waiting": "Ожидание материалов"}, "wgVectorEnabledModules": {"collapsiblenav": true, "collapsibletabs": true, "editwarning": true, "expandablesearch": false, "footercleanup": false, "sectioneditlinks": false, "simplesearch": true, "experiments": true}, "wgWikiEditorEnabledModules": {"toolbar": true, "dialogs": true, "templateEditor": false, "templates": false, "addMediaWizard": false, "preview": false, "previewDialog": false, "publish": false, "toc": false}, "Geo": {"city": "", "country": ""}, "wgNoticeProject": "wikipedia"});
+}
+</script>
+
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/skins-1.17/vector/csshover.min.htc")}</style><![endif]--></head>
+<body class="mediawiki ltr ns-0 ns-subject page-Регулярные_выражения skin-vector">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<!-- content -->
+		<div id="content">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"></div>
+						<!-- sitenotice -->
+			<div id="siteNotice"><!-- centralNotice loads here --></div>
+			<!-- /sitenotice -->
+						<!-- firstHeading -->
+			<h1 id="firstHeading" class="firstHeading">Регулярные выражения</h1>
+			<!-- /firstHeading -->
+			<!-- bodyContent -->
+			<div id="bodyContent">
+				<!-- tagline -->
+				<div id="siteSub">Материал из Википедии — свободной энциклопедии</div>
+				<!-- /tagline -->
+				<!-- subtitle -->
+				<div id="contentSub"></div>
+				<!-- /subtitle -->
+																<!-- jumpto -->
+				<div id="jump-to-nav">
+					Перейти к: <a href="">навигация</a>,
+					<a href="">поиск</a>
+				</div>
+				<!-- /jumpto -->
+								<!-- bodytext -->
+				<p><b>Регуля́рные выраже́ния</b> (<a href="http://ru.wikipedia.org/wiki/Английский_язык" title="Английский язык">англ.</a>&#160;<i><span lang="en" xml:lang="en">regular expressions</span></i>, сокр. <b>RegExp</b>, <b>RegEx</b>, <a href="http://ru.wikipedia.org/wiki/Жаргон" title="Жаргон">жарг.</a> <i><b>регэ́кспы</b></i> или <i><b>ре́гексы</b></i>)&#160;— это формальный язык поиска и осуществления манипуляций с <a href="http://ru.wikipedia.org/wiki/Подстрока" title="Подстрока">подстроками</a> в тексте, основанный на использовании метасимволов (<a href="http://ru.wikipedia.org/wiki/Символы-джокеры" title="Символы-джокеры">символов-джокеров</a>, <a href="http://ru.wikipedia.org/wiki/Английский_язык" title="Английский язык">англ.</a>&#160;<i><span lang="en" xml:lang="en">wildcard characters</span></i>). По сути это строка-образец (<a href="http://ru.wikipedia.org/wiki/Английский_язык" title="Английский язык">англ.</a>&#160;<i><span lang="en" xml:lang="en">pattern</span></i>, по-русски её часто называют «шаблоном», «маской»), состоящая из символов и метасимволов и задающая правило поиска.</p>
+<p>Регулярные выражения произвели прорыв в электронной обработке текстов в конце <a href="http://ru.wikipedia.org/wiki/XX_век" title="XX век">XX века</a>. Набор утилит (включая редактор <a href="http://ru.wikipedia.org/wiki/Sed" title="Sed">sed</a> и фильтр <a href="http://ru.wikipedia.org/wiki/Grep" title="Grep">grep</a>), поставляемых в <a href="http://ru.wikipedia.org/wiki/Дистрибутив" title="Дистрибутив">дистрибутивах</a> <a href="http://ru.wikipedia.org/wiki/UNIX" title="UNIX">UNIX</a>, одним из первых способствовал популяризации регулярных выражений для обработки текстов. Многие современные <a href="http://ru.wikipedia.org/wiki/Язык_программирования" title="Язык программирования">языки программирования</a> имеют встроенную поддержку регулярных выражений. Среди них <a href="http://ru.wikipedia.org/wiki/Perl" title="Perl">Perl</a>, <a href="http://ru.wikipedia.org/wiki/Java" title="Java">Java</a><sup id="cite_ref-0" class="reference"><a href="">[1]</a></sup>, <a href="http://ru.wikipedia.org/wiki/PHP" title="PHP">PHP</a>, <a href="http://ru.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a>, <a href="http://ru.wikipedia.org/wiki/Список_.NET-языков" title="Список .NET-языков">языки платформы</a> <a href="http://ru.wikipedia.org/wiki/.NET_Framework" title=".NET Framework">.NET Framework</a><sup id="cite_ref-1" class="reference"><a href="">[2]</a></sup>, <a href="http://ru.wikipedia.org/wiki/Python" title="Python">Python</a>, <a href="http://ru.wikipedia.org/wiki/Tcl" title="Tcl">Tcl</a>, <a href="http://ru.wikipedia.org/wiki/Ruby" title="Ruby">Ruby</a>, <a href="http://ru.wikipedia.org/wiki/Lua" title="Lua">Lua</a>, <a href="http://ru.wikipedia.org/wiki/Gambas" title="Gambas">Gambas</a> и др.</p>
+<p>Регулярные выражения используются некоторыми <a href="http://ru.wikipedia.org/wiki/Текстовый_редактор" title="Текстовый редактор">текстовыми редакторами</a> и <a href="http://ru.wikipedia.org/wiki/Утилита" title="Утилита">утилитами</a> для поиска и подстановки текста. Например, при помощи регулярных выражений можно задать шаблоны, позволяющие:</p>
+<ul>
+<li>найти все последовательности символов <i>«кот»</i> в любом контексте, как то: <i>«кот», «котлета», «терракотовый»</i>;</li>
+<li>найти отдельно стоящее слово <i>«кот»</i> и заменить его на <i>«кошка»</i>;</li>
+<li>найти слово <i>«кот»</i>, которому предшествует слово <i>«персидский»</i> или <i>«чеширский»</i>;</li>
+<li>убрать из текста все предложения, в которых упоминается слово <i>кот</i> или <i>кошка</i>.</li>
+</ul>
+<p>Регулярные выражения позволяют задавать и гораздо более сложные шаблоны поиска или замены.</p>
+<table id="toc" class="toc">
+<tr>
+<td>
+<div id="toctitle">
+<h2>Содержание</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href=""><span class="tocnumber">1</span> <span class="toctext">История</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href=""><span class="tocnumber">2</span> <span class="toctext">В теории формальных языков</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href=""><span class="tocnumber">3</span> <span class="toctext">Синтаксис</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href=""><span class="tocnumber">3.1</span> <span class="toctext">Представление символов</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href=""><span class="tocnumber">3.1.1</span> <span class="toctext">Обычные символы (литералы) и специальные символы (метасимволы)</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href=""><span class="tocnumber">3.1.2</span> <span class="toctext">Любой символ</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href=""><span class="tocnumber">3.1.3</span> <span class="toctext">Символьные классы (наборы символов)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href=""><span class="tocnumber">3.2</span> <span class="toctext">Позиция внутри строки</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href=""><span class="tocnumber">3.3</span> <span class="toctext">Квантификация (поиск последовательностей)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-10"><a href=""><span class="tocnumber">3.3.1</span> <span class="toctext">Жадная и ленивая квантификация</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href=""><span class="tocnumber">3.3.2</span> <span class="toctext">Ревнивая квантификация (Сверхжадная)</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-12"><a href=""><span class="tocnumber">3.4</span> <span class="toctext">Группировка</span></a>
+<ul>
+<li class="toclevel-3 tocsection-13"><a href=""><span class="tocnumber">3.4.1</span> <span class="toctext">Обозначение группы</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href=""><span class="tocnumber">3.4.2</span> <span class="toctext">Обратная связь</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href=""><span class="tocnumber">3.4.3</span> <span class="toctext">Группировка без обратной связи</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href=""><span class="tocnumber">3.4.4</span> <span class="toctext">Атомарная группировка</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href=""><span class="tocnumber">3.4.5</span> <span class="toctext">Модификаторы</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href=""><span class="tocnumber">3.4.6</span> <span class="toctext">Комментарии</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-19"><a href=""><span class="tocnumber">3.5</span> <span class="toctext">Перечисление</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href=""><span class="tocnumber">3.6</span> <span class="toctext">Просмотр вперёд и назад</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href=""><span class="tocnumber">3.7</span> <span class="toctext">Поиск по условию</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-22"><a href=""><span class="tocnumber">4</span> <span class="toctext">Разновидности регулярных выражений</span></a>
+<ul>
+<li class="toclevel-2 tocsection-23"><a href=""><span class="tocnumber">4.1</span> <span class="toctext">Базовые регулярные выражения POSIX</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href=""><span class="tocnumber">4.2</span> <span class="toctext">Расширенные регулярные выражения POSIX</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href=""><span class="tocnumber">4.3</span> <span class="toctext">Регулярные выражения, совместимые с Perl</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-26"><a href=""><span class="tocnumber">5</span> <span class="toctext">Нечёткие регулярные выражения</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href=""><span class="tocnumber">6</span> <span class="toctext">Реализации</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href=""><span class="tocnumber">7</span> <span class="toctext">Примечания</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href=""><span class="tocnumber">8</span> <span class="toctext">Литература</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href=""><span class="tocnumber">9</span> <span class="toctext">См. также</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href=""><span class="tocnumber">10</span> <span class="toctext">Ссылки</span></a></li>
+</ul>
+</td>
+</tr>
+</table>
+<h2><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=1" title="Править секцию: История">править</a>]</span> <span class="mw-headline" id=".D0.98.D1.81.D1.82.D0.BE.D1.80.D0.B8.D1.8F">История</span></h2>
+<p>Истоки регулярных выражений лежат в <a href="http://ru.wikipedia.org/wiki/Теория_автоматов" title="Теория автоматов">теории автоматов</a>, <a href="http://ru.wikipedia.org/w/index.php?title=%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D1%85_%D1%8F%D0%B7%D1%8B%D0%BA%D0%BE%D0%B2&amp;action=edit&amp;redlink=1" class="new" title="Теория формальных языков (страница отсутствует)">теории формальных языков</a> и классификации формальных грамматик по Хомскому<sup id="cite_ref-2" class="reference"><a href="">[3]</a></sup>. Эти области изучают вычислительные модели (автоматы) и способы описания и классификации <a href="http://ru.wikipedia.org/wiki/Формальный_язык" title="Формальный язык">формальных языков</a>. В <a href="http://ru.wikipedia.org/wiki/1940-е" title="1940-е">1940-х гг.</a> <a href="http://ru.wikipedia.org/wiki/Маккалок,_Уоррен" title="Маккалок, Уоррен" class="mw-redirect">Уоррен Маккалок</a> и <a href="http://ru.wikipedia.org/w/index.php?title=%D0%9F%D0%B8%D1%82%D1%82%D1%81,_%D0%A3%D0%BE%D0%BB%D1%82%D0%B5%D1%80&amp;action=edit&amp;redlink=1" class="new" title="Питтс, Уолтер (страница отсутствует)">Уолтер Питтс</a> описали <a href="http://ru.wikipedia.org/wiki/Нервная_система" title="Нервная система">нервную систему</a>, используя простой автомат в качестве модели <a href="http://ru.wikipedia.org/wiki/Нейрон" title="Нейрон">нейрона</a>. Математик <a href="http://ru.wikipedia.org/wiki/Клини,_Стивен" title="Клини, Стивен" class="mw-redirect">Стивен Клини</a> позже описал эти модели, используя свою систему математических обозначений, названную «<a href="http://ru.wikipedia.org/wiki/Регулярное_множество" title="Регулярное множество">регулярные множества</a>». <a href="http://ru.wikipedia.org/wiki/Томпсон,_Кен" title="Томпсон, Кен">Кен Томпсон</a> встроил их в редактор <a href="http://ru.wikipedia.org/w/index.php?title=QED_(%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B9_%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80)&amp;action=edit&amp;redlink=1" class="new" title="QED (текстовый редактор) (страница отсутствует)">QED</a>, а затем в редактор <a href="http://ru.wikipedia.org/wiki/Ed" title="Ed">ed</a> под UNIX. С этого времени регулярные выражения стали широко использоваться в UNIX и UNIX-подобных утилитах, например: <a href="http://ru.wikipedia.org/wiki/Expr" title="Expr">expr</a>, <a href="http://ru.wikipedia.org/wiki/Awk" title="Awk" class="mw-redirect">awk</a>, <a href="http://ru.wikipedia.org/wiki/Emacs" title="Emacs">Emacs</a>, <a href="http://ru.wikipedia.org/wiki/Vi" title="Vi">vi</a>, <a href="http://ru.wikipedia.org/wiki/Lex" title="Lex">lex</a> и <a href="http://ru.wikipedia.org/wiki/Perl" title="Perl">Perl</a>.</p>
+<p>Регулярные выражения в Perl и Tcl происходят от реализации, написанной <a href="http://ru.wikipedia.org/w/index.php?title=%D0%A1%D0%BF%D0%B5%D0%BD%D1%81%D0%B5%D1%80,_%D0%93%D0%B5%D0%BD%D1%80%D0%B8&amp;action=edit&amp;redlink=1" class="new" title="Спенсер, Генри (страница отсутствует)">Генри Спенсером</a>. <a href="http://ru.wikipedia.org/w/index.php?title=%D0%A5%D0%B5%D0%B9%D0%B7%D0%B5%D0%BB,_%D0%A4%D0%B8%D0%BB%D0%B8%D0%BF&amp;action=edit&amp;redlink=1" class="new" title="Хейзел, Филип (страница отсутствует)">Филип Хейзел</a> разработал библиотеку <a href="http://ru.wikipedia.org/wiki/PCRE" title="PCRE">PCRE</a> (<a href="http://ru.wikipedia.org/wiki/Английский_язык" title="Английский язык">англ.</a>&#160;<i><span lang="en" xml:lang="en">Perl-compatible regular expressions</span></i>&#160;— Perl-совместимые регулярные выражения), которая используется во многих современных инструментах, таких как <a href="http://ru.wikipedia.org/wiki/PHP" title="PHP">PHP</a> и <a href="http://ru.wikipedia.org/wiki/Apache" title="Apache">Apache</a>.</p>
+<h2><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=2" title="Править секцию: В теории формальных языков">править</a>]</span> <span class="mw-headline" id=".D0.92_.D1.82.D0.B5.D0.BE.D1.80.D0.B8.D0.B8_.D1.84.D0.BE.D1.80.D0.BC.D0.B0.D0.BB.D1.8C.D0.BD.D1.8B.D1.85_.D1.8F.D0.B7.D1.8B.D0.BA.D0.BE.D0.B2">В теории формальных языков</span></h2>
+<p>Регулярные выражения состоят из <a href="http://ru.wikipedia.org/wiki/Константа" title="Константа">констант</a> и <a href="http://ru.wikipedia.org/wiki/Оператор_(программирование)" title="Оператор (программирование)">операторов</a>, которые определяют <a href="http://ru.wikipedia.org/wiki/Множество" title="Множество">множества</a> <a href="http://ru.wikipedia.org/wiki/Строка_(программирование)" title="Строка (программирование)" class="mw-redirect">строк</a> и множества <a href="http://ru.wikipedia.org/wiki/Операция_(программирование)" title="Операция (программирование)">операций</a> на них соответственно. На данном конечном <a href="http://ru.wikipedia.org/wiki/Алфавит" title="Алфавит">алфавите</a> Σ определены следующие константы:</p>
+<ul>
+<li>(<i><a href="http://ru.wikipedia.org/wiki/Пустое_множество" title="Пустое множество">пустое множество</a></i>) <span class="Unicode">∅</span>.</li>
+<li>(<i><a href="http://ru.wikipedia.org/wiki/Пустая_строка" title="Пустая строка">пустая строка</a></i>) ε обозначает строку, не содержащую ни одного символа. Эквивалентно «».</li>
+<li>(<i><a href="http://ru.wikipedia.org/wiki/Строка_(тип_данных)" title="Строка (тип данных)" class="mw-redirect">символьный литерал</a></i>) «<i>a</i>», где <i>a</i>&#160;— символ алфавита Σ.</li>
+</ul>
+<p>и следующие операции:</p>
+<ul>
+<li>(<a href="http://ru.wikipedia.org/wiki/Конкатенация" title="Конкатенация"><i>сцепление</i>, <i>конкатенация</i></a>) <i>RS</i> обозначает множество {αβ | α ∈ <i>R</i> &amp; β ∈ <i>S</i>}. Например, {"boy", "girl"}{"friend", "cott"} = {"boyfriend", "girlfriend", "boycott", "girlcott"}.</li>
+<li>(<i><a href="http://ru.wikipedia.org/wiki/Дизъюнкция" title="Дизъюнкция">дизъюнкция</a></i>, <i>чередование</i>) <i>R</i>|<i>S</i> обозначает <a href="http://ru.wikipedia.org/wiki/Объединение_множеств" title="Объединение множеств">объединение</a> <i>R</i> и <i>S</i>. Например, {"ab", "c"}|{"ab", "d", "ef"} = {"ab", "c", "d", "ef"}.<sup id="cite_ref-3" class="reference"><a href="">[4]</a></sup></li>
+<li>(<a href="http://ru.wikipedia.org/wiki/Звезда_Клини" title="Звезда Клини"><i>замыкание Клини</i>, <i>звезда Клини</i></a>) <i>R</i>* обозначает минимальное <a href="http://ru.wikipedia.org/wiki/Надмножество" title="Надмножество" class="mw-redirect">надмножество</a> множества <i>R</i>, которое содержит ε и <a href="http://ru.wikipedia.org/wiki/Замкнутое_множество" title="Замкнутое множество">замкнуто</a> относительно конкатенации. Это есть множество всех строк, полученных конкатенацией нуля или более строк из <i>R</i>. Например, {"Go", "Russia"}* = {ε, "Go", "Russia", "GoGo", "GoRussia", "RussiaGo", "RussiaRussia", "GoGoGo", "GoGoRussia", "GoRussiaGo", …}.</li>
+</ul>
+<h2><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=3" title="Править секцию: Синтаксис">править</a>]</span> <span class="mw-headline" id=".D0.A1.D0.B8.D0.BD.D1.82.D0.B0.D0.BA.D1.81.D0.B8.D1.81">Синтаксис</span></h2>
+<h3><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=4" title="Править секцию: Представление символов">править</a>]</span> <span class="mw-headline" id=".D0.9F.D1.80.D0.B5.D0.B4.D1.81.D1.82.D0.B0.D0.B2.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5_.D1.81.D0.B8.D0.BC.D0.B2.D0.BE.D0.BB.D0.BE.D0.B2">Представление символов</span></h3>
+<dl>
+<dd>
+<div class="noprint"><i>Основная статья</i>: <i><b><a href="http://ru.wikipedia.org/wiki/Представление_символов_в_регулярных_выражениях" title="Представление символов в регулярных выражениях">Представление символов в регулярных выражениях</a></b></i></div>
+</dd>
+</dl>
+<h4><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=5" title="Править секцию: Обычные символы (литералы) и специальные символы (метасимволы)">править</a>]</span> <span class="mw-headline" id=".D0.9E.D0.B1.D1.8B.D1.87.D0.BD.D1.8B.D0.B5_.D1.81.D0.B8.D0.BC.D0.B2.D0.BE.D0.BB.D1.8B_.28.D0.BB.D0.B8.D1.82.D0.B5.D1.80.D0.B0.D0.BB.D1.8B.29_.D0.B8_.D1.81.D0.BF.D0.B5.D1.86.D0.B8.D0.B0.D0.BB.D1.8C.D0.BD.D1.8B.D0.B5_.D1.81.D0.B8.D0.BC.D0.B2.D0.BE.D0.BB.D1.8B_.28.D0.BC.D0.B5.D1.82.D0.B0.D1.81.D0.B8.D0.BC.D0.B2.D0.BE.D0.BB.D1.8B.29">Обычные символы (<a href="http://ru.wikipedia.org/wiki/Литерал_(информатика)" title="Литерал (информатика)">литералы</a>) и специальные символы (<a href="http://ru.wikipedia.org/wiki/Метасимвол" title="Метасимвол" class="mw-redirect">метасимволы</a>)</span></h4>
+<p>Большинство символов в регулярном выражении представляют сами себя за исключением специальных символов <code style="white-space:nowrap;">[</code> <code style="white-space:nowrap;">]</code> <code style="white-space:nowrap;">\</code> <code style="white-space:nowrap;">^</code> <code style="white-space:nowrap;">$</code> <code style="white-space:nowrap;">.</code> <code style="white-space:nowrap;">|</code> <code style="white-space:nowrap;">?</code> <code style="white-space:nowrap;">*</code> <code style="white-space:nowrap;">+</code> <code style="white-space:nowrap;">(</code> <code style="white-space:nowrap;">)</code> <code style="white-space:nowrap;">{</code> <code style="white-space:nowrap;">}</code>, которые могут быть предварены символом <code style="white-space:nowrap;">\</code> (обратная косая черта) («экранированы», «защищены») для представления их самих в качестве символов текста. Можно экранировать целую последовательность символов, заключив её между <code style="white-space:nowrap;">\Q</code> и <code style="white-space:nowrap;">\E</code>.</p>
+<table class="wikitable">
+<tr>
+<th>Пример</th>
+<th>Соответствие</th>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">a\.?</code></td>
+<td><code style="white-space:nowrap;">a.</code> или <code style="white-space:nowrap;">a</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">a\\\\b</code></td>
+<td><code style="white-space:nowrap;">a\\b</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">a\[F\]</code></td>
+<td><code style="white-space:nowrap;">a[F]</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">\Q+-*/\E</code></td>
+<td><code style="white-space:nowrap;">+-*/</code></td>
+</tr>
+</table>
+<p>Аналогично могут быть представлены другие специальные символы (набор символов, требующих экранирования, может отличаться в зависимости от конкретной реализации). Часть символов, которые в той или иной реализации не требуют экранирования (например, угловые скобки <code style="white-space:nowrap;">&lt;</code> <code style="white-space:nowrap;">&gt;</code>), могут быть экранированы из соображений удобочитаемости.</p>
+<h4><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=6" title="Править секцию: Любой символ">править</a>]</span> <span class="mw-headline" id=".D0.9B.D1.8E.D0.B1.D0.BE.D0.B9_.D1.81.D0.B8.D0.BC.D0.B2.D0.BE.D0.BB">Любой символ</span></h4>
+<p>Метасимвол <code style="white-space:nowrap;">.</code> (точка) означает один любой символ, но в некоторых реализациях исключая символ новой строки.</p>
+<h4><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=7" title="Править секцию: Символьные классы (наборы символов)">править</a>]</span> <span class="mw-headline" id=".D0.A1.D0.B8.D0.BC.D0.B2.D0.BE.D0.BB.D1.8C.D0.BD.D1.8B.D0.B5_.D0.BA.D0.BB.D0.B0.D1.81.D1.81.D1.8B_.28.D0.BD.D0.B0.D0.B1.D0.BE.D1.80.D1.8B_.D1.81.D0.B8.D0.BC.D0.B2.D0.BE.D0.BB.D0.BE.D0.B2.29">Символьные классы (наборы символов)</span></h4>
+<p>Набор символов в квадратных скобках <code style="white-space:nowrap;">[</code> <code style="white-space:nowrap;">]</code> именуется символьным классом и позволяет указать интерпретатору регулярных выражений, что на данном месте в строке может стоять один из перечисленных символов. В частности, <code style="white-space:nowrap;">[абв]</code> задаёт возможность появления в тексте одного из трёх указанных символов, а <code style="white-space:nowrap;">[1234567890]</code> задаёт соответствие одной из цифр. Возможно указание диапазонов символов: например, <code style="white-space:nowrap;">[А-Яа-я]</code> соответствует всем буквам русского алфавита, за исключением букв «Ё» и «ё».<sup id="cite_ref-4" class="reference"><a href="">[5]</a></sup></p>
+<p>Если требуется указать символы, которые не входят в указанный набор, то используют символ <code style="white-space:nowrap;">^</code> внутри квадратных скобок, например <code style="white-space:nowrap;">[^0-9]</code> означает любой символ, кроме цифр.</p>
+<p>Добавление в набор специальных символов путём экранирования&#160;— самый бесхитростный способ. Однако в современных регулярных выражениях унаследован также и традиционный подход&#160;— см. <a href="">Традиционные регулярные выражения</a>.</p>
+<p>Некоторые символьные классы можно заменить специальными метасимволами:</p>
+<table class="wikitable">
+<tr>
+<th>Символ</th>
+<th>Описание</th>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">\d</code></td>
+<td><code style="white-space:nowrap;">Соответствует цифре. Эквивалентно [0-9]</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">\D</code></td>
+<td><code style="white-space:nowrap;">Соответствует нецифровому символу. Эквивалентно [^0-9]</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">\s</code></td>
+<td><code style="white-space:nowrap;">Соответствует символу пробела. Эквивалентно [\f\n\r\t]</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">\S</code></td>
+<td><code style="white-space:nowrap;">Соответствует любому непробельному символу. Эквивалентно [^\f\n\r\t]</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">\w</code></td>
+<td><code style="white-space:nowrap;">Соответствует латинской букве, цифре или подчеркиванию. Эквивалентно [A-Za-z0-9_]</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">\W</code></td>
+<td><code style="white-space:nowrap;">Соответствует любому символу, кроме латинской буквы, цифры или подчеркивания. Эквивалентно [^A-Za-z0-9_]</code></td>
+</tr>
+</table>
+<h3><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=8" title="Править секцию: Позиция внутри строки">править</a>]</span> <span class="mw-headline" id=".D0.9F.D0.BE.D0.B7.D0.B8.D1.86.D0.B8.D1.8F_.D0.B2.D0.BD.D1.83.D1.82.D1.80.D0.B8_.D1.81.D1.82.D1.80.D0.BE.D0.BA.D0.B8">Позиция внутри строки</span></h3>
+<p>Следующие символы позволяют спозиционировать регулярное выражение относительно элементов текста: начала и конца строки, границ слова.</p>
+<table class="wikitable">
+<tr>
+<th>Представление</th>
+<th>Позиция</th>
+<th>Пример</th>
+<th>Соответствие</th>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">^</code></td>
+<td>Начало строки</td>
+<td><code style="white-space:nowrap;">^a</code></td>
+<td><code style="white-space:nowrap;"><span style="background-color: #999999; color: #FFFFFF">a</span>aa aaa</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">$</code></td>
+<td>Конец строки</td>
+<td><code style="white-space:nowrap;">a$</code></td>
+<td><code style="white-space:nowrap;">aaa aa<span style="background-color: #999999; color: #FFFFFF">a</span></code></td>
+</tr>
+<tr valign="top">
+<td rowspan="2"><code style="white-space:nowrap;">\b</code></td>
+<td rowspan="2">Граница слова</td>
+<td><code style="white-space:nowrap;">a\b</code></td>
+<td><code style="white-space:nowrap;">aa<span style="background-color: #999999; color: #FFFFFF">a</span> aa<span style="background-color: #999999; color: #FFFFFF">a</span></code></td>
+</tr>
+<tr>
+<td><code style="white-space:nowrap;">\ba</code></td>
+<td><code style="white-space:nowrap;"><span style="background-color: #999999; color: #FFFFFF">a</span>aa <span style="background-color: #999999; color: #FFFFFF">a</span>aa</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">\B</code></td>
+<td>Не граница слова</td>
+<td><code style="white-space:nowrap;">\Ba\B</code></td>
+<td><code style="white-space:nowrap;">a<span style="background-color: #999999; color: #FFFFFF">a</span>a a<span style="background-color: #999999; color: #FFFFFF">a</span>a</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">\G</code></td>
+<td>Предыдущий успешный поиск</td>
+<td><code style="white-space:nowrap;">\Ga</code></td>
+<td><code style="white-space:nowrap;"><span style="background-color: #999999; color: #FFFFFF">aaa</span> aaa</code> (поиск остановился на 4-й позиции&#160;— там, где не нашлось <code style="white-space:nowrap;">a</code>)</td>
+</tr>
+</table>
+<h3><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=9" title="Править секцию: Квантификация (поиск последовательностей)">править</a>]</span> <span class="mw-headline" id=".D0.9A.D0.B2.D0.B0.D0.BD.D1.82.D0.B8.D1.84.D0.B8.D0.BA.D0.B0.D1.86.D0.B8.D1.8F_.28.D0.BF.D0.BE.D0.B8.D1.81.D0.BA_.D0.BF.D0.BE.D1.81.D0.BB.D0.B5.D0.B4.D0.BE.D0.B2.D0.B0.D1.82.D0.B5.D0.BB.D1.8C.D0.BD.D0.BE.D1.81.D1.82.D0.B5.D0.B9.29">Квантификация (поиск последовательностей)</span></h3>
+<p><i><a href="http://ru.wikipedia.org/wiki/Квантификатор" title="Квантификатор" class="mw-redirect">Квантификатор</a></i> после символа, символьного класса или группы определяет, сколько раз предшествующее выражение может встречаться. Следует учитывать, что квантификатор может относиться более чем к одному символу в регулярном выражении, только если это символьный класс или группа.</p>
+<table class="wikitable">
+<tr>
+<th>Представление</th>
+<th>Число повторений</th>
+<th>Пример</th>
+<th>Соответствие</th>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">{<i>n</i>}</code></td>
+<td>Ровно <i>n</i> раз</td>
+<td><code style="white-space:nowrap;">colou{3}r</code></td>
+<td><code style="white-space:nowrap;">colouuur</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">{<i>m</i>,<i>n</i>}</code></td>
+<td>От <i>m</i> до <i>n</i> включительно</td>
+<td><code style="white-space:nowrap;">colou{2,4}r</code></td>
+<td><code style="white-space:nowrap;">colouur</code>, <code style="white-space:nowrap;">colouuur</code>, <code style="white-space:nowrap;">colouuuur</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">{<i>m</i>,}</code></td>
+<td>Не менее <i>m</i></td>
+<td><code style="white-space:nowrap;">colou{2,}r</code></td>
+<td><code style="white-space:nowrap;">colouur</code>, <code style="white-space:nowrap;">colouuur</code>, <code style="white-space:nowrap;">colouuuur</code> <span style="white-space: nowrap;">и т. д.</span></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">{,<i>n</i>}</code></td>
+<td>Не более <i>n</i></td>
+<td><code style="white-space:nowrap;">colou{,3}r</code></td>
+<td><code style="white-space:nowrap;">color</code>, <code style="white-space:nowrap;">colour</code>, <code style="white-space:nowrap;">colouur</code>, <code style="white-space:nowrap;">colouuur</code></td>
+</tr>
+</table>
+<table class="wikitable">
+<tr>
+<th>Представление</th>
+<th>Число повторений</th>
+<th>Эквивалент</th>
+<th>Пример</th>
+<th>Соответствие</th>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">*</code></td>
+<td>Ноль или более</td>
+<td><code style="white-space:nowrap;">{0,}</code></td>
+<td><code style="white-space:nowrap;">colou*r</code></td>
+<td><code style="white-space:nowrap;">color</code>, <code style="white-space:nowrap;">colour</code>, <code style="white-space:nowrap;">colouur</code> <span style="white-space: nowrap;">и т. д.</span></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">+</code></td>
+<td>Одно или более</td>
+<td><code style="white-space:nowrap;">{1,}</code></td>
+<td><code style="white-space:nowrap;">colou+r</code></td>
+<td><code style="white-space:nowrap;">colour</code>, <code style="white-space:nowrap;">colouur</code> <span style="white-space: nowrap;">и т. д.</span> (но не <code style="white-space:nowrap;">color</code>)</td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">?</code></td>
+<td>Ноль или одно</td>
+<td><code style="white-space:nowrap;">{0,1}</code></td>
+<td><code style="white-space:nowrap;">colou?r</code></td>
+<td><code style="white-space:nowrap;">color</code>, <code style="white-space:nowrap;">colour</code></td>
+</tr>
+</table>
+<p>Часто используется последовательность <code style="white-space:nowrap;">.*</code> для обозначения любого количества любых символов между двумя частями регулярного выражения.</p>
+<p>Символьные классы в сочетании с квантификаторами позволяют устанавливать соответствия с реальными текстами. Например, столбцами цифр, телефонами, почтовыми адресами, элементами <a href="http://ru.wikipedia.org/wiki/HTML" title="HTML">HTML</a>-разметки и др.</p>
+<p>Если символы <code style="white-space:nowrap;">{</code> <code style="white-space:nowrap;">}</code> не образуют квантификатор, их специальное значение игнорируется.</p>
+<h4><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=10" title="Править секцию: Жадная и ленивая квантификация">править</a>]</span> <span class="mw-headline" id=".D0.96.D0.B0.D0.B4.D0.BD.D0.B0.D1.8F_.D0.B8_.D0.BB.D0.B5.D0.BD.D0.B8.D0.B2.D0.B0.D1.8F_.D0.BA.D0.B2.D0.B0.D0.BD.D1.82.D0.B8.D1.84.D0.B8.D0.BA.D0.B0.D1.86.D0.B8.D1.8F">Жадная и ленивая квантификация</span></h4>
+<div style="background: #f9f9f9; border: 1px solid #aaaaaa; float: right; clear: right; margin: .5em 0em .8em 1.4em; font-size: 90%; padding: .5em 1em; width: 300px; height: auto;">
+<div style="border-bottom: 1px solid #aaaaaa; padding-bottom: .4em; font-weight: bold; font-size: 120%;"><b>Пример</b> использования жадных и ленивых выражений</div>
+<div style="margin-top: .4em;">
+<p>Выражение <code style="white-space:nowrap;">(&lt;.*&gt;)</code> соответствует строке, содержащей несколько тегов <a href="http://ru.wikipedia.org/wiki/HTML" title="HTML">HTML</a>-разметки, целиком.</p>
+<p><code><span style="background-color: #999999; color: #FFFFFF">&lt;p&gt;&lt;b&gt;Википедия&lt;/b&gt; — свободная энциклопедия, в которой &lt;i&gt;каждый&lt;/i&gt; может изменить или дополнить любую статью&lt;/p&gt;</span>.</code></p>
+<p>Чтобы выделить отдельные теги, можно применить ленивую версию этого выражения: <code style="white-space:nowrap;">(&lt;.*?&gt;)</code> Ей соответствует не вся показанная выше строка, а отдельные теги (выделены цветом):</p>
+<p><code><span style="background-color: #999999; color: #FFFFFF">&lt;p&gt;&lt;b&gt;</span>Википедия<span style="background-color: #999999; color: #FFFFFF">&lt;/b&gt;</span> — свободная энциклопедия, в которой <span style="background-color: #999999; color: #FFFFFF">&lt;i&gt;</span>каждый<span style="background-color: #999999; color: #FFFFFF">&lt;/i&gt;</span> может изменить или дополнить любую статью<span style="background-color: #999999; color: #FFFFFF">&lt;/p&gt;</span>.</code></p>
+</div>
+</div>
+<p>В некоторых реализациях квантификаторам в регулярных выражениях соответствует максимально длинная строка из возможных (квантификаторы являются <i>жадными</i>, <a href="http://ru.wikipedia.org/wiki/Английский_язык" title="Английский язык">англ.</a>&#160;<i><span lang="en" xml:lang="en">greedy</span></i>). Это может оказаться значительной проблемой. Например, часто ожидают, что выражение <code style="white-space:nowrap;">(&lt;.*&gt;)</code> найдёт в тексте <a href="http://ru.wikipedia.org/wiki/Тег_(языки_разметки)" title="Тег (языки разметки)">теги</a> <a href="http://ru.wikipedia.org/wiki/HTML" title="HTML">HTML</a>. Однако, если в тексте есть более одного HTML-тега, то этому выражению соответствует целиком строка, содержащая множество тегов.</p>
+<p><code><span style="background-color: #999999; color: #FFFFFF">&lt;p&gt;&lt;b&gt;Википедия&lt;/b&gt; — свободная энциклопедия, в которой &lt;i&gt;каждый&lt;/i&gt; может изменить или дополнить любую статью&lt;/p&gt;</span>.</code></p>
+<p>Эту проблему можно решить двумя способами.</p>
+<ol>
+<li>Учитывать символы, <i>не</i> соответствующие желаемому образцу (<code style="white-space:nowrap;">&lt;[^&gt;]*&gt;</code> для вышеописанного случая).</li>
+<li>Определить квантификатор как <i>нежадный</i> (<i>ленивый</i>, <a href="http://ru.wikipedia.org/wiki/Английский_язык" title="Английский язык">англ.</a>&#160;<i><span lang="en" xml:lang="en">lazy</span></i>)&#160;— большинство реализаций позволяют это сделать, добавив после него знак вопроса.</li>
+</ol>
+<p>Использование ленивых квантификаторов может повлечь за собой обратную проблему, когда выражению соответствует слишком короткая, в частности, пустая строка.</p>
+<table class="wikitable">
+<tr>
+<th>Жадный</th>
+<th>Ленивый</th>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">*</code></td>
+<td><code style="white-space:nowrap;">*?</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">+</code></td>
+<td><code style="white-space:nowrap;">+?</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">{<i>n</i>,}</code></td>
+<td><code style="white-space:nowrap;">{<i>n</i>,}?</code></td>
+</tr>
+</table>
+<p>Также общей проблемой как жадных, так и ленивых выражений являются точки возврата для перебора вариантов выражения. Точки ставятся после каждой итерации квантификатора. Если интерпретатор не нашёл соответствия после квантификатора, то он начинает возвращаться по всем установленным точкам, пересчитывая оттуда выражение по-другому.</p>
+<h4><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=11" title="Править секцию: Ревнивая квантификация (Сверхжадная)">править</a>]</span> <span class="mw-headline" id=".D0.A0.D0.B5.D0.B2.D0.BD.D0.B8.D0.B2.D0.B0.D1.8F_.D0.BA.D0.B2.D0.B0.D0.BD.D1.82.D0.B8.D1.84.D0.B8.D0.BA.D0.B0.D1.86.D0.B8.D1.8F_.28.D0.A1.D0.B2.D0.B5.D1.80.D1.85.D0.B6.D0.B0.D0.B4.D0.BD.D0.B0.D1.8F.29">Ревнивая квантификация (Сверхжадная)</span></h4>
+<div style="background: #f9f9f9; border: 1px solid #aaaaaa; float: right; clear: right; margin: .5em 0em .8em 1.4em; font-size: 90%; padding: .5em 1em; width: 440px; height: auto;">
+<p>При поиске выражения <code style="white-space:nowrap;">(<span style="color:red">a</span>+<span style="color:green">a</span>+)+<span style="color:magenta">b</span></code> в строке <code style="white-space:nowrap;">aaaaa</code> интерпретатор пойдёт приблизительно по следующему пути:</p>
+<ol>
+<li><code style="white-space:nowrap;"><span style="color:red">aaaaa</span></code></li>
+<li><code style="white-space:nowrap;"><span style="color:red">aaaa</span><span style="color:green">a</span></code></li>
+<li><code style="white-space:nowrap;"><span style="color:red">aaa</span><span style="color:green">a</span><span style="color:magenta">a</span></code></li>
+<li><code style="white-space:nowrap;"><span style="color:red">aa</span><span style="color:green">aaa</span></code></li>
+<li><code style="white-space:nowrap;"><span style="color:red">aa</span><span style="color:green">aa</span><span style="color:magenta">a</span></code></li>
+<li><code style="white-space:nowrap;"><span style="color:red">aa</span><span style="color:green">a</span><span style="color:red">a</span><span style="color:green">a</span></code></li>
+<li><code style="white-space:nowrap;"><span style="color:red">a</span><span style="color:green">a</span><span style="color:red">a</span><span style="color:green">a</span><span style="color:magenta">a</span></code>&#160;— и только тут, проверив все точки возврата, сдастся.</li>
+</ol>
+<p>При использовании ревнивого квантификатора будет выполнен только первый шаг алгоритма.</p>
+</div>
+<p>В отличие от обычной (жадной) квантификации, ревнивая квантификация не только старается найти максимально длинный вариант, но ещё и не позволяет алгоритму возвращаться к предыдущим шагам поиска для того, чтобы найти возможные соответствия для оставшейся части регулярного выражения.</p>
+<p>Использование ревнивых квантификаторов увеличивает скорость поиска, особенно в тех случаях, когда строка не соответствует регулярному выражению. Кроме того, ревнивые квантификаторы могут быть использованы для исключения нежелательных совпадений.</p>
+<table class="wikitable">
+<tr>
+<th>Жадный</th>
+<th>Ревнивый</th>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">*</code></td>
+<td><code style="white-space:nowrap;">*+</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">?</code></td>
+<td><code style="white-space:nowrap;">?+</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">+</code></td>
+<td><code style="white-space:nowrap;">++</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">{<i>n</i>,}</code></td>
+<td><code style="white-space:nowrap;">{<i>n</i>,}+</code></td>
+</tr>
+</table>
+<table class="wikitable">
+<tr>
+<th>Пример</th>
+<th>Соответствие</th>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">ab(xa)*+a</code></td>
+<td><code style="white-space:nowrap;"><span style="background-color: #999999; color: #FFFFFF">abxa<b>a</b></span>bxaa</code>; но не <code style="white-space:nowrap;">abxa<span style="background-color: #999999; color: #FFFFFF">abxaa</span></code>, так как буква <code style="white-space:nowrap;"><b>a</b></code> уже занята</td>
+</tr>
+</table>
+<h3><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=12" title="Править секцию: Группировка">править</a>]</span> <span class="mw-headline" id=".D0.93.D1.80.D1.83.D0.BF.D0.BF.D0.B8.D1.80.D0.BE.D0.B2.D0.BA.D0.B0">Группировка</span></h3>
+<h4><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=13" title="Править секцию: Обозначение группы">править</a>]</span> <span class="mw-headline" id=".D0.9E.D0.B1.D0.BE.D0.B7.D0.BD.D0.B0.D1.87.D0.B5.D0.BD.D0.B8.D0.B5_.D0.B3.D1.80.D1.83.D0.BF.D0.BF.D1.8B">Обозначение группы</span></h4>
+<p>Круглые скобки используются для определения области действия и <a href="http://ru.wikipedia.org/wiki/Приоритет_операции" title="Приоритет операции">приоритета операций</a>. Шаблон внутри группы обрабатывается как единое целое и может быть квантифицирован. Например, выражение <code style="white-space:nowrap;">(тр[ау]м-?)*</code> найдёт последовательность вида <code style="white-space:nowrap;">трам-трам-трумтрам-трум-трамтрум</code>.</p>
+<h4><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=14" title="Править секцию: Обратная связь">править</a>]</span> <span class="mw-headline" id=".D0.9E.D0.B1.D1.80.D0.B0.D1.82.D0.BD.D0.B0.D1.8F_.D1.81.D0.B2.D1.8F.D0.B7.D1.8C"><a href="http://ru.wikipedia.org/wiki/Обратная_связь" title="Обратная связь">Обратная связь</a></span></h4>
+<p>Одно из применений группировки&#160;— повторное использование ранее найденных групп символов (<i>подстрок</i>, <i>блоков</i>, <i>отмеченных подвыражений</i>). При обработке выражения подстро́ки, найденные по шаблону внутри группы, сохраняются в отдельной области памяти и получают номер начиная с единицы. Каждой подстроке соответствует пара скобок в регулярном выражении. Квантификация группы не влияет на сохранённый результат, то есть сохраняется лишь первое вхождение. Обычно поддерживается до 9 нумерованных подстрок с номерами от 1 до 9, но некоторые интерпретаторы позволяют работать с бо́льшим количеством. Впоследствии в пределах данного регулярного выражения можно использовать обозначения от <code style="white-space:nowrap;">\1</code> до <code style="white-space:nowrap;">\9</code> для проверки на совпадение с ранее найденной подстрокой.</p>
+<p>Например, регулярное выражение <code style="white-space:nowrap;">(та|ту)-\1</code> найдёт строку <code style="white-space:nowrap;">та-та</code> или <code style="white-space:nowrap;">ту-ту</code>, но пропустит строку <code style="white-space:nowrap;">та-ту</code>.</p>
+<p>Также ранее найденные подстро́ки можно использовать при замене по регулярному выражению. В таком случае в замещающий текст вставляются те же обозначения, что и в пределах самого выражения.</p>
+<h4><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=15" title="Править секцию: Группировка без обратной связи">править</a>]</span> <span class="mw-headline" id=".D0.93.D1.80.D1.83.D0.BF.D0.BF.D0.B8.D1.80.D0.BE.D0.B2.D0.BA.D0.B0_.D0.B1.D0.B5.D0.B7_.D0.BE.D0.B1.D1.80.D0.B0.D1.82.D0.BD.D0.BE.D0.B9_.D1.81.D0.B2.D1.8F.D0.B7.D0.B8">Группировка без обратной связи</span></h4>
+<p>Если группа используется только для группировки и её результат в дальнейшем не потребуется, то можно использовать группировку вида <code style="white-space:nowrap;">(?:<i>шаблон</i>)</code>. Под результат такой группировки не выделяется отдельная область памяти и, соответственно, ей не назначается номер. Это положительно влияет на скорость выполнения выражения, но понижает удобочитаемость.</p>
+<h4><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=16" title="Править секцию: Атомарная группировка">править</a>]</span> <span class="mw-headline" id=".D0.90.D1.82.D0.BE.D0.BC.D0.B0.D1.80.D0.BD.D0.B0.D1.8F_.D0.B3.D1.80.D1.83.D0.BF.D0.BF.D0.B8.D1.80.D0.BE.D0.B2.D0.BA.D0.B0">Атомарная группировка</span></h4>
+<p>Атомарная группировка (вида <code style="white-space:nowrap;">(?&gt;<i>шаблон</i>)</code>), так же как группировка без обратной связи, не создаёт обратных связей. В отличие от неё, такая группировка запрещает возвращаться назад по строке, если часть шаблона уже найдена.</p>
+<table class="wikitable">
+<tr>
+<th>Пример</th>
+<th>Соответствие</th>
+<th>Создаваемые группы</th>
+</tr>
+<tr>
+<td><code style="white-space:nowrap;">a(bc|b|x)cc</code></td>
+<td rowspan="2"><code style="white-space:nowrap;"><span style="background-color: #999999; color: #FFFFFF">abcc</span>axcc</code>
+<p><code style="white-space:nowrap;">abcc<span style="background-color: #999999; color: #FFFFFF">axcc</span></code></p>
+</td>
+<td><code style="white-space:nowrap;">a<span style="background-color: #999999; color: #FFFFFF">b</span>ccaxcc</code>
+<p><code style="white-space:nowrap;">abcca<span style="background-color: #999999; color: #FFFFFF">x</span>cc</code></p>
+</td>
+</tr>
+<tr>
+<td><code style="white-space:nowrap;">a(?:bc|b|x)cc</code></td>
+<td rowspan="3">нет</td>
+</tr>
+<tr>
+<td><code style="white-space:nowrap;">a(?&gt;bc|b|x)cc</code></td>
+<td><code style="white-space:nowrap;">abcc<span style="background-color: #999999; color: #FFFFFF">axcc</span></code>
+<p>но не <code style="white-space:nowrap;"><span style="background-color: #999999; color: #FFFFFF">abcc</span>axcc</code>: вариант <code style="white-space:nowrap;">x</code> найден, остальные проигнорированы</p>
+</td>
+</tr>
+<tr>
+<td><code style="white-space:nowrap;">a(?&gt;x*)xa</code></td>
+<td>не найдётся <code style="white-space:nowrap;"><span style="background-color: #999999; color: #FFFFFF">axxxa</span></code>: все <code style="white-space:nowrap;">x</code> заняты, и нет возврата внутрь группы</td>
+</tr>
+</table>
+<p>Атомарная группировка выполняется ещё быстрее, чем группировка без обратной связи, и сохраняет процессорное время при выполнении остального выражения, так как запрещает проверку любых других вариантов внутри группы, когда один вариант уже найден. Это очень полезно при оптимизации групп со множеством различных вариантов.</p>
+<h4><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=17" title="Править секцию: Модификаторы">править</a>]</span> <span class="mw-headline" id=".D0.9C.D0.BE.D0.B4.D0.B8.D1.84.D0.B8.D0.BA.D0.B0.D1.82.D0.BE.D1.80.D1.8B">Модификаторы</span></h4>
+<p>Модификаторы действуют с момента вхождения и до конца регулярного выражения или противоположного модификатора. Некоторые интерпретаторы могут применить модификатор ко всему выражению, а не с момента его вхождения.</p>
+<table class="wikitable">
+<tr>
+<th>Синтаксис</th>
+<th colspan="2">Описание</th>
+</tr>
+<tr>
+<td><code style="white-space:nowrap;">(?i)</code></td>
+<td>Включает</td>
+<td rowspan="2">нечувствительность выражения к регистру символов (<a href="http://ru.wikipedia.org/wiki/Английский_язык" title="Английский язык">англ.</a>&#160;<i><span lang="en" xml:lang="en">case insensitivity</span></i>)</td>
+</tr>
+<tr>
+<td><code style="white-space:nowrap;">(?-i)</code></td>
+<td>Выключает</td>
+</tr>
+<tr>
+<td><code style="white-space:nowrap;">(?s)</code></td>
+<td>Включает</td>
+<td rowspan="2">режим соответствия точки символам переноса строки и возврата каретки</td>
+</tr>
+<tr>
+<td><code style="white-space:nowrap;">(?-s)</code></td>
+<td>Выключает</td>
+</tr>
+<tr>
+<td><code style="white-space:nowrap;">(?m)</code></td>
+<td rowspan="2">Символы <code style="white-space:nowrap;">^</code> и <code style="white-space:nowrap;">$</code> вызывают соответствие только</td>
+<td>после и до символов новой строки</td>
+</tr>
+<tr>
+<td><code style="white-space:nowrap;">(?-m)</code></td>
+<td>с началом и концом строки</td>
+</tr>
+<tr>
+<td><code style="white-space:nowrap;">(?x)</code></td>
+<td>Включает</td>
+<td rowspan="2">режим без учёта пробелов между частями регулярного выражения и позволяет использовать <code style="white-space:nowrap;">#</code> для комментариев</td>
+</tr>
+<tr>
+<td><code style="white-space:nowrap;">(?-x)</code></td>
+<td>Выключает</td>
+</tr>
+</table>
+<p>Группы-модификаторы можно объединять в одну группу: <code style="white-space:nowrap;">(?i-sm)</code>. Такая группа включает режим <code style="white-space:nowrap;">i</code> и выключает режим <code style="white-space:nowrap;">s</code>, <code style="white-space:nowrap;">m</code>. Если использование модификаторов требуется только в пределах группы, то нужный шаблон указывается внутри группы после модификаторов и двоеточия. Например, <code style="white-space:nowrap;">(?-i)(?i:tv)set</code> найдёт <code style="white-space:nowrap;">TVset</code>, но не <code style="white-space:nowrap;">TVSET</code>.</p>
+<h4><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=18" title="Править секцию: Комментарии">править</a>]</span> <span class="mw-headline" id=".D0.9A.D0.BE.D0.BC.D0.BC.D0.B5.D0.BD.D1.82.D0.B0.D1.80.D0.B8.D0.B8">Комментарии</span></h4>
+<p>Для добавления комментариев в регулярное выражение можно использовать группы-комментарии вида <code style="white-space:nowrap;">(?#<i>комментарий</i>)</code>. Такая группа интерпретатором полностью игнорируется и не проверяется на вхождение в текст. Например, выражение <code style="white-space:nowrap;">А(?#тут комментарий)Б</code> соответствует строке <code style="white-space:nowrap;">АБ</code>.</p>
+<h3><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=19" title="Править секцию: Перечисление">править</a>]</span> <span class="mw-headline" id=".D0.9F.D0.B5.D1.80.D0.B5.D1.87.D0.B8.D1.81.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5">Перечисление</span></h3>
+<p>Вертикальная черта разделяет допустимые варианты. Например, <code style="white-space:nowrap;">gray|grey</code> соответствует <code style="white-space:nowrap;">gray</code> или <code style="white-space:nowrap;">grey</code>. Следует помнить, что перебор вариантов выполняется слева направо, как они указаны.</p>
+<p>Если требуется указать перечень вариантов внутри более сложного регулярного выражения, то его нужно заключить в группу. Например, <code style="white-space:nowrap;">gray|grey</code> или <code style="white-space:nowrap;">gr(a|e)y</code> описывают строку <code style="white-space:nowrap;">gray</code> или <code style="white-space:nowrap;">grey</code>. В случае с односимвольными альтернативами предпочтителен вариант <code style="white-space:nowrap;">gr[ae]y</code>, так как сравнение с символьным классом выполняется проще, чем обработка группы с проверкой на все её возможные модификаторы и генерацией обратной связи.</p>
+<h3><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=20" title="Править секцию: Просмотр вперёд и назад">править</a>]</span> <span class="mw-headline" id=".D0.9F.D1.80.D0.BE.D1.81.D0.BC.D0.BE.D1.82.D1.80_.D0.B2.D0.BF.D0.B5.D1.80.D1.91.D0.B4_.D0.B8_.D0.BD.D0.B0.D0.B7.D0.B0.D0.B4">Просмотр вперёд и назад</span></h3>
+<p>В большинстве реализаций регулярных выражений есть способ производить поиск фрагмента текста, «просматривая» (но не включая в найденное) окружающий текст, который расположен до или после искомого фрагмента текста. Например, таким способом легко найти имя тега HTML, не включая в результат поиска окружающие его угловые скобки или другие знаки, но и не упуская их «из внимания» при поиске нужного контекста. Просмотр с отрицанием используется реже и «следит» за тем, чтобы указанные соответствия, напротив, не встречались до или после искомого текстового фрагмента.</p>
+<table class="wikitable">
+<tr>
+<th>Представление</th>
+<th>Вид просмотра</th>
+<th>Пример</th>
+<th>Соответствие</th>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">(?=<i>шаблон</i>)</code></td>
+<td>Позитивный просмотр вперёд</td>
+<td><code style="white-space:nowrap;">Людовик(?=XVI)</code></td>
+<td><code style="white-space:nowrap;">ЛюдовикXV, <span style="background-color: #999999; color: #FFFFFF">Людовик</span>XVI, <span style="background-color: #999999; color: #FFFFFF">Людовик</span>XVIII, ЛюдовикLXVII, ЛюдовикXXL</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">(?!<i>шаблон</i>)</code></td>
+<td>Негативный просмотр вперёд (с отрицанием)</td>
+<td><code style="white-space:nowrap;">Людовик(?!XVI)</code></td>
+<td><code style="white-space:nowrap;"><span style="background-color: #999999; color: #FFFFFF">Людовик</span>XV, ЛюдовикXVI, ЛюдовикXVIII, <span style="background-color: #999999; color: #FFFFFF">Людовик</span>LXVII, <span style="background-color: #999999; color: #FFFFFF">Людовик</span>XXL</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">(?&lt;=<i>шаблон</i>)</code></td>
+<td>Позитивный просмотр назад</td>
+<td><code style="white-space:nowrap;">(?&lt;=Сергей )Иванов</code></td>
+<td><code style="white-space:nowrap;">Сергей <span style="background-color: #999999; color: #FFFFFF">Иванов</span>, Игорь Иванов</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">(?&lt;!<i>шаблон</i>)</code></td>
+<td>Негативный просмотр назад (с отрицанием)</td>
+<td><code style="white-space:nowrap;">(?&lt;!Сергей )Иванов</code></td>
+<td><code style="white-space:nowrap;">Сергей Иванов, Игорь <span style="background-color: #999999; color: #FFFFFF">Иванов</span></code></td>
+</tr>
+</table>
+<h3><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=21" title="Править секцию: Поиск по условию">править</a>]</span> <span class="mw-headline" id=".D0.9F.D0.BE.D0.B8.D1.81.D0.BA_.D0.BF.D0.BE_.D1.83.D1.81.D0.BB.D0.BE.D0.B2.D0.B8.D1.8E">Поиск по условию</span></h3>
+<p>Во многих реализациях регулярных выражений существует возможность выбирать, по какому пути пойдёт проверка в том или ином месте регулярного выражения на основании уже найденных значений.</p>
+<table class="wikitable">
+<tr>
+<th>Представление</th>
+<th>Пояснение</th>
+<th>Пример</th>
+<th>Соответствие</th>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">(?(?=<i>если</i>)<i>то</i>|<i>иначе</i>)</code></td>
+<td>Если операция просмотра успешна, то далее выполняется часть <code style="white-space:nowrap;"><i>то</i></code>, иначе выполняется часть <code style="white-space:nowrap;"><i>иначе</i></code>. В выражении может использоваться любая из четырёх операций просмотра. Следует учитывать, что операция просмотра нулевой ширины, поэтому части <code style="white-space:nowrap;"><i>то</i></code> в случае позитивного или <code style="white-space:nowrap;"><i>иначе</i></code> в случае негативного просмотра должны включать в себя описание шаблона из операции просмотра.</td>
+<td><code style="white-space:nowrap;">(?(?&lt;=а)м|п)</code></td>
+<td><code style="white-space:nowrap;">ма<span style="background-color: #999999; color: #FFFFFF">м</span>,<span style="background-color: #999999; color: #FFFFFF">п</span>ап</code></td>
+</tr>
+<tr valign="top">
+<td><code style="white-space:nowrap;">(?(<i>n</i>)<i>то</i>|<i>иначе</i>)</code></td>
+<td>Если <i>n</i>-я группа вернула значение, то поиск по условию выполняется по шаблону <code style="white-space:nowrap;"><i>то</i></code>, иначе по шаблону <code style="white-space:nowrap;"><i>иначе</i></code>.</td>
+<td><code style="white-space:nowrap;">(а)?(?(1)м|п)</code></td>
+<td><code style="white-space:nowrap;">м<span style="background-color: #999999; color: #FFFFFF">ам</span>,<span style="background-color: #999999; color: #FFFFFF">п</span>а<span style="background-color: #999999; color: #FFFFFF">п</span></code></td>
+</tr>
+</table>
+<h2><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=22" title="Править секцию: Разновидности регулярных выражений">править</a>]</span> <span class="mw-headline" id=".D0.A0.D0.B0.D0.B7.D0.BD.D0.BE.D0.B2.D0.B8.D0.B4.D0.BD.D0.BE.D1.81.D1.82.D0.B8_.D1.80.D0.B5.D0.B3.D1.83.D0.BB.D1.8F.D1.80.D0.BD.D1.8B.D1.85_.D0.B2.D1.8B.D1.80.D0.B0.D0.B6.D0.B5.D0.BD.D0.B8.D0.B9">Разновидности регулярных выражений</span></h2>
+<h3><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=23" title="Править секцию: Базовые регулярные выражения POSIX">править</a>]</span> <span class="mw-headline" id=".D0.91.D0.B0.D0.B7.D0.BE.D0.B2.D1.8B.D0.B5_.D1.80.D0.B5.D0.B3.D1.83.D0.BB.D1.8F.D1.80.D0.BD.D1.8B.D0.B5_.D0.B2.D1.8B.D1.80.D0.B0.D0.B6.D0.B5.D0.BD.D0.B8.D1.8F_POSIX">Базовые регулярные выражения POSIX</span></h3>
+<p>(<a href="http://ru.wikipedia.org/wiki/Английский_язык" title="Английский язык">англ.</a>&#160;<i><span lang="en" xml:lang="en">basic regular expressions</span></i> (BRE)). Традиционные регулярные выражения <a href="http://ru.wikipedia.org/wiki/UNIX" title="UNIX">UNIX</a>. Синтаксис базовых регулярных выражений на данный момент определён <a href="http://ru.wikipedia.org/wiki/POSIX" title="POSIX">POSIX</a> как устаревший, но он до сих пор широко распространён из соображений обратной совместимости. Многие UNIX-утилиты используют такие регулярные выражения по умолчанию.</p>
+<p>В данную версию включены метасимволы:</p>
+<ul>
+<li><code style="white-space:nowrap;">.</code></li>
+<li><code style="white-space:nowrap;">[</code> <code style="white-space:nowrap;">]</code></li>
+<li><code style="white-space:nowrap;">[^</code> <code style="white-space:nowrap;">]</code></li>
+<li><code style="white-space:nowrap;">^</code> (действует только в начале выражения)</li>
+<li><code style="white-space:nowrap;">$</code> (действует только в конце выражения)</li>
+<li><code style="white-space:nowrap;">*</code></li>
+<li><code style="white-space:nowrap;">\{</code> <code style="white-space:nowrap;">\}</code>&#160;— первоначальный вариант для <code style="white-space:nowrap;">{</code> <code style="white-space:nowrap;">}</code></li>
+<li><code style="white-space:nowrap;">\(</code> <code style="white-space:nowrap;">\)</code>&#160;— первоначальный вариант для <code style="white-space:nowrap;">(</code> <code style="white-space:nowrap;">)</code></li>
+<li><code style="white-space:nowrap;">\<i>n</i></code>, где <i>n</i>&#160;— номер от 1 до 9</li>
+</ul>
+<p>Особенности:</p>
+<ul>
+<li>Звёздочка должна следовать после выражения, соответствующего единичному символу. Пример: <code style="white-space:nowrap;">[xyz]*</code>.</li>
+<li>Выражение <code style="white-space:nowrap;">\(<i>блок</i>\)*</code> следует считать неправильным. В некоторых случаях оно соответствует нулю или более повторений строки <code style="white-space:nowrap;"><i>блок</i></code>. В других оно соответствует строке <code style="white-space:nowrap;"><i>блок</i>*</code>.</li>
+<li>Внутри символьного класса специальные значения символов, в основном, игнорируются. Особые случаи:
+<ul>
+<li>Чтобы добавить символ <code style="white-space:nowrap;">^</code> в набор, его следует поместить туда не первым.</li>
+<li>Чтобы добавить символ <code style="white-space:nowrap;">-</code> в набор, его следует поместить туда первым или последним. Например:
+<ul>
+<li>шаблон DNS-имени, куда могут входить буквы, цифры, минус и точка-разделитель: <code style="white-space:nowrap;">[-0-9a-zA-Z.]</code>;</li>
+<li>любой символ, кроме минуса и цифры: <code style="white-space:nowrap;">[^-0-9]</code>.</li>
+</ul>
+</li>
+<li>Чтобы добавить символ <code style="white-space:nowrap;">[</code> или <code style="white-space:nowrap;">]</code> в набор, его следует поместить туда первым. Например:
+<ul>
+<li><code style="white-space:nowrap;">[][ab]</code> соответствует <code style="white-space:nowrap;">]</code>, <code style="white-space:nowrap;">[</code>, <code style="white-space:nowrap;">a</code> или <code style="white-space:nowrap;">b</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=24" title="Править секцию: Расширенные регулярные выражения POSIX">править</a>]</span> <span class="mw-headline" id=".D0.A0.D0.B0.D1.81.D1.88.D0.B8.D1.80.D0.B5.D0.BD.D0.BD.D1.8B.D0.B5_.D1.80.D0.B5.D0.B3.D1.83.D0.BB.D1.8F.D1.80.D0.BD.D1.8B.D0.B5_.D0.B2.D1.8B.D1.80.D0.B0.D0.B6.D0.B5.D0.BD.D0.B8.D1.8F_POSIX">Расширенные регулярные выражения POSIX</span></h3>
+<p>(<a href="http://ru.wikipedia.org/wiki/Английский_язык" title="Английский язык">англ.</a>&#160;<i><span lang="en" xml:lang="en">extended regular expressions</span></i> (ERE)). Синтаксис в основном аналогичен традиционному.</p>
+<ul>
+<li>Отменено использование обратной косой черты для метасимволов <code style="white-space:nowrap;">{ }</code> и <code style="white-space:nowrap;">( )</code>.</li>
+<li>Обратная косая черта перед метасимволом отменяет его специальное значение (см. <a href="">Представление специальных символов</a>).</li>
+<li>Отвергнута теоретически <b>нерегулярная</b> конструкция <code style="white-space:nowrap;">\<i>n</i></code>.</li>
+<li>Добавлены метасимволы <code style="white-space:nowrap;">+</code>, <code style="white-space:nowrap;">?</code>, <code style="white-space:nowrap;">|</code>.</li>
+</ul>
+<dl>
+<dd>
+<div class="noprint"><i>См. также статью: <a href="http://ru.wikipedia.org/wiki/Представление_символов_в_регулярных_выражениях#.D0.A1.D0.B8.D0.BC.D0.B2.D0.BE.D0.BB.D1.8C.D0.BD.D1.8B.D0.B5_.D0.BA.D0.BB.D0.B0.D1.81.D1.81.D1.8B_POSIX" title="Представление символов в регулярных выражениях">Символьные классы POSIX</a>.</i></div>
+</dd>
+</dl>
+<h3><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=25" title="Править секцию: Регулярные выражения, совместимые с Perl">править</a>]</span> <span class="mw-headline" id=".D0.A0.D0.B5.D0.B3.D1.83.D0.BB.D1.8F.D1.80.D0.BD.D1.8B.D0.B5_.D0.B2.D1.8B.D1.80.D0.B0.D0.B6.D0.B5.D0.BD.D0.B8.D1.8F.2C_.D1.81.D0.BE.D0.B2.D0.BC.D0.B5.D1.81.D1.82.D0.B8.D0.BC.D1.8B.D0.B5_.D1.81_Perl">Регулярные выражения, совместимые с <a href="http://ru.wikipedia.org/wiki/Perl" title="Perl">Perl</a></span></h3>
+<dl>
+<dd>
+<div class="noprint"><i>Основная статья</i>: <i><b><a href="http://ru.wikipedia.org/wiki/PCRE" title="PCRE">PCRE</a></b></i></div>
+</dd>
+</dl>
+<p>Perl-совместимые регулярные выражения (<a href="http://ru.wikipedia.org/wiki/Английский_язык" title="Английский язык">англ.</a>&#160;<i><span lang="en" xml:lang="en">Perl-compatible regular expressions</span></i> (PCRE)) имеют более богатый и в то же время предсказуемый<sup><a href="http://ru.wikipedia.org/wiki/Википедия:Ссылки_на_источники" title="Википедия:Ссылки на источники">[<i>источник&#160;не&#160;указан&#160;824&#160;дня</i>]</a></sup> синтаксис, чем даже POSIX ERE. По этой причине очень многие приложения используют именно Perl-совместимый синтаксис регулярных выражений.</p>
+<h2><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=26" title="Править секцию: Нечёткие регулярные выражения">править</a>]</span> <span class="mw-headline" id=".D0.9D.D0.B5.D1.87.D1.91.D1.82.D0.BA.D0.B8.D0.B5_.D1.80.D0.B5.D0.B3.D1.83.D0.BB.D1.8F.D1.80.D0.BD.D1.8B.D0.B5_.D0.B2.D1.8B.D1.80.D0.B0.D0.B6.D0.B5.D0.BD.D0.B8.D1.8F">Нечёткие регулярные выражения</span></h2>
+<p>В некоторых случаях регулярные выражения удобно применить для анализа текстовых фрагментов на <a href="http://ru.wikipedia.org/wiki/Естественный_язык" title="Естественный язык">естественном языке</a>, т.е. написанных людьми, и возможно содержащих опечатки, либо нестандартные варианты употреблений слов. Например, если проводить опрос (допустим, на веб-сайте) "какой станцией метро вы пользуетесь", может оказаться что "Невский проспект" посетители могут указать как:</p>
+<ul>
+<li>Невский</li>
+<li>Несвк. просп.</li>
+<li>Нев. порсект</li>
+<li>наб. Конала Гребеедова ("Канал Грибоедова" это название второго выхода ст.м. Невский Проспект)</li>
+</ul>
+<p>Здесь обычные регулярные выражения неприменимы, в первую очередь из-за того что входящие в образцы слова могут совпадать не очень точно (нечётко), но тем не менее было бы удобно описывать регулярными выражениями структурные зависимости между элементами образца, например, в нашем случае, указать, что совпадение может быть с образцом "Невский проспект" ИЛИ "Канал Грибоедова", притом "проспект" может быть сокращено до "пр" или отсутствовать, а перед "Канал" может находиться сокращение "наб."</p>
+<p>Эта задача сродни <a href="http://ru.wikipedia.org/wiki/Полнотекстовый_поиск" title="Полнотекстовый поиск">полнотекстовому поиску</a>, отличаясь в том что здесь короткий фрагмент должен сравниваться с набором образцов, а при полнотекстовом поиске наоборот образец обычно один, в то время как фрагмент текста очень большой - или задаче <a href="http://ru.wikipedia.org/wiki/Разрешение_лексической_многозначности" title="Разрешение лексической многозначности">Разрешения лексической многозначности</a>, которая, однако, не позволяет задать структурирующие отношения между элементами образца.</p>
+<p>Существует небольшое количество <a href="http://ru.wikipedia.org/wiki/Библиотека_(программирование)" title="Библиотека (программирование)">библиотек</a> реализующих механизм регулярных выражений с возможностью нечёткого сравнения:</p>
+<ul>
+<li>TRE - бесплатная библиотека на С, использующая синтаксис регулярных выражений похожий на POSIX (стабильный проект);</li>
+<li>FREJ - open-source библиотека на Java, использующая Lisp-образный синтаксис и лишённая многих возможностей обычных регулярных выражений, но сосредоточенная на различного рода автоматических заменах фрагментов текста (бета-версия).</li>
+</ul>
+<h2><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=27" title="Править секцию: Реализации">править</a>]</span> <span class="mw-headline" id=".D0.A0.D0.B5.D0.B0.D0.BB.D0.B8.D0.B7.D0.B0.D1.86.D0.B8.D0.B8">Реализации</span></h2>
+<ul>
+<li>NFA (<a href="http://ru.wikipedia.org/wiki/Английский_язык" title="Английский язык">англ.</a>&#160;<i><span lang="en" xml:lang="en">nondeterministic finite-state automata</span></i>&#160;— <a href="http://ru.wikipedia.org/wiki/Конечный_автомат#.D0.94.D0.B5.D1.82.D0.B5.D1.80.D0.BC.D0.B8.D0.BD.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.BD.D0.BE.D1.81.D1.82.D1.8C" title="Конечный автомат">недетерминированные конечные автоматы</a>) используют <a href="http://ru.wikipedia.org/wiki/Жадный_алгоритм" title="Жадный алгоритм">жадный алгоритм</a> отката, проверяя все возможные расширения регулярного выражения в определённом порядке и выбирая первое подходящее значение. NFA может обрабатывать подвыражения и обратные ссылки. Но из-за алгоритма отката традиционный NFA может проверять одно и то же место несколько раз, что отрицательно сказывается на скорости работы. Поскольку традиционный NFA принимает первое найденное соответствие, он может и не найти самое длинное из вхождений (этого требует стандарт <a href="http://ru.wikipedia.org/wiki/POSIX" title="POSIX">POSIX</a>, и существуют модификации NFA выполняющие это требование&#160;— <a href="http://ru.wikipedia.org/wiki/Sed" title="Sed">GNU sed</a>). Именно такой механизм регулярных выражений используется, например, в <a href="http://ru.wikipedia.org/wiki/Perl" title="Perl">Perl</a>, <a href="http://ru.wikipedia.org/wiki/Tcl" title="Tcl">Tcl</a> и <a href="http://ru.wikipedia.org/wiki/.NET_Framework" title=".NET Framework">.NET</a>.</li>
+<li>DFA (<a href="http://ru.wikipedia.org/wiki/Английский_язык" title="Английский язык">англ.</a>&#160;<i><span lang="en" xml:lang="en">deterministic finite-state automata</span></i>&#160;— <a href="http://ru.wikipedia.org/wiki/Конечный_автомат#.D0.94.D0.B5.D1.82.D0.B5.D1.80.D0.BC.D0.B8.D0.BD.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.BD.D0.BE.D1.81.D1.82.D1.8C" title="Конечный автомат">детерминированные конечные автоматы</a>) работают линейно по времени, поскольку не используют откаты и никогда не проверяют какую-либо часть текста дважды. Они могут гарантированно найти самую длинную строку из возможных. DFA содержит только конечное состояние, следовательно, не обрабатывает обратных ссылок, а также не поддерживает конструкций с явным расширением, то есть не способен обработать и подвыражения. DFA используется, например, в <a href="http://ru.wikipedia.org/wiki/Lex" title="Lex">lex</a> и <a href="http://ru.wikipedia.org/wiki/Egrep" title="Egrep" class="mw-redirect">egrep</a>.</li>
+</ul>
+<h2><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=28" title="Править секцию: Примечания">править</a>]</span> <span class="mw-headline" id=".D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.87.D0.B0.D0.BD.D0.B8.D1.8F">Примечания</span></h2>
+<div class="references-small" style="">
+<ol class="references">
+<li id="cite_note-0"><b><a href="">↑</a></b> <a href="http://java.sun.com/docs/books/tutorial/essential/regex/" class="external text" rel="nofollow">java.sun.com</a></li>
+<li id="cite_note-1"><b><a href="">↑</a></b> <a href="http://msdn.microsoft.com/ru-ru/library/az24scfc(v=VS.100).aspx" class="external text" rel="nofollow">MSDN</a></li>
+<li id="cite_note-2"><b><a href="">↑</a></b> <span class="citation"><i>Ахо А., Ульман Дж.</i> Теория синтаксического анализа, перевода и компиляции. Синтаксический анализ. — Мир. — <span style="border-bottom:1px dotted gray; cursor:default" title="Москва">М</span>., 1978 Т.&#160;2.</span></li>
+<li id="cite_note-3"><b><a href="">↑</a></b> Во многих книгах используются символы <span class="Unicode">∪</span>, <span class="Unicode">+</span> или <span class="Unicode">∨</span> вместо <span class="Unicode">|</span>.</li>
+<li id="cite_note-4"><b><a href="">↑</a></b> Для использования последовательностей букв необходимо установить правильную кодовую страницу, в которой эти последовательности будут идти в порядке от и до указанных символов. Для русского языка это <a href="http://ru.wikipedia.org/wiki/Windows-1251" title="Windows-1251">Windows-1251</a>, <a href="http://ru.wikipedia.org/wiki/ISO_8859-5" title="ISO 8859-5">ISO 8859-5</a> и <a href="http://ru.wikipedia.org/wiki/Юникод" title="Юникод">Юникод</a>, так как в <a href="http://ru.wikipedia.org/wiki/DOS-855" title="DOS-855" class="mw-redirect">DOS-855</a>, <a href="http://ru.wikipedia.org/wiki/DOS-866" title="DOS-866" class="mw-redirect">DOS-866</a> и <a href="http://ru.wikipedia.org/wiki/KOI8-R" title="KOI8-R" class="mw-redirect">KOI8-R</a> русские буквы не идут одной целой группой или не упорядочены по алфавиту. Отдельное внимание следует уделять буквам с <a href="http://ru.wikipedia.org/wiki/Диакритический_знак" title="Диакритический знак" class="mw-redirect">диакритическими знаками</a>, наподобие русских Ё/ё, которые, как правило, разбросаны вне основных диапазонов символов.</li>
+</ol>
+</div>
+<h2><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=29" title="Править секцию: Литература">править</a>]</span> <span class="mw-headline" id=".D0.9B.D0.B8.D1.82.D0.B5.D1.80.D0.B0.D1.82.D1.83.D1.80.D0.B0">Литература</span></h2>
+<ul>
+<li><span class="citation"><i>Фридл, Дж.</i> Регулярные выражения. — <span style="border-bottom:1px dotted gray; cursor:default;" title="Санкт-Петербург">СПб.</span>: <a href="http://ru.wikipedia.org/wiki/Питер_(издательство)" title="Питер (издательство)">«Питер»</a>, 2001. — 352&#160;с. — (Библиотека программиста). — <a href="http://ru.wikipedia.org/wiki/Служебная:BookSources/5318000568" class="internal mw-magiclink-isbn">ISBN 5-318-00056-8</a></span></li>
+<li><span class="citation"><i>Смит, Билл.</i> Методы и алгоритмы вычислений на строках (regexp) = Computing Patterns in Strings. — <span style="border-bottom:1px dotted gray; cursor:default" title="Москва">М</span>.: <a href="http://ru.wikipedia.org/w/index.php?title=%D0%92%D0%B8%D0%BB%D1%8C%D1%8F%D0%BC%D1%81_(%D0%B8%D0%B7%D0%B4%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE)&amp;action=edit&amp;redlink=1" class="new" title="Вильямс (издательство) (страница отсутствует)">«Вильямс»</a>, 2006. — 496&#160;с. — <a href="http://ru.wikipedia.org/wiki/Служебная:BookSources/0201398397" class="internal mw-magiclink-isbn">ISBN 0-201-39839-7</a></span></li>
+<li><span class="citation"><i>Форта, Бен.</i> Освой самостоятельно регулярные выражения. 10 минут на урок = Sams Teach Yourself Regular Expressions in 10 Minutes. — <span style="border-bottom:1px dotted gray; cursor:default" title="Москва">М</span>.: <a href="http://ru.wikipedia.org/w/index.php?title=%D0%92%D0%B8%D0%BB%D1%8C%D1%8F%D0%BC%D1%81_(%D0%B8%D0%B7%D0%B4%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE)&amp;action=edit&amp;redlink=1" class="new" title="Вильямс (издательство) (страница отсутствует)">«Вильямс»</a>, 2005. — 184&#160;с. — <a href="http://ru.wikipedia.org/wiki/Служебная:BookSources/5845907136" class="internal mw-magiclink-isbn">ISBN 5-8459-0713-6</a></span></li>
+<li><span class="citation"><i>Мельников С. В.</i> Perl для профессиональных программистов. Регулярные выражения. — <span style="border-bottom:1px dotted gray; cursor:default" title="Москва">М</span>.: <a href="http://ru.wikipedia.org/w/index.php?title=%D0%91%D0%B8%D0%BD%D0%BE%D0%BC_(%D0%B8%D0%B7%D0%B4%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE)&amp;action=edit&amp;redlink=1" class="new" title="Бином (издательство) (страница отсутствует)">«Бином»</a>, 2007. — 190&#160;с. — (Основы информационных технологий). — <a href="http://ru.wikipedia.org/wiki/Служебная:BookSources/9785947747973" class="internal mw-magiclink-isbn">ISBN 978-5-94774-797-3</a></span></li>
+</ul>
+<h2><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=30" title="Править секцию: См. также">править</a>]</span> <span class="mw-headline" id=".D0.A1.D0.BC._.D1.82.D0.B0.D0.BA.D0.B6.D0.B5">См. также</span></h2>
+<table class="metadata plainlinks navigation-box" style="margin:0 0 1em 1em; clear:right; border:solid #aaa 1px; background:#f9f9f9; padding:1ex; font-size:90%; float:right;">
+<tr>
+<th><a href="http://ru.wikibooks.org/wiki/Регулярные_выражения" title="b:Регулярные выражения"><img alt="b:" src="Регулярные%20выражения%20—%20Википедия_files/30px-Wik.png" width="30" height="30" /></a></th>
+<td><span class="wikibooks-ref"><a href="http://ru.wikibooks.org/wiki/Регулярные_выражения" class="extiw" title="b:Регулярные выражения">Регулярные выражения</a></span> в Викиучебнике<sup style="line-height:0;font-weight:bold"><a href="http://ru.wikipedia.org/wiki/Викиучебник" title="Викиучебник">?</a></sup></td>
+</tr>
+</table>
+<ul>
+<li><a href="http://ru.wikipedia.org/wiki/Шаблон_поиска" title="Шаблон поиска">Шаблон поиска</a></li>
+</ul>
+<h2><span class="editsection">[<a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit&amp;section=31" title="Править секцию: Ссылки">править</a>]</span> <span class="mw-headline" id=".D0.A1.D1.81.D1.8B.D0.BB.D0.BA.D0.B8">Ссылки</span></h2>
+<ul>
+<li><a href="http://www.regular-expressions.info/" class="external text" rel="nofollow">Справочник и ресурсы по регулярным выражениям</a> &#160;<span class="ref-info" title="на английском языке" style="font-size:85%; cursor:help; color:#888;">(англ.)</span>&#160;— учебник и детальное описание синтаксиса с примерами, сравнение различных интерпретаторов и прочее</li>
+<li><a href="http://msdn.microsoft.com/ru-ru/library/28hw3sce.aspx" class="external text" rel="nofollow">MSDN&#160;— Знакомство с регулярными выражениями</a> &#160;<span class="ref-info" title="на русском языке" style="font-size:85%; cursor:help; color:#888;">(рус.)</span></li>
+<li><a href="http://lipetsk.lug.ru/projects/re/re-building-howto.html" class="external text" rel="nofollow">Теория и методика построения регулярных выражений. Проблема самообразования</a> &#160;<span class="ref-info" title="на русском языке" style="font-size:85%; cursor:help; color:#888;">(рус.)</span></li>
+<li><a href="http://realcode.ru/regexptester/" class="external text" rel="nofollow">Конструктор регулярных выражений с подсветкой синтаксиса</a> &#160;<span class="ref-info" title="на русском языке" style="font-size:85%; cursor:help; color:#888;">(рус.)</span></li>
+<li><a href="http://gskinner.com/RegExr/" class="external text" rel="nofollow">Конструктор регулярных выражений с подсветкой синтаксиса</a> &#160;<span class="ref-info" title="на английском языке" style="font-size:85%; cursor:help; color:#888;">(англ.)</span></li>
+<li><a href="http://www.cronc.com/ru.shtml" class="external text" rel="nofollow">Perl регулярные выражения: статьи автора книги «Perl для профессиональных программистов. Регулярные выражения»</a> &#160;<span class="ref-info" title="на русском языке" style="font-size:85%; cursor:help; color:#888;">(рус.)</span></li>
+<li><a href="http://www.autoit-vt.ru/видео-урок-по-autoit-1-3-–-регулярные-выражени/" class="external text" rel="nofollow">Видео урок по использованию регулярных выражений в AutoIt"</a> &#160;<span class="ref-info" title="на русском языке" style="font-size:85%; cursor:help; color:#888;">(рус.)</span></li>
+<li><a href="http://laurikari.net/tre/http://laurikari.net/tre" class="external text" rel="nofollow">TRE - Бесплатная и переносимая библиотека для нечёткого сравнения с помощью регулярных выражений</a></li>
+<li><a href="http://frej.sf.net/" class="external text" rel="nofollow">FREJ (Fuzzy Regular Expressions for Java)</a> - Нечёткие регулярные выражения для Java на <a href="http://ru.wikipedia.org/wiki/SourceForge.net" title="SourceForge.net">SourceForge.net</a></li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 5134/1000000
+Post-expand include size: 47960/2048000 bytes
+Template argument size: 23076/2048000 bytes
+Expensive parser function count: 0/500
+-->
+
+<!-- Saved in parser cache with key ruwiki:pcache:idhash:19593-0!*!0!!ru!4 and timestamp 20110820151847 -->
+<div class="printfooter">
+Источник — «<a href="">http://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F</a>»</div>
+				<!-- /bodytext -->
+								<!-- catlinks -->
+				<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="http://ru.wikipedia.org/wiki/Служебная:Categories" title="Служебная:Categories">Категории</a>: <span dir='ltr'><a href="http://ru.wikipedia.org/wiki/Категория:Программирование" title="Категория:Программирование">Программирование</a></span> | <span dir='ltr'><a href="http://ru.wikipedia.org/wiki/Категория:Формальные_языки" title="Категория:Формальные языки">Формальные языки</a></span> | <span dir='ltr'><a href="http://ru.wikipedia.org/wiki/Категория:Интерфейс_командной_строки" title="Категория:Интерфейс командной строки">Интерфейс командной строки</a></span> | <span dir='ltr'><a href="http://ru.wikipedia.org/wiki/Категория:Сопоставление_с_образцом" title="Категория:Сопоставление с образцом">Сопоставление с образцом</a></span></div><div id="mw-hidden-catlinks" class="mw-hidden-cats-hidden">Скрытые категории: <span dir='ltr'><a href="http://ru.wikipedia.org/wiki/Категория:Википедия:Нет_источников_с_мая_2009" title="Категория:Википедия:Нет источников с мая 2009">Википедия:Нет источников с мая 2009</a></span> | <span dir='ltr'><a href="http://ru.wikipedia.org/wiki/Категория:Википедия:Статьи_с_утверждениями_без_источников_более_14_дней" title="Категория:Википедия:Статьи с утверждениями без источников более 14 дней">Википедия:Статьи с утверждениями без источников более 14 дней</a></span> | <span dir='ltr'><a href="http://ru.wikipedia.org/wiki/Категория:Статьи_со_ссылками_на_Викиучебник" title="Категория:Статьи со ссылками на Викиучебник">Статьи со ссылками на Викиучебник</a></span></div></div>				<!-- /catlinks -->
+												<div class="visualClear"></div>
+			</div>
+			<!-- /bodyContent -->
+		</div>
+		<!-- /content -->
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			
+<!-- 0 -->
+<div id="p-personal" class="">
+	<h5>Личные инструменты</h5>
+	<ul>
+					<li  id="pt-login"><a href="http://ru.wikipedia.org/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:UserLogin&amp;returnto=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" title="Здесь можно зарегистрироваться в системе, но это необязательно. [o]" accesskey="o">Представиться / зарегистрироваться</a></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+			<div id="left-navigation">
+				
+<!-- 0 -->
+<div id="p-namespaces" class="vectorTabs">
+	<h5>Пространства имён</h5>
+	<ul>
+					<li  id="ca-nstab-main" class="selected"><span><a href=""  title="Содержание статьи [c]" accesskey="c">Статья</a></span></li>
+					<li  id="ca-talk"><span><a href="http://ru.wikipedia.org/wiki/Обсуждение:Регулярные_выражения"  title="Обсуждение содержания страницы [t]" accesskey="t">Обсуждение</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-variants" class="vectorMenu emptyPortlet">
+		<h5><span>Варианты</span><a href=""></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+			</div>
+			<div id="right-navigation">
+				
+<!-- 0 -->
+<div id="p-views" class="vectorTabs">
+	<h5>Просмотры</h5>
+	<ul>
+					<li id="ca-view" class="selected"><span><a href="" >Чтение</a></span></li>
+					<li id="ca-edit"><span><a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=edit"  title="Эту статью можно изменять. Перед сохранением изменений, пожалуйста, нажмите кнопку предварительного просмотра для визуальной проверки результата [e]" accesskey="e">Правка</a></span></li>
+					<li id="ca-history" class="collapsible "><span><a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;action=history"  title="Журнал изменений страницы [h]" accesskey="h">История</a></span></li>
+			</ul>
+</div>
+
+<!-- /0 -->
+
+<!-- 1 -->
+<div id="p-cactions" class="vectorMenu emptyPortlet">
+	<h5><span>Действия</span><a href=""></a></h5>
+	<div class="menu">
+		<ul>
+					</ul>
+	</div>
+</div>
+
+<!-- /1 -->
+
+<!-- 2 -->
+<div id="p-search">
+	<h5><label for="searchInput">Поиск</label></h5>
+	<form action="http://ru.wikipedia.org/w/index.php" id="searchform">
+		<input type='hidden' name="title" value="Служебная:Search"/>
+				<div id="simpleSearch">
+						<input id="searchInput" name="search" type="text"  title="Искать это слово [f]" accesskey="f"  value="" />
+						<button id="searchButton" type='submit' name='button'  title="Найти страницы, содержащие указанный текст"><img src="Регулярные%20выражения%20—%20Википедия_files/search-l.png" alt="Найти" /></button>
+					</div>
+			</form>
+</div>
+
+<!-- /2 -->
+			</div>
+		</div>
+		<!-- /header -->
+		<!-- panel -->
+			<div id="mw-panel" class="noprint">
+				<!-- logo -->
+					<div id="p-logo"><a style="background-image: url(http://upload.wikimedia.org/wikipedia/commons/f/f6/Wikipedia-logo-v2-ru.png);" href="http://ru.wikipedia.org/wiki/Заглавная_страница"  title="Заглавная страница"></a></div>
+				<!-- /logo -->
+				
+<!-- navigation -->
+<div class="portal" id='p-navigation'>
+	<h5>Навигация</h5>
+	<div class="body">
+				<ul>
+					<li id="n-mainpage"><a href="http://ru.wikipedia.org/wiki/Заглавная_страница" title="Перейти на заглавную страницу [z]" accesskey="z">Заглавная страница</a></li>
+					<li id="n-browse"><a href="http://ru.wikipedia.org/wiki/Википедия:Поиск_по_категориям" title="Поиск по категориям">Рубрикация</a></li>
+					<li id="n-index"><a href="http://ru.wikipedia.org/wiki/Википедия:Алфавитный_указатель" title="Поиск по двум первым буквам">Указатель А — Я</a></li>
+					<li id="n-featured"><a href="http://ru.wikipedia.org/wiki/Википедия:Избранные_статьи" title="Статьи, считающиеся лучшими статьями проекта">Избранные статьи</a></li>
+					<li id="n-randompage"><a href="http://ru.wikipedia.org/wiki/Служебная:Random" title="Посмотреть случайную страницу [x]" accesskey="x">Случайная статья</a></li>
+					<li id="n-currentevents"><a href="http://ru.wikipedia.org/wiki/Портал:Текущие_события" title="Статьи о текущих событиях в мире">Текущие события</a></li>
+				</ul>
+			</div>
+</div>
+
+<!-- /navigation -->
+
+<!-- SEARCH -->
+
+<!-- /SEARCH -->
+
+<!-- participation -->
+<div class="portal" id='p-participation'>
+	<h5>Участие</h5>
+	<div class="body">
+				<ul>
+					<li id="n-bug_in_article"><a href="http://ru.wikipedia.org/wiki/Википедия:Сообщения_об_ошибках" title="Сообщить об ошибке в этой статье">Сообщить об ошибке</a></li>
+					<li id="n-portal"><a href="http://ru.wikipedia.org/wiki/Википедия:Портал_сообщества" title="О проекте, о том, что вы можете сделать, где что находится">Портал сообщества</a></li>
+					<li id="n-forum"><a href="http://ru.wikipedia.org/wiki/Википедия:Форум" title="Форум участников Википедии">Форум</a></li>
+					<li id="n-recentchanges"><a href="http://ru.wikipedia.org/wiki/Служебная:RecentChanges" title="Список последних изменений [r]" accesskey="r">Свежие правки</a></li>
+					<li id="n-newpages"><a href="http://ru.wikipedia.org/wiki/Служебная:NewPages" title="Список недавно созданных страниц">Новые страницы</a></li>
+					<li id="n-help"><a href="http://ru.wikipedia.org/wiki/Википедия:Справка" title="Справочник по проекту «Википедия»">Справка</a></li>
+					<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/Special:Landingcheck?landing_page=WMFJA085&amp;language=ru&amp;utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=20101204SB002" title="Поддержите нас">Пожертвования</a></li>
+				</ul>
+			</div>
+</div>
+
+<!-- /participation -->
+
+<!-- coll-print_export -->
+<div class="portal" id='p-coll-print_export'>
+	<h5>Печать/экспорт</h5>
+	<div class="body">
+				<ul id="collectionPortletList"><li id="coll-create_a_book"><a href="http://ru.wikipedia.org/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Book&amp;bookcmd=book_creator&amp;referer=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5+%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F" title="Создать книгу или коллекцию статей" rel="nofollow">Создать книгу</a></li><li id="coll-download-as-rl"><a href="http://ru.wikipedia.org/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Book&amp;bookcmd=render_article&amp;arttitle=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5+%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;oldid=36693355&amp;writer=rl" title="Скачать PDF-версию этой вики-страницы" rel="nofollow">Скачать как PDF</a></li><li id="t-print"><a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;printable=yes" title="Версия этой страницы для печати [p]" accesskey="p">Версия для печати</a></li></ul>			</div>
+</div>
+
+<!-- /coll-print_export -->
+
+<!-- TOOLBOX -->
+<div class="portal" id="p-tb">
+	<h5>Инструменты</h5>
+	<div class="body">
+		<ul>
+					<li id="t-whatlinkshere"><a href="http://ru.wikipedia.org/wiki/Служебная:WhatLinksHere/Регулярные_выражения" title="Список всех страниц, которые ссылаются на эту страницу [j]" accesskey="j">Ссылки сюда</a></li>
+						<li id="t-recentchangeslinked"><a href="http://ru.wikipedia.org/wiki/Служебная:RecentChangesLinked/Регулярные_выражения" title="Последние изменения в страницах, на которые ссылается эта страница [k]" accesskey="k">Связанные правки</a></li>
+																																										<li id="t-specialpages"><a href="http://ru.wikipedia.org/wiki/Служебная:SpecialPages" title="Список служебных страниц [q]" accesskey="q">Спецстраницы</a></li>
+											<li id="t-permalink"><a href="http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;oldid=36693355" title="Постоянная ссылка на эту версию страницы">Постоянная ссылка</a></li>
+				<li id="t-cite"><a href="http://ru.wikipedia.org/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:Cite&amp;page=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;id=36693355" title="Информация о том, как цитировать эту страницу">Цитировать страницу</a></li>		</ul>
+	</div>
+</div>
+
+<!-- /TOOLBOX -->
+
+<!-- LANGUAGES -->
+<div class="portal" id="p-lang">
+	<h5>На других языках</h5>
+	<div class="body">
+		<ul>
+					<li class="interwiki-ar"><a href="http://ar.wikipedia.org/wiki/تعبير_نمطي" title="تعبير نمطي">العربية</a></li>
+					<li class="interwiki-bg"><a href="http://bg.wikipedia.org/wiki/Регулярен_израз" title="Регулярен израз">Български</a></li>
+					<li class="interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Expressió_regular" title="Expressió regular">Català</a></li>
+					<li class="interwiki-cs"><a href="http://cs.wikipedia.org/wiki/Regulární_výraz" title="Regulární výraz">Česky</a></li>
+					<li class="interwiki-da"><a href="http://da.wikipedia.org/wiki/Regulære_udtryk" title="Regulære udtryk">Dansk</a></li>
+					<li class="interwiki-de"><a href="http://de.wikipedia.org/wiki/Regulärer_Ausdruck" title="Regulärer Ausdruck">Deutsch</a></li>
+					<li class="interwiki-el"><a href="http://el.wikipedia.org/wiki/Κανονική_έκφραση" title="Κανονική έκφραση">Ελληνικά</a></li>
+					<li class="interwiki-en"><a href="http://en.wikipedia.org/wiki/Regular_expression" title="Regular expression">English</a></li>
+					<li class="interwiki-eo"><a href="http://eo.wikipedia.org/wiki/Regula_esprimo" title="Regula esprimo">Esperanto</a></li>
+					<li class="interwiki-es"><a href="http://es.wikipedia.org/wiki/Expresión_regular" title="Expresión regular">Español</a></li>
+					<li class="interwiki-eu"><a href="http://eu.wikipedia.org/wiki/Adierazpen_erregular" title="Adierazpen erregular">Euskara</a></li>
+					<li class="interwiki-fa"><a href="http://fa.wikipedia.org/wiki/عبارت_باقاعده" title="عبارت باقاعده">فارسی</a></li>
+					<li class="interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Säännöllinen_lauseke" title="Säännöllinen lauseke">Suomi</a></li>
+					<li class="interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Expression_rationnelle" title="Expression rationnelle">Français</a></li>
+					<li class="interwiki-gl"><a href="http://gl.wikipedia.org/wiki/Expresión_regular" title="Expresión regular">Galego</a></li>
+					<li class="interwiki-he"><a href="http://he.wikipedia.org/wiki/ביטוי_רגולרי" title="ביטוי רגולרי">עברית</a></li>
+					<li class="interwiki-hi"><a href="http://hi.wikipedia.org/wiki/रेग्युलर_ऍक्सप्रैशन" title="रेग्युलर ऍक्सप्रैशन">हिन्दी</a></li>
+					<li class="interwiki-hr"><a href="http://hr.wikipedia.org/wiki/Regularni_izraz" title="Regularni izraz">Hrvatski</a></li>
+					<li class="interwiki-hu"><a href="http://hu.wikipedia.org/wiki/Reguláris_kifejezés" title="Reguláris kifejezés">Magyar</a></li>
+					<li class="interwiki-is"><a href="http://is.wikipedia.org/wiki/Regluleg_segð" title="Regluleg segð">Íslenska</a></li>
+					<li class="interwiki-it"><a href="http://it.wikipedia.org/wiki/Espressione_regolare" title="Espressione regolare">Italiano</a></li>
+					<li class="interwiki-ja"><a href="http://ja.wikipedia.org/wiki/正規表現" title="正規表現">日本語</a></li>
+					<li class="interwiki-ka"><a href="http://ka.wikipedia.org/wiki/რეგულარული_გამოსახულება" title="რეგულარული გამოსახულება">ქართული</a></li>
+					<li class="interwiki-ko"><a href="http://ko.wikipedia.org/wiki/정규_표현식" title="정규 표현식">한국어</a></li>
+					<li class="interwiki-mk"><a href="http://mk.wikipedia.org/wiki/Регуларни_изрази" title="Регуларни изрази">Македонски</a></li>
+					<li class="interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Reguliere_expressie" title="Reguliere expressie">Nederlands</a></li>
+					<li class="interwiki-no"><a href="http://no.wikipedia.org/wiki/Regulært_uttrykk" title="Regulært uttrykk">‪Norsk (bokmål)‬</a></li>
+					<li class="interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Wyrażenie_regularne" title="Wyrażenie regularne">Polski</a></li>
+					<li class="interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Expressão_regular" title="Expressão regular">Português</a></li>
+					<li class="interwiki-ro"><a href="http://ro.wikipedia.org/wiki/Expresie_regulată" title="Expresie regulată">Română</a></li>
+					<li class="interwiki-simple"><a href="http://simple.wikipedia.org/wiki/Regular_expression" title="Regular expression">Simple English</a></li>
+					<li class="interwiki-sk"><a href="http://sk.wikipedia.org/wiki/Regulárny_výraz" title="Regulárny výraz">Slovenčina</a></li>
+					<li class="interwiki-sr"><a href="http://sr.wikipedia.org/wiki/Regularni_izraz" title="Regularni izraz">Српски / Srpski</a></li>
+					<li class="interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Reguljära_uttryck" title="Reguljära uttryck">Svenska</a></li>
+					<li class="interwiki-ta"><a href="http://ta.wikipedia.org/wiki/சுருங்குறித்தொடர்" title="சுருங்குறித்தொடர்">தமிழ்</a></li>
+					<li class="interwiki-th"><a href="http://th.wikipedia.org/wiki/นิพจน์ปรกติ" title="นิพจน์ปรกติ">ไทย</a></li>
+					<li class="interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Düzenli_ifade" title="Düzenli ifade">Türkçe</a></li>
+					<li class="interwiki-uk"><a href="http://uk.wikipedia.org/wiki/Регулярний_вираз" title="Регулярний вираз">Українська</a></li>
+					<li class="interwiki-vi"><a href="http://vi.wikipedia.org/wiki/Biểu_thức_chính_quy" title="Biểu thức chính quy">Tiếng Việt</a></li>
+					<li class="interwiki-wa"><a href="http://wa.wikipedia.org/wiki/Erîlêye_ratourneure" title="Erîlêye ratourneure">Walon</a></li>
+					<li class="interwiki-zh"><a href="http://zh.wikipedia.org/wiki/正则表达式" title="正则表达式">中文</a></li>
+				</ul>
+	</div>
+</div>
+
+<!-- /LANGUAGES -->
+			</div>
+		<!-- /panel -->
+		<!-- footer -->
+		<div id="footer">
+											<ul id="footer-info">
+																	<li id="footer-info-lastmod"> Последнее изменение этой страницы: 00:02, 7 августа 2011.</li>
+																							<li id="footer-info-copyright">Текст доступен по <a rel="license" href="http://ru.wikipedia.org/wiki/Википедия:Текст_лицензии_Creative_Commons_Attribution-ShareAlike_3.0_Unported">лицензии Creative Commons Attribution-ShareAlike</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+в отдельных случаях могут действовать дополнительные условия.
+Подробнее см. <a href="http://wikimediafoundation.org/wiki/Terms_of_Use/ru">Условия использования</a>.<br/>
+Wikipedia&reg; — зарегистрированная торговая марка <a href="http://wikimediafoundation.org/wiki/Приёмная">Wikimedia Foundation, Inc.</a>, некоммерческой организации.<br /></li><li class="noprint"><a class='internal' href="http://ru.wikipedia.org/wiki/Википедия:Контакты">Свяжитесь с нами</a></li>
+															</ul>
+															<ul id="footer-places">
+																	<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Политика_конфиденциальности" title="wikimedia:Политика конфиденциальности">Политика конфиденциальности</a></li>
+																							<li id="footer-places-about"><a href="http://ru.wikipedia.org/wiki/Википедия:Описание" title="Википедия:Описание">Описание Википедии</a></li>
+																							<li id="footer-places-disclaimer"><a href="http://ru.wikipedia.org/wiki/Википедия:Отказ_от_ответственности" title="Википедия:Отказ от ответственности">Отказ от ответственности</a></li>
+																							<li id="footer-places-mobileview"><a href='http://ru.wikipedia.org/w/index.php?title=%D0%A0%D0%B5%D0%B3%D1%83%D0%BB%D1%8F%D1%80%D0%BD%D1%8B%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F&amp;useformat=mobile'>Мобильная версия</a></li>
+															</ul>
+											<ul id="footer-icons" class="noprint">
+					<li id="footer-copyrightico">
+						<a href="http://wikimediafoundation.org/"><img src="Регулярные%20выражения%20—%20Википедия_files/wikimedi.png" width="88" height="31" alt="Wikimedia Foundation"/></a>
+					</li>
+					<li id="footer-poweredbyico">
+						<a href="http://www.mediawiki.org/"><img src="Регулярные%20выражения%20—%20Википедия_files/poweredb.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+					</li>
+				</ul>
+						<div style="clear:both"></div>
+		</div>
+		<!-- /footer -->
+		<script type="text/javascript">if ( window.mediaWiki ) {
+	mediaWiki.loader.load(["mediawiki.legacy.wikibits", "mediawiki.util", "mediawiki.legacy.ajax", "mediawiki.legacy.mwsuggest", "ext.vector.collapsibleNav", "ext.vector.collapsibleTabs", "ext.vector.editWarning", "ext.vector.simpleSearch"]);
+	mediaWiki.loader.go();
+}
+</script>
+
+<script src="http://bits.wikimedia.org/w/extensions-1.17/FlaggedRevs/client/flaggedrevs.js?87&amp;301-3" type="text/javascript"></script>
+<script type="text/javascript">
+FlaggedRevs.messages = {"diffToggleShow": "показать изменения", "diffToggleHide": "скрыть изменения", "logToggleShow": "показать журнал стабилизации", "logToggleHide": "скрыть журнал стабильности", "logDetailsShow": "показать подробности", "logDetailsHide": "скрыть подробности", "toggleShow": "(+)", "toggleHide": "(-)"};
+</script>
+<script src="/w/index.php?title=%D0%A1%D0%BB%D1%83%D0%B6%D0%B5%D0%B1%D0%BD%D0%B0%D1%8F:BannerController&amp;cache=/cn.js&amp;301-3" type="text/javascript"></script>
+<script src="http://bits.wikimedia.org/ru.wikipedia.org/load.php?debug=false&amp;lang=ru&amp;modules=site&amp;only=scripts&amp;skin=vector" type="text/javascript"></script>
+<script type="text/javascript">if ( window.mediaWiki ) {
+	mediaWiki.user.options.set({"ccmeonemails":0,"cols":80,"contextchars":50,"contextlines":5,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":1,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":false,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,
+	"watchlistdays":"3","watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"flaggedrevssimpleui":1,"flaggedrevsstable":false,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"vector-simplesearch":1,"useeditwarning":1,"vector-collapsiblenav":1,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"variant":"ru","language":"ru","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false});;mediaWiki.loader.state({"user.options":"ready"});
+	
+	/* cache key: ruwiki:resourceloader:filter:minify-js:5:94f083885b71c7b1e9cce2e96694604d */
+}
+</script><script type="text/javascript" src="Регулярные%20выражения%20—%20Википедия_files/00000000.js"></script>		<!-- fixalpha -->
+		<script type="text/javascript"> if ( window.isMSIE55 ) fixalpha(); </script>
+		<!-- /fixalpha -->
+		<!-- Served by srv204 in 0.090 secs. -->			</body>
+</html>
+
+<!-- This document saved from http://ru.wikipedia.org/wiki/Регулярные_выражения -->

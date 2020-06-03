@@ -1,0 +1,276 @@
+<html>
+
+<head>
+	<meta charset="utf-8" content="uk">
+	<title>Комп'ютерні системи</title>
+	<link href="css/material.min.css" rel="stylesheet" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/comp-systems.css" rel="stylesheet" />
+
+	<script type='text/javascript' src='js/jquery.js'></script>
+	<script type='text/javascript' src='js/jquery.nouislider.min.js'></script>
+	<script type='text/javascript' src='js/comp-systems.js'></script>
+</head>
+
+<body>
+	<div class='container'>
+		<div class="header text-center">
+			<h1>Планування завдань в багатопроцесорних системах</h1>
+		</div>
+		<div class="main">
+			<div class="row parampam">
+				<div class="col-xs-7">
+					<div class="main-processors">
+						<div class="row">
+							<div class="col-xs-3 img">
+								<img src="img/processor.svg" alt="processor" />
+							</div>
+							<div class="col-xs-9">
+								<div class="row">
+									<div class="col-xs-1">
+										<p><b>П1</b>
+										</p>
+										<p><b>П2</b>
+										</p>
+										<p><b>П3</b>
+										</p>
+										<p><b>П4</b>
+										</p>
+										<p><b>П5</b>
+										</p>
+									</div>
+									<div class="col-xs-8">
+										<div class="bs-component">
+											<div class="slider slider-primary" id="slider-p1" data-min="100" data-max="5000" data-step="100" data-units=" оп/мс" data-value="2400"></div>
+											<div class="slider slider-info" id="slider-p2" data-min="100" data-max="5000" data-step="100" data-units=" оп/мс" data-value="1000"></div>
+											<div class="slider slider-success" id="slider-p3" data-min="100" data-max="5000" data-step="100" data-units=" оп/мс" data-value="3400"></div>
+											<div class="slider slider-warning" id="slider-p4" data-min="100" data-max="5000" data-step="100" data-units=" оп/мс" data-value="1700"></div>
+											<div class="slider slider-danger" id="slider-p5" data-min="100" data-max="5000" data-step="100" data-units=" оп/мс" data-value="4000"></div>
+										</div>
+									</div>
+									<div class="col-xs-3">
+										<label for="slider-p1">smth</label>
+										<label for="slider-p2">smth</label>
+										<label for="slider-p3">smth</label>
+										<label for="slider-p4">smth</label>
+										<label for="slider-p5">smth</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-5">
+					<div class="row">
+						<div class="main-probability">
+							<div class="col-xs-3">
+								<p><b>Вірогідність</b>
+								</p>
+								<p><b>Час</b>
+								</p>
+								<p><b>Період</b>
+								</p>
+							</div>
+							<div class="col-xs-6">
+								<div class="bs-component">
+									<div class="slider slider-primary" id="slider-prob" data-min="0" data-max="100" data-step="1" data-units="%" data-value="70"></div>
+								</div>
+								<div class="bs-component">
+									<div class="slider slider-primary" id="slider-time" data-min="100" data-max="10000" data-step="100" data-units=" мс" data-value="10000"></div>
+								</div>
+								<div class="bs-component">
+									<div class="slider slider-primary" id="slider-step" data-min="1" data-max="1000" data-step="1" data-units=" мс" data-value="100"></div>
+								</div>
+							</div>
+							<div class="col-xs-3">
+								<label for="slider-prob">smth</label>
+								<label for="slider-time">smth</label>
+								<label for="slider-step">smth</label>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="main-buttoms text-center">
+							<button id="start" class="btn btn-success" type="button" onclick="Start()">Старт</button>
+							<button id="pause" class="btn btn-info" type="button" onclick="Pause()">Пауза</button>
+							<button id="stop" class="btn btn-danger" type="button" onclick="Stop()">Стоп</button>
+							<button id="step" class="btn btn-warning" type="button" onclick="Step()">Крок</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="main-table">
+						<h4 class="text-center">Візуальне логування</h4>
+						<div class="col-xs-3 text-center">
+							<div class="comp-head text-left">
+								<img src="img/computer.svg">
+								<span class="comp-num">1</span>
+								<div class="comp-info">
+									<p>Виконано: <span id="comp-1-performed">0</span>
+									</p>
+									<p>Всього: <span id="comp-1-total">0</span>
+									</p>
+									<p>Макс.: <span id="comp-1-max">0</span>
+									</p>
+									<p>ККД: <span id="comp-1-effectivity">100%</span>
+									</p>
+									<p>ККД': <span id="comp-1-effectivity2">100%</span>
+									</p>
+								</div>
+							</div>
+							<p>Комп'ютер 1</p>
+							<div class="comp-dump">
+								<div class="progress">
+									<div id="comp-1-p-1" class="progress-bar" role="progressbar" style="width: 60%;"></div>
+								</div>
+								<div class="progress">
+									<div id="comp-1-p-2" class="progress-bar progress-bar-info" role="progressbar" style="width: 60%;"></div>
+								</div>
+								<div class="progress">
+									<div id="comp-1-p-3" class="progress-bar progress-bar-success" role="progressbar" style="width: 60%;"></div>
+								</div>
+								<div class="progress">
+									<div id="comp-1-p-4" class="progress-bar progress-bar-warning" role="progressbar" style="width: 60%;"></div>
+								</div>
+								<div class="progress">
+									<div id="comp-1-p-5" class="progress-bar progress-bar-danger" role="progressbar" style="width: 60%;"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-3 text-center">
+							<div class="comp-head text-left">
+								<img src="img/computer.svg">
+								<span class="comp-num">2</span>
+								<div class="comp-info">
+									<p>Виконано: <span id="comp-2-performed">0</span>
+									</p>
+									<p>Всього: <span id="comp-2-total">0</span>
+									</p>
+									<p>Макс.: <span id="comp-2-max">0</span>
+									</p>
+									<p>ККД: <span id="comp-2-effectivity">100%</span>
+									</p>
+									<p>ККД': <span id="comp-2-effectivity2">100%</span>
+									</p>
+								</div>
+							</div>
+							<p>Комп'ютер 2</p>
+							<div class="comp-dump">
+								<div class="progress">
+									<div id="comp-2-p-1" class="progress-bar" role="progressbar" style="width: 60%;"></div>
+								</div>
+								<div class="progress">
+									<div id="comp-2-p-2" class="progress-bar progress-bar-info" role="progressbar" style="width: 60%;"></div>
+								</div>
+								<div class="progress">
+									<div id="comp-2-p-3" class="progress-bar progress-bar-success" role="progressbar" style="width: 60%;"></div>
+								</div>
+								<div class="progress">
+									<div id="comp-2-p-4" class="progress-bar progress-bar-warning" role="progressbar" style="width: 60%;"></div>
+								</div>
+								<div class="progress">
+									<div id="comp-2-p-5" class="progress-bar progress-bar-danger" role="progressbar" style="width: 60%;"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-3 text-center">
+							<div class="comp-head text-left">
+								<img src="img/computer.svg">
+								<span class="comp-num">3</span>
+								<div class="comp-info">
+									<p>Виконано: <span id="comp-3-performed">0</span>
+									</p>
+									<p>Всього: <span id="comp-3-total">0</span>
+									</p>
+									<p>Макс.: <span id="comp-3-max">0</span>
+									</p>
+									<p>ККД: <span id="comp-3-effectivity">100%</span>
+									</p>
+									<p>ККД': <span id="comp-3-effectivity2">100%</span>
+									</p>
+								</div>
+							</div>
+							<p>Комп'ютер 3</p>
+							<div class="comp-dump">
+								<div class="progress">
+									<div id="comp-3-p-1" class="progress-bar" role="progressbar" style="width: 60%;"></div>
+								</div>
+								<div class="progress">
+									<div id="comp-3-p-2" class="progress-bar progress-bar-info" role="progressbar" style="width: 60%;"></div>
+								</div>
+								<div class="progress">
+									<div id="comp-3-p-3" class="progress-bar progress-bar-success" role="progressbar" style="width: 60%;"></div>
+								</div>
+								<div class="progress">
+									<div id="comp-3-p-4" class="progress-bar progress-bar-warning" role="progressbar" style="width: 60%;"></div>
+								</div>
+								<div class="progress">
+									<div id="comp-3-p-5" class="progress-bar progress-bar-danger" role="progressbar" style="width: 60%;"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-3 text-center">
+							<div class="comp-head text-left">
+								<img src="img/computer.svg">
+								<span class="comp-num">4</span>
+								<div class="comp-info">
+									<p>Виконано: <span id="comp-4-performed">0</span>
+									</p>
+									<p>Всього: <span id="comp-4-total">0</span>
+									</p>
+									<p>Макс.: <span id="comp-4-max">0</span>
+									</p>
+									<p>ККД: <span id="comp-4-effectivity">100%</span>
+									</p>
+									<p>ККД': <span id="comp-4-effectivity2">100%</span>
+									</p>
+								</div>
+							</div>
+							<p>Комп'ютер 4</p>
+							<div class="comp-dump">
+								<div class="progress">
+									<div id="comp-4-p-1" class="progress-bar" role="progressbar" style="width: 60%;"></div>
+								</div>
+								<div class="progress">
+									<div id="comp-4-p-2" class="progress-bar progress-bar-info" role="progressbar" style="width: 60%;"></div>
+								</div>
+								<div class="progress">
+									<div id="comp-4-p-3" class="progress-bar progress-bar-success" role="progressbar" style="width: 60%;"></div>
+								</div>
+								<div class="progress">
+									<div id="comp-4-p-4" class="progress-bar progress-bar-warning" role="progressbar" style="width: 60%;"></div>
+								</div>
+								<div class="progress">
+									<div id="comp-4-p-5" class="progress-bar progress-bar-danger" role="progressbar" style="width: 60%;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="main-results">
+						<h4 class="text-center">Текстове логування</h4>
+						<pre id="console"></pre>
+					</div>
+				</div>
+			</div>
+			<footer class="text-center">
+
+			</footer>
+		</div>
+		<div class = "proc">
+			<li>П1</li>
+			<li>П2</li>
+			<li>П3</li>
+			<li>П4</li>
+			<li>П5</li>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+object Form1: TForm1
+  Left = 987
+  Top = 39
+  Width = 866
+  Height = 821
+  Caption = 'Form1'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object StaticText1: TStaticText
+    Left = 112
+    Top = 40
+    Width = 43
+    Height = 17
+    Caption = 'input file'
+    TabOrder = 0
+  end
+  object StaticText2: TStaticText
+    Left = 400
+    Top = 40
+    Width = 56
+    Height = 17
+    Caption = 'lexem sring'
+    TabOrder = 1
+  end
+  object StaticText3: TStaticText
+    Left = 688
+    Top = 40
+    Width = 57
+    Height = 17
+    Caption = 'lexem table'
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 48
+    Top = 8
+    Width = 75
+    Height = 25
+    Caption = 'start'
+    TabOrder = 3
+    OnClick = Button1Click
+  end
+  object Memo1: TMemo
+    Left = 328
+    Top = 64
+    Width = 225
+    Height = 305
+    Lines.Strings = (
+      'Memo1')
+    TabOrder = 4
+  end
+  object Memo2: TMemo
+    Left = 624
+    Top = 64
+    Width = 185
+    Height = 305
+    Lines.Strings = (
+      'Memo2')
+    TabOrder = 5
+  end
+  object Memo3: TMemo
+    Left = 24
+    Top = 64
+    Width = 273
+    Height = 305
+    Lines.Strings = (
+      'Memo3')
+    TabOrder = 6
+  end
+  object tree: TTreeView
+    Left = 24
+    Top = 376
+    Width = 273
+    Height = 377
+    Indent = 19
+    TabOrder = 7
+  end
+  object err_log: TMemo
+    Left = 328
+    Top = 376
+    Width = 225
+    Height = 377
+    Lines.Strings = (
+      'err_log')
+    TabOrder = 8
+  end
+  object Memo4: TMemo
+    Left = 624
+    Top = 376
+    Width = 185
+    Height = 361
+    Lines.Strings = (
+      'Memo4')
+    TabOrder = 9
+  end
+  object OpenDialog1: TOpenDialog
+  end
+  object MainMenu1: TMainMenu
+    object Ffle1: TMenuItem
+      Caption = 'File'
+      object Open1: TMenuItem
+        Caption = 'Open'
+        OnClick = Open1Click
+      end
+      object Exit1: TMenuItem
+        Caption = 'Exit'
+        OnClick = Exit1Click
+      end
+    end
+  end
+end

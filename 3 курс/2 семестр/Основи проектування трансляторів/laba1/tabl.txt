@@ -1,0 +1,31 @@
+
+Keywords Table:
+
+701  PROGRAM
+702  LABEL
+703  BEGIN
+704  GOTO
+705  ENDIF
+706  IF
+707  THEN
+708  ELSE
+709  END
+
+Constant Table:
+
+401  1
+402  123
+403  2
+404  3
+Identifier Table:
+
+710  LABA
+711  PRG
+
+Separators Table:
+
+44   ,
+46   .
+58   :
+59   ;
+61   =

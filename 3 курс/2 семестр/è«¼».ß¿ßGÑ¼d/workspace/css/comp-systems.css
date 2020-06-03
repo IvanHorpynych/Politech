@@ -1,0 +1,103 @@
+body {
+	background-color: saddlebrown !important;
+	color: darkgrey !important;
+}
+.header {
+	margin: 40px 0 40px;
+}
+.nopadding {
+	padding: 0 0 0 0;
+}
+.main-processors {
+	height: 150px;
+}
+.img {
+	height: 100%;
+	text-align: center;
+}
+.main-processors img {
+	height: 120px;
+	margin-top: 15px;
+}
+.main-table img {
+	height: 130px;
+	width: 100px;
+}
+.slider {
+	margin: 10px 0 28px;
+}
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+.btn {
+	color: white !important;
+}
+pre {
+	font-family: "Courier New", Courier, monospace;
+	height: 460px;
+	background-color: #white;
+	color: #666;
+}
+.text-warning {
+	color: black;
+}
+.slider-warning,
+.btn-warning,
+.progress-bar-warning,
+.slider-warning .noUi-handle {
+	background-color: #000000 !important;
+}
+.noUi-origin[style^="left: 0"] .noUi-handle {
+	background-color: #fff !important;
+}
+.slider-warning .noUi-handle {
+	border-color: #000000 !important;
+}
+.paused {
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+}
+.comp-head img {
+	float: left;
+}
+.comp-info {
+	font-size: 12px;
+	margin-top: 15px;
+	margin-left: 15px;
+	height: 125px;
+	width: 130px;
+	float: left;
+}
+.comp-info p {
+	line-height: 1;
+	font-weight: bold;
+	width: 100%;
+}
+
+.comp-info span {
+	float: right;
+}
+
+.comp-num {
+	position: absolute;
+	font-size: 32px;
+	font-weight: bold;
+	color: #000;
+	top: 37px;
+	left: 38px;
+}
+.parampam{
+	display: flex;
+	flex-direction: row-reverse;
+}
+.proc{
+	position: absolute;
+	left: 5px;
+	bottom: 5px;
+	list-style: none;
+	line-height: 40px;
+}
+footer {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}

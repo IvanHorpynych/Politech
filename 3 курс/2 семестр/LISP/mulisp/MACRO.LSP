@@ -1,0 +1,10 @@
+(defmacro setqq (x y)
+	  (list 'setq x (list 'quote y)))
+(defmacro copy-listq (x)
+	  (cond ((null x) nil)
+		(t (list 'cons (list 'quote (car x))
+			       (list 'copy-listq (cdr x))))))
+(defmacro if (c e1 e2)(list 'cond (list c e1)(list t e2)))
+(defmacro what (param)(list '(lambda (x) x)(car param)))
+(defmacro newif (c e1 e2)`(cond (,c ,e1) (t ,e2)))
+

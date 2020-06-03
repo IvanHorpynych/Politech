@@ -1,0 +1,12 @@
+(*Приклад програми*)
+PROGRAM OPT;
+BEGIN
+($ ASM $)
+MISHA := 1;
+12 : LINK PETRO, 2;
+GOTO 13;
+IN 45;
+OUT 12345;
+RETURN;;
+PROCEDURA (ODYN, DVA);
+END
