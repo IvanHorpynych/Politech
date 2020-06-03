@@ -1,0 +1,122 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (Win95; I) [Netscape]">
+   <TITLE>Пример выполнения Лабораторной работы 4</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="bg2.gif">
+<A HREF="laba4step03.htm">Предыдущий</A>
+<A HREF="laba4step05.htm">Следующий</A>
+<BR>
+<HR>
+
+<P><B>Шаг 4</B>
+
+<P>Рассмотрим поподробнее текст описания.
+<BR>Прежде всего необходимо отметить, что&nbsp; в разделе объявления добавлена
+еще одна библиотека:
+<BLOCKQUOTE><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">library</FONT>
+IEEE;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">use</FONT>
+IEEE.std_logic_1164.<FONT COLOR="#0000FF">all</FONT>;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">use</FONT>
+IEEE.std_logic_unsigned.<FONT COLOR="#0000FF">all</FONT>;</FONT></FONT></BLOCKQUOTE>
+Раздел интерфейса элемента не содержит ничего нового и выглядит следующим
+образом:
+<BLOCKQUOTE><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">entity</FONT>
+laba4 <FONT COLOR="#0000FF">is</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">generic</FONT>
+(</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1>Delay: time:=20ns); <FONT COLOR="#008040">--
+Время задержки распространения сигнала</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">port</FONT>
+(</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1>CLK: <FONT COLOR="#0000FF">in</FONT>
+STD_LOGIC; <FONT COLOR="#008040">-- Входной порт для тактового сигнала</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1>Reset: <FONT COLOR="#0000FF">in</FONT>
+STD_LOGIC; <FONT COLOR="#008000">-- Сигнал сброса</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1>DataIn: <FONT COLOR="#0000FF">in</FONT>
+STD_LOGIC_VECTOR (3 <FONT COLOR="#0000FF">downto</FONT> 0); <FONT COLOR="#008040">--
+Информационный вход</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1>DataOut: <FONT COLOR="#0000FF">out</FONT>
+STD_LOGIC_VECTOR (3 <FONT COLOR="#0000FF">downto</FONT> 0); <FONT COLOR="#008000">--
+Информационный выход</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1>Command: <FONT COLOR="#0000FF">in</FONT>
+STD_LOGIC_VECTOR (2 <FONT COLOR="#0000FF">downto</FONT> 0)); <FONT COLOR="#008000">--
+Вход кода инструкции</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">end
+entity</FONT> laba4;</FONT></FONT></BLOCKQUOTE>
+Терерь рассмотрим описание архитектуры. Расшифруем текст программы:
+<BLOCKQUOTE><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">architecture</FONT>
+laba4 <FONT COLOR="#0000FF">of</FONT> laba4 <FONT COLOR="#0000FF">is</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#0000FF"><FONT SIZE=-1>begin</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">process</FONT>(CLK,Reset)</FONT></FONT></BLOCKQUOTE>
+Процесс будет реагировать на изменение синхросигнала и сигнала сброса
+<BLOCKQUOTE><FONT FACE="Courier New Cyr"><FONT COLOR="#0000FF"><FONT SIZE=-1>variable</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1>private:STD_LOGIC_VECTOR
+(3 <FONT COLOR="#0000FF">downto</FONT> 0);</FONT></FONT></BLOCKQUOTE>
+Для хранения текущего состояния вводим дополнительную переменную
+<BLOCKQUOTE><FONT FACE="Courier New Cyr"><FONT COLOR="#0000FF"><FONT SIZE=-1>begin</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">if</FONT>
+(Reset='1') <FONT COLOR="#0000FF">then</FONT> private:="0000";</FONT></FONT></BLOCKQUOTE>
+Если происходит сброс, то значение переменной, хранящее текущее состояние
+счетчика или регистра обнуляется
+<BLOCKQUOTE><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">elsif
+</FONT>(CLK'event) <FONT COLOR="#0000FF">and</FONT> (CLK='0') <FONT COLOR="#0000FF">then</FONT></FONT></FONT></BLOCKQUOTE>
+Иначе, если происходит изменение сигнала синхронизации и он становится
+низкого уровня (управление по заднему фронту), начинаем обработку события
+<BLOCKQUOTE><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">case
+</FONT>Command <FONT COLOR="#0000FF">is</FONT></FONT></FONT></BLOCKQUOTE>
+Для идентификации инструкции упраления действием регистра или счетчика
+мы применяем оператор
+<BR><B>case &lt;name> is</B>
+<BLOCKQUOTE><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">when</FONT>
+"000" =></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">null</FONT>;</FONT></FONT></BLOCKQUOTE>
+Если входная инструкция 000, то согласно заданию осуществляется хранение
+результата, т.е. ничего не происходит
+<BLOCKQUOTE><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">when</FONT>
+"001" =></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1>private:=datain;</FONT></FONT></BLOCKQUOTE>
+Производим записываение входных данных во внутреннюю переменную
+<BLOCKQUOTE><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">when</FONT>
+"010" =></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1>private:=private+3;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">when</FONT>
+"011" =></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1>private:=private-3;</FONT></FONT></BLOCKQUOTE>
+В зависимости от инструкции производим увеличение или уменьшение значения
+значения внутренней переменной
+<BLOCKQUOTE><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">when</FONT>
+"101" =></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1>private:=private(3 <FONT COLOR="#0000FF">downto</FONT>
+1)&amp;'0';</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">when</FONT>
+"110" =></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1>private:='0'&amp;private(2
+<FONT COLOR="#0000FF">downto</FONT> 0);</FONT></FONT></BLOCKQUOTE>
+На данных шагах происходит идентификация вида сдвига: влево или в право
+в зависимости от кода. Оператор &amp; обозначает конкатенацию, сцепление
+битов аргумента ( в первом примере результат формируется из первых трех
+бит значения вектора private и одного бита со значеним 0)
+<BLOCKQUOTE><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">when
+others</FONT> =></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">null</FONT>;</FONT></FONT></BLOCKQUOTE>
+В остальных случаях ничего не происходит
+<BLOCKQUOTE><FONT SIZE=+0><FONT COLOR="#0000FF">end case</FONT>;</FONT>
+<BR><FONT SIZE=+0><FONT COLOR="#0000FF">end if</FONT>;</FONT>
+<BR><FONT SIZE=+0>DataOut&lt;=private <FONT COLOR="#0000FF">after</FONT>
+Delay;</FONT></BLOCKQUOTE>
+Выводим значение внутренней переменной в порт вывода с задержкой в
+<BLOCKQUOTE><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">end
+process</FONT>;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">end
+architecture</FONT>;</FONT></FONT></BLOCKQUOTE>
+Если все было сделано правильно, то теперь можно компилировать и начинать
+тестирование.
+<BR>
+<HR>
+
+<P><A HREF="laba4step03.htm">Предыдущий</A> <A HREF="laba4step05.htm">Следующий</A>
+</BODY>
+</HTML>

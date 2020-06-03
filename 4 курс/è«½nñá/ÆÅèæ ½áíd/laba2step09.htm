@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (Win95; I) [Netscape]">
+   <TITLE>Пример выполнения Лабораторной работы 2</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="bg2.gif">
+<A HREF="laba2step08.htm">Предыдущий</A>
+<A HREF="laba2step10.htm">Следующий</A>
+<BR>
+<HR>
+
+<P><B>Шаг 9</B>
+
+<P>Выполним второе задание. Для его выполнения нам необходимо используя
+только язык AVHDL описать поведение дешифратора. Впишите в конец файла
+laba2.vhd следующий текст:
+
+<P><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">library</FONT><FONT COLOR="#000000">
+IEEE;</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">use</FONT><FONT COLOR="#000000">
+IEEE.std_logic_1164.all;</FONT></FONT></FONT>
+
+<P><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">entity</FONT><FONT COLOR="#000000">
+task2 </FONT><FONT COLOR="#0000FF">is</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">generic</FONT><FONT COLOR="#000000">(maxdelay:time:=
+20ns);</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">port</FONT><FONT COLOR="#000000">
+(</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#000000">indata:</FONT><FONT COLOR="#0000FF">in</FONT><FONT COLOR="#000000">
+STD_LOGIC_VECTOR (2 </FONT><FONT COLOR="#0000FF">downto</FONT><FONT COLOR="#000000">
+0);</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#000000">outdata:
+</FONT><FONT COLOR="#0000FF">out</FONT><FONT COLOR="#000000"> STD_LOGIC_VECTOR
+(1 </FONT><FONT COLOR="#0000FF">downto</FONT><FONT COLOR="#000000"> 0)</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#000000"><FONT SIZE=-1>);</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">end</FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#0000FF">entity</FONT><FONT COLOR="#000000"> task2;</FONT></FONT></FONT>
+
+<P><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">architecture</FONT><FONT COLOR="#000000">
+task2 </FONT><FONT COLOR="#0000FF">of</FONT><FONT COLOR="#000000"> task2
+</FONT><FONT COLOR="#0000FF">is</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#0000FF"><FONT SIZE=-1>begin</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">with</FONT><FONT COLOR="#000000">
+indata </FONT><FONT COLOR="#0000FF">select</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#000000">outdata&lt;="10"
+</FONT><FONT COLOR="#0000FF">after</FONT><FONT COLOR="#000000"> maxdelay
+</FONT><FONT COLOR="#0000FF">when</FONT><FONT COLOR="#000000"> "000" ,</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#000000">"10"
+</FONT><FONT COLOR="#0000FF">after</FONT><FONT COLOR="#000000"> maxdelay
+</FONT><FONT COLOR="#0000FF">when</FONT><FONT COLOR="#000000"> "001" ,</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#000000">"00"
+</FONT><FONT COLOR="#0000FF">after</FONT><FONT COLOR="#000000"> maxdelay
+</FONT><FONT COLOR="#0000FF">when</FONT><FONT COLOR="#000000"> "010" ,</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#000000">"01"
+</FONT><FONT COLOR="#0000FF">after</FONT><FONT COLOR="#000000"> maxdelay
+</FONT><FONT COLOR="#0000FF">when</FONT><FONT COLOR="#000000"> "011" ,</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#000000">"01"
+</FONT><FONT COLOR="#0000FF">after</FONT><FONT COLOR="#000000"> maxdelay
+</FONT><FONT COLOR="#0000FF">when</FONT><FONT COLOR="#000000"> "100" ,</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#000000">"10"
+</FONT><FONT COLOR="#0000FF">after</FONT><FONT COLOR="#000000"> maxdelay
+</FONT><FONT COLOR="#0000FF">when</FONT><FONT COLOR="#000000"> "101" ,</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#000000">"01"
+</FONT><FONT COLOR="#0000FF">after</FONT><FONT COLOR="#000000"> maxdelay
+</FONT><FONT COLOR="#0000FF">when</FONT><FONT COLOR="#000000"> "110" ,</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#000000">"11"
+</FONT><FONT COLOR="#0000FF">after</FONT><FONT COLOR="#000000"> maxdelay
+</FONT><FONT COLOR="#0000FF">when</FONT><FONT COLOR="#000000"> </FONT><FONT COLOR="#0000FF">others</FONT><FONT COLOR="#000000">;</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#0000FF">end</FONT><FONT COLOR="#000000">
+</FONT><FONT COLOR="#0000FF">architecture</FONT><FONT COLOR="#000000">
+task2;</FONT></FONT></FONT>
+
+<P>Секция entity описывает интерфейс. Входным вектором является <B>indata</B>,
+длиной 3 бита, а выходным <B>outdata</B>, длиной 2 бита. Заметим, что перед
+разделом описания портов находится раздел <FONT COLOR="#0000FF">generic
+</FONT><FONT COLOR="#000000">. Он определяет статическоую информацию для
+блока, к которому будут подключаться извне. Другими словами этот раздел
+обеспечивает постоянные значения для различных параметров. Тут могут задаваться
+временные параметры, ширина шин и т.д. В нашем случае константа <B>maxdelay</B>
+задает максимальную длительность времени прохождения сигнала от входов
+до выходов.</FONT>
+
+<P><FONT COLOR="#000000">Вторым нововведением является конструкция with
+&lt;variable1> select &lt;statement>. В случае изменения значения переменной
+&lt;variable1> ( в нашем случае indata) выполняется &lt;statement> ( в
+нашем случае изменяется значение вектора outdata в зависимости от значения
+indata и это изменение устанавливается после периода времени равного maxdelay.</FONT>
+<BR>
+<HR>
+
+<P><A HREF="laba2step08.htm">Предыдущий</A> <A HREF="laba2step10.htm">Следующий</A>
+</BODY>
+</HTML>

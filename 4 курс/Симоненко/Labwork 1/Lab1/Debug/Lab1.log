@@ -1,0 +1,14 @@
+﻿Построение начато 12/21/2017 2:27:26 PM.
+     1>Проект "D:\Documents\4 курс\Симоненко\Labwork 1\Lab1\Lab1.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         D:\Program Files (x86)\vs2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt ..\allocator.c
+         allocator.c
+       Link:
+         D:\Program Files (x86)\vs2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Documents\4 курс\Симоненко\Labwork 1\Lab1\Debug\Lab1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Documents\4 курс\Симоненко\Labwork 1\Lab1\Debug\Lab1.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Documents\4 курс\Симоненко\Labwork 1\Lab1\Debug\Lab1.lib" /MACHINE:X86 Debug\allocator.obj
+         Debug\main.obj
+         Lab1.vcxproj -> D:\Documents\4 курс\Симоненко\Labwork 1\Lab1\Debug\Lab1.exe
+     1>Построение проекта "D:\Documents\4 курс\Симоненко\Labwork 1\Lab1\Lab1.vcxproj" завершено (целевые объекты Build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:02.17

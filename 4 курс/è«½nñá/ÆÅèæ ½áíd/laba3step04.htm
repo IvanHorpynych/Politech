@@ -1,0 +1,120 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (Win95; I) [Netscape]">
+   <TITLE>Пример выполнения Лабораторной работы 3</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="bg2.gif">
+<A HREF="laba3step03.htm">Предыдущий</A>
+<A HREF="laba3step05.htm">Следующий</A>
+<BR>
+<HR>
+
+<P><B>Шаг 4</B>
+
+<P>Рассмотрим поподробнее текст описания.
+<BR>Раздел интерфейса содержит оче нь подробно расписанные ранее две секции:
+секцию описания статических параметров
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">entity</FONT>
+jk1 <FONT COLOR="#0000FF">is</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">generic</FONT>(</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>delay:time:=20ns</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>)</FONT></FONT>
+<BR>и секцию описания портов элемента
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">port</FONT>
+(</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>j: <FONT COLOR="#0000FF">in</FONT>
+STD_LOGIC;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>k: <FONT COLOR="#0000FF">in</FONT>
+STD_LOGIC;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>c: <FONT COLOR="#0000FF">in</FONT>
+STD_LOGIC;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>r: <FONT COLOR="#0000FF">in</FONT>
+STD_LOGIC;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>c1: <FONT COLOR="#0000FF">out</FONT>
+STD_LOGIC;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>c2: <FONT COLOR="#0000FF">out</FONT>
+STD_LOGIC</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>);</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">end</FONT>
+jk1;</FONT></FONT>
+
+<P>Очень интересными являются нововведения в разделе описаня архитектуры
+элемента. Здесь появился новый элемент <FONT COLOR="#0000FF">process:</FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">architecture</FONT>
+jk1 <FONT COLOR="#0000FF">of</FONT> jk1 <FONT COLOR="#0000FF">is</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#0000FF"><FONT SIZE=-2>begin</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">process</FONT>(c,r)</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#0000FF"><FONT SIZE=-2>begin</FONT></FONT></FONT>
+<BR>Это ключевое слово позволяет инициализировать зависимый или независимый
+параллельный процесс. В отличие от других языков программирования организация
+параллельных процессов здесь очень проста. Нам не надо разделять имеющийся
+процесс на два: дочерний и родительский, разделять время между имеющимися
+процессами. Достаточно объявить процесс и описать его поведение. Если параметры
+процесса не указазны, то он выполняеся на протяжениия всего времени работы
+элемента. Для того чтобы упростить описание процесса, когда необходимо
+реагировать только на изменение какого-нибудь сигнала, можно в его параметрах
+указать название сигналов, изменение которых приведет к запуску процесса
+(как и сделано выше: <FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">process</FONT>(c,r)</FONT></FONT>)
+
+<P>Вторым нововведением являеся возможность оперировать переменными различных
+типов. В нашем примере мы ввели переменную целого типа для запоминания
+внутренного состояния элемента. Описание переменной очень схожо с объявлением
+инициализированных переменных в Паскале:
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">variable</FONT>
+q:integer:=0;</FONT></FONT>
+
+<P>Как и в языках высокого уровня таких как Паскаль, Модула, С++, здесь
+имеются средства условного ветвления программы: оператор IF. Дабы уничтожить
+сомнения типа: какому из операторов IF пренадлежит данный ELSIF, здесь
+каждый оператор<FONT COLOR="#0000FF"> if</FONT> должен заканчиваться <FONT COLOR="#0000FF">end
+if</FONT>. Описанное ветвление очень напоминает ветвление в описаниях макросов
+в языках Turbo Assembler и Pascal.
+<BR>Как мы сказали выше параллельный процесс может запускаться изменением
+определенного сигнала. Если задано несколько сигналов, то для анализа,
+какой из синалов изменился должны имется определенные средства. В нашем
+случае для синала <B><I>с</I></B> проверка его изменения заключается в
+проверке выражения <B>c'event. </B>Это выражение будет равно True, если
+произошло <I>событие</I> с сигналом <B><I>c</I></B>. Таким образом общий
+алгоритм поведения JK-тригера в нашем случае имеет вид:
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">if</FONT>
+(c'event <FONT COLOR="#0000FF">and</FONT> c='1' <FONT COLOR="#0000FF">and</FONT>
+r='0') <FONT COLOR="#0000FF">then</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">if</FONT>
+((j='1') <FONT COLOR="#0000FF">and</FONT> (k='0')) <FONT COLOR="#0000FF">then</FONT>
+q:=1;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">elsif</FONT>
+((j='0') <FONT COLOR="#0000FF">and</FONT> (k='1')) <FONT COLOR="#0000FF">then</FONT>
+q:=0;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">elsif</FONT>
+((j='1') <FONT COLOR="#0000FF">and</FONT> (k='1')) <FONT COLOR="#0000FF">then</FONT>
+q:=1-q;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">end
+if</FONT>;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">end
+if</FONT>;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">if</FONT>
+(r'event and r='1') <FONT COLOR="#0000FF">then</FONT> q:=0;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">end
+if</FONT>;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">if</FONT>
+(q=1) <FONT COLOR="#0000FF">then</FONT> c1&lt;='1' <FONT COLOR="#0000FF">after</FONT>
+delay;c2&lt;='0' <FONT COLOR="#0000FF">after</FONT> delay;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">else</FONT>
+c2&lt;='1' <FONT COLOR="#0000FF">after</FONT> delay;c1&lt;='0' <FONT COLOR="#0000FF">after</FONT>
+delay;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">end
+if</FONT>;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">end
+process</FONT>;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">end
+jk1</FONT>;</FONT></FONT>
+
+<P>Если все было сделано правильно, то теперь можно компилировать и начинать
+тестирование.
+<BR>
+<HR>
+
+<P><A HREF="laba3step03.htm">Предыдущий</A> <A HREF="laba3step05.htm">Следующий</A>
+</BODY>
+</HTML>

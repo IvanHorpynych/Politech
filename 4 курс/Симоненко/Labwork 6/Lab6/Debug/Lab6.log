@@ -1,0 +1,11 @@
+﻿Построение начато 12/21/2017 2:31:43 PM.
+     1>Проект "D:\Documents\4 курс\Симоненко\Labwork 6\Lab6\Lab6.vcxproj" в узле 2 (целевые объекты ClCompile).
+     1>ClCompile:
+         D:\Program Files (x86)\vs2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt ..\main.c
+         main.c
+     1>d:\documents\4 курс\симоненко\labwork 6\main.c(23): warning C4101: i: неиспользованная локальная переменная
+     1>Построение проекта "D:\Documents\4 курс\Симоненко\Labwork 6\Lab6\Lab6.vcxproj" завершено (целевые объекты ClCompile).
+
+Построение успешно завершено.
+
+Затраченное время: 00:00:00.64
