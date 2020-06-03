@@ -1,0 +1,99 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                     AC Analysis of Regulator 2 Audio                     ***
+********************************************************************************
+Limits
+======
+Frequency Range  Log 100k,10m
+Number of Points 701
+Temperature      Linear 27
+Maximum Change % 5
+Noise Input      NONE
+Noise Output     2
+Run Options      Normal
+State Variables  Zero
+Operating Point  On
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            12.000   2           600.000m  3             4.441  
+4             5.041   VOUT          4.991   6           444.128m 
+7           444.128m  8             2.496   9             2.500  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:              RSOL            RF        RLOWER        RUPPER         RLOAD
+V                  -50.161m        0.000        -2.496        -2.496        -4.991 
+Power DC Terms:
+PD                   2.516m        0.000       622.781u      622.781u      249.113m
+
+DC Pin Currents:
+Ir                 -50.161m        0.000      -249.556u     -249.556u      -49.911m
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                CF
+V                    2.051 
+Power DC Terms:
+PS                   0.000 
+
+DC Pin Currents:
+Ic                   0.000 
+
+Device Variables:
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:               E1         X1.E1         X3.E1
+V                 444.128m      600.000m        4.441 
+Power DC Terms:
+PG                  0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:            X2.E1
+V                   5.041 
+Power DC Terms:
+PG                252.874m
+
+DC Pin Currents:
+ISource           -50.161m
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:              VIN          VREF
+V                  12.000         2.500 
+Power DC Terms:
+PG                  0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000 
+
+

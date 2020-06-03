@@ -1,0 +1,247 @@
+********************************************************************************
+***                            Micro-Cap 10.0.9.1                            ***
+***                                                                          ***
+***                                                                          ***
+***                   AC Analysis of ULTRA-LINEAR_CASCODE2                   ***
+***                           22/09/2012 10:25:34                            ***
+********************************************************************************
+Limits
+======
+Frequency Range  Log 1E8,1
+Number of Points 1001
+Temperature      Linear 27
+Maximum Change % 5
+Noise Input      NONE
+Noise Output     2
+Run Options      Normal
+State Variables  Zero
+Operating Point  On
+
+
+*****************************************************
+***                     Run=1                     ***
+***                Temperature=27                 ***
+*****************************************************
+
+Run=1 Temperature=27 
+
+DC Operating Point Voltages
+===========================
+Node          Voltage  Node          Voltage  Node          Voltage 
+VIN            0.000   2          1.965E-024  3              1.476  
+4            300.000   5            226.201   VOUT           0.000  
+7            226.496   8            112.126   9            112.126  
+10           226.201   11           113.612   X7.XV1.LI     11.947K 
+X7.XV1.GG     -1.486   X7.XV1.RP    331.262m  X7.XV1.GR     -1.442  
+X7.XV1.EM     65.006   X7.XV1.EP      7.379m  X7.XV1.EL      7.379m 
+X7.XV1.LD  7.876E-027  X7.XV1.GF -9.151E-029  X8.XV1.LI     11.875K 
+X8.XV1.GG     -1.476   X8.XV1.RP    332.184m  X8.XV1.GR     -1.432  
+X8.XV1.EM     64.871   X8.XV1.EP      7.379m  X8.XV1.EL      7.379m 
+X8.XV1.LD -6.866E-027  X8.XV1.GF -5.423E-031  X9.XV1.LI      6.302K 
+X9.XV1.GG   -295.139m  X9.XV1.RP    515.990m  X9.XV1.GR   -293.397m 
+X9.XV1.EM     63.822   X9.XV1.EP     11.213m  X9.XV1.EL     11.213m 
+X9.XV1.LD  1.292E-027  X9.XV1.GF      0.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                 R1             R2             R3             R4
+V                -1.965E-024         0.000         -1.476        -73.799 
+Power DC Terms:
+PD                1.286E-050         0.000         10.891m       544.633m
+
+DC Pin Currents:
+Ir               -6.549E-027         0.000         -7.379m        -7.380m
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                 R5             R6             R7          RLOAD
+V                   -33.638u      -112.126       -114.370          0.000 
+Power DC Terms:
+PD                    3.772p         1.257          1.282          0.000 
+
+DC Pin Currents:
+Ir                 -112.126n       -11.213m       -11.213m         0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                 R8     X7.XV1.RF1     X7.XV1.RF2     X7.XV1.RF3
+V                    67.860u       226.201        112.126        113.612 
+Power DC Terms:
+PD                   15.350p        51.167u        12.572u        12.908u
+
+DC Pin Currents:
+Ir                  226.201n       226.201n       112.126n       113.612n
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:         X8.XV1.RF1     X8.XV1.RF2     X8.XV1.RF3     X9.XV1.RF1
+V                   113.612      1.965E-024         1.476        300.000 
+Power DC Terms:
+PD                   12.908u     3.859E-057         2.178n        90.000u
+
+DC Pin Currents:
+Ir                  113.612n     1.965E-033         1.476n       300.000n
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:         X9.XV1.RF2     X9.XV1.RF3
+V                   226.201        226.496 
+Power DC Terms:
+PD                   51.167u        51.300u
+
+DC Pin Currents:
+Ir                  226.201n       226.496n
+
+Device Variables:
+tc1                   0.000          0.000 
+tc2                   0.000          0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                 C1     X7.XV1.CM1     X7.XV1.CM2     X7.XV1.CM3
+V                  -226.496         -1.486        114.075        112.589 
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+Instance:         X8.XV1.CM1     X8.XV1.CM2     X8.XV1.CM3     X9.XV1.CM1
+V                    -1.476        113.612        112.136       -295.139m
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+Instance:         X9.XV1.CM2     X9.XV1.CM3
+V                    73.799         73.504 
+Power DC Terms:
+PS                    0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:       X7.XV1.ELIM     X7.XV1.EGG    X7.XV1.ERPF     X7.XV1.EGR
+V                   11.947K        -1.486        331.262m        -1.442 
+Power DC Terms:
+PG                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+ISource              0.000          0.000          0.000          0.000 
+
+
+Instance:        X7.XV1.EEM     X7.XV1.EEP     X7.XV1.EEL     X7.XV1.ELD
+V                   65.006          7.379m         7.379m     7.876E-027
+Power DC Terms:
+PG                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+ISource              0.000          0.000          0.000          0.000 
+
+
+Instance:         X7.XV1.GA     X7.XV1.EGF     X7.XV1.GG1    X8.XV1.ELIM
+V                  112.589     -9.151E-029        -1.486         11.875K
+Power DC Terms:
+PG                -830.845m         0.000      1.157E-026         0.000 
+
+DC Pin Currents:
+ISource              7.379m         0.000      7.784E-027         0.000 
+
+
+Instance:        X8.XV1.EGG    X8.XV1.ERPF     X8.XV1.EGR     X8.XV1.EEM
+V                   -1.476        332.184m        -1.432         64.871 
+Power DC Terms:
+PG                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+ISource              0.000          0.000          0.000          0.000 
+
+
+Instance:        X8.XV1.EEP     X8.XV1.EEL     X8.XV1.ELD      X8.XV1.GA
+V                    7.379m         7.379m    -6.866E-027       112.136 
+Power DC Terms:
+PG                   0.000          0.000          0.000       -827.481m
+
+DC Pin Currents:
+ISource              0.000          0.000          0.000          7.379m
+
+
+Instance:        X8.XV1.EGF     X8.XV1.GG1    X9.XV1.ELIM     X9.XV1.EGG
+V               -5.423E-031        -1.476          6.302K      -295.139m
+Power DC Terms:
+PG                   0.000     -1.013E-026         0.000          0.000 
+
+DC Pin Currents:
+ISource              0.000     -6.867E-027         0.000          0.000 
+
+
+Instance:       X9.XV1.ERPF     X9.XV1.EGR     X9.XV1.EEM     X9.XV1.EEP
+V                  515.990m      -293.397m        63.822         11.213m
+Power DC Terms:
+PG                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+ISource              0.000          0.000          0.000          0.000 
+
+
+Instance:        X9.XV1.EEL     X9.XV1.ELD      X9.XV1.GA     X9.XV1.EGF
+V                   11.213m     1.292E-027        73.504          0.000 
+Power DC Terms:
+PG                   0.000          0.000       -824.199m         0.000 
+
+DC Pin Currents:
+ISource              0.000          0.000         11.213m         0.000 
+
+
+Instance:        X9.XV1.GG1
+V                 -295.139m
+Power DC Terms:
+PG               3.813E-028
+
+DC Pin Currents:
+ISource          1.292E-027
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                V1             V2
+V                    0.000        300.000 
+Power DC Terms:
+PG                   0.000          5.578 
+
+DC Pin Currents:
+ISource          6.549E-027       -18.593m
+
+

@@ -1,0 +1,150 @@
+********************************************************************************
+***                            Micro-Cap 10.0.9.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                           AC Analysis of TRANS                           ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Frequency Range  Auto 1E10,1E2
+Number of Points 50
+Temperature      Linear 27
+Maximum Change % 5
+Noise Input      INPUT
+Noise Output     T1
+Run Options      Normal
+State Variables  Zero
+Operating Point  On
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:              V1   
+Using model:         1VPP   
+A                500.000m   
+DC                 0.000 (*)
+F                  2.000K   
+PH                 0.000 (*)
+RP                 0.000 (*)
+RS                 1.000u   
+TAU                0.000 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+INPUT         0.000   TOUT          0.000   3             0.000  
+4             0.000   MOUT          0.000   6             0.000  
+T2            0.000   T1            0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current  Inductor     Current 
+K1.LP         0.000   K1.LS         0.000   L1            0.000  
+L2            0.000   X1.LP         0.000   X1.LS1        0.000  
+X1.LS2        0.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:               V1.RS            K1.R              R1              R2
+V                      0.000           0.000           0.000           0.000 
+Power DC Terms:
+PD                     0.000           0.000           0.000           0.000 
+
+DC Pin Currents:
+Ir                     0.000           0.000           0.000           0.000 
+
+Device Variables:
+tc1                    0.000           0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000           0.000 
+
+
+Instance:                  R3              R4              R5              R6
+V                      0.000           0.000           0.000           0.000 
+Power DC Terms:
+PD                     0.000           0.000           0.000           0.000 
+
+DC Pin Currents:
+Ir                     0.000           0.000           0.000           0.000 
+
+Device Variables:
+tc1                    0.000           0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000           0.000 
+
+
+Instance:                  R7            K2.R         X1.K0.R         X1.K0.R
+V                      0.000           0.000           0.000           0.000 
+Power DC Terms:
+PD                     0.000           0.000           0.000           0.000 
+
+DC Pin Currents:
+Ir                     0.000           0.000           0.000           0.000 
+
+Device Variables:
+tc1                    0.000           0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000           0.000 
+
+
+Instance:             X1.K0.R
+V                      0.000 
+Power DC Terms:
+PD                     0.000 
+
+DC Pin Currents:
+Ir                     0.000 
+
+Device Variables:
+tc1                    0.000 
+tc2                    0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:               K1.LP           K1.LS              L1              L2
+V                      0.000           0.000           0.000           0.000 
+Power DC Terms:
+PS                     0.000           0.000           0.000           0.000 
+
+DC Pin Currents:
+Il                     0.000           0.000           0.000           0.000 
+
+Device Variables:
+ic                     0.000           0.000           0.000           0.000 
+
+
+Instance:               X1.LP          X1.LS1          X1.LS2
+V                      0.000           0.000           0.000 
+Power DC Terms:
+PS                     0.000           0.000           0.000 
+
+DC Pin Currents:
+Il                     0.000           0.000           0.000 
+
+Device Variables:
+ic                     0.000           0.000           0.000 
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                  V1
+Using model:             1VPP
+V                      0.000 
+Power DC Terms:
+PG                     0.000 
+
+DC Pin Currents:
+ISource                0.000 
+
+

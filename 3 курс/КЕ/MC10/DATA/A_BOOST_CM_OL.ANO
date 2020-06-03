@@ -1,0 +1,145 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                       AC Analysis of A_BOOST_CM_OL                       ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Frequency Range  Log 1e6,1
+Number of Points 1000
+Temperature      Linear 27
+Maximum Change % 5
+Noise Input      NONE
+Noise Output     2
+Run Options      Normal
+State Variables  Zero
+Operating Point  On
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1             2.800   OUT         761.239m  3           761.239m 
+4           533.333m  5             0.000   X3.LL         3.178  
+X3.X1.3       3.178   X3.X1.7       5.292   X3.X1.9       3.178  
+X3.X1.10      1.888   X3.X1.12 -1.888E-043  X3.X1.13 -1.888E-043 
+X3.X1.14  1.000E-030  X3.X1.15  1.000E-030  X3.X1.16   -790.266m 
+X3.X1.17   -470.396m 
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+X3.L         -1.888   X3.X1.L1 -2.374E-066 
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:               RESR          RLOAD          X3.RL      X3.X1.RVC
+V                     0.000        761.239m      -377.622m         0.000 
+Power DC Terms:
+PD                    0.000         96.581m       712.993m         0.000 
+
+DC Pin Currents:
+Ir                    0.000        126.873m        -1.888          0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:           X3.X1.RE       X3.X1.R2       X3.X1.RD      X3.X1.RFM
+V                     0.000     -1.888E-043      -790.266m      -470.396m
+Power DC Terms:
+PD                    0.000      3.565E-093        62.452n        22.127n
+
+DC Pin Currents:
+Ir                    0.000     -1.888E-050       -79.027n       -47.040n
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:               X3.L       X3.X1.L1
+V                     0.000          0.000 
+Power DC Terms:
+PS                    0.000          0.000 
+
+DC Pin Currents:
+Il                   -1.888     -2.374E-066
+
+Device Variables:
+ic                    0.000          0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:               COUT       X3.X1.C1       X3.X1.C2
+V                  -761.239m         1.888     -1.000E-030
+Power DC Terms:
+PS                    0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:            X3.EBD       X3.X1.E2       X3.X1.G1      X3.X1.GXF
+V                  533.333m         5.292       -761.239m         4.531 
+Power DC Terms:
+PG                   0.000          5.329        767.323m        -4.562 
+
+DC Pin Currents:
+ISource              0.000         -1.007          1.008          1.007 
+
+
+Instance:         X3.X1.EXF       X3.X1.ED      X3.X1.EFM
+V                    2.416       -790.266m      -470.396m
+Power DC Terms:
+PG                   4.562         62.452n        22.127n
+
+DC Pin Currents:
+ISource             -1.888         79.027n        47.040n
+
+
+
+Operating Point for Devices of Type SPICE Poly
+==============================================
+Instance:          X3.X1.HI       X3.X1.E1
+V                    1.888      1.000E-030
+Power DC Terms:
+PG                   0.000          0.000 
+
+DC Pin Currents:
+ISource              0.000          0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                V4             V5      X3.X1.VXF
+V                    2.800          0.000          0.000 
+Power DC Terms:
+PG                  -5.287          0.000          0.000 
+
+DC Pin Currents:
+ISource              1.888          0.000          1.888 
+
+

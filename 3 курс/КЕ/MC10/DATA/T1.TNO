@@ -1,0 +1,88 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                         Transient Analysis of T1                         ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Time Range           10n,0
+Maximum Time Step    4e-011
+Number of Points     50
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Pulse
+==========================================
+Instance:          TABLE   
+Using model:       TABLE   
+P1                1.000n   
+P2                5.000n   
+P3                6.000n   
+P4                8.000n   
+P5               10.000n   
+VONE             10.000    
+VZERO            -5.000    
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+IN           -5.000   2             0.000   NTIOFI       -2.500  
+NTIOFV       -2.500   NTVOFI        2.500   6             0.000  
+NTVOFV        2.500  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                 R3             R1             R2
+V                    -5.000          2.500          2.500 
+Power DC Terms:
+PD                   25.000          6.250          6.250 
+
+DC Pin Currents:
+Ir                   -5.000          2.500          2.500 
+
+Device Variables:
+tc1                   0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Pulse
+=========================================
+Instance:              TABLE
+Using model:           TABLE
+V                    -5.000 
+Power DC Terms:
+PG                   25.000 
+
+DC Pin Currents:
+ISource               5.000 
+
+
+
+Operating Point for Devices of Type Table Source
+================================================
+Instance:              LIST             F1             G1             E1
+V                    2.500         -2.500         -2.500          2.500 
+Power DC Terms:
+PG                   0.000          6.250          6.250          0.000 
+
+DC Pin Currents:
+ISource              0.000          2.500          2.500          0.000 
+
+

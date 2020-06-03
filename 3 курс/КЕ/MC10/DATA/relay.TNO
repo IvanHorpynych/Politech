@@ -1,0 +1,323 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                       Transient Analysis of relay                        ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Time Range           .5
+Maximum Time Step    10u
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Diode
+==========================================
+Instance:        X2.X5.D1        X2.X5.D2   
+Using model:     X2.X5.D1        X2.X5.D2   
+LEVEL                   1(*)            1(*)
+AF                 1.000 (*)       1.000 (*)
+BV                 0.000 (*)       0.000 (*)
+CJO                0.000 (*)       0.000 (*)
+EG                 1.110 (*)       1.110 (*)
+FC               500.000m(*)     500.000m(*)
+IBV              100.000p(*)     100.000p(*)
+IBVL               0.000 (*)       0.000 (*)
+IKF                0.000 (*)       0.000 (*)
+IS                10.000f(*)      10.000f(*)
+ISR                0.000 (*)       0.000 (*)
+KF                 0.000 (*)       0.000 (*)
+M                500.000m(*)     500.000m(*)
+N                  1.000m          1.000m   
+NBV                1.000 (*)       1.000 (*)
+NBVL               1.000 (*)       1.000 (*)
+NR                 2.000 (*)       2.000 (*)
+RL                 0.000 (*)       0.000 (*)
+RS                 0.000 (*)       0.000 (*)
+T_ABS           UNDEFINED(*)    UNDEFINED(*)
+T_MEASURED      UNDEFINED(*)    UNDEFINED(*)
+T_REL_GLOBAL    UNDEFINED(*)    UNDEFINED(*)
+T_REL_LOCAL     UNDEFINED(*)    UNDEFINED(*)
+TBV1               0.000 (*)       0.000 (*)
+TBV2               0.000 (*)       0.000 (*)
+TIKF               0.000 (*)       0.000 (*)
+TRS1               0.000 (*)       0.000 (*)
+TRS2               0.000 (*)       0.000 (*)
+TT                 0.000 (*)       0.000 (*)
+VJ                 1.000 (*)       1.000 (*)
+XTI                3.000 (*)       3.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Pulse
+==========================================
+Instance:             VIN   
+Using model:       PULSE1   
+P1                 1.000m   
+P2                 2.000m   
+P3               200.000m   
+P4               201.000m   
+P5               500.000m   
+VONE               4.000    
+VZERO              0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type S
+======================================
+Instance:           X1.S2           X2.S1   
+Using model:        X1.SR           X2.S1   
+ROFF               1.000G          1.000G   
+RON               10.000m         10.000m   
+VH              UNDEFINED(*)    UNDEFINED(*)
+VOFF             910.000m        100.000m   
+VON              900.000m        900.000m   
+VT              UNDEFINED(*)    UNDEFINED(*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node           Voltage  Node           Voltage  Node           Voltage 
+1               4.000   OUT2           40.000u  IN              0.000  
+4               4.000   OUT1           40.000u  X1.FSTOP        0.000  
+X1.X8.PINB      0.000   X1.X9.PINA      0.000   X1.X6.PINA      0.000  
+X1.X6.PINB      0.000   X1.X8.PINA      0.000   X1.X9.PINB      0.000  
+X1.11           0.000   X2.1            0.000   X2.3            0.000  
+X2.X5.PINB      1.001   X2.X5.PINA      0.000   X1.X6.1         0.000  
+X1.X8.1         0.000   X1.X9.1         0.000   X2.X5.1       150.076K 
+X2.X5.A       500.606m  X2.X5.3       500.000m  X2.X5.4      -500.000m 
+X2.X5.CAT       1.001  
+
+DC Operating Point Inductor Current
+===================================
+  Inductor     Current 
+X2.L1           0.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:           X2.X5.D1        X2.X5.D2
+Using model:        X2.X5.D1        X2.X5.D2
+
+Capacitance Terms:
+CAP                   0.000           0.000 
+
+Current Terms:
+ID                  150.075u         -1.011p
+
+Resistance Terms:
+REQ                 172.341m          1.000T
+
+Voltage Terms:
+VD                  606.045u         -1.001 
+
+Power DC Terms:
+PD                   90.952n          1.011p
+PS                    0.000           0.000 
+
+DC Pin Currents:
+Id                  150.075u         -1.011p
+
+Condition:
+State                    OFF             OFF
+
+Device Variables:
+area                  1.000           1.000 
+ic                    0.000           0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                  R1              R2           X1.RC           X2.R1
+V                      4.000           4.000           0.000           0.000 
+Power DC Terms:
+PD                    16.000m         16.000m          0.000           0.000 
+
+DC Pin Currents:
+Ir                     4.000m          4.000m          0.000           0.000 
+
+Device Variables:
+tc1                    0.000           0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000           0.000 
+
+
+Instance:            X1.X6.R1        X1.X8.R1        X1.X9.R1        X2.X5.R1
+V                      0.000           0.000           0.000        -150.075K
+Power DC Terms:
+PD                     0.000           0.000           0.000          22.523 
+
+DC Pin Currents:
+Ir                     0.000           0.000           0.000        -150.075u
+
+Device Variables:
+tc1                    0.000           0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000           0.000 
+
+
+Instance:            X2.X5.R2
+V                      0.000 
+Power DC Terms:
+PD                     0.000 
+
+DC Pin Currents:
+Ir                     0.000 
+
+Device Variables:
+tc1                    0.000 
+tc2                    0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:               X2.L1
+V                      0.000 
+Power DC Terms:
+PS                     0.000 
+
+DC Pin Currents:
+Il                     0.000 
+
+Device Variables:
+ic                     0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:               X1.C1         X1.X6.C         X1.X8.C         X1.X9.C
+V                     40.000u          0.000           0.000           0.000 
+Power DC Terms:
+PS                     0.000           0.000           0.000           0.000 
+
+DC Pin Currents:
+Ic                     0.000           0.000           0.000           0.000 
+
+Device Variables:
+ic                     0.000           0.000           0.000           0.000 
+
+
+Instance:            X2.X5.C1
+V                   -500.606m
+Power DC Terms:
+PS                     0.000 
+
+DC Pin Currents:
+Ic                     0.000 
+
+Device Variables:
+ic                     0.000 
+
+
+
+Operating Point for Devices of Type S
+=====================================
+Instance:               X1.S2           X2.S1
+Using model:            X1.SR           X2.S1
+Power DC Terms:
+PD                   159.997n        159.997n
+
+DC Pin Currents:
+ISource                4.000m          4.000m
+
+Condition:
+State                      ON              ON
+
+
+
+Operating Point for Devices of Type Pulse
+=========================================
+Instance:                 VIN
+Using model:           PULSE1
+V                      0.000 
+Power DC Terms:
+PG                     0.000 
+
+DC Pin Currents:
+ISource                0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:              X1.E5           X2.H1        X1.X6.G1        X1.X6.E1
+V                     0.000           0.000           0.000           0.000 
+Power DC Terms:
+PG                    0.000           0.000           0.000           0.000 
+
+DC Pin Currents:
+ISource               0.000           0.000           0.000           0.000 
+
+
+Instance:           X1.X8.G1        X1.X8.E1        X1.X9.G1        X1.X9.E1
+V                     0.000           0.000           0.000           0.000 
+Power DC Terms:
+PG                    0.000           0.000           0.000           0.000 
+
+DC Pin Currents:
+ISource               0.000           0.000           0.000           0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:              X1.E3         X1.COIL          X1.E15        X2.X5.E1
+V                     0.000           0.000           0.000         150.076K
+Power DC Terms:
+PG                    0.000           0.000           0.000          22.523 
+
+DC Pin Currents:
+ISource               0.000           0.000           0.000        -150.075u
+
+
+Instance:           X2.X5.E2        X2.X5.E3        X2.X5.E4
+V                     1.001         500.000m       -500.000m
+Power DC Terms:
+PG                    0.000         -75.038u        505.303f
+
+DC Pin Currents:
+ISource               0.000         150.075u          1.011p
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                 V3              V4
+V                     4.000           4.000 
+Power DC Terms:
+PG                   16.000m         16.000m
+
+DC Pin Currents:
+ISource              -4.000m         -4.000m
+
+
+
+Operating Point for Devices of Type Table Source
+================================================
+Instance:              X1.E2
+V                     0.000 
+Power DC Terms:
+PG                    0.000 
+
+DC Pin Currents:
+ISource               0.000 
+
+

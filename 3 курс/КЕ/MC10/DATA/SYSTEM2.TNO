@@ -1,0 +1,112 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                      Transient Analysis of SYSTEM2                       ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Time Range           250n
+Maximum Time Step    0
+Number of Points     4
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+IN            0.000   C1            0.000   A             0.000  
+4           200.000f  5             0.000   OUT1        200.000f 
+7             2.000p  OUT2          2.000p  X5.1          2.000p 
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:              X1.R1          X5.R1
+V                     0.000         -2.000p
+Power DC Terms:
+PD                    0.000      4.000E-030
+
+DC Pin Currents:
+Ir                    0.000         -0.002f
+
+Device Variables:
+tc1                   0.000          0.000 
+tc2                   0.000          0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:               X5.C
+V                     2.000p
+Power DC Terms:
+PS                    0.000 
+
+DC Pin Currents:
+Ic                    0.000 
+
+Device Variables:
+ic                    0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:             X5.G1          X5.E1
+V                   -2.000p         2.000p
+Power DC Terms:
+PG                   0.004f         0.000 
+
+DC Pin Currents:
+ISource              2.000u         0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:                V1          X1.E2          X3.E1          X6.E1
+V                    0.000          0.000        200.000f         2.000p
+Power DC Terms:
+PG                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+ISource              0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Laplace Source
+==================================================
+Instance:             X4.E2
+V                    0.000 
+Power DC Terms:
+PG                   0.000 
+
+DC Pin Currents:
+ISource              0.000 
+
+
+
+Operating Point for Devices of Type Table Source
+================================================
+Instance:        X0.CLIPPER       X2.TABLE
+V                    0.000        200.000f
+Power DC Terms:
+PG                   0.000          0.000 
+
+DC Pin Currents:
+ISource              0.000          0.000 
+
+

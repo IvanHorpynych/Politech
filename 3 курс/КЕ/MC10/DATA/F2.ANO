@@ -1,0 +1,161 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                            AC Analysis of F2                             ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Frequency Range  Auto 1E8,1
+Number of Points 50
+Temperature      Linear 27
+Maximum Change % 1
+Noise Input      x1
+Noise Output     out
+Run Options      Normal
+State Variables  Zero
+Operating Point  On
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:              HC              HB   
+Using model:           HC              HB   
+A                500.000m        500.000m   
+DC                 1.000           1.000    
+F                4.000MEG        2.000MEG   
+PH                 0.000 (*)       0.000 (*)
+RP                 0.000 (*)       0.000 (*)
+RS                 1.000m(*)       1.000m(*)
+TAU                0.000 (*)       0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Pulse
+==========================================
+Instance:           PULSE   
+Using model:        PULSE   
+P1               100.000n(*)
+P2               110.000n(*)
+P3               500.000n(*)
+P4               510.000n(*)
+P5                 1.000u(*)
+VONE               5.000    
+VZERO              2.000    
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+OUT          -9.980   X1          999.001m  Y1            2.000  
+Z1          999.001m  5             2.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current 
+L1            2.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:               HC.RS           HB.RS              R4              R1
+V                   -999.001u       -999.001u          2.000         999.001m
+Power DC Terms:
+PD                   998.003u        998.003u          4.000         998.003m
+
+DC Pin Currents:
+Ir                  -999.001m       -999.001m          2.000         999.001m
+
+Device Variables:
+tc1                    0.000           0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000           0.000 
+
+
+Instance:                  R2              R3
+V                    999.001m         -9.980 
+Power DC Terms:
+PD                   998.003m         99.601 
+
+DC Pin Currents:
+Ir                   999.001m         -9.980 
+
+Device Variables:
+tc1                    0.000           0.000 
+tc2                    0.000           0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                  L1
+V                      0.000 
+Power DC Terms:
+PS                     0.000 
+
+DC Pin Currents:
+Il                     2.000 
+
+Device Variables:
+ic                     0.000 
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                  HC              HB
+Using model:               HC              HB
+V                    999.001m        999.001m
+Power DC Terms:
+PG                   999.001m        999.001m
+
+DC Pin Currents:
+ISource             -999.001m       -999.001m
+
+
+
+Operating Point for Devices of Type Pulse
+=========================================
+Instance:               PULSE
+Using model:            PULSE
+V                      2.000 
+Power DC Terms:
+PG                     4.000 
+
+DC Pin Currents:
+ISource               -2.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:                 F1
+V                    -9.980 
+Power DC Terms:
+PG                   99.601 
+
+DC Pin Currents:
+ISource               9.980 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               L1.V
+V                     0.000 
+Power DC Terms:
+PG                    0.000 
+
+DC Pin Currents:
+ISource               2.000 
+
+

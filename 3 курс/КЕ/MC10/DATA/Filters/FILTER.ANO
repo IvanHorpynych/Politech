@@ -1,0 +1,157 @@
+********************************************************************************
+***                            Micro-Cap 10.0.9.0                            ***
+***                                                                          ***
+***                                                                          ***
+***                          AC Analysis of FILTER                           ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Frequency Range  Log 1E5,500
+Number of Points 50
+Temperature      Linear 27
+Maximum Change % 1
+Noise Input      1
+Noise Output     10
+Run Options      Normal
+State Variables  Zero
+Operating Point  On
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Opamp
+==========================================
+Instance:              X3   
+Using model:        LM709   
+LEVEL                   1   
+A                200.000K(*)
+C                 30.000p(*)
+CMRR             100.000K(*)
+GBW              1.000MEG(*)
+IBIAS            100.000n(*)
+IOFF               1.000n(*)
+IOSC              20.000m(*)
+PD                25.000m(*)
+PM                60.000 (*)
+ROUTAC            75.000 (*)
+ROUTDC           125.000 (*)
+SRN              500.000K(*)
+SRP              500.000K(*)
+T_ABS           UNDEFINED(*)
+T_MEASURED      UNDEFINED(*)
+T_REL_GLOBAL    UNDEFINED(*)
+T_REL_LOCAL     UNDEFINED(*)
+TYPE               1.000    
+VCC               15.000 (*)
+VEE              -15.000 (*)
+VNS              -13.000 (*)
+VOFF               1.000m(*)
+VPS               13.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Pulse
+==========================================
+Instance:          FILTER   
+Using model:       FILTER   
+P1               100.000u   
+P2               110.000u   
+P3                 5.000m   
+P4                 6.000m   
+P5                10.000m   
+VONE               1.000    
+VZERO              0.000 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            50.000m  IN           50.000m  3            50.000m 
+OUT          50.000m  5             0.000   6            15.000  
+7           -15.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                  R1              R2            X3.R
+V                      0.000           0.000          50.000m
+Power DC Terms:
+PD                     0.000           0.000          12.500u
+
+DC Pin Currents:
+Ir                     0.000           0.000         249.999u
+
+Device Variables:
+tc1                    0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                  C1              C5
+V                     50.000m        249.999n
+Power DC Terms:
+PS                     0.000           0.000 
+
+DC Pin Currents:
+Ic                     0.000           0.000 
+
+Device Variables:
+ic                     0.000           0.000 
+
+
+
+Operating Point for Devices of Type Opamp
+=========================================
+Instance:                 X3
+Using model:           LM709
+Condition:
+State                    LIN
+
+
+
+Operating Point for Devices of Type Pulse
+=========================================
+Instance:              FILTER
+Using model:           FILTER
+V                      0.000 
+Power DC Terms:
+PG                     0.000 
+
+DC Pin Currents:
+ISource                0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:              NOISE
+V                    50.000m
+Power DC Terms:
+PG                    0.000 
+
+DC Pin Currents:
+ISource               0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                 V1              V2
+V                    15.000          15.000 
+Power DC Terms:
+PG                    0.000           0.000 
+
+DC Pin Currents:
+ISource               0.000           0.000 
+
+

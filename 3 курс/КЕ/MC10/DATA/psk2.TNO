@@ -1,0 +1,134 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                        Transient Analysis of PSK2                        ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Time Range           80u
+Maximum Time Step    10n
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:           X1.V1   
+Using model:      X1.SINE   
+A                  4.000    
+DC                 0.000 (*)
+F                400.000K   
+PH                 0.000 (*)
+RP                 0.000 (*)
+RS                 1.000m(*)
+TAU                0.000 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node          Voltage  Node          Voltage  Node          Voltage 
+OUT          200.452m  PSK_OUT   -3.698E-032  X1.SINE        0.000  
+X1.BINARY     -1.000   $G_DGND        0.000   $G_DPWR        5.000  
+
+DC Operating Point Digital States
+=================================
+Node     State Node     State Node     State Node     State Node     State
+1        1     2        0     CLK      1     DIN      1     5        0    
+6        1     8        1     7$DTOA   0    
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:            X1.V1.RS           X1.R1          X2$.R1          X2$.R2
+V                      0.000         200.452m          5.000           0.000 
+Power DC Terms:
+PD                     0.000          40.181p         25.000n          0.000 
+
+DC Pin Currents:
+Ir                     0.000         200.452p          5.000n          0.000 
+
+Device Variables:
+tc1                    0.000           0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000           0.000 
+
+
+Instance:              X2$.R3    X1$.N1.rhigh     X1$.N1.rlow
+V                      0.000           4.800        -200.452m
+Power DC Terms:
+PD                     0.000         135.504m          5.659m
+
+DC Pin Currents:
+Ir                     0.000          28.233m        -28.233m
+
+Device Variables:
+tc1                    0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:           X1$.CLOAD
+V                    200.452m
+Power DC Terms:
+PS                     0.000 
+
+DC Pin Currents:
+Ic                     0.000 
+
+Device Variables:
+ic                     0.000 
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:               X1.V1
+Using model:          X1.SINE
+V                      0.000 
+Power DC Terms:
+PG                     0.000 
+
+DC Pin Currents:
+ISource                0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:              X1.E1           X1.E2
+V                -3.698E-032         -1.000 
+Power DC Terms:
+PG                    0.000           0.000 
+
+DC Pin Currents:
+ISource               0.000           0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:             X2$.V1          X2$.V2
+V                     5.000           0.000 
+Power DC Terms:
+PG                  141.163m          0.000 
+
+DC Pin Currents:
+ISource             -28.233m         28.233m
+
+

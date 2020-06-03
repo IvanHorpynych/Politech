@@ -1,0 +1,80 @@
+********************************************************************************
+***                            Micro-Cap 10.0.9.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                           DC Analysis of PRLC                            ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Variable 1 Method Linear
+Variable 1 Name   V1
+Variable 1 Range  10,-10,1
+Variable 2 Method None
+Variable 2 Name   NONE
+Variable 2 Range  NONE
+Temperature       Linear 27
+Number of Points  10
+Maximum Change %  5
+Run Options       Normal
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Capacitor
+==============================================
+Instance:              C1   
+Using model:         CAP1   
+C                  1.000 (*)
+LS              UNDEFINED(*)
+RP              UNDEFINED(*)
+RS              UNDEFINED(*)
+T_ABS           UNDEFINED(*)
+T_MEASURED      UNDEFINED(*)
+T_REL_GLOBAL    UNDEFINED(*)
+T_REL_LOCAL     UNDEFINED(*)
+TC1              100.000u   
+TC2                0.000 (*)
+VC1                0.000 (*)
+VC2                0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Inductor
+=============================================
+Instance:              L1   
+Using model:         IND2   
+CP              UNDEFINED(*)
+IL1                0.000 (*)
+IL2                0.000 (*)
+L                  1.000    
+RS              UNDEFINED(*)
+T_ABS           UNDEFINED(*)
+T_MEASURED      UNDEFINED(*)
+T_REL_GLOBAL    UNDEFINED(*)
+T_REL_LOCAL     UNDEFINED(*)
+TC1                1.000m   
+TC2                0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Pulse
+==========================================
+Instance:              V1   
+Using model:        PULSE   
+P1               100.000n   
+P2               100.000n   
+P3               500.000n   
+P4               500.000n   
+P5                 1.000u   
+VONE               5.000    
+VZERO              0.000    
+
+
+

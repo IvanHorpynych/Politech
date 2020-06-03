@@ -1,0 +1,776 @@
+Content-Type: multipart/related; start=<op.mhtml.1230283015046.5c3b6909262ce77a@10.3.68.1>; boundary=----------EJq9WkxMQJW791qbH565MH
+Content-Location: http://www.and-rey.ru/password/
+Subject: =?utf-8?Q?And-rey:=20=D0=93=D0=B5=D0=BD=D0=B5=D1=80=D0=B0=D1=86=D0=B8=D1=8F=20=D0=BF=D0=B0=D1=80=D0=BE=D0=BB=D0=B5=D0=B9,=20=D1=85=D0=B5=D1=88=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D0=B5,=20=D0=BF=D1=80=D0=BE=D0=B2=D0=B5=D1=80=D0=BA=D0=B0?=
+MIME-Version: 1.0
+
+------------EJq9WkxMQJW791qbH565MH
+Content-Disposition: inline; filename=default.htm
+Content-Type: text/html; charset=windows-1251; name=default.htm
+Content-Id: <op.mhtml.1230283015046.5c3b6909262ce77a@10.3.68.1>
+Content-Location: http://www.and-rey.ru/password/
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head><title>And-rey: Генерация паролей, хеширование, проверка</title><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="keywords" content="Интернет сервис безопасность разработка програмирование приложения web Генерация паролей, хеширование, проверка"><meta name="description" content="Интернет сервисы Генерация паролей, хеширование, проверка.">
+<style type="text/css">
+    TABLE.bord { 
+        border-collapse: collapse;
+        border: 1px solid #A52A2A;
+        background: #FFF8DC;
+    }
+    TD.bord {
+        border-bottom: 1px solid #A52A2A;
+    }
+    TABLE.bord2 { 
+        border-collapse: collapse;
+        border: 1px solid #A52A2A;
+    }
+    TD.bord2 {
+        border: 1px solid #A52A2A;
+    }
+    .blue {
+        color: blue;
+    }
+    .red {
+        color: red;
+    }
+    .butt2 {
+        color: blue;
+        text-decoration: underline;
+        font-weight: bold;
+        font-family: Tahoma,arial,sans-serif;
+        font-size: 10pt;
+        border-width: 0;
+        background-color: #FFF8DC;
+        cursor: pointer;
+    }
+</style>
+<meta name="Author" content="And-rey || info@and-rey.ru">
+<link href="/css/a.css" rel="stylesheet" type="text/css">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<Script type="text/javascript">
+<!--
+var arr_m16 = ["atohp9", "shae4u", "su9ieg", "thae7k", "xei4ie", "io7ook", "ow3aem", "ee7ohm", "sie9ba", "def3ki"];
+            function move_m16(){
+                document.getElementById('id_m1_pass6').style.display = ''
+                document.getElementById('id_m1_pass6').innerHTML = arr_m16.pop();
+                if (arr_m16.length) {
+                    setTimeout("move_m16()",100);
+                } else {
+                    document.getElementById('id_m1_hash6').style.display = ''
+                }
+            }
+var arr_m18 = ["nef9oo3o", "zoh7quoh", "ioth7caa", "pheich9o", "aibohth7", "gae3ux7y", "pee4quai", "tiefoo7w", "eiju9kei", "ohdeexa4"];
+            function move_m18(){
+                document.getElementById('id_m1_pass8').style.display = ''
+                document.getElementById('id_m1_pass8').innerHTML = arr_m18.pop();
+                if (arr_m18.length) {
+                    setTimeout("move_m18()",100);
+                } else {
+                    document.getElementById('id_m1_hash8').style.display = ''
+                }
+            }
+var arr_m110 = ["cooh3seebi", "daenga3qui", "nohquoh4qu", "aevoovi3ah", "ookei4pheb", "or3ouc3aes", "aev7chooqu", "ieceegh7ee", "thoi9ekohr", "feiquohn7b"];
+            function move_m110(){
+                document.getElementById('id_m1_pass10').style.display = ''
+                document.getElementById('id_m1_pass10').innerHTML = arr_m110.pop();
+                if (arr_m110.length) {
+                    setTimeout("move_m110()",100);
+                } else {
+                    document.getElementById('id_m1_hash10').style.display = ''
+                }
+            }
+var arr_m216 = ["EK2GRwc0x7RTuSYv", "uVyYnqG59jn9ra93", "5kamCHNuSB0dPJUN", "pzbbAvVm9gNVodCV", "qnKlcPh6cIHyQqoS", "JqLeBsWqJ4GvhiTR", "ltjNMo3AQuJob6zO", "0cGQhdkCZCHWVJGP", "lLe811TTsS9EH8Pz", "JHegGnSMCc28v9JD"];
+            function move_m216(){
+                document.getElementById('id_m2_pass16').style.display = ''
+                document.getElementById('id_m2_pass16').innerHTML = arr_m216.pop();
+                if (arr_m216.length) {
+                    setTimeout("move_m216()",100);
+                } else {
+                    document.getElementById('id_m2_hash16').style.display = ''
+                }
+            }
+var arr_m224 = ["PxaIZo8350S6ol2JfpkzBLXC", "2afaKcsrmVdERZ60oHaBZm2P", "8wxR3N4dInoO1DaX6ESiTL2a", "IQML2RbL5TcfuxaVByNKbtwt", "fjaYlLDCPPOALIsN0DB8j1Rd", "2S23DsT4VxyEb386w69lvFMU", "sUAVfIhkNTt3gJqISANQoXj5", "w1RKVNpoc8H59MGUfnw04EbR", "xypP3R8J9OOshdbGoAmpoKSY", "KIVknDQ9z9O3gIyFene9o9bt"];
+            function move_m224(){
+                document.getElementById('id_m2_pass24').style.display = ''
+                document.getElementById('id_m2_pass24').innerHTML = arr_m224.pop();
+                if (arr_m224.length) {
+                    setTimeout("move_m224()",100);
+                } else {
+                    document.getElementById('id_m2_hash24').style.display = ''
+                }
+            }
+var arr_m232 = ["qFiUj0H4pCwT0t9wfj8iwHUA6Amt36Rt", "PgJBCymANUEo0gH6ZcCqL8HiTsSle2zM", "Qe6m8trY7MpcwjFHxyWbo6RCppX7lx4k", "n2pHAZZIPpyTF55HRhTNuQHquqZDaPc4", "O0WndFALMI6p3ekdw0fjOpFWpzsIEV5s", "puyBPz9GfROJ5ggoxQ6ggpzotzxPLjgn", "9SXot2wA5VlcjgIZKFZARvKQPNtzQ26y", "h8dtmGZHDrJ7MAO5pOf4n20ym30YGL7Y", "RWYTd31OC0sBqqfKz5XMT5UjfoDOBsZ9", "q88jnV8YYJEq8Sez1ljUDJLU1ypwvyYi"];
+            function move_m232(){
+                document.getElementById('id_m2_pass32').style.display = ''
+                document.getElementById('id_m2_pass32').innerHTML = arr_m232.pop();
+                if (arr_m232.length) {
+                    setTimeout("move_m232()",100);
+                } else {
+                    document.getElementById('id_m2_hash32').style.display = ''
+                }
+            }
+
+function start() {
+document.getElementById('id_m1_hash6').style.display = 'none'
+            document.getElementById('id_m1_pass6').style.display = 'none'
+            setTimeout("move_m16()",1000);
+document.getElementById('id_m1_hash8').style.display = 'none'
+            document.getElementById('id_m1_pass8').style.display = 'none'
+            setTimeout("move_m18()",2000);
+document.getElementById('id_m1_hash10').style.display = 'none'
+            document.getElementById('id_m1_pass10').style.display = 'none'
+            setTimeout("move_m110()",3000);
+document.getElementById('id_m2_hash16').style.display = 'none'
+            document.getElementById('id_m2_pass16').style.display = 'none'
+            setTimeout("move_m216()",4000);
+document.getElementById('id_m2_hash24').style.display = 'none'
+            document.getElementById('id_m2_pass24').style.display = 'none'
+            setTimeout("move_m224()",5000);
+document.getElementById('id_m2_hash32').style.display = 'none'
+            document.getElementById('id_m2_pass32').style.display = 'none'
+            setTimeout("move_m232()",6000);
+
+}
+
+// Работа с формой
+function CheckFormChat(frm) {
+    // проверка формы
+    if (frm.pass.value == '' ) {
+      alert( "Пожалуйста, введите Ваше имя." );
+      frm.pass.focus();
+      return false;
+    }
+    // отправка данных и обновленный вывод
+    requestdataSend();
+    // очистка полей формы
+    frm.pass.value  = '';
+    document.getElementById("tt").innerHTML = "<center><b class=blue>Обработка<\/b><br><br><img src='/img/run1.gif' alt='Обработка'><\/center>";
+    // выход без перезагрузки
+    return false;
+}
+
+// Подгонка размера фрейма
+function FResize() { 
+    document.getElementById('ollcoment').style.height=ollcoment.document.body.scrollHeight+5
+    //document.getElementById('ollcoment').style.width=ollcoment.document.body.scrollWidth+5
+}
+
+/////// ajax ///////
+var req;
+
+function loadXMLDoc(url, data) {
+    req = null;
+    if (window.XMLHttpRequest) {
+        try {
+            req = new XMLHttpRequest();
+        } catch (e){}
+    } else if (window.ActiveXObject) {
+        try {
+            req = new ActiveXObject('Msxml2.XMLHTTP');
+        } catch (e){
+            try {
+                req = new ActiveXObject('Microsoft.XMLHTTP');
+            } catch (e){}
+        }
+    }
+    if (req) {
+        req.onreadystatechange = processReqChange;
+        req.open("POST", url, true);
+        req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        //req.setRequestHeader("Content-Length", url.length());
+        if (data == null) {
+            req.send('');
+        } else {
+            req.send(data);
+        }
+    } else {
+        alert("Браузер не поддерживает AJAX");
+    }
+}
+
+function processReqChange() {
+    if (req.readyState == 4) {
+        if (req.status == 200) {
+            // вывод
+            document.getElementById("f_main").innerHTML = req.responseText;
+            //req.abort();
+        } else {
+            alert("Не удалось получить данные:\n" + req.statusText);
+        }
+    }
+}
+
+// запрос данных и вывод
+function requestdataOpen(params) {
+    loadXMLDoc('./?fail_id='+params+'&tt='+Math.random(), null);
+}
+
+// отправка данных и обновленный вывод
+function requestdataSend() {
+    var v = document.getElementById('f_main');
+    var formData = "";
+    for (var i=0; i<v.length; i++) {
+        if (v.elements[i].type == 'checkbox' && !v.elements[i].checked) continue;
+        formData = formData+v.elements[i].name+'='+v.elements[i].value.replace(/&/g, "и")+'&';
+    }
+    formData = formData+'type=ajax'; // способ отправки
+    loadXMLDoc('./', formData);
+}
+///// end ajax /////
+// -->
+</Script>
+</head>
+<body bgcolor="#FFFFFF" onload="start()">
+<!-- And-rey -->
+<table width="100%" border="1" cellspacing="5" cellpadding="10" class="a01v">
+ <tr>
+  <td valign="top">
+   <b><a href="/">And-rey.ru</a>: &laquo;Генерация паролей, хеширование, проверка&raquo;</b>.</td>
+ </tr>
+</table>
+<br><table width="700" border="0" cellspacing="0" cellpadding="2" align="center">
+ <tr>
+  <td>
+	<h3 align="center">Генерация паролей, хеширование, проверка</h3>
+	<p>Генерация простых для запоминания (легко произносимых) паролей и безопасных (устойчивых к brute-force attack) паролей.
+           Шифрование (хеширование) пароля для файла паролей Apache и другими методами (алгоритмами), а так же проверка надежности
+           пароля и стойкости к brute-force attack.
+	<br><br>Генерация происходит при каждом открытии страницы (можно так-же обновить эту страницу).</p><br>
+  </td>
+ </tr>
+</table>
+<table width="700" border="0" cellspacing="0" cellpadding="2" align="center">
+<tr><td><p><b>Легкие для запоминания пароли</b></p></td></tr></table><br>
+<table width="650" border="1" cellspacing="0" cellpadding="5" align="center" class="bord">
+<tr><td width=50 align=center class=bord><b>Знаков</b></td><td width=250 align=center class=bord><b>латиница все маленькие, цифры</b></td>
+<td width=300 align=center class=bord><b>латиница все маленькие</b></td></tr><tr><td align=center>6</td><td><p class=red id=id_m1_pass6>atohp9</p></td><td><p class=blue id=id_m1_hash6>rtmort</p></td></tr>
+<tr><td align=center>8</td><td><p class=red id=id_m1_pass8>nef9oo3o</p></td><td><p class=blue id=id_m1_hash8>rugitagb</p></td></tr>
+<tr><td align=center>10</td><td><p class=red id=id_m1_pass10>cooh3seebi</p></td><td><p class=blue id=id_m1_hash10>ftilhendgl</p></td></tr>
+</table><br><table width="700" border="0" cellspacing="0" cellpadding="2" align="center">
+<tr><td><p><b>Стойкие к взлому пароли</b></p></td></tr></table><br>
+<table width="650" border="1" cellspacing="0" cellpadding="5" align="center" class="bord">
+<tr><td width=50 align=center class=bord><b>Знаков</b></td><td width=250 align=center class=bord><b>латиница разного регистра, цифры</b></td>
+<td width=300 align=center class=bord><b>латиница разного регистра, цифры, знаки</b></td></tr><tr><td align=center>16</td><td><p class=red id=id_m2_pass16>EK2GRwc0x7RTuSYv</p></td><td><p class=blue id=id_m2_hash16>EvfE9+FcDIo+opvd
+</p></td></tr>
+<tr><td align=center>24</td><td><p class=red id=id_m2_pass24>PxaIZo8350S6ol2JfpkzBLXC</p></td><td><p class=blue id=id_m2_hash24>gXIb2cNdars17VFgh936I/a7
+</p></td></tr>
+<tr><td align=center>32</td><td><p class=red id=id_m2_pass32>qFiUj0H4pCwT0t9wfj8iwHUA6Amt36Rt</p></td><td><p class=blue id=id_m2_hash32>EFNcy/ZyatkY3MkldnPy5Ayejp2TDiwP
+</p></td></tr>
+</table><br><table width="700" border="0" cellspacing="0" cellpadding="2" align="center">
+ <tr>
+  <td align="right">
+	<p>(* используйте https для доступа к этой странице)</p><br>
+  </td>
+ </tr>
+ <tr>
+  <td>
+	<p><b>Шифрование, хеширование (hash) пароля различными методами</b><br><br>
+           Алгоритмы шифрования как в: Apache, crypt в php5, MD5, функции PASSWORD в MySQL 5.<br>
+           Проверка стойкости пароля к brute-force attack (общая и по словарю).</p>
+  </td>
+ </tr>
+</table>
+<br><a name="hash"></a>
+<form name="tell" onsubmit="return CheckFormChat(document.tell);" id="f_main" method="post" action="#hash" enctype="multipart/form-data">
+<table width="650" border="0" cellspacing="0" cellpadding="5" align="center" class="bord">
+<tr><td colspan=3 align=center class=bord><b>Шифрование, хеширование (hash) пароля, проверка</b></td></tr><tr><td rowspan=4 width=260 id=tt><b>Пароль:&nbsp;</b><span class=red>&nbsp;</span><br><br>
+<center><input type=text name=pass value="" size=27><br><b></b>
+проверка*: <input type=checkbox name=chek value="1"> &nbsp; &nbsp; <input type=submit value="ввод" class=butt2><b></b></center>
+<input type=hidden name=sub value=1></td><td width=70>Apache:</td><td width=280 class=blue>&nbsp;</td></tr>
+<tr><td>crypt&nbsp;(php):</td><td class=blue>&nbsp;</td></tr>
+<tr><td>MD5:</td><td class=blue>&nbsp;</td></tr>
+<tr><td>MySQL&nbsp;5:</td><td class=blue>&nbsp;</td></tr>
+<tr><td align=center>&nbsp;<br><b>Проверка пароля:</b><br>&nbsp;</td><td colspan=2 valign=middle>&nbsp;</td></tr>
+</table></form><table width="700" border="0" cellspacing="0" cellpadding="2" align="center">
+ <tr>
+  <td align="right">
+	<p>(* может занять некоторое время)</p><br>
+  </td>
+ </tr>
+ <tr>
+  <td>
+    <p><b>Информация (bugtraq.ru)</b></p>
+    <p>Две главных характеристики пароля - количество символов (длина) и количество вариантов символа в каждой позиции (алфавит).</p>
+    <!--<p>Как известно из комбинаторики общее количество возможных паролей при заданной длине(L) и алфавите(A) вычисляется как (A**L).
+    A в степени L. Время(T) за которое пароль заданной длины будет гарантированно подобран методом Грубой силы меньше или равно (A**L)/V,
+    где V - скорость перебора. Итак, мы можем записать T&lt;=(A**L)/V. Эту формулу обычно называют формулой Андерсона.
+    Следующая таблица вычислена по этой формуле и наглядно демонстрирует зависимости указанных величин.</p>-->
+    <p align="center">Время полного перебора всех возможных паролей заданного алфавита<br>при скорости перебора 10&nbsp;000&nbsp;000 паролей в секунду</p>
+    <table width="600" border="0" cellspacing="0" cellpadding="2" align="center" class="bord2">
+    <tr><td class="bord2" align="center"><b>знаков (алфавит)</b></td><td class="bord2" align="center"><b>6&nbsp;символов</b></td><td class="bord2" align="center"><b>8&nbsp;символов</b></td><td bgcolor="#CCFFDD" class="bord2" align="center"><b>10&nbsp;символов</b></td><td class="bord2" align="center"><b>12&nbsp;символов</b></td></tr>
+    <tr><td class="bord2"><b>26</b> (латиница все маленькие или все большие)</td><td align="center" class="bord2">31&nbsp;сек</td><td align="center" class="bord2">5&nbsp;часов&nbsp;50&nbsp;мин</td><td bgcolor="#CCFFDD" align="center" class="bord2">163&nbsp;дня&nbsp;12&nbsp;часов</td><td align="center" class="bord2">303&nbsp;года</td></tr>
+    <tr><td class="bord2"><b>52</b> (латиница с переменным регистром)</td><td align="center" class="bord2">33&nbsp;мин</td><td align="center" class="bord2">62&nbsp;дня</td><td bgcolor="#CCFFDD" align="center" class="bord2">458&nbsp;лет</td><td align="center" class="bord2">1&nbsp;239&nbsp;463&nbsp;года</td></tr>
+    <tr bgcolor="#CCFFDD"><td class="bord2"><b>62</b> (латиница разного регистра плюс цифры)</td><td align="center" class="bord2">95&nbsp;мин</td><td align="center" class="bord2">252&nbsp;дня&nbsp;17&nbsp;часов</td><td bgcolor="#CCDDFF" align="center" class="bord2">2&nbsp;661&nbsp;год</td><td align="center" class="bord2">10&nbsp;230&nbsp;425&nbsp;лет</td></tr>
+    <tr><td class="bord2"><b>68</b> (латиница разного регистра плюс цифры плюс знаки препинания .,;:!?)</td><td align="center" class="bord2">2&nbsp;часа&nbsp;45&nbsp;мин</td><td align="center" class="bord2">529&nbsp;суток</td><td bgcolor="#CCFFDD" align="center" class="bord2">6&nbsp;703&nbsp;года</td><td align="center" class="bord2">30&nbsp;995&nbsp;621&nbsp;год</td></tr>
+    <tr><td class="bord2"><b>80</b> (латиница разного регистра плюс цифры плюс знаки препинания .,;:!? плюс скобки ()[]{} плюс #0&*~)</td><td align="center" class="bord2">7&nbsp;часов&nbsp;30&nbsp;мин</td><td align="center" class="bord2">5&nbsp;лет&nbsp;4&nbsp;месяца</td><td bgcolor="#CCFFDD" align="center" class="bord2">34&nbsp;048&nbsp;лет</td><td align="center" class="bord2">217&nbsp;908&nbsp;031&nbsp;год</td></tr>
+    </table>
+  </td>
+ </tr>
+</table>
+<br><br>
+<table width="700" border="0" cellspacing="0" cellpadding="2" align="center" class="curs1">
+ <tr onclick="window.open('http://bugtraq.ru/library/security/passunleashed.html','',''); return false;" style="cursor: pointer;">
+  <td class="curs1" title="информация по теме (http://bugtraq.ru/library/security/passunleashed.html)">
+   <p><span class="pen">Материал из Википедии</span><br>
+   <b>Пароль</b> (фр. <i>parole</i> — слово) — это секретное слово или набор символов, предназначенный для подтверждения личности или 
+   полномочий. Пароли часто используются для защиты информации от несанкционированного доступа. В большинстве вычислительных систем 
+   комбинация «имя пользователя — пароль» используется для удостоверения пользователя.</p>
+  </td>
+ </tr>
+</table><p class="lmar"><a href="http://www.and-rey.us/password/"><img src="/img/and-rey.us.png" width="100" height="35" border="0" alt="Зеркало (Mirror): www.and-rey.us"></a> &nbsp; <a href="https://and-rey.ru/password/"><img src="/img/https.png" width="100" height="35" border="0" alt="https"></a>&nbsp; <a href="/blog/index.php?action=forum&amp;view=post&amp;id=32"><img src="/img/comments.png" width="100" height="35" border="0" alt="comments"></a> <font color="white">Опр ИД стр: 99c23306ba40337af21053f3d4583726</font></p><table width="100%" border="1" cellspacing="5" cellpadding="10" class="a01v">
+ <tr>
+  <td align="center" nowrap>
+   &copy; 2006-2008 <a href="http://www.and-rey.ru/">And-rey</a>&trade;<br>
+   <a href="mailto:info@and-rey.ru?subject=Web-tools" ONCLICK="window.open('/mails.php','','Toolbar=0,Location=0,Directories=0,Status=0,Menubar=0,Scrollbars=0,Resizable=0,Width=400,Height=600'); return false;">info@and-rey.ru</a>
+   <img src="/img/0.gif" width="1" height="5" alt="0">
+  </td>
+ </tr>
+</table>
+
+</body>
+</html>
+
+------------EJq9WkxMQJW791qbH565MH
+Content-Disposition: inline; filename=a.css
+Content-Type: text/css; charset=windows-1251; name=a.css
+Content-Location: http://www.and-rey.ru/css/a.css
+Content-Transfer-Encoding: 8bit
+
+a, a:link, a:visited {
+	color: #4D4D4D;
+	font-family: Tahoma;
+	font-size: 9pt;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #F56205;
+	font-family: Tahoma;
+	font-size: 9pt;
+	text-decoration: underline;
+}
+
+a.bl, a.bl:link, a.bl:visited {
+	color: #1776D8;
+	font-family: Tahoma;
+	font-size: 9pt;
+	text-decoration: underline;
+}
+
+a.bl:hover {
+	color: #F56205;
+	font-family: Tahoma;
+	font-size: 9pt;
+	text-decoration: underline;
+}
+
+html,body{
+	background-color: #FFFFFF;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+table.border{
+	border-color: #D9D9D9;
+	border-style: solid;
+	border-width: 0 1px 1px 0;
+}
+
+table.border td, table.border th{
+	border-color: #D9D9D9;
+	border-style: solid;
+	border-width: 1px 0 0 1px;
+}
+
+table.bborder{
+	border-color: #0086BD;
+	border-style: solid;
+	border-width: 0 1px 1px 0;
+}
+
+table.bborder td, table.bborder th{
+	border-color: #0086BD;
+	border-style: solid;
+	border-width: 1px 0 0 1px;
+}
+
+td {
+	color: #4D4D4D;
+	font-family: Tahoma;
+	font-size: 9pt;
+}
+
+.a01 {
+	border-left: 15px solid #EDE0DD;
+	border-right: 15px solid #EDE0DD;
+	border-top: 15px solid #D9D9D9;
+	border-bottom: 15px solid #D9D9D9;
+	height: 99%;
+}
+
+.a01v {
+	border-left: 15px solid #EDE0DD;
+	border-right: 15px solid #EDE0DD;
+	border-top: 15px solid #D9D9D9;
+	border-bottom: 15px solid #D9D9D9;
+	width: 100%;
+}
+
+.h {
+	height: 100%;
+}
+
+.a09 {
+	background-color: #D9D9D9;
+	height: 5px;
+	width: 100%;
+}
+
+body.news1 {
+	background-color: #F5EFED;
+}
+
+.butt {
+	color: red;
+	font-weight: bold;
+	border-color: #0086BD;
+	border-width: 0px;
+	background-color: #FFFFFF;
+	cursor: pointer;
+}
+
+p.lmar {
+	margin-left: 20px;
+}
+
+table.curs1 {
+	border-collapse: collapse;
+}
+
+td.curs1 {
+	border-color : #0086bd;
+	border-style : solid;
+	border-width : 1px;
+}
+
+.pen {
+	color: #336699;
+	font-style: italic;
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: 700;
+	font-size: 10pt;
+}
+
+.head1 {
+    color: rgb(191, 191, 191);
+    cursor: default;
+    display: block;
+    font-family: georgia;
+    font-size: 32px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    height: 70px;
+    left: 25px;
+    line-height: normal;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 3px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    position: absolute;
+    top: 35px;
+    width: 350px;
+    z-index: 1;
+}
+
+.head2 {
+    cursor: default;
+    display: block;
+    font-family: georgia;
+    font-size: 30px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    height: 70px;
+    left: 25px;
+    line-height: normal;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 3px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    position: absolute;
+    top: 25px;
+    width: 350px;
+    z-index: 2;
+}
+------------EJq9WkxMQJW791qbH565MH
+Content-Disposition: inline; filename=favicon.ico
+Content-Type: image/x-icon; name=favicon.ico
+Content-Location: http://www.and-rey.ru/favicon.ico
+Content-Transfer-Encoding: Base64
+
+AAABAAEAEBACAAEAAQCwAAAAFgAAACgAAAAQAAAAIAAAAAEAAQAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA8HEAAOAD
+AADHhwAAz48AAM8PAADOJwAA5GcAAPDnAADwfwAA5z8AAOc/AADjPwAA4D8AAPB/
+AAD//wAA
+
+------------EJq9WkxMQJW791qbH565MH
+Content-Disposition: inline; filename=and-rey.us.png
+Content-Type: image/png; name=and-rey.us.png
+Content-Location: http://www.and-rey.ru/img/and-rey.us.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAGQAAAAjCAIAAADt3TjXAAAACXBIWXMAAAsTAAAL
+EwEAmpwYAAAAB3RJTUUH2AgLCTkZsPbm1wAADyBJREFUeNrtWWmQXNV1Pvfet/by
+ume6Z9EwM9rQoBUhIQkhNEKShSIMwSBURCE4Dg4UQZYxJoqLisE4tjFQdgjYmMUs
+ZhFgswgwBAsJUCQBWgcYLaNlNPve+/r69Xvv3pMfLUajhUA5RaXimlu3uvrd/u45
+p79z3rnnnUcQEUbHlxt0lIJRskbJGiVrlKy/aLL+/56J+Nn4nwEjL4UQX/h/EdFx
+HNd1AUAIUfoiAQDnnBCCQAgBcvo2AMDjH65A26UOB0RRtPKccwBglOkenyITiQIl
+CIAEQCAiEEJoSYQQbsk+QgilUkmNy7lpWo7LPZri86qEECFAIAjuCoEO566LwNSi
+Sx2OVsHMphMlCV5fQPP4AAgKnknHHNsGAFlW/MEwpQwAi9ZJYK/PpyvACGZz2UQq
+57pc17TKipAsUVdgKlNIJeOnSRaZdMJ17Loqf09X+9ixYw3DkADAdV1FUTZs7Uwn
+opoqjT0rVF1VxYmayEE6kx3sa3MdmxBiBEIVNeMoASFEbKg7nYgggiTL1bUTPV4C
+AGY+O9jX5tpFQulp4CgCSpJSXTvB4zVGgG1CiBEsgcmZwDoAmPlcCQyEBIKhihov
+LZTAPelEBAFK4DSyEeAiIdQ4CdydTkQRhSSr1bUT4i79IslRBCSEtre3M8bGjRt3
+nCxVVXPZNJNkpEoOy3rTCgByK3po179ZVhIAvN4KQ7sQHK/LwqnYQC6bZpIiyUq4
+uk7TfQLRKuTjkT5AkBTNHygvC9cAoS7nqdhAPptmkvw5YPUUcO7M4N7Twcnjkk8z
+I3oGM5KfJzn6BWZ4jbJ8Pt/d3R0Oh4+TBQCyrDFJDoaqdV3l5lFKpXymWDAjlJbc
+NXTs0GutLa9OaLgCtLnDYFXzIKJdLKTikcq6yYBoWfnoYPcbv/9pNpNIJ+MXr7hm
+wdJv5LPpowd2y1rANC1Z0VzO85YDyGrqxm9Y/+CmN54trxiTiA42TDt/4bKVC5Zc
+YZlZM2+ZeUtWNVX3VtZNAcSilbeLhVQiQRgtFgpFu+gIiXM3k0tZRV5eUd3Vfvj5
+x+7WdO+kKbOv/ub3LCu/9tpGIDD13Pk3/eDfjVAtdx3LzLY0N5lm1uM1pp/fKKmB
+wYEhfyBoOyKVSLQdbY4O9s1ZuOKsCTPHV+CxvoKieBzHSaVStm1Lw7lJ0X3+QEjX
+lFzkvXx2KJ1sqx57NSIKwSmlAIQQQgjraH0zXNlVMe56zReSFU0guI6dTacIlYQQ
+rmsLgRtfe+a19Q+6js2YLKvaBRdfxgV/8sEfBkNVd97/kiyr72/43RP3/0s2k3zx
+vV5Z0XPZ1FB/l9cX2LN9Y2yoT5LkmfOWMCYzSZJlddfWP21Y/x+C8662FiZJU2cu
+uOG2e/c3ffD6879qP9qMQhjBUE39pF889d6kaXOP7N9j24WW5h1XXndLf2/noX07
+jbLwtFmNQgCia9tFwuT1j93d1X6opm7CL3+3de9Hm5984HavL/CDnz/z1kuP7vlg
+Y6Cs4okH/vXCxZff9eO7mRKyXAQqu64rhDhROvgDFUxWkz1vHPjkmVikhTKNUdsq
+OJMn/pUmnYVClGCE0FhkH5q7mKwKBMdxCmaeMllWdZcLgYRKSjad9PgM3eMXKPq6
+Wl1X9Pd2Dg10H2recWjfXo5EADRMn0cZo5Iiq7osq5d84/rv/fiJypqx+VzGdmwq
+KUzWqKRxJN2dR5PxyNlTzw9V1uSz6e2bX3no7lu62g8XzCwKUQptVdOppFFJ/fvv
+/qyiun7i5FnRSP/Wd14OV9VSwuYs/DoX6LqCMJlKypi6s0OVZzFJ5QiSrDAmhatq
+JVljknLR166efeHybDr+7pvP/emdjTJxhpKOaow5tc4iTJYw1bLvBUpZJtUuKx4E
+V5XLrrryhqWLVxcs6wSS0JZ9LzKe4Py4r5iiKbpPIAEiWZa9v2mb6zgz5iyWZdku
+WtHIQCoe9fmDBTP/m5+vLRZtFBgb6gUAIFJ/d1smFZ81f/ncxsvKwtVFyxzq7yFU
+BiIJAUJAsVhIxgYJlX76yKba8ZMBoO3Ip1Yh7/UFp8xc8PKH6Re2RH726Lsl8NyF
+lxFKW1uadm/fuL9pW9EqLF95w7TZjVwgEgZEIkROJWMdR/cVLVMINM28x2uY+ezh
+A3vH1E2iTLr+1vtW3/jDi5atUjS/aaNpo6QFTiWLIyT6thBCXccCoLq3sv3wW6nM
+wL333fLyhvs9Hs9J5RmlyYGtw74qRQECQSDtR5oHezvsotUwY77j2McOfzzQ2+EN
+hMx8ljEplYhseft5JiuyqimKhkCCoTHT5yyeOX+5QCiYOc3jy2aSuWymp+NIT8eR
+XDaFCJKsTJo+zxcIXXndP49vOM/jNYxgWPcZlEmf7t7SeexQMhETCAKxvKr2omWr
+FEXrbN2fjA1V1oxbeMk1AqFkGwIRQLjrAkA2HRcIQiChlDFJVvQ5jZdHBrrvu/3a
+JZd/69afPH3xsssoIZSQM1TwQmB/93ZCCADonrK2lq0rLr7mtu8+/g/fWjd/3mUu
+d0eSRQjp794+7KvPooAIQQZ6OzSPz3XsSVPn+Y2QrvsP79s10NORy6Zs21IUbdvG
+P1iFghBYXnGWEMQoq+Suu2f720KQVCIqK3p/d1vTR5vuWbfqnnWrmj7aHKqsS0QH
+1j9057aNLyOC5vHNX7LSKhQAyeHmHXd959K7vrPig82vDBswY87XXMdpPdik6b4Z
+c5bWTZheWv9sQnllbVmoWvcGhCAAjLu8r6u1bsL0QFl1a8vejz985/ZvX9z04WaB
+wBEF4nAKGkEWQt6Mlohw3SJitqO7ua+vwzDKz5440yoUTylWTTM67CuBMDx7Og67
+js2YZDt2TX2Dmc80735f1X2l/LLqH+/o6zqaikeKBdMfDAuE6FBvbKg3EKoWCEYg
+fGT/zj3b3xrq7xzq7xjq7xjq74wMdANAJhV79N41Rw7sLgvXNK64tli0/MEwZVLd
++Kn1E6f7jPJhA8adM3vyeQuT8cFkfFD3GiNtK03KJNu2ipZZimXOXdu2BILmNc67
+YLnj2GUVNesfvqO/vx8QJEa4nS39ZWlEZJFwxYzY0CcA4Ng5QnHvJ39Mp9MXRa5u
+mHiB3xgjeJqMiEkUIMRJBb9AAIAj+3dy7rqu/di9a1LxwVBlbduhvZlUnDGJENp4
+6XXvv/n0to0vCBRmLoOEZpKxomUqqkcgZFIxIxhWNU/D9AsvWLISABqmX9jy6QeS
+rPiM8htvf/i1p++NR3o3vf5ELp0Y6Dk2dtK59zz10UjtAKDqvouWr249uDtUWTt9
+zlJx2oNN0TJVzeM1ygUClZRUIuIUrWOH9jJJuWDJyrOnzXvyl7dMOW9hMpH0GFVc
+oLALZ4is6rHLxGchhwiUEkVRxtZNR+SKasiKlxCJEFYCeP1VpzpNwGBvZyo+KCua
+xxesrj07GKqWFc0yc+lkbMqsReHqesaUWQu+ruo+SVIkWRECNI9xzowFBdO0CpbH
+H1RUj1FW2XDuwrV3Pbv2rmcbzl2oewyvL0iZNHXW4vlLV6Xig9GBbiFEwcwRQtPJ
+RD6Xy+dypQRfmmY2M2324mR8EIGWVh6/b+2qefTx+9YKAdfc+BOvv5wQms/lCmbO
+4zVkVes40tzasnf7pt8vveKGiVPmHGj6r3ikl1KghEh68LTIQhDKhBNll2pkUnEz
+b+uajwu3t3N/3bi5lEQcJ69qZY6dq6ptPMVpAjGdiuoePwreeOl131730Luv/3bT
+qw8L5K0tu48e2FHCLLvqpvbDTYc+3TamvoELziT54MdbhvraErH++FCP7vE3rvg7
+MeJB13UdgVySZYGo6N7lV9/cMGPBjvdeIoTEIz1rrhxLCZ04bd4dv9o0vKWrbf+2
+jc8JzhGxJOqdVx8ufV6/7tcDfW0A2HWs+Uc3NUb62hXNM27STM3ja9r+5icfvf39
+lj2lXFReWcMFCESmek+/DUEQVnpwBoBsKr3mxgd13ef1BhDxx3e8bJq53zz2fY+P
+uK6FiHp4SYGfQhY079xUXd/gOPalq28TCMFQTW9Hi6b7AAhjUiGfcbnQfcF/uvPp
+X//o2glT5gBQf1mlbVuDvccUzUMZmz532Yq/uXWkGxCgkM8UzJxA8PrLm3dtig31
+Cu5mkhHXsW3LRMRCPjNyi+PYAEAZsx27tH7Jyps3b3jkkpU3C4QJU+bNbryieefG
++GB3sWhKsvLX37x9XMN5T/1iTXll7WDvMUQx/pzZdeMnCwRE4MXjOYsgYjqdDgQC
+f9gpAICm/njs4AuU0oLpzJt9lddrIApmTOOZg2Y+t6vpVY9PZZLaMHNNQZl7Si5w
+BaTjA+VlhleXAUip0eE6xUQiOtDXn0wmNN03acYCRdUA4LkHbg1V1S9buUZwl1Ca
+yyRkKgIBw+P1AQAlQEmp1wGIQghBCaGMjQg3Ho9HCZBAMKiqqhCCUDoygzqOc7Rl
+n79iQqC8cnhRosgockFcQVKxvkI2rqiqzyj3B0IAwAiCKBKClDJKJUoBEH06adv9
+ChHFRYsWnSDrxR0CAGQm8t2/7evcwhjjvHR0iolT//bYwRcZY6HKaVYhXllzIYRX
+wxnaOSBR4VM5F6euM0oYBS6w9BOjI4+KE7WL+Aq6aiN1/RkqFIl07XpGkqRFixad
+lOAFQtGlWu2NU+etE4LrepkkybKsdrduUBSVUimT6hoz7lIMrxZITj+SBQIhcMa2
+GhdouzhMIhfo8lOn+Gr6jyN1/RkqQv4TXpVOOfgBwObMZnMbFjziZj8d7PhPu5ii
+TJUkPVg1VwsvKZIqEJ8r2uHEIpQAuIIIAEZQZUjIl7Wx5IPPjmPinnQJXBCBBAAo
+QV0WChMlfAnJxRkAcKZeJjnRDoXT7w8EcDlxsJRG4Hj/ciRZiKX25ok9eV4OnqVl
+05aeVKHA8AHwuWQ5nJ1UuwLIDGUmEIkrgAsCABIFOI3BkXR8QbAgyRUZAPtCACU4
+UteXVzE8ZEaGe9DHyerv7180uSaR+4oa5eT/7s0I+d9sphTGh/lLPT0NDQ2UUgkA
+JEmKRCKHD2/L5XKO44y+0D8RoZw/3dmp63owGFQU5ThZ4XA4HA6nUqloNFpqnI6O
+UnOlqqqqvr6+vr7e5/MRROScW5aVSqVisVgulxslayRZmqYFg8Hy8nLDMMjoTTf6
+RnqUrFGyRsn6yxz/DbYZOdimbrMAAAAAAElFTkSuQmCC
+
+------------EJq9WkxMQJW791qbH565MH
+Content-Disposition: inline; filename=https.png
+Content-Type: image/png; name=https.png
+Content-Location: http://www.and-rey.ru/img/https.png
+Content-Transfer-Encoding: Base64
+
+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
+QmCC
+
+------------EJq9WkxMQJW791qbH565MH
+Content-Disposition: inline; filename=comments.png
+Content-Type: image/png; name=comments.png
+Content-Location: http://www.and-rey.ru/img/comments.png
+Content-Transfer-Encoding: Base64
+
+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
+
+------------EJq9WkxMQJW791qbH565MH
+Content-Disposition: inline; filename=0.gif
+Content-Type: image/gif; name=0.gif
+Content-Location: http://www.and-rey.ru/img/0.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==
+
+------------EJq9WkxMQJW791qbH565MH--

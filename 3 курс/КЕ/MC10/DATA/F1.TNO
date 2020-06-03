@@ -1,0 +1,19 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                         Transient Analysis of F1                         ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Time Range           2u
+Maximum Time Step    5n
+Number of Points     101
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      Off
+Operating Point Only Off
+

@@ -1,0 +1,11 @@
+D:\ЗИ\ZI_5\ZI_5\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\ЗИ\ZI_5\ZI_5\obj\x86\Debug\ZI_5.Form1.resources
+D:\ЗИ\ZI_5\ZI_5\obj\x86\Debug\ZI_5.Properties.Resources.resources
+D:\ЗИ\ZI_5\ZI_5\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\ЗИ\ZI_5\ZI_5\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\ЗИ\ZI_5\ZI_5\bin\Debug\ZI_5.exe
+D:\ЗИ\ZI_5\ZI_5\bin\Debug\ZI_5.pdb
+D:\ЗИ\ZI_5\ZI_5\obj\x86\Debug\ZI_5.exe
+D:\ЗИ\ZI_5\ZI_5\obj\x86\Debug\ZI_5.pdb
+C:\Users\МишкоНяшко\Desktop\1\5 семестр\Захист інформації\all\ZI_5\ZI_5\obj\x86\Debug\ZI_5.exe
+C:\Users\МишкоНяшко\Desktop\1\5 семестр\Захист інформації\all\ZI_5\ZI_5\obj\x86\Debug\ZI_5.pdb

@@ -1,0 +1,1075 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                     AC Analysis of Video Line Driver                     ***
+***                           27-Jul-12 4:54:34 PM                           ***
+********************************************************************************
+Limits
+======
+Frequency Range  Log 200Meg,200k
+Number of Points 1001
+Temperature      Linear 27
+Maximum Change % 5
+Noise Input      NONE
+Noise Output     2
+Run Options      Normal
+State Variables  Zero
+Operating Point  On
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Diode
+==========================================
+Instance:        X1.XLT1807.DIP1        X1.XLT1807.DIP2        X1.XLT1807.DIP3   
+Using model:       X1.XLT1807.DX          X1.XLT1807.DX          X1.XLT1807.DX   
+LEVEL                          1(*)                   1(*)                   1(*)
+AF                        1.000 (*)              1.000 (*)              1.000 (*)
+BV                        0.000 (*)              0.000 (*)              0.000 (*)
+CJO                       0.000                  0.000                  0.000    
+EG                        1.110 (*)              1.110 (*)              1.110 (*)
+FC                      500.000m(*)            500.000m(*)            500.000m(*)
+IBV                     100.000p               100.000p               100.000p   
+IBVL                      0.000 (*)              0.000 (*)              0.000 (*)
+IKF                       0.000 (*)              0.000 (*)              0.000 (*)
+IS                        0.826f                 0.826f                 0.826f   
+ISR                       0.000 (*)              0.000 (*)              0.000 (*)
+KF                        0.000 (*)              0.000 (*)              0.000 (*)
+M                       500.000m(*)            500.000m(*)            500.000m(*)
+N                         1.000 (*)              1.000 (*)              1.000 (*)
+NBV                       1.000 (*)              1.000 (*)              1.000 (*)
+NBVL                      1.000 (*)              1.000 (*)              1.000 (*)
+NR                        2.000 (*)              2.000 (*)              2.000 (*)
+RL                        0.000 (*)              0.000 (*)              0.000 (*)
+RS                        0.000                  0.000                  0.000    
+T_ABS                  UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_MEASURED             UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_GLOBAL           UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_LOCAL            UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+TBV1                      0.000 (*)              0.000 (*)              0.000 (*)
+TBV2                      0.000 (*)              0.000 (*)              0.000 (*)
+TIKF                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS1                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS2                      0.000 (*)              0.000 (*)              0.000 (*)
+TT                        0.000                  0.000                  0.000    
+VJ                        1.000 (*)              1.000 (*)              1.000 (*)
+XTI                       1.000                  1.000                  1.000    
+(*) Default Parameter
+
+
+
+Instance:        X1.XLT1807.DIP4        X1.XLT1807.DIP5        X1.XLT1807.DIP6   
+Using model:       X1.XLT1807.DX          X1.XLT1807.DX          X1.XLT1807.DX   
+LEVEL                          1(*)                   1(*)                   1(*)
+AF                        1.000 (*)              1.000 (*)              1.000 (*)
+BV                        0.000 (*)              0.000 (*)              0.000 (*)
+CJO                       0.000                  0.000                  0.000    
+EG                        1.110 (*)              1.110 (*)              1.110 (*)
+FC                      500.000m(*)            500.000m(*)            500.000m(*)
+IBV                     100.000p               100.000p               100.000p   
+IBVL                      0.000 (*)              0.000 (*)              0.000 (*)
+IKF                       0.000 (*)              0.000 (*)              0.000 (*)
+IS                        0.826f                 0.826f                 0.826f   
+ISR                       0.000 (*)              0.000 (*)              0.000 (*)
+KF                        0.000 (*)              0.000 (*)              0.000 (*)
+M                       500.000m(*)            500.000m(*)            500.000m(*)
+N                         1.000 (*)              1.000 (*)              1.000 (*)
+NBV                       1.000 (*)              1.000 (*)              1.000 (*)
+NBVL                      1.000 (*)              1.000 (*)              1.000 (*)
+NR                        2.000 (*)              2.000 (*)              2.000 (*)
+RL                        0.000 (*)              0.000 (*)              0.000 (*)
+RS                        0.000                  0.000                  0.000    
+T_ABS                  UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_MEASURED             UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_GLOBAL           UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_LOCAL            UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+TBV1                      0.000 (*)              0.000 (*)              0.000 (*)
+TBV2                      0.000 (*)              0.000 (*)              0.000 (*)
+TIKF                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS1                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS2                      0.000 (*)              0.000 (*)              0.000 (*)
+TT                        0.000                  0.000                  0.000    
+VJ                        1.000 (*)              1.000 (*)              1.000 (*)
+XTI                       1.000                  1.000                  1.000    
+(*) Default Parameter
+
+
+
+Instance:        X1.XLT1807.DIP7        X1.XLT1807.DIP8       X1.XLT1807.DNPN1   
+Using model:       X1.XLT1807.DX          X1.XLT1807.DX          X1.XLT1807.DX   
+LEVEL                          1(*)                   1(*)                   1(*)
+AF                        1.000 (*)              1.000 (*)              1.000 (*)
+BV                        0.000 (*)              0.000 (*)              0.000 (*)
+CJO                       0.000                  0.000                  0.000    
+EG                        1.110 (*)              1.110 (*)              1.110 (*)
+FC                      500.000m(*)            500.000m(*)            500.000m(*)
+IBV                     100.000p               100.000p               100.000p   
+IBVL                      0.000 (*)              0.000 (*)              0.000 (*)
+IKF                       0.000 (*)              0.000 (*)              0.000 (*)
+IS                        0.826f                 0.826f                 0.826f   
+ISR                       0.000 (*)              0.000 (*)              0.000 (*)
+KF                        0.000 (*)              0.000 (*)              0.000 (*)
+M                       500.000m(*)            500.000m(*)            500.000m(*)
+N                         1.000 (*)              1.000 (*)              1.000 (*)
+NBV                       1.000 (*)              1.000 (*)              1.000 (*)
+NBVL                      1.000 (*)              1.000 (*)              1.000 (*)
+NR                        2.000 (*)              2.000 (*)              2.000 (*)
+RL                        0.000 (*)              0.000 (*)              0.000 (*)
+RS                        0.000                  0.000                  0.000    
+T_ABS                  UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_MEASURED             UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_GLOBAL           UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_LOCAL            UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+TBV1                      0.000 (*)              0.000 (*)              0.000 (*)
+TBV2                      0.000 (*)              0.000 (*)              0.000 (*)
+TIKF                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS1                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS2                      0.000 (*)              0.000 (*)              0.000 (*)
+TT                        0.000                  0.000                  0.000    
+VJ                        1.000 (*)              1.000 (*)              1.000 (*)
+XTI                       1.000                  1.000                  1.000    
+(*) Default Parameter
+
+
+
+Instance:       X1.XLT1807.DNPN2       X1.XLT1807.DNPN3          X1.XLT1807.D1   
+Using model:       X1.XLT1807.DX          X1.XLT1807.DX          X1.XLT1807.DX   
+LEVEL                          1(*)                   1(*)                   1(*)
+AF                        1.000 (*)              1.000 (*)              1.000 (*)
+BV                        0.000 (*)              0.000 (*)              0.000 (*)
+CJO                       0.000                  0.000                  0.000    
+EG                        1.110 (*)              1.110 (*)              1.110 (*)
+FC                      500.000m(*)            500.000m(*)            500.000m(*)
+IBV                     100.000p               100.000p               100.000p   
+IBVL                      0.000 (*)              0.000 (*)              0.000 (*)
+IKF                       0.000 (*)              0.000 (*)              0.000 (*)
+IS                        0.826f                 0.826f                 0.826f   
+ISR                       0.000 (*)              0.000 (*)              0.000 (*)
+KF                        0.000 (*)              0.000 (*)              0.000 (*)
+M                       500.000m(*)            500.000m(*)            500.000m(*)
+N                         1.000 (*)              1.000 (*)              1.000 (*)
+NBV                       1.000 (*)              1.000 (*)              1.000 (*)
+NBVL                      1.000 (*)              1.000 (*)              1.000 (*)
+NR                        2.000 (*)              2.000 (*)              2.000 (*)
+RL                        0.000 (*)              0.000 (*)              0.000 (*)
+RS                        0.000                  0.000                  0.000    
+T_ABS                  UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_MEASURED             UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_GLOBAL           UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_LOCAL            UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+TBV1                      0.000 (*)              0.000 (*)              0.000 (*)
+TBV2                      0.000 (*)              0.000 (*)              0.000 (*)
+TIKF                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS1                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS2                      0.000 (*)              0.000 (*)              0.000 (*)
+TT                        0.000                  0.000                  0.000    
+VJ                        1.000 (*)              1.000 (*)              1.000 (*)
+XTI                       1.000                  1.000                  1.000    
+(*) Default Parameter
+
+
+
+Instance:         X1.XLT1807.DR1         X1.XLT1807.DR2         X1.XLT1807.DC1   
+Using model:       X1.XLT1807.DR          X1.XLT1807.DR         X1.XLT1807.DVC   
+LEVEL                          1(*)                   1(*)                   1(*)
+AF                        1.000 (*)              1.000 (*)              1.000 (*)
+BV                        0.000 (*)              0.000 (*)              0.000 (*)
+CJO                       0.000                  0.000                  0.000    
+EG                        1.110 (*)              1.110 (*)            100.000m   
+FC                      500.000m(*)            500.000m(*)            500.000m(*)
+IBV                     100.000p               100.000p               100.000p   
+IBVL                      0.000 (*)              0.000 (*)              0.000 (*)
+IKF                       0.000 (*)              0.000 (*)              0.000 (*)
+IS                        0.826f                 0.826f                 0.826f   
+ISR                       0.000 (*)              0.000 (*)              0.000 (*)
+KF                        0.325f                 0.325f                 0.000 (*)
+M                       500.000m(*)            500.000m(*)            500.000m(*)
+N                         1.000 (*)              1.000 (*)            100.000m   
+NBV                       1.000 (*)              1.000 (*)              1.000 (*)
+NBVL                      1.000 (*)              1.000 (*)              1.000 (*)
+NR                        2.000 (*)              2.000 (*)              2.000 (*)
+RL                        0.000 (*)              0.000 (*)              0.000 (*)
+RS                        0.000                  0.000                  0.000    
+T_ABS                  UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_MEASURED             UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_GLOBAL           UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_LOCAL            UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+TBV1                      0.000 (*)              0.000 (*)              0.000 (*)
+TBV2                      0.000 (*)              0.000 (*)              0.000 (*)
+TIKF                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS1                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS2                      0.000 (*)              0.000 (*)              0.000 (*)
+TT                        0.000                  0.000                  0.000    
+VJ                        1.000 (*)              1.000 (*)              1.000 (*)
+XTI                       1.000                  1.000                 -2.100    
+(*) Default Parameter
+
+
+
+Instance:         X1.XLT1807.DC2         X1.XLT1807.DE1         X1.XLT1807.DE2   
+Using model:      X1.XLT1807.DVC         X1.XLT1807.DVC         X1.XLT1807.DVC   
+LEVEL                          1(*)                   1(*)                   1(*)
+AF                        1.000 (*)              1.000 (*)              1.000 (*)
+BV                        0.000 (*)              0.000 (*)              0.000 (*)
+CJO                       0.000                  0.000                  0.000    
+EG                      100.000m               100.000m               100.000m   
+FC                      500.000m(*)            500.000m(*)            500.000m(*)
+IBV                     100.000p               100.000p               100.000p   
+IBVL                      0.000 (*)              0.000 (*)              0.000 (*)
+IKF                       0.000 (*)              0.000 (*)              0.000 (*)
+IS                        0.826f                 0.826f                 0.826f   
+ISR                       0.000 (*)              0.000 (*)              0.000 (*)
+KF                        0.000 (*)              0.000 (*)              0.000 (*)
+M                       500.000m(*)            500.000m(*)            500.000m(*)
+N                       100.000m               100.000m               100.000m   
+NBV                       1.000 (*)              1.000 (*)              1.000 (*)
+NBVL                      1.000 (*)              1.000 (*)              1.000 (*)
+NR                        2.000 (*)              2.000 (*)              2.000 (*)
+RL                        0.000 (*)              0.000 (*)              0.000 (*)
+RS                        0.000                  0.000                  0.000    
+T_ABS                  UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_MEASURED             UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_GLOBAL           UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_LOCAL            UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+TBV1                      0.000 (*)              0.000 (*)              0.000 (*)
+TBV2                      0.000 (*)              0.000 (*)              0.000 (*)
+TIKF                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS1                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS2                      0.000 (*)              0.000 (*)              0.000 (*)
+TT                        0.000                  0.000                  0.000    
+VJ                        1.000 (*)              1.000 (*)              1.000 (*)
+XTI                      -2.100                 -2.100                 -2.100    
+(*) Default Parameter
+
+
+
+Instance:        X1.XLT1807.DCLP        X1.XLT1807.DCLN        X1.XLT1807.DSUB   
+Using model:       X1.XLT1807.DX          X1.XLT1807.DX          X1.XLT1807.DX   
+LEVEL                          1(*)                   1(*)                   1(*)
+AF                        1.000 (*)              1.000 (*)              1.000 (*)
+BV                        0.000 (*)              0.000 (*)              0.000 (*)
+CJO                       0.000                  0.000                  0.000    
+EG                        1.110 (*)              1.110 (*)              1.110 (*)
+FC                      500.000m(*)            500.000m(*)            500.000m(*)
+IBV                     100.000p               100.000p               100.000p   
+IBVL                      0.000 (*)              0.000 (*)              0.000 (*)
+IKF                       0.000 (*)              0.000 (*)              0.000 (*)
+IS                        0.826f                 0.826f                 0.826f   
+ISR                       0.000 (*)              0.000 (*)              0.000 (*)
+KF                        0.000 (*)              0.000 (*)              0.000 (*)
+M                       500.000m(*)            500.000m(*)            500.000m(*)
+N                         1.000 (*)              1.000 (*)              1.000 (*)
+NBV                       1.000 (*)              1.000 (*)              1.000 (*)
+NBVL                      1.000 (*)              1.000 (*)              1.000 (*)
+NR                        2.000 (*)              2.000 (*)              2.000 (*)
+RL                        0.000 (*)              0.000 (*)              0.000 (*)
+RS                        0.000                  0.000                  0.000    
+T_ABS                  UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_MEASURED             UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_GLOBAL           UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_LOCAL            UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+TBV1                      0.000 (*)              0.000 (*)              0.000 (*)
+TBV2                      0.000 (*)              0.000 (*)              0.000 (*)
+TIKF                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS1                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS2                      0.000 (*)              0.000 (*)              0.000 (*)
+TT                        0.000                  0.000                  0.000    
+VJ                        1.000 (*)              1.000 (*)              1.000 (*)
+XTI                       1.000                  1.000                  1.000    
+(*) Default Parameter
+
+
+
+Instance:        X1.XLT1807.DPC1        X1.XLT1807.DPC2   
+Using model:      X1.XLT1807.DVC         X1.XLT1807.DVC   
+LEVEL                          1(*)                   1(*)
+AF                        1.000 (*)              1.000 (*)
+BV                        0.000 (*)              0.000 (*)
+CJO                       0.000                  0.000    
+EG                      100.000m               100.000m   
+FC                      500.000m(*)            500.000m(*)
+IBV                     100.000p               100.000p   
+IBVL                      0.000 (*)              0.000 (*)
+IKF                       0.000 (*)              0.000 (*)
+IS                        0.826f                 0.826f   
+ISR                       0.000 (*)              0.000 (*)
+KF                        0.000 (*)              0.000 (*)
+M                       500.000m(*)            500.000m(*)
+N                       100.000m               100.000m   
+NBV                       1.000 (*)              1.000 (*)
+NBVL                      1.000 (*)              1.000 (*)
+NR                        2.000 (*)              2.000 (*)
+RL                        0.000 (*)              0.000 (*)
+RS                        0.000                  0.000    
+T_ABS                  UNDEFINED(*)           UNDEFINED(*)
+T_MEASURED             UNDEFINED(*)           UNDEFINED(*)
+T_REL_GLOBAL           UNDEFINED(*)           UNDEFINED(*)
+T_REL_LOCAL            UNDEFINED(*)           UNDEFINED(*)
+TBV1                      0.000 (*)              0.000 (*)
+TBV2                      0.000 (*)              0.000 (*)
+TIKF                      0.000 (*)              0.000 (*)
+TRS1                      0.000 (*)              0.000 (*)
+TRS2                      0.000 (*)              0.000 (*)
+TT                        0.000                  0.000    
+VJ                        1.000 (*)              1.000 (*)
+XTI                      -2.100                 -2.100    
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Bipolar Junction Transistors PNP
+=====================================================================
+Instance:          X1.XLT1807.Q1          X1.XLT1807.Q2   
+Using model:       X1.XLT1807.Q1          X1.XLT1807.Q2   
+LEVEL                          1(*)                   1(*)
+AF                        1.000 (*)              1.000 (*)
+BF                      641.600                646.500    
+BR                        1.000 (*)              1.000 (*)
+CJC                       0.000 (*)              0.000 (*)
+CJE                       0.000 (*)              0.000 (*)
+CJS                       0.000 (*)              0.000 (*)
+EG                        1.110 (*)              1.110 (*)
+FC                      500.000m(*)            500.000m(*)
+GAMMA                    10.000p(*)             10.000p(*)
+IKF                       0.000 (*)              0.000 (*)
+IKR                       0.000 (*)              0.000 (*)
+IRB                       0.000 (*)              0.000 (*)
+IS                        1.002f                 0.998f   
+ISC                       0.000 (*)              0.000 (*)
+ISE                       0.000 (*)              0.000 (*)
+ISS                       0.000 (*)              0.000 (*)
+ITF                       0.000 (*)              0.000 (*)
+KF                        0.900f                 0.900f   
+MJC                     330.000m(*)            330.000m(*)
+MJE                     330.000m(*)            330.000m(*)
+MJS                       0.000 (*)              0.000 (*)
+NC                        2.000 (*)              2.000 (*)
+NE                        1.500 (*)              1.500 (*)
+NF                        1.000 (*)              1.000 (*)
+NK                      500.000m(*)            500.000m(*)
+NR                        1.000 (*)              1.000 (*)
+NS                        1.000 (*)              1.000 (*)
+PTF                       0.000 (*)              0.000 (*)
+QCO                       0.000 (*)              0.000 (*)
+QUASIMOD                  0.000 (*)              0.000 (*)
+RB                        0.000 (*)              0.000 (*)
+RBM                       0.000 (*)              0.000 (*)
+RC                        0.000 (*)              0.000 (*)
+RCO                       0.000 (*)              0.000 (*)
+RE                        0.000 (*)              0.000 (*)
+T_ABS                  UNDEFINED(*)           UNDEFINED(*)
+T_MEASURED             UNDEFINED(*)           UNDEFINED(*)
+T_REL_GLOBAL           UNDEFINED(*)           UNDEFINED(*)
+T_REL_LOCAL            UNDEFINED(*)           UNDEFINED(*)
+TF                        0.000 (*)              0.000 (*)
+TR                        0.000 (*)              0.000 (*)
+TRB1                      0.000 (*)              0.000 (*)
+TRB2                      0.000 (*)              0.000 (*)
+TRC1                      0.000 (*)              0.000 (*)
+TRC2                      0.000 (*)              0.000 (*)
+TRE1                      0.000 (*)              0.000 (*)
+TRE2                      0.000 (*)              0.000 (*)
+TRM1                      0.000 (*)              0.000 (*)
+TRM2                      0.000 (*)              0.000 (*)
+VAF                       0.000 (*)              0.000 (*)
+VAR                       0.000 (*)              0.000 (*)
+VG                        1.206 (*)              1.206 (*)
+VJC                     750.000m(*)            750.000m(*)
+VJE                     750.000m(*)            750.000m(*)
+VJS                     750.000m(*)            750.000m(*)
+VO                       10.000 (*)             10.000 (*)
+VTF                       0.000 (*)              0.000 (*)
+XCJC                      1.000 (*)              1.000 (*)
+XTB                    -103.080m              -117.430m   
+XTF                       0.000 (*)              0.000 (*)
+XTI                       3.016                  2.984    
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node               Voltage  Node               Voltage 
+VP                  5.000   2                   0.000  
+IN                  0.000   4                   2.512  
+5                   2.513   6                   2.508  
+7                   2.513   8                   0.000  
+9                   0.000   OUT                 0.000  
+X1.XLT1807.114      2.513   X1.XLT1807.115      2.513  
+X1.XLT1807.500      4.281   X1.XLT1807.501      5.000  
+X1.XLT1807.502      5.270   X1.XLT1807.99       2.500  
+X1.XLT1807.303      5.800   X1.XLT1807.304     -1.600  
+X1.XLT1807.11    -600.014m  X1.XLT1807.13       3.257  
+X1.XLT1807.12    -600.015m  X1.XLT1807.111      2.512  
+X1.XLT1807.14       3.257   X1.XLT1807.10       3.273  
+X1.XLT1807.60       2.500   X1.XLT1807.101      0.000  
+X1.XLT1807.201      0.000   X1.XLT1807.605    898.264m 
+X1.XLT1807.606    898.264m  X1.XLT1807.20       2.512  
+X1.XLT1807.21       2.512   X1.XLT1807.601      2.500  
+X1.XLT1807.61       2.500   X1.XLT1807.611      2.500  
+X1.XLT1807.6        2.500   X1.XLT1807.7        2.507  
+X1.XLT1807.50       2.507   X1.XLT1807.53       2.636  
+X1.XLT1807.54       2.386   X1.XLT1807.55       5.000  
+X1.XLT1807.56       5.000   X1.XLT1807.57     238.639n 
+X1.XLT1807.58       3.148f  X1.XLT1807.91     -59.073u 
+X1.XLT1807.92     -59.073u  X1.XLT1807.90       0.000  
+X1.XLT1807.31       5.058   X1.XLT1807.32      58.267m 
+X1.XLT1807.33       5.058  
+
+DC Operating Point Inductor Current
+===================================
+      Inductor     Current        Inductor     Current 
+X1.XLT1807.LCM     12.499u  X1.XLT1807.LP2      4.578n 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:           X1.XLT1807.DIP1        X1.XLT1807.DIP2        X1.XLT1807.DIP3
+Using model:          X1.XLT1807.DX          X1.XLT1807.DX          X1.XLT1807.DX
+
+Capacitance Terms:
+CAP                          0.000                  0.000                  0.000 
+
+Current Terms:
+ID                          -0.055f                -0.055f                 0.055f
+
+Resistance Terms:
+REQ                        969.117G               969.117G               968.993G
+
+Voltage Terms:
+VD                         -53.747u               -53.747u                53.747u
+
+Power DC Terms:
+PD                       2.981E-021             2.981E-021             2.981E-021
+PS                           0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Id                          -0.055f                -0.055f                 0.055f
+
+Condition:
+State                           OFF                    OFF                    OFF
+
+Device Variables:
+area                         1.000                  1.000                  1.000 
+ic                           0.000                  0.000                  0.000 
+
+
+Instance:           X1.XLT1807.DIP4        X1.XLT1807.DIP5        X1.XLT1807.DIP6
+Using model:          X1.XLT1807.DX          X1.XLT1807.DX          X1.XLT1807.DX
+
+Capacitance Terms:
+CAP                          0.000                  0.000                  0.000 
+
+Current Terms:
+ID                           0.055f                -2.488p                -2.513p
+
+Resistance Terms:
+REQ                        968.993G                 1.000T                 1.000T
+
+Voltage Terms:
+VD                          53.747u                -2.488                 -2.512 
+
+Power DC Terms:
+PD                       2.981E-021                 6.190p                 6.315p
+PS                           0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Id                           0.055f                -2.488p                -2.513p
+
+Condition:
+State                           OFF                    OFF                    OFF
+
+Device Variables:
+area                         1.000                  1.000                  1.000 
+ic                           0.000                  0.000                  0.000 
+
+
+Instance:           X1.XLT1807.DIP7        X1.XLT1807.DIP8       X1.XLT1807.DNPN1
+Using model:          X1.XLT1807.DX          X1.XLT1807.DX          X1.XLT1807.DX
+
+Capacitance Terms:
+CAP                          0.000                  0.000                  0.000 
+
+Current Terms:
+ID                          -2.488p                -2.513p               980.298u
+
+Resistance Terms:
+REQ                          1.000T                 1.000T                26.384 
+
+Voltage Terms:
+VD                          -2.487                 -2.513                719.086m
+
+Power DC Terms:
+PD                           6.189p                 6.315p               704.918u
+PS                           0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Id                          -2.488p                -2.513p               980.298u
+
+Condition:
+State                           OFF                    OFF                     ON
+
+Device Variables:
+area                         1.000                  1.000                  1.000 
+ic                           0.000                  0.000                  0.000 
+
+
+Instance:          X1.XLT1807.DNPN2       X1.XLT1807.DNPN3          X1.XLT1807.D1
+Using model:          X1.XLT1807.DX          X1.XLT1807.DX          X1.XLT1807.DX
+
+Capacitance Terms:
+CAP                          0.000                  0.000                  0.000 
+
+Current Terms:
+ID                        -719.911f              -270.826f                -2.527p
+
+Resistance Terms:
+REQ                          1.000T               999.999G                 1.000T
+
+Voltage Terms:
+VD                        -719.085m              -270.000m                -2.527 
+
+Power DC Terms:
+PD                         517.678f                73.123f                 6.385p
+PS                           0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Id                        -719.911f              -270.826f                -2.527p
+
+Condition:
+State                           OFF                    OFF                    OFF
+
+Device Variables:
+area                         1.000                  1.000                  1.000 
+ic                           0.000                  0.000                  0.000 
+
+
+Instance:            X1.XLT1807.DR1         X1.XLT1807.DR2         X1.XLT1807.DC1
+Using model:          X1.XLT1807.DR          X1.XLT1807.DR         X1.XLT1807.DVC
+
+Capacitance Terms:
+CAP                          0.000                  0.000                  0.000 
+
+Current Terms:
+ID                           1.000                  1.000                 -2.364p
+
+Resistance Terms:
+REQ                         25.864m                25.864m                 1.000T
+
+Voltage Terms:
+VD                         898.264m               898.264m                -2.364 
+
+Power DC Terms:
+PD                         898.264m               898.264m                 5.588p
+PS                           0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Id                           1.000                  1.000                 -2.364p
+
+Condition:
+State                            ON                     ON                    OFF
+
+Device Variables:
+area                         1.000                  1.000                  1.000 
+ic                           0.000                  0.000                  0.000 
+
+
+Instance:            X1.XLT1807.DC2         X1.XLT1807.DE1         X1.XLT1807.DE2
+Using model:         X1.XLT1807.DVC         X1.XLT1807.DVC         X1.XLT1807.DVC
+
+Capacitance Terms:
+CAP                          0.000                  0.000                  0.000 
+
+Current Terms:
+ID                      -3.119E-019                -2.386p            -3.148E-019
+
+Resistance Terms:
+REQ                        757.977G                 1.000T               757.978G
+
+Voltage Terms:
+VD                        -236.440n                -2.386               -238.639n
+
+Power DC Terms:
+PD                       7.375E-026                 5.693p             7.513E-026
+PS                           0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Id                      -3.119E-019                -2.386p            -3.148E-019
+
+Condition:
+State                           OFF                    OFF                    OFF
+
+Device Variables:
+area                         1.000                  1.000                  1.000 
+ic                           0.000                  0.000                  0.000 
+
+
+Instance:           X1.XLT1807.DCLP        X1.XLT1807.DCLN        X1.XLT1807.DSUB
+Using model:          X1.XLT1807.DX          X1.XLT1807.DX          X1.XLT1807.DX
+
+Capacitance Terms:
+CAP                          0.000                  0.000                  0.000 
+
+Current Terms:
+ID                          -0.061f                 0.061f                -5.001p
+
+Resistance Terms:
+REQ                        969.124G               968.987G                 1.000T
+
+Voltage Terms:
+VD                         -59.073u                59.073u                -5.000 
+
+Power DC Terms:
+PD                       3.601E-021             3.601E-021                25.004p
+PS                           0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Id                          -0.061f                 0.061f                -5.001p
+
+Condition:
+State                           OFF                    OFF                    OFF
+
+Device Variables:
+area                         1.000                  1.000                  1.000 
+ic                           0.000                  0.000                  0.000 
+
+
+Instance:           X1.XLT1807.DPC1        X1.XLT1807.DPC2
+Using model:         X1.XLT1807.DVC         X1.XLT1807.DVC
+
+Capacitance Terms:
+CAP                          0.000                  0.000 
+
+Current Terms:
+ID                         -59.093f                 5.021u
+
+Resistance Terms:
+REQ                          1.000T               515.116 
+
+Voltage Terms:
+VD                         -58.267m                58.267m
+
+Power DC Terms:
+PD                           3.443f               292.562n
+PS                           0.000                  0.000 
+
+DC Pin Currents:
+Id                         -59.093f                 5.021u
+
+Condition:
+State                           OFF                    OFF
+
+Device Variables:
+area                         1.000                  1.000 
+ic                           0.000                  0.000 
+
+
+
+Operating Point for Devices of Type Bipolar Junction Transistors PNP
+====================================================================
+Instance:             X1.XLT1807.Q1          X1.XLT1807.Q2
+Using model:          X1.XLT1807.Q1          X1.XLT1807.Q2
+
+Beta Terms:
+BETADC                     641.600                646.500 
+BETAAC                     641.600                646.500 
+
+Capacitance Terms:
+CPI                          0.000                  0.000 
+CMU                          0.000                  0.000 
+CBX                          0.000                  0.000 
+CJS                          0.000                  0.000 
+
+Conductance Terms:
+GM                         124.554m               124.554m
+
+Current Terms:
+IB                           5.021u                 4.983u
+IC                           3.221m                 3.221m
+
+Resistance Terms:
+RPI                          5.151K                 5.191K
+RX                           0.000                  0.000 
+RO                           1.000T                 1.000T
+
+Voltage Terms:
+VBE                       -744.857m              -744.964m
+VBC                          3.113                  3.112 
+VCE                         -3.857                 -3.857 
+
+Frequency Terms:
+FT                       1.982E+018             1.982E+018
+
+Power DC Terms:
+PD                          12.430m                12.430m
+PS                           0.000                  0.000 
+
+DC Pin Currents:
+Ib                          -5.021u                -4.983u
+Ic                          -3.221m                -3.221m
+Ie                           3.227m                 3.226m
+Is                           0.000                  0.000 
+
+Condition:
+State                           LIN                    LIN
+
+Device Variables:
+area                         1.000                  1.000 
+vbe                          0.000                  0.000 
+vce                          0.000                  0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                         R1                     R2                     R3
+V                             0.000                  0.000                  2.512 
+Power DC Terms:
+PD                            0.000                  0.000                  1.262m
+
+DC Pin Currents:
+Ir                            0.000                  0.000                502.491u
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+Instance:                         R4                     R5                     R6
+V                            -2.488                  5.021m                 0.000 
+Power DC Terms:
+PD                            1.238m                25.211n                 0.000 
+
+DC Pin Currents:
+Ir                         -497.509u                 5.021u                 0.000 
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+Instance:                         R7                     R8       X1.XLT1807.RNPN1
+V                             0.000                  0.000               -719.086m
+Power DC Terms:
+PD                            0.000                  0.000                  5.171u
+
+DC Pin Currents:
+Ir                            0.000                  0.000                 -7.191u
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+Instance:           X1.XLT1807.RNPN2         X1.XLT1807.RC1         X1.XLT1807.RC2
+V                          -449.085n              -999.986m              -999.985m
+Power DC Terms:
+PD                        2.017E-019                 3.221m                 3.221m
+
+DC Pin Currents:
+Ir                         -449.085f                -3.221m                -3.221m
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+Instance:             X1.XLT1807.RE1         X1.XLT1807.RE2        X1.XLT1807.RRI1
+V                            16.047m                16.047m                 0.000 
+Power DC Terms:
+PD                           51.777u                51.776u                 0.000 
+
+DC Pin Currents:
+Ir                            3.227m                 3.226m                 0.000 
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+Instance:            X1.XLT1807.RRI2        X1.XLT1807.RCM1        X1.XLT1807.RCM2
+V                             0.000                 12.499m                12.499m
+Power DC Terms:
+PD                            0.000                156.217n               156.217p
+
+DC Pin Currents:
+Ir                            0.000                 12.499u                12.499n
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+Instance:             X1.XLT1807.RP1        X1.XLT1807.RP11         X1.XLT1807.RP2
+V                             0.000                -26.160u               -26.161u
+Power DC Terms:
+PD                            0.000                 68.436f              -119.769f
+
+DC Pin Currents:
+Ir                            0.000                 -2.616n                 4.578n
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+Instance:            X1.XLT1807.RP22          X1.XLT1807.R2         X1.XLT1807.R01
+V                           -26.161u                -2.616u                 7.493m
+Power DC Terms:
+PD                          188.207f                 6.844f                 5.672u
+
+DC Pin Currents:
+Ir                           -7.194n                -2.616n               756.888u
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+Instance:             X1.XLT1807.R02         X1.XLT1807.R03         X1.XLT1807.R04
+V                          -502.104n               -50.210u                 7.544m
+Power DC Terms:
+PD                            2.521p               252.108p                 9.584f
+
+DC Pin Currents:
+Ir                           -5.021u                -5.021u                 1.270p
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+Instance:            X1.XLT1807.RPC1        X1.XLT1807.RPC2
+V                             5.000                205.184n
+Power DC Terms:
+PD                           25.000u                 4.317f
+
+DC Pin Currents:
+Ir                            5.000u                21.038n
+
+Device Variables:
+tc1                           0.000                  0.000 
+tc2                           0.000                  0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:             X1.XLT1807.LCM         X1.XLT1807.LP2
+V                             0.000                  0.000 
+Power DC Terms:
+PS                            0.000                  0.000 
+
+DC Pin Currents:
+Il                           12.499u                 4.578n
+
+Device Variables:
+ic                            0.000                  0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                         C1                     C2                     C3
+V                             2.512                 -5.021m                 2.513 
+Power DC Terms:
+PS                            0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Ic                            0.000                  0.000                  0.000 
+
+Device Variables:
+ic                            0.000                  0.000                  0.000 
+
+
+Instance:                         C4         X1.XLT1807.CIN        X1.XLT1807.CIC1
+V                            -2.508               -107.495u                12.457m
+Power DC Terms:
+PS                            0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Ic                            0.000                  0.000                  0.000 
+
+Device Variables:
+ic                            0.000                  0.000                  0.000 
+
+
+Instance:            X1.XLT1807.CIC2          X1.XLT1807.C1         X1.XLT1807.CP1
+V                            12.565m               812.055n               -26.160u
+Power DC Terms:
+PS                            0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Ic                            0.000                  0.000                  0.000 
+
+Device Variables:
+ic                            0.000                  0.000                  0.000 
+
+
+Instance:              X1.XLT1807.C2
+V                            -7.496m
+Power DC Terms:
+PS                            0.000 
+
+DC Pin Currents:
+Ic                            0.000 
+
+Device Variables:
+ic                            0.000 
+
+
+
+Operating Point for Devices of Type Transmission Line
+=====================================================
+Instance:                         T1
+Power DC Terms:
+PS                            0.000 
+
+DC Pin Currents:
+Input                         0.000 
+Output                        0.000 
+
+Device Variables:
+z0                           75.000 
+td                           50.000n
+f                             0.000 
+nl                            0.000 
+
+
+
+Operating Point for Devices of Type SPICE Poly
+==============================================
+Instance:          X1.XLT1807.GNPN1       X1.XLT1807.GNPN2       X1.XLT1807.GNPN3
+V                          719.086m                 2.488                  2.487 
+Power DC Terms:
+PG                         710.089u                -6.686p                -6.719p
+
+DC Pin Currents:
+ISource                   -987.489u                 2.688p                 2.701p
+
+
+Instance:           X1.XLT1807.GRIN          X1.XLT1807.GA        X1.XLT1807.FRI1
+V                         -107.495u               -26.160u               -12.457m
+Power DC Terms:
+PG                      -1.156E-020                68.436f                 0.000 
+
+DC Pin Currents:
+ISource                     -0.107f                 2.616n                 0.000 
+
+
+Instance:           X1.XLT1807.FRI2          X1.XLT1807.GR        X1.XLT1807.GCM1
+V                          -12.565m                26.160u               -12.499m
+Power DC Terms:
+PG                           0.000                  0.000                156.374n
+
+DC Pin Currents:
+ISource                      0.000                  0.000                 12.511u
+
+
+Instance:            X1.XLT1807.ECM         X1.XLT1807.GP1         X1.XLT1807.GP2
+V                          124.987n                26.161u                 2.616u
+Power DC Terms:
+PG                        -622.807f                68.438f                 6.844f
+
+DC Pin Currents:
+ISource                      4.983u                -2.616n                -2.616n
+
+
+Instance:             X1.XLT1807.GB        X1.XLT1807.GVC1        X1.XLT1807.GVE1
+V                            7.493m                 3.553f                -3.148f
+Power DC Terms:
+PG                           5.634u            -1.262E-033            -9.912E-034
+
+DC Pin Currents:
+ISource                   -751.867u             3.553E-019            -3.148E-019
+
+
+Instance:           X1.XLT1807.GVC2        X1.XLT1807.GVE2        X1.XLT1807.GVLP
+V                          236.440n              -238.639n                26.160u
+Power DC Terms:
+PG                          -0.001f                -0.001f             9.294E-020
+
+DC Pin Currents:
+ISource                      2.364p                -2.386p                -3.553f
+
+
+Instance:           X1.XLT1807.GVLN        X1.XLT1807.ECLP        X1.XLT1807.ECLN
+V                           26.160u               -59.073u               -59.073u
+Power DC Terms:
+PG                      -8.236E-020             3.601E-021             3.601E-021
+
+DC Pin Currents:
+ISource                      3.148f                 0.061f                 0.061f
+
+
+Instance:             X1.XLT1807.FB        X1.XLT1807.EGND         X1.XLT1807.GPC
+V                            7.493m                 2.500                  5.058 
+Power DC Terms:
+PG                           0.032f               -12.553u                25.398u
+
+DC Pin Currents:
+ISource                     -4.326f                 5.021u                -5.021u
+
+
+Instance:            X1.XLT1807.EPC
+V                            5.000 
+Power DC Terms:
+PG                        -105.189n
+
+DC Pin Currents:
+ISource                     21.038n
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                        V1                     V2       X1.XLT1807.VNPN2
+V                            5.000                  0.000                270.000m
+Power DC Terms:
+PG                          48.488m                 0.000                 73.123f
+
+DC Pin Currents:
+ISource                     -9.698m                 0.000               -270.826f
+
+
+Instance:          X1.XLT1807.VCMEP       X1.XLT1807.VCMEN         X1.XLT1807.IEE
+V                          800.000m                 1.600                  2.527 
+Power DC Terms:
+PG                           5.162m                10.309m               -16.304m
+
+DC Pin Currents:
+ISource                     -6.453m                -6.443m                 6.453m
+
+
+Instance:           X1.XLT1807.VRI1        X1.XLT1807.VRI2         X1.XLT1807.IR1
+V                            0.000                  0.000               -898.264m
+Power DC Terms:
+PG                           0.000                  0.000                898.264m
+
+DC Pin Currents:
+ISource                      0.000                  0.000                  1.000 
+
+
+Instance:            X1.XLT1807.IR2          X1.XLT1807.VC          X1.XLT1807.VE
+V                         -898.264m               128.930m              -121.930m
+Power DC Terms:
+PG                         898.264m              -304.842f              -290.972f
+
+DC Pin Currents:
+ISource                      1.000                  2.364p                -2.386p
+
+
+Instance:           X1.XLT1807.VLIM          X1.XLT1807.IP
+V                            0.000                  5.000 
+Power DC Terms:
+PG                           0.000                -13.735m
+
+DC Pin Currents:
+ISource                     -0.122f                 2.747m
+
+

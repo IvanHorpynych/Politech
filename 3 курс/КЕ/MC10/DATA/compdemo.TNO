@@ -1,0 +1,159 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                      Transient Analysis of compdemo                      ***
+********************************************************************************
+Limits
+======
+Time Range           2m
+Maximum Time Step    0
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Diode
+==========================================
+Instance:           X1.D1           X1.D2   
+Using model:        X1.D1           X1.D2   
+LEVEL                   1(*)            1(*)
+AF                 1.000 (*)       1.000 (*)
+BV                 0.000 (*)       0.000 (*)
+CJO                0.000 (*)       0.000 (*)
+EG                 1.110 (*)       1.110 (*)
+FC               500.000m(*)     500.000m(*)
+IBV              100.000p(*)     100.000p(*)
+IBVL               0.000 (*)       0.000 (*)
+IKF                0.000 (*)       0.000 (*)
+IS                10.000f(*)      10.000f(*)
+ISR                0.000 (*)       0.000 (*)
+KF                 0.000 (*)       0.000 (*)
+M                500.000m(*)     500.000m(*)
+N                  1.000m          1.000m   
+NBV                1.000 (*)       1.000 (*)
+NBVL               1.000 (*)       1.000 (*)
+NR                 2.000 (*)       2.000 (*)
+RL                 0.000 (*)       0.000 (*)
+RS                 0.000 (*)       0.000 (*)
+T_ABS           UNDEFINED(*)    UNDEFINED(*)
+T_MEASURED      UNDEFINED(*)    UNDEFINED(*)
+T_REL_GLOBAL    UNDEFINED(*)    UNDEFINED(*)
+T_REL_LOCAL     UNDEFINED(*)    UNDEFINED(*)
+TBV1               0.000 (*)       0.000 (*)
+TBV2               0.000 (*)       0.000 (*)
+TIKF               0.000 (*)       0.000 (*)
+TRS1               0.000 (*)       0.000 (*)
+TRS2               0.000 (*)       0.000 (*)
+TT                 0.000 (*)       0.000 (*)
+VJ                 1.000 (*)       1.000 (*)
+XTI                3.000 (*)       3.000 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+INP           0.000   INM          10.000   OUT         -10.001  
+X1.1      110.001MEG  X1.A         10.001   X1.3         10.000  
+X1.4        -10.000   X1.5        -10.001  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:              X1.D1           X1.D2
+Using model:           X1.D1           X1.D2
+
+Capacitance Terms:
+CAP                   0.000           0.000 
+
+Current Terms:
+ID                  110.001m        -20.011p
+
+Resistance Terms:
+REQ                 235.127u          1.000T
+
+Voltage Terms:
+VD                  776.674u        -20.001 
+
+Power DC Terms:
+PD                   85.435u        400.231p
+PS                    0.000           0.000 
+
+DC Pin Currents:
+Id                  110.001m        -20.011p
+
+Condition:
+State                    OFF             OFF
+
+Device Variables:
+area                  1.000           1.000 
+ic                    0.000           0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:               X1.R1           X1.R2
+V                 -110.001MEG          0.000 
+Power DC Terms:
+PD                  12.100MEG          0.000 
+
+DC Pin Currents:
+Ir                  -110.001m          0.000 
+
+Device Variables:
+tc1                    0.000           0.000 
+tc2                    0.000           0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:               X1.C1
+V                    -10.001 
+Power DC Terms:
+PS                     0.000 
+
+DC Pin Currents:
+Ic                     0.000 
+
+Device Variables:
+ic                     0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:              X1.E2           X1.E3           X1.E4           X1.E5
+V                 110.001MEG        -10.001          10.000         -10.000 
+Power DC Terms:
+PG                 12.100MEG          0.000          -1.100         200.108p
+
+DC Pin Currents:
+ISource            -110.001m          0.000         110.001m         20.011p
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                 V1              V2
+V                     0.000          10.000 
+Power DC Terms:
+PG                    0.000           0.000 
+
+DC Pin Currents:
+ISource               0.000           0.000 
+
+

@@ -1,0 +1,141 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                 Transient Analysis of Fullwave Rectifier                 ***
+********************************************************************************
+Limits
+======
+Time Range           60m
+Maximum Time Step    10u
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Diode
+==========================================
+Instance:                D1                D2                D3                D4   
+Using model:         1N5406            1N5406            1N5406            1N5406   
+LEVEL                     1(*)              1(*)              1(*)              1(*)
+AF                   1.000 (*)         1.000 (*)         1.000 (*)         1.000 (*)
+BV                 600.000           600.000           600.000           600.000    
+CJO                 50.372p           50.372p           50.372p           50.372p   
+EG                   1.110 (*)         1.110 (*)         1.110 (*)         1.110 (*)
+FC                 500.000m(*)       500.000m(*)       500.000m(*)       500.000m(*)
+IBV                100.000p          100.000p          100.000p          100.000p   
+IBVL                 0.000 (*)         0.000 (*)         0.000 (*)         0.000 (*)
+IKF                  0.000 (*)         0.000 (*)         0.000 (*)         0.000 (*)
+IS                 627.124f          627.124f          627.124f          627.124f   
+ISR                  0.000 (*)         0.000 (*)         0.000 (*)         0.000 (*)
+KF                   0.000 (*)         0.000 (*)         0.000 (*)         0.000 (*)
+M                  300.000m          300.000m          300.000m          300.000m   
+N                    1.148             1.148             1.148             1.148    
+NBV                  1.000 (*)         1.000 (*)         1.000 (*)         1.000 (*)
+NBVL                 1.000 (*)         1.000 (*)         1.000 (*)         1.000 (*)
+NR                   2.000 (*)         2.000 (*)         2.000 (*)         2.000 (*)
+RL               120.000MEG        120.000MEG        120.000MEG        120.000MEG   
+RS                   9.887m            9.887m            9.887m            9.887m   
+T_ABS             UNDEFINED(*)      UNDEFINED(*)      UNDEFINED(*)      UNDEFINED(*)
+T_MEASURED        UNDEFINED(*)      UNDEFINED(*)      UNDEFINED(*)      UNDEFINED(*)
+T_REL_GLOBAL      UNDEFINED(*)      UNDEFINED(*)      UNDEFINED(*)      UNDEFINED(*)
+T_REL_LOCAL       UNDEFINED(*)      UNDEFINED(*)      UNDEFINED(*)      UNDEFINED(*)
+TBV1                 0.000 (*)         0.000 (*)         0.000 (*)         0.000 (*)
+TBV2                 0.000 (*)         0.000 (*)         0.000 (*)         0.000 (*)
+TIKF                 0.000 (*)         0.000 (*)         0.000 (*)         0.000 (*)
+TRS1                 0.000 (*)         0.000 (*)         0.000 (*)         0.000 (*)
+TRS2                 0.000 (*)         0.000 (*)         0.000 (*)         0.000 (*)
+TT                   5.000u            5.000u            5.000u            5.000u   
+VJ                 864.577m          864.577m          864.577m          864.577m   
+XTI                  3.000 (*)         3.000 (*)         3.000 (*)         3.000 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            -1.137   BULK         -2.275   3            -1.137  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                   D1                D2                D3                D4
+Using model:            1N5406            1N5406            1N5406            1N5406
+
+Capacitance Terms:
+CAP                     3.615m            3.615m            3.615m            3.615m
+
+Current Terms:
+ID                     21.467            21.467            21.467            21.467 
+
+Resistance Terms:
+REQ                     1.383m            1.383m            1.383m            1.383m
+
+Voltage Terms:
+VD                      1.137             1.137             1.137             1.137 
+
+Power DC Terms:
+PD                     24.418            24.418            24.418            24.418 
+PS                      0.000             0.000             0.000             0.000 
+
+DC Pin Currents:
+Id                     21.467            21.467            21.467            21.467 
+
+Condition:
+State                      HOT               HOT               HOT               HOT
+
+Device Variables:
+area                    1.000             1.000             1.000             1.000 
+ic                      0.000             0.000             0.000             0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                    C1
+V                       -2.275 
+Power DC Terms:
+PS                       0.000 
+
+DC Pin Currents:
+Ic                       0.000 
+
+Device Variables:
+ic                       0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:               GABMI1
+V                      -2.275 
+Power DC Terms:
+PG                     97.672 
+
+DC Pin Currents:
+ISource                42.934 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                   V1
+V                       0.000 
+Power DC Terms:
+PG                      0.000 
+
+DC Pin Currents:
+ISource                 0.000 
+
+

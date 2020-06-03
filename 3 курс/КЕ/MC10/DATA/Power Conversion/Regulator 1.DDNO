@@ -1,0 +1,115 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                        Dynamic DC of Regulator 1                         ***
+***                           28-Jul-12 9:21:29 AM                           ***
+********************************************************************************
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            12.000   2             5.773   3             4.999  
+4             2.500   5             2.499  
+
+
+Operating Point for Devices of Type Bipolar Junction Transistors NPN
+====================================================================
+Instance:                Q1
+Using model:         2N2222
+
+Beta Terms:
+BETADC             202.563 
+BETAAC             199.651 
+
+Capacitance Terms:
+CPI                  1.131n
+CMU                 10.197p
+CBX                  0.000 
+CJS                  0.000 
+
+Conductance Terms:
+GM                   1.922 
+
+Current Terms:
+IB                 246.795u
+IC                  49.992m
+
+Resistance Terms:
+RPI                103.872 
+RX                   0.000 
+RO                   2.125K
+
+Voltage Terms:
+VBE                773.834m
+VBC                 -6.227 
+VCE                  7.001 
+
+Frequency Terms:
+FT               268.025MEG
+
+Power DC Terms:
+PD                 350.190m
+PS                   0.000 
+
+DC Pin Currents:
+Ib                 246.795u
+Ic                  49.992m
+Ie                 -50.238m
+Is                   0.000 
+
+Condition:
+State                   HOT
+
+Device Variables:
+area                 1.000 
+vbe                  0.000 
+vce                  0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:             RUPPER         RLOWER          RLOAD
+V                    -2.499         -2.499         -4.999 
+Power DC Terms:
+PD                  624.711u       624.711u       249.885m
+
+DC Pin Currents:
+Ir                 -249.942u      -249.942u       -49.988m
+
+Device Variables:
+tc1                   0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:                E1
+V                    5.773 
+Power DC Terms:
+PG                   1.425m
+
+DC Pin Currents:
+ISource           -246.795u
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               VIN           VREF
+V                   12.000          2.500 
+Power DC Terms:
+PG                 599.899m         0.000 
+
+DC Pin Currents:
+ISource            -49.992m         0.000 
+
+

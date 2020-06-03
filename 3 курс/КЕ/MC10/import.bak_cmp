@@ -1,0 +1,109 @@
+[Main]
+FileType=CMP
+Version=10.00
+Program=Micro-Cap
+Count=5
+
+[group]
+Name="Import"
+
+[group]
+Name="A_FLYBACK"
+
+[compdef]
+Name=TL4311
+Definition=Subckt
+Shape=ISOLD
+Mask=4096
+memo=Adjustable Precision Shunt Regulator
+Label Offset=22,39,-16,25
+PinCnt=3
+Pin="k",a,1,0,6,7
+Pin="a",a,1,8,6,5
+Pin="ref",a,7,4,-6,-2
+
+[group]
+End="A_FLYBACK"
+
+[group]
+Name="S_BUCK_CM"
+
+[compdef]
+Name=PWMCM1
+Definition=Subckt
+Shape=PWMCM
+Mask=4224
+memo=Current Mode PWM Controller
+Label Offset=24,-28,3,19
+PinCnt=6
+Pin="3",a,-2,2,-2,-4
+Pin="4",a,-2,5,-2,-4
+Pin="6",a,-2,8,-2,-3
+Pin="5",a,4,12,5,5
+Pin="2",a,10,8,-3,-3
+Pin="1",a,10,2,-3,-4
+
+[group]
+End="S_BUCK_CM"
+
+[group]
+Name="S_FULL_VM"
+
+[compdef]
+Name=FULL_VM1
+Definition=Subckt
+Shape=FULL_VM
+Mask=4224
+memo=Voltage Mode Full-Bridge PWM Controller
+Label Offset=24,-38,13,20
+PinCnt=10
+Pin="3",a,-2,1,-2,-1
+Pin="4",a,-2,5,-2,-1
+Pin="5",a,-2,9,-2,-1
+Pin="2",a,10,13,-2,-2
+Pin="15",a,10,11,-6,-1
+Pin="16",a,10,9,-6,-1
+Pin="9",a,10,7,-2,-1
+Pin="7",a,10,5,-2,-2
+Pin="8",a,10,3,-2,-2
+Pin="1",a,10,1,-2,-2
+
+[group]
+End="S_FULL_VM"
+
+[group]
+Name="Buck CPM"
+
+[compdef]
+Name=CCM-DCM1
+Definition=Subckt
+Shape=CCM-DCM1
+Mask=4096
+memo=Two-switch PWM converter, Voltage mode CCM or DCM - No transformers
+Label Offset=58,41,19,34
+PinCnt=5
+Pin="1",a,0,0,-2,-3
+Pin="2",a,0,3,-2,16
+Pin="3",a,12,3,-2,16
+Pin="4",a,12,0,-2,-2
+Pin="CTRL",a,6,6,5,7
+
+[compdef]
+Name=CPM
+Definition=Subckt
+Shape=CPM
+Mask=4096
+memo=Current Programmed Mode controller model
+Label Offset=98,28,11,41
+PinCnt=5
+Pin="ctr",a,0,0,-5,-2
+Pin="current",a,0,4,-24,14
+Pin="1",a,7,6,-8,7
+Pin="2",a,10,6,4,7
+Pin="d",a,13,2,-2,-2
+
+[group]
+End="Buck CPM"
+
+[group]
+End="Import"

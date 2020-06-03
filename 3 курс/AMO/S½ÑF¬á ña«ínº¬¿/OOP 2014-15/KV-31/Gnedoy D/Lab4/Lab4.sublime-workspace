@@ -1,0 +1,253 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sca",
+				"Scaners"
+			],
+			[
+				"ma",
+				"make_index"
+			],
+			[
+				"fie",
+				"field_name"
+			],
+			[
+				"str",
+				"strcpy"
+			],
+			[
+				"mak",
+				"make_index_help"
+			],
+			[
+				"pri",
+				"price"
+			],
+			[
+				"get",
+				"get_recs_by_index"
+			],
+			[
+				"scan",
+				"Scaners"
+			],
+			[
+				"f",
+				"f_dat"
+			],
+			[
+				"po",
+				"position_for_del"
+			],
+			[
+				"re",
+				"reindex"
+			],
+			[
+				"op",
+				"optr"
+			],
+			[
+				"xs",
+				"x_size"
+			],
+			[
+				"y",
+				"y_size"
+			],
+			[
+				"pr",
+				"price"
+			],
+			[
+				"nu",
+				"numbered_string"
+			],
+			[
+				"f_",
+				"f_csv"
+			],
+			[
+				"cou",
+				"count_of_field"
+			],
+			[
+				"sc",
+				"SCAN_INFO"
+			],
+			[
+				"SIZE_",
+				"SIZE_MODEL"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Work/documents/visual studio 2013/Projects/Lab3/Lab3/Lab3.h",
+		"/C/Users/Work/documents/visual studio 2013/Projects/Lab3/Lab3/Lab3_Test.c",
+		"/C/Users/Work/Documents/Visual Studio 2013/Projects/Lab3/Lab3/Scaners.csv",
+		"/C/Users/Work/documents/visual studio 2013/Projects/Lab3/Lab3/lab3.c",
+		"/F/Lab3/Lab3/Scaners.dba",
+		"/F/Lab3/Lab3/optr.idx",
+		"/F/Lab3/Lab3/model.idx",
+		"/F/Lab3/Lab3/Scaners.csv",
+		"/C/Users/Work/Documents/Visual Studio 2013/Projects/Lab3/Lab3/manufacturer.idx",
+		"/C/Users/Work/Documents/Visual Studio 2013/Projects/Lab3/Lab3/year.idx",
+		"/C/Users/Work/Documents/Visual Studio 2013/Projects/Lab3/Lab3/model.idx",
+		"/C/Users/Work/Documents/Visual Studio 2013/Projects/Lab3/Lab3/Scaners.dba",
+		"/C/Users/Work/Documents/Visual Studio 2013/Projects/Lab3/Lab3/x_size.idx",
+		"/C/Users/Work/Documents/Visual Studio 2013/Projects/Lab3/Lab3/price.idx",
+		"/C/Users/Work/Documents/Visual Studio 2013/Projects/Lab3/Lab3/y_size.idx",
+		"/C/Users/Work/Documents/Visual Studio 2013/Projects/Lab3/Lab3/optr.idx",
+		"/C/Users/Work/Documents/Visual Studio 2013/Projects/Lab3/Lab3/Scaners.txt"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"SIZE_MANUFACTURER"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "Lab4.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

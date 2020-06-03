@@ -1,0 +1,11 @@
+#
+#Wed Oct 27 12:59:01 EEST 2010
+symbols=@\#$,.\:;%
+min_length=6
+withDigits=true
+length=8
+withSymbols=true
+vocabulary=Green Mile.txt
+withShifts=true
+max_length=7
+varNumber=6

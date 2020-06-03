@@ -1,0 +1,916 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***             Transient Analysis of Instrumentation Amplifier              ***
+***                           03-Aug-12 8:38:25 AM                           ***
+********************************************************************************
+Limits
+======
+Time Range           300m
+Maximum Time Step    30u
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Diode
+==========================================
+Instance:       X1.X_LT1002.DDM1       X1.X_LT1002.DDM3       X1.X_LT1002.DDM2   
+Using model:     X1.X_LT1002.DM2        X1.X_LT1002.DM2        X1.X_LT1002.DM2   
+LEVEL                          1(*)                   1(*)                   1(*)
+AF                        1.000 (*)              1.000 (*)              1.000 (*)
+BV                        0.000 (*)              0.000 (*)              0.000 (*)
+CJO                       0.000 (*)              0.000 (*)              0.000 (*)
+EG                        1.110 (*)              1.110 (*)              1.110 (*)
+FC                      500.000m(*)            500.000m(*)            500.000m(*)
+IBV                     100.000p(*)            100.000p(*)            100.000p(*)
+IBVL                      0.000 (*)              0.000 (*)              0.000 (*)
+IKF                       0.000 (*)              0.000 (*)              0.000 (*)
+IS                        0.800f                 0.800f                 0.800f   
+ISR                       0.000 (*)              0.000 (*)              0.000 (*)
+KF                        0.000 (*)              0.000 (*)              0.000 (*)
+M                       500.000m(*)            500.000m(*)            500.000m(*)
+N                         1.000 (*)              1.000 (*)              1.000 (*)
+NBV                       1.000 (*)              1.000 (*)              1.000 (*)
+NBVL                      1.000 (*)              1.000 (*)              1.000 (*)
+NR                        2.000 (*)              2.000 (*)              2.000 (*)
+RL                        0.000 (*)              0.000 (*)              0.000 (*)
+RS                        0.000 (*)              0.000 (*)              0.000 (*)
+T_ABS                  UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_MEASURED             UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_GLOBAL           UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_LOCAL            UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+TBV1                      0.000 (*)              0.000 (*)              0.000 (*)
+TBV2                      0.000 (*)              0.000 (*)              0.000 (*)
+TIKF                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS1                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS2                      0.000 (*)              0.000 (*)              0.000 (*)
+TT                        0.000 (*)              0.000 (*)              0.000 (*)
+VJ                        1.000 (*)              1.000 (*)              1.000 (*)
+XTI                       3.000 (*)              3.000 (*)              3.000 (*)
+(*) Default Parameter
+
+
+
+Instance:       X1.X_LT1002.DDM4         X1.X_LT1002.D1         X1.X_LT1002.D2   
+Using model:     X1.X_LT1002.DM2        X1.X_LT1002.DM1        X1.X_LT1002.DM1   
+LEVEL                          1(*)                   1(*)                   1(*)
+AF                        1.000 (*)              1.000 (*)              1.000 (*)
+BV                        0.000 (*)              0.000 (*)              0.000 (*)
+CJO                       0.000 (*)              0.000 (*)              0.000 (*)
+EG                        1.110 (*)              1.110 (*)              1.110 (*)
+FC                      500.000m(*)            500.000m(*)            500.000m(*)
+IBV                     100.000p(*)            100.000p(*)            100.000p(*)
+IBVL                      0.000 (*)              0.000 (*)              0.000 (*)
+IKF                       0.000 (*)              0.000 (*)              0.000 (*)
+IS                        0.800f                23.310n                23.310n   
+ISR                       0.000 (*)              0.000 (*)              0.000 (*)
+KF                        0.000 (*)              0.000 (*)              0.000 (*)
+M                       500.000m(*)            500.000m(*)            500.000m(*)
+N                         1.000 (*)              1.000 (*)              1.000 (*)
+NBV                       1.000 (*)              1.000 (*)              1.000 (*)
+NBVL                      1.000 (*)              1.000 (*)              1.000 (*)
+NR                        2.000 (*)              2.000 (*)              2.000 (*)
+RL                        0.000 (*)              0.000 (*)              0.000 (*)
+RS                        0.000 (*)              0.000 (*)              0.000 (*)
+T_ABS                  UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_MEASURED             UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_GLOBAL           UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_LOCAL            UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+TBV1                      0.000 (*)              0.000 (*)              0.000 (*)
+TBV2                      0.000 (*)              0.000 (*)              0.000 (*)
+TIKF                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS1                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS2                      0.000 (*)              0.000 (*)              0.000 (*)
+TT                        0.000 (*)              0.000 (*)              0.000 (*)
+VJ                        1.000 (*)              1.000 (*)              1.000 (*)
+XTI                       3.000 (*)              3.000 (*)              3.000 (*)
+(*) Default Parameter
+
+
+
+Instance:         X1.X_LT1002.D3         X1.X_LT1002.D4       X1.X_LT1002.DSUB   
+Using model:     X1.X_LT1002.DM2        X1.X_LT1002.DM2        X1.X_LT1002.DM2   
+LEVEL                          1(*)                   1(*)                   1(*)
+AF                        1.000 (*)              1.000 (*)              1.000 (*)
+BV                        0.000 (*)              0.000 (*)              0.000 (*)
+CJO                       0.000 (*)              0.000 (*)              0.000 (*)
+EG                        1.110 (*)              1.110 (*)              1.110 (*)
+FC                      500.000m(*)            500.000m(*)            500.000m(*)
+IBV                     100.000p(*)            100.000p(*)            100.000p(*)
+IBVL                      0.000 (*)              0.000 (*)              0.000 (*)
+IKF                       0.000 (*)              0.000 (*)              0.000 (*)
+IS                        0.800f                 0.800f                 0.800f   
+ISR                       0.000 (*)              0.000 (*)              0.000 (*)
+KF                        0.000 (*)              0.000 (*)              0.000 (*)
+M                       500.000m(*)            500.000m(*)            500.000m(*)
+N                         1.000 (*)              1.000 (*)              1.000 (*)
+NBV                       1.000 (*)              1.000 (*)              1.000 (*)
+NBVL                      1.000 (*)              1.000 (*)              1.000 (*)
+NR                        2.000 (*)              2.000 (*)              2.000 (*)
+RL                        0.000 (*)              0.000 (*)              0.000 (*)
+RS                        0.000 (*)              0.000 (*)              0.000 (*)
+T_ABS                  UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_MEASURED             UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_GLOBAL           UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_LOCAL            UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+TBV1                      0.000 (*)              0.000 (*)              0.000 (*)
+TBV2                      0.000 (*)              0.000 (*)              0.000 (*)
+TIKF                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS1                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS2                      0.000 (*)              0.000 (*)              0.000 (*)
+TT                        0.000 (*)              0.000 (*)              0.000 (*)
+VJ                        1.000 (*)              1.000 (*)              1.000 (*)
+XTI                       3.000 (*)              3.000 (*)              3.000 (*)
+(*) Default Parameter
+
+
+
+Instance:       X2.X_LT1002.DDM1       X2.X_LT1002.DDM3       X2.X_LT1002.DDM2   
+Using model:     X2.X_LT1002.DM2        X2.X_LT1002.DM2        X2.X_LT1002.DM2   
+LEVEL                          1(*)                   1(*)                   1(*)
+AF                        1.000 (*)              1.000 (*)              1.000 (*)
+BV                        0.000 (*)              0.000 (*)              0.000 (*)
+CJO                       0.000 (*)              0.000 (*)              0.000 (*)
+EG                        1.110 (*)              1.110 (*)              1.110 (*)
+FC                      500.000m(*)            500.000m(*)            500.000m(*)
+IBV                     100.000p(*)            100.000p(*)            100.000p(*)
+IBVL                      0.000 (*)              0.000 (*)              0.000 (*)
+IKF                       0.000 (*)              0.000 (*)              0.000 (*)
+IS                        0.800f                 0.800f                 0.800f   
+ISR                       0.000 (*)              0.000 (*)              0.000 (*)
+KF                        0.000 (*)              0.000 (*)              0.000 (*)
+M                       500.000m(*)            500.000m(*)            500.000m(*)
+N                         1.000 (*)              1.000 (*)              1.000 (*)
+NBV                       1.000 (*)              1.000 (*)              1.000 (*)
+NBVL                      1.000 (*)              1.000 (*)              1.000 (*)
+NR                        2.000 (*)              2.000 (*)              2.000 (*)
+RL                        0.000 (*)              0.000 (*)              0.000 (*)
+RS                        0.000 (*)              0.000 (*)              0.000 (*)
+T_ABS                  UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_MEASURED             UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_GLOBAL           UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_LOCAL            UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+TBV1                      0.000 (*)              0.000 (*)              0.000 (*)
+TBV2                      0.000 (*)              0.000 (*)              0.000 (*)
+TIKF                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS1                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS2                      0.000 (*)              0.000 (*)              0.000 (*)
+TT                        0.000 (*)              0.000 (*)              0.000 (*)
+VJ                        1.000 (*)              1.000 (*)              1.000 (*)
+XTI                       3.000 (*)              3.000 (*)              3.000 (*)
+(*) Default Parameter
+
+
+
+Instance:       X2.X_LT1002.DDM4         X2.X_LT1002.D1         X2.X_LT1002.D2   
+Using model:     X2.X_LT1002.DM2        X2.X_LT1002.DM1        X2.X_LT1002.DM1   
+LEVEL                          1(*)                   1(*)                   1(*)
+AF                        1.000 (*)              1.000 (*)              1.000 (*)
+BV                        0.000 (*)              0.000 (*)              0.000 (*)
+CJO                       0.000 (*)              0.000 (*)              0.000 (*)
+EG                        1.110 (*)              1.110 (*)              1.110 (*)
+FC                      500.000m(*)            500.000m(*)            500.000m(*)
+IBV                     100.000p(*)            100.000p(*)            100.000p(*)
+IBVL                      0.000 (*)              0.000 (*)              0.000 (*)
+IKF                       0.000 (*)              0.000 (*)              0.000 (*)
+IS                        0.800f                23.310n                23.310n   
+ISR                       0.000 (*)              0.000 (*)              0.000 (*)
+KF                        0.000 (*)              0.000 (*)              0.000 (*)
+M                       500.000m(*)            500.000m(*)            500.000m(*)
+N                         1.000 (*)              1.000 (*)              1.000 (*)
+NBV                       1.000 (*)              1.000 (*)              1.000 (*)
+NBVL                      1.000 (*)              1.000 (*)              1.000 (*)
+NR                        2.000 (*)              2.000 (*)              2.000 (*)
+RL                        0.000 (*)              0.000 (*)              0.000 (*)
+RS                        0.000 (*)              0.000 (*)              0.000 (*)
+T_ABS                  UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_MEASURED             UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_GLOBAL           UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_LOCAL            UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+TBV1                      0.000 (*)              0.000 (*)              0.000 (*)
+TBV2                      0.000 (*)              0.000 (*)              0.000 (*)
+TIKF                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS1                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS2                      0.000 (*)              0.000 (*)              0.000 (*)
+TT                        0.000 (*)              0.000 (*)              0.000 (*)
+VJ                        1.000 (*)              1.000 (*)              1.000 (*)
+XTI                       3.000 (*)              3.000 (*)              3.000 (*)
+(*) Default Parameter
+
+
+
+Instance:         X2.X_LT1002.D3         X2.X_LT1002.D4       X2.X_LT1002.DSUB   
+Using model:     X2.X_LT1002.DM2        X2.X_LT1002.DM2        X2.X_LT1002.DM2   
+LEVEL                          1(*)                   1(*)                   1(*)
+AF                        1.000 (*)              1.000 (*)              1.000 (*)
+BV                        0.000 (*)              0.000 (*)              0.000 (*)
+CJO                       0.000 (*)              0.000 (*)              0.000 (*)
+EG                        1.110 (*)              1.110 (*)              1.110 (*)
+FC                      500.000m(*)            500.000m(*)            500.000m(*)
+IBV                     100.000p(*)            100.000p(*)            100.000p(*)
+IBVL                      0.000 (*)              0.000 (*)              0.000 (*)
+IKF                       0.000 (*)              0.000 (*)              0.000 (*)
+IS                        0.800f                 0.800f                 0.800f   
+ISR                       0.000 (*)              0.000 (*)              0.000 (*)
+KF                        0.000 (*)              0.000 (*)              0.000 (*)
+M                       500.000m(*)            500.000m(*)            500.000m(*)
+N                         1.000 (*)              1.000 (*)              1.000 (*)
+NBV                       1.000 (*)              1.000 (*)              1.000 (*)
+NBVL                      1.000 (*)              1.000 (*)              1.000 (*)
+NR                        2.000 (*)              2.000 (*)              2.000 (*)
+RL                        0.000 (*)              0.000 (*)              0.000 (*)
+RS                        0.000 (*)              0.000 (*)              0.000 (*)
+T_ABS                  UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_MEASURED             UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_GLOBAL           UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_LOCAL            UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+TBV1                      0.000 (*)              0.000 (*)              0.000 (*)
+TBV2                      0.000 (*)              0.000 (*)              0.000 (*)
+TIKF                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS1                      0.000 (*)              0.000 (*)              0.000 (*)
+TRS2                      0.000 (*)              0.000 (*)              0.000 (*)
+TT                        0.000 (*)              0.000 (*)              0.000 (*)
+VJ                        1.000 (*)              1.000 (*)              1.000 (*)
+XTI                       3.000 (*)              3.000 (*)              3.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Bipolar Junction Transistors NPN
+=====================================================================
+Instance:         X1.X_LT1002.Q1         X1.X_LT1002.Q2         X2.X_LT1002.Q1   
+Using model:     X1.X_LT1002.QM1        X1.X_LT1002.QM2        X2.X_LT1002.QM1   
+LEVEL                          1(*)                   1(*)                   1(*)
+AF                        1.000 (*)              1.000 (*)              1.000 (*)
+BF                        5.500K                 9.900K                 5.500K   
+BR                        1.000 (*)              1.000 (*)              1.000 (*)
+CJC                       0.000 (*)              0.000 (*)              0.000 (*)
+CJE                       0.000 (*)              0.000 (*)              0.000 (*)
+CJS                       0.000 (*)              0.000 (*)              0.000 (*)
+EG                        1.110 (*)              1.110 (*)              1.110 (*)
+FC                      500.000m(*)            500.000m(*)            500.000m(*)
+GAMMA                    10.000p(*)             10.000p(*)             10.000p(*)
+IKF                       0.000 (*)              0.000 (*)              0.000 (*)
+IKR                       0.000 (*)              0.000 (*)              0.000 (*)
+IRB                       0.000 (*)              0.000 (*)              0.000 (*)
+IS                        0.800f                 0.801f                 0.800f   
+ISC                       0.000 (*)              0.000 (*)              0.000 (*)
+ISE                       0.000 (*)              0.000 (*)              0.000 (*)
+ISS                       0.000 (*)              0.000 (*)              0.000 (*)
+ITF                       0.000 (*)              0.000 (*)              0.000 (*)
+KF                        0.000 (*)              0.000 (*)              0.000 (*)
+MJC                     330.000m(*)            330.000m(*)            330.000m(*)
+MJE                     330.000m(*)            330.000m(*)            330.000m(*)
+MJS                       0.000 (*)              0.000 (*)              0.000 (*)
+NC                        2.000 (*)              2.000 (*)              2.000 (*)
+NE                        1.500 (*)              1.500 (*)              1.500 (*)
+NF                        1.000 (*)              1.000 (*)              1.000 (*)
+NK                      500.000m(*)            500.000m(*)            500.000m(*)
+NR                        1.000 (*)              1.000 (*)              1.000 (*)
+NS                        1.000 (*)              1.000 (*)              1.000 (*)
+PTF                       0.000 (*)              0.000 (*)              0.000 (*)
+QCO                       0.000 (*)              0.000 (*)              0.000 (*)
+QUASIMOD                  0.000 (*)              0.000 (*)              0.000 (*)
+RB                        0.000 (*)              0.000 (*)              0.000 (*)
+RBM                       0.000 (*)              0.000 (*)              0.000 (*)
+RC                        0.000 (*)              0.000 (*)              0.000 (*)
+RCO                       0.000 (*)              0.000 (*)              0.000 (*)
+RE                        0.000 (*)              0.000 (*)              0.000 (*)
+T_ABS                  UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_MEASURED             UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_GLOBAL           UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+T_REL_LOCAL            UNDEFINED(*)           UNDEFINED(*)           UNDEFINED(*)
+TF                        0.000 (*)              0.000 (*)              0.000 (*)
+TR                        0.000 (*)              0.000 (*)              0.000 (*)
+TRB1                      0.000 (*)              0.000 (*)              0.000 (*)
+TRB2                      0.000 (*)              0.000 (*)              0.000 (*)
+TRC1                      0.000 (*)              0.000 (*)              0.000 (*)
+TRC2                      0.000 (*)              0.000 (*)              0.000 (*)
+TRE1                      0.000 (*)              0.000 (*)              0.000 (*)
+TRE2                      0.000 (*)              0.000 (*)              0.000 (*)
+TRM1                      0.000 (*)              0.000 (*)              0.000 (*)
+TRM2                      0.000 (*)              0.000 (*)              0.000 (*)
+VAF                       0.000 (*)              0.000 (*)              0.000 (*)
+VAR                       0.000 (*)              0.000 (*)              0.000 (*)
+VG                        1.206 (*)              1.206 (*)              1.206 (*)
+VJC                     750.000m(*)            750.000m(*)            750.000m(*)
+VJE                     750.000m(*)            750.000m(*)            750.000m(*)
+VJS                     750.000m(*)            750.000m(*)            750.000m(*)
+VO                       10.000 (*)             10.000 (*)             10.000 (*)
+VTF                       0.000 (*)              0.000 (*)              0.000 (*)
+XCJC                      1.000 (*)              1.000 (*)              1.000 (*)
+XTB                       0.000 (*)              0.000 (*)              0.000 (*)
+XTF                       0.000 (*)              0.000 (*)              0.000 (*)
+XTI                       3.000 (*)              3.000 (*)              3.000 (*)
+(*) Default Parameter
+
+
+
+Instance:         X2.X_LT1002.Q2   
+Using model:     X2.X_LT1002.QM2   
+LEVEL                          1(*)
+AF                        1.000 (*)
+BF                        9.900K   
+BR                        1.000 (*)
+CJC                       0.000 (*)
+CJE                       0.000 (*)
+CJS                       0.000 (*)
+EG                        1.110 (*)
+FC                      500.000m(*)
+GAMMA                    10.000p(*)
+IKF                       0.000 (*)
+IKR                       0.000 (*)
+IRB                       0.000 (*)
+IS                        0.801f   
+ISC                       0.000 (*)
+ISE                       0.000 (*)
+ISS                       0.000 (*)
+ITF                       0.000 (*)
+KF                        0.000 (*)
+MJC                     330.000m(*)
+MJE                     330.000m(*)
+MJS                       0.000 (*)
+NC                        2.000 (*)
+NE                        1.500 (*)
+NF                        1.000 (*)
+NK                      500.000m(*)
+NR                        1.000 (*)
+NS                        1.000 (*)
+PTF                       0.000 (*)
+QCO                       0.000 (*)
+QUASIMOD                  0.000 (*)
+RB                        0.000 (*)
+RBM                       0.000 (*)
+RC                        0.000 (*)
+RCO                       0.000 (*)
+RE                        0.000 (*)
+T_ABS                  UNDEFINED(*)
+T_MEASURED             UNDEFINED(*)
+T_REL_GLOBAL           UNDEFINED(*)
+T_REL_LOCAL            UNDEFINED(*)
+TF                        0.000 (*)
+TR                        0.000 (*)
+TRB1                      0.000 (*)
+TRB2                      0.000 (*)
+TRC1                      0.000 (*)
+TRC2                      0.000 (*)
+TRE1                      0.000 (*)
+TRE2                      0.000 (*)
+TRM1                      0.000 (*)
+TRM2                      0.000 (*)
+VAF                       0.000 (*)
+VAR                       0.000 (*)
+VG                        1.206 (*)
+VJC                     750.000m(*)
+VJE                     750.000m(*)
+VJS                     750.000m(*)
+VO                       10.000 (*)
+VTF                       0.000 (*)
+XCJC                      1.000 (*)
+XTB                       0.000 (*)
+XTF                       0.000 (*)
+XTI                       3.000 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node                Voltage  Node                Voltage 
+IN-                  0.000   2                   20.449u 
+VP                  15.000   VN                 -15.000  
+5                   31.316u  IN+                  0.000  
+7                   20.449u  OUT                  1.788n 
+X1.X_LT1002.80      14.967   X1.X_LT1002.90      14.967  
+X1.X_LT1002.102     20.008u  X1.X_LT1002.10    -583.031m 
+X1.X_LT1002.103   -241.767n  X1.X_LT1002.11    -583.032m 
+X1.X_LT1002.104      9.883u  X1.X_LT1002.105      9.883u 
+X1.X_LT1002.12    -589.986m  X1.X_LT1002.8     -596.970p 
+X1.X_LT1002.1       31.372u  X1.X_LT1002.17      31.313u 
+X1.X_LT1002.13      13.197   X1.X_LT1002.14     -13.197  
+X2.X_LT1002.80      14.967   X2.X_LT1002.90      14.967  
+X2.X_LT1002.102     20.008u  X2.X_LT1002.10    -583.031m 
+X2.X_LT1002.103   -241.767n  X2.X_LT1002.11    -583.032m 
+X2.X_LT1002.104      9.883u  X2.X_LT1002.105      9.883u 
+X2.X_LT1002.12    -589.986m  X2.X_LT1002.8      198.952f 
+X2.X_LT1002.1       -3.477n  X2.X_LT1002.17       1.788n 
+X2.X_LT1002.13      13.197   X2.X_LT1002.14     -13.197  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:          X1.X_LT1002.DDM1       X1.X_LT1002.DDM3       X1.X_LT1002.DDM2
+Using model:        X1.X_LT1002.DM2        X1.X_LT1002.DM2        X1.X_LT1002.DM2
+
+Capacitance Terms:
+CAP                          0.000                  0.000                  0.000 
+
+Current Terms:
+ID                           0.010f                 0.010f                -0.010f
+
+Resistance Terms:
+REQ                        969.986G               969.986G               970.009G
+
+Voltage Terms:
+VD                          10.125u                10.125u               -10.125u
+
+Power DC Terms:
+PD                       1.057E-022             1.057E-022             1.057E-022
+PS                           0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Id                           0.010f                 0.010f                -0.010f
+
+Condition:
+State                           OFF                    OFF                    OFF
+
+Device Variables:
+area                         1.000                  1.000                  1.000 
+ic                           0.000                  0.000                  0.000 
+
+
+Instance:          X1.X_LT1002.DDM4         X1.X_LT1002.D1         X1.X_LT1002.D2
+Using model:        X1.X_LT1002.DM2        X1.X_LT1002.DM1        X1.X_LT1002.DM1
+
+Capacitance Terms:
+CAP                          0.000                  0.000                  0.000 
+
+Current Terms:
+ID                          -0.010f                52.640f               -52.640f
+
+Resistance Terms:
+REQ                        970.009G               1.110MEG               1.110MEG
+
+Voltage Terms:
+VD                         -10.125u                58.408n               -58.408n
+
+Power DC Terms:
+PD                       1.057E-022             3.075E-021             3.075E-021
+PS                           0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Id                          -0.010f                52.640f               -52.640f
+
+Condition:
+State                           OFF                    OFF                    OFF
+
+Device Variables:
+area                         1.000                  1.000                  1.000 
+ic                           0.000                  0.000                  0.000 
+
+
+Instance:            X1.X_LT1002.D3         X1.X_LT1002.D4       X1.X_LT1002.DSUB
+Using model:        X1.X_LT1002.DM2        X1.X_LT1002.DM2        X1.X_LT1002.DM2
+
+Capacitance Terms:
+CAP                          0.000                  0.000                  0.000 
+
+Current Terms:
+ID                         -13.198p               -13.198p               -30.001p
+
+Resistance Terms:
+REQ                          1.000T                 1.000T                 1.000T
+
+Voltage Terms:
+VD                         -13.197                -13.197                -30.000 
+
+Power DC Terms:
+PD                         174.171p               174.172p               900.024p
+PS                           0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Id                         -13.198p               -13.198p               -30.001p
+
+Condition:
+State                           OFF                    OFF                    OFF
+
+Device Variables:
+area                         1.000                  1.000                  1.000 
+ic                           0.000                  0.000                  0.000 
+
+
+Instance:          X2.X_LT1002.DDM1       X2.X_LT1002.DDM3       X2.X_LT1002.DDM2
+Using model:        X2.X_LT1002.DM2        X2.X_LT1002.DM2        X2.X_LT1002.DM2
+
+Capacitance Terms:
+CAP                          0.000                  0.000                  0.000 
+
+Current Terms:
+ID                           0.010f                 0.010f                -0.010f
+
+Resistance Terms:
+REQ                        969.986G               969.986G               970.009G
+
+Voltage Terms:
+VD                          10.125u                10.125u               -10.125u
+
+Power DC Terms:
+PD                       1.057E-022             1.057E-022             1.057E-022
+PS                           0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Id                           0.010f                 0.010f                -0.010f
+
+Condition:
+State                           OFF                    OFF                    OFF
+
+Device Variables:
+area                         1.000                  1.000                  1.000 
+ic                           0.000                  0.000                  0.000 
+
+
+Instance:          X2.X_LT1002.DDM4         X2.X_LT1002.D1         X2.X_LT1002.D2
+Using model:        X2.X_LT1002.DM2        X2.X_LT1002.DM1        X2.X_LT1002.DM1
+
+Capacitance Terms:
+CAP                          0.000                  0.000                  0.000 
+
+Current Terms:
+ID                          -0.010f                -4.745f                 4.745f
+
+Resistance Terms:
+REQ                        970.009G               1.110MEG               1.110MEG
+
+Voltage Terms:
+VD                         -10.125u                -5.265n                 5.265n
+
+Power DC Terms:
+PD                       1.057E-022             2.498E-023             2.498E-023
+PS                           0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Id                          -0.010f                -4.745f                 4.745f
+
+Condition:
+State                           OFF                    OFF                    OFF
+
+Device Variables:
+area                         1.000                  1.000                  1.000 
+ic                           0.000                  0.000                  0.000 
+
+
+Instance:            X2.X_LT1002.D3         X2.X_LT1002.D4       X2.X_LT1002.DSUB
+Using model:        X2.X_LT1002.DM2        X2.X_LT1002.DM2        X2.X_LT1002.DM2
+
+Capacitance Terms:
+CAP                          0.000                  0.000                  0.000 
+
+Current Terms:
+ID                         -13.198p               -13.198p               -30.001p
+
+Resistance Terms:
+REQ                          1.000T                 1.000T                 1.000T
+
+Voltage Terms:
+VD                         -13.197                -13.197                -30.000 
+
+Power DC Terms:
+PD                         174.171p               174.171p               900.024p
+PS                           0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Id                         -13.198p               -13.198p               -30.001p
+
+Condition:
+State                           OFF                    OFF                    OFF
+
+Device Variables:
+area                         1.000                  1.000                  1.000 
+ic                           0.000                  0.000                  0.000 
+
+
+
+Operating Point for Devices of Type Bipolar Junction Transistors NPN
+====================================================================
+Instance:            X1.X_LT1002.Q1         X1.X_LT1002.Q2         X2.X_LT1002.Q1
+Using model:        X1.X_LT1002.QM1        X1.X_LT1002.QM2        X2.X_LT1002.QM1
+
+Beta Terms:
+BETADC                       5.593K                10.207K                 5.593K
+BETAAC                       5.500K                 9.900K                 5.500K
+
+Capacitance Terms:
+CPI                          0.000                  0.000                  0.000 
+CMU                          0.000                  0.000                  0.000 
+CBX                          0.000                  0.000                  0.000 
+CJS                          0.000                  0.000                  0.000 
+
+Conductance Terms:
+GM                         190.812u               190.811u               190.812u
+
+Current Terms:
+IB                         882.342p               483.533p               882.342p
+IC                           4.935u                 4.935u                 4.935u
+
+Resistance Terms:
+RPI                       28.824MEG              51.884MEG              28.824MEG
+RX                           0.000                  0.000                  0.000 
+RO                           1.000T                 1.000T                 1.000T
+
+Voltage Terms:
+VBE                        583.051m               583.032m               583.051m
+VBC                        -14.967                -14.967                -14.967 
+VCE                         15.550                 15.550                 15.550 
+
+Frequency Terms:
+FT                        3036.872T              3036.845T              3036.872T
+
+Power DC Terms:
+PD                          76.745u                76.744u                76.745u
+PS                           0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Ib                         882.342p               483.533p               882.342p
+Ic                           4.935u                 4.935u                 4.935u
+Ie                          -4.936u                -4.936u                -4.936u
+Is                           0.000                  0.000                  0.000 
+
+Condition:
+State                           LIN                    LIN                    LIN
+
+Device Variables:
+area                         1.000                  1.000                  1.000 
+vbe                          0.000                  0.000                  0.000 
+vce                          0.000                  0.000                  0.000 
+
+
+Instance:            X2.X_LT1002.Q2
+Using model:        X2.X_LT1002.QM2
+
+Beta Terms:
+BETADC                      10.207K
+BETAAC                       9.900K
+
+Capacitance Terms:
+CPI                          0.000 
+CMU                          0.000 
+CBX                          0.000 
+CJS                          0.000 
+
+Conductance Terms:
+GM                         190.811u
+
+Current Terms:
+IB                         483.533p
+IC                           4.935u
+
+Resistance Terms:
+RPI                       51.884MEG
+RX                           0.000 
+RO                           1.000T
+
+Voltage Terms:
+VBE                        583.032m
+VBC                        -14.967 
+VCE                         15.550 
+
+Frequency Terms:
+FT                        3036.845T
+
+Power DC Terms:
+PD                          76.744u
+PS                           0.000 
+
+DC Pin Currents:
+Ib                         483.533p
+Ic                           4.935u
+Ie                          -4.936u
+Is                           0.000 
+
+Condition:
+State                           LIN
+
+Device Variables:
+area                         1.000 
+vbe                          0.000 
+vce                          0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                         R1                     R2                     R3
+V                           -10.867u               -20.449u                10.867u
+Power DC Terms:
+PD                           11.809f                 4.182f                11.809f
+
+DC Pin Currents:
+Ir                           -1.087n              -204.487p                 1.087n
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+Instance:                         R4                     R5        X1.X_LT1002.RC1
+V                           -11.450p                20.447u                32.726m
+Power DC Terms:
+PD                        5.959E-026                 4.181f               161.508n
+
+DC Pin Currents:
+Ir                           -5.204f               204.469p                 4.935u
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+Instance:            X1.X_LT1002.RC2        X1.X_LT1002.RB1        X1.X_LT1002.RB2
+V                            32.725m               441.116n               241.767n
+Power DC Terms:
+PD                          161.505n                 0.389f                 0.117f
+
+DC Pin Currents:
+Ir                            4.935u               882.232p               483.533p
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+Instance:            X1.X_LT1002.RE1        X1.X_LT1002.RE2         X1.X_LT1002.RE
+V                             6.955m                 6.954m              -589.986m
+Power DC Terms:
+PD                           34.331n                34.324n                17.232n
+
+DC Pin Currents:
+Ir                            4.936u                 4.936u               -29.207n
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+Instance:             X1.X_LT1002.R2        X1.X_LT1002.RO1        X1.X_LT1002.RO2
+V                          -596.970p                55.966n                31.372u
+Power DC Terms:
+PD                        3.564E-024                 0.122f                28.736p
+
+DC Pin Currents:
+Ir                           -5.970f                 2.173n               915.966n
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+Instance:             X1.X_LT1002.RC        X2.X_LT1002.RC1        X2.X_LT1002.RC2
+V                            31.313u                32.726m                32.725m
+Power DC Terms:
+PD                          231.913u               161.508n               161.505n
+
+DC Pin Currents:
+Ir                            7.406                  4.935u                 4.935u
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+Instance:            X2.X_LT1002.RB1        X2.X_LT1002.RB2        X2.X_LT1002.RE1
+V                           441.171n               241.767n                 6.955m
+Power DC Terms:
+PD                            0.389f                 0.117f                34.331n
+
+DC Pin Currents:
+Ir                          882.342p               483.533p                 4.936u
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+Instance:            X2.X_LT1002.RE2         X2.X_LT1002.RE         X2.X_LT1002.R2
+V                             6.954m              -589.986m               198.952f
+Power DC Terms:
+PD                           34.324n                17.232n             3.958E-031
+
+DC Pin Currents:
+Ir                            4.936u               -29.207n                 0.002f
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+Instance:            X2.X_LT1002.RO1        X2.X_LT1002.RO2         X2.X_LT1002.RC
+V                            -5.265n                -3.477n                 1.788n
+Power DC Terms:
+PD                            0.001f             3.529E-019               756.354f
+
+DC Pin Currents:
+Ir                         -204.469p              -101.509p               422.956u
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:             X1.X_LT1002.C1         X1.X_LT1002.CE         X1.X_LT1002.C2
+V                          -295.658n              -589.986m                31.372u
+Power DC Terms:
+PS                            0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Ic                            0.000                  0.000                  0.000 
+
+Device Variables:
+ic                            0.000                  0.000                  0.000 
+
+
+Instance:             X2.X_LT1002.C1         X2.X_LT1002.CE         X2.X_LT1002.C2
+V                          -295.697n              -589.986m                -3.477n
+Power DC Terms:
+PS                            0.000                  0.000                  0.000 
+
+DC Pin Currents:
+Ic                            0.000                  0.000                  0.000 
+
+Device Variables:
+ic                            0.000                  0.000                  0.000 
+
+
+
+Operating Point for Devices of Type SPICE Poly
+==============================================
+Instance:           X1.X_LT1002.GCM         X1.X_LT1002.GA         X1.X_LT1002.GB
+V                          596.970p              -596.970p                31.372u
+Power DC Terms:
+PG                       2.662E-020            -2.662E-020                28.804p
+
+DC Pin Currents:
+ISource                    -44.591p               -44.585p              -918.139n
+
+
+Instance:            X1.X_LT1002.GC        X2.X_LT1002.GCM         X2.X_LT1002.GA
+V                          -31.313u              -198.952f               198.952f
+Power DC Terms:
+PG                         231.913u            -8.871E-024             8.871E-024
+
+DC Pin Currents:
+ISource                      7.406                -44.591p               -44.591p
+
+
+Instance:            X2.X_LT1002.GB         X2.X_LT1002.GC
+V                           -3.477n                -1.788n
+Power DC Terms:
+PG                           0.001f               756.354f
+
+DC Pin Currents:
+ISource                    305.988p               422.956u
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                        V1                     V2                     V3
+V                           15.000                -15.000                  0.000 
+Power DC Terms:
+PG                          47.996m                47.997m                 0.000 
+
+DC Pin Currents:
+ISource                     -3.200m                 3.200m              -483.533p
+
+
+Instance:                        V4        X1.X_LT1002.IEE         X1.X_LT1002.VC
+V                            0.000                 14.410                  1.803 
+Power DC Terms:
+PG                           0.000               -142.674u               -23.796p
+
+DC Pin Currents:
+ISource                   -967.066p                 9.901u                13.198p
+
+
+Instance:            X1.X_LT1002.VE         X1.X_LT1002.IP        X2.X_LT1002.IEE
+V                            1.803                 30.000                 14.410 
+Power DC Terms:
+PG                         -23.796p               -47.700m              -142.674u
+
+DC Pin Currents:
+ISource                     13.198p                 1.590m                 9.901u
+
+
+Instance:            X2.X_LT1002.VC         X2.X_LT1002.VE         X2.X_LT1002.IP
+V                            1.803                  1.803                 30.000 
+Power DC Terms:
+PG                         -23.796p               -23.796p               -47.700m
+
+DC Pin Currents:
+ISource                     13.198p                13.198p                 1.590m
+
+

@@ -1,0 +1,243 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                       Transient Analysis of SPARK                        ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Time Range           200M
+Maximum Time Step    100u
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Diode
+==========================================
+Instance:                D1             X1.D1             X1.D2   
+Using model:         1N4007         X1.DCLAMP         X1.DCLAMP   
+LEVEL                     1(*)              1(*)              1(*)
+AF                   1.000 (*)         1.000 (*)         1.000 (*)
+BV                   1.000K           10.000            10.000    
+CJO                 34.328p            0.000 (*)         0.000 (*)
+EG                   1.110 (*)         1.110 (*)         1.110 (*)
+FC                 500.000m(*)       500.000m(*)       500.000m(*)
+IBV                100.000p(*)       100.000p(*)       100.000p(*)
+IBVL                 0.000 (*)         0.000 (*)         0.000 (*)
+IKF                  0.000 (*)         0.000 (*)         0.000 (*)
+IS                 103.950p           10.000f(*)        10.000f(*)
+ISR                  0.000 (*)         0.000 (*)         0.000 (*)
+KF                   0.000 (*)         0.000 (*)         0.000 (*)
+M                  473.117m          500.000m(*)       500.000m(*)
+N                    1.406             1.000 (*)         1.000 (*)
+NBV                  1.000 (*)         1.000 (*)         1.000 (*)
+NBVL                 1.000 (*)         1.000 (*)         1.000 (*)
+NR                   2.000 (*)         2.000 (*)         2.000 (*)
+RL               200.004MEG            0.000 (*)         0.000 (*)
+RS                 139.306m            0.000 (*)         0.000 (*)
+T_ABS             UNDEFINED(*)      UNDEFINED(*)      UNDEFINED(*)
+T_MEASURED        UNDEFINED(*)      UNDEFINED(*)      UNDEFINED(*)
+T_REL_GLOBAL      UNDEFINED(*)      UNDEFINED(*)      UNDEFINED(*)
+T_REL_LOCAL       UNDEFINED(*)      UNDEFINED(*)      UNDEFINED(*)
+TBV1                 0.000 (*)         0.000 (*)         0.000 (*)
+TBV2                 0.000 (*)         0.000 (*)         0.000 (*)
+TIKF                 0.000 (*)         0.000 (*)         0.000 (*)
+TRS1                 0.000 (*)         0.000 (*)         0.000 (*)
+TRS2                 0.000 (*)         0.000 (*)         0.000 (*)
+TT                   7.213n            0.000 (*)         0.000 (*)
+VJ                 700.000m            1.000 (*)         1.000 (*)
+XTI                  3.000 (*)         3.000 (*)         3.000 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node             Voltage  Node             Voltage  Node             Voltage 
+1                 0.000   2            -9.334E-022  3            -9.242E-022 
+4            -9.242E-022  5            -9.242E-022  X1.2              0.000  
+X1.3              0.000   X1.5              0.000   X1.6              2.348m 
+X1.SWITCH    -9.529E-022  X1.8             10.000n  X1.THRESH        90.000  
+X1.SWITCHCHK     10.000n  X1.ION        5.143E-069  X1.12         9.242E-072 
+X1.13         9.242E-022  X1.14         9.242E-066  X1.DIF       -9.242E-074 
+X1.DVDT      -9.242E-072 
+
+DC Operating Point Inductor Current
+===================================
+    Inductor     Current 
+X1.L1             0.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                   D1             X1.D1             X1.D2
+Using model:            1N4007         X1.DCLAMP         X1.DCLAMP
+
+Capacitance Terms:
+CAP                    34.328p            0.000             0.000 
+
+Current Terms:
+ID                  4.668E-030            3.298f            3.298f
+
+Resistance Terms:
+REQ                 127.226MEG          702.557G          702.557G
+
+Voltage Terms:
+VD                  9.334E-022            2.348m            2.348m
+
+Power DC Terms:
+PD                  4.357E-051            0.008f            0.008f
+PS                      0.000             0.000             0.000 
+
+DC Pin Currents:
+Id                  4.668E-030            3.298f            3.298f
+
+Condition:
+State                      OFF               OFF               OFF
+
+Device Variables:
+area                    1.000             1.000             1.000 
+ic                      0.000             0.000             0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                    R1                R2                R3             X1.R1
+V                        0.000         9.213E-024       -9.213E-032            0.000 
+Power DC Terms:
+PD                       0.000         8.487E-052        8.487E-060            0.000 
+
+DC Pin Currents:
+Ir                       0.000         9.213E-029       -9.213E-029            0.000 
+
+Device Variables:
+tc1                      0.000             0.000             0.000             0.000 
+tc2                      0.000             0.000             0.000             0.000 
+
+
+Instance:                 X1.R2             X1.R3             X1.R4             X1.R5
+V                   -9.242E-022            0.000        -2.875E-023            0.000 
+Power DC Terms:
+PD                   8.541E-050            0.000         8.267E-056            0.000 
+
+DC Pin Currents:
+Ir                  -9.242E-029            0.000        -2.875E-033            0.000 
+
+Device Variables:
+tc1                      0.000             0.000             0.000             0.000 
+tc2                      0.000             0.000             0.000             0.000 
+
+
+Instance:                 X1.R6
+V                    9.242E-066
+Power DC Terms:
+PD                   1.000E-106
+
+DC Pin Currents:
+Ir                   1.000E-056
+
+Device Variables:
+tc1                      0.000 
+tc2                      0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                 X1.L1
+V                        0.000 
+Power DC Terms:
+PS                       0.000 
+
+DC Pin Currents:
+Il                       0.000 
+
+Device Variables:
+ic                       0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                    C1                C2             X1.C1             X1.C2
+V                   -9.334E-022       -9.242E-022        9.242E-022        9.529E-022
+Power DC Terms:
+PS                       0.000             0.000             0.000             0.000 
+
+DC Pin Currents:
+Ic                       0.000             0.000             0.000             0.000 
+
+Device Variables:
+ic                       0.000             0.000             0.000             0.000 
+
+
+Instance:                 X1.C3             X1.C4
+V                       10.000n        9.242E-022
+Power DC Terms:
+PS                       0.000             0.000 
+
+DC Pin Currents:
+Ic                       0.000             0.000 
+
+Device Variables:
+ic                       0.000             0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:                X1.E2             X1.E3             X1.E5             X1.E6
+V                      10.000n           90.000         9.242E-022        9.242E-066
+Power DC Terms:
+PG                      0.000             0.000             0.000         8.541E-137
+
+DC Pin Currents:
+ISource                 0.000             0.000             0.000        -9.242E-072
+
+
+Instance:                X1.E8             X1.E9             X1.G1
+V                  -9.242E-072        9.242E-072       -2.875E-023
+Power DC Terms:
+PG                      0.000             0.000        -8.267E-054
+
+DC Pin Currents:
+ISource                 0.000             0.000        -2.875E-031
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                   V1             X1.V1
+V                       0.000             0.000 
+Power DC Terms:
+PG                      0.000             0.000 
+
+DC Pin Currents:
+ISource             9.213E-029            0.000 
+
+
+
+Operating Point for Devices of Type Table Source
+================================================
+Instance:                X1.E4
+V                   5.143E-069
+Power DC Terms:
+PG                      0.000 
+
+DC Pin Currents:
+ISource                 0.000 
+
+

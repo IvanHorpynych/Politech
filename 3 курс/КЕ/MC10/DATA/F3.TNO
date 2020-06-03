@@ -1,0 +1,43 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                         Transient Analysis of F3                         ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Time Range           1u,0
+Maximum Time Step    2e-009
+Number of Points     20
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+DC Operating Point Voltages
+===========================
+Node         Voltage 
+1             4.000  
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:         WAVEFORM
+V                   4.000 
+Power DC Terms:
+PG                  0.000 
+
+DC Pin Currents:
+ISource             0.000 
+
+

@@ -1,0 +1,19 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                     Transient Analysis of S_2FOR_CM                      ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Time Range           450u
+Maximum Time Step    100n
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Leave
+Operating Point      Off
+Operating Point Only Off
+

@@ -1,0 +1,57 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                            DC Analysis of F2                             ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Variable 1 Method Auto
+Variable 1 Name   hc
+Variable 1 Range  10,0
+Variable 2 Method None
+Variable 2 Name   NONE
+Variable 2 Range  NONE
+Temperature       Linear 27
+Number of Points  0.5
+Maximum Change %  5
+Run Options       Normal
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:              HC              HB   
+Using model:           HC              HB   
+A                500.000m        500.000m   
+DC                 1.000           1.000    
+F                4.000MEG        2.000MEG   
+PH                 0.000 (*)       0.000 (*)
+RP                 0.000 (*)       0.000 (*)
+RS                 1.000m(*)       1.000m(*)
+TAU                0.000 (*)       0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Pulse
+==========================================
+Instance:           PULSE   
+Using model:        PULSE   
+P1               100.000n(*)
+P2               110.000n(*)
+P3               500.000n(*)
+P4               510.000n(*)
+P5                 1.000u(*)
+VONE               5.000    
+VZERO              2.000    
+(*) Default Parameter
+
+
+

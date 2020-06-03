@@ -1,0 +1,115 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                         Transient Analysis of F4                         ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Time Range           2m
+Maximum Time Step    4e-005
+Number of Points     20
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:             TR   
+Using model:          TR   
+A                 1.000 (*)
+DC              -10.000    
+F                 1.000K   
+PH                0.000 (*)
+RP                0.000 (*)
+RS                1.000m(*)
+TAU               0.000 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+PLATE       281.244   VEE         500.000   GRID        -10.000  
+CATHODE      10.938m 
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:              RLOAD             RS          TR.RS
+V                  -218.756        -10.938m         0.000 
+Power DC Terms:
+PD                    2.393        119.636u         0.000 
+
+DC Pin Currents:
+Ir                  -10.938m       -10.938m         0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:           T6SN7.C1       T6SN7.C2       T6SN7.C3
+V                  -281.233       -291.244         10.011 
+Power DC Terms:
+PS                    0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                 TR
+Using model:              TR
+V                   -10.000 
+Power DC Terms:
+PG                    0.000 
+
+DC Pin Currents:
+ISource               0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:          T6SN7.TR
+V                 -281.233 
+Power DC Terms:
+PG                  -3.076 
+
+DC Pin Currents:
+ISource            -10.938m
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                V1
+V                  500.000 
+Power DC Terms:
+PG                   5.469 
+
+DC Pin Currents:
+ISource            -10.938m
+
+

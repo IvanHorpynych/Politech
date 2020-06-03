@@ -1,0 +1,19 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                     Transient Analysis of S_BOOST_VM                     ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Time Range           300u
+Maximum Time Step    50n
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Leave
+Operating Point      Off
+Operating Point Only Off
+

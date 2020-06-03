@@ -1,0 +1,18 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                    Transient Analysis of Hold-up Time                    ***
+********************************************************************************
+Limits
+======
+Time Range           200m
+Maximum Time Step    10u
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      Off
+Operating Point Only Off
+

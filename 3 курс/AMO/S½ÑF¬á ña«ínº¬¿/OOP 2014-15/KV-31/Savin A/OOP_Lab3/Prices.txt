@@ -1,0 +1,5 @@
+Firm - ASUS, model - AsScan1, made in 2004, has size 210x297, optical resolution - 300 and costs 300.94.
+Firm - HP, model - HPScan2, made in 2007, has size 210x297, optical resolution - 200 and costs 200.94.
+Firm - HP, model - HPScan1, made in 2006, has size 210x297, optical resolution - 400 and costs 400.94.
+Firm - DELL, model - DScan1, made in 2002, has size 210x297, optical resolution - 500 and costs 500.94.
+Firm - ASUS, model - AsScan2, made in 2005, has size 210x297, optical resolution - 100 and costs 100.94.

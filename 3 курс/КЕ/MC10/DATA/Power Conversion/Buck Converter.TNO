@@ -1,0 +1,195 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                   Transient Analysis of Buck Converter                   ***
+********************************************************************************
+Limits
+======
+Time Range           600u
+Maximum Time Step    100n
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Diode
+==========================================
+Instance:              D1   
+Using model:       1N5822   
+LEVEL                   1(*)
+AF                 1.000 (*)
+BV                40.000    
+CJO              395.386p   
+EG               690.000m   
+FC               500.000m(*)
+IBV              100.000p   
+IBVL               0.000 (*)
+IKF                0.000 (*)
+IS                 3.164u   
+ISR                0.000 (*)
+KF                 0.000 (*)
+M                  1.524    
+N                882.269m   
+NBV                1.000 (*)
+NBVL               1.000 (*)
+NR                 2.000 (*)
+RL               183.180K   
+RS                50.696m   
+T_ABS           UNDEFINED(*)
+T_MEASURED      UNDEFINED(*)
+T_REL_GLOBAL    UNDEFINED(*)
+T_REL_LOCAL     UNDEFINED(*)
+TBV1               0.000 (*)
+TBV2               0.000 (*)
+TIKF               0.000 (*)
+TRS1               0.000 (*)
+TRS2               0.000 (*)
+TT                 0.000 (*)
+VJ                16.024    
+XTI                2.000    
+(*) Default Parameter
+
+
+
+Model parameters for devices of type S
+======================================
+Instance:              S1   
+Using model:       SBREAK   
+ROFF             1.000MEG   
+RON                1.000    
+VH              UNDEFINED(*)
+VOFF               0.000    
+VON                1.000    
+VT              UNDEFINED(*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            12.000   SW_D         59.957u  PWM           0.000  
+4             0.000   OUT          59.957u 
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current 
+L1           11.991u 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                 D1
+Using model:          1N5822
+
+Capacitance Terms:
+CAP                 395.384p
+
+Current Terms:
+ID                   -8.629n
+
+Resistance Terms:
+REQ                   6.957K
+
+Voltage Terms:
+VD                  -59.957u
+
+Power DC Terms:
+PD                  517.336f
+PS                    0.000 
+
+DC Pin Currents:
+Id                   -8.629n
+
+Condition:
+State                    OFF
+
+Device Variables:
+area                  1.000 
+ic                    0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                RESR           RLOAD
+V                      0.000         -59.957u
+Power DC Terms:
+PD                     0.000         718.958p
+
+DC Pin Currents:
+Ir                     0.000         -11.991u
+
+Device Variables:
+tc1                    0.000           0.000 
+tc2                    0.000           0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                  L1
+V                     -0.015f
+Power DC Terms:
+PS                -1.751E-022
+
+DC Pin Currents:
+Il                    11.991u
+
+Device Variables:
+ic                     0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                  C1
+V                    -59.957u
+Power DC Terms:
+PS                     0.000 
+
+DC Pin Currents:
+Ic                     0.000 
+
+Device Variables:
+ic                     0.000 
+
+
+
+Operating Point for Devices of Type S
+=====================================
+Instance:                  S1
+Using model:           SBREAK
+Power DC Terms:
+PD                   143.999u
+
+DC Pin Currents:
+ISource               12.000u
+
+Condition:
+State                     OFF
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                VIN          VCLOCK
+V                    12.000           0.000 
+Power DC Terms:
+PG                  143.999u          0.000 
+
+DC Pin Currents:
+ISource             -12.000u          0.000 
+
+

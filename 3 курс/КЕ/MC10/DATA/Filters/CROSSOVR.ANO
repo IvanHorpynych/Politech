@@ -1,0 +1,132 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                         AC Analysis of CROSSOVR                          ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Frequency Range  Auto 20k,20
+Number of Points 51
+Temperature      Linear 27
+Maximum Change % 1
+Noise Input      1
+Noise Output     2
+Run Options      Normal
+State Variables  Zero
+Operating Point  On
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Capacitor
+==============================================
+Instance:              C1              C2   
+Using model:         CAP1            CAP2   
+C                  1.000           1.000    
+LS              UNDEFINED(*)    UNDEFINED(*)
+RP              UNDEFINED(*)    UNDEFINED(*)
+RS              UNDEFINED(*)    UNDEFINED(*)
+T_ABS           UNDEFINED(*)    UNDEFINED(*)
+T_MEASURED      UNDEFINED(*)    UNDEFINED(*)
+T_REL_GLOBAL    UNDEFINED(*)    UNDEFINED(*)
+T_REL_LOCAL     UNDEFINED(*)    UNDEFINED(*)
+TC1                0.000 (*)       0.000 (*)
+TC2                0.000 (*)       0.000 (*)
+VC1                0.000 (*)       0.000 (*)
+VC2                0.000 (*)       0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:             VAC   
+Using model:          VAC   
+A                  5.000    
+DC                 0.000 (*)
+F                100.000    
+PH                 0.000 (*)
+RP                 0.000 (*)
+RS                 1.000m(*)
+TAU                0.000 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1             0.000   2             0.000   3             0.000  
+HIGH          0.000   LOW           0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+L1            0.000   L2            0.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:              VAC.RS              R1              R2              R3
+V                      0.000           0.000           0.000           0.000 
+Power DC Terms:
+PD                     0.000           0.000           0.000           0.000 
+
+DC Pin Currents:
+Ir                     0.000           0.000           0.000           0.000 
+
+Device Variables:
+tc1                    0.000           0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000           0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                  L1              L2
+V                      0.000           0.000 
+Power DC Terms:
+PS                     0.000           0.000 
+
+DC Pin Currents:
+Il                     0.000           0.000 
+
+Device Variables:
+ic                     0.000           0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                  C1              C2
+Using model:             CAP1            CAP2
+V                      0.000           0.000 
+Power DC Terms:
+PS                     0.000           0.000 
+
+DC Pin Currents:
+Ic                     0.000           0.000 
+
+Device Variables:
+ic                     0.000           0.000 
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                 VAC
+Using model:              VAC
+V                      0.000 
+Power DC Terms:
+PG                     0.000 
+
+DC Pin Currents:
+ISource                0.000 
+
+

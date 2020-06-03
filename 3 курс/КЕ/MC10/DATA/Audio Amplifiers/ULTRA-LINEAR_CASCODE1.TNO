@@ -1,0 +1,19 @@
+********************************************************************************
+***                            Micro-Cap 10.0.9.1                            ***
+***                                                                          ***
+***                                                                          ***
+***               Transient Analysis of ULTRA-LINEAR_CASCODE1                ***
+***                           22/09/2012 10:25:44                            ***
+********************************************************************************
+Limits
+======
+Time Range           4M*1
+Maximum Time Step    1U
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Leave
+Operating Point      Off
+Operating Point Only Off
+

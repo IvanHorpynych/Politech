@@ -1,0 +1,36 @@
+C:\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\obj\x86\Debug\ZI_lab2.Form1.resources
+C:\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\obj\x86\Debug\ZI_lab2.Properties.Resources.resources
+C:\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\bin\Debug\ZI_lab2.exe
+C:\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\bin\Debug\ZI_lab2.pdb
+C:\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\obj\x86\Debug\ZI_lab2.exe
+C:\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\obj\x86\Debug\ZI_lab2.pdb
+C:\Users\Ы\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\obj\x86\Debug\ZI_lab2.exe
+C:\Users\Ы\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\obj\x86\Debug\ZI_lab2.pdb
+C:\Users\Ы\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\bin\Debug\ZI_lab2.exe
+C:\Users\Ы\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\bin\Debug\ZI_lab2.pdb
+C:\Users\Ы\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Ы\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\obj\x86\Debug\ZI_lab2.Form1.resources
+C:\Users\Ы\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\obj\x86\Debug\ZI_lab2.Properties.Resources.resources
+C:\Users\Ы\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Ы\Documents\Visual Studio 2010\Projects\ZI_lab2\ZI_lab2\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\ЗИ\ZI_lab2\ZI_lab2\obj\x86\Debug\ZI_lab2.exe
+D:\ЗИ\ZI_lab2\ZI_lab2\obj\x86\Debug\ZI_lab2.pdb
+D:\ЗИ\ZI_lab2\ZI_lab2\bin\Debug\ZI_lab2.exe
+D:\ЗИ\ZI_lab2\ZI_lab2\bin\Debug\ZI_lab2.pdb
+D:\ЗИ\ZI_lab2\ZI_lab2\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\ЗИ\ZI_lab2\ZI_lab2\obj\x86\Debug\ZI_lab2.Form1.resources
+D:\ЗИ\ZI_lab2\ZI_lab2\obj\x86\Debug\ZI_lab2.Properties.Resources.resources
+D:\ЗИ\ZI_lab2\ZI_lab2\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\ЗИ\ZI_lab2\ZI_lab2\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\ЗИ\lab2examples\ZI_lab2\ZI_lab2\obj\x86\Debug\ZI_lab2.exe
+D:\ЗИ\lab2examples\ZI_lab2\ZI_lab2\obj\x86\Debug\ZI_lab2.pdb
+D:\ЗИ\lab2examples\ZI_lab2\ZI_lab2\bin\Debug\ZI_lab2.exe
+D:\ЗИ\lab2examples\ZI_lab2\ZI_lab2\bin\Debug\ZI_lab2.pdb
+D:\ЗИ\lab2examples\ZI_lab2\ZI_lab2\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\ЗИ\lab2examples\ZI_lab2\ZI_lab2\obj\x86\Debug\ZI_lab2.Form1.resources
+D:\ЗИ\lab2examples\ZI_lab2\ZI_lab2\obj\x86\Debug\ZI_lab2.Properties.Resources.resources
+D:\ЗИ\lab2examples\ZI_lab2\ZI_lab2\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\ЗИ\lab2examples\ZI_lab2\ZI_lab2\obj\x86\Debug\GenerateResource.write.1.tlog

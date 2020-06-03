@@ -1,0 +1,526 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                          DC Analysis of POTDEMO                          ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Variable 1 Method Auto
+Variable 1 Name   v1
+Variable 1 Range  10,0,.5
+Variable 2 Method None
+Variable 2 Name   NONE
+Variable 2 Range  NONE
+Temperature       Linear 27
+Number of Points  0
+Maximum Change %  5
+Run Options       Normal
+
+Stepping Options
+================
+Stepping is Nested
+
+Step What  X1.R1 Value
+From       1K
+To         9K
+Step Value 1K
+Method     Linear
+
+
+
+*****************************************************
+***                Temperature=27                 ***
+***                   X1.R1=1K                    ***
+*****************************************************
+
+Temperature=27 X1.R1=1K
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:               V1   
+Using model:          1MHZ   
+A                   5.000    
+DC                  0.000 (*)
+F                   1.000K   
+PH                  0.000 (*)
+RP                  0.000 (*)
+RS                  1.000m(*)
+TAU                 0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Opamp
+==========================================
+Instance:               X2   
+Using model:         LF351   
+LEVEL                    2   
+A                 100.000K   
+C                  10.000p   
+CMRR              100.000K(*)
+GBW               4.000MEG   
+IBIAS              50.000p   
+IOFF               25.000p   
+IOSC               20.000m(*)
+PD                 25.000m(*)
+PM                 60.000 (*)
+ROUTAC             50.000    
+ROUTDC             75.000    
+SRN              13.000MEG   
+SRP              13.000MEG   
+T_ABS            UNDEFINED(*)
+T_MEASURED       UNDEFINED(*)
+T_REL_GLOBAL     UNDEFINED(*)
+T_REL_LOCAL      UNDEFINED(*)
+TYPE                3.000    
+VCC                18.000    
+VEE               -18.000    
+VNS               -14.000    
+VOFF                5.000m   
+VPS                14.000    
+(*) Default Parameter
+
+
+
+
+*****************************************************
+***                Temperature=27                 ***
+***                   X1.R1=2K                    ***
+*****************************************************
+
+Temperature=27 X1.R1=2K
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:               V1   
+Using model:          1MHZ   
+A                   5.000    
+DC                  0.000 (*)
+F                   1.000K   
+PH                  0.000 (*)
+RP                  0.000 (*)
+RS                  1.000m(*)
+TAU                 0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Opamp
+==========================================
+Instance:               X2   
+Using model:         LF351   
+LEVEL                    2   
+A                 100.000K   
+C                  10.000p   
+CMRR              100.000K(*)
+GBW               4.000MEG   
+IBIAS              50.000p   
+IOFF               25.000p   
+IOSC               20.000m(*)
+PD                 25.000m(*)
+PM                 60.000 (*)
+ROUTAC             50.000    
+ROUTDC             75.000    
+SRN              13.000MEG   
+SRP              13.000MEG   
+T_ABS            UNDEFINED(*)
+T_MEASURED       UNDEFINED(*)
+T_REL_GLOBAL     UNDEFINED(*)
+T_REL_LOCAL      UNDEFINED(*)
+TYPE                3.000    
+VCC                18.000    
+VEE               -18.000    
+VNS               -14.000    
+VOFF                5.000m   
+VPS                14.000    
+(*) Default Parameter
+
+
+
+
+*****************************************************
+***                Temperature=27                 ***
+***                   X1.R1=3K                    ***
+*****************************************************
+
+Temperature=27 X1.R1=3K
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:               V1   
+Using model:          1MHZ   
+A                   5.000    
+DC                  0.000 (*)
+F                   1.000K   
+PH                  0.000 (*)
+RP                  0.000 (*)
+RS                  1.000m(*)
+TAU                 0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Opamp
+==========================================
+Instance:               X2   
+Using model:         LF351   
+LEVEL                    2   
+A                 100.000K   
+C                  10.000p   
+CMRR              100.000K(*)
+GBW               4.000MEG   
+IBIAS              50.000p   
+IOFF               25.000p   
+IOSC               20.000m(*)
+PD                 25.000m(*)
+PM                 60.000 (*)
+ROUTAC             50.000    
+ROUTDC             75.000    
+SRN              13.000MEG   
+SRP              13.000MEG   
+T_ABS            UNDEFINED(*)
+T_MEASURED       UNDEFINED(*)
+T_REL_GLOBAL     UNDEFINED(*)
+T_REL_LOCAL      UNDEFINED(*)
+TYPE                3.000    
+VCC                18.000    
+VEE               -18.000    
+VNS               -14.000    
+VOFF                5.000m   
+VPS                14.000    
+(*) Default Parameter
+
+
+
+
+*****************************************************
+***                Temperature=27                 ***
+***                   X1.R1=4K                    ***
+*****************************************************
+
+Temperature=27 X1.R1=4K
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:               V1   
+Using model:          1MHZ   
+A                   5.000    
+DC                  0.000 (*)
+F                   1.000K   
+PH                  0.000 (*)
+RP                  0.000 (*)
+RS                  1.000m(*)
+TAU                 0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Opamp
+==========================================
+Instance:               X2   
+Using model:         LF351   
+LEVEL                    2   
+A                 100.000K   
+C                  10.000p   
+CMRR              100.000K(*)
+GBW               4.000MEG   
+IBIAS              50.000p   
+IOFF               25.000p   
+IOSC               20.000m(*)
+PD                 25.000m(*)
+PM                 60.000 (*)
+ROUTAC             50.000    
+ROUTDC             75.000    
+SRN              13.000MEG   
+SRP              13.000MEG   
+T_ABS            UNDEFINED(*)
+T_MEASURED       UNDEFINED(*)
+T_REL_GLOBAL     UNDEFINED(*)
+T_REL_LOCAL      UNDEFINED(*)
+TYPE                3.000    
+VCC                18.000    
+VEE               -18.000    
+VNS               -14.000    
+VOFF                5.000m   
+VPS                14.000    
+(*) Default Parameter
+
+
+
+
+*****************************************************
+***                Temperature=27                 ***
+***                   X1.R1=5K                    ***
+*****************************************************
+
+Temperature=27 X1.R1=5K
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:               V1   
+Using model:          1MHZ   
+A                   5.000    
+DC                  0.000 (*)
+F                   1.000K   
+PH                  0.000 (*)
+RP                  0.000 (*)
+RS                  1.000m(*)
+TAU                 0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Opamp
+==========================================
+Instance:               X2   
+Using model:         LF351   
+LEVEL                    2   
+A                 100.000K   
+C                  10.000p   
+CMRR              100.000K(*)
+GBW               4.000MEG   
+IBIAS              50.000p   
+IOFF               25.000p   
+IOSC               20.000m(*)
+PD                 25.000m(*)
+PM                 60.000 (*)
+ROUTAC             50.000    
+ROUTDC             75.000    
+SRN              13.000MEG   
+SRP              13.000MEG   
+T_ABS            UNDEFINED(*)
+T_MEASURED       UNDEFINED(*)
+T_REL_GLOBAL     UNDEFINED(*)
+T_REL_LOCAL      UNDEFINED(*)
+TYPE                3.000    
+VCC                18.000    
+VEE               -18.000    
+VNS               -14.000    
+VOFF                5.000m   
+VPS                14.000    
+(*) Default Parameter
+
+
+
+
+*****************************************************
+***                Temperature=27                 ***
+***                   X1.R1=6K                    ***
+*****************************************************
+
+Temperature=27 X1.R1=6K
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:               V1   
+Using model:          1MHZ   
+A                   5.000    
+DC                  0.000 (*)
+F                   1.000K   
+PH                  0.000 (*)
+RP                  0.000 (*)
+RS                  1.000m(*)
+TAU                 0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Opamp
+==========================================
+Instance:               X2   
+Using model:         LF351   
+LEVEL                    2   
+A                 100.000K   
+C                  10.000p   
+CMRR              100.000K(*)
+GBW               4.000MEG   
+IBIAS              50.000p   
+IOFF               25.000p   
+IOSC               20.000m(*)
+PD                 25.000m(*)
+PM                 60.000 (*)
+ROUTAC             50.000    
+ROUTDC             75.000    
+SRN              13.000MEG   
+SRP              13.000MEG   
+T_ABS            UNDEFINED(*)
+T_MEASURED       UNDEFINED(*)
+T_REL_GLOBAL     UNDEFINED(*)
+T_REL_LOCAL      UNDEFINED(*)
+TYPE                3.000    
+VCC                18.000    
+VEE               -18.000    
+VNS               -14.000    
+VOFF                5.000m   
+VPS                14.000    
+(*) Default Parameter
+
+
+
+
+*****************************************************
+***                Temperature=27                 ***
+***                   X1.R1=7K                    ***
+*****************************************************
+
+Temperature=27 X1.R1=7K
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:               V1   
+Using model:          1MHZ   
+A                   5.000    
+DC                  0.000 (*)
+F                   1.000K   
+PH                  0.000 (*)
+RP                  0.000 (*)
+RS                  1.000m(*)
+TAU                 0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Opamp
+==========================================
+Instance:               X2   
+Using model:         LF351   
+LEVEL                    2   
+A                 100.000K   
+C                  10.000p   
+CMRR              100.000K(*)
+GBW               4.000MEG   
+IBIAS              50.000p   
+IOFF               25.000p   
+IOSC               20.000m(*)
+PD                 25.000m(*)
+PM                 60.000 (*)
+ROUTAC             50.000    
+ROUTDC             75.000    
+SRN              13.000MEG   
+SRP              13.000MEG   
+T_ABS            UNDEFINED(*)
+T_MEASURED       UNDEFINED(*)
+T_REL_GLOBAL     UNDEFINED(*)
+T_REL_LOCAL      UNDEFINED(*)
+TYPE                3.000    
+VCC                18.000    
+VEE               -18.000    
+VNS               -14.000    
+VOFF                5.000m   
+VPS                14.000    
+(*) Default Parameter
+
+
+
+
+*****************************************************
+***                Temperature=27                 ***
+***                   X1.R1=8K                    ***
+*****************************************************
+
+Temperature=27 X1.R1=8K
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:               V1   
+Using model:          1MHZ   
+A                   5.000    
+DC                  0.000 (*)
+F                   1.000K   
+PH                  0.000 (*)
+RP                  0.000 (*)
+RS                  1.000m(*)
+TAU                 0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Opamp
+==========================================
+Instance:               X2   
+Using model:         LF351   
+LEVEL                    2   
+A                 100.000K   
+C                  10.000p   
+CMRR              100.000K(*)
+GBW               4.000MEG   
+IBIAS              50.000p   
+IOFF               25.000p   
+IOSC               20.000m(*)
+PD                 25.000m(*)
+PM                 60.000 (*)
+ROUTAC             50.000    
+ROUTDC             75.000    
+SRN              13.000MEG   
+SRP              13.000MEG   
+T_ABS            UNDEFINED(*)
+T_MEASURED       UNDEFINED(*)
+T_REL_GLOBAL     UNDEFINED(*)
+T_REL_LOCAL      UNDEFINED(*)
+TYPE                3.000    
+VCC                18.000    
+VEE               -18.000    
+VNS               -14.000    
+VOFF                5.000m   
+VPS                14.000    
+(*) Default Parameter
+
+
+
+
+*****************************************************
+***                Temperature=27                 ***
+***                   X1.R1=9K                    ***
+*****************************************************
+
+Temperature=27 X1.R1=9K
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:               V1   
+Using model:          1MHZ   
+A                   5.000    
+DC                  0.000 (*)
+F                   1.000K   
+PH                  0.000 (*)
+RP                  0.000 (*)
+RS                  1.000m(*)
+TAU                 0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Opamp
+==========================================
+Instance:               X2   
+Using model:         LF351   
+LEVEL                    2   
+A                 100.000K   
+C                  10.000p   
+CMRR              100.000K(*)
+GBW               4.000MEG   
+IBIAS              50.000p   
+IOFF               25.000p   
+IOSC               20.000m(*)
+PD                 25.000m(*)
+PM                 60.000 (*)
+ROUTAC             50.000    
+ROUTDC             75.000    
+SRN              13.000MEG   
+SRP              13.000MEG   
+T_ABS            UNDEFINED(*)
+T_MEASURED       UNDEFINED(*)
+T_REL_GLOBAL     UNDEFINED(*)
+T_REL_LOCAL      UNDEFINED(*)
+TYPE                3.000    
+VCC                18.000    
+VEE               -18.000    
+VNS               -14.000    
+VOFF                5.000m   
+VPS                14.000    
+(*) Default Parameter
+
+
+

@@ -1,0 +1,44 @@
+G:\ZI\ZI\obj\Debug\ResolveAssemblyReference.cache
+G:\ZI\ZI\obj\Debug\ZIj.csproj.GenerateResource.Cache
+G:\ZI\ZI\obj\Debug\ZI.exe
+G:\ZI\ZI\obj\Debug\ZI.pdb
+G:\Copy of ZI\ZI\obj\Debug\ZI.exe
+G:\Copy of ZI\ZI\obj\Debug\ZI.pdb
+G:\Copy of ZI\ZI\obj\Debug\ResolveAssemblyReference.cache
+G:\Copy of ZI\ZI\obj\Debug\ZI.Form1.resources
+G:\Copy of ZI\ZI\obj\Debug\ZI.Properties.Resources.resources
+G:\Copy of ZI\ZI\obj\Debug\ZIj.csproj.GenerateResource.Cache
+G:\Copy of ZI\ZI\bin\Debug\ZI.exe
+G:\Copy of ZI\ZI\bin\Debug\ZI.pdb
+E:\Copy of ZI\ZI\obj\Debug\ZI.exe
+E:\Copy of ZI\ZI\obj\Debug\ZI.pdb
+E:\Copy of ZI\ZI\bin\Debug\ZI.exe
+E:\Copy of ZI\ZI\bin\Debug\ZI.pdb
+E:\Copy of ZI\ZI\obj\Debug\ResolveAssemblyReference.cache
+E:\Copy of ZI\ZI\obj\Debug\ZI.Form1.resources
+E:\Copy of ZI\ZI\obj\Debug\ZI.Properties.Resources.resources
+E:\Copy of ZI\ZI\obj\Debug\ZIj.csproj.GenerateResource.Cache
+M:\Copy of ZI\ZI\obj\Debug\ZI.exe
+M:\Copy of ZI\ZI\obj\Debug\ZI.pdb
+M:\Copy of ZI\ZI\bin\Debug\ZI.exe
+M:\Copy of ZI\ZI\bin\Debug\ZI.pdb
+M:\Copy of ZI\ZI\obj\Debug\ResolveAssemblyReference.cache
+M:\Copy of ZI\ZI\obj\Debug\ZI.Form1.resources
+M:\Copy of ZI\ZI\obj\Debug\ZI.Properties.Resources.resources
+M:\Copy of ZI\ZI\obj\Debug\ZIj.csproj.GenerateResource.Cache
+M:\new ZI\ZI\obj\Debug\ZI.exe
+M:\new ZI\ZI\obj\Debug\ZI.pdb
+M:\new ZI\ZI\obj\Debug\ResolveAssemblyReference.cache
+M:\new ZI\ZI\obj\Debug\ZI.Form1.resources
+M:\new ZI\ZI\obj\Debug\ZI.Properties.Resources.resources
+M:\new ZI\ZI\obj\Debug\ZIj.csproj.GenerateResource.Cache
+M:\new ZI\ZI\bin\Debug\ZI.exe
+M:\new ZI\ZI\bin\Debug\ZI.pdb
+E:\new ZI\ZI\obj\Debug\ZI.exe
+E:\new ZI\ZI\obj\Debug\ZI.pdb
+E:\new ZI\ZI\bin\Debug\ZI.exe
+E:\new ZI\ZI\bin\Debug\ZI.pdb
+E:\new ZI\ZI\obj\Debug\ResolveAssemblyReference.cache
+E:\new ZI\ZI\obj\Debug\ZI.Form1.resources
+E:\new ZI\ZI\obj\Debug\ZI.Properties.Resources.resources
+E:\new ZI\ZI\obj\Debug\ZIj.csproj.GenerateResource.Cache

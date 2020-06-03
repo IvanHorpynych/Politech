@@ -1,0 +1,9 @@
+D:\Периферійні пристрої\PP7\PP7\bin\Debug\PP7.exe
+D:\Периферійні пристрої\PP7\PP7\bin\Debug\PP7.pdb
+D:\Периферійні пристрої\PP7\PP7\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Периферійні пристрої\PP7\PP7\obj\x86\Debug\PP7.Form1.resources
+D:\Периферійні пристрої\PP7\PP7\obj\x86\Debug\PP7.Properties.Resources.resources
+D:\Периферійні пристрої\PP7\PP7\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Периферійні пристрої\PP7\PP7\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Периферійні пристрої\PP7\PP7\obj\x86\Debug\PP7.exe
+D:\Периферійні пристрої\PP7\PP7\obj\x86\Debug\PP7.pdb

@@ -1,0 +1,19 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                      Transient Analysis of SYSTEM1                       ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Time Range           10
+Maximum Time Step    10m
+Number of Points     20
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      Off
+Operating Point Only Off
+

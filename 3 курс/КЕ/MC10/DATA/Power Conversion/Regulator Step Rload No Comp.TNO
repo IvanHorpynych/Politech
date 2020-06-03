@@ -1,0 +1,84 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***            Transient Analysis of Regulator Step Rload No Comp            ***
+********************************************************************************
+Limits
+======
+Time Range           20u
+Maximum Time Step    100n
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+IN           15.000   2           750.000m  3             4.342  
+4             5.092   OUT           4.991   6           434.157m 
+7             2.500   8             2.496  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:              RSOL        RLOWER        RUPPER
+V                 -100.250m       -2.496        -2.496 
+Power DC Terms:
+PD                  10.050m      622.831u      622.831u
+
+DC Pin Currents:
+Ir                -100.250m     -249.566u     -249.566u
+
+Device Variables:
+tc1                  0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:               E1         X1.E1         X3.E1
+V                 434.157m      750.000m        4.342 
+Power DC Terms:
+PG                  0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:            X2.E1
+V                   5.092 
+Power DC Terms:
+PG                510.427m
+
+DC Pin Currents:
+ISource          -100.250m
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:              VIN          VREF            I1
+V                  15.000         2.500        -4.991 
+Power DC Terms:
+PG                  0.000         0.000      -499.132m
+
+DC Pin Currents:
+ISource             0.000         0.000      -100.000m
+
+

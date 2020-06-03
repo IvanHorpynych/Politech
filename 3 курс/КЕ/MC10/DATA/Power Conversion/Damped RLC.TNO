@@ -1,0 +1,106 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                     Transient Analysis of Damped RLC                     ***
+********************************************************************************
+Limits
+======
+Time Range           40m
+Maximum Time Step    1u
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+VIN         150.000   2           149.960   VOUT        149.960  
+4             0.000   5             0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current 
+L1          397.456m 
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                R1            R2         RDAMP
+V                  -39.746m        0.000         0.000 
+Power DC Terms:
+PD                  15.797m        0.000         0.000 
+
+DC Pin Currents:
+Ir                -397.456m        0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                L1
+V                   28.422f
+Power DC Terms:
+PS                  11.296f
+
+DC Pin Currents:
+Il                 397.456m
+
+Device Variables:
+ic                   0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                C1         CDAMP
+V                  149.960       149.960 
+Power DC Terms:
+PS                   0.000         0.000 
+
+DC Pin Currents:
+Ic                   0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:               G1
+V                 149.960 
+Power DC Terms:
+PG                -59.603 
+
+DC Pin Currents:
+ISource           397.456m
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               V1
+V                 150.000 
+Power DC Terms:
+PG                 59.618 
+
+DC Pin Currents:
+ISource          -397.456m
+
+

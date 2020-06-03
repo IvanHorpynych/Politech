@@ -1,0 +1,87 @@
+                                Micro-Cap 7.0.0
+
+
+                        Transient Analysis of KURS_2INE
+
+Time Range           5u
+Maximum Time Step    0
+Number of Points     51
+Temperature          Linear 27
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+                                Temperature=27 
+
+
+                           DC Operating Point Values
+
+                          DC Operating Point Voltages
+
+Node         Voltage  Node         Voltage  Node         Voltage 
+1           181.272m  2           942.398m  3           164.000m 
+4           164.000m  5             4.372   6             5.000  
+
+
+                          Bipolar Junction Transistors
+                   Q1             Q2             Q3
+Model           KT315          KT315          KT315
+IB           614.788u       614.788u        -4.188p 
+IC           -30.205u       -30.205u         8.674p 
+VBE          778.398m       778.398m       181.272m 
+VBC          761.127m       761.127m        -4.191  
+VCE           17.272m        17.272m         4.372  
+BETADC       -49.130m       -49.130m        -2.071  
+GM            22.147m        22.147m         4.292p 
+RPI            2.200K         2.200K        18.897T 
+RX             0.000          0.000          0.000  
+RO            42.890         42.890        999.976G 
+CPI            0.000          0.000          0.000  
+CMU            0.000          0.000          0.000  
+CBX            0.000          0.000          0.000  
+CJS            0.000          0.000          0.000  
+BETAAC        48.716         48.716         81.102  
+FT         3.525E+017     3.525E+017        68.305M 
+
+Power Terms:
+PD           478.028u       478.028u        37.165p 
+PS             0.000          0.000          0.000  
+
+Pin Currents:
+Ib           614.788u       614.788u        -4.188p 
+Ic           -30.205u       -30.205u         8.674p 
+Ie          -584.584u      -584.584u        -4.486p 
+Is             0.000          0.000          0.000  
+
+Condition:
+State             SAT            SAT            OFF 
+
+
+                                Resistor Devices
+                   RC             RB             RN             RZ
+Power Terms:
+PD           703.815u         4.989m         4.902m        10.953u 
+
+Pin Currents:
+Ir             1.121m         1.230m         1.121m        60.424u 
+
+
+                              Pulse Source Devices
+                PULS1          PULS2
+Model          P0_5_1           P0_5
+Power Terms:
+PG           -95.871u       -95.871u 
+
+Pin Currents:
+ISource      584.576u       584.576u 
+
+
+                              SPICE Source Devices
+                    E
+Power Terms:
+PG            11.753m 
+
+Pin Currents:
+ISource       -2.351m 
+

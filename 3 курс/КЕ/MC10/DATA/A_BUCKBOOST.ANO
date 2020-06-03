@@ -1,0 +1,1099 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                        AC Analysis of A_BUCKBOOST                        ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Frequency Range  Auto 1E6,10
+Number of Points 500
+Temperature      Linear 27
+Maximum Change % 1
+Noise Input      NONE
+Noise Output     2
+Run Options      Normal
+State Variables  Zero
+Operating Point  On
+
+Stepping Options
+================
+Stepping is Nested
+
+Step What  MCV 
+From       1, 1.5, 2, 3, 4, 5, 10
+Method     List
+
+
+
+*****************************************************
+***                Temperature=27                 ***
+***                     MCV=1                     ***
+*****************************************************
+
+Temperature=27 MCV=1
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1             0.000   OUT           0.000   3             0.000  
+4             0.000   5             0.000   6             0.000  
+7           444.444m  X3.X1.2       0.000   X3.X1.3       0.000  
+X3.X1.1       0.000   X3.X2.3       0.000   X3.X1.7       0.000  
+X3.X1.9       0.000   X3.X1.10      0.000   X3.X1.12      0.000  
+X3.X1.13      0.000   X3.X1.14      0.000   X3.X1.15      0.000  
+X3.X1.16      0.000   X3.X1.17      0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+X3.L          0.000   X3.X1.L1      0.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:              RESR         RLOAD            R4            R5            R3
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:             X3.RL     X3.X1.RVC      X3.X1.RE      X3.X1.R2      X3.X1.RD
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:         X3.X1.RFM
+V                    0.000 
+Power DC Terms:
+PD                   0.000 
+
+DC Pin Currents:
+Ir                   0.000 
+
+Device Variables:
+tc1                  0.000 
+tc2                  0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:              X3.L      X3.X1.L1
+V                    0.000         0.000 
+Power DC Terms:
+PS                   0.000         0.000 
+
+DC Pin Currents:
+Il                   0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:              COUT            C2            C3      X3.X1.C1      X3.X1.C2
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PS                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ic                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:            X2.E1
+V                   0.000 
+Power DC Terms:
+PG                  0.000 
+
+DC Pin Currents:
+ISource             0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:           X3.EBD     X3.X2.GXF     X3.X2.EXF      X3.X1.E2      X3.X1.G1
+V                 444.444m        0.000         0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:        X3.X1.GXF     X3.X1.EXF      X3.X1.ED     X3.X1.EFM
+V                   0.000         0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Poly
+==============================================
+Instance:         X3.X1.HI      X3.X1.E1
+V                   0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               VG     X3.X2.VXF     X3.X1.VXF
+V                   0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000 
+
+
+
+*****************************************************
+***                Temperature=27                 ***
+***                    MCV=1.5                    ***
+*****************************************************
+
+Temperature=27 MCV=1.5
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1             0.000   OUT           0.000   3             0.000  
+4             0.000   5             0.000   6             0.000  
+7           444.444m  X3.X1.2       0.000   X3.X1.3       0.000  
+X3.X1.1       0.000   X3.X2.3       0.000   X3.X1.7       0.000  
+X3.X1.9       0.000   X3.X1.10      0.000   X3.X1.12      0.000  
+X3.X1.13      0.000   X3.X1.14      0.000   X3.X1.15      0.000  
+X3.X1.16      0.000   X3.X1.17      0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+X3.L          0.000   X3.X1.L1      0.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:              RESR         RLOAD            R4            R5            R3
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:             X3.RL     X3.X1.RVC      X3.X1.RE      X3.X1.R2      X3.X1.RD
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:         X3.X1.RFM
+V                    0.000 
+Power DC Terms:
+PD                   0.000 
+
+DC Pin Currents:
+Ir                   0.000 
+
+Device Variables:
+tc1                  0.000 
+tc2                  0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:              X3.L      X3.X1.L1
+V                    0.000         0.000 
+Power DC Terms:
+PS                   0.000         0.000 
+
+DC Pin Currents:
+Il                   0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:              COUT            C2            C3      X3.X1.C1      X3.X1.C2
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PS                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ic                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:            X2.E1
+V                   0.000 
+Power DC Terms:
+PG                  0.000 
+
+DC Pin Currents:
+ISource             0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:           X3.EBD     X3.X2.GXF     X3.X2.EXF      X3.X1.E2      X3.X1.G1
+V                 444.444m        0.000         0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:        X3.X1.GXF     X3.X1.EXF      X3.X1.ED     X3.X1.EFM
+V                   0.000         0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Poly
+==============================================
+Instance:         X3.X1.HI      X3.X1.E1
+V                   0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               VG     X3.X2.VXF     X3.X1.VXF
+V                   0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000 
+
+
+
+*****************************************************
+***                Temperature=27                 ***
+***                     MCV=2                     ***
+*****************************************************
+
+Temperature=27 MCV=2
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1             0.000   OUT           0.000   3             0.000  
+4             0.000   5             0.000   6             0.000  
+7           444.444m  X3.X1.2       0.000   X3.X1.3       0.000  
+X3.X1.1       0.000   X3.X2.3       0.000   X3.X1.7       0.000  
+X3.X1.9       0.000   X3.X1.10      0.000   X3.X1.12      0.000  
+X3.X1.13      0.000   X3.X1.14      0.000   X3.X1.15      0.000  
+X3.X1.16      0.000   X3.X1.17      0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+X3.L          0.000   X3.X1.L1      0.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:              RESR         RLOAD            R4            R5            R3
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:             X3.RL     X3.X1.RVC      X3.X1.RE      X3.X1.R2      X3.X1.RD
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:         X3.X1.RFM
+V                    0.000 
+Power DC Terms:
+PD                   0.000 
+
+DC Pin Currents:
+Ir                   0.000 
+
+Device Variables:
+tc1                  0.000 
+tc2                  0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:              X3.L      X3.X1.L1
+V                    0.000         0.000 
+Power DC Terms:
+PS                   0.000         0.000 
+
+DC Pin Currents:
+Il                   0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:              COUT            C2            C3      X3.X1.C1      X3.X1.C2
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PS                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ic                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:            X2.E1
+V                   0.000 
+Power DC Terms:
+PG                  0.000 
+
+DC Pin Currents:
+ISource             0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:           X3.EBD     X3.X2.GXF     X3.X2.EXF      X3.X1.E2      X3.X1.G1
+V                 444.444m        0.000         0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:        X3.X1.GXF     X3.X1.EXF      X3.X1.ED     X3.X1.EFM
+V                   0.000         0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Poly
+==============================================
+Instance:         X3.X1.HI      X3.X1.E1
+V                   0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               VG     X3.X2.VXF     X3.X1.VXF
+V                   0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000 
+
+
+
+*****************************************************
+***                Temperature=27                 ***
+***                     MCV=3                     ***
+*****************************************************
+
+Temperature=27 MCV=3
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1             0.000   OUT           0.000   3             0.000  
+4             0.000   5             0.000   6             0.000  
+7           444.444m  X3.X1.2       0.000   X3.X1.3       0.000  
+X3.X1.1       0.000   X3.X2.3       0.000   X3.X1.7       0.000  
+X3.X1.9       0.000   X3.X1.10      0.000   X3.X1.12      0.000  
+X3.X1.13      0.000   X3.X1.14      0.000   X3.X1.15      0.000  
+X3.X1.16      0.000   X3.X1.17      0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+X3.L          0.000   X3.X1.L1      0.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:              RESR         RLOAD            R4            R5            R3
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:             X3.RL     X3.X1.RVC      X3.X1.RE      X3.X1.R2      X3.X1.RD
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:         X3.X1.RFM
+V                    0.000 
+Power DC Terms:
+PD                   0.000 
+
+DC Pin Currents:
+Ir                   0.000 
+
+Device Variables:
+tc1                  0.000 
+tc2                  0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:              X3.L      X3.X1.L1
+V                    0.000         0.000 
+Power DC Terms:
+PS                   0.000         0.000 
+
+DC Pin Currents:
+Il                   0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:              COUT            C2            C3      X3.X1.C1      X3.X1.C2
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PS                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ic                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:            X2.E1
+V                   0.000 
+Power DC Terms:
+PG                  0.000 
+
+DC Pin Currents:
+ISource             0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:           X3.EBD     X3.X2.GXF     X3.X2.EXF      X3.X1.E2      X3.X1.G1
+V                 444.444m        0.000         0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:        X3.X1.GXF     X3.X1.EXF      X3.X1.ED     X3.X1.EFM
+V                   0.000         0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Poly
+==============================================
+Instance:         X3.X1.HI      X3.X1.E1
+V                   0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               VG     X3.X2.VXF     X3.X1.VXF
+V                   0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000 
+
+
+
+*****************************************************
+***                Temperature=27                 ***
+***                     MCV=4                     ***
+*****************************************************
+
+Temperature=27 MCV=4
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1             0.000   OUT           0.000   3             0.000  
+4             0.000   5             0.000   6             0.000  
+7           444.444m  X3.X1.2       0.000   X3.X1.3       0.000  
+X3.X1.1       0.000   X3.X2.3       0.000   X3.X1.7       0.000  
+X3.X1.9       0.000   X3.X1.10      0.000   X3.X1.12      0.000  
+X3.X1.13      0.000   X3.X1.14      0.000   X3.X1.15      0.000  
+X3.X1.16      0.000   X3.X1.17      0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+X3.L          0.000   X3.X1.L1      0.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:              RESR         RLOAD            R4            R5            R3
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:             X3.RL     X3.X1.RVC      X3.X1.RE      X3.X1.R2      X3.X1.RD
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:         X3.X1.RFM
+V                    0.000 
+Power DC Terms:
+PD                   0.000 
+
+DC Pin Currents:
+Ir                   0.000 
+
+Device Variables:
+tc1                  0.000 
+tc2                  0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:              X3.L      X3.X1.L1
+V                    0.000         0.000 
+Power DC Terms:
+PS                   0.000         0.000 
+
+DC Pin Currents:
+Il                   0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:              COUT            C2            C3      X3.X1.C1      X3.X1.C2
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PS                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ic                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:            X2.E1
+V                   0.000 
+Power DC Terms:
+PG                  0.000 
+
+DC Pin Currents:
+ISource             0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:           X3.EBD     X3.X2.GXF     X3.X2.EXF      X3.X1.E2      X3.X1.G1
+V                 444.444m        0.000         0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:        X3.X1.GXF     X3.X1.EXF      X3.X1.ED     X3.X1.EFM
+V                   0.000         0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Poly
+==============================================
+Instance:         X3.X1.HI      X3.X1.E1
+V                   0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               VG     X3.X2.VXF     X3.X1.VXF
+V                   0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000 
+
+
+
+*****************************************************
+***                Temperature=27                 ***
+***                     MCV=5                     ***
+*****************************************************
+
+Temperature=27 MCV=5
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1             0.000   OUT           0.000   3             0.000  
+4             0.000   5             0.000   6             0.000  
+7           444.444m  X3.X1.2       0.000   X3.X1.3       0.000  
+X3.X1.1       0.000   X3.X2.3       0.000   X3.X1.7       0.000  
+X3.X1.9       0.000   X3.X1.10      0.000   X3.X1.12      0.000  
+X3.X1.13      0.000   X3.X1.14      0.000   X3.X1.15      0.000  
+X3.X1.16      0.000   X3.X1.17      0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+X3.L          0.000   X3.X1.L1      0.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:              RESR         RLOAD            R4            R5            R3
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:             X3.RL     X3.X1.RVC      X3.X1.RE      X3.X1.R2      X3.X1.RD
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:         X3.X1.RFM
+V                    0.000 
+Power DC Terms:
+PD                   0.000 
+
+DC Pin Currents:
+Ir                   0.000 
+
+Device Variables:
+tc1                  0.000 
+tc2                  0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:              X3.L      X3.X1.L1
+V                    0.000         0.000 
+Power DC Terms:
+PS                   0.000         0.000 
+
+DC Pin Currents:
+Il                   0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:              COUT            C2            C3      X3.X1.C1      X3.X1.C2
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PS                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ic                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:            X2.E1
+V                   0.000 
+Power DC Terms:
+PG                  0.000 
+
+DC Pin Currents:
+ISource             0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:           X3.EBD     X3.X2.GXF     X3.X2.EXF      X3.X1.E2      X3.X1.G1
+V                 444.444m        0.000         0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:        X3.X1.GXF     X3.X1.EXF      X3.X1.ED     X3.X1.EFM
+V                   0.000         0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Poly
+==============================================
+Instance:         X3.X1.HI      X3.X1.E1
+V                   0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               VG     X3.X2.VXF     X3.X1.VXF
+V                   0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000 
+
+
+
+*****************************************************
+***                Temperature=27                 ***
+***                    MCV=10                     ***
+*****************************************************
+
+Temperature=27 MCV=10
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1             0.000   OUT           0.000   3             0.000  
+4             0.000   5             0.000   6             0.000  
+7           444.444m  X3.X1.2       0.000   X3.X1.3       0.000  
+X3.X1.1       0.000   X3.X2.3       0.000   X3.X1.7       0.000  
+X3.X1.9       0.000   X3.X1.10      0.000   X3.X1.12      0.000  
+X3.X1.13      0.000   X3.X1.14      0.000   X3.X1.15      0.000  
+X3.X1.16      0.000   X3.X1.17      0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+X3.L          0.000   X3.X1.L1      0.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:              RESR         RLOAD            R4            R5            R3
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:             X3.RL     X3.X1.RVC      X3.X1.RE      X3.X1.R2      X3.X1.RD
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PD                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ir                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+tc1                  0.000         0.000         0.000         0.000         0.000 
+tc2                  0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:         X3.X1.RFM
+V                    0.000 
+Power DC Terms:
+PD                   0.000 
+
+DC Pin Currents:
+Ir                   0.000 
+
+Device Variables:
+tc1                  0.000 
+tc2                  0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:              X3.L      X3.X1.L1
+V                    0.000         0.000 
+Power DC Terms:
+PS                   0.000         0.000 
+
+DC Pin Currents:
+Il                   0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:              COUT            C2            C3      X3.X1.C1      X3.X1.C2
+V                    0.000         0.000         0.000         0.000         0.000 
+Power DC Terms:
+PS                   0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+Ic                   0.000         0.000         0.000         0.000         0.000 
+
+Device Variables:
+ic                   0.000         0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:            X2.E1
+V                   0.000 
+Power DC Terms:
+PG                  0.000 
+
+DC Pin Currents:
+ISource             0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:           X3.EBD     X3.X2.GXF     X3.X2.EXF      X3.X1.E2      X3.X1.G1
+V                 444.444m        0.000         0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000         0.000 
+
+
+Instance:        X3.X1.GXF     X3.X1.EXF      X3.X1.ED     X3.X1.EFM
+V                   0.000         0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Poly
+==============================================
+Instance:         X3.X1.HI      X3.X1.E1
+V                   0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               VG     X3.X2.VXF     X3.X1.VXF
+V                   0.000         0.000         0.000 
+Power DC Terms:
+PG                  0.000         0.000         0.000 
+
+DC Pin Currents:
+ISource             0.000         0.000         0.000 
+
+

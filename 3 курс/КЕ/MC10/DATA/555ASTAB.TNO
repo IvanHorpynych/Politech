@@ -1,0 +1,19 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                      Transient Analysis of 555ASTAB                      ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Time Range           5M
+Maximum Time Step    0
+Number of Points     0
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      Off
+Operating Point Only Off
+

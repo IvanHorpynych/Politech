@@ -1,0 +1,89 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                           AC Analysis of SPAR1                           ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Frequency Range  Log 6e9,10meg
+Number of Points 100
+Temperature      Linear 27
+Maximum Change % 5
+Noise Input      NONE
+Noise Output     2
+Run Options      Normal
+State Variables  Zero
+Operating Point  On
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:              VG              V1   
+Using model:          VIN             VIN   
+A                  1.000 (*)       1.000 (*)
+DC                 0.000 (*)       0.000 (*)
+F                1.000MEG(*)     1.000MEG(*)
+PH                 0.000 (*)       0.000 (*)
+RP                 0.000 (*)       0.000 (*)
+RS                 1.000m(*)       1.000m(*)
+TAU                0.000 (*)       0.000 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+OUT           0.000   2             0.000   IN            0.000  
+OUT1          0.000   IN1           0.000   6             0.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                  RG              RL           VG.RS              R1
+V                      0.000           0.000           0.000           0.000 
+Power DC Terms:
+PD                     0.000           0.000           0.000           0.000 
+
+DC Pin Currents:
+Ir                     0.000           0.000           0.000           0.000 
+
+Device Variables:
+tc1                    0.000           0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000           0.000 
+
+
+Instance:                  R2           V1.RS
+V                      0.000           0.000 
+Power DC Terms:
+PD                     0.000           0.000 
+
+DC Pin Currents:
+Ir                     0.000           0.000 
+
+Device Variables:
+tc1                    0.000           0.000 
+tc2                    0.000           0.000 
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                  VG              V1
+Using model:              VIN             VIN
+V                      0.000           0.000 
+Power DC Terms:
+PG                     0.000           0.000 
+
+DC Pin Currents:
+ISource                0.000           0.000 
+
+

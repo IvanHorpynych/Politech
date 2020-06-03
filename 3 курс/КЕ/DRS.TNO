@@ -1,0 +1,693 @@
+********************************************************************************
+***                            Micro-Cap 10.0.9.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                        Transient Analysis of DRS                         ***
+***                           12/6/2016 5:04:36 PM                           ***
+********************************************************************************
+Limits
+======
+Time Range           1u
+Maximum Time Step    0
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            18.111m  2           537.124m  3             5.000  
+4             4.359   5            18.111m  6           537.124m 
+7             5.000   8             4.695   9            36.373m 
+10          555.270m  11            5.000   12            4.783  
+13          602.962m  14            1.119   15            5.000  
+16           53.960m  17          216.960m  18          724.363m 
+S           170.000m  20            5.000   21            4.440  
+22            4.446   23          100.924m  24          609.015m 
+25            5.000   26            4.574   27           36.378m 
+28          555.275m  29            5.000   30            4.777  
+31           36.379m  32          555.275m  33            5.000  
+34            4.796   35          100.293m  36          608.394m 
+37            5.000   Q             4.796   NQ           53.795m 
+40          602.919m  41            1.109   42            5.000  
+43          188.109m  44          706.124m  R           170.000m 
+46            5.000  
+
+
+Operating Point for Devices of Type Bipolar Junction Transistors NPN
+====================================================================
+Instance:                Q1             Q4             Q2             Q9
+Using model:         KT315A         KT315A         KT315A         KT315A
+
+Beta Terms:
+BETADC               3.079n        -2.384          3.079n         3.246n
+BETAAC              27.212         57.095         27.212         27.212 
+
+Capacitance Terms:
+CPI                 11.578p         1.008p        11.578p        11.578p
+CMU                 59.076p         8.958p        59.076p        59.076p
+CBX                  0.000          0.000          0.000          0.000 
+CJS                  0.988f         0.383f         0.988f         0.988f
+
+Conductance Terms:
+GM                  37.243m       151.915p        37.243m        37.243m
+
+Current Terms:
+IB                   1.002m        -6.169p         1.002m         1.002m
+IC                   3.085p        14.706p         3.085p         3.253p
+
+Resistance Terms:
+RPI                730.657        375.836G       730.657        730.657 
+RX                   0.000          0.000          0.000          0.000 
+RO                  27.104        878.594G        27.104         27.104 
+
+Voltage Terms:
+VBE                537.124m        18.111m       537.124m       537.124m
+VBC                519.014m        -4.341        519.014m       519.014m
+VCE                 18.111m         4.359         18.111m        18.111m
+
+Frequency Terms:
+FT                83.894MEG         2.426       83.894MEG      83.894MEG
+
+Power DC Terms:
+PD                 538.195u        63.988p       538.195u       538.195u
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ib                   1.002m        -6.169p         1.002m         1.002m
+Ic                   3.085p        14.706p         3.085p         3.253p
+Ie                  -1.002m        -8.537p        -1.002m        -1.002m
+Is                   0.000          0.000          0.000          0.000 
+
+Condition:
+State                   SAT            OFF            SAT            SAT
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+vbe                  0.000          0.000          0.000          0.000 
+vce                  0.000          0.000          0.000          0.000 
+
+
+Instance:               Q10            Q11            Q12            Q13
+Using model:         KT315A         KT315A         KT315A         KT315A
+
+Beta Terms:
+BETADC              -2.371          3.246n         1.891         -3.020 
+BETAAC              57.297         27.212         40.634         57.565 
+
+Capacitance Terms:
+CPI                  1.008p        11.578p        21.828p         1.017p
+CMU                  8.771p        59.076p        58.915p         8.734p
+CBX                  0.000          0.000          0.000          0.000 
+CJS                  0.371f         0.988f         0.977f         0.368f
+
+Conductance Terms:
+GM                 152.451p        37.243m       112.166m       309.148p
+
+Current Terms:
+IB                  -6.506p         1.002m         1.034m        -6.505p
+IC                  15.426p         3.253p         1.955m        19.646p
+
+Resistance Terms:
+RPI                375.836G       730.657        362.268        186.206G
+RX                   0.000          0.000          0.000          0.000 
+RO                 872.862G        27.104         27.216        840.326G
+
+Voltage Terms:
+VBE                 18.111m       537.124m       555.270m        36.373m
+VBC                 -4.677        519.014m       518.896m        -4.747 
+VCE                  4.695         18.111m        36.373m         4.783 
+
+Frequency Terms:
+FT                   2.481       83.894MEG     221.095MEG         5.046 
+
+Power DC Terms:
+PD                  72.311p       538.195u       645.029u        93.732p
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ib                  -6.506p         1.002m         1.034m        -6.505p
+Ic                  15.426p         3.253p         1.955m        19.646p
+Ie                  -8.921p        -1.002m        -2.988m       -13.141p
+Is                   0.000          0.000          0.000          0.000 
+
+Condition:
+State                   OFF            SAT            SAT            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+vbe                  0.000          0.000          0.000          0.000 
+vce                  0.000          0.000          0.000          0.000 
+
+
+Instance:               Q14            Q15            Q16            Q17
+Using model:         KT315A         KT315A         KT315A         KT315A
+
+Beta Terms:
+BETADC              -2.031         -2.026          5.046         -2.029 
+BETAAC              -2.107T        -1.898T        45.110         -1.904T
+
+Capacitance Terms:
+CPI                551.464f       576.062f       124.980p       560.876f
+CMU                 58.915p        55.555p       136.672p        55.555p
+CBX                  0.000          0.000          0.000          0.000 
+CJS                  0.977f         0.745f         0.966f         0.745f
+
+Conductance Terms:
+GM                 -38.309m       -34.507m       787.146m       -34.620m
+
+Current Terms:
+IB                 962.221u       871.286u         3.533m       871.286u
+IC                  -1.955m        -1.765m        17.828m        -1.768m
+
+Resistance Terms:
+RPI                 55.000T        55.000T        57.308         55.000T
+RX                   0.000          0.000          0.000          0.000 
+RO                  26.097         28.973          8.538         28.878 
+
+Voltage Terms:
+VBE                 -3.803         -3.239        602.962m        -3.576 
+VBC                518.896m       516.329m       549.002m       516.329m
+VCE                 -4.322         -3.756         53.960m        -4.092 
+
+Frequency Terms:
+FT              -102.531MEG     -97.841MEG     478.797MEG     -98.188MEG
+
+Power DC Terms:
+PD                   4.788m         3.807m         3.092m         4.119m
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ib                 962.221u       871.286u         3.533m       871.286u
+Ic                  -1.955m        -1.765m        17.828m        -1.768m
+Ie                 992.317u       893.735u       -21.361m       896.663u
+Is                   0.000          0.000          0.000          0.000 
+
+Condition:
+State                   OFF            OFF            SAT            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+vbe                  0.000          0.000          0.000          0.000 
+vce                  0.000          0.000          0.000          0.000 
+
+
+Instance:               Q18            Q19            Q20            Q21
+Using model:         KT315A         KT315A         KT315A         KT315A
+
+Beta Terms:
+BETADC               3.657         59.986         -2.034         -2.031 
+BETAAC              45.113         57.424         -1.355T        -1.351T
+
+Capacitance Terms:
+CPI                 21.140p         1.119p       541.629f       554.772f
+CMU                 46.126p         9.028p        46.126p        46.126p
+CBX                  0.000          0.000          0.000          0.000 
+CJS                  0.881f         0.380f         0.881f         0.881f
+
+Conductance Terms:
+GM                 120.239m       330.709n       -24.645m       -24.565m
+
+Current Terms:
+IB                 685.926u       142.845p       616.991u       616.991u
+IC                   2.508m         8.569n        -1.255m        -1.253m
+
+Resistance Terms:
+RPI                375.197      173.640MEG        55.000T        55.000T
+RX                   0.000          0.000          0.000          0.000 
+RO                  42.384         10.857G        40.566         40.698 
+
+Voltage Terms:
+VBE                554.363m       216.960m        -4.059         -3.722 
+VBC                507.403m        -4.223        507.403m       507.403m
+VCE                 46.960m         4.440         -4.566         -4.229 
+
+Frequency Terms:
+FT               284.493MEG         5.187K     -84.050MEG     -83.752MEG
+
+Power DC Terms:
+PD                 498.039u        38.076n         3.227m         3.003m
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ib                 685.926u       142.845p       616.991u       616.991u
+Ic                   2.508m         8.569n        -1.255m        -1.253m
+Ie                  -3.194m        -8.712n       638.161u       636.083u
+Is                   0.000          0.000          0.000          0.000 
+
+Condition:
+State                   SAT            OFF            OFF            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+vbe                  0.000          0.000          0.000          0.000 
+vce                  0.000          0.000          0.000          0.000 
+
+
+Instance:               Q22            Q23            Q24            Q25
+Using model:         KT315A         KT315A         KT315A         KT315A
+
+Beta Terms:
+BETADC              -2.032        -23.557          3.657         -2.033 
+BETAAC              -1.389T        57.521         45.103         -1.391T
+
+Capacitance Terms:
+CPI                550.368f         1.049p        21.669p       545.168f
+CMU                 46.745p         8.956p        46.745p        46.745p
+CBX                  0.000          0.000          0.000          0.000 
+CJS                  0.939f         0.380f         0.939f         0.939f
+
+Conductance Terms:
+GM                 -25.253m         3.733n       123.471m       -25.286m
+
+Current Terms:
+IB                 633.634u        -4.562p       704.437u       633.634u
+IC                  -1.288m       107.472p         2.576m        -1.288m
+
+Resistance Terms:
+RPI                 55.000T        15.408G       365.295         55.000T
+RX                   0.000          0.000          0.000          0.000 
+RO                  39.589        471.336G        41.273         39.538 
+
+Voltage Terms:
+VBE                 -3.831        100.924m       555.054m        -3.965 
+VBC                508.091m        -4.345        508.091m       508.091m
+VCE                 -4.339          4.446         46.963m        -4.473 
+
+Frequency Terms:
+FT               -84.980MEG        59.387      287.234MEG     -85.100MEG
+
+Power DC Terms:
+PD                   3.159m       477.365p       511.976u         3.251m
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ib                 633.634u        -4.562p       704.437u       633.634u
+Ic                  -1.288m       107.472p         2.576m        -1.288m
+Ie                 653.917u      -102.909p        -3.280m       654.764u
+Is                   0.000          0.000          0.000          0.000 
+
+Condition:
+State                   OFF            OFF            SAT            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+vbe                  0.000          0.000          0.000          0.000 
+vce                  0.000          0.000          0.000          0.000 
+
+
+Instance:               Q26            Q27            Q28            Q29
+Using model:         KT315A         KT315A         KT315A         KT315A
+
+Beta Terms:
+BETADC              -2.032         -3.021          1.892         -2.032 
+BETAAC              -2.109T        57.561         40.637         -2.109T
+
+Capacitance Terms:
+CPI                548.254f         1.017p        21.832p       548.018f
+CMU                 58.915p         8.738p        58.915p        58.915p
+CBX                  0.000          0.000          0.000          0.000 
+CJS                  0.977f         0.368f         0.977f         0.977f
+
+Conductance Terms:
+GM                 -38.339m       309.191p       112.196m       -38.341m
+
+Current Terms:
+IB                 962.213u        -6.499p         1.034m       962.213u
+IC                  -1.955m        19.634p         1.955m        -1.955m
+
+Resistance Terms:
+RPI                 55.000T       186.168G       362.198         55.000T
+RX                   0.000          0.000          0.000          0.000 
+RO                  26.076        840.411G        27.216         26.075 
+
+Voltage Terms:
+VBE                 -3.885         36.378m       555.275m        -3.891 
+VBC                518.896m        -4.740        518.896m       518.896m
+VCE                 -4.404          4.777         36.378m        -4.410 
+
+Frequency Terms:
+FT              -102.617MEG         5.045      221.142MEG    -102.623MEG
+
+Power DC Terms:
+PD                   4.872m        93.554p       645.075u         4.879m
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ib                 962.213u        -6.499p         1.034m       962.213u
+Ic                  -1.955m        19.634p         1.955m        -1.955m
+Ie                 993.090u       -13.136p        -2.989m       993.148u
+Is                   0.000          0.000          0.000          0.000 
+
+Condition:
+State                   OFF            OFF            SAT            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+vbe                  0.000          0.000          0.000          0.000 
+vce                  0.000          0.000          0.000          0.000 
+
+
+Instance:               Q30            Q31            Q32            Q33
+Using model:         KT315A         KT315A         KT315A         KT315A
+
+Beta Terms:
+BETADC              -3.019          1.892         -1.920        -21.448 
+BETAAC              57.573         40.637       -750.333         57.735 
+
+Capacitance Terms:
+CPI                  1.017p        21.832p         1.551p         1.049p
+CMU                  8.728p        58.915p        46.754p         8.761p
+CBX                  0.000          0.000          0.000          0.000 
+CJS                  0.368f         0.977f         0.939f         0.368f
+
+Conductance Terms:
+GM                 309.257p       112.198m       -22.581m         3.657n
+
+Current Terms:
+IB                  -6.518p         1.034m       634.657u        -4.953p
+IC                  19.676p         1.955m        -1.219m       106.233p
+
+Resistance Terms:
+RPI                186.165G       362.193         33.229K        15.788G
+RX                   0.000          0.000          0.000          0.000 
+RO                 840.111G        27.216         41.280        475.116G
+
+Voltage Terms:
+VBE                 36.379m       555.275m       438.394m       100.293m
+VBC                 -4.760        518.896m       508.101m        -4.696 
+VCE                  4.796         36.379m       -69.707m         4.796 
+
+Frequency Terms:
+FT                   5.051      221.146MEG     -74.397MEG        59.329 
+
+Power DC Terms:
+PD                  94.128p       645.079u       363.176u       508.987p
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ib                  -6.518p         1.034m       634.657u        -4.953p
+Ic                  19.676p         1.955m        -1.219m       106.233p
+Ie                 -13.158p        -2.989m       583.967u      -101.280p
+Is                   0.000          0.000          0.000          0.000 
+
+Condition:
+State                   OFF            SAT            OFF            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+vbe                  0.000          0.000          0.000          0.000 
+vce                  0.000          0.000          0.000          0.000 
+
+
+Instance:               Q34            Q35            Q36            Q37
+Using model:         KT315A         KT315A         KT315A         KT315A
+
+Beta Terms:
+BETADC              -2.035          3.566         -2.031          5.007 
+BETAAC              -1.394T        44.950         -1.275T        45.071 
+
+Capacitance Terms:
+CPI                537.609f        21.319p       556.196f       124.783p
+CMU                 46.754p        46.754p        44.839p       137.205p
+CBX                  0.000          0.000          0.000          0.000 
+CJS                  0.939f         0.939f         0.745f         0.966f
+
+Conductance Terms:
+GM                 -25.346m       120.905m       -23.183m       785.167m
+
+Current Terms:
+IB                 633.879u       703.447u       582.423u         3.547m
+IC                  -1.290m         2.509m        -1.183m        17.760m
+
+Resistance Terms:
+RPI                 55.000T       371.781         55.000T        57.403 
+RX                   0.000          0.000          0.000          0.000 
+RO                  39.445         41.258         43.124          8.498 
+
+Voltage Terms:
+VBE                 -4.168        554.599m        -3.687        602.919m
+VBC                508.101m       508.101m       505.911m       549.124m
+VCE                 -4.677         46.498m        -4.193         53.795m
+
+Frequency Terms:
+FT               -85.298MEG     282.677MEG     -81.278MEG     476.980MEG
+
+Power DC Terms:
+PD                   3.391m       506.786u         2.812m         3.094m
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ib                 633.879u       703.447u       582.423u         3.547m
+Ic                  -1.290m         2.509m        -1.183m        17.760m
+Ie                 656.307u        -3.212m       600.274u       -21.307m
+Is                   0.000          0.000          0.000          0.000 
+
+Condition:
+State                   OFF            SAT            OFF            SAT
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+vbe                  0.000          0.000          0.000          0.000 
+vce                  0.000          0.000          0.000          0.000 
+
+
+Instance:               Q38            Q39            Q40            Q41
+Using model:         KT315A         KT315A         KT315A         KT315A
+
+Beta Terms:
+BETADC              -2.031         -2.028        -22.067n        66.317 
+BETAAC              -1.275T        -1.272T        27.217         57.536 
+
+Capacitance Terms:
+CPI                556.196f       565.706f        11.194p         1.100p
+CMU                 44.839p        44.839p        57.725p         8.932p
+CBX                  0.000          0.000          0.000          0.000 
+CJS                  0.745f         0.745f         0.894f         0.375f
+
+Conductance Terms:
+GM                 -23.183m       -23.133m        35.837m       108.609n
+
+Current Terms:
+IB                 582.423u       582.423u       964.049u        42.547p
+IC                  -1.183m        -1.181m       -21.274p         2.822n
+
+Resistance Terms:
+RPI                 55.000T        55.000T       759.463      529.752MEG
+RX                   0.000          0.000          0.000          0.000 
+RO                  43.124         43.218         28.168         32.333G
+
+Voltage Terms:
+VBE                 -3.687         -3.465        536.124m       188.109m
+VBC                505.911m       505.911m       518.015m        -4.386 
+VCE                 -4.193         -3.971         18.109m         4.574 
+
+Frequency Terms:
+FT               -81.278MEG     -81.086MEG      82.759MEG         1.723K
+
+Power DC Terms:
+PD                   2.812m         2.673m       516.850u        12.913n
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ib                 582.423u       582.423u       964.049u        42.547p
+Ic                  -1.183m        -1.181m       -21.274p         2.822n
+Ie                 600.274u       598.981u      -964.049u        -2.864n
+Is                   0.000          0.000          0.000          0.000 
+
+Condition:
+State                   OFF            OFF            SAT            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+vbe                  0.000          0.000          0.000          0.000 
+vce                  0.000          0.000          0.000          0.000 
+
+
+Instance:               Q42
+Using model:         KT315A
+
+Beta Terms:
+BETADC             -22.067n
+BETAAC              27.217 
+
+Capacitance Terms:
+CPI                 11.194p
+CMU                 57.725p
+CBX                  0.000 
+CJS                  0.894f
+
+Conductance Terms:
+GM                  35.837m
+
+Current Terms:
+IB                 964.049u
+IC                 -21.274p
+
+Resistance Terms:
+RPI                759.463 
+RX                   0.000 
+RO                  28.168 
+
+Voltage Terms:
+VBE                536.124m
+VBC                518.015m
+VCE                 18.109m
+
+Frequency Terms:
+FT                82.759MEG
+
+Power DC Terms:
+PD                 516.850u
+PS                   0.000 
+
+DC Pin Currents:
+Ib                 964.049u
+Ic                 -21.274p
+Ie                -964.049u
+Is                   0.000 
+
+Condition:
+State                   SAT
+
+Device Variables:
+area                 1.000 
+vbe                  0.000 
+vce                  0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                 RB             RK             R3             R4
+V                     4.463        641.258m         4.463        304.865m
+Power DC Terms:
+PD                    8.944m         1.209m         8.944m       273.362u
+
+DC Pin Currents:
+Ir                    2.004m         1.886m         2.004m       896.663u
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                 R5             R6             R7             R8
+V                     4.445        216.975m         3.881          4.946 
+Power DC Terms:
+PD                    8.871m       138.465u         6.762m        71.951m
+
+DC Pin Currents:
+Ir                    1.996m       638.161u         1.743m        14.547m
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                 R9            R10            R11            R12
+V                     4.276        559.985m         4.391        553.939m
+Power DC Terms:
+PD                    8.209m       922.305u         8.658m       902.494u
+
+DC Pin Currents:
+Ir                    1.920m         1.647m         1.972m         1.629m
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                R13            R14            R15            R16
+V                     4.445        223.144m         4.445        204.093m
+Power DC Terms:
+PD                    8.871m       146.451u         8.871m       122.512u
+
+DC Pin Currents:
+Ir                    1.996m       656.307u         1.996m       600.274u
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                R17            R18            R19            R20
+V                     4.392        204.093m         3.891          4.946 
+Power DC Terms:
+PD                    8.660m       122.512u         6.799m        71.956m
+
+DC Pin Currents:
+Ir                    1.972m       600.274u         1.747m        14.548m
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:                R21            R22
+V                     4.294        426.274m
+Power DC Terms:
+PD                    8.279m       534.440u
+
+DC Pin Currents:
+Ir                    1.928m         1.254m
+
+Device Variables:
+tc1                   0.000          0.000 
+tc2                   0.000          0.000 
+
+
+
+Operating Point for Devices of Type Pulse
+=========================================
+Instance:                  D              C
+Using model:           PULSE         P0_4_9
+V                   170.000m       170.000m
+Power DC Terms:
+PG                 -443.732u      -327.777u
+
+DC Pin Currents:
+ISource               2.610m         1.928m
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                V3             V5             V6             V7
+V                    5.000          5.000          5.000          5.000 
+Power DC Terms:
+PG                  19.450m        14.503m        13.170m        81.449m
+
+DC Pin Currents:
+ISource             -3.890m        -2.901m        -2.634m       -16.290m
+
+
+Instance:                V8             V9            V10            V11
+V                    5.000          5.000          5.000          5.000 
+Power DC Terms:
+PG                  17.835m        18.005m        13.261m        12.981m
+
+DC Pin Currents:
+ISource             -3.567m        -3.601m        -2.652m        -2.596m
+
+
+Instance:               V12            V13            V14
+V                    5.000          5.000          5.000 
+Power DC Terms:
+PG                  12.861m        81.475m        15.909m
+
+DC Pin Currents:
+ISource             -2.572m       -16.295m        -3.182m
+
+

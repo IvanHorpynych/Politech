@@ -1,0 +1,80 @@
+[Main]
+FileType=SHP
+Version=10.01
+Program=Micro-Cap
+Count=3
+
+[shapedef]
+Name=CCM-DCM1
+Rectangle=8,-16,88,40
+FColor=None
+Line=72,24,72,16
+Line=64,16,80,16
+PolyClosed=3
+PolyLine=72,16
+PolyLine=64,8
+PolyLine=80,8
+FColor=None
+Line=72,8,72,0
+Ellipse=22,22,26,26
+FColor=None
+Ellipse=22,-2,26,2
+FColor=None
+Line=32,0,24,22
+Text="a"
+TextInfo=75,-13,83,1 , -11,0,"Arial"
+Text="s"
+TextInfo=15,23,23,37 , -11,0,"Arial"
+Text="k"
+TextInfo=75,24,83,38 , -11,0,"Arial"
+Text="d"
+TextInfo=15,-13,23,1 , -11,0,"Arial"
+Line=22,0,0,0
+Line=72,0,96,0
+Line=22,24,0,24
+Text="ctrl"
+TextInfo=50,26,67,40 , -11,0,"Arial"
+Line=96,24,72,24
+Line=32,12,48,12
+Line=48,12,48,48
+Line=32,12,36,8
+Line=32,12,36,16
+
+[shapedef]
+Name=Balun
+Line=0,0,8,0
+Line=0,48,8,48
+Rectangle=8,-16,56,64
+FColor=None
+Line=64,0,56,0
+Line=64,48,56,48
+Text="d"
+TextInfo=12,-6,20,9 , -11,0,"Arial"
+Text="c"
+TextInfo=12,41,20,56 , -11,0,"Arial"
+Text="+"
+TextInfo=46,-6,55,9 , -11,0,"Arial"
+Text="_"
+TextInfo=46,36,54,51 , -11,0,"Arial"
+
+[shapedef]
+Name=CPM
+Rectangle=8,-8,96,40
+FColor=None
+Text="CTR"
+TextInfo=12,-5,32,6 , -9,0,"Arial"
+Text="Current"
+TextInfo=12,27,44,38 , -9,0,"Arial"
+Text="Son"
+TextInfo=48,28,66,39 , -9,0,"Arial"
+Text="Soff"
+TextInfo=72,28,90,39 , -9,0,"Arial"
+Text="D"
+TextInfo=87,11,96,22 , -9,0,"Arial"
+Text="CPM"
+TextInfo=43,0,74,16 , -13,6,"Arial"
+Line=0,0,8,0
+Line=104,16,96,16
+Line=0,32,8,32
+Line=56,48,56,40
+Line=80,48,80,40

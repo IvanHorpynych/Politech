@@ -1,0 +1,1893 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                         AC Analysis of NOISEBJT                          ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Frequency Range  Auto 1E14,1e5
+Number of Points 50
+Temperature      Linear 27
+Maximum Change % 5
+Noise Input      HA
+Noise Output     Out
+Run Options      Normal
+State Variables  Zero
+Operating Point  On
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:              HA   
+Using model:           HA   
+A                  1.000m   
+DC                 0.000 (*)
+F                1.000MEG(*)
+PH                 0.000 (*)
+RP                 0.000 (*)
+RS                 1.000m(*)
+TAU                0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Bipolar Junction Transistors NPN
+=====================================================================
+Instance:              Q2   
+Using model:           Q2   
+LEVEL                   1(*)
+AF                 1.000 (*)
+BF                50.000    
+BR                 1.000 (*)
+CJC                0.000 (*)
+CJE                1.000p   
+CJS                0.000 (*)
+EG                 1.110 (*)
+FC               500.000m(*)
+GAMMA             10.000p(*)
+IKF                0.000 (*)
+IKR                0.000 (*)
+IRB                0.000 (*)
+IS                 0.100f(*)
+ISC                0.000 (*)
+ISE                0.000 (*)
+ISS                0.000 (*)
+ITF                0.000 (*)
+KF                 0.000 (*)
+MJC              330.000m(*)
+MJE              330.000m(*)
+MJS                0.000 (*)
+NC                 2.000 (*)
+NE                 1.500 (*)
+NF                 1.000 (*)
+NK               500.000m(*)
+NR                 1.000 (*)
+NS                 1.000 (*)
+PTF                0.000 (*)
+QCO                0.000 (*)
+QUASIMOD           0.000 (*)
+RB                 0.000 (*)
+RBM                0.000 (*)
+RC                 0.000 (*)
+RCO                0.000 (*)
+RE                 0.000 (*)
+T_ABS           UNDEFINED(*)
+T_MEASURED      UNDEFINED(*)
+T_REL_GLOBAL    UNDEFINED(*)
+T_REL_LOCAL     UNDEFINED(*)
+TF                 0.000 (*)
+TR                 0.000 (*)
+TRB1               0.000 (*)
+TRB2               0.000 (*)
+TRC1               0.000 (*)
+TRC2               0.000 (*)
+TRE1               0.000 (*)
+TRE2               0.000 (*)
+TRM1               0.000 (*)
+TRM2               0.000 (*)
+VAF                0.000 (*)
+VAR                0.000 (*)
+VG                 1.206 (*)
+VJC              750.000m(*)
+VJE              750.000m(*)
+VJS              750.000m(*)
+VO                10.000 (*)
+VTF                0.000 (*)
+XCJC               1.000 (*)
+XTB                0.000 (*)
+XTF                0.000 (*)
+XTI                3.000 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+OUT           3.411   VDD          10.000   3             1.705  
+4             1.705   5           840.127m  IN            0.000  
+7             0.000  
+
+
+Operating Point for Devices of Type Bipolar Junction Transistors NPN
+====================================================================
+Instance:                 Q2
+Using model:              Q2
+
+Beta Terms:
+BETADC               50.000 
+BETAAC               50.000 
+
+Capacitance Terms:
+CPI                   1.799p
+CMU                   0.000 
+CBX                   0.000 
+CJS                   0.000 
+
+Conductance Terms:
+GM                    1.274 
+
+Current Terms:
+IB                  658.923u
+IC                   32.946m
+
+Resistance Terms:
+RPI                  39.252 
+RX                    0.000 
+RO                    1.000T
+
+Voltage Terms:
+VBE                 864.600m
+VBC                  -1.706 
+VCE                   2.571 
+
+Frequency Terms:
+FT                  112.718G
+
+Power DC Terms:
+PD                   85.263m
+PS                    0.000 
+
+DC Pin Currents:
+Ib                  658.923u
+Ic                   32.946m
+Ie                  -33.605m
+Is                    0.000 
+
+Condition:
+State                    LIN
+
+Device Variables:
+area                  1.000 
+vbe                   0.000 
+vce                   0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                  R4              R6              R1           HA.RS
+V                     -6.589          -8.295          -1.705           0.000 
+Power DC Terms:
+PD                   217.090m          6.880m        290.834u          0.000 
+
+DC Pin Currents:
+Ir                   -32.946m       -829.461u       -170.539u          0.000 
+
+Device Variables:
+tc1                    0.000           0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000           0.000 
+
+
+Instance:                  R5              R3              R2
+V                   -840.127m        658.923u          0.000 
+Power DC Terms:
+PD                    28.233m        434.179n          0.000 
+
+DC Pin Currents:
+Ir                   -33.605m        658.923u          0.000 
+
+Device Variables:
+tc1                    0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                  C1
+V                      1.705 
+Power DC Terms:
+PS                     0.000 
+
+DC Pin Currents:
+Ic                     0.000 
+
+Device Variables:
+ic                     0.000 
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                  HA
+Using model:               HA
+V                      0.000 
+Power DC Terms:
+PG                     0.000 
+
+DC Pin Currents:
+ISource                0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                 V1
+V                    10.000 
+Power DC Terms:
+PG                  337.756m
+
+DC Pin Currents:
+ISource             -33.776m
+
+
+***   NOISE ANALYSIS  FREQUENCY =  100000 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:               Q2
+Using model:            Q2
+RB                  0.000 
+RC                  0.000 
+RE                  0.000 
+IBSN                0.313f
+IC                  0.007f
+IBFN                0.000 
+TOTAL               0.321f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:               R4            R6            R1         HA.RS            R5
+TOTAL               0.003f        0.002f        0.002f        0.000         0.023f
+
+
+Instance:               R3            R2
+TOTAL               0.001f        0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  3.53925e-016 SQ V/HZ
+(ONOISE)                              =  1.88129e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.50874
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  2.50547e-009 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  110000 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:               Q2
+Using model:            Q2
+RB                  0.000 
+RC                  0.000 
+RE                  0.000 
+IBSN                0.262f
+IC                  0.006f
+IBFN                0.000 
+TOTAL               0.268f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:               R4            R6            R1         HA.RS            R5
+TOTAL               0.003f        0.002f        0.002f        0.000         0.023f
+
+
+Instance:               R3            R2
+TOTAL               0.001f        0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  3.00319e-016 SQ V/HZ
+(ONOISE)                              =  1.73297e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.52363
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  2.30337e-009 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  130000 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:               Q2
+Using model:            Q2
+RB                  0.000 
+RC                  0.000 
+RE                  0.000 
+IBSN                0.191f
+IC                  0.005f
+IBFN                0.000 
+TOTAL               0.195f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:               R4            R6            R1         HA.RS            R5
+TOTAL               0.003f        0.001f        0.001f        0.000         0.024f
+
+
+Instance:               R3            R2
+TOTAL               0.001f        0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  2.27136e-016 SQ V/HZ
+(ONOISE)                              =  1.5071e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.54391
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.99778e-009 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  170000 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:               Q2
+Using model:            Q2
+RB                  0.000 
+RC                  0.000 
+RE                  0.000 
+IBSN                0.116f
+IC                  0.003f
+IBFN                0.000 
+TOTAL               0.119f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:               R4            R6            R1         HA.RS            R5
+TOTAL               0.003f        0.001f        0.001f        0.000         0.024f
+
+
+Instance:               R3            R2
+TOTAL               0.001f        0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  1.49685e-016 SQ V/HZ
+(ONOISE)                              =  1.22346e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.56531
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.61719e-009 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  250000 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.059f
+IC                   0.002f
+IBFN                 0.000 
+TOTAL                0.061f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     3.862E-019     3.862E-019         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.024f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  9.04561e-017 SQ V/HZ
+(ONOISE)                              =  9.51084e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.58164
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.25446e-009 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  410000 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.027f
+IC                   0.001f
+IBFN                 0.000 
+TOTAL                0.029f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     1.440E-019     1.440E-019         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.024f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  5.824e-017 SQ V/HZ
+(ONOISE)                              =  7.63151e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.5905
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.0054e-009 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  730000 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.015f
+IC                   0.001f
+IBFN                 0.000 
+TOTAL                0.016f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     4.553E-020     4.553E-020         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.024f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.51444e-017 SQ V/HZ
+(ONOISE)                              =  6.71896e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.5941
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  8.8476e-010 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  1.37e+006 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.011f
+IC                   0.001f
+IBFN                 0.000 
+TOTAL                0.012f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     1.300E-020     1.300E-020         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.024f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.08178e-017 SQ V/HZ
+(ONOISE)                              =  6.38888e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.59529
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  8.41163e-010 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  2.65e+006 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.009f
+IC                   0.001f
+IBFN                 0.000 
+TOTAL                0.010f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     3.545E-021     3.545E-021         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.024f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  3.95603e-017 SQ V/HZ
+(ONOISE)                              =  6.2897e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.59564
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  8.28067e-010 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  5.21e+006 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.009f
+IC                   0.001f
+IBFN                 0.000 
+TOTAL                0.010f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     9.883E-022     9.883E-022         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.024f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  3.92202e-017 SQ V/HZ
+(ONOISE)                              =  6.26261e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.59573
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  8.2449e-010 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  1.033e+007 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.009f
+IC                   0.001f
+IBFN                 0.000 
+TOTAL                0.010f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     3.228E-022     3.228E-022         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.024f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  3.91317e-017 SQ V/HZ
+(ONOISE)                              =  6.25554e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.59575
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  8.23557e-010 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  2.057e+007 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.009f
+IC                   0.001f
+IBFN                 0.000 
+TOTAL                0.010f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     1.531E-022     1.531E-022         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.024f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  3.91092e-017 SQ V/HZ
+(ONOISE)                              =  6.25373e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.59576
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  8.23319e-010 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  4.105e+007 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.009f
+IC                   0.001f
+IBFN                 0.000 
+TOTAL                0.010f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     1.102E-022     1.102E-022         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.024f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  3.91035e-017 SQ V/HZ
+(ONOISE)                              =  6.25328e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.59576
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  8.23259e-010 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  8.201e+007 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.009f
+IC                   0.001f
+IBFN                 0.000 
+TOTAL                0.010f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     9.943E-023     9.943E-023         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.024f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  3.91022e-017 SQ V/HZ
+(ONOISE)                              =  6.25318e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.59576
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  8.23246e-010 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  1.6393e+008 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.009f
+IC                   0.001f
+IBFN                 0.000 
+TOTAL                0.010f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     9.673E-023     9.673E-023         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.024f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  3.91025e-017 SQ V/HZ
+(ONOISE)                              =  6.2532e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.59575
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  8.2325e-010 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  3.2777e+008 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.009f
+IC                   0.001f
+IBFN                 0.000 
+TOTAL                0.010f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     9.605E-023     9.605E-023         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.024f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  3.9105e-017 SQ V/HZ
+(ONOISE)                              =  6.2534e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.59573
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  8.23279e-010 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  6.5545e+008 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.009f
+IC                   0.001f
+IBFN                 0.000 
+TOTAL                0.010f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     9.588E-023     9.588E-023         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.024f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  3.91153e-017 SQ V/HZ
+(ONOISE)                              =  6.25422e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.59563
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  8.23398e-010 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  1.31081e+009 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.009f
+IC                   0.001f
+IBFN                 0.000 
+TOTAL                0.010f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     9.583E-023     9.583E-023         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.024f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  3.91565e-017 SQ V/HZ
+(ONOISE)                              =  6.25752e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.59522
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  8.23876e-010 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  2.62153e+009 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.009f
+IC                   0.001f
+IBFN                 0.000 
+TOTAL                0.010f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     9.578E-023     9.578E-023         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.024f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  3.93214e-017 SQ V/HZ
+(ONOISE)                              =  6.27067e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.5936
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  8.25784e-010 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  5.24297e+009 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.009f
+IC                   0.002f
+IBFN                 0.000 
+TOTAL                0.011f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     9.561E-023     9.561E-023         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.024f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  3.99792e-017 SQ V/HZ
+(ONOISE)                              =  6.32291e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.58713
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  8.33373e-010 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  1.04859e+010 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.009f
+IC                   0.005f
+IBFN                 0.000 
+TOTAL                0.014f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     9.496E-023     9.496E-023         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.024f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25885e-017 SQ V/HZ
+(ONOISE)                              =  6.52599e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.56142
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  8.63064e-010 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  2.09716e+010 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.009f
+IC                   0.016f
+IBFN                 0.000 
+TOTAL                0.024f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     9.246E-023     9.246E-023         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.023f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  5.26818e-017 SQ V/HZ
+(ONOISE)                              =  7.25822e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.46113
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  9.72805e-010 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  4.19431e+010 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.008f
+IC                   0.055f
+IBFN                 0.000 
+TOTAL                0.062f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     8.364E-023     8.364E-023         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.021f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  8.82423e-017 SQ V/HZ
+(ONOISE)                              =  9.39374e-009 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  7.09648
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.32372e-009 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  8.38862e+010 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.006f
+IC                   0.156f
+IBFN                 0.000 
+TOTAL                0.162f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     6.055E-023     6.055E-023         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.015f         0.001f         0.001f
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  1.81391e-016 SQ V/HZ
+(ONOISE)                              =  1.34682e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  6.03781
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  2.23064e-009 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  1.67772e+011 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.003f
+IC                   0.296f
+IBFN                 0.000 
+TOTAL                0.298f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     2.877E-023     2.877E-023         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.007f     2.873E-019     2.871E-019
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  3.09557e-016 SQ V/HZ
+(ONOISE)                              =  1.75942e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  4.16209
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  4.22727e-009 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  3.35544e+011 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN                 0.001f
+IC                   0.381f
+IBFN                 0.000 
+TOTAL                0.382f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     9.283E-024     9.283E-024         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.002f     9.269E-020     9.265E-020
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  3.8816e-016 SQ V/HZ
+(ONOISE)                              =  1.97018e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  2.36419
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  8.33342e-009 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  6.71089e+011 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             2.320E-019
+IC                   0.411f
+IBFN                 0.000 
+TOTAL                0.412f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     2.503E-024     2.503E-024         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL                0.001f     2.499E-020     2.498E-020
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.15509e-016 SQ V/HZ
+(ONOISE)                              =  2.0384e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  1.22753
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.66057e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  1.34218e+012 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             5.917E-020
+IC                   0.419f
+IBFN                 0.000 
+TOTAL                0.420f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     6.382E-025     6.382E-025         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            1.593E-019     6.372E-021     6.369E-021
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.23029e-016 SQ V/HZ
+(ONOISE)                              =  2.05677e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.619866
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  3.31808e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  2.68435e+012 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             1.487E-020
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     1.603E-025     1.603E-025         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            4.002E-020     1.601E-021     1.600E-021
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.24957e-016 SQ V/HZ
+(ONOISE)                              =  2.06145e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.31071
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  6.63464e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  4.02653e+012 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             6.614E-021
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     7.133E-026     7.133E-026         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            1.780E-020     7.122E-022     7.119E-022
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25316e-016 SQ V/HZ
+(ONOISE)                              =  2.06232e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.207236
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  9.95153e-008 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  5.36871e+012 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             3.721E-021
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     4.014E-026     4.014E-026         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            1.002E-020     4.007E-022     4.006E-022
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25442e-016 SQ V/HZ
+(ONOISE)                              =  2.06262e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.155453
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.32685e-007 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  6.71089e+012 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             2.382E-021
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     2.569E-026     2.569E-026         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            6.413E-021     2.565E-022     2.564E-022
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.255e-016 SQ V/HZ
+(ONOISE)                              =  2.06276e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.124371
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.65855e-007 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  8.05306e+012 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             1.654E-021
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     1.784E-026     1.784E-026         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            4.454E-021     1.781E-022     1.781E-022
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25531e-016 SQ V/HZ
+(ONOISE)                              =  2.06284e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.103647
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.99025e-007 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  9.39524e+012 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             1.215E-021
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     1.311E-026     1.311E-026         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            3.272E-021     1.309E-022     1.308E-022
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25551e-016 SQ V/HZ
+(ONOISE)                              =  2.06289e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.0888426
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  2.32196e-007 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  1.07374e+013 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             9.306E-022
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     1.004E-026     1.004E-026         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            2.505E-021     1.002E-022     1.002E-022
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25563e-016 SQ V/HZ
+(ONOISE)                              =  2.06292e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.0777385
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  2.65366e-007 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  1.20796e+013 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             7.353E-022
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     7.931E-027     7.931E-027         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            1.980E-021     7.918E-023     7.915E-023
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25571e-016 SQ V/HZ
+(ONOISE)                              =  2.06294e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.0691016
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  2.98537e-007 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  1.34218e+013 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             5.956E-022
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     6.424E-027     6.424E-027         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            1.603E-021     6.414E-023     6.411E-023
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25578e-016 SQ V/HZ
+(ONOISE)                              =  2.06295e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.062192
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  3.31707e-007 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  1.4764e+013 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             4.923E-022
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     5.309E-027     5.309E-027         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            1.325E-021     5.301E-023     5.299E-023
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25582e-016 SQ V/HZ
+(ONOISE)                              =  2.06296e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.0565385
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  3.64878e-007 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  1.61061e+013 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             4.136E-022
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     4.461E-027     4.461E-027         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            1.114E-021     4.454E-023     4.452E-023
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25585e-016 SQ V/HZ
+(ONOISE)                              =  2.06297e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.0518272
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  3.98048e-007 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  1.74483e+013 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             3.525E-022
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     3.801E-027     3.801E-027         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            9.488E-022     3.795E-023     3.794E-023
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25588e-016 SQ V/HZ
+(ONOISE)                              =  2.06298e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.0478406
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  4.31219e-007 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  2.01327e+013 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             2.647E-022
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     2.855E-027     2.855E-027         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            7.127E-022     2.851E-023     2.850E-023
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25592e-016 SQ V/HZ
+(ONOISE)                              =  2.06299e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.0414621
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  4.9756e-007 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  2.2817e+013 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             2.061E-022
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     2.223E-027     2.223E-027         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            5.549E-022     2.219E-023     2.219E-023
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25594e-016 SQ V/HZ
+(ONOISE)                              =  2.06299e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.0365843
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  5.63901e-007 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  2.55014e+013 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             1.650E-022
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     1.780E-027     1.780E-027         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            4.442E-022     1.777E-023     1.776E-023
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25596e-016 SQ V/HZ
+(ONOISE)                              =  2.063e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.0327334
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  6.30242e-007 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  3.08701e+013 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             1.126E-022
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     1.214E-027     1.214E-027         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            3.031E-022     1.213E-023     1.212E-023
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25599e-016 SQ V/HZ
+(ONOISE)                              =  2.063e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.0270407
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  7.62925e-007 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  3.62388e+013 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             8.171E-023
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     8.813E-028     8.813E-028         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            2.200E-022     8.799E-024     8.795E-024
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.256e-016 SQ V/HZ
+(ONOISE)                              =  2.06301e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.0230347
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  8.95607e-007 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  4.16075e+013 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             6.198E-023
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     6.685E-028     6.685E-028         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            1.669E-022     6.674E-024     6.672E-024
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25601e-016 SQ V/HZ
+(ONOISE)                              =  2.06301e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.0200625
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.02829e-006 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  5.23449e+013 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             3.916E-023
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     4.224E-028     4.224E-028         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            1.054E-022     4.217E-024     4.215E-024
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25602e-016 SQ V/HZ
+(ONOISE)                              =  2.06301e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.0159472
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.29365e-006 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  7.38198e+013 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             1.969E-023
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     2.124E-028     2.124E-028         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            5.301E-023     2.120E-024     2.120E-024
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25603e-016 SQ V/HZ
+(ONOISE)                              =  2.06301e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.011308
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  1.82438e-006 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  9.52946e+013 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             1.182E-023
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     1.274E-028     1.274E-028         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            3.181E-023     1.272E-024     1.272E-024
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25603e-016 SQ V/HZ
+(ONOISE)                              =  2.06301e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.00875972
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  2.35511e-006 V/RT HZ
+
+
+
+***   NOISE ANALYSIS  FREQUENCY =  1e+014 HZ
+
+Bipolar Junction Transistors NPN SQUARED NOISE VOLTAGES (SQ V/HZ)
+=================================================================
+Instance:                Q2
+Using model:             Q2
+RB                   0.000 
+RC                   0.000 
+RE                   0.000 
+IBSN             1.073E-023
+IC                   0.422f
+IBFN                 0.000 
+TOTAL                0.422f
+
+
+Resistor SQUARED NOISE VOLTAGES (SQ V/HZ)
+=========================================
+Instance:                R4             R6             R1          HA.RS
+TOTAL                0.003f     1.157E-028     1.157E-028         0.000 
+
+
+Instance:                R5             R3             R2
+TOTAL            2.889E-023     1.155E-024     1.155E-024
+
+
+TOTAL OUTPUT NOISE VOLTAGE            =  4.25603e-016 SQ V/HZ
+(ONOISE)                              =  2.06301e-008 V/RT HZ
+TRANSFER FUNCTION VALUE:
+V(OUT)/V1                             =  0.00834754
+EQUIVALENT INPUT NOISE AT V1 (INOISE) =  2.4714e-006 V/RT HZ
+
+
+
+

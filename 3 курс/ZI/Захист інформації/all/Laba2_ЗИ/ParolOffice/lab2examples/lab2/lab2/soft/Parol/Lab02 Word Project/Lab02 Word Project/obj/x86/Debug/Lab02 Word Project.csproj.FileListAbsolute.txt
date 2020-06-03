@@ -1,0 +1,5 @@
+D:\Study\Semester 07\ZI_Terejkovskij\Lab02 Word Project\Lab02 Word Project\bin\Debug\Lab02 Word Project.exe
+D:\Study\Semester 07\ZI_Terejkovskij\Lab02 Word Project\Lab02 Word Project\bin\Debug\Lab02 Word Project.pdb
+D:\Study\Semester 07\ZI_Terejkovskij\Lab02 Word Project\Lab02 Word Project\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Study\Semester 07\ZI_Terejkovskij\Lab02 Word Project\Lab02 Word Project\obj\x86\Debug\Lab02 Word Project.exe
+D:\Study\Semester 07\ZI_Terejkovskij\Lab02 Word Project\Lab02 Word Project\obj\x86\Debug\Lab02 Word Project.pdb

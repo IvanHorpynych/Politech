@@ -1,0 +1,346 @@
+********************************************************************************
+***                            Micro-Cap 10.0.9.1                            ***
+***                                                                          ***
+***                                                                          ***
+***                         AC Analysis of A_FORWARD                         ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Frequency Range  Log 31E6,1
+Number of Points 1001
+Temperature      Linear 27
+Maximum Change % .5
+Noise Input      NONE
+Noise Output     2
+Run Options      Normal
+State Variables  Zero
+Operating Point  On
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Diode
+==========================================
+Instance:           X1.D1           X1.D2           X1.D3         X5.DLOW   
+Using model:    X1.DBREAK       X1.DBREAK       X1.DBREAK         X5.DCLP   
+LEVEL                   1(*)            1(*)            1(*)            1(*)
+AF                 1.000 (*)       1.000 (*)       1.000 (*)       1.000 (*)
+BV                 0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+CJO               10.000p         10.000p         10.000p          0.000 (*)
+EG                 1.110 (*)       1.110 (*)       1.110 (*)       1.110 (*)
+FC               500.000m(*)     500.000m(*)     500.000m(*)     500.000m(*)
+IBV              100.000p(*)     100.000p(*)     100.000p(*)     100.000p(*)
+IBVL               0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+IKF                0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+IS                10.000f(*)      10.000f(*)      10.000f(*)      10.000f(*)
+ISR                0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+KF                 0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+M                500.000m(*)     500.000m(*)     500.000m(*)     500.000m(*)
+N                 10.000m         10.000m         10.000m         10.000m   
+NBV                1.000 (*)       1.000 (*)       1.000 (*)       1.000 (*)
+NBVL               1.000 (*)       1.000 (*)       1.000 (*)       1.000 (*)
+NR                 2.000 (*)       2.000 (*)       2.000 (*)       2.000 (*)
+RL                 0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+RS                 0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+T_ABS           UNDEFINED(*)    UNDEFINED(*)    UNDEFINED(*)    UNDEFINED(*)
+T_MEASURED      UNDEFINED(*)    UNDEFINED(*)    UNDEFINED(*)    UNDEFINED(*)
+T_REL_GLOBAL    UNDEFINED(*)    UNDEFINED(*)    UNDEFINED(*)    UNDEFINED(*)
+T_REL_LOCAL     UNDEFINED(*)    UNDEFINED(*)    UNDEFINED(*)    UNDEFINED(*)
+TBV1               0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+TBV2               0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+TIKF               0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+TRS1               0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+TRS2               0.000 (*)       0.000 (*)       0.000 (*)       0.000 (*)
+TT                 1.000n          1.000n          1.000n          0.000 (*)
+VJ                 1.000 (*)       1.000 (*)       1.000 (*)       1.000 (*)
+XTI                3.000 (*)       3.000 (*)       3.000 (*)       3.000 (*)
+(*) Default Parameter
+
+
+
+Instance:        X5.DHIGH   
+Using model:      X5.DCLP   
+LEVEL                   1(*)
+AF                 1.000 (*)
+BV                 0.000 (*)
+CJO                0.000 (*)
+EG                 1.110 (*)
+FC               500.000m(*)
+IBV              100.000p(*)
+IBVL               0.000 (*)
+IKF                0.000 (*)
+IS                10.000f(*)
+ISR                0.000 (*)
+KF                 0.000 (*)
+M                500.000m(*)
+N                 10.000m   
+NBV                1.000 (*)
+NBVL               1.000 (*)
+NR                 2.000 (*)
+RL                 0.000 (*)
+RS                 0.000 (*)
+T_ABS           UNDEFINED(*)
+T_MEASURED      UNDEFINED(*)
+T_REL_GLOBAL    UNDEFINED(*)
+T_REL_LOCAL     UNDEFINED(*)
+TBV1               0.000 (*)
+TBV2               0.000 (*)
+TIKF               0.000 (*)
+TRS1               0.000 (*)
+TRS2               0.000 (*)
+TT                 0.000 (*)
+VJ                 1.000 (*)
+XTI                3.000 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1           160.000   OUT          27.999   3            27.999  
+4             5.000   5             5.000   6           349.566m 
+7            55.998   8             5.000   VERR        873.914m 
+10          873.914m  11            0.000   12            5.000  
+X1.B         -8.226m  X1.OUT1      10.001m  X1.5          0.000  
+X1.8          0.000   X1.C         55.998   X1.VC         9.000m 
+X1.DOFF     648.959m  X1.6        641.434m  X1.7          1.081  
+X4.5         27.999   X4.6         27.999   X5.4        873.914m 
+X5.2        873.914m  X5.3        100.000m  X5.8          1.200  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current  Inductor     Current 
+LOL           1.819p  X1.LM         1.000  
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:              X1.D1           X1.D2           X1.D3         X5.DLOW
+Using model:       X1.DBREAK       X1.DBREAK       X1.DBREAK         X5.DCLP
+
+Capacitance Terms:
+CAP                   2.513u          7.809p        167.011n          0.000 
+
+Current Terms:
+ID                  649.984m       -649.959f         43.194m       -783.914f
+
+Resistance Terms:
+REQ                 397.921u          1.000T          5.988m          1.000T
+
+Voltage Terms:
+VD                    8.226m       -639.959m          7.525m       -773.914m
+
+Power DC Terms:
+PD                    5.347m        415.947f        325.030u        606.682f
+PS                    0.000           0.000           0.000           0.000 
+
+DC Pin Currents:
+Id                  649.984m       -649.959f         43.194m       -783.914f
+
+Condition:
+State                    OFF             OFF             OFF             OFF
+
+Device Variables:
+area                  1.000           1.000           1.000           1.000 
+ic                    0.000           0.000           0.000           0.000 
+
+
+Instance:           X5.DHIGH
+Using model:         X5.DCLP
+
+Capacitance Terms:
+CAP                   0.000 
+
+Current Terms:
+ID                 -336.086f
+
+Resistance Terms:
+REQ                   1.000T
+
+Voltage Terms:
+VD                 -326.086m
+
+Power DC Terms:
+PD                  109.593f
+PS                    0.000 
+
+DC Pin Currents:
+Id                 -336.086f
+
+Condition:
+State                    OFF
+
+Device Variables:
+area                  1.000 
+ic                    0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                RESR           RLOAD          RUPPER              R9
+V                      0.000          27.999          22.999           0.000 
+Power DC Terms:
+PD                     0.000          55.996           3.913m          0.000 
+
+DC Pin Currents:
+Ir                     0.000           2.000         170.148u          0.000 
+
+Device Variables:
+tc1                    0.000           0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000           0.000 
+
+
+Instance:              RLOWER              R7           X1.RM           X1.RX
+V                      5.000           0.000          10.001m          1.000u
+Power DC Terms:
+PD                   850.735u          0.000          10.002m          1.000u
+
+DC Pin Currents:
+Ir                   170.148u          0.000           1.000           1.000 
+
+Device Variables:
+tc1                    0.000           0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000           0.000 
+
+
+Instance:               X1.R4           X4.RP           X4.RS           X5.R1
+V                   -431.935m         55.998           2.000u        873.914m
+Power DC Terms:
+PD                    18.657m          3.136m          4.000u          2.546n
+
+DC Pin Currents:
+Ir                   -43.194m         55.998u          2.000           2.913n
+
+Device Variables:
+tc1                    0.000           0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000           0.000 
+
+
+Instance:               X5.RO
+V                     58.211p
+Power DC Terms:
+PD                 3.389E-022
+
+DC Pin Currents:
+Ir                     5.821p
+
+Device Variables:
+tc1                    0.000 
+tc2                    0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                 LOL           X1.LM
+V                     -1.302p          0.000 
+Power DC Terms:
+PS                -2.368E-024          0.000 
+
+DC Pin Currents:
+Il                     1.819p          1.000 
+
+Device Variables:
+ic                     0.000           0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                COUT              C4              C6              C7
+V                    -27.999         -22.999          -4.126          -4.126 
+Power DC Terms:
+PS                     0.000           0.000           0.000           0.000 
+
+DC Pin Currents:
+Ic                     0.000           0.000           0.000           0.000 
+
+Device Variables:
+ic                     0.000           0.000           0.000           0.000 
+
+
+Instance:                 COL           X5.C1
+V                    873.914m        873.914m
+Power DC Terms:
+PS                     0.000           0.000 
+
+DC Pin Currents:
+Ic                     0.000           0.000 
+
+Device Variables:
+ic                     0.000           0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:              X3.E1
+V                   349.566m
+Power DC Terms:
+PG                    0.000 
+
+DC Pin Currents:
+ISource               0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:              X1.GA           X1.GB          X1.ELM           X1.GC
+V                   160.000          -8.226m         10.001m        -55.998 
+Power DC Terms:
+PG                  -56.019           5.347m         10.002m         56.003 
+
+DC Pin Currents:
+ISource             350.118m        649.984m         -1.000           1.000 
+
+
+Instance:          X1.EDOFFM        X1.EDOFF
+V                   641.434m          1.081 
+Power DC Terms:
+PG                  -27.706m         46.688m
+
+DC Pin Currents:
+ISource              43.194m        -43.194m
+
+
+
+Operating Point for Devices of Type SPICE Poly
+==============================================
+Instance:              X4.E1           X4.F1           X5.G1           X5.E1
+V                    27.999          55.998        -873.914m        873.914m
+Power DC Terms:
+PG                   56.000         -56.000           2.546n          5.087p
+
+DC Pin Currents:
+ISource              -2.000           1.000           2.913n         -5.821p
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                 V4           VSTIM            VREF          X1.VLM
+V                   160.000           0.000           5.000           0.000 
+Power DC Terms:
+PG                   56.019           0.000           0.000           0.000 
+
+DC Pin Currents:
+ISource            -350.118m          0.000           0.000           1.000 
+
+
+Instance:            X1.VCLP           X4.VM         X5.VLOW        X5.VHIGH
+V                     9.000m          0.000         100.000m          1.200 
+Power DC Terms:
+PG                   -5.850f          0.000         -78.391f        403.303f
+
+DC Pin Currents:
+ISource             649.959f          2.000         783.914f       -336.086f
+
+

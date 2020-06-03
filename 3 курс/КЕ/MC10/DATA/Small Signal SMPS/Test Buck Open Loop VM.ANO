@@ -1,0 +1,364 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                  AC Analysis of Test Buck Open Loop VM                   ***
+********************************************************************************
+Limits
+======
+Frequency Range  Log 100k,10
+Number of Points 801
+Temperature      Linear 27
+Maximum Change % 5
+Noise Input      NONE
+Noise Output     2
+Run Options      Normal
+State Variables  Zero
+Operating Point  On
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Diode
+==========================================
+Instance:             X2.DLOW            X2.DHIGH            X1.XD.D1   
+Using model:          X2.DCLP             X2.DCLP        X1.XD.DCLAMP   
+LEVEL                       1(*)                1(*)                1(*)
+AF                     1.000 (*)           1.000 (*)           1.000 (*)
+BV                     0.000 (*)           0.000 (*)           0.000 (*)
+CJO                    0.000 (*)           0.000 (*)           0.000 (*)
+EG                     1.110 (*)           1.110 (*)           1.110 (*)
+FC                   500.000m(*)         500.000m(*)         500.000m(*)
+IBV                  100.000p(*)         100.000p(*)         100.000p(*)
+IBVL                   0.000 (*)           0.000 (*)           0.000 (*)
+IKF                    0.000 (*)           0.000 (*)           0.000 (*)
+IS                    10.000f(*)          10.000f(*)          10.000f(*)
+ISR                    0.000 (*)           0.000 (*)           0.000 (*)
+KF                     0.000 (*)           0.000 (*)           0.000 (*)
+M                    500.000m(*)         500.000m(*)         500.000m(*)
+N                     10.000m             10.000m             10.000m   
+NBV                    1.000 (*)           1.000 (*)           1.000 (*)
+NBVL                   1.000 (*)           1.000 (*)           1.000 (*)
+NR                     2.000 (*)           2.000 (*)           2.000 (*)
+RL                     0.000 (*)           0.000 (*)           0.000 (*)
+RS                     0.000 (*)           0.000 (*)         100.000m   
+T_ABS               UNDEFINED(*)        UNDEFINED(*)        UNDEFINED(*)
+T_MEASURED          UNDEFINED(*)        UNDEFINED(*)        UNDEFINED(*)
+T_REL_GLOBAL        UNDEFINED(*)        UNDEFINED(*)        UNDEFINED(*)
+T_REL_LOCAL         UNDEFINED(*)        UNDEFINED(*)        UNDEFINED(*)
+TBV1                   0.000 (*)           0.000 (*)           0.000 (*)
+TBV2                   0.000 (*)           0.000 (*)           0.000 (*)
+TIKF                   0.000 (*)           0.000 (*)           0.000 (*)
+TRS1                   0.000 (*)           0.000 (*)           0.000 (*)
+TRS2                   0.000 (*)           0.000 (*)           0.000 (*)
+TT                     0.000 (*)           0.000 (*)           0.000 (*)
+VJ                     1.000 (*)           1.000 (*)           1.000 (*)
+XTI                    3.000 (*)           3.000 (*)           3.000 (*)
+(*) Default Parameter
+
+
+
+Instance:            X1.XD.D2           X1.XD2.D1           X1.XD2.D2   
+Using model:     X1.XD.DCLAMP       X1.XD2.DCLAMP       X1.XD2.DCLAMP   
+LEVEL                       1(*)                1(*)                1(*)
+AF                     1.000 (*)           1.000 (*)           1.000 (*)
+BV                     0.000 (*)           0.000 (*)           0.000 (*)
+CJO                    0.000 (*)           0.000 (*)           0.000 (*)
+EG                     1.110 (*)           1.110 (*)           1.110 (*)
+FC                   500.000m(*)         500.000m(*)         500.000m(*)
+IBV                  100.000p(*)         100.000p(*)         100.000p(*)
+IBVL                   0.000 (*)           0.000 (*)           0.000 (*)
+IKF                    0.000 (*)           0.000 (*)           0.000 (*)
+IS                    10.000f(*)          10.000f(*)          10.000f(*)
+ISR                    0.000 (*)           0.000 (*)           0.000 (*)
+KF                     0.000 (*)           0.000 (*)           0.000 (*)
+M                    500.000m(*)         500.000m(*)         500.000m(*)
+N                     10.000m             10.000m             10.000m   
+NBV                    1.000 (*)           1.000 (*)           1.000 (*)
+NBVL                   1.000 (*)           1.000 (*)           1.000 (*)
+NR                     2.000 (*)           2.000 (*)           2.000 (*)
+RL                     0.000 (*)           0.000 (*)           0.000 (*)
+RS                   100.000m            100.000m            100.000m   
+T_ABS               UNDEFINED(*)        UNDEFINED(*)        UNDEFINED(*)
+T_MEASURED          UNDEFINED(*)        UNDEFINED(*)        UNDEFINED(*)
+T_REL_GLOBAL        UNDEFINED(*)        UNDEFINED(*)        UNDEFINED(*)
+T_REL_LOCAL         UNDEFINED(*)        UNDEFINED(*)        UNDEFINED(*)
+TBV1                   0.000 (*)           0.000 (*)           0.000 (*)
+TBV2                   0.000 (*)           0.000 (*)           0.000 (*)
+TIKF                   0.000 (*)           0.000 (*)           0.000 (*)
+TRS1                   0.000 (*)           0.000 (*)           0.000 (*)
+TRS2                   0.000 (*)           0.000 (*)           0.000 (*)
+TT                     0.000 (*)           0.000 (*)           0.000 (*)
+VJ                     1.000 (*)           1.000 (*)           1.000 (*)
+XTI                    3.000 (*)           3.000 (*)           3.000 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node            Voltage  Node            Voltage  Node            Voltage 
+1               10.000   2                5.000   3                5.040  
+VOUT             5.000   5                5.000   6                2.500  
+7                2.500   ERR              1.008   9                2.500  
+10             503.993m  11               5.000   12               1.008  
+13               1.008   14               0.000   X2.4             1.008  
+X2.2             1.008   X2.3            10.000m  X2.8             4.000  
+X1.XD2.D       503.993m  X1.6             5.040   X1.XD2.D2NC     11.498  
+X1.XD2.D2C     496.006m  X1.XD.DCX      503.993m  X1.XD.CLPN      16.000m 
+X1.XD.CLPP     990.000m  X1.XD2.D2CX    496.006m  X1.XD2.CLPN      7.000m 
+X1.XD2.CLPP    489.320m 
+
+DC Operating Point Inductor Current
+===================================
+   Inductor     Current     Inductor     Current 
+L1               2.000   LOL           -909.495f 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                X2.DLOW            X2.DHIGH            X1.XD.D1
+Using model:             X2.DCLP             X2.DCLP        X1.XD.DCLAMP
+
+Capacitance Terms:
+CAP                       0.000               0.000               0.000 
+
+Current Terms:
+ID                       -1.008p             -3.002p           -497.993f
+
+Resistance Terms:
+REQ                       1.000T              1.000T              1.000T
+
+Voltage Terms:
+VD                     -997.986m             -2.992            -487.993m
+
+Power DC Terms:
+PD                        1.006p              8.982p            243.017f
+PS                        0.000               0.000               0.000 
+
+DC Pin Currents:
+Id                       -1.008p             -3.002p           -497.993f
+
+Condition:
+State                        OFF                 OFF                 OFF
+
+Device Variables:
+area                      1.000               1.000               1.000 
+ic                        0.000               0.000               0.000 
+
+
+Instance:               X1.XD.D2           X1.XD2.D1           X1.XD2.D2
+Using model:        X1.XD.DCLAMP       X1.XD2.DCLAMP       X1.XD2.DCLAMP
+
+Capacitance Terms:
+CAP                       0.000               0.000               0.000 
+
+Current Terms:
+ID                     -496.007f           -499.006f              1.100m
+
+Resistance Terms:
+REQ                       1.000T              1.000T            235.084m
+
+Voltage Terms:
+VD                     -486.007m           -489.006m              6.686m
+
+Power DC Terms:
+PD                      241.063f            244.017f              7.356u
+PS                        0.000               0.000               0.000 
+
+DC Pin Currents:
+Id                     -496.007f           -499.006f              1.100m
+
+Condition:
+State                        OFF                 OFF                 OFF
+
+Device Variables:
+area                      1.000               1.000               1.000 
+ic                        0.000               0.000               0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                      R5                RESR              RUPPER
+V                        -40.004m              0.000              -2.500 
+Power DC Terms:
+PD                        80.018m              0.000             624.983u
+
+DC Pin Currents:
+Ir                        -2.000               0.000            -249.997u
+
+Device Variables:
+tc1                        0.000               0.000               0.000 
+tc2                        0.000               0.000               0.000 
+
+
+Instance:                  RLOWER                  R2                  R3
+V                         -2.500               0.000               0.000 
+Power DC Terms:
+PD                       624.983u              0.000               0.000 
+
+DC Pin Currents:
+Ir                      -249.997u              0.000               0.000 
+
+Device Variables:
+tc1                        0.000               0.000               0.000 
+tc2                        0.000               0.000               0.000 
+
+
+Instance:                   RLOAD                  R1               X2.R1
+V                         -5.000             -91.038f              1.008 
+Power DC Terms:
+PD                        10.000           8.288E-026              3.387n
+
+DC Pin Currents:
+Ir                        -2.000            -910.383f              3.360n
+
+Device Variables:
+tc1                        0.000               0.000               0.000 
+tc2                        0.000               0.000               0.000 
+
+
+Instance:                   X2.RO           X1.XD.RDC          X1.XD2.RDC
+V                         29.104p            503.993m            496.006m
+Power DC Terms:
+PD                     8.470E-023             25.401u             24.602u
+
+DC Pin Currents:
+Ir                         2.910p             50.399u             49.601u
+
+Device Variables:
+tc1                        0.000               0.000               0.000 
+tc2                        0.000               0.000               0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                      L1                 LOL
+V                          0.000              16.836p
+Power DC Terms:
+PS                         0.000          -1.531E-023
+
+DC Pin Currents:
+Il                         2.000            -909.495f
+
+Device Variables:
+ic                         0.000               0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                    COUT                  C1                  C2
+V                         -5.000               1.492               1.492 
+Power DC Terms:
+PS                         0.000               0.000               0.000 
+
+DC Pin Currents:
+Ic                         0.000               0.000               0.000 
+
+Device Variables:
+ic                         0.000               0.000               0.000 
+
+
+Instance:                      C3                 COL               X2.C1
+V                         -2.500               1.008               1.008 
+Power DC Terms:
+PS                         0.000               0.000               0.000 
+
+DC Pin Currents:
+Ic                         0.000               0.000               0.000 
+
+Device Variables:
+ic                         0.000               0.000               0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:                  X3.E1
+V                       503.993m
+Power DC Terms:
+PG                        0.000 
+
+DC Pin Currents:
+ISource                   0.000 
+
+
+
+Operating Point for Devices of Type Function Source
+===================================================
+Instance:                X1.EVCP             X1.GIAP              X1.ED2
+V                         5.040              10.000              11.498 
+Power DC Terms:
+PG                       10.081             -10.081               0.000 
+
+DC Pin Currents:
+ISource                  -2.000               1.008               0.000 
+
+
+Instance:               X1.XD.GD           X1.XD.EDC           X1.XD2.E2
+V                      -503.993m            503.993m            489.320m
+Power DC Terms:
+PG                       25.401u              0.000            -538.355u
+
+DC Pin Currents:
+ISource                  50.399u              0.000               1.100m
+
+
+Instance:             X1.XD2.EDC
+V                       496.006m
+Power DC Terms:
+PG                        0.000 
+
+DC Pin Currents:
+ISource                   0.000 
+
+
+
+Operating Point for Devices of Type SPICE Poly
+==============================================
+Instance:                  X2.G1               X2.E1           X1.XD2.GD
+V                        -1.008               1.008            -496.006m
+Power DC Terms:
+PG                        3.385n              2.934p            570.313u
+
+DC Pin Currents:
+ISource                   3.358n             -2.910p              1.150m
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                    VIN                VREF               VSTIM
+V                        10.000               2.500               0.000 
+Power DC Terms:
+PG                       10.081               0.000               0.000 
+
+DC Pin Currents:
+ISource                  -1.008               0.000               0.000 
+
+
+Instance:                X2.VLOW            X2.VHIGH               X1.VM
+V                        10.000m              4.000              -0.888f
+Power DC Terms:
+PG                      -10.080f             12.008p              1.777f
+
+DC Pin Currents:
+ISource                   1.008p             -3.002p              2.000 
+
+
+Instance:               X1.XD.V1            X1.XD.V2           X1.XD2.V1
+V                        16.000m            990.000m              7.000m
+Power DC Terms:
+PG                       -7.968f            492.406f             -3.493f
+
+DC Pin Currents:
+ISource                 497.993f           -497.380f            499.006f
+
+

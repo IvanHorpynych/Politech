@@ -1,0 +1,140 @@
+********************************************************************************
+***                            Micro-Cap 10.0.8.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                     Transient Analysis of IDEALTRANS                     ***
+********************************************************************************
+Limits
+======
+Time Range           1u
+Maximum Time Step    0
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:              V1              V2   
+Using model:         1MHZ            1MHZ   
+A                  1.000 (*)       1.000 (*)
+DC                 0.000 (*)       0.000 (*)
+F                1.000MEG(*)     1.000MEG(*)
+PH                 0.000 (*)       0.000 (*)
+RP                 0.000 (*)       0.000 (*)
+RS                 1.000m(*)       1.000m(*)
+TAU                0.000 (*)       0.000 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+2P            0.000   3P            0.000   3             0.000  
+1P            0.000   2P1           0.000   6             0.000  
+1P1           0.000   X1.3          0.000   X1.4          0.000  
+X1.6          0.000   X1.7          0.000   X2.3          0.000  
+X2.4          0.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                 RS2             RS3           V1.RS              RP
+V                      0.000           0.000           0.000           0.000 
+Power DC Terms:
+PD                     0.000           0.000           0.000           0.000 
+
+DC Pin Currents:
+Ir                     0.000           0.000           0.000           0.000 
+
+Device Variables:
+tc1                    0.000           0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000           0.000 
+
+
+Instance:                 RS4           V2.RS             RP1           X1.R3
+V                      0.000           0.000           0.000           0.000 
+Power DC Terms:
+PD                     0.000           0.000           0.000           0.000 
+
+DC Pin Currents:
+Ir                     0.000           0.000           0.000           0.000 
+
+Device Variables:
+tc1                    0.000           0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000           0.000 
+
+
+Instance:               X1.R4           X1.R5           X2.R1           X2.R2
+V                      0.000           0.000           0.000           0.000 
+Power DC Terms:
+PD                     0.000           0.000           0.000           0.000 
+
+DC Pin Currents:
+Ir                     0.000           0.000           0.000           0.000 
+
+Device Variables:
+tc1                    0.000           0.000           0.000           0.000 
+tc2                    0.000           0.000           0.000           0.000 
+
+
+
+Operating Point for Devices of Type Sine Source
+===============================================
+Instance:                  V1              V2
+Using model:             1MHZ            1MHZ
+V                      0.000           0.000 
+Power DC Terms:
+PG                     0.000           0.000 
+
+DC Pin Currents:
+ISource                0.000           0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:              X1.E3           X1.E4           X2.E2
+V                     0.000           0.000           0.000 
+Power DC Terms:
+PG                    0.000           0.000           0.000 
+
+DC Pin Currents:
+ISource               0.000           0.000           0.000 
+
+
+
+Operating Point for Devices of Type SPICE Poly
+==============================================
+Instance:              X1.F1           X1.F2           X2.F1
+V                     0.000           0.000           0.000 
+Power DC Terms:
+PG                    0.000           0.000           0.000 
+
+DC Pin Currents:
+ISource               0.000           0.000           0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:              X1.V1           X1.V2           X2.V1
+V                     0.000           0.000           0.000 
+Power DC Terms:
+PG                    0.000           0.000           0.000 
+
+DC Pin Currents:
+ISource               0.000           0.000           0.000 
+
+

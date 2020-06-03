@@ -1,0 +1,206 @@
+********************************************************************************
+***                            Micro-Cap 10.0.9.2                            ***
+***                                                                          ***
+***                                                                          ***
+***                        Transient Analysis of PRLC                        ***
+***                                                                          ***
+********************************************************************************
+Limits
+======
+Time Range           1u
+Maximum Time Step    5n
+Number of Points     51
+Temperature          Linear 27
+Retrace Runs         1
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Capacitor
+==============================================
+Instance:              C1   
+Using model:         CAP1   
+C                  1.000 (*)
+LS              UNDEFINED(*)
+RP              UNDEFINED(*)
+RS              UNDEFINED(*)
+T_ABS           UNDEFINED(*)
+T_MEASURED      UNDEFINED(*)
+T_REL_GLOBAL    UNDEFINED(*)
+T_REL_LOCAL     UNDEFINED(*)
+TC1              100.000u   
+TC2                0.000 (*)
+VC1                0.000 (*)
+VC2                0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Inductor
+=============================================
+Instance:              L1   
+Using model:         IND2   
+CP              UNDEFINED(*)
+IL1                0.000 (*)
+IL2                0.000 (*)
+L                  1.000    
+RS              UNDEFINED(*)
+T_ABS           UNDEFINED(*)
+T_MEASURED      UNDEFINED(*)
+T_REL_GLOBAL    UNDEFINED(*)
+T_REL_LOCAL     UNDEFINED(*)
+TC1                1.000m   
+TC2                0.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Pulse
+==========================================
+Instance:              V1   
+Using model:        PULSE   
+P1               100.000n   
+P2               100.000n   
+P3               500.000n   
+P4               500.000n   
+P5                 1.000u   
+VONE               5.000    
+VZERO              0.000    
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage 
+OUT           0.000   IN            0.000  
+
+DC Operating Point Inductor Current
+===================================
+Inductor     Current 
+L1            0.000  
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                  R1
+V                      0.000 
+Power DC Terms:
+PD                     0.000 
+
+DC Pin Currents:
+Ir                     0.000 
+
+Device Variables:
+tc1                   10.000u
+tc2                    0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:                  L1
+Using model:             IND2
+V                      0.000 
+Power DC Terms:
+PS                     0.000 
+
+DC Pin Currents:
+Il                     0.000 
+
+Device Variables:
+ic                     0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:                  C1
+Using model:             CAP1
+V                      0.000 
+Power DC Terms:
+PS                     0.000 
+
+DC Pin Currents:
+Ic                     0.000 
+
+Device Variables:
+ic                     0.000 
+
+
+
+Operating Point for Devices of Type Pulse
+=========================================
+Instance:                  V1
+Using model:            PULSE
+V                      0.000 
+Power DC Terms:
+PG                     0.000 
+
+DC Pin Currents:
+ISource                0.000 
+
+
+Waveform Values
+===============
+          T       V(1)   V(2)
+                             
+      0.000      0.000  0.000
+    20.000n      0.000  0.000
+    40.000n      0.000  0.000
+    60.000n      0.000  0.000
+    80.000n      0.000  0.000
+   100.000n      0.000  0.000
+   120.000n   810.741m  5.000
+   140.000n      2.685  5.000
+   160.000n      4.680  5.000
+   180.000n      6.123  5.000
+   200.000n      6.734  5.000
+   220.000n      6.593  5.000
+   240.000n      5.992  5.000
+   260.000n      5.272  5.000
+   280.000n      4.702  5.000
+   300.000n      4.414  5.000
+   320.000n      4.407  5.000
+   340.000n      4.591  5.000
+   360.000n      4.845  5.000
+   380.000n      5.064  5.000
+   400.000n      5.192  5.000
+   420.000n      5.216  5.000
+   440.000n      5.164  5.000
+   460.000n      5.077  5.000
+   480.000n      4.994  5.000
+   500.000n      4.939  0.000
+   520.000n      4.037  0.000
+   540.000n      2.147  0.000
+   560.000n   194.688m  0.000
+   580.000n     -1.179  0.000
+   600.000n     -1.726  0.000
+   620.000n     -1.545  0.000
+   640.000n  -931.604m  0.000
+   660.000n  -223.120m  0.000
+   680.000n   323.805m  0.000
+   700.000n   588.189m  0.000
+   720.000n   578.656m  0.000
+   740.000n   388.146m  0.000
+   760.000n   136.676m  0.000
+   780.000n   -75.739m  0.000
+   800.000n  -194.335m  0.000
+   820.000n  -212.174m  0.000
+   840.000n  -156.653m  0.000
+   860.000n   -69.515m  0.000
+   880.000n    11.139m  0.000
+   900.000n    61.775m  0.000
+   920.000n    76.137m  0.000
+   940.000n    61.561m  0.000
+   960.000n    32.183m  0.000
+   980.000n     2.209m  0.000
+     1.000u   -18.633m  0.000
+
