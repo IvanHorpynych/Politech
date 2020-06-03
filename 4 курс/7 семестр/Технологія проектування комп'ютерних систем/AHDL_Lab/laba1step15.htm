@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (Win95; I) [Netscape]">
+   <TITLE>Пример выполнения Лабораторной работы 1</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="bg2.gif">
+<A HREF="laba1step14.htm">Предыдущий</A>
+<BR>
+<HR>
+
+<P><B>Шаг 15</B>
+
+<P>На этом этап создание и тестирование модели элемента можно считать законченным.
+В задании необходимо построить несколько моделей. Для удобства их можно
+описать в одном файле.
+
+<P>Для описания элемента NAND в этом же файле необходимо повторить весь
+код (включая используемые библиотеки) и изменить описание портов (entity)
+и описание архитектуры (arhcitecture). В общем для двух элементов AND и
+NAND файл laba1.vhd будет выглядеть так:
+
+<P><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>--</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>--
+File: laba1.vhd</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>--
+created by Design Wizard: 09/28/98 23:36:12</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>--</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>library
+IEEE;</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>use
+IEEE.std_logic_1164.all;</FONT></FONT></FONT>
+
+<P><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>entity
+and2 is</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>port
+(</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>in1:
+in STD_LOGIC;</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>in2:
+in STD_LOGIC;</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>out1:
+out STD_LOGIC</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>);</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>end
+and2;</FONT></FONT></FONT>
+
+<P><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>architecture
+and2 of and2 is</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>begin</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>out1&lt;=in1
+and in2 after 20 ns;</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>end
+and2;</FONT></FONT></FONT>
+
+<P><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>library
+IEEE;</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>use
+IEEE.std_logic_1164.all;</FONT></FONT></FONT>
+
+<P><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>entity
+nand2 is</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>port
+(</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>in1:
+in STD_LOGIC;</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>in2:
+in STD_LOGIC;</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>out1:
+out STD_LOGIC</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>);</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>end
+nand2;</FONT></FONT></FONT>
+
+<P><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>architecture
+nand2 of nand2 is</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>begin</FONT></FONT></FONT>
+<BR><B><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>out1&lt;=(not
+(in1 and in2)) after 20 ns;</FONT></FONT></FONT></B>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#004000"><FONT SIZE=-2>end
+nand2;</FONT></FONT></FONT>
+
+<P><FONT FACE="Times New Roman Cyr"><FONT SIZE=+0>Логика работы элемента
+NAND отличается от AND. На его выход подается инвертированный сигнал AND.
+Это достигается использованием функции Not после операции AND.</FONT></FONT>
+
+<P><FONT FACE="Times New Roman Cyr"><FONT SIZE=+0>Аналогично добавляются
+в файл и описания других логическх элементов.</FONT></FONT>
+<BR>
+<HR>
+
+<P><A HREF="laba1step14.htm">Предыдущий</A>
+<BR>&nbsp;
+</BODY>
+</HTML>

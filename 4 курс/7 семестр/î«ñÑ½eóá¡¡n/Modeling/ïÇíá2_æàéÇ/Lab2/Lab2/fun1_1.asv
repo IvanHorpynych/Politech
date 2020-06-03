@@ -1,0 +1,3 @@
+function dx = fun1_(t, x)
+dx = sin(t) - 2 * x ;
+end

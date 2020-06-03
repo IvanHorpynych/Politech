@@ -1,0 +1,12 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=1
+modified=1
+Current Config=compile
+[Configurations]
+compile=lab1
+[Files]
+/lab1.vhd=-1
+[Files.Data]
+.\src\lab1.vhd=VHDL Source Code

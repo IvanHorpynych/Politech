@@ -1,0 +1,7 @@
+69
+~E 1 "./src/lab1_3.vhd" 28 not_or2
+~A 1 "./src/lab1_3.vhd" 38 not_or2
+~E 1 "./src/lab1.vhd" 28 and2
+~A 1 "./src/lab1.vhd" 38 and2
+~E 1 "./src/lab1_2.vhd" 28 or4
+~A 1 "./src/lab1_2.vhd" 40 or4

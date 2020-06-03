@@ -1,0 +1,14 @@
+ File: .\src\lab1.vhd
+ Compile Entity "and2"
+ Compile Architecture "and2" of Entity "and2"
+ Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+ File: .\src\lab1.vhd
+ Compile Entity "and2"
+ Entity "and2" has been skipped - no difference detected.
+ Compile Architecture "and2" of Entity "and2"
+ Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]
+ File: .\src\lab1.vhd
+ Compile Entity "and2"
+ Entity "and2" has been skipped - no difference detected.
+ Compile Architecture "and2" of Entity "and2"
+ Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]

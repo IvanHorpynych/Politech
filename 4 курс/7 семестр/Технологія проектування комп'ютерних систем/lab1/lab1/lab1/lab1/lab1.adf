@@ -1,0 +1,66 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=3
+Current Config=compile
+
+[Configurations]
+compile=lab1
+
+[Library]
+lab1=.\lab1.LIB
+
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+
+[LocalVhdlSets]
+CompileWithDebug=0
+
+[$LibMap$]
+lab1=.
+Active_lib=
+
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=not_or2|not_or2|0 
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/lab1.vhd=-1
+/and2.asdb=-1
+/and2.awc=-1
+/lab1_2.vhd=-1
+/or4.asdb=-1
+/or4.awc=-1
+/lab1_3.vhd=-1
+/not_or2.asdb=-1
+/not_or2.awc=-1
+
+[Files.Data]
+.\src\lab1.vhd=VHDL Source Code
+.\src\and2.asdb=Accelerated Waveform File
+.\src\and2.awc=Accelerated Waveform Configuration
+.\src\lab1_2.vhd=VHDL Source Code
+.\src\or4.asdb=Accelerated Waveform File
+.\src\or4.awc=Accelerated Waveform Configuration
+.\src\lab1_3.vhd=VHDL Source Code
+.\src\not_or2.asdb=Accelerated Waveform File
+.\src\not_or2.awc=Accelerated Waveform Configuration
+

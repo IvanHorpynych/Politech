@@ -1,0 +1,25 @@
+V 000035 21 930 1349383063765 and2
+(_unit (and2 0 13 (and2 0 23 ))
+  (_version v27)
+  (_time 1349383063750 2012.10.04 23:37:43)
+  (_source (\.\\src\\lab1.vhd\))
+  (_use (std(standard))(ieee(std_logic_1164)))
+  (_entity
+    (_time 1349382935906)
+    (_use (ieee(std_logic_1164)))
+  )
+  (_object
+    (_port (_internal in1 ~extieee.std_logic_1164.std_logic 0 15 (_entity (_in ))))
+    (_port (_internal in2 ~extieee.std_logic_1164.std_logic 0 16 (_entity (_in ))))
+    (_port (_internal out1 ~extieee.std_logic_1164.std_logic 0 17 (_entity (_out ))))
+    (_process
+      (line__25(_architecture 0 0 25 (_assignment (_target(2))(_sensitivity(0)(1)))))
+    )
+    (_subprogram
+      (_external resolved (ieee std_logic_1164 0))
+    )
+    (_type (_external ~extieee.std_logic_1164.std_logic (ieee std_logic_1164 std_logic)))
+    (_type (_external ~extieee.std_logic_1164.std_ulogic (ieee std_logic_1164 std_ulogic)))
+  )
+  (_model . and2 1 23  )
+)

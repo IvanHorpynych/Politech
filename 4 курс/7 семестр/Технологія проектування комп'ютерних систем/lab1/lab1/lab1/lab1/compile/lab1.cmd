@@ -1,0 +1,1 @@
+-w -s "e:\TPKS\lab1\library.cfg"  -j "e:\TPKS\lab1\lab1\projlib.cfg"  -d "e:\TPKS\lab1\lab1\compile"   -work lab1  -O3 -e 100 -2002 "e:\TPKS\lab1\lab1\src\lab1.vhd" 

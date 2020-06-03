@@ -1,0 +1,5 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints, code coverage, and assertion debug will not be available." 
+MESSAGE "File: e:\TPKS\lab1\lab1\src\lab1.vhd" 
+MESSAGE "Compile Entity "and2"" 
+MESSAGE "Compile Architecture "and2" of Entity "and2"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.4 [s]" 

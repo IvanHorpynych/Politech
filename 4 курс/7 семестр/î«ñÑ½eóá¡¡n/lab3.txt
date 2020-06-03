@@ -1,0 +1,290 @@
+Rule18:
+
+clf
+clear all
+
+%=============================================
+%build the GUI
+%define the plot button
+plotbutton=uicontrol('style','pushbutton',...
+   'string','Run', ...
+   'fontsize',12, ...
+   'position',[100,400,50,20], ...
+   'callback', 'run=1;');
+
+%define the stop button
+erasebutton=uicontrol('style','pushbutton',...
+   'string','Stop', ...
+   'fontsize',12, ...
+   'position',[200,400,50,20], ...
+   'callback','freeze=1;');
+
+%define the Quit button
+quitbutton=uicontrol('style','pushbutton',...
+   'string','Quit', ...
+   'fontsize',12, ...
+   'position',[300,400,50,20], ...
+   'callback','stop=1;close;');
+
+number = uicontrol('style','text', ...
+    'string','1', ...
+   'fontsize',12, ...
+   'position',[20,400,50,20]);
+
+
+n=32;
+%initialize the arrays
+z = zeros(n,n);
+cells = z;
+sum = z;
+%set a few cells to one
+cells(1,1:n) = rand(1,n)<.5;
+%how long for each case to stability or simple oscillators
+
+%build an image and display it
+imh = image(cat(3,cells,cells,cells));
+set(imh, 'erasemode', 'none')
+axis equal
+axis tight
+
+%index definition for cell update
+x = 2:n;
+y = 2:n;
+
+%Main event loop
+stop= 0; %wait for a quit button push
+run = 0; %wait for a draw 
+freeze = 0; %wait for a freeze
+stepnumber = str2num(get(number,'string'));
+while (stepnumber<993) 
+
+    if (run==1)
+		for x=2:n
+		        %nearest neighbor sum
+		        sum(x,1) =  cells(x-1, 2) + cells(x-1,n) ;
+		        cells(x,1) = (sum(x,1)==1) & (cells(1,1)==0);
+		        set(imh, 'cdata', cat(3,cells,cells,cells) )
+			        %update the step number diaplay
+			stepnumber = 1 + str2num(get(number,'string'));
+			        set(number,'string',num2str(stepnumber));
+              for y=2:(n-1)
+                sum(x,y) =  cells(x-1, y-1) + cells(x-1,y+1) ;
+                % The CA rule
+                cells(x,y) = (sum(x,y)==1) & (cells(x-1,y)==0);       
+                %draw the new image
+                set(imh, 'cdata', cat(3,cells,cells,cells) )
+			        %update the step number diaplay
+			stepnumber = 1 + str2num(get(number,'string'));
+			        set(number,'string',num2str(stepnumber))
+              end
+              sum(x,n) =  cells(x-1, n-1) + cells(x-1,1) ;
+		        cells(x,n) = (sum(x,n)==1) & (cells(1,n)==0);
+		        set(imh, 'cdata', cat(3,cells,cells,cells) )
+			        %update the step number diaplay
+			stepnumber = 1 + str2num(get(number,'string'));
+			        set(number,'string',num2str(stepnumber));
+
+		end    
+end
+
+    if (freeze==1)
+        run = 0;
+        freeze = 0;
+    end
+
+drawnow  %need this in the loop for controls to work
+
+end
+
+
+Rule73:
+clf
+clear all
+
+%=============================================
+%build the GUI
+%define the plot button
+plotbutton=uicontrol('style','pushbutton',...
+   'string','Run', ...
+   'fontsize',12, ...
+   'position',[100,400,50,20], ...
+   'callback', 'run=1;');
+
+%define the stop button
+erasebutton=uicontrol('style','pushbutton',...
+   'string','Stop', ...
+   'fontsize',12, ...
+   'position',[200,400,50,20], ...
+   'callback','freeze=1;');
+
+%define the Quit button
+quitbutton=uicontrol('style','pushbutton',...
+   'string','Quit', ...
+   'fontsize',12, ...
+   'position',[300,400,50,20], ...
+   'callback','stop=1;close;');
+
+number = uicontrol('style','text', ...
+    'string','1', ...
+   'fontsize',12, ...
+   'position',[20,400,50,20]);
+
+
+%=============================================
+%CA setup
+n=32;
+%initialize the arrays
+z = zeros(n,n);
+cells = z;
+sum = z;
+%set a few cells to one
+cells(1,1:n) = rand(1,n)<.5;
+%how long for each case to stability or simple oscillators
+%build an image and display it
+imh = image(cat(3,cells,cells,cells));
+set(imh, 'erasemode', 'none')
+axis equal
+axis tight
+
+%index definition for cell update
+x = 2:n;
+y = 2:n;
+
+%Main event loop
+stop= 0; %wait for a quit button push
+run = 0; %wait for a draw 
+freeze = 0; %wait for a freeze
+stepnumber = str2num(get(number,'string'));
+while (stepnumber<993) 
+
+    if (run==1)
+		for x=2:n
+		        %nearest neighbor sum
+		        sum(x,1) =  cells(x-1, 2) + cells(x-1,n) ;
+		        cells(x,1) = ((sum(x,1)==1) & (cells(1,1)==1)) | ((sum(x,1)==0) & (cells(1,1)==0));
+		        set(imh, 'cdata', cat(3,cells,cells,cells) )
+			        %update the step number diaplay
+			stepnumber = 1 + str2num(get(number,'string'));
+			        set(number,'string',num2str(stepnumber));
+              for y=2:(n-1)
+                sum(x,y) =  cells(x-1, y-1) + cells(x-1,y+1) ;
+                % The CA rule
+                cells(x,y) = ((sum(x,y)==1) & (cells(x-1,y)==1)) | ((sum(x,y)==0) & (cells(x-1,y)==0));       
+                %draw the new image
+                set(imh, 'cdata', cat(3,cells,cells,cells) )
+			        %update the step number diaplay
+			stepnumber = 1 + str2num(get(number,'string'));
+			        set(number,'string',num2str(stepnumber))
+              end
+              sum(x,n) =  cells(x-1, n-1) + cells(x-1,1) ;
+		        cells(x,n) = ((sum(x,n)==1) & (cells(1,n)==1)) | ((sum(x,n)==0) & (cells(1,n)==0));
+		        set(imh, 'cdata', cat(3,cells,cells,cells) )
+			        %update the step number diaplay
+			stepnumber = 1 + str2num(get(number,'string'));
+			        set(number,'string',num2str(stepnumber));
+
+		end    
+end
+
+    if (freeze==1)
+        run = 0;
+        freeze = 0;
+    end
+
+drawnow  %need this in the loop for controls to work
+
+end
+Rule136:
+clf
+clear all
+
+%=============================================
+%build the GUI
+%define the plot button
+plotbutton=uicontrol('style','pushbutton',...
+   'string','Run', ...
+   'fontsize',12, ...
+   'position',[100,400,50,20], ...
+   'callback', 'run=1;');
+
+%define the stop button
+erasebutton=uicontrol('style','pushbutton',...
+   'string','Stop', ...
+   'fontsize',12, ...
+   'position',[200,400,50,20], ...
+   'callback','freeze=1;');
+
+%define the Quit button
+quitbutton=uicontrol('style','pushbutton',...
+   'string','Quit', ...
+   'fontsize',12, ...
+   'position',[300,400,50,20], ...
+   'callback','stop=1;close;');
+
+number = uicontrol('style','text', ...
+    'string','1', ...
+   'fontsize',12, ...
+   'position',[20,400,50,20]);
+
+
+%=============================================
+%CA setup
+
+n=32;
+
+%initialize the arrays
+z = zeros(n,n);
+cells = z;
+sum = z;
+%set a few cells to one
+cells(1,1:n) = rand(1,n)<.5;
+%how long for each case to stability or simple oscillators
+
+%build an image and display it
+imh = image(cat(3,cells,cells,cells));
+set(imh, 'erasemode', 'none')
+axis equal
+axis tight
+
+%index definition for cell update
+x = 2:n;
+y = 2:n;
+
+%Main event loop
+stop= 0; %wait for a quit button push
+run = 0; %wait for a draw 
+freeze = 0; %wait for a freeze
+stepnumber = str2num(get(number,'string'));
+while (stepnumber<993) 
+
+    if (run==1)
+		for x=2:n
+		        %nearest neighbor sum
+		         for y=1:(n-1)
+                sum(x,y) =  cells(x-1, y) + cells(x-1,y+1) ;
+                % The CA rule
+                cells(x,y) = (sum(x,y)==2);        
+                %draw the new image
+                set(imh, 'cdata', cat(3,cells,cells,cells) )
+			        %update the step number diaplay
+			stepnumber = 1 + str2num(get(number,'string'));
+			        set(number,'string',num2str(stepnumber))
+              end
+              sum(x,n) =  cells(x-1, n) + cells(x-1,1) ;
+		        cells(x,n) = (sum(x,n)==2);
+		        set(imh, 'cdata', cat(3,cells,cells,cells) )
+			        %update the step number diaplay
+			stepnumber = 1 + str2num(get(number,'string'));
+			        set(number,'string',num2str(stepnumber));
+
+		end    
+end
+
+    if (freeze==1)
+        run = 0;
+        freeze = 0;
+    end
+
+drawnow  %need this in the loop for controls to work
+
+end

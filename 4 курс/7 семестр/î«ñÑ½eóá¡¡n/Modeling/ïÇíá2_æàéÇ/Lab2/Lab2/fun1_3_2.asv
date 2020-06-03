@@ -1,0 +1,4 @@
+function dy = fun1_3(x, y, z)
+
+dy = (z - y) * x;
+end

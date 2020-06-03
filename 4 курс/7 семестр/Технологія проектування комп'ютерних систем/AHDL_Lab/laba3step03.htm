@@ -1,0 +1,97 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (Win95; I) [Netscape]">
+   <TITLE>Пример выполнения Лабораторной работы 3</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="bg2.gif">
+<A HREF="laba3step02.htm">Предыдущий</A>
+<A HREF="laba3step04.htm">Следующий</A>
+<BR>
+<HR>
+
+<P><B>Шаг 3</B>
+
+<P>Теперь, когда система готова к редакированию файла описания поработаем
+над текстом. Внесите в раздел архитектуры изменения так, чтобы общий текст
+описания тригера принял следующий вид:
+
+<P><FONT FACE="Courier New Cyr"><FONT COLOR="#008040"><FONT SIZE=-2>--</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#008040"><FONT SIZE=-2>--
+File: laba3.vhd</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#008040"><FONT SIZE=-2>--
+created by Design Wizard: 10/12/98 23:44:36</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#008040"><FONT SIZE=-2>--</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">library</FONT>
+IEEE;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">use</FONT>
+IEEE.std_logic_1164.all;</FONT></FONT>
+
+<P><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">entity</FONT>
+jk1 <FONT COLOR="#0000FF">is</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">generic</FONT>(</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>delay:time:=20ns</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>)</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">port</FONT>
+(</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>j: <FONT COLOR="#0000FF">in</FONT>
+STD_LOGIC;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>k: <FONT COLOR="#0000FF">in</FONT>
+STD_LOGIC;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>c: <FONT COLOR="#0000FF">in</FONT>
+STD_LOGIC;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>r: <FONT COLOR="#0000FF">in</FONT>
+STD_LOGIC;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>c1: <FONT COLOR="#0000FF">out</FONT>
+STD_LOGIC;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>c2: <FONT COLOR="#0000FF">out</FONT>
+STD_LOGIC</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2>);</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">end</FONT>
+jk1;</FONT></FONT>
+
+<P><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">architecture</FONT>
+jk1 <FONT COLOR="#0000FF">of</FONT> jk1 <FONT COLOR="#0000FF">is</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#0000FF"><FONT SIZE=-2>begin</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">process</FONT>(c,r)</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">variable</FONT>
+q:integer:=0;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT COLOR="#0000FF"><FONT SIZE=-2>begin</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">if</FONT>
+(c'event <FONT COLOR="#0000FF">and</FONT> c='1' <FONT COLOR="#0000FF">and</FONT>
+r='0') <FONT COLOR="#0000FF">then</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">if</FONT>
+((j='1') <FONT COLOR="#0000FF">and</FONT> (k='0')) <FONT COLOR="#0000FF">then</FONT>
+q:=1;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">elsif</FONT>
+((j='0') <FONT COLOR="#0000FF">and</FONT> (k='1')) <FONT COLOR="#0000FF">then</FONT>
+q:=0;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">elsif</FONT>
+((j='1') <FONT COLOR="#0000FF">and</FONT> (k='1')) <FONT COLOR="#0000FF">then</FONT>
+q:=1-q;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">end
+if</FONT>;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">end
+if</FONT>;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">if</FONT>
+(r'event and r='1') <FONT COLOR="#0000FF">then</FONT> q:=0;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">end
+if</FONT>;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">if</FONT>
+(q=1) <FONT COLOR="#0000FF">then</FONT> c1&lt;='1' <FONT COLOR="#0000FF">after</FONT>
+delay;c2&lt;='0' <FONT COLOR="#0000FF">after</FONT> delay;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">else</FONT>
+c2&lt;='1' <FONT COLOR="#0000FF">after</FONT> delay;c1&lt;='0' <FONT COLOR="#0000FF">after</FONT>
+delay;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">end
+if</FONT>;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">end
+process</FONT>;</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-2><FONT COLOR="#0000FF">end
+jk1</FONT>;</FONT></FONT>
+<BR>
+<HR>
+
+<P><A HREF="laba3step02.htm">Предыдущий</A> <A HREF="laba3step04.htm">Следующий</A>
+</BODY>
+</HTML>

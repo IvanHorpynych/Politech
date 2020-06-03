@@ -1,0 +1,692 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (Win95; I) [Netscape]">
+   <TITLE>Задание на лабораторную работу</TITLE>
+</HEAD>
+<BODY BACKGROUND="bg2.gif">
+
+<CENTER><B><FONT FACE="Times New Roman Cyr"><FONT SIZE=+2>Варианты заданий
+на лабораторную работу №4</FONT></FONT></B></CENTER>
+
+<CENTER><I><FONT FACE="Times New Roman Cyr"><FONT SIZE=+2>Построение модели
+синхронного счетчика и регистра.</FONT></FONT></I></CENTER>
+
+
+<P>&nbsp;
+
+<P><FONT FACE="Times New Roman Cyr">*Номер варианта выбирается по последним
+двум цифрам зачетной книжки. Для задания, где нужно построить поведенческую
+модель, задержку распространения сигнала выбрать равной 130нс.</FONT>
+
+<P><FONT FACE="Times New Roman Cyr">Обязательные операции: хранение, загрузка.
+Логические и арифметические операции выполняются над хранящемся в регистре
+числом и числом поступающем на вход. Разрядность регистра 4 бита.</FONT>
+<BR><FONT FACE="Times New Roman Cyr">Остальные операции выбираются в соответствии
+с вариантом:</FONT>&nbsp;
+<DIV ALIGN=right><TABLE BORDER CELLSPACING=0 WIDTH="100%" >
+<TR>
+<TD ALIGN=CENTER>Вариант</TD>
+
+<TD ALIGN=CENTER WIDTH="10%">Перевод в код</TD>
+
+<TD ALIGN=CENTER WIDTH="10%">Сдвиг влево</TD>
+
+<TD ALIGN=CENTER WIDTH="10%">Сдвиг вправо</TD>
+
+<TD ALIGN=CENTER WIDTH="10%">Арифм. операция</TD>
+
+<TD ALIGN=CENTER WIDTH="10%">Логич. операция</TD>
+
+<TD ALIGN=CENTER WIDTH="10%">Доп. функция</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER WIDTH="14%">01</TD>
+
+<TD WIDTH="14%">Инверсный</TD>
+
+<TD WIDTH="14%">Логичиский</TD>
+
+<TD WIDTH="14%">Циклический</TD>
+
+<TD ALIGN=CENTER WIDTH="14%">+1</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">AND</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">Сортировка</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER WIDTH="14%">02</TD>
+
+<TD WIDTH="14%">Дополнит.</TD>
+
+<TD WIDTH="14%">Логичиский</TD>
+
+<TD WIDTH="14%">Логичиский</TD>
+
+<TD ALIGN=CENTER WIDTH="14%">+1</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">AND</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">Пр. шифратор</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER WIDTH="14%">03</TD>
+
+<TD WIDTH="14%">Инверсный</TD>
+
+<TD WIDTH="14%">Циклический</TD>
+
+<TD WIDTH="14%">Логичиский</TD>
+
+<TD ALIGN=CENTER WIDTH="14%">+1</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">AND</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">Разворот</TD>
+</TR>
+
+<TR>
+<TD WIDTH="14%">
+<CENTER>04</CENTER>
+</TD>
+
+<TD WIDTH="14%">Дополнит.</TD>
+
+<TD WIDTH="14%">Циклический</TD>
+
+<TD WIDTH="14%">Циклический</TD>
+
+<TD ALIGN=CENTER WIDTH="14%">+1</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">NAND</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">Сортировка</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER WIDTH="14%">05</TD>
+
+<TD WIDTH="14%">Инверсный</TD>
+
+<TD WIDTH="14%">Логичиский</TD>
+
+<TD WIDTH="14%">Циклический</TD>
+
+<TD ALIGN=CENTER WIDTH="14%">+1</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">NAND</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">Пр. шифратор</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER WIDTH="14%">06</TD>
+
+<TD WIDTH="14%">Дополнит.</TD>
+
+<TD WIDTH="14%">Логичиский</TD>
+
+<TD WIDTH="14%">Логичиский</TD>
+
+<TD ALIGN=CENTER WIDTH="14%">+1</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">NAND</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">Разворот</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER WIDTH="14%">07</TD>
+
+<TD WIDTH="14%">Инверсный</TD>
+
+<TD WIDTH="14%">Циклический</TD>
+
+<TD WIDTH="14%">Логичиский</TD>
+
+<TD ALIGN=CENTER WIDTH="14%">+1</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">OR</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">Сортировка</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER WIDTH="14%">08</TD>
+
+<TD WIDTH="14%">Дополнит.</TD>
+
+<TD WIDTH="14%">Циклический</TD>
+
+<TD WIDTH="14%">Циклический</TD>
+
+<TD ALIGN=CENTER WIDTH="14%">-1</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">OR</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">Пр. шифратор</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER WIDTH="14%">09</TD>
+
+<TD WIDTH="14%">Инверсный</TD>
+
+<TD WIDTH="14%">Логичиский</TD>
+
+<TD WIDTH="14%">Циклический</TD>
+
+<TD ALIGN=CENTER WIDTH="14%">-1</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">OR</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">Разворот</TD>
+</TR>
+
+<TR>
+<TD ALIGN=CENTER WIDTH="14%">10</TD>
+
+<TD WIDTH="14%">Дополнит.</TD>
+
+<TD WIDTH="14%">Логичиский</TD>
+
+<TD WIDTH="14%">Логичиский</TD>
+
+<TD ALIGN=CENTER WIDTH="14%">-1</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">NOR</TD>
+
+<TD ALIGN=CENTER WIDTH="15%">Сортировка</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>11</CENTER>
+</TD>
+
+<TD>Инверсный</TD>
+
+<TD>Циклический</TD>
+
+<TD>Логичиский</TD>
+
+<TD>
+<CENTER>&nbsp;-1</CENTER>
+</TD>
+
+<TD>
+<CENTER>NOR</CENTER>
+</TD>
+
+<TD>
+<CENTER>Пр. шифратор</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>12</CENTER>
+</TD>
+
+<TD>Дополнит.</TD>
+
+<TD>Циклический</TD>
+
+<TD>Циклический</TD>
+
+<TD>
+<CENTER>&nbsp;-1</CENTER>
+</TD>
+
+<TD>
+<CENTER>NOR</CENTER>
+</TD>
+
+<TD>
+<CENTER>Разворот</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>13</CENTER>
+</TD>
+
+<TD>Инверсный</TD>
+
+<TD>Логичиский</TD>
+
+<TD>Циклический</TD>
+
+<TD>
+<CENTER>&nbsp;-1</CENTER>
+</TD>
+
+<TD>
+<CENTER>XOR</CENTER>
+</TD>
+
+<TD>
+<CENTER>Сортировка</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>14</CENTER>
+</TD>
+
+<TD>Дополнит.</TD>
+
+<TD>Логичиский</TD>
+
+<TD>Логичиский</TD>
+
+<TD>
+<CENTER>&nbsp;-1</CENTER>
+</TD>
+
+<TD>
+<CENTER>XOR</CENTER>
+</TD>
+
+<TD>
+<CENTER>Пр. шифратор</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>15</CENTER>
+</TD>
+
+<TD>Инверсный</TD>
+
+<TD>Циклический</TD>
+
+<TD>Логичиский</TD>
+
+<TD>
+<CENTER>&nbsp;-1</CENTER>
+</TD>
+
+<TD>
+<CENTER>XOR</CENTER>
+</TD>
+
+<TD>
+<CENTER>Разворот</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>16</CENTER>
+</TD>
+
+<TD>Дополнит.</TD>
+
+<TD>Циклический</TD>
+
+<TD>Циклический</TD>
+
+<TD>
+<CENTER>&nbsp;+In</CENTER>
+</TD>
+
+<TD>
+<CENTER>NXOR</CENTER>
+</TD>
+
+<TD>
+<CENTER>Сортировка</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>17</CENTER>
+</TD>
+
+<TD>Инверсный</TD>
+
+<TD>Логичиский</TD>
+
+<TD>Циклический</TD>
+
+<TD>
+<CENTER>&nbsp;+In</CENTER>
+</TD>
+
+<TD>
+<CENTER>NXOR</CENTER>
+</TD>
+
+<TD>
+<CENTER>Пр. шифратор</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>18</CENTER>
+</TD>
+
+<TD>Дополнит.</TD>
+
+<TD>Логичиский</TD>
+
+<TD>Логичиский</TD>
+
+<TD>
+<CENTER>&nbsp;+In</CENTER>
+</TD>
+
+<TD>
+<CENTER>NXOR</CENTER>
+</TD>
+
+<TD>
+<CENTER>Разворот</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>19</CENTER>
+</TD>
+
+<TD>Инверсный</TD>
+
+<TD>Циклический</TD>
+
+<TD>Логичиский</TD>
+
+<TD>
+<CENTER>&nbsp;+In</CENTER>
+</TD>
+
+<TD>
+<CENTER>AND</CENTER>
+</TD>
+
+<TD>
+<CENTER>Сортировка</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>20</CENTER>
+</TD>
+
+<TD>Дополнит.</TD>
+
+<TD>Циклический</TD>
+
+<TD>Циклический</TD>
+
+<TD>
+<CENTER>&nbsp;+In</CENTER>
+</TD>
+
+<TD>
+<CENTER>AND</CENTER>
+</TD>
+
+<TD>
+<CENTER>Пр. шифратор</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>21</CENTER>
+</TD>
+
+<TD>Инверсный</TD>
+
+<TD>Логичиский</TD>
+
+<TD>Циклический</TD>
+
+<TD>
+<CENTER>&nbsp;+In</CENTER>
+</TD>
+
+<TD>
+<CENTER>AND</CENTER>
+</TD>
+
+<TD>
+<CENTER>Разворот</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>22</CENTER>
+</TD>
+
+<TD>Дополнит.</TD>
+
+<TD>Логичиский</TD>
+
+<TD>Логичиский</TD>
+
+<TD>
+<CENTER>&nbsp;+In</CENTER>
+</TD>
+
+<TD>
+<CENTER>NAND</CENTER>
+</TD>
+
+<TD>
+<CENTER>Сортировка</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>23</CENTER>
+</TD>
+
+<TD>Инверсный</TD>
+
+<TD>Циклический</TD>
+
+<TD>Логичиский</TD>
+
+<TD>
+<CENTER>&nbsp;-In</CENTER>
+</TD>
+
+<TD>
+<CENTER>NAND</CENTER>
+</TD>
+
+<TD>
+<CENTER>Пр. шифратор</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>24</CENTER>
+</TD>
+
+<TD>Дополнит.</TD>
+
+<TD>Циклический</TD>
+
+<TD>Циклический</TD>
+
+<TD>
+<CENTER>&nbsp;-In</CENTER>
+</TD>
+
+<TD>
+<CENTER>NAND</CENTER>
+</TD>
+
+<TD>
+<CENTER>Разворот</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>25</CENTER>
+</TD>
+
+<TD>Инверсный</TD>
+
+<TD>Логичиский</TD>
+
+<TD>Циклический</TD>
+
+<TD>
+<CENTER>&nbsp;-In</CENTER>
+</TD>
+
+<TD>
+<CENTER>OR</CENTER>
+</TD>
+
+<TD>
+<CENTER>Сортировка</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>26</CENTER>
+</TD>
+
+<TD>Дополнит.</TD>
+
+<TD>Логичиский</TD>
+
+<TD>Логичиский</TD>
+
+<TD>
+<CENTER>&nbsp;-In</CENTER>
+</TD>
+
+<TD>
+<CENTER>OR</CENTER>
+</TD>
+
+<TD>
+<CENTER>Пр. шифратор</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>27</CENTER>
+</TD>
+
+<TD>Инверсный</TD>
+
+<TD>Циклический</TD>
+
+<TD>Логичиский</TD>
+
+<TD>
+<CENTER>&nbsp;-In</CENTER>
+</TD>
+
+<TD>
+<CENTER>OR</CENTER>
+</TD>
+
+<TD>
+<CENTER>Разворот</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>28</CENTER>
+</TD>
+
+<TD>Дополнит.</TD>
+
+<TD>Циклический</TD>
+
+<TD>Циклический</TD>
+
+<TD>
+<CENTER>&nbsp;-In</CENTER>
+</TD>
+
+<TD>
+<CENTER>NOR</CENTER>
+</TD>
+
+<TD>
+<CENTER>Сортировка</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>29</CENTER>
+</TD>
+
+<TD>Инверсный</TD>
+
+<TD>Логичиский</TD>
+
+<TD>Циклический</TD>
+
+<TD>
+<CENTER>&nbsp;-In</CENTER>
+</TD>
+
+<TD>
+<CENTER>NOR</CENTER>
+</TD>
+
+<TD>
+<CENTER>Пр. шифратор</CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>30</CENTER>
+</TD>
+
+<TD>Дополнит.</TD>
+
+<TD>Логичиский</TD>
+
+<TD>Логичиский</TD>
+
+<TD>
+<CENTER>&nbsp;-In</CENTER>
+</TD>
+
+<TD>
+<CENTER>NOR</CENTER>
+</TD>
+
+<TD>
+<CENTER>Разворот</CENTER>
+</TD>
+</TR>
+</TABLE></DIV>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT FACE="Times New Roman Cyr"><A HREF="laba4step00.htm">Пример
+выполнения</A></FONT>
+
+<P><FONT FACE="Times New Roman Cyr"><A HREF="laba4main.htm">Лабораторная
+работа №4</A></FONT>
+</BODY>
+</HTML>

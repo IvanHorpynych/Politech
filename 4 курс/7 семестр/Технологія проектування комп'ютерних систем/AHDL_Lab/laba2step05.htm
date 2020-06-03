@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.06 [en] (Win95; I) [Netscape]">
+   <TITLE>Пример выполнения Лабораторной работы 2</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="bg2.gif">
+<A HREF="laba2step04.htm">Предыдущий</A>
+<A HREF="laba2step06.htm">Следующий</A>
+<BR>
+<HR>
+<P><B>Шаг 5</B>
+<P>Так как в предыдущей лабораторной работе мы синтезировали двухвходовые
+логические элементы, то для синтезирования КС мы будем использовать только
+их. Схема будет иметь следующий вид:
+<P><IMG SRC="pics/l02_05.gif" NOSAVE HEIGHT=227 WIDTH=283>
+<P>Для ее реализации необходимо 3 элемента 2И, 2 элемента 2ИЛИ, 1 элемент
+2ИЛИ-НЕ, 3 внутренних проводика. Теперь необходимо в секции <B>architecture</B>
+объявить эти элементы слудующим образом:
+<P><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#4E40F4">architecture
+</FONT><FONT COLOR="#000000">task1</FONT><FONT COLOR="#4E40F4">
+of </FONT><FONT COLOR="#000000">task1</FONT><FONT COLOR="#4E40F4"> is</FONT></FONT></FONT>
+<P><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#4E40F4">component</FONT>
+and2 <FONT COLOR="#4E40F4">is</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#4E40F4">port</FONT>
+(in1:<FONT COLOR="#4E40F4">in</FONT> STD_LOGIC;in2:<FONT COLOR="#4E40F4">in</FONT>
+STD_LOGIC;out1:<FONT COLOR="#4E40F4">out</FONT> STD_LOGIC);</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#4E40F4">end
+component</FONT>;</FONT></FONT>
+<P><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#4E40F4">component
+</FONT>or2
+<FONT COLOR="#4E40F4">is</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#4E40F4">port</FONT>
+(in1:<FONT COLOR="#4E40F4">in</FONT> STD_LOGIC;in2:<FONT COLOR="#4E40F4">in</FONT>
+STD_LOGIC;out1:<FONT COLOR="#4E40F4">out</FONT> STD_LOGIC);</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#4E40F4">end
+component</FONT>;</FONT></FONT>
+<P><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#4E40F4">component</FONT>
+nor2 <FONT COLOR="#4E40F4">is</FONT></FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#4E40F4">port</FONT>
+(in1:<FONT COLOR="#4E40F4">in</FONT> STD_LOGIC;in2:<FONT COLOR="#4E40F4">in</FONT>
+STD_LOGIC;out1:<FONT COLOR="#4E40F4">out</FONT> STD_LOGIC);</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#4E40F4">end
+component</FONT>;</FONT></FONT>
+<P><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#4E40F4">signal</FONT>
+s1,s2,s3:STD_LOGIC;</FONT></FONT>
+<P>Данные структуры являются своего рода объявлениями прототипов функций
+в языке С++, а объявление внутренних сигнальных линий очень схожо с объявлениями
+переменных в языке Паскаль.
+<P>Теперь необходимо выполнить связывание всех элементов. Для этого необходимо
+в тело раздела Begin --- end, секции <B>architecture</B> добавить следующий
+текст:
+<P><I><FONT FACE="Courier New Cyr"><FONT COLOR="#4E40F4"><FONT SIZE=-1>begin</FONT></FONT></FONT></I>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1>D1:nor2 <FONT COLOR="#4E40F4">port
+map</FONT>(X1,X2,S1);</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1>D2:and2 <FONT COLOR="#4E40F4">port
+map</FONT>(X1,X3,S2);</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1>D3:and2 <FONT COLOR="#4E40F4">port
+map</FONT>(X2,X3,S3);</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1>D4:or2 <FONT COLOR="#4E40F4">port
+map</FONT>(S1,S2,Y1);</FONT></FONT>
+<BR><FONT FACE="Courier New Cyr"><FONT SIZE=-1>D5:or2 <FONT COLOR="#4E40F4">port
+map</FONT>(S2,S3,Y2);</FONT></FONT>
+<BR><I><FONT FACE="Courier New Cyr"><FONT SIZE=-1><FONT COLOR="#4E40F4">end</FONT>
+task1;</FONT></FONT></I>
+<P><FONT FACE="Times New Roman CE"><FONT SIZE=+0>Это означает, что D1 -
+логический элемент 2ИЛИ-НЕ, у которого вывод in1 связан сX1 на схеме, in2
+с X2, out1 с проводником S1. Аналогично и для других элеменетов. Тепер
+можно компилировать данный файл.</FONT></FONT>
+<BR>
+<HR>
+<P><A HREF="laba2step04.htm">Предыдущий</A> <A HREF="laba2step06.htm">Следующий</A>
+</BODY>
+</HTML>

@@ -1,0 +1,38 @@
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab_1_4__2012_.Form1.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab_1_4__2012_.Properties.Resources.resources
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab 1-4 (2012).csproj.GenerateResource.Cache
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\bin\Debug\Lab 1-4 (2012).exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\bin\Debug\Lab 1-4 (2012).pdb
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab 1-4 (2012).exe
+C:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab 1-4 (2012).pdb
+D:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab 1-4 (2012).exe
+D:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab 1-4 (2012).pdb
+D:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\bin\Debug\Lab 1-4 (2012).exe
+D:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\bin\Debug\Lab 1-4 (2012).pdb
+D:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab_1_4__2012_.Form1.resources
+D:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab_1_4__2012_.Properties.Resources.resources
+D:\Documents and Settings\Admin\Мои документы\Visual Studio 2008\Projects\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab 1-4 (2012).csproj.GenerateResource.Cache
+S:\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab 1-4 (2012).exe
+S:\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab 1-4 (2012).pdb
+C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab 1-4 (2012).exe
+C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab 1-4 (2012).pdb
+C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\bin\Debug\Lab 1-4 (2012).exe
+C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\bin\Debug\Lab 1-4 (2012).pdb
+C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab_1_4__2012_.Form1.resources
+C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab_1_4__2012_.Properties.Resources.resources
+C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\GenerateResource.write.1.tlog
+D:\7 семестр\Комп'ютерні системи\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab 1-4 (2012).exe
+D:\7 семестр\Комп'ютерні системи\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab 1-4 (2012).pdb
+D:\7 семестр\Комп'ютерні системи\Lab 1-4 (09.2012)\L\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab 1-4 (2012).exe
+D:\7 семестр\Комп'ютерні системи\Lab 1-4 (09.2012)\L\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab 1-4 (2012).pdb
+D:\7 семестр\Комп'ютерні системи\Lab 1-4 (09.2012)\L\Lab 1-4 (2012)\Lab 1-4 (2012)\bin\Debug\Lab 1-4 (2012).exe
+D:\7 семестр\Комп'ютерні системи\Lab 1-4 (09.2012)\L\Lab 1-4 (2012)\Lab 1-4 (2012)\bin\Debug\Lab 1-4 (2012).pdb
+D:\7 семестр\Комп'ютерні системи\Lab 1-4 (09.2012)\L\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\ResolveAssemblyReference.cache
+D:\7 семестр\Комп'ютерні системи\Lab 1-4 (09.2012)\L\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab_1_4__2012_.Form1.resources
+D:\7 семестр\Комп'ютерні системи\Lab 1-4 (09.2012)\L\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\Lab_1_4__2012_.Properties.Resources.resources
+D:\7 семестр\Комп'ютерні системи\Lab 1-4 (09.2012)\L\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\GenerateResource.read.1.tlog
+D:\7 семестр\Комп'ютерні системи\Lab 1-4 (09.2012)\L\Lab 1-4 (2012)\Lab 1-4 (2012)\obj\Debug\GenerateResource.write.1.tlog

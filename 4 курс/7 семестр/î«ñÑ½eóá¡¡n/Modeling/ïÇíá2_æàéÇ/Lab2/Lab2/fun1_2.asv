@@ -1,0 +1,4 @@
+function dy = fun1_2(x, y, z)
+dz = (2 * pow(z, 2))/(x * (y - 1)) + dy;
+dy = z / x;
+end

@@ -1,0 +1,26 @@
+Design: 23:32, 4 окт€бр€ 2012 г.
+Design: Opening design "e:\TPKS\lab1\lab1.adf"
+Design: Opening configuration "compile"
+Library Manager: Library "lab1" attached.
+VHDL file(s) detected
+Compile...
+File: .\src\lab1.vhd
+Compile Entity "and2"
+Compile Architecture "and2" of Entity "and2"
+Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+VHDL file(s) detected
+Compile...
+File: .\src\lab1.vhd
+Compile Entity "and2"
+Entity "and2" has been skipped - no difference detected.
+Compile Architecture "and2" of Entity "and2"
+Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]
+VHDL file(s) detected
+Compile...
+File: .\src\lab1.vhd
+Compile Entity "and2"
+Entity "and2" has been skipped - no difference detected.
+Compile Architecture "and2" of Entity "and2"
+Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]
+ELBREAD: Elaboration process.
+ELBREAD: Elaboration time 0.0 [s].

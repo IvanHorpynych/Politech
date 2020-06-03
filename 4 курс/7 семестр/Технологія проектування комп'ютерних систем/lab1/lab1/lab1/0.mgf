@@ -1,0 +1,90 @@
+V 000035 11 112 1349382935906 and2
+E and2 VHDL
+L IEEE;
+U ieee.std_logic_1164;
+P in1 _in std_logic
+P in2 _in std_logic
+P out1 _out std_logic
+X and2
+V 000035 11 194 1349382935906 and2
+#VLB_VERSION 56
+#INFO
+and2
+E 1349382935906
+3
+#ACCESS
+std
+.
+ieee
+std_logic_1164 all .
+.
+#OBJECTS
+in1 0 29 55 1 . 15
+in2 1 29 145 1 . 16
+out1 2 29 235 1 . 17
+#SPECIFICATION 
+#END
+V 000023 54 322 0 and2
+12
+1
+12
+00000013
+1
+.\src\lab1.vhd
+0
+0 0 0 0 0 0
+1
+1
+29
+1
+29
+12 ~ ~ 0 0
+0
+67
+0
+1
+15 ieee std_logic_1164 4 2
+0
+15 ieee std_logic_1164 0 0
+0
+0
+1
+29
+1
+29
+12 ~ ~ 1 1
+1
+67
+0
+1
+15 ieee std_logic_1164 4 2
+0
+15 ieee std_logic_1164 0 0
+0
+0
+1
+29
+1
+29
+12 ~ ~ 2 2
+2
+68
+0
+1
+15 ieee std_logic_1164 4 2
+0
+15 ieee std_logic_1164 0 0
+0
+0
+0
+V 000022 52 36 0 and2
+0_______
+56
+and2
+0
+3
+std
+.
+.
+0
+0

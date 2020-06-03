@@ -1,0 +1,328 @@
+I 000045 55 884           1349385675671 and2
+(_unit VHDL (and2 0 28 (and2 0 38 ))
+	(_version v80)
+	(_time 1349385675672 2012.10.05 00:21:15)
+	(_source (\./src/lab1.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164)))
+	(_code 97c5c598c5c0c784949186cd9391939495919691c2)
+	(_entity
+		(_time 1349385675626)
+		(_use (std(standard))(ieee(std_logic_1164)))
+	)
+	(_object
+		(_port (_internal in1 ~extieee.std_logic_1164.STD_LOGIC 0 30 (_entity (_in ))))
+		(_port (_internal in2 ~extieee.std_logic_1164.STD_LOGIC 0 31 (_entity (_in ))))
+		(_port (_internal out1 ~extieee.std_logic_1164.STD_LOGIC 0 32 (_entity (_out ))))
+		(_process
+			(line__41(_architecture 0 0 41 (_assignment (_simple)(_target(2))(_sensitivity(0)(1)))))
+		)
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+	)
+	(_model . and2 1 -1
+	)
+)
+I 000045 55 884           1349385735534 and2
+(_unit VHDL (and2 0 28 (and2 0 38 ))
+	(_version v80)
+	(_time 1349385735535 2012.10.05 00:22:15)
+	(_source (\./src/lab1.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164)))
+	(_code 6b3e6c6b6c3c3b78686d7a316f6d6f68696d6a6d3e)
+	(_entity
+		(_time 1349385675625)
+		(_use (std(standard))(ieee(std_logic_1164)))
+	)
+	(_object
+		(_port (_internal in1 ~extieee.std_logic_1164.STD_LOGIC 0 30 (_entity (_in ))))
+		(_port (_internal in2 ~extieee.std_logic_1164.STD_LOGIC 0 31 (_entity (_in ))))
+		(_port (_internal out1 ~extieee.std_logic_1164.STD_LOGIC 0 32 (_entity (_out ))))
+		(_process
+			(line__41(_architecture 0 0 41 (_assignment (_simple)(_target(2))(_sensitivity(0)(1)))))
+		)
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+	)
+	(_model . and2 1 -1
+	)
+)
+I 000044 55 1049          1349387802393 or4
+(_unit VHDL (or4 0 28 (or4 0 40 ))
+	(_version v80)
+	(_time 1349387802394 2012.10.05 00:56:42)
+	(_source (\./src/lab1_2.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164)))
+	(_code 161540101244460041130449431040111415121040)
+	(_entity
+		(_time 1349387734015)
+		(_use (std(standard))(ieee(std_logic_1164)))
+	)
+	(_object
+		(_port (_internal in1 ~extieee.std_logic_1164.STD_LOGIC 0 30 (_entity (_in ))))
+		(_port (_internal in2 ~extieee.std_logic_1164.STD_LOGIC 0 31 (_entity (_in ))))
+		(_port (_internal in3 ~extieee.std_logic_1164.STD_LOGIC 0 32 (_entity (_in ))))
+		(_port (_internal in4 ~extieee.std_logic_1164.STD_LOGIC 0 33 (_entity (_in ))))
+		(_port (_internal out1 ~extieee.std_logic_1164.STD_LOGIC 0 34 (_entity (_out ))))
+		(_process
+			(line__43(_architecture 0 0 43 (_assignment (_simple)(_target(4))(_sensitivity(0)(1)))))
+		)
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+	)
+	(_model . or4 1 -1
+	)
+)
+I 000044 55 1049          1349387974159 or4
+(_unit VHDL (or4 0 28 (or4 0 40 ))
+	(_version v80)
+	(_time 1349387974160 2012.10.05 00:59:34)
+	(_source (\./src/lab1_2.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164)))
+	(_code 0c5f0c0b5d5e5c1a5b091e53590a5a0b0e0f080a5a)
+	(_entity
+		(_time 1349387734015)
+		(_use (std(standard))(ieee(std_logic_1164)))
+	)
+	(_object
+		(_port (_internal in1 ~extieee.std_logic_1164.STD_LOGIC 0 30 (_entity (_in ))))
+		(_port (_internal in2 ~extieee.std_logic_1164.STD_LOGIC 0 31 (_entity (_in ))))
+		(_port (_internal in3 ~extieee.std_logic_1164.STD_LOGIC 0 32 (_entity (_in ))))
+		(_port (_internal in4 ~extieee.std_logic_1164.STD_LOGIC 0 33 (_entity (_in ))))
+		(_port (_internal out1 ~extieee.std_logic_1164.STD_LOGIC 0 34 (_entity (_out ))))
+		(_process
+			(line__43(_architecture 0 0 43 (_assignment (_simple)(_target(4))(_sensitivity(0)(1)))))
+		)
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+	)
+	(_model . or4 1 -1
+	)
+)
+I 000044 55 1049          1349387980938 or4
+(_unit VHDL (or4 0 28 (or4 0 40 ))
+	(_version v80)
+	(_time 1349387980939 2012.10.05 00:59:40)
+	(_source (\./src/lab1_2.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164)))
+	(_code 898fd68682dbd99fde8c9bd6dc8fdf8e8b8a8d8fdf)
+	(_entity
+		(_time 1349387734015)
+		(_use (std(standard))(ieee(std_logic_1164)))
+	)
+	(_object
+		(_port (_internal in1 ~extieee.std_logic_1164.STD_LOGIC 0 30 (_entity (_in ))))
+		(_port (_internal in2 ~extieee.std_logic_1164.STD_LOGIC 0 31 (_entity (_in ))))
+		(_port (_internal in3 ~extieee.std_logic_1164.STD_LOGIC 0 32 (_entity (_in ))))
+		(_port (_internal in4 ~extieee.std_logic_1164.STD_LOGIC 0 33 (_entity (_in ))))
+		(_port (_internal out1 ~extieee.std_logic_1164.STD_LOGIC 0 34 (_entity (_out ))))
+		(_process
+			(line__43(_architecture 0 0 43 (_assignment (_simple)(_target(4))(_sensitivity(0)(1)))))
+		)
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+	)
+	(_model . or4 1 -1
+	)
+)
+I 000044 55 1052          1349387987659 or4
+(_unit VHDL (or4 0 28 (or4 0 40 ))
+	(_version v80)
+	(_time 1349387987660 2012.10.05 00:59:47)
+	(_source (\./src/lab1_2.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164)))
+	(_code c8cc9d9cc29a98de9fcdda979dce9ecfcacbccce9e)
+	(_entity
+		(_time 1349387734015)
+		(_use (std(standard))(ieee(std_logic_1164)))
+	)
+	(_object
+		(_port (_internal in1 ~extieee.std_logic_1164.STD_LOGIC 0 30 (_entity (_in ))))
+		(_port (_internal in2 ~extieee.std_logic_1164.STD_LOGIC 0 31 (_entity (_in ))))
+		(_port (_internal in3 ~extieee.std_logic_1164.STD_LOGIC 0 32 (_entity (_in ))))
+		(_port (_internal in4 ~extieee.std_logic_1164.STD_LOGIC 0 33 (_entity (_in ))))
+		(_port (_internal out1 ~extieee.std_logic_1164.STD_LOGIC 0 34 (_entity (_out ))))
+		(_process
+			(line__43(_architecture 0 0 43 (_assignment (_simple)(_target(4))(_sensitivity(0)(1)(2)))))
+		)
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+	)
+	(_model . or4 1 -1
+	)
+)
+I 000044 55 1055          1349387995656 or4
+(_unit VHDL (or4 0 28 (or4 0 40 ))
+	(_version v80)
+	(_time 1349387995657 2012.10.05 00:59:55)
+	(_source (\./src/lab1_2.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164)))
+	(_code 080a5d0f025a581e5f0d1a575d0e5e0f0a0b0c0e5e)
+	(_entity
+		(_time 1349387734015)
+		(_use (std(standard))(ieee(std_logic_1164)))
+	)
+	(_object
+		(_port (_internal in1 ~extieee.std_logic_1164.STD_LOGIC 0 30 (_entity (_in ))))
+		(_port (_internal in2 ~extieee.std_logic_1164.STD_LOGIC 0 31 (_entity (_in ))))
+		(_port (_internal in3 ~extieee.std_logic_1164.STD_LOGIC 0 32 (_entity (_in ))))
+		(_port (_internal in4 ~extieee.std_logic_1164.STD_LOGIC 0 33 (_entity (_in ))))
+		(_port (_internal out1 ~extieee.std_logic_1164.STD_LOGIC 0 34 (_entity (_out ))))
+		(_process
+			(line__43(_architecture 0 0 43 (_assignment (_simple)(_target(4))(_sensitivity(0)(1)(2)(3)))))
+		)
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+	)
+	(_model . or4 1 -1
+	)
+)
+I 000044 55 1055          1349388003096 or4
+(_unit VHDL (or4 0 28 (or4 0 40 ))
+	(_version v80)
+	(_time 1349388003097 2012.10.05 01:00:03)
+	(_source (\./src/lab1_2.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164)))
+	(_code 15154313124745034210074a401343121716111343)
+	(_entity
+		(_time 1349387734015)
+		(_use (std(standard))(ieee(std_logic_1164)))
+	)
+	(_object
+		(_port (_internal in1 ~extieee.std_logic_1164.STD_LOGIC 0 30 (_entity (_in ))))
+		(_port (_internal in2 ~extieee.std_logic_1164.STD_LOGIC 0 31 (_entity (_in ))))
+		(_port (_internal in3 ~extieee.std_logic_1164.STD_LOGIC 0 32 (_entity (_in ))))
+		(_port (_internal in4 ~extieee.std_logic_1164.STD_LOGIC 0 33 (_entity (_in ))))
+		(_port (_internal out1 ~extieee.std_logic_1164.STD_LOGIC 0 34 (_entity (_out ))))
+		(_process
+			(line__43(_architecture 0 0 43 (_assignment (_simple)(_target(4))(_sensitivity(0)(1)(2)(3)))))
+		)
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+	)
+	(_model . or4 1 -1
+	)
+)
+I 000044 55 1055          1349388009362 or4
+(_unit VHDL (or4 0 28 (or4 0 40 ))
+	(_version v80)
+	(_time 1349388009363 2012.10.05 01:00:09)
+	(_source (\./src/lab1_2.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164)))
+	(_code 8f8ed180dbdddf99d88a9dd0da89d9888d8c8b89d9)
+	(_entity
+		(_time 1349387734015)
+		(_use (std(standard))(ieee(std_logic_1164)))
+	)
+	(_object
+		(_port (_internal in1 ~extieee.std_logic_1164.STD_LOGIC 0 30 (_entity (_in ))))
+		(_port (_internal in2 ~extieee.std_logic_1164.STD_LOGIC 0 31 (_entity (_in ))))
+		(_port (_internal in3 ~extieee.std_logic_1164.STD_LOGIC 0 32 (_entity (_in ))))
+		(_port (_internal in4 ~extieee.std_logic_1164.STD_LOGIC 0 33 (_entity (_in ))))
+		(_port (_internal out1 ~extieee.std_logic_1164.STD_LOGIC 0 34 (_entity (_out ))))
+		(_process
+			(line__43(_architecture 0 0 43 (_assignment (_simple)(_target(4))(_sensitivity(0)(1)(2)(3)))))
+		)
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+	)
+	(_model . or4 1 -1
+	)
+)
+V 000044 55 1055          1349388032328 or4
+(_unit VHDL (or4 0 28 (or4 0 40 ))
+	(_version v80)
+	(_time 1349388032329 2012.10.05 01:00:32)
+	(_source (\./src/lab1_2.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164)))
+	(_code 481a1c4b421a185e1f4d5a171d4e1e4f4a4b4c4e1e)
+	(_entity
+		(_time 1349387734015)
+		(_use (std(standard))(ieee(std_logic_1164)))
+	)
+	(_object
+		(_port (_internal in1 ~extieee.std_logic_1164.STD_LOGIC 0 30 (_entity (_in ))))
+		(_port (_internal in2 ~extieee.std_logic_1164.STD_LOGIC 0 31 (_entity (_in ))))
+		(_port (_internal in3 ~extieee.std_logic_1164.STD_LOGIC 0 32 (_entity (_in ))))
+		(_port (_internal in4 ~extieee.std_logic_1164.STD_LOGIC 0 33 (_entity (_in ))))
+		(_port (_internal out1 ~extieee.std_logic_1164.STD_LOGIC 0 34 (_entity (_out ))))
+		(_process
+			(line__43(_architecture 0 0 43 (_assignment (_simple)(_target(4))(_sensitivity(0)(1)(2)(3)))))
+		)
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+	)
+	(_model . or4 1 -1
+	)
+)
+V 000048 55 895           1349424262625 not_or2
+(_unit VHDL (not_or2 0 28 (not_or2 0 38 ))
+	(_version v80)
+	(_time 1349424262626 2012.10.05 11:04:22)
+	(_source (\./src/lab1_3.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164)))
+	(_code 181b451f464e480d4f1e5e434b1b1a1e4d1e4e1f1c)
+	(_entity
+		(_time 1349424262579)
+		(_use (std(standard))(ieee(std_logic_1164)))
+	)
+	(_object
+		(_port (_internal in1 ~extieee.std_logic_1164.STD_LOGIC 0 30 (_entity (_in ))))
+		(_port (_internal in2 ~extieee.std_logic_1164.STD_LOGIC 0 31 (_entity (_in ))))
+		(_port (_internal out1 ~extieee.std_logic_1164.STD_LOGIC 0 32 (_entity (_out ))))
+		(_process
+			(line__41(_architecture 0 0 41 (_assignment (_simple)(_target(2))(_sensitivity(0)(1)))))
+		)
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+	)
+	(_model . not_or2 1 -1
+	)
+)
+V 000045 55 884           1349534561187 and2
+(_unit VHDL (and2 0 28 (and2 0 38 ))
+	(_version v80)
+	(_time 1349534561188 2012.10.06 17:42:41)
+	(_source (\./src/lab1.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164)))
+	(_code e6e9e0b5b5b1b6f5e5e0f7bce2e0e2e5e4e0e7e0b3)
+	(_entity
+		(_time 1349385675625)
+		(_use (std(standard))(ieee(std_logic_1164)))
+	)
+	(_object
+		(_port (_internal in1 ~extieee.std_logic_1164.STD_LOGIC 0 30 (_entity (_in ))))
+		(_port (_internal in2 ~extieee.std_logic_1164.STD_LOGIC 0 31 (_entity (_in ))))
+		(_port (_internal out1 ~extieee.std_logic_1164.STD_LOGIC 0 32 (_entity (_out ))))
+		(_process
+			(line__41(_architecture 0 0 41 (_assignment (_simple)(_target(2))(_sensitivity(0)(1)))))
+		)
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+	)
+	(_model . and2 1 -1
+	)
+)

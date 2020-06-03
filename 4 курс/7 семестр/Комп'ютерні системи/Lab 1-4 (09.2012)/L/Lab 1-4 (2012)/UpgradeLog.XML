@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Lab 1-4 (2012)">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012).sln">
+</Property><Property Name="User Options File" Value="C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Lab 1-4 (2012).suo">
+</Property><Property Name="Date" Value="21 грудня 2012 р.">
+</Property><Property Name="Time" Value="8:22">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Lab 1-4 (2012).sln" Description="File successfully backed up as C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Backup\Lab 1-4 (2012).sln">
+</Event><Event ErrorLevel="0" Project="" Source="Lab 1-4 (2012).suo" Description="File successfully backed up as C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Backup\Lab 1-4 (2012).suo">
+</Event><Event ErrorLevel="0" Project="Lab 1-4 (2012)" Source="Lab 1-4 (2012)\Lab 1-4 (2012).csproj" Description="Project file successfully backed up as C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Backup\Lab 1-4 (2012)\Lab 1-4 (2012).csproj">
+</Event><Event ErrorLevel="0" Project="Lab 1-4 (2012)" Source="Lab 1-4 (2012)\Form1.cs" Description="File successfully backed up as C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Backup\Lab 1-4 (2012)\Form1.cs">
+</Event><Event ErrorLevel="0" Project="Lab 1-4 (2012)" Source="Lab 1-4 (2012)\Form1.Designer.cs" Description="File successfully backed up as C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Backup\Lab 1-4 (2012)\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Lab 1-4 (2012)" Source="Lab 1-4 (2012)\Program.cs" Description="File successfully backed up as C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Backup\Lab 1-4 (2012)\Program.cs">
+</Event><Event ErrorLevel="0" Project="Lab 1-4 (2012)" Source="Lab 1-4 (2012)\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Backup\Lab 1-4 (2012)\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Lab 1-4 (2012)" Source="Lab 1-4 (2012)\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Backup\Lab 1-4 (2012)\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Lab 1-4 (2012)" Source="Lab 1-4 (2012)\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Backup\Lab 1-4 (2012)\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="Lab 1-4 (2012)" Source="Lab 1-4 (2012)\Properties\Settings.settings" Description="File successfully backed up as C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Backup\Lab 1-4 (2012)\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="Lab 1-4 (2012)" Source="Lab 1-4 (2012)\Form1.resx" Description="File successfully backed up as C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Backup\Lab 1-4 (2012)\Form1.resx">
+</Event><Event ErrorLevel="0" Project="Lab 1-4 (2012)" Source="Lab 1-4 (2012)\Properties\Resources.resx" Description="File successfully backed up as C:\Documents and Settings\myshkoua\Рабочий стол\Lab 1-4 (09.2012)\Lab 1-4 (09.2012)\Lab 1-4 (2012)\Backup\Lab 1-4 (2012)\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="Lab 1-4 (2012)" Source="Lab 1-4 (2012)\Lab 1-4 (2012).csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Lab 1-4 (2012)" Source="Lab 1-4 (2012)\Lab 1-4 (2012).csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Lab 1-4 (2012).sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Lab 1-4 (2012).sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Lab 1-4 (2012)" Source="Lab 1-4 (2012)\Lab 1-4 (2012).csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

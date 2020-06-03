@@ -1,0 +1,5 @@
+MESSAGE "File: .\src\lab1.vhd" 
+MESSAGE "Compile Entity "and2"" 
+MESSAGE "Entity "and2" has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "and2" of Entity "and2"" 
+MESSAGE "Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]" 

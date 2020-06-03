@@ -1,0 +1,5 @@
+D:\KPI\4 course\комп мережі\Client\Client\bin\Debug\Client.exe
+D:\KPI\4 course\комп мережі\Client\Client\bin\Debug\Client.pdb
+D:\KPI\4 course\комп мережі\Client\Client\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\KPI\4 course\комп мережі\Client\Client\obj\x86\Debug\Client.exe
+D:\KPI\4 course\комп мережі\Client\Client\obj\x86\Debug\Client.pdb

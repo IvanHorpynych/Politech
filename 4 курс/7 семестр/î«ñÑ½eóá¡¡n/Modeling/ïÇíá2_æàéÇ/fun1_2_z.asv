@@ -1,0 +1,5 @@
+function dz = fun1_2_z(x, f)
+df = zeros(2, 1);
+df(1) = z / x;
+df(2) = (2 * pow(z, 2))/(x * (y - 1)) + dy;
+end
