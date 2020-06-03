@@ -1,0 +1,13 @@
+https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1745-6606.2008.00108.x[1]
+https://business.ua/finansy/item/299-bankir-ex-machina/ [2]
+https://privatbank.ua/ru/udalenniy-banking/privat24 [3]
+https://www.oschadbank.ua/ua/private/web_bank_ng/ [4]
+https://my.ukrsibbank.com/ua/personal/operations/ukrsib_online/ [5]
+https://www.nerdwallet.com/blog/banking/online-banking-security/[6]
+https://en.wikipedia.org/wiki/Multi-factor_authentication [7]
+https://docs.oracle.com/javase/tutorial/java/[8]
+http://areznikov.pro/builder-pattern-java [9]
+http://javatutor.net/articles/j2ee-pattern-data-access-object[10]
+https://www.nsa.gov/[11]
+
+SHA-2
